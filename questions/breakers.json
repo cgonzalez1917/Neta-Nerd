@@ -378,5 +378,113 @@
     "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions (zone interlock); ATS-2025 7.6.1.2.B.8",
     "verified": true,
     "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-022",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "ATS switch inspection says fuse sizes must agree with:",
+    "choices": [
+      "The largest fuse that fits the clips",
+      "The drawings and the coordination study",
+      "The cable shield resistance",
+      "Table 100.11"
+    ],
+    "answer": 1,
+    "explanation": "7.5.1.1 checks fuse size and type against the drawings and the study, and it checks that each fuse is supported and has contact integrity. It does not publish a maximum insulation resistance between fuses. Higher insulation resistance is not a failure.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.1.A.6 and A.7",
+    "verified": true,
+    "kb": "breakers.md#inspections"
+  },
+  {
+    "id": "brkr-023",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "safety",
+    "question": "A 0.5 A fuse is going to be checked for continuity. The test current should be:",
+    "choices": [
+      "10 A, because that is a standard ductor range",
+      "Below the fuse rating so the test does not open it",
+      "The instantaneous pickup of the breaker ahead of it",
+      "500 V dc"
+    ],
+    "answer": 1,
+    "explanation": "ATS checks fuse support and contact. It does not tell you to push 10 A through a half-amp fuse. Stay under the fuse rating. The recalled meter-range choices are not in the specification.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.1; fuse continuous rating",
+    "verified": true,
+    "kb": "breakers.md#contact"
+  },
+  {
+    "id": "brkr-024",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Antipump, which ATS requires you to prove on a power breaker, means:",
+    "choices": [
+      "The breaker will close and trip repeatedly while the close signal is held",
+      "One close attempt for a maintained close signal; it will not hammer",
+      "The charging motor is supposed to run continuously",
+      "The trip coil is disconnected"
+    ],
+    "answer": 1,
+    "explanation": "Trip-free means it will trip even if close is held. Antipump means it will not reclose over and over while that close signal stays picked up. ATS 7.6.1.3 tests both, with the breaker in the test position, and the test values say those features shall function as designed. A charging motor that stays hot is a reason to prove this, not a reason to keep holding close.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.3.B.4 and D.4",
+    "verified": true,
+    "kb": "breakers.md#aux"
+  },
+  {
+    "id": "brkr-025",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "Secondary control checks on a medium-voltage breaker, ATS 7.6.1.3, are made:",
+    "choices": [
+      "With the breaker racked in and closed on the bus",
+      "In the test position: close and trip from the control switch, and trip from each protective relay",
+      "Only with the trip plugs pulled",
+      "By a dissolved-gas sample"
+    ],
+    "answer": 1,
+    "explanation": "The test position lets you operate the mechanism without putting the breaker on the bus. You also prove charge, trip-free, and antipump. Racking a closed breaker into the gear is what the interlock is there to stop.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.3.B.4",
+    "verified": true,
+    "kb": "breakers.md#aux"
+  },
+  {
+    "id": "brkr-026",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "A closed breaker that will not rack into the switchgear is showing:",
+    "choices": [
+      "A failed trip unit that must be primary-injected on the bus",
+      "The racking interlock, which requires the breaker to be open",
+      "A bad power-factor set",
+      "An oil sample problem"
+    ],
+    "answer": 1,
+    "explanation": "ATS has you prove interlocks by trying the blocked operation. A closed breaker is not supposed to rack in. Open it, then rack. Do not defeat the interlock to finish the job.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.10; 7.6 racking practice",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "brkr-027",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Bolt grade is identified in the field by:",
+    "choices": [
+      "Head markings, whose chart is not in the ATS or 70B text held here",
+      "Table 100.1",
+      "The glove class",
+      "The PI minimum"
+    ],
+    "answer": 0,
+    "explanation": "Torque still comes from the manufacturer or from Table 100.12, or from the 90 percent retorque cap in NFPA 70B-2026 when the bolt is already installed. The grade-mark chart itself was not in those texts, so the marking answer is unverified.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.12; NFPA 70B-2026 7.2.1.4; grade-mark chart not in the lookup set",
+    "verified": false,
+    "kb": "breakers.md#inspections"
   }
 ]

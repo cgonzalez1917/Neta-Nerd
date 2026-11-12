@@ -448,5 +448,59 @@
     "reference": "ANSI/NETA ATS-2025 7.10.1; ref. IEEE C57.13.1-2017, clause 6.4",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-026",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A bar-type CT, as ATS 7.10.1 uses the term, has:",
+    "choices": [
+      "No primary of its own; only a window",
+      "A primary bar that is part of the transformer",
+      "A split core that opens after the cable is made up",
+      "A secondary that is never grounded"
+    ],
+    "answer": 1,
+    "explanation": "The section tests the primary of a bar-type CT with the secondary grounded. The bar is the primary. A window CT has to have the cable pass through the opening, so it is placed before that cable is terminated. ATS does not give a separate procedure named split-core.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.6",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-027",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "The temperature-rise rating of a CT is taken from:",
+    "choices": [
+      "Table 100.18",
+      "The CT nameplate, checked against the drawings",
+      "The relay tap",
+      "A 10 A microhmmeter"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.10.1 starts by comparing the nameplate with the drawings. That is where the ratings, including temperature rise, are read. This bank does not have a clause that freezes one rise, such as 55 \u00b0C, for every CT.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.A.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-028",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A CT that can be opened and placed around a cable that is already terminated is commonly called:",
+    "choices": [
+      "Bar-type",
+      "Split-core, a name ATS 7.10.1 does not use in the text that was read",
+      "A network protector",
+      "A watts-loss arrester"
+    ],
+    "answer": 1,
+    "explanation": "ATS contrasts a bar-type primary with the tests in 7.10.1 and requires the cable to pass through a window. It does not define split-core in that section. The recalled name is left unverified.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1",
+    "verified": false,
+    "kb": "instrument-transformers.md#ratio"
   }
 ]

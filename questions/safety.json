@@ -1369,5 +1369,113 @@
     "reference": "NFPA 70B-2026, 9.2.1.3",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-077",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "NFPA 70E-2024 requires a documented energized work permit when work is performed inside which boundary?",
+    "choices": [
+      "The limited approach boundary, by itself",
+      "The restricted approach boundary",
+      "The arc-flash boundary only, with no shock boundary involved",
+      "Any distance inside the equipment room"
+    ],
+    "answer": 1,
+    "explanation": "130.2(A)(1) requires the permit for work inside the restricted approach boundary. A second case is interaction with equipment when an arc-flash injury is more likely even though parts are not exposed. Simply being inside the limited approach boundary is not that first line. Testing and troubleshooting by a qualified person using the required practices can be exempt under 130.2(C).",
+    "reference": "NFPA 70E-2024 130.2(A)",
+    "verified": true,
+    "kb": "safety.md#permit"
+  },
+  {
+    "id": "safety-078",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "On a 480 V system, which statement matches NFPA 70E-2024 Table 130.4(E)(a) for fixed exposed parts?",
+    "choices": [
+      "Limited approach 1 ft, restricted approach 3 ft 6 in",
+      "Limited approach 3 ft 6 in, restricted approach 1 ft",
+      "Both boundaries are 10 ft",
+      "There is no restricted boundary below 1000 V"
+    ],
+    "answer": 1,
+    "explanation": "151 V to 750 V fixed parts: limited approach 3 ft 6 in, restricted approach 1 ft. The permit in 130.2 is tied to the restricted boundary, not to the limited boundary. An unqualified person does not cross the restricted boundary.",
+    "reference": "NFPA 70E-2024 Table 130.4(E)(a); 130.2(A)",
+    "verified": true,
+    "kb": "safety.md#boundaries"
+  },
+  {
+    "id": "safety-079",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Rubber insulating gloves for work at 13.8 kV AC, using the maximum-use voltages in NFPA 70E-2024 Table 130.7(C)(7)(a), must be at least:",
+    "choices": [
+      "Class 0",
+      "Class 1",
+      "Class 2",
+      "Class 00"
+    ],
+    "answer": 2,
+    "explanation": "Class 1 is 7,500 V maximum use. Class 2 is 17,000 V. 13.8 kV is above class 1 and within class 2. Class 0 stops at 1,000 V. The glove still needs a leather protector and a current electrical test.",
+    "reference": "NFPA 70E-2024 Table 130.7(C)(7)(a)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-080",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A one-line symbol for a surge arrester is defined in:",
+    "choices": [
+      "ATS Table 100.1",
+      "IEEE 315 graphic symbols, which this bank does not have, so no symbol is graded here",
+      "NFPA 70E Table 130.4(E)(a)",
+      "The glove voltage table"
+    ],
+    "answer": 1,
+    "explanation": "The recalled topic is a drawing symbol. IEEE 315 is on the NETA reference list and is not in the lookup set. Do not memorize a forum sketch as the answer. On a job, use the project legend.",
+    "reference": "IEEE 315 not in the lookup set; ATS 7.19.2 identifies the arrester by nameplate, not by a symbol quiz",
+    "verified": false,
+    "kb": "safety.md#before-you-test"
+  },
+  {
+    "id": "safety-081",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "What makes a confined space permit-required is specified in:",
+    "choices": [
+      "ATS Table 100.12",
+      "OSHA 29 CFR 1910.146, which is not in this lookup set",
+      "NFPA 70E glove classes",
+      "IEEE 43"
+    ],
+    "answer": 1,
+    "explanation": "1910.146 is on the NETA exam reference list for Levels II and III. The text is not among the OSHA sections read for this bank, so no permit-required criterion is stated here as verified. Do not use a recalled definition as if it had been checked.",
+    "reference": "29 CFR 1910.146 not in the lookup set",
+    "verified": false,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-082",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Hissing and a sweet smell at switchgear are recalled as corona and ozone. The checked action is:",
+    "choices": [
+      "Open the door and sniff to confirm ozone",
+      "Treat it as a possible energized hazard and establish an electrically safe condition before a close inspection",
+      "Raise the VLF voltage",
+      "Ignore it if the mimic is correct"
+    ],
+    "answer": 1,
+    "explanation": "NFPA 70E puts energized work last and requires an electrically safe condition when the task allows it. The specific claim that a sweet smell is ozone was not found as a numbered rule in the texts on hand, so that diagnosis stays unverified. The work practice does not.",
+    "reference": "NFPA 70E-2024 110.2; ozone diagnosis not found in the lookup set",
+    "verified": false,
+    "kb": "safety.md#before-you-test"
   }
 ]

@@ -88,5 +88,23 @@
     "reference": "ANSI/NETA ATS-2025 7.6.3.D.9",
     "verified": true,
     "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-006",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "ATS 7.7 on a circuit switcher includes:",
+    "choices": [
+      "Manufacturer SF6 pressure, electrical trip, and anti-pump",
+      "A network-protector phasing relay only",
+      "A battery specific-gravity test",
+      "A fiber OTDR"
+    ],
+    "answer": 0,
+    "explanation": "SF6 pressure and interrupter operation follow the manufacturer. Anti-pump, trip-free, and trip from each protective device are in the electrical tests. A circuit switcher is not a low-voltage molded-case breaker and it is not a network protector.",
+    "reference": "ANSI/NETA ATS-2025 7.7",
+    "verified": true,
+    "kb": "breakers.md#aux"
   }
 ]

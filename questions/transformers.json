@@ -848,5 +848,131 @@
     "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1",
     "verified": true,
     "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-048",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "ATS 7.8 says a network protector must close when:",
+    "choices": [
+      "Voltage is present on the transformer side only",
+      "Both the feeder and the network are dead",
+      "The collector bus is grounded",
+      "The phasing relay is removed"
+    ],
+    "answer": 0,
+    "explanation": "The operational test is: close with voltage on the transformer side only, and open when the source feeder breaker opens. That is how the protector keeps a dead feeder from being back-fed by the network. Master and phasing relays are calibrated with a network-protector test set.",
+    "reference": "ANSI/NETA ATS-2025 7.8.B.11",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "xfmr-049",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "When the source feeder breaker opens, ATS 7.8 expects the network protector to:",
+    "choices": [
+      "Stay closed and carry station load",
+      "Open",
+      "Reclose immediately into the dead feeder",
+      "Ignore the feeder and trip only on overload"
+    ],
+    "answer": 1,
+    "explanation": "Opening with the feeder is the back-feed protection. Closing is allowed when the transformer side alone is live. Trip-free operation is tested in the same operational list.",
+    "reference": "ANSI/NETA ATS-2025 7.8.B.11",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "xfmr-050",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.4 visual inspection of metal-enclosed busway includes:",
+    "choices": [
+      "Only a megohm test",
+      "Orientation for cooling, weep or drain plugs, and the joint shield",
+      "A dissolved-gas sample of the bus",
+      "A recloser count test"
+    ],
+    "answer": 1,
+    "explanation": "The bus has to be installed the way the labels say so it can cool, drains have to match the manufacturer, and the joint shield has to be in place. Insulation resistance and the 50 percent connection rule are the electrical half. Segregated-phase and nonsegregated-phase bus are different rows in Table 100.17, so you do not borrow one type\u2019s withstand voltage for the other.",
+    "reference": "ANSI/NETA ATS-2025 7.4.A.6 through A.8; Table 100.17",
+    "verified": true,
+    "kb": "resistance.md#busway"
+  },
+  {
+    "id": "xfmr-051",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A load tap changer differs from a de-energized tap changer because the load tap changer:",
+    "choices": [
+      "Is moved only with the transformer isolated and grounded",
+      "Changes taps while the transformer can be in service",
+      "Replaces the turns-ratio test",
+      "Is tested as a surge arrester"
+    ],
+    "answer": 1,
+    "explanation": "ATS leaves the de-energized tap on the specified position after the ratio test, and it has a separate section for the load tap changer. You do not operate a de-energized changer with the winding energized. Ratio is still within one-half percent of calculated at the taps you test.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.A.19 and 7.12.3",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-052",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Oil that was clear in the syringe and later shows bubbles should be:",
+    "choices": [
+      "Tested anyway; bubbles improve acetylene",
+      "Discarded as an air-exposed sample and taken again",
+      "Heated on the transformer until the bubbles vanish",
+      "Used for a power-factor test of the winding"
+    ],
+    "answer": 1,
+    "explanation": "IEEE C57.104-2019 clause 5.1.4.1: air in the sample drives hydrogen out and brings oxygen and nitrogen in. ATS 7.2.2.B.15 takes the sample by ASTM D923. A bubbled syringe is not that sample.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-053",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A gas-blanketed transformer will not push oil out of the sample valve into a syringe when:",
+    "choices": [
+      "The tank gauge shows positive pressure",
+      "The tank is under vacuum, below atmospheric pressure",
+      "The oil is new",
+      "The fans are running"
+    ],
+    "answer": 1,
+    "explanation": "Positive pressure is what ATS 7.2.2.A.15 tells you to maintain. Below atmospheric pressure, oil does not flow out of the valve; you would be pulling against a vacuum. Altitude is not the acceptance criterion in that paragraph.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.A.15",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-054",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.20.1 tells you to deal with stored charge in a power capacitor by:",
+    "choices": [
+      "Measuring the internal discharge-resistor resistance",
+      "Waiting a recalled number of minutes that ATS does not print",
+      "Shorting the terminals with a screwdriver as the procedure",
+      "Skipping the resistor if the nameplate says 480 V"
+    ],
+    "answer": 0,
+    "explanation": "The electrical tests include the discharge resistor. ATS does not state a minimum discharge time in minutes. Do not use a remembered 1-minute or 5-minute rule as if it were this paragraph. Treat the terminals as charged until the resistor and a discharge path have done their job.",
+    "reference": "ANSI/NETA ATS-2025 7.20.1.B.4",
+    "verified": true,
+    "kb": "cables.md#ir"
   }
 ]

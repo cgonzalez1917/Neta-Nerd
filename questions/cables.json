@@ -323,5 +323,23 @@
     "reference": "ANSI/NETA ATS-2025 7.3.3.D.7",
     "verified": true,
     "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-019",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS judges a dielectric withstand as passed when:",
+    "choices": [
+      "Leakage current falls on a published slope that ATS prints for every cable",
+      "No distress or insulation failure is seen by the end of the voltage application",
+      "The set trips and is reset once",
+      "The shield reads open"
+    ],
+    "answer": 1,
+    "explanation": "That is the withstand sentence. ATS does not print a required leakage-current curve. A rising current is a reason to stop and investigate, but you do not fail a cable for missing a slope the specification never gave you. Discharge the cable before you handle it.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.D.4 and D.5",
+    "verified": true,
+    "kb": "cables.md#vlf"
   }
 ]

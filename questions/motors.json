@@ -232,5 +232,59 @@
     "reference": "ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 12.2.1",
     "verified": true,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-014",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Which ATS test is written for synchronous machines and is not in the induction-motor list?",
+    "choices": [
+      "Insulation resistance of the rotating field and exciter windings",
+      "A 60/30 ratio on a 50 hp induction motor",
+      "Table 100.7 at 300 percent",
+      "A cable VLF test"
+    ],
+    "answer": 0,
+    "explanation": "7.15.2.B.14 is insulation resistance of the main rotating field, the exciter field, and the exciter armature, in accordance with IEEE 43. Field resistance and the field-discharge resistor are in the same section. An induction machine has no rotating field winding to test.",
+    "reference": "ANSI/NETA ATS-2025 7.15.2.B.14; ref. IEEE 43",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-015",
+    "level": "II",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "A recalled advantage of a VFD start over an across-the-line start is:",
+    "choices": [
+      "Printed as a pass/fail number in ATS 7.15",
+      "Not stated in the ATS motor section held here; the starter test is still 7.16 and the drive manual",
+      "A 10-minute PI of 1.0",
+      "A vacuum pressure limit"
+    ],
+    "answer": 1,
+    "explanation": "Lower inrush is the usual field reason to use a drive. ATS does not print that comparison, and the VFD article on the exam list is not in this repo. Do not treat a recalled phrase as the specification. Test the installed starter to 7.16 and the drive to its manual.",
+    "reference": "ANSI/NETA ATS-2025 7.15 and 7.16; VFD application article not in the lookup set",
+    "verified": false,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-016",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Jogging a motor on first start is recalled as a rotation check. In the texts read for this bank:",
+    "choices": [
+      "ATS 7.15.1 prints the word jog and a required bump test",
+      "That sentence was not found; phase rotation is explicitly required on the engine-generator section",
+      "It replaces the polarization index",
+      "It is a fiber test"
+    ],
+    "answer": 1,
+    "explanation": "7.22.1 requires phase rotation and phasing on a generator. The induction-motor section that was read does not say to jog. Until that sentence is found, do not grade a recalled bump-test as an ATS line.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1 and 7.22.1",
+    "verified": false,
+    "kb": "apparatus.md#motors"
   }
 ]

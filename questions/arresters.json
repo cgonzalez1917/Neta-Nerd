@@ -70,5 +70,59 @@
     "reference": "ANSI/NETA ATS-2025 7.2.2.B.17 and D.17",
     "verified": true,
     "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-005",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "ATS 7.19.2 wants the ground lead on each medium-voltage arrester:",
+    "choices": [
+      "Daisy-chained through the next arrester",
+      "Individually attached to ground, as short as practical",
+      "Left off until the watts-loss test",
+      "Fused at the size in the cable study"
+    ],
+    "answer": 1,
+    "explanation": "Each arrester gets its own ground lead, kept short. Fuse size is a switch and coordination check, not this arrester inspection. The ground terminal to the ground system is then a resistance test, held under 0.5 ohm.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.A.6 and D.3",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-006",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "With no manufacturer insulation value, ATS 7.19.2 insulation resistance of a surge arrester is judged by:",
+    "choices": [
+      "A fixed 1,000 megohm floor for every voltage",
+      "Table 100.1",
+      "Table 100.7 trip time",
+      "The recloser vacuum limit"
+    ],
+    "answer": 1,
+    "explanation": "The test is phase terminal to ground. No manufacturer number means Table 100.1, and a value under that table is investigated. A memorized 100, 10, or 1 megohm is not what the paragraph prints.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.B.2 and D.2",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-007",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Watts-loss on a substation arrester, ATS 7.19.2, is accepted by:",
+    "choices": [
+      "Comparing similar units and the test-set data",
+      "A single watt value printed for every class",
+      "The oil power-factor table",
+      "A turns-ratio limit of 0.5 percent"
+    ],
+    "answer": 0,
+    "explanation": "There is no universal watt ceiling in that test-value line. You compare like units and the instrument data. The ground connection is the separate 0.5 ohm check.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.D.4",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
   }
 ]

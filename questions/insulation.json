@@ -252,5 +252,23 @@
     "reference": "ANSI/NETA ATS-2025 7.15.1.D.2 and Table 100.11; ref. IEEE 43-2013, clauses 11.2 and 12.2.2",
     "verified": true,
     "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-015",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "The guard terminal on a megohmmeter is connected so that:",
+    "choices": [
+      "Surface leakage is kept out of the measured current",
+      "The test voltage doubles",
+      "The winding is discharged through the operator",
+      "Power factor is calculated"
+    ],
+    "answer": 0,
+    "explanation": "Guard shunts leakage that would otherwise look like insulation current. It does not raise the voltage and it does not replace a clean surface. The Megger S1-568 manual describes that terminal, and ATS insulation tests assume you know which lead is the measurement.",
+    "reference": "Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 insulation-resistance tests",
+    "verified": true,
+    "kb": "insulation.md#spot"
   }
 ]

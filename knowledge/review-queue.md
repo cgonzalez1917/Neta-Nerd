@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 415 (Level II 254, Level III 161).
+Count: 469 (Level II 306, Level III 163).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -7055,6 +7055,924 @@ NFPA 70B-2026 adjusts a maintenance interval by:
 - 3. Using the condition-3 column after every pass
 
 **Citation:** NFPA 70B-2026, 9.1.2 and 9.3.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-077 (II / safety) {#safety-077}
+
+<!-- q:safety-077 -->
+
+**Bank verified flag:** true
+
+NFPA 70E-2024 requires a documented energized work permit when work is performed inside which boundary?
+
+- 0. The limited approach boundary, by itself
+- 1. The restricted approach boundary **← answer**
+- 2. The arc-flash boundary only, with no shock boundary involved
+- 3. Any distance inside the equipment room
+
+**Citation:** NFPA 70E-2024 130.2(A)
+
+Reviewer: VERIFIED or FIX
+
+## safety-078 (II / safety) {#safety-078}
+
+<!-- q:safety-078 -->
+
+**Bank verified flag:** true
+
+On a 480 V system, which statement matches NFPA 70E-2024 Table 130.4(E)(a) for fixed exposed parts?
+
+- 0. Limited approach 1 ft, restricted approach 3 ft 6 in
+- 1. Limited approach 3 ft 6 in, restricted approach 1 ft **← answer**
+- 2. Both boundaries are 10 ft
+- 3. There is no restricted boundary below 1000 V
+
+**Citation:** NFPA 70E-2024 Table 130.4(E)(a); 130.2(A)
+
+Reviewer: VERIFIED or FIX
+
+## safety-079 (II / safety) {#safety-079}
+
+<!-- q:safety-079 -->
+
+**Bank verified flag:** true
+
+Rubber insulating gloves for work at 13.8 kV AC, using the maximum-use voltages in NFPA 70E-2024 Table 130.7(C)(7)(a), must be at least:
+
+- 0. Class 0
+- 1. Class 1
+- 2. Class 2 **← answer**
+- 3. Class 00
+
+**Citation:** NFPA 70E-2024 Table 130.7(C)(7)(a)
+
+Reviewer: VERIFIED or FIX
+
+## batt-006 (II / safety) {#batt-006}
+
+<!-- q:batt-006 -->
+
+**Bank verified flag:** true
+
+ATS 7.18.1.1 requires which safety equipment at a flooded lead-acid battery?
+
+- 0. A safety shower only, with no eye wash
+- 1. Suitable eyewash equipment **← answer**
+- 2. A megohmmeter stored on the rack
+- 3. A recloser control
+
+**Citation:** ANSI/NETA ATS-2025 7.18.1.1.A.3
+
+Reviewer: VERIFIED or FIX
+
+## batt-007 (II / safety) {#batt-007}
+
+<!-- q:batt-007 -->
+
+**Bank verified flag:** true
+
+ATS 7.18.1.1 says the ventilation system for a flooded lead-acid battery area must be:
+
+- 0. Shut during the float-voltage test
+- 1. Operable **← answer**
+- 2. Replaced by an open window only if it is raining
+- 3. Optional if flame arresters are installed
+
+**Citation:** ANSI/NETA ATS-2025 7.18.1.1.A.2 and A.8
+
+Reviewer: VERIFIED or FIX
+
+## arr-005 (II / component) {#arr-005}
+
+<!-- q:arr-005 -->
+
+**Bank verified flag:** true
+
+ATS 7.19.2 wants the ground lead on each medium-voltage arrester:
+
+- 0. Daisy-chained through the next arrester
+- 1. Individually attached to ground, as short as practical **← answer**
+- 2. Left off until the watts-loss test
+- 3. Fused at the size in the cable study
+
+**Citation:** ANSI/NETA ATS-2025 7.19.2.A.6 and D.3
+
+Reviewer: VERIFIED or FIX
+
+## arr-006 (II / component) {#arr-006}
+
+<!-- q:arr-006 -->
+
+**Bank verified flag:** true
+
+With no manufacturer insulation value, ATS 7.19.2 insulation resistance of a surge arrester is judged by:
+
+- 0. A fixed 1,000 megohm floor for every voltage
+- 1. Table 100.1 **← answer**
+- 2. Table 100.7 trip time
+- 3. The recloser vacuum limit
+
+**Citation:** ANSI/NETA ATS-2025 7.19.2.B.2 and D.2
+
+Reviewer: VERIFIED or FIX
+
+## arr-007 (II / component) {#arr-007}
+
+<!-- q:arr-007 -->
+
+**Bank verified flag:** true
+
+Watts-loss on a substation arrester, ATS 7.19.2, is accepted by:
+
+- 0. Comparing similar units and the test-set data **← answer**
+- 1. A single watt value printed for every class
+- 2. The oil power-factor table
+- 3. A turns-ratio limit of 0.5 percent
+
+**Citation:** ANSI/NETA ATS-2025 7.19.2.D.4
+
+Reviewer: VERIFIED or FIX
+
+## recl-004 (II / component) {#recl-004}
+
+<!-- q:recl-004 -->
+
+**Bank verified flag:** true
+
+ATS 7.24.2 tests an automatic line sectionalizer’s counting function with simulated fault current:
+
+- 0. Below 10 percent of its continuous rating
+- 1. Greater than 160 percent of its continuous current rating **← answer**
+- 2. At the motor’s locked-rotor amperes
+- 3. For a 10-minute polarization index
+
+**Citation:** ANSI/NETA ATS-2025 7.24.2.B.6 and B.7
+
+Reviewer: VERIFIED or FIX
+
+## recl-005 (II / component) {#recl-005}
+
+<!-- q:recl-005 -->
+
+**Bank verified flag:** true
+
+ATS does not tell you the insulating medium inside a 27 kV recloser. What it does require is:
+
+- 0. Assume vacuum bottles under oil for every unit at that voltage
+- 1. Use the nameplate and the procedure for the recloser you actually have **← answer**
+- 2. Skip insulation tests above 15 kV
+- 3. Apply the low-voltage breaker instantaneous table
+
+**Citation:** ANSI/NETA ATS-2025 7.24.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-048 (II / systems) {#xfmr-048}
+
+<!-- q:xfmr-048 -->
+
+**Bank verified flag:** true
+
+ATS 7.8 says a network protector must close when:
+
+- 0. Voltage is present on the transformer side only **← answer**
+- 1. Both the feeder and the network are dead
+- 2. The collector bus is grounded
+- 3. The phasing relay is removed
+
+**Citation:** ANSI/NETA ATS-2025 7.8.B.11
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-049 (II / systems) {#xfmr-049}
+
+<!-- q:xfmr-049 -->
+
+**Bank verified flag:** true
+
+When the source feeder breaker opens, ATS 7.8 expects the network protector to:
+
+- 0. Stay closed and carry station load
+- 1. Open **← answer**
+- 2. Reclose immediately into the dead feeder
+- 3. Ignore the feeder and trip only on overload
+
+**Citation:** ANSI/NETA ATS-2025 7.8.B.11
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-050 (II / component) {#xfmr-050}
+
+<!-- q:xfmr-050 -->
+
+**Bank verified flag:** true
+
+ATS 7.4 visual inspection of metal-enclosed busway includes:
+
+- 0. Only a megohm test
+- 1. Orientation for cooling, weep or drain plugs, and the joint shield **← answer**
+- 2. A dissolved-gas sample of the bus
+- 3. A recloser count test
+
+**Citation:** ANSI/NETA ATS-2025 7.4.A.6 through A.8; Table 100.17
+
+Reviewer: VERIFIED or FIX
+
+## math-100 (II / theory) {#math-100}
+
+<!-- q:math-100 -->
+
+**Bank verified flag:** true
+
+A 480 V, 4000 A service is which Table 100.2 switchgear class?
+
+- 0. Metal-clad, 15 kV row
+- 1. Low-voltage power circuit breaker switchgear **← answer**
+- 2. Station-type cubicle at 72.5 kV
+- 3. Isolated-phase bus
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.2
+
+Reviewer: VERIFIED or FIX
+
+## math-101 (II / theory) {#math-101}
+
+<!-- q:math-101 -->
+
+**Bank verified flag:** true
+
+A 150 kVA three-phase capacitor bank at 480 V draws about:
+
+- 0. 180 A **← answer**
+- 1. 312 A
+- 2. 54 A
+- 3. 150 A
+
+**Citation:** Three-phase I = S / (√3 × V)
+
+Reviewer: VERIFIED or FIX
+
+## math-102 (II / theory) {#math-102}
+
+<!-- q:math-102 -->
+
+**Bank verified flag:** true
+
+A single-phase load of 5120 VA is a 5 ohm resistor. The voltage across that resistor is:
+
+- 0. 32 V
+- 1. 160 V **← answer**
+- 2. 1024 V
+- 3. 5120 V
+
+**Citation:** Single-phase S = V² / R
+
+Reviewer: VERIFIED or FIX
+
+## math-103 (II / theory) {#math-103}
+
+<!-- q:math-103 -->
+
+**Bank verified flag:** true
+
+A 1 mH inductor is in series with 250 ohms on 120 V, 60 Hz. Nearly all of the voltage appears across:
+
+- 0. The inductor
+- 1. The resistor **← answer**
+- 2. A 1:1 split
+- 3. The source impedance only
+
+**Citation:** XL = 2πfL; series voltage division
+
+Reviewer: VERIFIED or FIX
+
+## math-104 (II / theory) {#math-104}
+
+<!-- q:math-104 -->
+
+**Bank verified flag:** true
+
+A 10 ohm resistor is in series with two 10 ohm resistors in parallel. The total resistance is:
+
+- 0. 30 ohms
+- 1. 15 ohms **← answer**
+- 2. 6.7 ohms
+- 3. 3.3 ohms
+
+**Citation:** Series and parallel resistance
+
+Reviewer: VERIFIED or FIX
+
+## math-105 (II / theory) {#math-105}
+
+<!-- q:math-105 -->
+
+**Bank verified flag:** true
+
+A 500:5 CT feeds a relay set at 1.25 A secondary. The primary current at that set point is:
+
+- 0. 1.25 A
+- 1. 6.25 A
+- 2. 125 A **← answer**
+- 3. 625 A
+
+**Citation:** CT ratio Ip = Is × (primary / secondary)
+
+Reviewer: VERIFIED or FIX
+
+## math-106 (II / theory) {#math-106}
+
+<!-- q:math-106 -->
+
+**Bank verified flag:** true
+
+A 30 kW three-phase load at 208 V and 0.90 power factor draws about:
+
+- 0. 93 A **← answer**
+- 1. 144 A
+- 2. 80 A
+- 3. 30 A
+
+**Citation:** Three-phase P = √3 × V × I × PF
+
+Reviewer: VERIFIED or FIX
+
+## relay-059 (II / theory) {#relay-059}
+
+<!-- q:relay-059 -->
+
+**Bank verified flag:** true
+
+Device 27, in the ATS 7.9.1 list, is:
+
+- 0. Overvoltage
+- 1. Undervoltage **← answer**
+- 2. Frequency
+- 3. Directional power
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 27
+
+Reviewer: VERIFIED or FIX
+
+## relay-060 (II / theory) {#relay-060}
+
+<!-- q:relay-060 -->
+
+**Bank verified flag:** true
+
+The motor thermal element in the ATS device list is 49. Device 32 is:
+
+- 0. The same thermal element
+- 1. Directional power **← answer**
+- 2. A recloser count
+- 3. A surge counter
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, devices 32 and 49
+
+Reviewer: VERIFIED or FIX
+
+## mot-014 (II / component) {#mot-014}
+
+<!-- q:mot-014 -->
+
+**Bank verified flag:** true
+
+Which ATS test is written for synchronous machines and is not in the induction-motor list?
+
+- 0. Insulation resistance of the rotating field and exciter windings **← answer**
+- 1. A 60/30 ratio on a 50 hp induction motor
+- 2. Table 100.7 at 300 percent
+- 3. A cable VLF test
+
+**Citation:** ANSI/NETA ATS-2025 7.15.2.B.14; ref. IEEE 43
+
+Reviewer: VERIFIED or FIX
+
+## ct-026 (II / component) {#ct-026}
+
+<!-- q:ct-026 -->
+
+**Bank verified flag:** true
+
+A bar-type CT, as ATS 7.10.1 uses the term, has:
+
+- 0. No primary of its own; only a window
+- 1. A primary bar that is part of the transformer **← answer**
+- 2. A split core that opens after the cable is made up
+- 3. A secondary that is never grounded
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.6
+
+Reviewer: VERIFIED or FIX
+
+## ct-027 (II / component) {#ct-027}
+
+<!-- q:ct-027 -->
+
+**Bank verified flag:** true
+
+The temperature-rise rating of a CT is taken from:
+
+- 0. Table 100.18
+- 1. The CT nameplate, checked against the drawings **← answer**
+- 2. The relay tap
+- 3. A 10 A microhmmeter
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.A.1
+
+Reviewer: VERIFIED or FIX
+
+## brkr-022 (II / component) {#brkr-022}
+
+<!-- q:brkr-022 -->
+
+**Bank verified flag:** true
+
+ATS switch inspection says fuse sizes must agree with:
+
+- 0. The largest fuse that fits the clips
+- 1. The drawings and the coordination study **← answer**
+- 2. The cable shield resistance
+- 3. Table 100.11
+
+**Citation:** ANSI/NETA ATS-2025 7.5.1.1.A.6 and A.7
+
+Reviewer: VERIFIED or FIX
+
+## brkr-023 (II / safety) {#brkr-023}
+
+<!-- q:brkr-023 -->
+
+**Bank verified flag:** true
+
+A 0.5 A fuse is going to be checked for continuity. The test current should be:
+
+- 0. 10 A, because that is a standard ductor range
+- 1. Below the fuse rating so the test does not open it **← answer**
+- 2. The instantaneous pickup of the breaker ahead of it
+- 3. 500 V dc
+
+**Citation:** ANSI/NETA ATS-2025 7.5.1.1; fuse continuous rating
+
+Reviewer: VERIFIED or FIX
+
+## brkr-024 (II / component) {#brkr-024}
+
+<!-- q:brkr-024 -->
+
+**Bank verified flag:** true
+
+Antipump, which ATS requires you to prove on a power breaker, means:
+
+- 0. The breaker will close and trip repeatedly while the close signal is held
+- 1. One close attempt for a maintained close signal; it will not hammer **← answer**
+- 2. The charging motor is supposed to run continuously
+- 3. The trip coil is disconnected
+
+**Citation:** ANSI/NETA ATS-2025 7.6.1.3.B.4 and D.4
+
+Reviewer: VERIFIED or FIX
+
+## brkr-025 (II / systems) {#brkr-025}
+
+<!-- q:brkr-025 -->
+
+**Bank verified flag:** true
+
+Secondary control checks on a medium-voltage breaker, ATS 7.6.1.3, are made:
+
+- 0. With the breaker racked in and closed on the bus
+- 1. In the test position: close and trip from the control switch, and trip from each protective relay **← answer**
+- 2. Only with the trip plugs pulled
+- 3. By a dissolved-gas sample
+
+**Citation:** ANSI/NETA ATS-2025 7.6.1.3.B.4
+
+Reviewer: VERIFIED or FIX
+
+## brkr-026 (II / systems) {#brkr-026}
+
+<!-- q:brkr-026 -->
+
+**Bank verified flag:** true
+
+A closed breaker that will not rack into the switchgear is showing:
+
+- 0. A failed trip unit that must be primary-injected on the bus
+- 1. The racking interlock, which requires the breaker to be open **← answer**
+- 2. A bad power-factor set
+- 3. An oil sample problem
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.10; 7.6 racking practice
+
+Reviewer: VERIFIED or FIX
+
+## math-107 (II / theory) {#math-107}
+
+<!-- q:math-107 -->
+
+**Bank verified flag:** true
+
+The unit ASTM D974 reports for neutralization number, as used with the ATS oil tables, is:
+
+- 0. Percent power factor
+- 1. mg KOH/g **← answer**
+- 2. ppm water
+- 3. kV breakdown
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2 and Table 100.4; ASTM D974
+
+Reviewer: VERIFIED or FIX
+
+## math-108 (II / theory) {#math-108}
+
+<!-- q:math-108 -->
+
+**Bank verified flag:** true
+
+Control cable rated 600 V is insulation-resistance tested, in the ATS breaker and switch sections, at:
+
+- 0. 500 V dc for one minute, minimum 2 megohms
+- 1. 1000 V dc for one minute, minimum 2 megohms **← answer**
+- 2. 10 kV dc, minimum 100 megohms
+- 3. The VLF withstand for the power cable
+
+**Citation:** ANSI/NETA ATS-2025 7.6.1.3.B.3 and D.3
+
+Reviewer: VERIFIED or FIX
+
+## evse-004 (II / component) {#evse-004}
+
+<!-- q:evse-004 -->
+
+**Bank verified flag:** true
+
+ATS 7.26 electrical tests on an EV charger include:
+
+- 0. Only a 30-minute VLF test
+- 1. Protective earth, touch voltage, proximity pilot, control pilot, and output voltage **← answer**
+- 2. A vacuum-bottle pressure test
+- 3. A dissolved-gas sample
+
+**Citation:** ANSI/NETA ATS-2025 7.26.B.2
+
+Reviewer: VERIFIED or FIX
+
+## evse-005 (II / component) {#evse-005}
+
+<!-- q:evse-005 -->
+
+**Bank verified flag:** true
+
+A recalled ‘Level 2 charger is 80 A’ item is handled in this bank as:
+
+- 0. The ATS pass/fail current
+- 1. Not an ATS value; the installed charger is tested to its nameplate and manual **← answer**
+- 2. The Table 100.2 withstand
+- 3. The glove class
+
+**Citation:** ANSI/NETA ATS-2025 7.26
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-051 (II / component) {#xfmr-051}
+
+<!-- q:xfmr-051 -->
+
+**Bank verified flag:** true
+
+A load tap changer differs from a de-energized tap changer because the load tap changer:
+
+- 0. Is moved only with the transformer isolated and grounded
+- 1. Changes taps while the transformer can be in service **← answer**
+- 2. Replaces the turns-ratio test
+- 3. Is tested as a surge arrester
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.A.19 and 7.12.3
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-052 (II / component) {#xfmr-052}
+
+<!-- q:xfmr-052 -->
+
+**Bank verified flag:** true
+
+Oil that was clear in the syringe and later shows bubbles should be:
+
+- 0. Tested anyway; bubbles improve acetylene
+- 1. Discarded as an air-exposed sample and taken again **← answer**
+- 2. Heated on the transformer until the bubbles vanish
+- 3. Used for a power-factor test of the winding
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-053 (II / component) {#xfmr-053}
+
+<!-- q:xfmr-053 -->
+
+**Bank verified flag:** true
+
+A gas-blanketed transformer will not push oil out of the sample valve into a syringe when:
+
+- 0. The tank gauge shows positive pressure
+- 1. The tank is under vacuum, below atmospheric pressure **← answer**
+- 2. The oil is new
+- 3. The fans are running
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.A.15
+
+Reviewer: VERIFIED or FIX
+
+## fbr-004 (II / component) {#fbr-004}
+
+<!-- q:fbr-004 -->
+
+**Bank verified flag:** true
+
+Which statement is not a valid description of an ATS fiber test?
+
+- 0. Length, breaks, and splices are checked optically
+- 1. Attenuation is compared with the project spec or the manufacturer
+- 2. The strand is hipot-tested at the power-cable VLF voltage **← answer**
+- 3. Bend radius follows the manufacturer
+
+**Citation:** ANSI/NETA ATS-2025 7.25
+
+Reviewer: VERIFIED or FIX
+
+## gnd-011 (II / component) {#gnd-011}
+
+<!-- q:gnd-011 -->
+
+**Bank verified flag:** true
+
+The ATS test for the resistance of the main grounding electrode is:
+
+- 0. Point-to-point only
+- 1. Fall-of-potential, or an alternative in accordance with IEEE 81 **← answer**
+- 2. A megohmmeter from the rod to the fence
+- 3. The busway 100-divided-by-length formula
+
+**Citation:** ANSI/NETA ATS-2025 7.13.B.2 and D.3
+
+Reviewer: VERIFIED or FIX
+
+## cable-019 (II / component) {#cable-019}
+
+<!-- q:cable-019 -->
+
+**Bank verified flag:** true
+
+ATS judges a dielectric withstand as passed when:
+
+- 0. Leakage current falls on a published slope that ATS prints for every cable
+- 1. No distress or insulation failure is seen by the end of the voltage application **← answer**
+- 2. The set trips and is reset once
+- 3. The shield reads open
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.D.4 and D.5
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-054 (II / component) {#xfmr-054}
+
+<!-- q:xfmr-054 -->
+
+**Bank verified flag:** true
+
+ATS 7.20.1 tells you to deal with stored charge in a power capacitor by:
+
+- 0. Measuring the internal discharge-resistor resistance **← answer**
+- 1. Waiting a recalled number of minutes that ATS does not print
+- 2. Shorting the terminals with a screwdriver as the procedure
+- 3. Skipping the resistor if the nameplate says 480 V
+
+**Citation:** ANSI/NETA ATS-2025 7.20.1.B.4
+
+Reviewer: VERIFIED or FIX
+
+## relay-061 (II / component) {#relay-061}
+
+<!-- q:relay-061 -->
+
+**Bank verified flag:** true
+
+An electromechanical overcurrent relay set on tap 3 picks up at 3.8 A. ATS 7.9.1 says you:
+
+- 0. Pass it, because it is the same tap number
+- 1. Determine minimum pickup and hold it to the manufacturer’s tolerance **← answer**
+- 2. Always move the tap to 4 and do not retest
+- 3. Always loosen the spring, which ATS names as the only adjustment
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1
+
+Reviewer: VERIFIED or FIX
+
+## relay-062 (II / component) {#relay-062}
+
+<!-- q:relay-062 -->
+
+**Bank verified flag:** true
+
+A test set that applies an AC voltage and separates the loss current by phase angle is used for:
+
+- 0. Insulation power factor or dissipation factor **← answer**
+- 1. A fall-of-potential ground test
+- 2. A DC hipot only
+- 3. A clamp-on ground loop
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.4
+
+Reviewer: VERIFIED or FIX
+
+## mvbr-006 (II / component) {#mvbr-006}
+
+<!-- q:mvbr-006 -->
+
+**Bank verified flag:** true
+
+ATS 7.7 on a circuit switcher includes:
+
+- 0. Manufacturer SF6 pressure, electrical trip, and anti-pump **← answer**
+- 1. A network-protector phasing relay only
+- 2. A battery specific-gravity test
+- 3. A fiber OTDR
+
+**Citation:** ANSI/NETA ATS-2025 7.7
+
+Reviewer: VERIFIED or FIX
+
+## safety-080 (II / safety) {#safety-080}
+
+<!-- q:safety-080 -->
+
+**Bank verified flag:** false
+
+A one-line symbol for a surge arrester is defined in:
+
+- 0. ATS Table 100.1
+- 1. IEEE 315 graphic symbols, which this bank does not have, so no symbol is graded here **← answer**
+- 2. NFPA 70E Table 130.4(E)(a)
+- 3. The glove voltage table
+
+**Citation:** IEEE 315 not in the lookup set; ATS 7.19.2 identifies the arrester by nameplate, not by a symbol quiz
+
+Reviewer: VERIFIED or FIX
+
+## safety-081 (II / safety) {#safety-081}
+
+<!-- q:safety-081 -->
+
+**Bank verified flag:** false
+
+What makes a confined space permit-required is specified in:
+
+- 0. ATS Table 100.12
+- 1. OSHA 29 CFR 1910.146, which is not in this lookup set **← answer**
+- 2. NFPA 70E glove classes
+- 3. IEEE 43
+
+**Citation:** 29 CFR 1910.146 not in the lookup set
+
+Reviewer: VERIFIED or FIX
+
+## mot-015 (II / theory) {#mot-015}
+
+<!-- q:mot-015 -->
+
+**Bank verified flag:** false
+
+A recalled advantage of a VFD start over an across-the-line start is:
+
+- 0. Printed as a pass/fail number in ATS 7.15
+- 1. Not stated in the ATS motor section held here; the starter test is still 7.16 and the drive manual **← answer**
+- 2. A 10-minute PI of 1.0
+- 3. A vacuum pressure limit
+
+**Citation:** ANSI/NETA ATS-2025 7.15 and 7.16; VFD application article not in the lookup set
+
+Reviewer: VERIFIED or FIX
+
+## mot-016 (II / component) {#mot-016}
+
+<!-- q:mot-016 -->
+
+**Bank verified flag:** false
+
+Jogging a motor on first start is recalled as a rotation check. In the texts read for this bank:
+
+- 0. ATS 7.15.1 prints the word jog and a required bump test
+- 1. That sentence was not found; phase rotation is explicitly required on the engine-generator section **← answer**
+- 2. It replaces the polarization index
+- 3. It is a fiber test
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1 and 7.22.1
+
+Reviewer: VERIFIED or FIX
+
+## ct-028 (II / component) {#ct-028}
+
+<!-- q:ct-028 -->
+
+**Bank verified flag:** false
+
+A CT that can be opened and placed around a cable that is already terminated is commonly called:
+
+- 0. Bar-type
+- 1. Split-core, a name ATS 7.10.1 does not use in the text that was read **← answer**
+- 2. A network protector
+- 3. A watts-loss arrester
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-082 (II / safety) {#safety-082}
+
+<!-- q:safety-082 -->
+
+**Bank verified flag:** false
+
+Hissing and a sweet smell at switchgear are recalled as corona and ozone. The checked action is:
+
+- 0. Open the door and sniff to confirm ozone
+- 1. Treat it as a possible energized hazard and establish an electrically safe condition before a close inspection **← answer**
+- 2. Raise the VLF voltage
+- 3. Ignore it if the mimic is correct
+
+**Citation:** NFPA 70E-2024 110.2; ozone diagnosis not found in the lookup set
+
+Reviewer: VERIFIED or FIX
+
+## brkr-027 (II / component) {#brkr-027}
+
+<!-- q:brkr-027 -->
+
+**Bank verified flag:** false
+
+Bolt grade is identified in the field by:
+
+- 0. Head markings, whose chart is not in the ATS or 70B text held here **← answer**
+- 1. Table 100.1
+- 2. The glove class
+- 3. The PI minimum
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.12; NFPA 70B-2026 7.2.1.4; grade-mark chart not in the lookup set
+
+Reviewer: VERIFIED or FIX
+
+## relay-063 (III / systems) {#relay-063}
+
+<!-- q:relay-063 -->
+
+**Bank verified flag:** false
+
+PLC and SCADA addressing on a Level III print is:
+
+- 0. Defined step by step in ATS 7.9
+- 1. Not given as a protocol lesson in the standards read here; relay element tests remain ATS 7.9 and settings still have to match the file **← answer**
+- 2. A substitute for the 51-to-86-to-52 path
+- 3. A megohmmeter guard connection
+
+**Citation:** ANSI/NETA ATS-2025 7.9; IEC 61850 and SCADA guides not in the lookup set
+
+Reviewer: VERIFIED or FIX
+
+## relay-064 (III / systems) {#relay-064}
+
+<!-- q:relay-064 -->
+
+**Bank verified flag:** true
+
+In a 51-to-86-to-52 trip path, the device that operates first is:
+
+- 0. The breaker trip coil
+- 1. The lockout coil
+- 2. The 51 overcurrent element **← answer**
+- 3. The close coil
+
+**Citation:** IEEE C37.2 device numbers as listed in ATS-2025 7.9.1; control sequence
+
+Reviewer: VERIFIED or FIX
+
+## ir-015 (II / component) {#ir-015}
+
+<!-- q:ir-015 -->
+
+**Bank verified flag:** true
+
+The guard terminal on a megohmmeter is connected so that:
+
+- 0. Surface leakage is kept out of the measured current **← answer**
+- 1. The test voltage doubles
+- 2. The winding is discharged through the operator
+- 3. Power factor is calculated
+
+**Citation:** Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 insulation-resistance tests
 
 Reviewer: VERIFIED or FIX
 

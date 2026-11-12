@@ -52,5 +52,23 @@
     "reference": "ANSI/NETA ATS-2025 7.25.D.3",
     "verified": true,
     "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-004",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "Which statement is not a valid description of an ATS fiber test?",
+    "choices": [
+      "Length, breaks, and splices are checked optically",
+      "Attenuation is compared with the project spec or the manufacturer",
+      "The strand is hipot-tested at the power-cable VLF voltage",
+      "Bend radius follows the manufacturer"
+    ],
+    "answer": 2,
+    "explanation": "Fiber is not a power conductor and it is not meggered or hipotted like XLPE. An optical test finds length and splices. Calling hipot an advantage of fiber is the wrong test.",
+    "reference": "ANSI/NETA ATS-2025 7.25",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
   }
 ]

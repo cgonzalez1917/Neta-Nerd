@@ -10,6 +10,14 @@ ATS-2025 7.6.3 is the vacuum medium-voltage breaker. Insulation resistance with 
 
 The vacuum bottle itself is a withstand across the open interrupter. With no manufacturer pressure number, ATS 7.6.3.D.9 says each interrupter’s pressure shall not be greater than 1×10⁻² Pa and shall not differ from the adjacent poles by more than two orders of magnitude. A magnetron atmospheric-condition test is optional. Bushing power factor and capacitance, when they are tested, should stay within 10 percent of the nameplate; hot-collar results are compared with similar bushings.
 
+## Network protectors {#network}
+
+A 600 V network protector, ATS 7.8, sits on the secondary of a network transformer. The acceptance tests prove it will close when voltage is on the transformer side only, and that it will open when the source feeder breaker opens. Master and phasing relays are calibrated with a network-protector test set. Trip-free operation, the collector-bus isolation switch, and the primary switch (open, close, and ground) are part of the same job. Control wiring is still the 500 V or 1000 V insulation-resistance test used on other 300 V and 600 V control cable.
+
+## Sectionalizers {#sectionalizers}
+
+A line sectionalizer, ATS 7.24.2, is not tested like a molded-case breaker. You prove the counting function with simulated fault current above 160 percent of its continuous rating, then the lockout at each count, then the reset timing. It is meant to open and stay open after the upstream device has cleared, which is why the count and the lockout are the tests, not a long-time thermal curve.
+
 ## Reclosers {#reclosers}
 
 Oil and vacuum reclosers are ATS 7.24.1, not the low-voltage molded-case section. The electrical screens rhyme with the breaker: Table 100.1 if the manufacturer gives no insulation value, 2 MΩ on control wiring, contact resistance within 50 percent of the lowest similar pole if no manufacturer band, insulating liquid per Table 100.4, and the same vacuum-pressure screen as 7.6.3 when the manufacturer is silent. Operate the recloser and its control through the mechanical checks before you call the electronic control “fine.”

@@ -1045,5 +1045,113 @@
     "reference": "NFPA 70B-2026, 9.1.2 and 9.3.2",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "relay-059",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "Device 27, in the ATS 7.9.1 list, is:",
+    "choices": [
+      "Overvoltage",
+      "Undervoltage",
+      "Frequency",
+      "Directional power"
+    ],
+    "answer": 1,
+    "explanation": "27 is undervoltage. 59 is overvoltage. 81 is frequency. 32 is directional power, which is not the thermal overload used on a motor. Learn the number before you read the one-line.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 27",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-060",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "The motor thermal element in the ATS device list is 49. Device 32 is:",
+    "choices": [
+      "The same thermal element",
+      "Directional power",
+      "A recloser count",
+      "A surge counter"
+    ],
+    "answer": 1,
+    "explanation": "49 is thermal. 51 is time overcurrent. 32 looks at power direction and is the element you meet on a generator or a network, not the ordinary motor overload. ATS 7.15 points the motor starter at section 7.16, not at a 32 test.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, devices 32 and 49",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-061",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "An electromechanical overcurrent relay set on tap 3 picks up at 3.8 A. ATS 7.9.1 says you:",
+    "choices": [
+      "Pass it, because it is the same tap number",
+      "Determine minimum pickup and hold it to the manufacturer\u2019s tolerance",
+      "Always move the tap to 4 and do not retest",
+      "Always loosen the spring, which ATS names as the only adjustment"
+    ],
+    "answer": 1,
+    "explanation": "3.8 on a tap of 3 is far enough away that you do not call it good without the manufacturer\u2019s tolerance. ATS tells you to determine pickup. It does not say the fix is always the spring or always the next tap. Those adjustments are in the relay manual.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-062",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A test set that applies an AC voltage and separates the loss current by phase angle is used for:",
+    "choices": [
+      "Insulation power factor or dissipation factor",
+      "A fall-of-potential ground test",
+      "A DC hipot only",
+      "A clamp-on ground loop"
+    ],
+    "answer": 0,
+    "explanation": "Power-factor and tan-delta sets measure charging current and loss. A megohmmeter is DC resistance. ATS calls for the power-factor test on transformer windings, and on other apparatus, in accordance with the test-set instructions.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.4",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "relay-063",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "PLC and SCADA addressing on a Level III print is:",
+    "choices": [
+      "Defined step by step in ATS 7.9",
+      "Not given as a protocol lesson in the standards read here; relay element tests remain ATS 7.9 and settings still have to match the file",
+      "A substitute for the 51-to-86-to-52 path",
+      "A megohmmeter guard connection"
+    ],
+    "answer": 1,
+    "explanation": "IEC 61850 and SCADA recognition show up on the Level IV reference list. Those documents are not in this lookup set, so no tag address or GOOSE map is graded. What is graded is the scheme you can read: which coil picks up, and whether an a or a b contact is closed.",
+    "reference": "ANSI/NETA ATS-2025 7.9; IEC 61850 and SCADA guides not in the lookup set",
+    "verified": false,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-064",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "In a 51-to-86-to-52 trip path, the device that operates first is:",
+    "choices": [
+      "The breaker trip coil",
+      "The lockout coil",
+      "The 51 overcurrent element",
+      "The close coil"
+    ],
+    "answer": 2,
+    "explanation": "The 51 must pick up before it can energize the 86. The 86 then seals and closes a contact that energizes the 52 trip coil. Resetting the breaker does not reset the 86. An a contact is open when its device is dropped out; a b contact is closed when its device is dropped out.",
+    "reference": "IEEE C37.2 device numbers as listed in ATS-2025 7.9.1; control sequence",
+    "verified": true,
+    "kb": "relays.md#schemes"
   }
 ]

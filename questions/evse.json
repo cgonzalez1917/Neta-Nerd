@@ -52,5 +52,41 @@
     "reference": "ANSI/NETA ATS-2025 7.26.D.2.2",
     "verified": true,
     "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-004",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "ATS 7.26 electrical tests on an EV charger include:",
+    "choices": [
+      "Only a 30-minute VLF test",
+      "Protective earth, touch voltage, proximity pilot, control pilot, and output voltage",
+      "A vacuum-bottle pressure test",
+      "A dissolved-gas sample"
+    ],
+    "answer": 1,
+    "explanation": "The list also includes protective-conductor resistance and personal protection. Results follow the manufacturer and the test-set instructions. ATS does not assign the charger a memorized 20, 40, 60, or 80 A rating. Read the nameplate.",
+    "reference": "ANSI/NETA ATS-2025 7.26.B.2",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-005",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "A recalled \u2018Level 2 charger is 80 A\u2019 item is handled in this bank as:",
+    "choices": [
+      "The ATS pass/fail current",
+      "Not an ATS value; the installed charger is tested to its nameplate and manual",
+      "The Table 100.2 withstand",
+      "The glove class"
+    ],
+    "answer": 1,
+    "explanation": "7.26 never prints 20, 40, 60, or 80 A. It also does not name a class that plugs into a 120 V receptacle. Those labels belong to other documents that are not the acceptance procedure.",
+    "reference": "ANSI/NETA ATS-2025 7.26",
+    "verified": true,
+    "kb": "apparatus.md#evse"
   }
 ]

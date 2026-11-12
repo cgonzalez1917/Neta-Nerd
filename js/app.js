@@ -513,6 +513,32 @@
     );
   }
 
+  function renderAbout() {
+    document.title = "About · Neta Nerd";
+    app.append(
+      h("p", { class: "kicker" }, "How the exams are run"),
+      h("h1", {}, "About these drills"),
+      h("p", { class: "lede" }, "Neta Nerd is an independent practice site. It is not a NETA exam and it is not affiliated with NETA. The questions are original. Nothing here is a recalled exam item."),
+      h("div", { class: "panel" },
+        h("h2", {}, "Exam format"),
+        h("p", {}, "NETA’s published description of the administered certification exams: closed book, proctored at Pearson VUE, with an on-screen calculator and a formula sheet. You do not bring your own. The pass mark is a scaled 410 or higher on a 200 to 500 scale."),
+        h("ul", {},
+          h("li", {}, "Level II and Level III: 100 questions, 2 hours."),
+          h("li", {}, "Level IV: 65 questions, 2 hours."),
+          h("li", {}, "Level I is an employer assessment, not one of these Pearson VUE exams.")
+        ),
+        h("p", {}, "Confirm the current rules on NETA’s own pages before test day."),
+        h("p", {},
+          h("a", { href: "https://www.netaworld.org/certification-exam/technician-certification671", target: "_blank", rel: "noopener noreferrer" }, "NETA technician certification"),
+          " · ",
+          h("a", { href: "https://www.netaworld.org/accreditation/exam-preparation", target: "_blank", rel: "noopener noreferrer" }, "NETA exam preparation")
+        ),
+        h("p", { class: "meta" }, "Format and the 410 scaled score are from those NETA pages, as checked against the association’s public exam-preparation material. Domain weights in this bank follow the December 2022 detailed content outline as summarized in the study notes.")
+      ),
+      h("p", { style: "margin-top:14px" }, h("a", { href: "#/study/level-2.md/exam-format" }, "Level II study note"), " · ", h("a", { href: "#/study/level-3.md/exam-format" }, "Level III study note"))
+    );
+  }
+
   function renderStudyIndex() {
     app.append(
       h("p", { class: "kicker" }, "Knowledge base"),
@@ -564,6 +590,7 @@
     if (path === "/" || path === "") renderHome();
     else if (path === "/run") renderRun();
     else if (path === "/results") renderResults();
+    else if (path === "/about") renderAbout();
     else if (path === "/study") renderStudyIndex();
     else if (study) renderStudyDoc(study[1], study[2]);
     else renderHome();

@@ -1782,5 +1782,167 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.11; ref. IEEE 43-2013, clause 12.3",
     "verified": true,
     "kb": "insulation.md#spot"
+  },
+  {
+    "id": "math-100",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 480 V, 4000 A service is which Table 100.2 switchgear class?",
+    "choices": [
+      "Metal-clad, 15 kV row",
+      "Low-voltage power circuit breaker switchgear",
+      "Station-type cubicle at 72.5 kV",
+      "Isolated-phase bus"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.2 puts low-voltage power circuit breaker switchgear at 0.254, 0.508, and 0.635 kV. 480 V sits in that block. Metal-clad in the same table starts at 4.76 kV. The last block, metal-enclosed interrupter switchgear, is also a medium-voltage construction.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.2",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-101",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 150 kVA three-phase capacitor bank at 480 V draws about:",
+    "choices": [
+      "180 A",
+      "312 A",
+      "54 A",
+      "150 A"
+    ],
+    "answer": 0,
+    "explanation": "Line current is kVA times 1000, divided by \u221a3 times volts. 150000 / (1.732 \u00d7 480) is about 180 A. Dropping the \u221a3 lands near 312 A. This is bank current, not the discharge-resistor current.",
+    "reference": "Three-phase I = S / (\u221a3 \u00d7 V)",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-102",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A single-phase load of 5120 VA is a 5 ohm resistor. The voltage across that resistor is:",
+    "choices": [
+      "32 V",
+      "160 V",
+      "1024 V",
+      "5120 V"
+    ],
+    "answer": 1,
+    "explanation": "VA = V \u00d7 I and V = I \u00d7 R, so VA = V\u00b2 / R. V\u00b2 = 5120 \u00d7 5 = 25600, and V = 160. The current is 32 A. Do not report 5120 divided by 5 as the voltage.",
+    "reference": "Single-phase S = V\u00b2 / R",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-103",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 1 mH inductor is in series with 250 ohms on 120 V, 60 Hz. Nearly all of the voltage appears across:",
+    "choices": [
+      "The inductor",
+      "The resistor",
+      "A 1:1 split",
+      "The source impedance only"
+    ],
+    "answer": 1,
+    "explanation": "XL = 2\u03c0fL is about 0.38 ohm. The resistor is 250 ohms, so the current is about 0.48 A and the inductor drop is a fraction of a volt. The 120 V is across the resistor. Forgetting to convert millihenries would invent a large reactance.",
+    "reference": "XL = 2\u03c0fL; series voltage division",
+    "verified": true,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-104",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 10 ohm resistor is in series with two 10 ohm resistors in parallel. The total resistance is:",
+    "choices": [
+      "30 ohms",
+      "15 ohms",
+      "6.7 ohms",
+      "3.3 ohms"
+    ],
+    "answer": 1,
+    "explanation": "The parallel pair is 5 ohms. Series with 10 ohms is 15 ohms. Adding all three as series is 30 ohms. The formula sheet will not draw the network for you.",
+    "reference": "Series and parallel resistance",
+    "verified": true,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-105",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 500:5 CT feeds a relay set at 1.25 A secondary. The primary current at that set point is:",
+    "choices": [
+      "1.25 A",
+      "6.25 A",
+      "125 A",
+      "625 A"
+    ],
+    "answer": 2,
+    "explanation": "The ratio is 100. 1.25 \u00d7 100 = 125 A primary. 1.25 \u00d7 5 is not the primary. Read the tap as secondary amperes unless the sheet says otherwise.",
+    "reference": "CT ratio Ip = Is \u00d7 (primary / secondary)",
+    "verified": true,
+    "kb": "math.md#ct-ratio"
+  },
+  {
+    "id": "math-106",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 30 kW three-phase load at 208 V and 0.90 power factor draws about:",
+    "choices": [
+      "93 A",
+      "144 A",
+      "80 A",
+      "30 A"
+    ],
+    "answer": 0,
+    "explanation": "I = P / (\u221a3 \u00d7 V \u00d7 PF) = 30000 / (1.732 \u00d7 208 \u00d7 0.9) \u2248 92.5 A. Leaving out \u221a3 is about 160 A. Leaving out the power factor treats kW as kVA.",
+    "reference": "Three-phase P = \u221a3 \u00d7 V \u00d7 I \u00d7 PF",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-107",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "The unit ASTM D974 reports for neutralization number, as used with the ATS oil tables, is:",
+    "choices": [
+      "Percent power factor",
+      "mg KOH/g",
+      "ppm water",
+      "kV breakdown"
+    ],
+    "answer": 1,
+    "explanation": "D974 is the color-indicator acid titration. The ATS new-oil table states that neutralization number in mg KOH/g. Water is a different method, in ppm. Power factor is D924, in percent.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2 and Table 100.4; ASTM D974",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "math-108",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Control cable rated 600 V is insulation-resistance tested, in the ATS breaker and switch sections, at:",
+    "choices": [
+      "500 V dc for one minute, minimum 2 megohms",
+      "1000 V dc for one minute, minimum 2 megohms",
+      "10 kV dc, minimum 100 megohms",
+      "The VLF withstand for the power cable"
+    ],
+    "answer": 1,
+    "explanation": "300 V rated control cable is 500 V dc. 600 V rated control cable is 1000 V dc. Duration is one minute. The minimum in those test-value lines is 2 megohms. That is not Table 100.1 and not a power-cable hipot.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.3.B.3 and D.3",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]

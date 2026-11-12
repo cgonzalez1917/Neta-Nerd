@@ -55,7 +55,8 @@ Articles used as optional “Learn more” links, not as copied text:
 
 ## Also useful, not copied
 
-- https://www.netaworld.org — InterNational Electrical Testing Association
+- https://www.netaworld.org
+- Exam format (100 questions / 2 hours for Levels II and III, 65 / 2 hours for Level IV, Pearson VUE, scaled 410): https://www.netaworld.org/certification-exam/technician-certification671 and https://www.netaworld.org/accreditation/exam-preparation — InterNational Electrical Testing Association
 - NETA formula sheet (the exam handout). Drill what it does not contain; see `math.md`.
 - Manufacturer breaker and relay manuals. They outrank a NETA table when ATS says “in the absence of manufacturer’s data.”
 

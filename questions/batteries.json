@@ -88,5 +88,41 @@
     "reference": "ANSI/NETA ATS-2025 7.18.1.3",
     "verified": true,
     "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-006",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "safety",
+    "question": "ATS 7.18.1.1 requires which safety equipment at a flooded lead-acid battery?",
+    "choices": [
+      "A safety shower only, with no eye wash",
+      "Suitable eyewash equipment",
+      "A megohmmeter stored on the rack",
+      "A recloser control"
+    ],
+    "answer": 1,
+    "explanation": "The visual inspection calls for suitable eyewash equipment, operable ventilation, and flame arresters. A fire extinguisher is not the item that sentence names. Do not substitute a different battery chemistry\u2019s rules.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.A.3",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-007",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "safety",
+    "question": "ATS 7.18.1.1 says the ventilation system for a flooded lead-acid battery area must be:",
+    "choices": [
+      "Shut during the float-voltage test",
+      "Operable",
+      "Replaced by an open window only if it is raining",
+      "Optional if flame arresters are installed"
+    ],
+    "answer": 1,
+    "explanation": "Ventilation has to be working. Flame arresters are a separate check. The section does not give you permission to block the vents because the specific gravity looked fine.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.A.2 and A.8",
+    "verified": true,
+    "kb": "batteries.md#flooded"
   }
 ]

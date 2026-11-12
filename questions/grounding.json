@@ -179,5 +179,23 @@
     "reference": "ANSI/NETA ATS-2025 7.2.2.D.18",
     "verified": true,
     "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-011",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "The ATS test for the resistance of the main grounding electrode is:",
+    "choices": [
+      "Point-to-point only",
+      "Fall-of-potential, or an alternative in accordance with IEEE 81",
+      "A megohmmeter from the rod to the fence",
+      "The busway 100-divided-by-length formula"
+    ],
+    "answer": 1,
+    "explanation": "Fall-of-potential is the electrode test. Point-to-point is the bonding check, and readings above 0.5 ohm are investigated. A megohmmeter does not measure soil resistance. The 62 percent spacing is IEEE 81 practice, not a number ATS prints.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2 and D.3",
+    "verified": true,
+    "kb": "grounding.md#fop"
   }
 ]

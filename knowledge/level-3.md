@@ -18,12 +18,9 @@ Systems is no longer a sliver. Expect control-schematic order, interlocks, groun
 
 ## Exam format {#exam-format}
 
-Same source as the Level II note: the TestGuy study guide at wiki.testguy.net/t/217, citing the NETA December 2022 detailed content outline.
+Same published format as Level II: closed book, Pearson VUE, on-screen calculator and formula sheet, scaled pass mark 410 on a 200 to 500 scale. Level III is 100 questions in 2 hours. Level IV, for comparison, is 65 questions in the same 2 hours. Source: NETA’s technician-certification pages, linked from the About page.
 
-- Closed book, Pearson VUE.
-- About 100 questions in 2 hours.
-- Formula sheet provided. Per-unit fault current, series/parallel inductors, and a wye capacitor measured line-to-line are not handed to you as finished recipes.
-- On-screen TI-30XS. Degree mode still matters when the question gives an angle instead of a power factor.
+Per-unit fault current, series and parallel inductors, and a wye capacitor measured line-to-line are not handed to you as finished recipes. Degree mode still matters when the question gives an angle instead of a power factor.
 
 ## Schemes worth drilling {#schemes}
 

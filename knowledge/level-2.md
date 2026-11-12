@@ -24,11 +24,14 @@ Level III adds interpretation, per-unit fault current, print logic, and the plac
 
 ## Exam format {#exam-format}
 
-This description comes from the TestGuy Level II study guide (wiki.testguy.net/t/217), which cites the NETA December 2022 detailed content outline. It is not a NETA publication and it can change.
+NETA’s technician-certification pages describe the administered exams as closed-book and proctored at Pearson VUE. A formula sheet and an on-screen calculator are provided. You do not bring your own. The published pass mark is a scaled 410 or higher on a 200 to 500 scale.
 
-- Closed book, delivered at Pearson VUE.
-- About 100 questions in 2 hours.
-- A NETA formula sheet is provided. Trig identities, the power triangle beyond `kW = kVA × PF`, copper temperature constants, insulation multipliers, and PI time points are not on that sheet. Drill those.
-- An on-screen TI-30XS calculator is provided. Confirm degree mode before any cosine or angle.
+- Level II: 100 questions, 2 hours.
+- Level III: 100 questions, 2 hours.
+- Level IV: 65 questions, 2 hours.
 
-Do not treat forum posts that recall specific items as the real exam. Write and study original questions about the same skills.
+Level I is an employer assessment, not one of those Pearson VUE exams. Confirm the current sheet on NETA’s exam-preparation page before test day: https://www.netaworld.org/accreditation/exam-preparation
+
+The TestGuy Level II study guide (wiki.testguy.net/t/217) is the source for what is missing from the formula sheet: trig, most of the power triangle beyond `kW = kVA × PF`, copper constants, insulation multipliers, and the PI time points. The on-screen calculator is commonly a TI-30XS style. Confirm degree mode before any cosine or angle.
+
+Do not treat forum posts that recall specific items as the exam. This bank writes original questions about the same skills.
