@@ -1477,5 +1477,131 @@
     "reference": "NFPA 70E-2024 110.2; ozone diagnosis not found in the lookup set",
     "verified": false,
     "kb": "safety.md#before-you-test"
+  },
+  {
+    "id": "safety-083",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "In the NFPA 70B-2026 test classes, class 1 and class 2 differ because:",
+    "choices": [
+      "Class 1 is online and connected to the supply; class 2 is offline, disconnected or fed by a test source",
+      "Class 1 is always a dissolved-gas test",
+      "Class 2 is the only class allowed above 1000 V",
+      "The numbers are torque tables"
+    ],
+    "answer": 0,
+    "explanation": "Online means the equipment is still connected to its supply. Offline means it is disconnected or energized from test equipment. The A suffix, 1A and 2A, means an enhanced test that gathers extra diagnostic information. Thermography under load is an online inspection. A breaker overpotential test is offline.",
+    "reference": "NFPA 70B-2026, 8.3",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-084",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "NFPA 70B-2026 marks which of these as an enhanced test rather than the basic insulation-resistance test?",
+    "choices": [
+      "Overpotential on a medium-voltage breaker power circuit, and dielectric withstand on switchgear above 1000 V",
+      "Specific gravity of every flooded cell",
+      "A visual check that the enclosure is clean",
+      "Recording float voltage to two decimals"
+    ],
+    "answer": 0,
+    "explanation": "Enhanced tests are the extra diagnostic steps: overpotential on medium-voltage breakers, dielectric withstand and online partial discharge on switchgear above 1000 V, and control-wiring insulation resistance on panelboards. They are not a pass/fail kilovolt. Control wiring tied to solid-state parts is still left out of the breaker overpotential test.",
+    "reference": "NFPA 70B-2026, Tables 15.4.5, 12.3.5, and 13.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-085",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "NFPA 70B-2026 Table 12.3.5 for switchgear includes ground resistance, bonding, insulation resistance, and protective tests. Above 1000 V it also offers:",
+    "choices": [
+      "Enhanced dielectric withstand and online partial discharge",
+      "A required dissolved-gas sample of the bus",
+      "Specific gravity of the switchgear",
+      "A turns-ratio test of the enclosure"
+    ],
+    "answer": 0,
+    "explanation": "Those two are the extra choices once the gear is above 1000 V. Online partial discharge is an online test. The withstand test is not performed while the gear is in service. The chapter does not print the withstand kilovolt.",
+    "reference": "NFPA 70B-2026, Table 12.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-086",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "Which test is listed for a panelboard in NFPA 70B-2026 Table 13.3.5?",
+    "choices": [
+      "Main-bus insulation resistance, and an enhanced insulation-resistance test of control wiring",
+      "Vacuum integrity of a 15 kV bottle",
+      "Dissolved gas in the panel oil",
+      "Fall-of-potential of the service ground rod as the only panel test"
+    ],
+    "answer": 0,
+    "explanation": "Panelboards and switchboards in this chapter are 1000 V and below. The electrical list is main-bus insulation resistance, enhanced control-wiring insulation resistance, protective devices, an operational test, and metering. Vacuum integrity and dissolved gas are other chapters.",
+    "reference": "NFPA 70B-2026, Table 13.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-087",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 visual inspection of substations and switchgear, conditions 1, 2, and 3, is:",
+    "choices": [
+      "12, 12, and 6 months",
+      "60, 36, and 12 months, which is the row for the other switchgear tasks",
+      "12, 6, and 3 months",
+      "60, 36, and 36 months"
+    ],
+    "answer": 0,
+    "explanation": "The visual row is 12, 12, and 6 months. The other switchgear tasks use 60, 36, and 12 months when the manufacturer is silent. Above 1000 V the electrical list can add enhanced dielectric withstand and online partial discharge. Those additions do not change the visual interval.",
+    "reference": "NFPA 70B-2026, chapter 12",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-088",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "Online partial discharge on switchgear above 1000 V, in NFPA 70B-2026, is:",
+    "choices": [
+      "An online test, done while the gear is connected to its supply",
+      "An offline overpotential test of control wiring tied to solid-state parts",
+      "A specific-gravity test",
+      "Required on every panelboard"
+    ],
+    "answer": 0,
+    "explanation": "Online means the equipment stays connected to the supply. Partial discharge in that switchgear table is the online option. Dielectric withstand is not done on a live bus. Panelboards at 1000 V and below are a different chapter and do not pick up this option just because they are in the same room.",
+    "reference": "NFPA 70B-2026, Table 12.3.5 and 8.3",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-089",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "Panelboards and switchboards in NFPA 70B-2026, when the manufacturer is silent, are maintained on:",
+    "choices": [
+      "60, 36, and 12 months",
+      "12, 6, and 3 months",
+      "The grounding electrical row of 60, 36, and 36 months",
+      "12, 12, and 1 month"
+    ],
+    "answer": 0,
+    "explanation": "That is the standard row for this 1000 V and below equipment. The electrical list is main-bus insulation resistance, an enhanced control-wiring insulation test, protective devices, an operational test, and metering. It is not vacuum integrity and it is not a fluid sample.",
+    "reference": "NFPA 70B-2026, chapter 13",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

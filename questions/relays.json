@@ -1207,5 +1207,77 @@
     "reference": "Control sequence using IEEE C37.2 device 86 as listed in ATS-2025 7.9 practice",
     "verified": true,
     "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-068",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 intervals for relays, conditions 1, 2, and 3, are:",
+    "choices": [
+      "Electromechanical 36, 24, and 12 months; solid-state and microprocessor 60, 36, and 12 months",
+      "The same 12, 12, and 6 months for both",
+      "Electromechanical before each use",
+      "Microprocessor relays are exempt"
+    ],
+    "answer": 0,
+    "explanation": "Electromechanical relays are on the shorter row. Solid-state and microprocessor relays use 60, 36, and 12 months. The electrical table calls for pickup, three-point timing, and restraint or directional checks, and it does not print a percent tolerance.",
+    "reference": "NFPA 70B-2026, chapter 35",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "relay-069",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Which check does NFPA 70B-2026 Table 35.3.5 aim at a microprocessor relay rather than at an electromechanical relay?",
+    "choices": [
+      "Status and arc-reduction checks, with arc reduction per the manufacturer",
+      "Branch-to-frame insulation resistance and a zero check",
+      "A dissolved-gas sample of the relay case",
+      "Specific gravity"
+    ],
+    "answer": 0,
+    "explanation": "Electromechanical relays get the branch-to-frame insulation test and the zero check. Microprocessor relays get status and arc-reduction checks, and the arc-reduction test follows the manufacturer. Pickup and timing are on the table for the relays that have those elements. No timing tolerance is printed.",
+    "reference": "NFPA 70B-2026, Table 35.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "relay-070",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "NFPA 70B-2026 Table 35.3.5 lists pickup and three-point timing for protective relays. What it does not list is:",
+    "choices": [
+      "A numeric timing tolerance you may invent",
+      "Restraint or directional checks where the relay has them",
+      "Input and output checks",
+      "An electromechanical zero check"
+    ],
+    "answer": 0,
+    "explanation": "The table tells you to test pickup, timing at three points, restraint or directional action, and the inputs and outputs. Electromechanical relays add insulation to the frame and a zero check. It never prints plus or minus a percent. That band is the manufacturer\u2019s.",
+    "reference": "NFPA 70B-2026, Table 35.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "relay-071",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "NFPA 70B-2026 relay inspection includes settings checked against:",
+    "choices": [
+      "The coordination study",
+      "The cable very-low-frequency menu",
+      "A battery specific-gravity sample",
+      "Table 15.3.5 trip time, which 70B does not print"
+    ],
+    "answer": 0,
+    "explanation": "Cases, displays, wiring, and settings are compared with the coordination study. Electromechanical relays also get a clearance check. Microprocessor events are documented. The electrical tests are pickup, three-point timing, and restraint or directional checks, still without a percent band.",
+    "reference": "NFPA 70B-2026, Table 35.3.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

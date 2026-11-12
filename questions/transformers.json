@@ -1028,5 +1028,95 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.3",
     "verified": true,
     "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-058",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 Table 11.2 schedules insulating-fluid sampling, for conditions 1, 2, and 3, at:",
+    "choices": [
+      "12, 12, and 6 months",
+      "60, 36, and 12 months for the sample itself",
+      "Before each use",
+      "Only after a failure"
+    ],
+    "answer": 0,
+    "explanation": "Fluid sampling and the visual inspection are both 12, 12, and 6 months. Other transformer tests fall on the longer 60, 36, and 12 month row when the manufacturer is silent. The chapter lists dielectric, acidity, water, and dissolved gas for liquid-filled units and does not print the pass numbers.",
+    "reference": "NFPA 70B-2026, Table 11.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "xfmr-059",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Which test does NFPA 70B-2026 Table 11.3.5 add for a liquid-filled transformer and not for a dry type?",
+    "choices": [
+      "Dissolved-gas analysis, acidity, water, and dielectric tests of the fluid",
+      "A turns-ratio test, which liquid-filled units skip",
+      "Excitation current, which only dry types receive",
+      "A battery ohmic test"
+    ],
+    "answer": 0,
+    "explanation": "The electrical table is arranged by size and construction and can include insulation resistance, excitation current, power factor, turns ratio, winding and connection resistance, and partial discharge. Liquid-filled units add the fluid tests. Dry types do not get a dissolved-gas sample. No fluid limit is printed in the chapter.",
+    "reference": "NFPA 70B-2026, Table 11.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "xfmr-060",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A dry-type transformer maintenance electrical list in NFPA 70B-2026 can include insulation resistance, excitation, power factor, and turns ratio. It does not include:",
+    "choices": [
+      "A dissolved-gas sample of a liquid that is not there",
+      "Winding resistance",
+      "Connection resistance",
+      "Partial discharge, which the table allows by construction"
+    ],
+    "answer": 0,
+    "explanation": "Dissolved gas, dielectric strength, acidity, and water are liquid-filled tests. A dry type has no oil sample to send out. The chapter still does not give a power-factor percent or a turns-ratio percent. Those numbers stay with the manufacturer or with the NETA table you are actually applying.",
+    "reference": "NFPA 70B-2026, Table 11.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "xfmr-061",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "When the manufacturer is silent, NFPA 70B-2026 puts transformer tests other than the visual inspection and the fluid sample on:",
+    "choices": [
+      "60, 36, and 12 months",
+      "12, 12, and 6 months, the same as the oil sample",
+      "12, 6, and 3 months, the transfer-switch visual row",
+      "Before each use"
+    ],
+    "answer": 0,
+    "explanation": "Seeing the tank and taking the fluid sample are the short rows, 12, 12, and 6 months. Turns ratio, power factor, excitation, and the other electrical tests are the longer row. Liquid-filled units still get the fluid tests. Dry types do not. Neither row prints a pass number.",
+    "reference": "NFPA 70B-2026, Table 11.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "xfmr-062",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "NFPA 70B-2026 inspection of a liquid-filled transformer includes level, pressure, and relief devices. A dry type instead emphasizes:",
+    "choices": [
+      "The same oil sample, because every transformer has fluid",
+      "Connections, cooling, grounding impedance, and the enclosure, without a fluid sample",
+      "Specific gravity of the windings",
+      "A transfer-switch bypass test"
+    ],
+    "answer": 1,
+    "explanation": "Connections, cooling, grounding impedance, and the enclosure are the common inspection. Level, pressure, and relief devices are the liquid-filled additions. A dry type has no fluid sample and no dissolved-gas test. No oil limit is printed.",
+    "reference": "NFPA 70B-2026, 11.3.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

@@ -197,5 +197,59 @@
     "reference": "ANSI/NETA ATS-2025 7.13.B.2 and D.3",
     "verified": true,
     "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-012",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 electrical testing of grounding and bonding, conditions 1, 2, and 3, is:",
+    "choices": [
+      "60, 36, and 36 months",
+      "12, 12, and 6 months, which is the visual row",
+      "60, 36, and 12 months, the ordinary standard row",
+      "3, 3, and 1 month"
+    ],
+    "answer": 0,
+    "explanation": "Visual inspection of grounding and bonding is 12, 12, and 6 months. Electrical testing is 60, 36, and 36 months. The chapter lists fall-of-potential, point-to-point bonding, and connection resistance, and it does not print a universal ohm limit for the earth electrode.",
+    "reference": "NFPA 70B-2026, chapter 20",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-013",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Which test is on the NFPA 70B-2026 Table 20.3.5 grounding list?",
+    "choices": [
+      "Fall-of-potential on a ground rod, point-to-point bonding, and connection resistance",
+      "A transformer turns-ratio test",
+      "Inverse-time trip at 300 percent",
+      "Specific gravity of 10 percent of the cells"
+    ],
+    "answer": 0,
+    "explanation": "The grounding table also includes substation-grid integrity and voltage or current on grounding conductors. It does not publish one ohm value that every electrode must hit. Manufacturer or project limits still govern the number.",
+    "reference": "NFPA 70B-2026, Table 20.3.5",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-014",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "NFPA 70B-2026 chapter 20 does not give one earth-resistance number that every electrode must meet. The tests it does list include:",
+    "choices": [
+      "Fall-of-potential, point-to-point bonding, and connection resistance",
+      "A required maximum of 1 ohm for every site",
+      "Inverse-time trip at 300 percent",
+      "Oil acidity"
+    ],
+    "answer": 0,
+    "explanation": "The chapter also lists substation-grid integrity and voltage or current on grounding conductors. Connection resistance is still investigated when it exceeds the manufacturer\u2019s maximum, under the fundamental bolted-joint rule. The ohm value of the electrode, when someone has set one, comes from the project or from the NETA paragraph you are applying, not from a blank in this chapter.",
+    "reference": "NFPA 70B-2026, Table 20.3.5",
+    "verified": true,
+    "kb": "grounding.md#limits"
   }
 ]

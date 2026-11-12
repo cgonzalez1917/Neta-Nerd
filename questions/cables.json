@@ -359,5 +359,77 @@
     "reference": "ANSI/NETA ATS-2025 7.3.3.D.4 and D.5",
     "verified": true,
     "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-021",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "For cable rated above 1000 V, NFPA 70B-2026 Table 18.3.5 says to select at least one of:",
+    "choices": [
+      "Very-low-frequency below 1 Hz, DC overpotential, AC power factor or dissipation factor, partial discharge, or power frequency",
+      "Only a DC megohmmeter, the same rule as cable through 1000 V",
+      "A battery ohmic test",
+      "A transformer turns-ratio test"
+    ],
+    "answer": 0,
+    "explanation": "Above 1000 V you choose at least one method from that list. Very-low-frequency in this table means below 1 Hz. Cable rated 1000 V and below is an insulation-resistance test, not that menu. The chapter does not print a pass/fail kilovolt.",
+    "reference": "NFPA 70B-2026, Table 18.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "cable-022",
+    "level": "II",
+    "topic": "cables",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 chapter 18 stops cable maintenance at:",
+    "choices": [
+      "The generator terminals only",
+      "The final branch-circuit overcurrent device; conductors downstream of that device are outside this chapter",
+      "Every lighting whip in the building",
+      "The customer\u2019s revenue meter only"
+    ],
+    "answer": 1,
+    "explanation": "The chapter covers cable through 69 kV and not the conductors on the load side of the final branch-circuit overcurrent device. A branch-circuit whip past that device is not this table. The tests that are in scope still follow the 1000 V split.",
+    "reference": "NFPA 70B-2026, 18.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "cable-023",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Which test does NFPA 70B-2026 Table 18.3.5 assign to cable rated 1000 V and below, rather than to the over-1000 V menu?",
+    "choices": [
+      "Insulation resistance",
+      "A required very-low-frequency withstand at a stated kilovolt",
+      "Dissolved-gas analysis",
+      "Vacuum integrity"
+    ],
+    "answer": 0,
+    "explanation": "Through 1000 V the cable test in that table is insulation resistance. The very-low-frequency, DC overpotential, power-factor, partial-discharge, and power-frequency choices are the over-1000 V list, and you pick at least one of those. No kilovolt limit is printed.",
+    "reference": "NFPA 70B-2026, Table 18.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "cable-024",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Very-low-frequency testing, as NFPA 70B-2026 Table 18.3.5 uses the term for cable above 1000 V, means a frequency:",
+    "choices": [
+      "Below 1 Hz",
+      "60 Hz, called very low because the voltage is reduced",
+      "The same as a DC insulation-resistance test",
+      "Above 300 Hz"
+    ],
+    "answer": 0,
+    "explanation": "The over-1000 V menu includes very-low-frequency below 1 Hz, DC overpotential, AC power factor or dissipation factor, partial discharge, and power frequency. You choose at least one. The table does not state the test voltage. That still comes from the manufacturer or from the acceptance or maintenance table that applies.",
+    "reference": "NFPA 70B-2026, Table 18.3.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

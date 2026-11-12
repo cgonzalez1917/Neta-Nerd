@@ -160,5 +160,41 @@
     "reference": "ANSI/NETA ATS-2025 7.7",
     "verified": true,
     "kb": "breakers.md#aux"
+  },
+  {
+    "id": "mvbr-010",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Which item is NOT on the medium-voltage breaker electrical list in NFPA 70B-2026 Table 15.4.5?",
+    "choices": [
+      "Contact resistance and insulation resistance",
+      "Trip, close, and mechanism checks",
+      "Vacuum integrity and contact timing",
+      "Specific gravity of a flooded cell"
+    ],
+    "answer": 3,
+    "explanation": "Specific gravity belongs to stationary batteries, not to a breaker pole. The medium-voltage breaker list is contact resistance, insulation resistance, trip and close, the mechanism, vacuum integrity, contact timing, and enhanced overpotential, with control wiring that feeds solid-state parts left off the overpotential test.",
+    "reference": "NFPA 70B-2026, Table 15.4.5",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "mvbr-011",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "systems",
+    "question": "Low-voltage and medium-voltage breakers in NFPA 70B-2026, when the manufacturer gives no interval, both fall on:",
+    "choices": [
+      "60, 36, and 12 months",
+      "12, 6, and 3 months",
+      "The vented-battery float row of 12, 12, and 1 month",
+      "Before each use"
+    ],
+    "answer": 0,
+    "explanation": "That is the ordinary standard row, and chapter 15 uses it for both voltage classes. The test lists are still different: low-voltage includes the 300 percent inverse-time test and three operations; medium-voltage includes vacuum integrity, contact timing, and enhanced overpotential. Sharing an interval does not mean sharing the test.",
+    "reference": "NFPA 70B-2026, chapter 15",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

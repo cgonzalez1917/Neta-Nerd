@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 482 (Level II 315, Level III 167).
+Count: 525 (Level II 339, Level III 186).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -8193,6 +8193,737 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 - 3. Optional, because the MAC test replaces it
 
 **Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
+
+Reviewer: VERIFIED or FIX
+
+## brkr-029 (II / component) {#brkr-029}
+
+<!-- q:brkr-029 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 15.3.5 places the inverse-time trip test of a low-voltage breaker at:
+
+- 0. 300 percent of rated continuous current **← answer**
+- 1. 150 percent of the frame size, regardless of the plug
+- 2. The instantaneous setting only
+- 3. A dissolved-gas sample
+
+**Citation:** NFPA 70B-2026, Table 15.3.5
+
+Reviewer: VERIFIED or FIX
+
+## brkr-030 (II / component) {#brkr-030}
+
+<!-- q:brkr-030 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 15.3.4 says low-voltage breakers are operated:
+
+- 0. Once, then left alone for the rest of the cycle
+- 1. At least three times **← answer**
+- 2. Only if the instantaneous test fails
+- 3. By a turns-ratio set
+
+**Citation:** NFPA 70B-2026, Table 15.3.4
+
+Reviewer: VERIFIED or FIX
+
+## brkr-031 (II / safety) {#brkr-031}
+
+<!-- q:brkr-031 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 15.4.5 says not to run an overpotential test on:
+
+- 0. The power poles of a medium-voltage breaker, ever
+- 1. Control wiring that is connected to solid-state components **← answer**
+- 2. The station ground grid
+- 3. A transfer-switch mechanical interlock
+
+**Citation:** NFPA 70B-2026, Table 15.4.5
+
+Reviewer: VERIFIED or FIX
+
+## brkr-032 (II / component) {#brkr-032}
+
+<!-- q:brkr-032 -->
+
+**Bank verified flag:** true
+
+Chapter 15 of NFPA 70B-2026 splits breaker scope at about:
+
+- 0. Low-voltage breakers through 1000 V, and medium-voltage power breakers above 1000 V through 69 kV **← answer**
+- 1. All breakers as one table with one test list
+- 2. Only breakers above 115 kV
+- 3. Fuses and network protectors
+
+**Citation:** NFPA 70B-2026, 15.1
+
+Reviewer: VERIFIED or FIX
+
+## brkr-033 (III / component) {#brkr-033}
+
+<!-- q:brkr-033 -->
+
+**Bank verified flag:** true
+
+Which test is on the low-voltage breaker list in NFPA 70B-2026 Table 15.3.5 and is not the headline of the medium-voltage list?
+
+- 0. Inverse-time trip at 300 percent of rated continuous current **← answer**
+- 1. Vacuum-interrupter integrity
+- 2. Contact timing of a medium-voltage mechanism
+- 3. Enhanced overpotential of the power circuit
+
+**Citation:** NFPA 70B-2026, Tables 15.3.5 and 15.4.5
+
+Reviewer: VERIFIED or FIX
+
+## mvbr-010 (III / component) {#mvbr-010}
+
+<!-- q:mvbr-010 -->
+
+**Bank verified flag:** true
+
+Which item is NOT on the medium-voltage breaker electrical list in NFPA 70B-2026 Table 15.4.5?
+
+- 0. Contact resistance and insulation resistance
+- 1. Trip, close, and mechanism checks
+- 2. Vacuum integrity and contact timing
+- 3. Specific gravity of a flooded cell **← answer**
+
+**Citation:** NFPA 70B-2026, Table 15.4.5
+
+Reviewer: VERIFIED or FIX
+
+## cable-021 (II / component) {#cable-021}
+
+<!-- q:cable-021 -->
+
+**Bank verified flag:** true
+
+For cable rated above 1000 V, NFPA 70B-2026 Table 18.3.5 says to select at least one of:
+
+- 0. Very-low-frequency below 1 Hz, DC overpotential, AC power factor or dissipation factor, partial discharge, or power frequency **← answer**
+- 1. Only a DC megohmmeter, the same rule as cable through 1000 V
+- 2. A battery ohmic test
+- 3. A transformer turns-ratio test
+
+**Citation:** NFPA 70B-2026, Table 18.3.5
+
+Reviewer: VERIFIED or FIX
+
+## cable-022 (II / systems) {#cable-022}
+
+<!-- q:cable-022 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 chapter 18 stops cable maintenance at:
+
+- 0. The generator terminals only
+- 1. The final branch-circuit overcurrent device; conductors downstream of that device are outside this chapter **← answer**
+- 2. Every lighting whip in the building
+- 3. The customer’s revenue meter only
+
+**Citation:** NFPA 70B-2026, 18.1
+
+Reviewer: VERIFIED or FIX
+
+## cable-023 (III / component) {#cable-023}
+
+<!-- q:cable-023 -->
+
+**Bank verified flag:** true
+
+Which test does NFPA 70B-2026 Table 18.3.5 assign to cable rated 1000 V and below, rather than to the over-1000 V menu?
+
+- 0. Insulation resistance **← answer**
+- 1. A required very-low-frequency withstand at a stated kilovolt
+- 2. Dissolved-gas analysis
+- 3. Vacuum integrity
+
+**Citation:** NFPA 70B-2026, Table 18.3.5
+
+Reviewer: VERIFIED or FIX
+
+## batt-008 (II / component) {#batt-008}
+
+<!-- q:batt-008 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 says specific gravity on stationary standby batteries is measured on:
+
+- 0. At least 10 percent of the units **← answer**
+- 1. Every connection lug only
+- 2. Valve-regulated cells, as a required water test
+- 3. One pilot cell and then never again
+
+**Citation:** NFPA 70B-2026, Table 36.3.5
+
+Reviewer: VERIFIED or FIX
+
+## batt-009 (II / component) {#batt-009}
+
+<!-- q:batt-009 -->
+
+**Bank verified flag:** true
+
+Individual float-voltage readings under NFPA 70B-2026 are recorded:
+
+- 0. To the nearest 10 V
+- 1. To two decimal places **← answer**
+- 2. As pass or fail only, with no number
+- 3. In ampere-hours
+
+**Citation:** NFPA 70B-2026, Table 36.3.5
+
+Reviewer: VERIFIED or FIX
+
+## batt-010 (III / systems) {#batt-010}
+
+<!-- q:batt-010 -->
+
+**Bank verified flag:** true
+
+In NFPA 70B-2026 Table 36.2, vented lead-acid individual float voltage and connection resistance are on a shorter interval than performance. Those two intervals, conditions 1, 2, and 3, are:
+
+- 0. Float and connections 12, 12, and 1 month; performance 60, 60, and 12 months **← answer**
+- 1. Both rows 60, 36, and 12 months
+- 2. Float voltage only before each use
+- 3. Performance every month for condition 1
+
+**Citation:** NFPA 70B-2026, Table 36.2
+
+Reviewer: VERIFIED or FIX
+
+## batt-011 (III / component) {#batt-011}
+
+<!-- q:batt-011 -->
+
+**Bank verified flag:** true
+
+Which test belongs to valve-regulated lead-acid batteries in NFPA 70B-2026 and not to a flooded specific-gravity sample?
+
+- 0. An ohmic measurement **← answer**
+- 1. A dissolved-gas sample of the jar
+- 2. A turns-ratio test
+- 3. Vacuum-bottle integrity
+
+**Citation:** NFPA 70B-2026, Table 36.3.5
+
+Reviewer: VERIFIED or FIX
+
+## emg-009 (II / systems) {#emg-009}
+
+<!-- q:emg-009 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 chapter 32 applies to a battery energy storage system above:
+
+- 0. 3.6 MJ, which is 1 kWh **← answer**
+- 1. 50 kWh only
+- 2. Any single flooded cell
+- 3. A transfer switch
+
+**Citation:** NFPA 70B-2026, 32.1 and Table 32.2
+
+Reviewer: VERIFIED or FIX
+
+## emg-010 (III / component) {#emg-010}
+
+<!-- q:emg-010 -->
+
+**Bank verified flag:** true
+
+Which test is on the battery-energy-storage list in NFPA 70B-2026 Table 32.3.5 and would be the wrong list for a standby battery jar?
+
+- 0. Battery-management-system review, thermal survey, and ultrasonic inspection **← answer**
+- 1. Specific gravity of a flooded cell
+- 2. Individual float voltage to two decimals
+- 3. Connection resistance of a vented cell
+
+**Citation:** NFPA 70B-2026, Table 32.3.5 and chapter 36
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-058 (II / systems) {#xfmr-058}
+
+<!-- q:xfmr-058 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 11.2 schedules insulating-fluid sampling, for conditions 1, 2, and 3, at:
+
+- 0. 12, 12, and 6 months **← answer**
+- 1. 60, 36, and 12 months for the sample itself
+- 2. Before each use
+- 3. Only after a failure
+
+**Citation:** NFPA 70B-2026, Table 11.2
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-059 (III / component) {#xfmr-059}
+
+<!-- q:xfmr-059 -->
+
+**Bank verified flag:** true
+
+Which test does NFPA 70B-2026 Table 11.3.5 add for a liquid-filled transformer and not for a dry type?
+
+- 0. Dissolved-gas analysis, acidity, water, and dielectric tests of the fluid **← answer**
+- 1. A turns-ratio test, which liquid-filled units skip
+- 2. Excitation current, which only dry types receive
+- 3. A battery ohmic test
+
+**Citation:** NFPA 70B-2026, Table 11.3.5
+
+Reviewer: VERIFIED or FIX
+
+## relay-068 (II / systems) {#relay-068}
+
+<!-- q:relay-068 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 intervals for relays, conditions 1, 2, and 3, are:
+
+- 0. Electromechanical 36, 24, and 12 months; solid-state and microprocessor 60, 36, and 12 months **← answer**
+- 1. The same 12, 12, and 6 months for both
+- 2. Electromechanical before each use
+- 3. Microprocessor relays are exempt
+
+**Citation:** NFPA 70B-2026, chapter 35
+
+Reviewer: VERIFIED or FIX
+
+## relay-069 (III / component) {#relay-069}
+
+<!-- q:relay-069 -->
+
+**Bank verified flag:** true
+
+Which check does NFPA 70B-2026 Table 35.3.5 aim at a microprocessor relay rather than at an electromechanical relay?
+
+- 0. Status and arc-reduction checks, with arc reduction per the manufacturer **← answer**
+- 1. Branch-to-frame insulation resistance and a zero check
+- 2. A dissolved-gas sample of the relay case
+- 3. Specific gravity
+
+**Citation:** NFPA 70B-2026, Table 35.3.5
+
+Reviewer: VERIFIED or FIX
+
+## emg-011 (II / systems) {#emg-011}
+
+<!-- q:emg-011 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 visual inspection of a transfer switch, conditions 1, 2, and 3, is:
+
+- 0. 12, 6, and 3 months **← answer**
+- 1. 60, 36, and 12 months, the same as the electrical row
+- 2. 12, 12, and 6 months, the transformer-fluid row
+- 3. Before each use
+
+**Citation:** NFPA 70B-2026, chapter 39
+
+Reviewer: VERIFIED or FIX
+
+## emg-012 (III / component) {#emg-012}
+
+<!-- q:emg-012 -->
+
+**Bank verified flag:** true
+
+Which test is listed for a transfer switch in NFPA 70B-2026 Table 39.3.5?
+
+- 0. Insulation resistance, protective devices, operators, transfer sequence, bypass or isolation, and operation under load **← answer**
+- 1. Dissolved-gas analysis
+- 2. Vacuum-interrupter integrity
+- 3. A turns-ratio test of the switch
+
+**Citation:** NFPA 70B-2026, Table 39.3.5
+
+Reviewer: VERIFIED or FIX
+
+## gnd-012 (II / systems) {#gnd-012}
+
+<!-- q:gnd-012 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 electrical testing of grounding and bonding, conditions 1, 2, and 3, is:
+
+- 0. 60, 36, and 36 months **← answer**
+- 1. 12, 12, and 6 months, which is the visual row
+- 2. 60, 36, and 12 months, the ordinary standard row
+- 3. 3, 3, and 1 month
+
+**Citation:** NFPA 70B-2026, chapter 20
+
+Reviewer: VERIFIED or FIX
+
+## gnd-013 (III / component) {#gnd-013}
+
+<!-- q:gnd-013 -->
+
+**Bank verified flag:** true
+
+Which test is on the NFPA 70B-2026 Table 20.3.5 grounding list?
+
+- 0. Fall-of-potential on a ground rod, point-to-point bonding, and connection resistance **← answer**
+- 1. A transformer turns-ratio test
+- 2. Inverse-time trip at 300 percent
+- 3. Specific gravity of 10 percent of the cells
+
+**Citation:** NFPA 70B-2026, Table 20.3.5
+
+Reviewer: VERIFIED or FIX
+
+## safety-083 (II / systems) {#safety-083}
+
+<!-- q:safety-083 -->
+
+**Bank verified flag:** true
+
+In the NFPA 70B-2026 test classes, class 1 and class 2 differ because:
+
+- 0. Class 1 is online and connected to the supply; class 2 is offline, disconnected or fed by a test source **← answer**
+- 1. Class 1 is always a dissolved-gas test
+- 2. Class 2 is the only class allowed above 1000 V
+- 3. The numbers are torque tables
+
+**Citation:** NFPA 70B-2026, 8.3
+
+Reviewer: VERIFIED or FIX
+
+## safety-084 (III / component) {#safety-084}
+
+<!-- q:safety-084 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 marks which of these as an enhanced test rather than the basic insulation-resistance test?
+
+- 0. Overpotential on a medium-voltage breaker power circuit, and dielectric withstand on switchgear above 1000 V **← answer**
+- 1. Specific gravity of every flooded cell
+- 2. A visual check that the enclosure is clean
+- 3. Recording float voltage to two decimals
+
+**Citation:** NFPA 70B-2026, Tables 15.4.5, 12.3.5, and 13.3.5
+
+Reviewer: VERIFIED or FIX
+
+## safety-085 (II / component) {#safety-085}
+
+<!-- q:safety-085 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 12.3.5 for switchgear includes ground resistance, bonding, insulation resistance, and protective tests. Above 1000 V it also offers:
+
+- 0. Enhanced dielectric withstand and online partial discharge **← answer**
+- 1. A required dissolved-gas sample of the bus
+- 2. Specific gravity of the switchgear
+- 3. A turns-ratio test of the enclosure
+
+**Citation:** NFPA 70B-2026, Table 12.3.5
+
+Reviewer: VERIFIED or FIX
+
+## safety-086 (III / component) {#safety-086}
+
+<!-- q:safety-086 -->
+
+**Bank verified flag:** true
+
+Which test is listed for a panelboard in NFPA 70B-2026 Table 13.3.5?
+
+- 0. Main-bus insulation resistance, and an enhanced insulation-resistance test of control wiring **← answer**
+- 1. Vacuum integrity of a 15 kV bottle
+- 2. Dissolved gas in the panel oil
+- 3. Fall-of-potential of the service ground rod as the only panel test
+
+**Citation:** NFPA 70B-2026, Table 13.3.5
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-060 (II / component) {#xfmr-060}
+
+<!-- q:xfmr-060 -->
+
+**Bank verified flag:** true
+
+A dry-type transformer maintenance electrical list in NFPA 70B-2026 can include insulation resistance, excitation, power factor, and turns ratio. It does not include:
+
+- 0. A dissolved-gas sample of a liquid that is not there **← answer**
+- 1. Winding resistance
+- 2. Connection resistance
+- 3. Partial discharge, which the table allows by construction
+
+**Citation:** NFPA 70B-2026, Table 11.3.5
+
+Reviewer: VERIFIED or FIX
+
+## batt-012 (III / systems) {#batt-012}
+
+<!-- q:batt-012 -->
+
+**Bank verified flag:** true
+
+Valve-regulated lead-acid performance in NFPA 70B-2026 Table 36.2, conditions 1, 2, and 3, is:
+
+- 0. 24, 24, and 12 months **← answer**
+- 1. 60, 60, and 12 months, the vented performance row
+- 2. 12, 12, and 1 month, the vented float-voltage row
+- 3. 36, 36, and 12 months, the storage-system performance row
+
+**Citation:** NFPA 70B-2026, Table 36.2
+
+Reviewer: VERIFIED or FIX
+
+## emg-013 (II / component) {#emg-013}
+
+<!-- q:emg-013 -->
+
+**Bank verified flag:** true
+
+A test that is NOT part of caring for a transfer switch under NFPA 70B-2026 Table 39.3.5 is:
+
+- 0. Operating the transfer under load
+- 1. Proving the bypass or isolation mechanism when the switch has one
+- 2. Timing the transfer sequence
+- 3. A dissolved-gas analysis of the switch **← answer**
+
+**Citation:** NFPA 70B-2026, Table 39.3.5
+
+Reviewer: VERIFIED or FIX
+
+## relay-070 (III / component) {#relay-070}
+
+<!-- q:relay-070 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 35.3.5 lists pickup and three-point timing for protective relays. What it does not list is:
+
+- 0. A numeric timing tolerance you may invent **← answer**
+- 1. Restraint or directional checks where the relay has them
+- 2. Input and output checks
+- 3. An electromechanical zero check
+
+**Citation:** NFPA 70B-2026, Table 35.3.5
+
+Reviewer: VERIFIED or FIX
+
+## cable-024 (II / component) {#cable-024}
+
+<!-- q:cable-024 -->
+
+**Bank verified flag:** true
+
+Very-low-frequency testing, as NFPA 70B-2026 Table 18.3.5 uses the term for cable above 1000 V, means a frequency:
+
+- 0. Below 1 Hz **← answer**
+- 1. 60 Hz, called very low because the voltage is reduced
+- 2. The same as a DC insulation-resistance test
+- 3. Above 300 Hz
+
+**Citation:** NFPA 70B-2026, Table 18.3.5
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-061 (III / systems) {#xfmr-061}
+
+<!-- q:xfmr-061 -->
+
+**Bank verified flag:** true
+
+When the manufacturer is silent, NFPA 70B-2026 puts transformer tests other than the visual inspection and the fluid sample on:
+
+- 0. 60, 36, and 12 months **← answer**
+- 1. 12, 12, and 6 months, the same as the oil sample
+- 2. 12, 6, and 3 months, the transfer-switch visual row
+- 3. Before each use
+
+**Citation:** NFPA 70B-2026, Table 11.2
+
+Reviewer: VERIFIED or FIX
+
+## gnd-014 (II / component) {#gnd-014}
+
+<!-- q:gnd-014 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 chapter 20 does not give one earth-resistance number that every electrode must meet. The tests it does list include:
+
+- 0. Fall-of-potential, point-to-point bonding, and connection resistance **← answer**
+- 1. A required maximum of 1 ohm for every site
+- 2. Inverse-time trip at 300 percent
+- 3. Oil acidity
+
+**Citation:** NFPA 70B-2026, Table 20.3.5
+
+Reviewer: VERIFIED or FIX
+
+## mvbr-011 (III / systems) {#mvbr-011}
+
+<!-- q:mvbr-011 -->
+
+**Bank verified flag:** true
+
+Low-voltage and medium-voltage breakers in NFPA 70B-2026, when the manufacturer gives no interval, both fall on:
+
+- 0. 60, 36, and 12 months **← answer**
+- 1. 12, 6, and 3 months
+- 2. The vented-battery float row of 12, 12, and 1 month
+- 3. Before each use
+
+**Citation:** NFPA 70B-2026, chapter 15
+
+Reviewer: VERIFIED or FIX
+
+## emg-014 (III / systems) {#emg-014}
+
+<!-- q:emg-014 -->
+
+**Bank verified flag:** true
+
+When the manufacturer is silent, NFPA 70B-2026 Table 32.2 puts battery-energy-storage performance, conditions 1, 2, and 3, at:
+
+- 0. 36, 36, and 12 months **← answer**
+- 1. 12, 12, and 1 month, the vented float-voltage row
+- 2. 24, 24, and 12 months, the valve-regulated cell performance row
+- 3. Before each use
+
+**Citation:** NFPA 70B-2026, Table 32.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-087 (II / systems) {#safety-087}
+
+<!-- q:safety-087 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 visual inspection of substations and switchgear, conditions 1, 2, and 3, is:
+
+- 0. 12, 12, and 6 months **← answer**
+- 1. 60, 36, and 12 months, which is the row for the other switchgear tasks
+- 2. 12, 6, and 3 months
+- 3. 60, 36, and 36 months
+
+**Citation:** NFPA 70B-2026, chapter 12
+
+Reviewer: VERIFIED or FIX
+
+## brkr-034 (III / component) {#brkr-034}
+
+<!-- q:brkr-034 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 15.3.5 splits molded-case breaker columns at:
+
+- 0. Frames of 225 A and below versus larger frames, without printing trip-time seconds **← answer**
+- 1. A 1000 V versus 69 kV insulation test
+- 2. Vented versus valve-regulated cells
+- 3. Online versus offline thermography
+
+**Citation:** NFPA 70B-2026, Table 15.3.5
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-062 (II / component) {#xfmr-062}
+
+<!-- q:xfmr-062 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 inspection of a liquid-filled transformer includes level, pressure, and relief devices. A dry type instead emphasizes:
+
+- 0. The same oil sample, because every transformer has fluid
+- 1. Connections, cooling, grounding impedance, and the enclosure, without a fluid sample **← answer**
+- 2. Specific gravity of the windings
+- 3. A transfer-switch bypass test
+
+**Citation:** NFPA 70B-2026, 11.3.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-088 (III / component) {#safety-088}
+
+<!-- q:safety-088 -->
+
+**Bank verified flag:** true
+
+Online partial discharge on switchgear above 1000 V, in NFPA 70B-2026, is:
+
+- 0. An online test, done while the gear is connected to its supply **← answer**
+- 1. An offline overpotential test of control wiring tied to solid-state parts
+- 2. A specific-gravity test
+- 3. Required on every panelboard
+
+**Citation:** NFPA 70B-2026, Table 12.3.5 and 8.3
+
+Reviewer: VERIFIED or FIX
+
+## safety-089 (II / systems) {#safety-089}
+
+<!-- q:safety-089 -->
+
+**Bank verified flag:** true
+
+Panelboards and switchboards in NFPA 70B-2026, when the manufacturer is silent, are maintained on:
+
+- 0. 60, 36, and 12 months **← answer**
+- 1. 12, 6, and 3 months
+- 2. The grounding electrical row of 60, 36, and 36 months
+- 3. 12, 12, and 1 month
+
+**Citation:** NFPA 70B-2026, chapter 13
+
+Reviewer: VERIFIED or FIX
+
+## emg-015 (II / component) {#emg-015}
+
+<!-- q:emg-015 -->
+
+**Bank verified flag:** true
+
+Servicing a transfer switch under NFPA 70B-2026 includes manual operation, bolted connections, and interlocks. Those are not the same item as:
+
+- 0. The electrical list of insulation resistance, operators, sequence, and operation under load **← answer**
+- 1. A job you may skip if the visual interval has not come due
+- 2. Something the chapter assigns to a relay timing test
+- 3. A dissolved-gas sample
+
+**Citation:** NFPA 70B-2026, 39.3.4 and Table 39.3.5
+
+Reviewer: VERIFIED or FIX
+
+## relay-071 (II / component) {#relay-071}
+
+<!-- q:relay-071 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 relay inspection includes settings checked against:
+
+- 0. The coordination study **← answer**
+- 1. The cable very-low-frequency menu
+- 2. A battery specific-gravity sample
+- 3. Table 15.3.5 trip time, which 70B does not print
+
+**Citation:** NFPA 70B-2026, Table 35.3.1
 
 Reviewer: VERIFIED or FIX
 
