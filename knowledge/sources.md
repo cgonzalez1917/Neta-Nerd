@@ -9,6 +9,7 @@ Private copies used for lookup only. They are not in git.
 - ANSI/NETA ATS-2025. Acceptance limits and section numbers cited as ATS-2025.
 - ANSI/NETA MTS-2023. Maintenance limits cited as MTS-2023. Where a number differs from ATS, the question says so.
 - NFPA 70E-2024. Article, section, and table numbers cited only after they were found in the owner’s text.
+- NFPA 70B-2026, chapters 7 through 9, from paraphrased notes of the free-access viewer. Cited by section, for example 7.2.1.4 or 9.3.2. Those chapters do not give PI, DAR, or infrared delta-T limits, so the bank does not invent them.
 - OSHA 3120 (2002 revised), lockout/tagout booklet, for the lock-versus-tag distinction.
 
 IEEE, NEC, and ASTM are cited generally unless the number also appears inside ATS or MTS (for example IEEE C57.106 as the source note under ATS Table 100.4.1).

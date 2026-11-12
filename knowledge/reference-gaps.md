@@ -25,12 +25,15 @@ These were read as text and may be cited.
 
 | Document | What we actually have | Why it is still a gap |
 | --- | --- | --- |
-| IEEE 43-2013 | Image PDF with no body text, plus a third-party overview article | Cannot confirm clause numbers. Machine IR questions cite ATS 7.15.1, which says “in accordance with IEEE 43,” and the megohmmeter manual where it quotes IEEE 43. |
-| IEEE C57.13.1-2017 | PDF with no extractable text | CT questions cite ATS 7.10.1, which names this guide for polarity, ratio, excitation, and burden. No C57.13.1 clause number is used. |
-| IEEE C37.91-2021 | PDF with no extractable text | Transformer differential and harmonic restraint are not cited to a C37.91 clause. ATS 7.9.1 device 87 is the anchor. |
-| IEEE C57.155-2014 | PDF with no extractable text | Ester dissolved-gas questions are not written from this guide. |
 | IEEE C37.2 | Student notes, not the standard | Device-number questions use the names in ATS 7.9.1. C37.113-2015 clause 3.2 only confirms that the guide follows C37.2. |
 | IEEE C57.91 | 1995 loading-guide corrigendum only | Not the loading guide. No loading questions are taken from it. |
+
+Text-recognized copies, readable enough for clause checks, with OCR errors (megohm often prints as MQ):
+
+- IEEE 43-2013. Insulation resistance and polarization index. Clause 12.2.2 is the 5000 megohm screen. Table 3 is the class PI floor. Table 4 is the 40 °C resistance floor.
+- IEEE C57.13.1-2017. Field testing of relaying current transformers. Clauses 6, 8, 9, and 12.
+- IEEE C37.91-2021. Transformer protection. Clauses 6.4.3, 6.5.2, 6.5.3, and 7.3.4.
+- IEEE C57.155-2014. Dissolved gas in natural and synthetic esters. Clauses 4.1 and 5.3. Not a substitute for C57.104 on mineral oil.
 
 ## IEEE documents named by ATS or MTS that we do not have
 
@@ -87,7 +90,7 @@ Free official copy: IEEE sells these. The IEEE GET program sometimes posts a sta
 | Document | Where it is cited | Topics | Free official source |
 | --- | --- | --- | --- |
 | NFPA 70, National Electrical Code | ATS/MTS 2.1; TestGuy | Motor circuits, wiring | View-only with a free NFPA account. Not a free download. The motor notes in the lookup folder are not the Code. |
-| NFPA 70B | ATS/MTS 2.1; TestGuy | Maintenance program | Same NFPA view-only access |
+| NFPA 70B-2026, chapters other than 7–9 | ATS/MTS 2.1; TestGuy | Equipment-specific maintenance outside the fundamental tests, records, and intervals | Chapters 7–9 were read as paraphrased notes from the free-access viewer. The rest of the standard is still a gap. View-only at NFPA |
 | NFPA 99 | ATS/MTS 2.1 | Health-care electrical systems | Same |
 | NFPA 101 | ATS/MTS 2.1 | Life safety | Same |
 | NFPA 110 | ATS 7.22.1 | Emergency-generator performance test | Same. Questions cite only the ATS sentence that names it |

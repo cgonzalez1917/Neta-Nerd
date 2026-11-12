@@ -1045,5 +1045,59 @@
     "reference": "ANSI/NETA ATS-2025 7.1.2",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-059",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "After a machine insulation-resistance test, IEEE 43-2013 clause 5.5 requires:",
+    "choices": [
+      "Leave the winding charged so the next reading is faster",
+      "A discharge path once the test voltage is removed",
+      "A second test at twice the voltage immediately",
+      "No discharge, because the current is already zero"
+    ],
+    "answer": 1,
+    "explanation": "The winding holds the charge. Clause 5.5 says to provide a discharge circuit after the direct voltage comes off. ATS 7.15.1 runs this test in accordance with IEEE 43. Pulling the leads first is how people get hit.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 5.5",
+    "verified": true,
+    "kb": "safety.md#instruments"
+  },
+  {
+    "id": "safety-060",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "IEEE C57.13.1-2017 clause 12.1 says a current transformer must not be left energized above the knee:",
+    "choices": [
+      "For the whole lunch break, so the curve can settle",
+      "Any longer than it takes to record the points",
+      "Until the primary is reconnected to the bus",
+      "At rated primary current for 30 minutes"
+    ],
+    "answer": 1,
+    "explanation": "Voltage on part of the secondary induces voltage on the whole winding. Clause 12.1 says not to stay above the knee longer than the readings require, and to demagnetize a de-energized CT before the run. ATS 7.10.1.B.4 is the excitation test this clause is describing.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4; ref. IEEE C57.13.1-2017, clause 12.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "safety-061",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "IEEE 43-2013 clause 5.3 warns that an insulation-resistance test voltage that is too high:",
+    "choices": [
+      "Always gives a better PI",
+      "Can overstress the insulation and fail it, especially on a small, low-voltage, or wet winding",
+      "Is required above 1000 V by Table 1 with no upper bound",
+      "Replaces the discharge step"
+    ],
+    "answer": 1,
+    "explanation": "The test is a direct-voltage test. Table 1 is a guide, and the manufacturer\u2019s limit still wins. ATS Table 100.11 uses the same idea: the test voltage follows the winding rating. Do not pick the top of the meter.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3",
+    "verified": true,
+    "kb": "insulation.md#spot"
   }
 ]

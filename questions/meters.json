@@ -888,7 +888,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "IEEE 43, as quoted in the Megger S1-568 manual, treats a polarization index as unreliable when the 1-minute insulation resistance is above:",
+    "question": "IEEE 43-2013 says the polarization index should not be used to judge the winding when the 1-minute insulation resistance is above:",
     "choices": [
       "5 M\u03a9",
       "100 M\u03a9",
@@ -896,9 +896,9 @@
       "1 \u03a9"
     ],
     "answer": 2,
-    "explanation": "The megohmmeter manual says IEEE 43 does not recommend a polarization index once the one-minute resistance is above 5000 megohms. That clause could not be read in the IEEE 43 file on hand, so this item stays unverified against the standard itself. The acceptance floor ATS does print for AC machines is a PI not less than 2.0 (7.15.1.D.2.1).",
-    "reference": "Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.B.2 points the machine test at IEEE 43. The 5000 megohm screen was not readable as a numbered clause in the supplied IEEE 43 file.",
-    "verified": false,
+    "explanation": "Clause 12.2.2 says that once the 1-minute value is higher than 5000 megohms, the current is so small that humidity, voltage drift, and the leads can move the 10-minute ratio. The index may or may not describe the insulation, so it is not used as the assessment. Clause 11.2 says the same thing: the index can be disregarded. ATS 7.15.1.B.2 still runs the test in accordance with IEEE 43, and 7.15.1.D.2.1 still prints a PI floor of 2.0 when the index is used.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2.1; ref. IEEE 43-2013, clauses 11.2 and 12.2.2",
+    "verified": true,
     "kb": "insulation.md#pi-dar"
   },
   {
@@ -1674,5 +1674,113 @@
     "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
     "verified": true,
     "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-094",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Unless another pair of times is stated, IEEE 43-2013 clause 5.4 defines the polarization index as:",
+    "choices": [
+      "The 1-minute resistance divided by the 10-minute resistance",
+      "The 10-minute resistance divided by the 1-minute resistance",
+      "The 30-second resistance divided by the 1-minute resistance",
+      "A spot reading at 1 minute only"
+    ],
+    "answer": 1,
+    "explanation": "The index is the 10-minute value over the 1-minute value. Inverting it makes a healthy winding look bad. ATS 7.15.1.B.2 uses that 10-minute test on machines larger than 200 horsepower. Smaller machines in that section use the 60/30 ratio instead.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 5.4",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "math-095",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "For a machine winding rated under 1000 V, IEEE 43-2013 Table 1 guides the insulation-resistance test voltage to:",
+    "choices": [
+      "500 V dc",
+      "2500 V dc",
+      "10 kV dc",
+      "The highest range on the megohmmeter"
+    ],
+    "answer": 0,
+    "explanation": "Clause 5.3 and Table 1 put windings at or under 1000 V on a 500 V direct test. ATS Table 100.11 uses that same 500 V step. A higher range can overstress a small or wet winding. The reading is still corrected to 40 \u00b0C before it is compared.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3 and Table 1",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "math-096",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE C37.91-2021 clause 6.5.3 describes magnetizing inrush as:",
+    "choices": [
+      "A sine wave with no harmonics",
+      "Rich in harmonics, particularly the second, and not necessarily rich in every phase",
+      "Only a fifth-harmonic overexcitation problem",
+      "A differential current that restraint cannot see"
+    ],
+    "answer": 1,
+    "explanation": "Inrush violates the idea that current in equals current out, and it is full of harmonics, especially the second. Those harmonics are not always large in every phase. ATS 7.9.1 tells you to determine harmonic restraint on an 87. This clause is why that restraint exists. A scheme that only blocks during the instant of energizing is not enough, because inrush also follows faults and out-of-step closing.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "math-097",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE C57.155-2014 clause 4.1, compared with mineral-oil dissolved-gas guides, says ester liquids:",
+    "choices": [
+      "Make entirely different gases, so hydrogen no longer means anything",
+      "Make the same fault gases, but in different ratios and at different rates, so an unmodified mineral-oil interpretation is not reliable",
+      "Can be judged with IEEE C57.104 ratios unchanged",
+      "Do not produce acetylene"
+    ],
+    "answer": 1,
+    "explanation": "The gases are the same family. The proportions and the rates are not. ATS 7.2.2.D.15 points a mineral-oil sample at IEEE C57.104. An ester-filled transformer is this other guide. Do not paste a mineral-oil Duval call onto ester oil.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1. Mineral-oil DGA remains IEEE C57.104-2019.",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-098",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 43-2013 Table 3 sets the minimum polarization index for thermal class 105 (class A) at:",
+    "choices": [
+      "1.0",
+      "1.5",
+      "2.0, the same number it uses for class 130 and above",
+      "4.0"
+    ],
+    "answer": 1,
+    "explanation": "Class 105 is 1.5. Class 130 and above is 2.0. ATS 7.15.1.D.2.1 prints a single floor of 2.0 for the AC machines in that section, which is the higher of those two IEEE floors. Do not use 1.5 to pass a machine that ATS holds to 2.0, and do not quote 2.0 as the IEEE floor for class A.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.2.1; ref. IEEE 43-2013, clause 12.2 and Table 3",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "math-099",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 43-2013 clause 12.3 says the insulation resistance of one phase, with the other two grounded, can be:",
+    "choices": [
+      "Exactly three times the whole-winding value, always",
+      "Lower than three times the whole-winding value, because of phase-to-phase current",
+      "Higher than the Table 4 minimum with no correction",
+      "Independent of temperature"
+    ],
+    "answer": 1,
+    "explanation": "Current between phases adds to the reading, so one phase can look worse than a simple three-times rule. The value you compare is still the observed resistance corrected to 40 \u00b0C. ATS Table 100.11 is that 40 \u00b0C table.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11; ref. IEEE 43-2013, clause 12.3",
+    "verified": true,
+    "kb": "insulation.md#spot"
   }
 ]

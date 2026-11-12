@@ -78,6 +78,16 @@ Table 130.7(C)(7)(a), maximum use voltage (AC rms): class 00 is 500 V, class 0 i
 
 A permit’s contents are listed in 130.2(B), including shock boundaries from Table 130.4(E)(a)/(b), arc-flash results, and a briefing.
 
+## Maintenance program {#nfpa70b}
+
+NFPA 70B-2026 chapters 7 through 9 are the maintenance rules behind an electrical maintenance program. Fundamental tests apply wherever another section calls for them.
+
+A retorque of hardware that is already installed stops at 90 percent of the manufacturer’s original torque. A new threaded joint uses the full specified torque. Equipment through 1000 V gets a DC insulation-resistance test that does not exceed the manufacturer’s test voltage. Above 1000 V, the maintenance program chooses the method. These chapters do not publish a polarization-index number, a dielectric-absorption number, or an infrared temperature-rise limit.
+
+Field tests are classed online or offline, and standard or enhanced. Every test is recorded: who tested, what was tested, the conditions, the date, the test, the pass/fail rule, and the as-found and as-left values. The equipment is then called serviceable, limited-service, or nonserviceable.
+
+Overall condition is the highest of three ratings: physical condition, criticality, and environment. Condition 1 is a clean, current program with nothing open. Condition 2 has at least one concern. Condition 3 is a real change, missed cycles, or an unaddressed alarm. An impending failure that threatens people is taken out of service and marked nonserviceable, unless shutting it down creates a greater hazard. Manufacturer intervals come first. Otherwise the interval table is a maximum, and any extension is written into the program. Two quiet intervals can justify a longer gap. Failures are a reason to shorten it.
+
 ## OSHA work practices {#osha}
 
 29 CFR 1910.147 is the general lockout/tagout rule. An energy-isolating device is a mechanical device that physically stops energy: a breaker, a disconnect, a valve. Push buttons, selector switches, and other control devices are not isolating devices. A lock holds the isolator. A tag is a warning and does not give the physical restraint of a lock. Locks and tags identify the person who put them on, and they are not used for other jobs.

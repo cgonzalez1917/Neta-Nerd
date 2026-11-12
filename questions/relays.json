@@ -31,8 +31,8 @@
       "A 10-minute polarization index of the relay case only"
     ],
     "answer": 1,
-    "explanation": "The 87 list is operating-unit pickup, each restraint unit, slope, harmonic restraint, instantaneous pickup, and the plotted restraint characteristic. The paragraph says to determine harmonic restraint; it does not name the second harmonic in that sentence.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87",
+    "explanation": "ATS 7.9.1 tells you to determine harmonic restraint on an 87, along with pickup, slope, and the restraint characteristic. It does not name the second harmonic in that sentence. IEEE C37.91-2021 clause 7.3.4.2 is where harmonic restraint is used so magnetizing inrush does not trip the differential, and clause 6.5.3 says that inrush is rich in harmonics, particularly the second.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clauses 6.5.3 and 7.3.4.2",
     "verified": true,
     "kb": "relays.md#testing"
   },
@@ -937,5 +937,77 @@
     "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2",
     "verified": true,
     "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-053",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "IEEE C37.91-2021 clause 7.3.4.2 uses harmonic restraint on a transformer differential so that:",
+    "choices": [
+      "The relay can be set more sensitively without tripping on inrush",
+      "Inrush is ignored by deleting the slope",
+      "The second harmonic forces a trip",
+      "Percentage restraint is removed"
+    ],
+    "answer": 0,
+    "explanation": "Restraint, or blocking, recognizes inrush and lets the operating pickup stay low for real faults. ATS 7.9.1 says to determine that harmonic restraint. It does not tell you to turn it off to make the relay trip faster on energizing.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-054",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.91-2021 clause 6.5.2 says false differential current gets worse when:",
+    "choices": [
+      "The CT ratios match exactly and the tap changer never moves",
+      "CT ratios cannot be matched, and an on-load tap changer moves the ratio further",
+      "The relay has percentage restraint",
+      "Harmonic restraint is in service"
+    ],
+    "answer": 1,
+    "explanation": "A ratio that is only close still leaves operating current. A load tap changer makes the mismatch move. If someone changes a de-energized tap and does not update the relay, the mismatch grows again. ATS 7.9.1 has you determine the slope that is supposed to ride through that through-fault current.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.2",
+    "verified": true,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-055",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "When one transformer is already energized and a parallel unit is switched in, IEEE C37.91-2021 clause 6.5.3 says the net inrush can:",
+    "choices": [
+      "Look almost sinusoidal, with little second harmonic, so one differential around both units may not restrain",
+      "Always contain more second harmonic than a single transformer",
+      "Be ignored if the tap changer is on neutral",
+      "Trip only the lockout, never the 87"
+    ],
+    "answer": 0,
+    "explanation": "The two inrushes are on opposite half-cycles, so together they can look like fundamental current. The guide\u2019s remedy is a separate differential for each transformer. ATS 7.9.1 still has you prove the harmonic restraint on each 87 you set.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3",
+    "verified": true,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-056",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "For a delta-wye transformer, IEEE C37.91-2021 clause 6.4.3 uses delta-connected CTs on the wye side to:",
+    "choices": [
+      "Increase the CT burden to three times on purpose, with no other reason",
+      "Keep zero-sequence current out of the differential when a ground fault is on the wye circuit",
+      "Measure the knee",
+      "Replace harmonic restraint"
+    ],
+    "answer": 1,
+    "explanation": "Zero-sequence current flows in the grounded wye and circulates in the transformer delta, so it does not come out the delta terminals. Delta CTs on the wye side trap that current so the relay does not see a false mismatch. Some relays remove the zero sequence in software instead. ATS 7.9.1 tests the 87 that depends on this balance.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.4.3",
+    "verified": true,
+    "kb": "relays.md#schemes"
   }
 ]

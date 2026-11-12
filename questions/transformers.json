@@ -776,5 +776,77 @@
     "reference": "ANSI/NETA ATS-2025 7.1.1.A.11",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "xfmr-044",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Partial discharge in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.1, shows up mainly as:",
+    "choices": [
+      "Acetylene with no hydrogen",
+      "Hydrogen",
+      "Ethane from a fault only",
+      "A drop in turns ratio"
+    ],
+    "answer": 1,
+    "explanation": "Hydrogen is the gas that clause names for corona-type partial discharge in ester liquid. That matches the mineral-oil pattern in C57.104, but the ester guide still warns that the rates are different. ATS 7.2.2.D.15 is the mineral-oil evaluation line. Use C57.155 when the liquid is ester.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 5.3.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-045",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Ethane in a soybean or rapeseed natural ester, with no other fault gases, is treated by IEEE C57.155-2014 clause 4.1.1 as:",
+    "choices": [
+      "Proof of arcing",
+      "Stray gassing from linolenic acid under normal temperature, not by itself a fault",
+      "A failed oil power-factor test",
+      "Acetylene"
+    ],
+    "answer": 1,
+    "explanation": "Those esters contain linolenic acid, and oxidation of that acid makes ethane at ordinary temperature. The lab screen is run hot, but the field point is that ethane alone is not an arc. Oxygen, light, and heat change how much you see, so the sample still has to be handled as a sealed sample.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.155-2014, clause 4.1.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-046",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Arcing in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.2, produces:",
+    "choices": [
+      "Only ethane from linolenic acid",
+      "Hydrogen, the hydrocarbon gases, and the carbon oxides, in proportions that need not match mineral oil",
+      "No acetylene",
+      "Only carbon dioxide"
+    ],
+    "answer": 1,
+    "explanation": "Hydrogen and the hydrocarbons show up in similar proportions to mineral oil but at different rates. The carbon oxides differ in both proportion and rate. Clause 4.1 already said not to reuse an unmodified mineral-oil diagnosis. ATS 7.2.2.D.15 remains the mineral-oil line.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1 and 5.3.2",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-047",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Overheating an ester liquid, IEEE C57.155-2014 clause 4.1, compared with mineral oil, tends to:",
+    "choices": [
+      "Make less methane, ethane, and ethylene, and only at higher temperature",
+      "Make more methane, ethane, and ethylene, and at lower temperature",
+      "Make no carbon oxides",
+      "Stop all gas production below 1000 \u00b0C"
+    ],
+    "answer": 1,
+    "explanation": "The guide lists that shift as one of the important differences. Carbon oxides are also produced readily when the ester itself is overheated, not only when paper is involved. Do not wait for a mineral-oil temperature story before you take the sample seriously.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
   }
 ]

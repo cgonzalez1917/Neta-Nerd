@@ -230,8 +230,8 @@
       "Only if the PI is above 4"
     ],
     "answer": 1,
-    "explanation": "The table title is a one-minute value at 40 \u00b0C, and 7.15.1.D.2 sends you there. Correct to 40 \u00b0C before the comparison. The 20 \u00b0C multipliers in Table 100.14.1 are for the apparatus in Table 100.1, not for this machine table. The test is run in accordance with IEEE 43; that standard\u2019s own clause text was not readable in the file on hand.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11 (one minute at 40 \u00b0C) and 7.15.1.D.2; the test method is IEEE 43 per 7.15.1.B.2",
+    "explanation": "ATS Table 100.11 is a one-minute value at 40 \u00b0C. IEEE 43-2013 clause 12.3 and Table 4 use the same temperature: correct the reading to 40 \u00b0C before comparing it with the minimum. The 20 \u00b0C multipliers in ATS Table 100.14.1 belong to the apparatus in Table 100.1, not to this machine table.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.D.2; ref. IEEE 43-2013, clause 12.3 and Table 4",
     "verified": true,
     "kb": "insulation.md#temp-correction"
   },
@@ -248,9 +248,9 @@
       "Run at twice the test voltage"
     ],
     "answer": 1,
-    "explanation": "The megohmmeter manual attributes the 5000 megohm caution to IEEE 43. The supplied IEEE 43 file has no extractable clause text, so the flag stays false. What ATS itself requires on an AC machine is a PI not less than 2.0, from a ten-minute test when the machine is over 200 horsepower.",
-    "reference": "Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.D.2.1 sets the machine PI floor at 2.0. The 5000 megohm screen was not readable as a numbered IEEE 43 clause.",
-    "verified": false,
+    "explanation": "8000 megohms is above the 5000 megohm line in IEEE 43-2013 clause 12.2.2, so the polarization index is not the pass/fail. Clause 11.2 says it may be disregarded. The machine still has to meet the insulation-resistance minimum in ATS Table 100.11, corrected to 40 \u00b0C. A PI under 2.0 is the ATS floor only when the index is actually being used.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.2 and Table 100.11; ref. IEEE 43-2013, clauses 11.2 and 12.2.2",
+    "verified": true,
     "kb": "insulation.md#pi-dar"
   }
 ]

@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 370 (Level II 227, Level III 143).
+Count: 395 (Level II 242, Level III 153).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -444,7 +444,7 @@ ATS 7.9.1 tells you to determine which of the following on an 87 differential?
 - 2. The transformer's oil interfacial tension
 - 3. A 10-minute polarization index of the relay case only
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clauses 6.5.3 and 7.3.4.2
 
 Reviewer: VERIFIED or FIX
 
@@ -2059,7 +2059,7 @@ ATS 7.10.1 requires an excitation test on which CTs?
 - 2. Every window CT, and never a bushing CT
 - 3. None; excitation was removed from the section
 
-**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1-2017, clause 6.5
 
 Reviewer: VERIFIED or FIX
 
@@ -2076,7 +2076,7 @@ Burden of a CT circuit is measured:
 - 2. Only on the primary bushing
 - 3. With a megohmmeter
 
-**Citation:** ANSI/NETA ATS-2025 7.10.1.B.5
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.5; ref. IEEE C57.13.1-2017, clause 6.7
 
 Reviewer: VERIFIED or FIX
 
@@ -2875,7 +2875,7 @@ Ratio of a CT, ATS 7.10.1, is verified by:
 - 2. Primary injection at 300% for Table 100.7
 - 3. Tan delta of the secondary
 
-**Citation:** ANSI/NETA ATS-2025 7.10.1.B.3
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.3 and D.2; ref. IEEE C57.13.1-2017, clauses 8 and 9
 
 Reviewer: VERIFIED or FIX
 
@@ -2909,7 +2909,7 @@ IEEE 30°, IEEE 45°, and the 10/50 knee are:
 - 2. Ratio-error classes
 - 3. Burden ratings in ohms
 
-**Citation:** CT excitation practice, per the test-set manual. ATS-2025 7.10.1.D.4 compares excitation with the manufacturer curve or IEEE C57.13.1.
+**Citation:** ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clauses 6.5 and 12. The three knee names are test-set practice, not a clause in that guide.
 
 Reviewer: VERIFIED or FIX
 
@@ -3342,19 +3342,18 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-050 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-IEEE 43, as quoted in the Megger S1-568 manual, treats a polarization index as unreliable when the 1-minute insulation resistance is above:
+IEEE 43-2013 says the polarization index should not be used to judge the winding when the 1-minute insulation resistance is above:
 
 - 0. 5 MΩ
 - 1. 100 MΩ
 - 2. 5000 MΩ **← answer**
 - 3. 1 Ω
 
-**Citation:** Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.B.2 points the machine test at IEEE 43. The 5000 megohm screen was not readable as a numbered clause in the supplied IEEE 43 file.
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2 and D.2.1; ref. IEEE 43-2013, clauses 11.2 and 12.2.2
 
 Reviewer: VERIFIED or FIX
-
 ## math-051 (II / theory) {#math-051}
 
 <!-- q:math-051 -->
@@ -4064,7 +4063,7 @@ ATS Table 100.11 gives rotating-machine insulation resistance for a one-minute t
 - 2. After correction to 75 °C with the copper constant
 - 3. Only if the PI is above 4
 
-**Citation:** ANSI/NETA ATS-2025 Table 100.11 (one minute at 40 °C) and 7.15.1.D.2; the test method is IEEE 43 per 7.15.1.B.2
+**Citation:** ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.D.2; ref. IEEE 43-2013, clause 12.3 and Table 4
 
 Reviewer: VERIFIED or FIX
 ## dlro-007 (III / component) {#dlro-007}
@@ -4173,7 +4172,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:ir-014 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 PI on a machine whose 1-minute reading is 8000 MΩ should be:
 
@@ -4182,7 +4181,7 @@ PI on a machine whose 1-minute reading is 8000 MΩ should be:
 - 2. Doubled and compared with Table 100.1
 - 3. Run at twice the test voltage
 
-**Citation:** Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.D.2.1 sets the machine PI floor at 2.0. The 5000 megohm screen was not readable as a numbered IEEE 43 clause.
+**Citation:** ANSI/NETA ATS-2025 7.15.1.D.2 and Table 100.11; ref. IEEE 43-2013, clauses 11.2 and 12.2.2
 
 Reviewer: VERIFIED or FIX
 
@@ -4590,7 +4589,7 @@ ATS 7.10.1.B.4 requires an excitation test:
 - 2. Only if the ratio already failed
 - 3. With the primary left connected to the bus
 
-**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1-2017, clauses 6.5 and 12
 
 Reviewer: VERIFIED or FIX
 
@@ -4641,7 +4640,7 @@ ATS 7.15.1.B.2 splits the insulation-resistance test on an AC induction machine 
 - 2. Above 200 horsepower, a DC hipot instead of insulation resistance
 - 3. Only the bearings are tested
 
-**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43-2013, clause 5.4
 
 Reviewer: VERIFIED or FIX
 
@@ -6291,6 +6290,431 @@ For a line terminated in a transformer, IEEE C37.113-2015 clause 5.5.2 prefers t
 - 3. A single current transformer on the neutral only
 
 **Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-059 (II / safety) {#safety-059}
+
+<!-- q:safety-059 -->
+
+**Bank verified flag:** true
+
+After a machine insulation-resistance test, IEEE 43-2013 clause 5.5 requires:
+
+- 0. Leave the winding charged so the next reading is faster
+- 1. A discharge path once the test voltage is removed **← answer**
+- 2. A second test at twice the voltage immediately
+- 3. No discharge, because the current is already zero
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 5.5
+
+Reviewer: VERIFIED or FIX
+
+## safety-060 (II / safety) {#safety-060}
+
+<!-- q:safety-060 -->
+
+**Bank verified flag:** true
+
+IEEE C57.13.1-2017 clause 12.1 says a current transformer must not be left energized above the knee:
+
+- 0. For the whole lunch break, so the curve can settle
+- 1. Any longer than it takes to record the points **← answer**
+- 2. Until the primary is reconnected to the bus
+- 3. At rated primary current for 30 minutes
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4; ref. IEEE C57.13.1-2017, clause 12.1
+
+Reviewer: VERIFIED or FIX
+
+## math-094 (II / theory) {#math-094}
+
+<!-- q:math-094 -->
+
+**Bank verified flag:** true
+
+Unless another pair of times is stated, IEEE 43-2013 clause 5.4 defines the polarization index as:
+
+- 0. The 1-minute resistance divided by the 10-minute resistance
+- 1. The 10-minute resistance divided by the 1-minute resistance **← answer**
+- 2. The 30-second resistance divided by the 1-minute resistance
+- 3. A spot reading at 1 minute only
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 5.4
+
+Reviewer: VERIFIED or FIX
+
+## math-095 (II / theory) {#math-095}
+
+<!-- q:math-095 -->
+
+**Bank verified flag:** true
+
+For a machine winding rated under 1000 V, IEEE 43-2013 Table 1 guides the insulation-resistance test voltage to:
+
+- 0. 500 V dc **← answer**
+- 1. 2500 V dc
+- 2. 10 kV dc
+- 3. The highest range on the megohmmeter
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3 and Table 1
+
+Reviewer: VERIFIED or FIX
+
+## math-096 (II / theory) {#math-096}
+
+<!-- q:math-096 -->
+
+**Bank verified flag:** true
+
+IEEE C37.91-2021 clause 6.5.3 describes magnetizing inrush as:
+
+- 0. A sine wave with no harmonics
+- 1. Rich in harmonics, particularly the second, and not necessarily rich in every phase **← answer**
+- 2. Only a fifth-harmonic overexcitation problem
+- 3. A differential current that restraint cannot see
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3
+
+Reviewer: VERIFIED or FIX
+
+## math-097 (II / theory) {#math-097}
+
+<!-- q:math-097 -->
+
+**Bank verified flag:** true
+
+IEEE C57.155-2014 clause 4.1, compared with mineral-oil dissolved-gas guides, says ester liquids:
+
+- 0. Make entirely different gases, so hydrogen no longer means anything
+- 1. Make the same fault gases, but in different ratios and at different rates, so an unmodified mineral-oil interpretation is not reliable **← answer**
+- 2. Can be judged with IEEE C57.104 ratios unchanged
+- 3. Do not produce acetylene
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1. Mineral-oil DGA remains IEEE C57.104-2019.
+
+Reviewer: VERIFIED or FIX
+
+## ct-019 (II / component) {#ct-019}
+
+<!-- q:ct-019 -->
+
+**Bank verified flag:** true
+
+IEEE C57.13.1-2017 clause 6.5 says an excitation test is used to confirm that a relaying CT:
+
+- 0. Has the right ratio only
+- 1. Matches its accuracy class and has no shorted turns, against the manufacturer’s curve **← answer**
+- 2. Is a metering CT
+- 3. Needs no demagnetizing
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1-2017, clause 6.5
+
+Reviewer: VERIFIED or FIX
+
+## ct-020 (II / component) {#ct-020}
+
+<!-- q:ct-020 -->
+
+**Bank verified flag:** true
+
+The voltage method in IEEE C57.13.1-2017 clause 12.2.1 is run by:
+
+- 0. Applying AC to the secondary with the primary open, after demagnetizing **← answer**
+- 1. Applying DC to the primary while the secondary is shorted
+- 2. Meggering the primary at 10 kV
+- 3. Leaving the CT on the live bus
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4; ref. IEEE C57.13.1-2017, clauses 5.1 and 12.2.1
+
+Reviewer: VERIFIED or FIX
+
+## ct-021 (II / component) {#ct-021}
+
+<!-- q:ct-021 -->
+
+**Bank verified flag:** true
+
+IEEE C57.13.1-2017 clause 6.7 allows a CT burden test only when:
+
+- 0. The secondary is open
+- 1. Secondary current is flowing, preferably near rated current **← answer**
+- 2. The primary is meggered
+- 3. The CT is above the knee for 10 minutes
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.5; ref. IEEE C57.13.1-2017, clause 6.7
+
+Reviewer: VERIFIED or FIX
+
+## ct-022 (II / component) {#ct-022}
+
+<!-- q:ct-022 -->
+
+**Bank verified flag:** true
+
+On the DC polarity check in IEEE C57.13.1-2017 clause 9.1, correct marks give a meter that:
+
+- 0. Does not move
+- 1. Kicks upscale when the battery is connected and downscale when it is opened **← answer**
+- 2. Kicks downscale on connection if X1 is positive
+- 3. Reads the knee voltage
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.2 and D.2; ref. IEEE C57.13.1-2017, clause 9.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-044 (II / component) {#xfmr-044}
+
+<!-- q:xfmr-044 -->
+
+**Bank verified flag:** true
+
+Partial discharge in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.1, shows up mainly as:
+
+- 0. Acetylene with no hydrogen
+- 1. Hydrogen **← answer**
+- 2. Ethane from a fault only
+- 3. A drop in turns ratio
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 5.3.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-045 (II / component) {#xfmr-045}
+
+<!-- q:xfmr-045 -->
+
+**Bank verified flag:** true
+
+Ethane in a soybean or rapeseed natural ester, with no other fault gases, is treated by IEEE C57.155-2014 clause 4.1.1 as:
+
+- 0. Proof of arcing
+- 1. Stray gassing from linolenic acid under normal temperature, not by itself a fault **← answer**
+- 2. A failed oil power-factor test
+- 3. Acetylene
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.155-2014, clause 4.1.1
+
+Reviewer: VERIFIED or FIX
+
+## mot-013 (II / component) {#mot-013}
+
+<!-- q:mot-013 -->
+
+**Bank verified flag:** true
+
+IEEE 43-2013 clause 12.2.1 says a polarization index is not applicable to:
+
+- 0. A form-wound stator
+- 1. Squirrel-cage rotor bars that are not insulated from the rotor body, and field windings with bare copper **← answer**
+- 2. Every machine over 200 horsepower
+- 3. A winding whose 1-minute resistance is 100 megohms
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 12.2.1
+
+Reviewer: VERIFIED or FIX
+
+## relay-053 (II / component) {#relay-053}
+
+<!-- q:relay-053 -->
+
+**Bank verified flag:** true
+
+IEEE C37.91-2021 clause 7.3.4.2 uses harmonic restraint on a transformer differential so that:
+
+- 0. The relay can be set more sensitively without tripping on inrush **← answer**
+- 1. Inrush is ignored by deleting the slope
+- 2. The second harmonic forces a trip
+- 3. Percentage restraint is removed
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2
+
+Reviewer: VERIFIED or FIX
+
+## relay-054 (II / systems) {#relay-054}
+
+<!-- q:relay-054 -->
+
+**Bank verified flag:** true
+
+IEEE C37.91-2021 clause 6.5.2 says false differential current gets worse when:
+
+- 0. The CT ratios match exactly and the tap changer never moves
+- 1. CT ratios cannot be matched, and an on-load tap changer moves the ratio further **← answer**
+- 2. The relay has percentage restraint
+- 3. Harmonic restraint is in service
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-061 (III / safety) {#safety-061}
+
+<!-- q:safety-061 -->
+
+**Bank verified flag:** true
+
+IEEE 43-2013 clause 5.3 warns that an insulation-resistance test voltage that is too high:
+
+- 0. Always gives a better PI
+- 1. Can overstress the insulation and fail it, especially on a small, low-voltage, or wet winding **← answer**
+- 2. Is required above 1000 V by Table 1 with no upper bound
+- 3. Replaces the discharge step
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3
+
+Reviewer: VERIFIED or FIX
+
+## math-098 (III / theory) {#math-098}
+
+<!-- q:math-098 -->
+
+**Bank verified flag:** true
+
+IEEE 43-2013 Table 3 sets the minimum polarization index for thermal class 105 (class A) at:
+
+- 0. 1.0
+- 1. 1.5 **← answer**
+- 2. 2.0, the same number it uses for class 130 and above
+- 3. 4.0
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.D.2.1; ref. IEEE 43-2013, clause 12.2 and Table 3
+
+Reviewer: VERIFIED or FIX
+
+## math-099 (III / theory) {#math-099}
+
+<!-- q:math-099 -->
+
+**Bank verified flag:** true
+
+IEEE 43-2013 clause 12.3 says the insulation resistance of one phase, with the other two grounded, can be:
+
+- 0. Exactly three times the whole-winding value, always
+- 1. Lower than three times the whole-winding value, because of phase-to-phase current **← answer**
+- 2. Higher than the Table 4 minimum with no correction
+- 3. Independent of temperature
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11; ref. IEEE 43-2013, clause 12.3
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-046 (III / component) {#xfmr-046}
+
+<!-- q:xfmr-046 -->
+
+**Bank verified flag:** true
+
+Arcing in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.2, produces:
+
+- 0. Only ethane from linolenic acid
+- 1. Hydrogen, the hydrocarbon gases, and the carbon oxides, in proportions that need not match mineral oil **← answer**
+- 2. No acetylene
+- 3. Only carbon dioxide
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1 and 5.3.2
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-047 (III / component) {#xfmr-047}
+
+<!-- q:xfmr-047 -->
+
+**Bank verified flag:** true
+
+Overheating an ester liquid, IEEE C57.155-2014 clause 4.1, compared with mineral oil, tends to:
+
+- 0. Make less methane, ethane, and ethylene, and only at higher temperature
+- 1. Make more methane, ethane, and ethylene, and at lower temperature **← answer**
+- 2. Make no carbon oxides
+- 3. Stop all gas production below 1000 °C
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1
+
+Reviewer: VERIFIED or FIX
+
+## ct-023 (III / component) {#ct-023}
+
+<!-- q:ct-023 -->
+
+**Bank verified flag:** true
+
+For an excitation test, IEEE C57.13.1-2017 clause 12.2 wants the ammeter to be rms and the voltmeter to be:
+
+- 0. Peak-reading only
+- 1. Average-responding, scaled to match an rms meter on a sine wave **← answer**
+- 2. A DC millivoltmeter
+- 3. A megohmmeter
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clause 12.2
+
+Reviewer: VERIFIED or FIX
+
+## ct-024 (III / component) {#ct-024}
+
+<!-- q:ct-024 -->
+
+**Bank verified flag:** true
+
+IEEE C57.13.1-2017 clause 12.2.1 says the points that matter most when you plot an excitation curve are:
+
+- 0. Only the origin
+- 1. The readings near the knee **← answer**
+- 2. Only the current at 1 V
+- 3. The DC resistance
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clause 12.2.1
+
+Reviewer: VERIFIED or FIX
+
+## ct-025 (III / component) {#ct-025}
+
+<!-- q:ct-025 -->
+
+**Bank verified flag:** true
+
+IEEE C57.13.1-2017 clause 6.4 uses a DC resistance measurement on a CT secondary to find:
+
+- 0. The insulation power factor
+- 1. A high-resistance joint in the winding or the connected wiring **← answer**
+- 2. The knee voltage
+- 3. Polarity
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1; ref. IEEE C57.13.1-2017, clause 6.4
+
+Reviewer: VERIFIED or FIX
+
+## relay-055 (III / systems) {#relay-055}
+
+<!-- q:relay-055 -->
+
+**Bank verified flag:** true
+
+When one transformer is already energized and a parallel unit is switched in, IEEE C37.91-2021 clause 6.5.3 says the net inrush can:
+
+- 0. Look almost sinusoidal, with little second harmonic, so one differential around both units may not restrain **← answer**
+- 1. Always contain more second harmonic than a single transformer
+- 2. Be ignored if the tap changer is on neutral
+- 3. Trip only the lockout, never the 87
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3
+
+Reviewer: VERIFIED or FIX
+
+## relay-056 (III / systems) {#relay-056}
+
+<!-- q:relay-056 -->
+
+**Bank verified flag:** true
+
+For a delta-wye transformer, IEEE C37.91-2021 clause 6.4.3 uses delta-connected CTs on the wye side to:
+
+- 0. Increase the CT burden to three times on purpose, with no other reason
+- 1. Keep zero-sequence current out of the differential when a ground fault is on the wye circuit **← answer**
+- 2. Measure the knee
+- 3. Replace harmonic restraint
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.4.3
 
 Reviewer: VERIFIED or FIX
 

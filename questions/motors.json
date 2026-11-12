@@ -84,8 +84,8 @@
       "Only the bearings are tested"
     ],
     "answer": 1,
-    "explanation": "The test is in accordance with IEEE 43. Larger machines get the ten-minute polarization index. Smaller machines get the one-minute test and the 60/30 ratio. The PI floor in D.2 is 2.0 and the DAR floor is 1.4.",
-    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43",
+    "explanation": "ATS 7.15.1.B.2 assigns the ten-minute polarization index to machines over 200 horsepower and the one-minute 60/30 ratio to smaller machines. IEEE 43-2013 clause 5.4 defines that index as the 10-minute resistance divided by the 1-minute resistance. The ATS floors are PI not less than 2.0 and DAR not less than 1.4.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43-2013, clause 5.4",
     "verified": true,
     "kb": "apparatus.md#motors"
   },
@@ -212,6 +212,24 @@
     "answer": 0,
     "explanation": "The machine PD test is marked optional. The required insulation test is still the IEEE 43 insulation-resistance test, with a PI or a DAR depending on horsepower.",
     "reference": "ANSI/NETA ATS-2025 7.15.1.B.16",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-013",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "IEEE 43-2013 clause 12.2.1 says a polarization index is not applicable to:",
+    "choices": [
+      "A form-wound stator",
+      "Squirrel-cage rotor bars that are not insulated from the rotor body, and field windings with bare copper",
+      "Every machine over 200 horsepower",
+      "A winding whose 1-minute resistance is 100 megohms"
+    ],
+    "answer": 1,
+    "explanation": "Those conductors do not show an absorption current, so the 10-minute ratio does not describe insulation. A wound rotor or a taped salient-pole winding can still be indexed. ATS 7.15.1 applies the PI to the insulated stator test, not to a squirrel-cage rotor.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 12.2.1",
     "verified": true,
     "kb": "apparatus.md#motors"
   }

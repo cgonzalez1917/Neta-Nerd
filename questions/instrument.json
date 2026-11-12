@@ -84,8 +84,8 @@
       "None; excitation was removed from the section"
     ],
     "answer": 1,
-    "explanation": "7.10.1.B.4 calls for an excitation test on transformers used for relaying, done to IEEE C57.13.1. Metering CTs still get ratio and polarity. The knee you mark has to be the criterion you agreed on.",
-    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4",
+    "explanation": "ATS 7.10.1.B.4 calls for an excitation test on relaying current transformers, done in accordance with IEEE C57.13.1. Clause 6.5 of that guide says the test checks the accuracy rating and looks for shorted turns, against the manufacturer\u2019s curve. Metering CTs still get ratio and polarity.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1-2017, clause 6.5",
     "verified": true,
     "kb": "field-methods.md#ct-knee"
   },
@@ -102,8 +102,8 @@
       "With a megohmmeter"
     ],
     "answer": 1,
-    "explanation": "ATS 7.10.1.B.5 says measure current-circuit burdens at the CT shorting terminal block in accordance with IEEE C57.13.1. Extra lead and extra relays are what push the CT toward saturation.",
-    "reference": "ANSI/NETA ATS-2025 7.10.1.B.5",
+    "explanation": "ATS 7.10.1.B.5 measures the current-circuit burden at the CT shorting block, in accordance with IEEE C57.13.1. Clause 6.7 says that check is made with secondary current flowing, preferably near rated current, into a known burden. Extra lead and extra relays are what push the CT toward saturation.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.5; ref. IEEE C57.13.1-2017, clause 6.7",
     "verified": true,
     "kb": "field-methods.md#ct-knee"
   },
@@ -120,8 +120,8 @@
       "Tan delta of the secondary"
     ],
     "answer": 0,
-    "explanation": "7.10.1.B.3 names the voltage method or the current method, both under IEEE C57.13.1. Polarity is the companion test. A ratio that matches the nameplate with the marks reversed is still a failed polarity test.",
-    "reference": "ANSI/NETA ATS-2025 7.10.1.B.3",
+    "explanation": "ATS 7.10.1.B.3 names the voltage method or the current method, both under IEEE C57.13.1. Those methods are in clause 8. Polarity, clause 9, still has to agree with the marks. A ratio that matches the nameplate with the marks reversed is a failed polarity test.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.3 and D.2; ref. IEEE C57.13.1-2017, clauses 8 and 9",
     "verified": true,
     "kb": "field-methods.md#ct-knee"
   },
@@ -156,8 +156,8 @@
       "Burden ratings in ohms"
     ],
     "answer": 1,
-    "explanation": "Each rule picks a different point on the same plot. A report that says \u201cno knee\u201d often means the run stopped before that marker\u2019s slope showed up. Say which marker you used.",
-    "reference": "CT excitation practice, per the test-set manual. ATS-2025 7.10.1.D.4 compares excitation with the manufacturer curve or IEEE C57.13.1.",
+    "explanation": "The three names are different points people mark on one excitation plot. IEEE C57.13.1-2017 clauses 6.5 and 12 tell you to compare the curve with the manufacturer\u2019s curve and to take readings near the knee. They do not define a 30-degree knee, a 45-degree knee, or a 10/50 knee, so this item stays unverified against that guide. Say which marker you used.",
+    "reference": "ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clauses 6.5 and 12. The three knee names are test-set practice, not a clause in that guide.",
     "verified": false,
     "kb": "field-methods.md#ct-knee"
   },
@@ -282,8 +282,8 @@
       "With the primary left connected to the bus"
     ],
     "answer": 1,
-    "explanation": "Relaying CTs get the excitation test. The result is compared with the manufacturer\u2019s curve or with IEEE C57.13.1 (7.10.1.D.4). The supplied C57.13.1 file had no extractable clause text, so the clause number is not cited. Metering CTs still get ratio and polarity.",
-    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1",
+    "explanation": "Relaying CTs get the excitation test. IEEE C57.13.1-2017 clause 6.5 compares the result with the manufacturer\u2019s curve and uses it to find shorted turns. Clause 12 is how the test is run. Metering CTs still get ratio and polarity.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1-2017, clauses 6.5 and 12",
     "verified": true,
     "kb": "instrument-transformers.md#excitation"
   },
@@ -320,6 +320,132 @@
     "answer": 0,
     "explanation": "Bushing CTs and other instrument transformers get the 7.10 tests: insulation resistance, polarity, ratio, and, for relaying CTs, excitation. The power-transformer ratio test does not cover them.",
     "reference": "ANSI/NETA ATS-2025 7.2.2.B.16 and D.16",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-019",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "IEEE C57.13.1-2017 clause 6.5 says an excitation test is used to confirm that a relaying CT:",
+    "choices": [
+      "Has the right ratio only",
+      "Matches its accuracy class and has no shorted turns, against the manufacturer\u2019s curve",
+      "Is a metering CT",
+      "Needs no demagnetizing"
+    ],
+    "answer": 1,
+    "explanation": "Shorted turns and a wiring fault show up as a curve that is not the one the manufacturer drew. ATS 7.10.1.B.4 requires the test on relaying CTs and 7.10.1.D.4 compares it with that curve or with this guide.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1-2017, clause 6.5",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-020",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "The voltage method in IEEE C57.13.1-2017 clause 12.2.1 is run by:",
+    "choices": [
+      "Applying AC to the secondary with the primary open, after demagnetizing",
+      "Applying DC to the primary while the secondary is shorted",
+      "Meggering the primary at 10 kV",
+      "Leaving the CT on the live bus"
+    ],
+    "answer": 0,
+    "explanation": "This is the usual field method because it does not need a high-current set. Clause 12.2.1 says to demagnetize first (see 5.1). The primary stays open. ATS 7.10.1.B.4 is the test that uses this method.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4; ref. IEEE C57.13.1-2017, clauses 5.1 and 12.2.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-021",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "IEEE C57.13.1-2017 clause 6.7 allows a CT burden test only when:",
+    "choices": [
+      "The secondary is open",
+      "Secondary current is flowing, preferably near rated current",
+      "The primary is meggered",
+      "The CT is above the knee for 10 minutes"
+    ],
+    "answer": 1,
+    "explanation": "The test asks whether the CT can push a known current, set by its ratio, into a known burden and still hold its accuracy. ATS 7.10.1.B.5 measures that burden at the shorting block. An open secondary is not this test.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.5; ref. IEEE C57.13.1-2017, clause 6.7",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-022",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "On the DC polarity check in IEEE C57.13.1-2017 clause 9.1, correct marks give a meter that:",
+    "choices": [
+      "Does not move",
+      "Kicks upscale when the battery is connected and downscale when it is opened",
+      "Kicks downscale on connection if X1 is positive",
+      "Reads the knee voltage"
+    ],
+    "answer": 1,
+    "explanation": "A small DC source is touched to the secondary and an analog meter watches the primary mark. Upscale on connect and downscale on release means the marks agree, for the hookup in that clause. ATS 7.10.1.D.2 fails the CT if the polarity does not match the marks. Clause 9 also allows AC and current methods.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.2 and D.2; ref. IEEE C57.13.1-2017, clause 9.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-023",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "For an excitation test, IEEE C57.13.1-2017 clause 12.2 wants the ammeter to be rms and the voltmeter to be:",
+    "choices": [
+      "Peak-reading only",
+      "Average-responding, scaled to match an rms meter on a sine wave",
+      "A DC millivoltmeter",
+      "A megohmmeter"
+    ],
+    "answer": 1,
+    "explanation": "The winding is nonlinear, so the voltage wave is not a clean sine. An average-responding meter, with bandwidth through the third harmonic, keeps the voltage reading from chasing those harmonics. ATS 7.10.1.D.4 still compares the curve you plot with the manufacturer\u2019s curve.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clause 12.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-024",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "IEEE C57.13.1-2017 clause 12.2.1 says the points that matter most when you plot an excitation curve are:",
+    "choices": [
+      "Only the origin",
+      "The readings near the knee",
+      "Only the current at 1 V",
+      "The DC resistance"
+    ],
+    "answer": 1,
+    "explanation": "The knee is where the curve leaves the straight part. A plot that stops early cannot be compared with the manufacturer\u2019s curve. Clause 6.5 is why ATS 7.10.1 asks for that comparison on a relaying CT.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clause 12.2.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-025",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "IEEE C57.13.1-2017 clause 6.4 uses a DC resistance measurement on a CT secondary to find:",
+    "choices": [
+      "The insulation power factor",
+      "A high-resistance joint in the winding or the connected wiring",
+      "The knee voltage",
+      "Polarity"
+    ],
+    "answer": 1,
+    "explanation": "The resistance should match the specification, and the test is also looking for a bad connection. It is not the excitation test and it is not polarity. ATS 7.10.1 still requires the ratio, polarity, and, for relaying CTs, the excitation test in the same guide.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1; ref. IEEE C57.13.1-2017, clause 6.4",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
   }
