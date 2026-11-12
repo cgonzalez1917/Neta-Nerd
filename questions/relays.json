@@ -1009,5 +1009,41 @@
     "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.4.3",
     "verified": true,
     "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-057",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "An NFPA 70B-2026 field-test record has to include:",
+    "choices": [
+      "Only pass or fail",
+      "Who tested, the equipment identity and nameplate, conditions, date, the test, the criteria, and as-found and as-left values",
+      "The manufacturer\u2019s entire manual",
+      "A polarization index, even though these chapters do not define one"
+    ],
+    "answer": 1,
+    "explanation": "Comments and recommendations belong in that record too. A bare pass or fail with no as-found value cannot support the next interval. These chapters do not give a polarization-index or dielectric-absorption number to invent.",
+    "reference": "NFPA 70B-2026, 8.5.1 and 8.5.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "relay-058",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 adjusts a maintenance interval by:",
+    "choices": [
+      "Leaving it fixed no matter what fails",
+      "Shortening it when failures are analyzed, and allowing a longer interval only after more than two intervals without problems, with the extension written in the program",
+      "Doubling it after one clean visit",
+      "Using the condition-3 column after every pass"
+    ],
+    "answer": 1,
+    "explanation": "The table plus the condition score is used for at least two intervals unless something fails early. After more than two intervals with no extra repairs, the original interval can resume. After more than two intervals with no problems, a longer interval is permitted, and the reason is documented. Manufacturer instructions still come first.",
+    "reference": "NFPA 70B-2026, 9.1.2 and 9.3.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

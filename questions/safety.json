@@ -1099,5 +1099,275 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3",
     "verified": true,
     "kb": "insulation.md#spot"
+  },
+  {
+    "id": "safety-062",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "NFPA 70B-2026 limits a retorque check on threaded hardware that is already installed to:",
+    "choices": [
+      "100 percent of the original torque, plus a quarter turn",
+      "No more than 90 percent of the manufacturer\u2019s original specified torque",
+      "50 percent, so the bolt cannot yield",
+      "Whatever a click wrench happens to read"
+    ],
+    "answer": 1,
+    "explanation": "The 90 percent cap is for hardware that was torqued before. Going back to the full original value on a joint that has already been tightened can damage the bolt or the lug. If the manufacturer published no number, the applicable fastener table is the fallback, and metric hardware stays with the manufacturer.",
+    "reference": "NFPA 70B-2026, 7.2.1.4",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-063",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A brand-new threaded electrical connection, under NFPA 70B-2026, is tightened to:",
+    "choices": [
+      "90 percent of the table, the same as a retorque",
+      "The manufacturer\u2019s specified torque, or the applicable table if the manufacturer is silent",
+      "Finger tight, because the inspection is infrared",
+      "Half the bolt diameter in inch-pounds, always"
+    ],
+    "answer": 1,
+    "explanation": "The 90 percent limit is the retorque rule for hardware that is already in service. A new joint gets the full specified torque. Do not mix the two.",
+    "reference": "NFPA 70B-2026, 7.2.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-064",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "For equipment rated through 1000 V, NFPA 70B-2026 calls for insulation resistance as:",
+    "choices": [
+      "A DC test that does not exceed the manufacturer\u2019s test voltage",
+      "An AC hipot at twice rated voltage for one minute",
+      "A very-low-frequency test at a medium-voltage table",
+      "Whatever the meter\u2019s top range is"
+    ],
+    "answer": 0,
+    "explanation": "Through 1000 V the method is DC insulation resistance, with a calibrated instrument, and the voltage stays at or below the manufacturer\u2019s test voltage. If the manufacturer is silent, an industry standard is the next stop. These chapters do not publish a polarization-index or dielectric-absorption limit.",
+    "reference": "NFPA 70B-2026, 7.3.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-065",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before field tests, NFPA 70B-2026 says to assess special hazards such as:",
+    "choices": [
+      "Only the paint color",
+      "Stored energy, insulating gas, PCBs, asbestos, and similar listed hazards",
+      "The brand of the torque wrench only",
+      "Whether the one-line uses device numbers"
+    ],
+    "answer": 1,
+    "explanation": "The list includes overpotential sources, stored or mass energy, gas byproducts and electrolytes, asbestos, insulating gas, PCBs, and tetrachloroethylene. The test does not start until those are accounted for.",
+    "reference": "NFPA 70B-2026, 8.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-066",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "NFPA 70B-2026 requires test instruments to be:",
+    "choices": [
+      "Any meter that turns on",
+      "Sound, used as the manufacturer says, calibrated, and rated for the task",
+      "Calibrated once in the life of the company",
+      "Rated only if the circuit is over 1000 V"
+    ],
+    "answer": 1,
+    "explanation": "Calibration information has to be easy to find, and the interval has to fit how accurate the instrument must be and how it is used. A meter that is not rated for the voltage is not made acceptable by a fresh sticker.",
+    "reference": "NFPA 70B-2026, 8.4",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-067",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "NFPA 70B-2026 Table 9.3.2 treats visual inspection and cleaning of portable tools as:",
+    "choices": [
+      "Once a year",
+      "Before each use",
+      "Every 60 months",
+      "Only after a shock"
+    ],
+    "answer": 1,
+    "explanation": "Visual inspection and cleaning are before each use. Electrical testing of those tools is on a 3-month interval in every condition column. That is tighter than the ordinary equipment row.",
+    "reference": "NFPA 70B-2026, Table 9.3.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-068",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 classes 1, 1A, 2, and 2A are:",
+    "choices": [
+      "Online standard, online enhanced, offline standard, and offline enhanced",
+      "Four torque tables",
+      "Polarization index, dielectric absorption, tip-up, and tan delta",
+      "Condition numbers 1 through 4"
+    ],
+    "answer": 0,
+    "explanation": "Online means the equipment is connected to its supply. Offline means it is disconnected or fed from a test source. Enhanced means the test gathers extra diagnostic information. It is not a different kind of equipment.",
+    "reference": "NFPA 70B-2026, 8.3",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-069",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 sets the overall condition number as:",
+    "choices": [
+      "The average of physical condition, criticality, and environment",
+      "The lowest of the three",
+      "The highest applicable of physical condition, criticality, and environment",
+      "Whichever number the last report used"
+    ],
+    "answer": 2,
+    "explanation": "A harsh environment or a high criticality raises the overall score even when the gear still looks clean. The interval follows that higher score. Averaging would hide the worst factor.",
+    "reference": "NFPA 70B-2026, 9.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-070",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "When an interval is taken from NFPA 70B-2026, the first place to look is:",
+    "choices": [
+      "The table, even when the manufacturer published a shorter interval",
+      "The manufacturer\u2019s instructions, then the table only if those instructions are silent",
+      "Always 12 months",
+      "The last technician\u2019s preference, with nothing written down"
+    ],
+    "answer": 1,
+    "explanation": "Manufacturer instructions come first. The table is a set of maxima used when the manufacturer does not say. A longer interval than the table has to be justified in the electrical maintenance program.",
+    "reference": "NFPA 70B-2026, 9.3.1 and 9.3.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-071",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 allows an undisturbed bolted bus joint to be assessed by:",
+    "choices": [
+      "Torque only, and never by infrared or resistance",
+      "One or more of infrared, permanently mounted temperature sensors, contact resistance, or torque verification",
+      "A polarization index of the bus",
+      "A visual look with no instrument"
+    ],
+    "answer": 1,
+    "explanation": "Any one of those methods can be the assessment, and more than one is allowed. Contact-resistance readings above the manufacturer\u2019s maximum are investigated. A retorque, if you use one, still stops at 90 percent of the original torque.",
+    "reference": "NFPA 70B-2026, 7.2.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-072",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "For equipment rated above 1000 V, NFPA 70B-2026 says the insulation test method is:",
+    "choices": [
+      "Always a DC megohmmeter, same as equipment through 1000 V",
+      "Chosen by the electrical maintenance program from the methods that section lists",
+      "Always a 60-minute power-frequency withstand",
+      "Left to whoever is holding the meter"
+    ],
+    "answer": 1,
+    "explanation": "Above 1000 V the program selects among DC insulation resistance, AC or DC withstand, DC overpotential, power factor or dissipation factor, very low frequency, damped AC, acoustic ultrasonic, and partial discharge. Through 1000 V, the specified method is DC insulation resistance. These chapters still do not publish a polarization-index limit.",
+    "reference": "NFPA 70B-2026, 7.3.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-073",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "NFPA 70B-2026 says equipment with an impending failure that threatens people, health, or the environment is:",
+    "choices": [
+      "Left in service until the next scheduled interval",
+      "De-energized and designated nonserviceable, unless de-energizing adds a hazard or is infeasible",
+      "Tagged limited-service and kept loaded",
+      "Repaired only if the condition score is 1"
+    ],
+    "answer": 1,
+    "explanation": "The exception is the case where shutting it down creates a greater hazard or cannot be done. Until it is corrected, barricades and alerts stay up. Limited-service is not the designation for a failure that is about to hurt someone.",
+    "reference": "NFPA 70B-2026, 9.2.1.4",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-074",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A contact-resistance reading on an undisturbed bolted joint that is above the manufacturer\u2019s maximum is, under NFPA 70B-2026:",
+    "choices": [
+      "Accepted if it was retorqued to 100 percent",
+      "Investigated",
+      "Ignored when an infrared camera is on site",
+      "Converted to a polarization index"
+    ],
+    "answer": 1,
+    "explanation": "The joint is assessed by infrared, a permanent sensor, contact resistance, or torque, alone or together. A resistance above the manufacturer\u2019s maximum is not left as a number on the sheet. A retorque of that existing hardware still does not exceed 90 percent of the original torque.",
+    "reference": "NFPA 70B-2026, 7.2.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-075",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 condition 1 means the equipment is:",
+    "choices": [
+      "Like new: clean, tight, dry, maintenance current, and no open monitoring items or recommendations",
+      "Any gear that is still energized",
+      "Gear that missed the last two maintenance cycles",
+      "Gear that needs a major part replaced this cycle"
+    ],
+    "answer": 0,
+    "explanation": "Condition 1 is the clean case. Condition 2 still meets that picture but has at least one concern, such as a changed result or an open recommendation. Condition 3 is the step where operation has changed, cycles were missed, or an alarm is still unaddressed.",
+    "reference": "NFPA 70B-2026, 9.2.1.1",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-076",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 puts equipment in condition 3 when, among other triggers:",
+    "choices": [
+      "The enclosure was wiped down",
+      "The last two maintenance cycles were missed, or both of the previous cycles needed a major repair or replacement",
+      "One infrared scan was normal",
+      "The manufacturer interval is longer than the table"
+    ],
+    "answer": 1,
+    "explanation": "Other triggers are an operating change, an unaddressed monitoring notification, or an urgent action. Two missed cycles are enough by themselves. Condition 2 is the milder step, where the basics are still met and only one concern has shown up.",
+    "reference": "NFPA 70B-2026, 9.2.1.3",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

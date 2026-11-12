@@ -124,5 +124,23 @@
     "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110",
     "verified": true,
     "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-008",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "NFPA 70B-2026 says maintenance information designates equipment as:",
+    "choices": [
+      "Serviceable, limited-service, or nonserviceable",
+      "Pass, fail, or exempt from records",
+      "Class 1, 1A, or 2 only",
+      "Condition A or B"
+    ],
+    "answer": 0,
+    "explanation": "Those three words say what the equipment can still be used for. They are not the same as the condition score of 1, 2, or 3 that sets how often it is maintained.",
+    "reference": "NFPA 70B-2026, 8.6.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

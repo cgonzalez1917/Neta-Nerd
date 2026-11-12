@@ -70,5 +70,41 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.18",
     "verified": true,
     "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-005",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "safety",
+    "question": "NFPA 70B-2026 infrared inspections are made:",
+    "choices": [
+      "On de-energized gear with all covers sealed",
+      "Online, under operating load, with only the necessary accessible covers removed",
+      "At no load, so the camera is safer",
+      "Once, with no delta-T written down"
+    ],
+    "answer": 1,
+    "explanation": "Compare similar parts under similar load, or compare with ambient. Record the temperature difference and what it was compared to. A cover that does not have to come off stays on. These chapters do not give a degrees-of-rise limit, so the bank does not invent one.",
+    "reference": "NFPA 70B-2026, 7.4",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "thermo-006",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "systems",
+    "question": "In NFPA 70B-2026 Table 9.3.2, infrared thermography for conditions 1, 2, and 3 is:",
+    "choices": [
+      "60, 36, and 12 months, the row labeled standard",
+      "12, 12, and 6 months",
+      "36, 24, and 12 months",
+      "Before each use"
+    ],
+    "answer": 1,
+    "explanation": "Thermography stays on 12, 12, and 6 months. The plain standard row, used for many assemblies when the manufacturer is silent, is 60, 36, and 12 months. Do not put the infrared camera on that longer row.",
+    "reference": "NFPA 70B-2026, Table 9.3.2",
+    "verified": true,
+    "kb": "safety.md#nfpa70b"
   }
 ]

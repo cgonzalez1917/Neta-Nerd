@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 395 (Level II 242, Level III 153).
+Count: 415 (Level II 254, Level III 161).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -6715,6 +6715,346 @@ For a delta-wye transformer, IEEE C37.91-2021 clause 6.4.3 uses delta-connected 
 - 3. Replace harmonic restraint
 
 **Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.4.3
+
+Reviewer: VERIFIED or FIX
+
+## safety-062 (II / safety) {#safety-062}
+
+<!-- q:safety-062 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 limits a retorque check on threaded hardware that is already installed to:
+
+- 0. 100 percent of the original torque, plus a quarter turn
+- 1. No more than 90 percent of the manufacturer’s original specified torque **← answer**
+- 2. 50 percent, so the bolt cannot yield
+- 3. Whatever a click wrench happens to read
+
+**Citation:** NFPA 70B-2026, 7.2.1.4
+
+Reviewer: VERIFIED or FIX
+
+## safety-063 (II / safety) {#safety-063}
+
+<!-- q:safety-063 -->
+
+**Bank verified flag:** true
+
+A brand-new threaded electrical connection, under NFPA 70B-2026, is tightened to:
+
+- 0. 90 percent of the table, the same as a retorque
+- 1. The manufacturer’s specified torque, or the applicable table if the manufacturer is silent **← answer**
+- 2. Finger tight, because the inspection is infrared
+- 3. Half the bolt diameter in inch-pounds, always
+
+**Citation:** NFPA 70B-2026, 7.2.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-064 (II / safety) {#safety-064}
+
+<!-- q:safety-064 -->
+
+**Bank verified flag:** true
+
+For equipment rated through 1000 V, NFPA 70B-2026 calls for insulation resistance as:
+
+- 0. A DC test that does not exceed the manufacturer’s test voltage **← answer**
+- 1. An AC hipot at twice rated voltage for one minute
+- 2. A very-low-frequency test at a medium-voltage table
+- 3. Whatever the meter’s top range is
+
+**Citation:** NFPA 70B-2026, 7.3.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-065 (II / safety) {#safety-065}
+
+<!-- q:safety-065 -->
+
+**Bank verified flag:** true
+
+Before field tests, NFPA 70B-2026 says to assess special hazards such as:
+
+- 0. Only the paint color
+- 1. Stored energy, insulating gas, PCBs, asbestos, and similar listed hazards **← answer**
+- 2. The brand of the torque wrench only
+- 3. Whether the one-line uses device numbers
+
+**Citation:** NFPA 70B-2026, 8.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-066 (II / safety) {#safety-066}
+
+<!-- q:safety-066 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 requires test instruments to be:
+
+- 0. Any meter that turns on
+- 1. Sound, used as the manufacturer says, calibrated, and rated for the task **← answer**
+- 2. Calibrated once in the life of the company
+- 3. Rated only if the circuit is over 1000 V
+
+**Citation:** NFPA 70B-2026, 8.4
+
+Reviewer: VERIFIED or FIX
+
+## safety-067 (II / safety) {#safety-067}
+
+<!-- q:safety-067 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 Table 9.3.2 treats visual inspection and cleaning of portable tools as:
+
+- 0. Once a year
+- 1. Before each use **← answer**
+- 2. Every 60 months
+- 3. Only after a shock
+
+**Citation:** NFPA 70B-2026, Table 9.3.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-068 (II / systems) {#safety-068}
+
+<!-- q:safety-068 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 classes 1, 1A, 2, and 2A are:
+
+- 0. Online standard, online enhanced, offline standard, and offline enhanced **← answer**
+- 1. Four torque tables
+- 2. Polarization index, dielectric absorption, tip-up, and tan delta
+- 3. Condition numbers 1 through 4
+
+**Citation:** NFPA 70B-2026, 8.3
+
+Reviewer: VERIFIED or FIX
+
+## relay-057 (II / systems) {#relay-057}
+
+<!-- q:relay-057 -->
+
+**Bank verified flag:** true
+
+An NFPA 70B-2026 field-test record has to include:
+
+- 0. Only pass or fail
+- 1. Who tested, the equipment identity and nameplate, conditions, date, the test, the criteria, and as-found and as-left values **← answer**
+- 2. The manufacturer’s entire manual
+- 3. A polarization index, even though these chapters do not define one
+
+**Citation:** NFPA 70B-2026, 8.5.1 and 8.5.2
+
+Reviewer: VERIFIED or FIX
+
+## emg-008 (II / systems) {#emg-008}
+
+<!-- q:emg-008 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 says maintenance information designates equipment as:
+
+- 0. Serviceable, limited-service, or nonserviceable **← answer**
+- 1. Pass, fail, or exempt from records
+- 2. Class 1, 1A, or 2 only
+- 3. Condition A or B
+
+**Citation:** NFPA 70B-2026, 8.6.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-069 (II / systems) {#safety-069}
+
+<!-- q:safety-069 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 sets the overall condition number as:
+
+- 0. The average of physical condition, criticality, and environment
+- 1. The lowest of the three
+- 2. The highest applicable of physical condition, criticality, and environment **← answer**
+- 3. Whichever number the last report used
+
+**Citation:** NFPA 70B-2026, 9.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-070 (II / systems) {#safety-070}
+
+<!-- q:safety-070 -->
+
+**Bank verified flag:** true
+
+When an interval is taken from NFPA 70B-2026, the first place to look is:
+
+- 0. The table, even when the manufacturer published a shorter interval
+- 1. The manufacturer’s instructions, then the table only if those instructions are silent **← answer**
+- 2. Always 12 months
+- 3. The last technician’s preference, with nothing written down
+
+**Citation:** NFPA 70B-2026, 9.3.1 and 9.3.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-071 (II / systems) {#safety-071}
+
+<!-- q:safety-071 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 allows an undisturbed bolted bus joint to be assessed by:
+
+- 0. Torque only, and never by infrared or resistance
+- 1. One or more of infrared, permanently mounted temperature sensors, contact resistance, or torque verification **← answer**
+- 2. A polarization index of the bus
+- 3. A visual look with no instrument
+
+**Citation:** NFPA 70B-2026, 7.2.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-072 (III / safety) {#safety-072}
+
+<!-- q:safety-072 -->
+
+**Bank verified flag:** true
+
+For equipment rated above 1000 V, NFPA 70B-2026 says the insulation test method is:
+
+- 0. Always a DC megohmmeter, same as equipment through 1000 V
+- 1. Chosen by the electrical maintenance program from the methods that section lists **← answer**
+- 2. Always a 60-minute power-frequency withstand
+- 3. Left to whoever is holding the meter
+
+**Citation:** NFPA 70B-2026, 7.3.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-073 (III / safety) {#safety-073}
+
+<!-- q:safety-073 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 says equipment with an impending failure that threatens people, health, or the environment is:
+
+- 0. Left in service until the next scheduled interval
+- 1. De-energized and designated nonserviceable, unless de-energizing adds a hazard or is infeasible **← answer**
+- 2. Tagged limited-service and kept loaded
+- 3. Repaired only if the condition score is 1
+
+**Citation:** NFPA 70B-2026, 9.2.1.4
+
+Reviewer: VERIFIED or FIX
+
+## thermo-005 (III / safety) {#thermo-005}
+
+<!-- q:thermo-005 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 infrared inspections are made:
+
+- 0. On de-energized gear with all covers sealed
+- 1. Online, under operating load, with only the necessary accessible covers removed **← answer**
+- 2. At no load, so the camera is safer
+- 3. Once, with no delta-T written down
+
+**Citation:** NFPA 70B-2026, 7.4
+
+Reviewer: VERIFIED or FIX
+
+## safety-074 (III / safety) {#safety-074}
+
+<!-- q:safety-074 -->
+
+**Bank verified flag:** true
+
+A contact-resistance reading on an undisturbed bolted joint that is above the manufacturer’s maximum is, under NFPA 70B-2026:
+
+- 0. Accepted if it was retorqued to 100 percent
+- 1. Investigated **← answer**
+- 2. Ignored when an infrared camera is on site
+- 3. Converted to a polarization index
+
+**Citation:** NFPA 70B-2026, 7.2.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-075 (III / systems) {#safety-075}
+
+<!-- q:safety-075 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 condition 1 means the equipment is:
+
+- 0. Like new: clean, tight, dry, maintenance current, and no open monitoring items or recommendations **← answer**
+- 1. Any gear that is still energized
+- 2. Gear that missed the last two maintenance cycles
+- 3. Gear that needs a major part replaced this cycle
+
+**Citation:** NFPA 70B-2026, 9.2.1.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-076 (III / systems) {#safety-076}
+
+<!-- q:safety-076 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 puts equipment in condition 3 when, among other triggers:
+
+- 0. The enclosure was wiped down
+- 1. The last two maintenance cycles were missed, or both of the previous cycles needed a major repair or replacement **← answer**
+- 2. One infrared scan was normal
+- 3. The manufacturer interval is longer than the table
+
+**Citation:** NFPA 70B-2026, 9.2.1.3
+
+Reviewer: VERIFIED or FIX
+
+## thermo-006 (III / systems) {#thermo-006}
+
+<!-- q:thermo-006 -->
+
+**Bank verified flag:** true
+
+In NFPA 70B-2026 Table 9.3.2, infrared thermography for conditions 1, 2, and 3 is:
+
+- 0. 60, 36, and 12 months, the row labeled standard
+- 1. 12, 12, and 6 months **← answer**
+- 2. 36, 24, and 12 months
+- 3. Before each use
+
+**Citation:** NFPA 70B-2026, Table 9.3.2
+
+Reviewer: VERIFIED or FIX
+
+## relay-058 (III / systems) {#relay-058}
+
+<!-- q:relay-058 -->
+
+**Bank verified flag:** true
+
+NFPA 70B-2026 adjusts a maintenance interval by:
+
+- 0. Leaving it fixed no matter what fails
+- 1. Shortening it when failures are analyzed, and allowing a longer interval only after more than two intervals without problems, with the extension written in the program **← answer**
+- 2. Doubling it after one clean visit
+- 3. Using the condition-3 column after every pass
+
+**Citation:** NFPA 70B-2026, 9.1.2 and 9.3.2
 
 Reviewer: VERIFIED or FIX
 
