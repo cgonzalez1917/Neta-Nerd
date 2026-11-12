@@ -1,0 +1,436 @@
+[
+  {
+    "id": "math-001",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A load draws 200 kW at 0.80 power factor. The formula sheet gives kW = kVA \u00d7 PF. It does not print the kvar identity. What is the reactive power?",
+    "choices": [
+      "50 kvar",
+      "160 kvar",
+      "150 kvar",
+      "250 kvar"
+    ],
+    "answer": 2,
+    "explanation": "kVA = 200 / 0.80 = 250. kvar = \u221a(kVA\u00b2 \u2212 kW\u00b2) = \u221a(62500 \u2212 40000) = \u221a22500 = 150. That square root is the step you have to remember. 250 kVA is the apparent power, not the kvar.",
+    "reference": "Power triangle; NETA formula sheet does not print kvar = \u221a(kVA\u00b2 \u2212 kW\u00b2). See knowledge/math.md.",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-002",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ELI the ICE man is not on the formula sheet. In a pure inductor, the current:",
+    "choices": [
+      "Leads the voltage by 90\u00b0",
+      "Lags the voltage by 90\u00b0",
+      "Is in phase with the voltage",
+      "Is zero at 60 Hz"
+    ],
+    "answer": 1,
+    "explanation": "ELI: voltage leads current in an inductor, which means current lags. ICE is the capacitor, where current leads. The sheet will give you XL and Z; it will not tell you the direction of the phasor.",
+    "reference": "AC circuit convention (ELI/ICE), not printed on the NETA formula sheet",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-003",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "XL = 2\u03c0fL is on the formula sheet. L for a 10 mH coil must be entered in henries. At 60 Hz, XL is about:",
+    "choices": [
+      "3.77 \u03a9",
+      "37.7 \u03a9",
+      "377 \u03a9",
+      "3770 \u03a9"
+    ],
+    "answer": 0,
+    "explanation": "10 mH is 0.010 H. XL = 2\u03c0 \u00d7 60 \u00d7 0.010 \u2248 3.77 \u03a9. Dropping the milli prefix produces about 3770 \u03a9, a common calculator miss the sheet will not catch.",
+    "reference": "XL = 2\u03c0fL with unit conversion; conversion is not on the formula sheet",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-004",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Two 12 \u03a9 resistors are in parallel. The parallel formula is not on the NETA formula sheet. The combination is:",
+    "choices": [
+      "24 \u03a9",
+      "12 \u03a9",
+      "6 \u03a9",
+      "0 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Equal resistors in parallel are half of one: 6 \u03a9. Series would be 24 \u03a9. (R\u00d7R)/(R+R) = R/2.",
+    "reference": "Parallel resistance; not on the NETA formula sheet",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-005",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 480 V source feeds 30 \u03a9 in series with 10 \u03a9. Kirchhoff's voltage law is not printed as a reminder. Voltage across the 10 \u03a9 resistor is:",
+    "choices": [
+      "48 V",
+      "120 V",
+      "360 V",
+      "480 V"
+    ],
+    "answer": 1,
+    "explanation": "Current is 480 / 40 = 12 A. The 10 \u03a9 drop is 120 V and the 30 \u03a9 drop is 360 V. They sum to 480 V. Splitting voltage in proportion to the smaller resistor's label is the miss.",
+    "reference": "Series circuit and KVL",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-006",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 600:5 CT carries 240 A primary. Secondary current is:",
+    "choices": [
+      "5.0 A",
+      "2.0 A",
+      "0.5 A",
+      "24 A"
+    ],
+    "answer": 1,
+    "explanation": "The ratio is 600/5 = 120. Secondary = 240/120 = 2.0 A. 5 A would be full primary current. 24 A is 240/10.",
+    "reference": "CT ratio arithmetic",
+    "verified": false,
+    "kb": "math.md#ct-ratio",
+    "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
+  },
+  {
+    "id": "math-007",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Calculated ratio is 28.75. The TTR reads 28.95. Percent deviation from calculated, which the formula sheet does not print, is about:",
+    "choices": [
+      "0.20%",
+      "0.70%",
+      "2.0%",
+      "7.0%"
+    ],
+    "answer": 1,
+    "explanation": "(28.95 \u2212 28.75) / 28.75 \u00d7 100 = 0.70%. Whether 0.70% passes is a separate ATS limit (one-half percent). This item is only the arithmetic.",
+    "reference": "Turns-ratio percent deviation",
+    "verified": false,
+    "kb": "math.md#ttr-pct"
+  },
+  {
+    "id": "math-008",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A contact reads 85 \u00b5\u03a9. In ohms, for a calculator that was not handed the prefix, that is:",
+    "choices": [
+      "85 \u03a9",
+      "0.085 \u03a9",
+      "0.000085 \u03a9",
+      "8.5 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Micro is 10\u207b\u2076. 85 \u00b5\u03a9 = 85 \u00d7 10\u207b\u2076 \u03a9 = 0.000085 \u03a9. Milli would be 0.085 \u03a9. Engineering notation is a theory item the sheet does not translate for you.",
+    "reference": "SI prefix conversion",
+    "verified": false,
+    "kb": "math.md#not-on-sheet"
+  },
+  {
+    "id": "math-009",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A copper winding measures 0.420 \u03a9 at 25 \u00b0C. Corrected to 75 \u00b0C with the constant 234.5, which is not on the formula sheet, the resistance is about:",
+    "choices": [
+      "0.352 \u03a9",
+      "0.420 \u03a9",
+      "0.501 \u03a9",
+      "1.26 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "R75 = 0.420 \u00d7 (234.5+75)/(234.5+25) = 0.420 \u00d7 309.5/259.5 = 0.501 \u03a9. 0.352 \u03a9 is the fraction upside down. 1.26 \u03a9 is 0.420 \u00d7 75/25, temperatures used as a simple ratio.",
+    "reference": "Copper winding temperature correction, constant 234.5",
+    "verified": false,
+    "kb": "math.md#copper",
+    "link": "https://wiki.testguy.net/t/transformer-winding-resistance-test-methods-and-procedures-explained/81"
+  },
+  {
+    "id": "math-010",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "The exam calculator is a TI-30XS. You need cos of 60 degrees. Which setup makes cos(60) equal 0.5?",
+    "choices": [
+      "Radian mode",
+      "Degree mode",
+      "Scientific notation forced on",
+      "Fix 0, so only integers display"
+    ],
+    "answer": 1,
+    "explanation": "cos(60\u00b0) = 0.5. In radians, cos(60) is the cosine of 60 rad and is not 0.5. The TestGuy study guide flags degree mode on the on-screen TI-30XS. The sheet will not switch the calculator for you.",
+    "reference": "TestGuy study guide exam-format note (TI-30XS); cosine of 60\u00b0",
+    "verified": false,
+    "kb": "math.md#not-on-sheet"
+  },
+  {
+    "id": "math-011",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "XC = 1/(2\u03c0fC) is on the formula sheet. C must be in farads. A 10 \u00b5F capacitor at 60 Hz has XC about:",
+    "choices": [
+      "2.65 \u03a9",
+      "26.5 \u03a9",
+      "265 \u03a9",
+      "2650 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "10 \u00b5F = 10e-6 F. XC = 1/(2\u03c0\u00d760\u00d710e-6) \u2248 265 \u03a9. Using 10 F, or 10e-3 F, moves the answer by orders of magnitude.",
+    "reference": "XC with microfarad conversion",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-012",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "The sheet writes Z with (XL \u2212 XC), not (XL + XC). R = 3 \u03a9, XL = 10 \u03a9, XC = 4 \u03a9. Z is about:",
+    "choices": [
+      "6.7 \u03a9",
+      "9 \u03a9",
+      "13 \u03a9",
+      "17 \u03a9"
+    ],
+    "answer": 0,
+    "explanation": "Net reactance is 10 \u2212 4 = 6 \u03a9. Z = \u221a(3\u00b2 + 6\u00b2) = \u221a45 \u2248 6.7 \u03a9. Adding the reactances gives 17 \u03a9 and ignores the sign already printed on the sheet.",
+    "reference": "Z = \u221a(R\u00b2 + (XL \u2212 XC)\u00b2)",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-013",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Which of these is on the NETA formula sheet, as the TestGuy study guide describes that sheet, so you should not re-derive it from memory?",
+    "choices": [
+      "1 hp = 746 W",
+      "Copper constant 234.5",
+      "PI = 10 min / 1 min",
+      "\u00b0C rise \u00d7 1.8 = \u00b0F rise"
+    ],
+    "answer": 0,
+    "explanation": "The study guide lists horsepower at 746 W among the supplied formulas. The copper constant, the PI time points, and the rise-only Celsius conversion are exactly the things that list says you do not get.",
+    "reference": "TestGuy study guide summary of the NETA formula sheet (about 2017)",
+    "verified": false,
+    "kb": "math.md#not-on-sheet"
+  },
+  {
+    "id": "math-014",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Oil-immersed insulation measures 50 M\u03a9 at 40 \u00b0C. Table 100.14.1 multiplier to 20 \u00b0C for immersed-oil insulation at 40 \u00b0C is 3.95. Corrected resistance is about:",
+    "choices": [
+      "12.7 M\u03a9",
+      "50 M\u03a9",
+      "198 M\u03a9",
+      "3.95 M\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Rc = Ra \u00d7 K = 50 \u00d7 3.95 = 197.5 M\u03a9, about 198 M\u03a9. Dividing by 3.95 corrects the wrong direction. The multiplier is a table lookup; it is not on the exam formula sheet. The table's own example is 2 M\u03a9 \u00d7 3.95 = 7.9 M\u03a9.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.14.1",
+    "verified": true,
+    "kb": "insulation.md#temp-correction"
+  },
+  {
+    "id": "math-015",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A balanced 480 V three-phase load draws 100 A at unity power factor. Using \u221a3 \u00d7 V \u00d7 I, power is about:",
+    "choices": [
+      "48 kW",
+      "83.1 kW",
+      "144 kW",
+      "28.8 kW"
+    ],
+    "answer": 1,
+    "explanation": "\u221a3 \u00d7 480 \u00d7 100 \u2248 83.1 kW at PF = 1. 48 kW is 480 \u00d7 100 with the \u221a3 left out. Three-phase VA = \u221a3 VI is one of the identities the formula sheet does provide; this item is the 'use it' check.",
+    "reference": "Three-phase power, S = \u221a3 \u00d7 VLL \u00d7 IL",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-016",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 1500 kVA, 480 V transformer has 5.75% impedance. Ignoring cables and assuming a stiff source, symmetrical secondary fault current is about:",
+    "choices": [
+      "1.80 kA",
+      "10.4 kA",
+      "31.4 kA",
+      "86 kA"
+    ],
+    "answer": 2,
+    "explanation": "Full-load current is 1,500,000 / (\u221a3 \u00d7 480) \u2248 1804 A. Zpu = 0.0575. Isc \u2248 1804 / 0.0575 \u2248 31.4 kA. Multiplying 1804 by 0.0575, or by 5.75, produces the smaller distractors. This per-unit step is not a finished formula on the exam sheet.",
+    "reference": "Per-unit transformer short-circuit estimate; percent Z is nameplate data",
+    "verified": false,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-017",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Table 100.18 is written as a temperature difference. A 10 \u00b0C rise between two similar lugs is what rise in Fahrenheit?",
+    "choices": [
+      "10 \u00b0F",
+      "18 \u00b0F",
+      "42 \u00b0F",
+      "50 \u00b0F"
+    ],
+    "answer": 1,
+    "explanation": "A difference converts by 1.8 with no +32. 10 \u00d7 1.8 = 18 \u00b0F. 50 \u00b0F is what you get if you add 32 as though 10 \u00b0C were a temperature, not a rise.",
+    "reference": "Temperature-difference conversion; ANSI/NETA ATS-2025 Table 100.18 is in \u00b0C",
+    "verified": false,
+    "kb": "math.md#delta-t"
+  },
+  {
+    "id": "math-018",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Three equal 100 \u00b5F capacitors are connected in wye. A capacitance measurement from phase A to phase B should read about:",
+    "choices": [
+      "100 \u00b5F",
+      "50 \u00b5F",
+      "300 \u00b5F",
+      "173 \u00b5F"
+    ],
+    "answer": 1,
+    "explanation": "Line-to-line on a wye of equal capacitors sees two cans in series. Series capacitance is half of one can, 50 \u00b5F. 300 \u00b5F would be three in parallel. Do not fail the bank because A-to-B is not the single-can nameplate.",
+    "reference": "Series capacitance on a wye capacitor bank",
+    "verified": false,
+    "kb": "math.md#caps"
+  },
+  {
+    "id": "math-019",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 100 kW load is at 0.60 lagging power factor. Reactive power is about:",
+    "choices": [
+      "60 kvar",
+      "80 kvar",
+      "133 kvar",
+      "167 kvar"
+    ],
+    "answer": 2,
+    "explanation": "kVA = 100 / 0.60 \u2248 166.7. kvar = \u221a(166.7\u00b2 \u2212 100\u00b2) \u2248 133. Equivalently sin(arccos 0.6) = 0.8, and kvar = kW \u00d7 tan \u03b8 = 100 \u00d7 (0.8/0.6). 167 kvar is the kVA. The arccos step is not on the formula sheet.",
+    "reference": "Power triangle from PF when the angle is not given",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-020",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Two 20 mH coils. Series inductance and parallel inductance are:",
+    "choices": [
+      "40 mH series, 10 mH parallel",
+      "10 mH series, 40 mH parallel",
+      "20 mH either way",
+      "400 mH series, 20 mH parallel"
+    ],
+    "answer": 0,
+    "explanation": "Inductors that do not share a core combine like resistors: series adds, parallel of two equals halves. 40 mH and 10 mH. Reactance will follow the same pattern because XL is proportional to L.",
+    "reference": "Series and parallel inductance",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-021",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A nameplate says 5.75% impedance. As a per-unit number that is:",
+    "choices": [
+      "5.75 pu",
+      "0.575 pu",
+      "0.0575 pu",
+      "57.5 pu"
+    ],
+    "answer": 2,
+    "explanation": "Percent divided by 100 is per-unit. 5.75% = 0.0575 pu. Fault current on a stiff bus is about full-load current divided by that per-unit value, not multiplied by 5.75.",
+    "reference": "Percent impedance to per-unit",
+    "verified": false,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-022",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS Table 100.6.6 defines Uo as nominal rms phase-to-ground voltage. For a cable operating at 13.8 kV phase-to-phase, Uo is about:",
+    "choices": [
+      "13.8 kV",
+      "8.0 kV",
+      "24 kV",
+      "4.6 kV"
+    ],
+    "answer": 1,
+    "explanation": "Uo = 13.8 / \u221a3 \u2248 7.97 kV, about 8.0 kV. The table note works the same way: 15 / \u221a3 = 8.7 kV for a new 15 kV cable. Using phase-to-phase voltage as Uo over-stresses a tan-delta step.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.6 note",
+    "verified": true,
+    "kb": "cables.md#tan-delta"
+  },
+  {
+    "id": "math-023",
+    "level": "I",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 16 A load on a 480 V single-phase test source has resistance:",
+    "choices": [
+      "7.7 \u03a9",
+      "30 \u03a9",
+      "16 \u03a9",
+      "480 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "R = V/I = 480/16 = 30 \u03a9. This is the V = IR identity the formula sheet does contain; Level I is only the direct form.",
+    "reference": "Ohm's law",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-024",
+    "level": "ETT",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ANSI/NETA ATS and ANSI/NETA MTS are different books. Which pairing is right?",
+    "choices": [
+      "ATS is maintenance, MTS is acceptance",
+      "ATS is acceptance testing, MTS is maintenance testing",
+      "They are the same document reprinted every year",
+      "ATS applies only to utilities and MTS only to buildings"
+    ],
+    "answer": 1,
+    "explanation": "The titles say it: ATS is Acceptance Testing Specifications, MTS is Maintenance Testing Specifications. Several numerical limits differ. Do not swap the books because the paragraph numbers look familiar.",
+    "reference": "ANSI/NETA ATS-2025 and ANSI/NETA MTS-2023, document titles and scope",
+    "verified": true,
+    "kb": "level-2.md#expectations"
+  }
+]

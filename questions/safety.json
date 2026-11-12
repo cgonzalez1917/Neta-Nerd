@@ -1,0 +1,293 @@
+[
+  {
+    "id": "safety-001",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "You have opened the disconnects, verified the blades open, released stored energy, and applied locks. Under NFPA 70E-2024 120.6, what comes next, before anyone grounds the conductors?",
+    "choices": [
+      "Apply temporary protective grounds immediately so the bus cannot float",
+      "Test each phase conductor phase-to-phase and phase-to-ground for absence of voltage, proving the instrument before and after",
+      "Reclose the control power to see whether the lock holds",
+      "Remove the locks, test, then reapply the locks"
+    ],
+    "answer": 1,
+    "explanation": "120.6 step 7 is the absence-of-voltage test with a before-and-after instrument check. Grounding, when induced or stored energy is a concern, is step 8 and follows that test. Grounds are not a substitute for the test.",
+    "reference": "NFPA 70E-2024 120.6(7) and 120.6(8); 110.6(E)",
+    "verified": true,
+    "kb": "safety.md#loto",
+    "link": "https://wiki.testguy.net/t/nfpa-70e-arc-flash-and-shock-hazard-boundaries-explained/120"
+  },
+  {
+    "id": "safety-002",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A worker will be inside the limited approach boundary of exposed 480 V parts. What does NFPA 70E-2024 110.2(B) require before the work?",
+    "choices": [
+      "An energized work permit only, because 480 V is below 1000 V",
+      "The conductors put into an electrically safe work condition, unless a listed exception applies",
+      "Arc-flash PPE only; shock boundaries start at 1000 V",
+      "Nothing, if the worker is a Level II technician"
+    ],
+    "answer": 1,
+    "explanation": "At 50 V and above, 110.2(B) requires an electrically safe work condition before work inside the limited approach boundary, or before interaction that raises arc-flash likelihood. Exceptions (normal operation, opening a disconnect to create the safe condition, infeasibility, additional hazards, and under 50 V with the source considered) are specific. Job title is not one of them.",
+    "reference": "NFPA 70E-2024 110.2(B)",
+    "verified": true,
+    "kb": "safety.md#eswc"
+  },
+  {
+    "id": "safety-003",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "For exposed fixed 480 V AC parts, Table 130.4(E)(a) gives which shock boundaries?",
+    "choices": [
+      "Limited approach 10 ft, restricted approach 3 ft 6 in",
+      "Limited approach 5 ft, restricted approach 2 ft 2 in",
+      "Limited approach 3 ft 6 in, restricted approach 1 ft 0 in",
+      "Limited approach 3 ft 6 in, restricted approach avoid contact"
+    ],
+    "answer": 2,
+    "explanation": "480 V phase-to-phase sits in the 151 V\u2013750 V row. For fixed circuit parts the limited approach boundary is 3 ft 6 in and the restricted approach boundary is 1 ft 0 in. Avoid contact is the restricted boundary on the 50 V\u2013150 V row. The 5 ft / 2 ft 2 in pair is the 5.1\u201315 kV fixed-part row.",
+    "reference": "NFPA 70E-2024 Table 130.4(E)(a)",
+    "verified": true,
+    "kb": "safety.md#boundaries",
+    "link": "https://wiki.testguy.net/t/nfpa-70e-arc-flash-and-shock-hazard-boundaries-explained/120"
+  },
+  {
+    "id": "safety-004",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "The arc-flash boundary is the distance at which incident energy equals which value?",
+    "choices": [
+      "0.5 cal/cm\u00b2",
+      "1.2 cal/cm\u00b2",
+      "8 cal/cm\u00b2",
+      "40 cal/cm\u00b2"
+    ],
+    "answer": 1,
+    "explanation": "Article 100 and 130.5(E)(1) both put the arc-flash boundary where incident energy equals 1.2 cal/cm\u00b2 (5 J/cm\u00b2), the second-degree burn threshold used by the standard. 8 and 40 are clothing or folk limits, not the boundary definition.",
+    "reference": "NFPA 70E-2024 130.5(E)(1); Article 100 arc-flash boundary",
+    "verified": true,
+    "kb": "safety.md#arc-flash",
+    "link": "https://wiki.testguy.net/t/nfpa-70e-arc-flash-and-shock-hazard-boundaries-explained/120"
+  },
+  {
+    "id": "safety-005",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An unqualified helper needs to cross the limited approach boundary to hold a flashlight. What does 130.4(F)(3) allow?",
+    "choices": [
+      "They may enter alone if they wear the same shirt as the qualified person",
+      "A qualified person must explain the hazard and escort them continuously, and they still may not cross the restricted approach boundary",
+      "They may cross both the limited and restricted boundaries if voltage is under 1000 V",
+      "Unqualified people are banned from the limited approach boundary with no escort exception"
+    ],
+    "answer": 1,
+    "explanation": "Entry into the limited approach boundary by an unqualified person requires a briefing and a continuous escort by a qualified person. The same paragraph forbids that unqualified person from crossing the restricted approach boundary under any circumstance.",
+    "reference": "NFPA 70E-2024 130.4(F)(3)",
+    "verified": true,
+    "kb": "safety.md#boundaries"
+  },
+  {
+    "id": "safety-006",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "You are about to prove a 480 V starter is de-energized. What does 110.6(E) require of the test instrument?",
+    "choices": [
+      "A calibration sticker dated within 12 months is enough; no live check is required",
+      "Verify it on a known voltage source before the absence-of-voltage test and again after",
+      "Verify it only after the test, so you do not expose yourself twice",
+      "Use any proximity tester; contact instruments are banned under 1000 V"
+    ],
+    "answer": 1,
+    "explanation": "When the circuit is 50 V or more, 110.6(E) requires the instrument to be verified on a known voltage source before and after the absence-of-voltage test. 120.6(7) repeats that check inside the electrically-safe-work-condition sequence.",
+    "reference": "NFPA 70E-2024 110.6(E); 120.6(7)",
+    "verified": true,
+    "kb": "safety.md#instruments"
+  },
+  {
+    "id": "safety-007",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Class 0 rubber insulating gloves, Table 130.7(C)(7)(a), have what maximum AC use voltage?",
+    "choices": [
+      "500 V",
+      "1000 V",
+      "7500 V",
+      "17000 V"
+    ],
+    "answer": 1,
+    "explanation": "Class 00 is 500 V AC, class 0 is 1000 V AC, class 1 is 7500 V AC, class 2 is 17000 V AC. A 480 V test still needs a class whose AC rating covers the exposure, and protectors, unless the narrow no-protector exception is met.",
+    "reference": "NFPA 70E-2024 Table 130.7(C)(7)(a)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-008",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "How often does Table 130.7(C)(7)(b) require rubber insulating gloves to be electrically retested after they are issued?",
+    "choices": [
+      "Every 6 months",
+      "Every 12 months",
+      "Every 24 months",
+      "Only when they fail an air test"
+    ],
+    "answer": 0,
+    "explanation": "Gloves: before first issue and every 6 months thereafter. Blankets and sleeves in the same table are every 12 months. The air test is the daily inspection in 130.7(C)(7)(c), not a substitute for the electrical retest interval.",
+    "reference": "NFPA 70E-2024 Table 130.7(C)(7)(b); 130.7(C)(7)(c)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-009",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "NFPA 70E-2024 110.2(A) says the electrically safe work condition policy must put which risk-control idea first?",
+    "choices": [
+      "PPE category selection",
+      "Hazard elimination",
+      "Arc-flash labeling",
+      "A written variance for every test"
+    ],
+    "answer": 1,
+    "explanation": "110.2(A)(1) requires hazard elimination to be the first priority when safety-related work practices are implemented. PPE is what you use when the hazard is not yet eliminated. The informational note points at elimination as the first method in the hierarchy in 110.3(H).",
+    "reference": "NFPA 70E-2024 110.2(A)(1)",
+    "verified": true,
+    "kb": "safety.md#eswc"
+  },
+  {
+    "id": "safety-010",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A qualified person will troubleshoot a live 480 V control circuit inside the restricted approach boundary, with the required PPE and practices. Which statement matches 130.2?",
+    "choices": [
+      "An energized electrical work permit is always required inside the restricted approach boundary, including troubleshooting",
+      "Troubleshooting and voltage measuring by a qualified person using the required practices and PPE may proceed without an energized electrical work permit",
+      "Permits are required only above 1000 V",
+      "Thermography that crosses the restricted approach boundary is exempt, but voltage testing is not"
+    ],
+    "answer": 1,
+    "explanation": "130.2(A) requires a permit for work inside the restricted approach boundary. 130.2(C)(1) exempts testing, troubleshooting, and voltage measuring when a qualified person uses the Chapter 1 practices and PPE. Thermography is exempt only when the restricted approach boundary is not crossed.",
+    "reference": "NFPA 70E-2024 130.2(A) and 130.2(C)",
+    "verified": true,
+    "kb": "safety.md#permit"
+  },
+  {
+    "id": "safety-011",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A label project wants both an incident-energy number and an arc-flash PPE category on the same switchgear section. What does 130.5(F) say?",
+    "choices": [
+      "Both methods are required so the label has a backup",
+      "Either the incident-energy method or the PPE-category method may be used on that equipment, not both",
+      "The category method is mandatory below 600 V and the incident-energy method above",
+      "Incident energy may be converted into a category from Table 130.7(C)(15)(c)"
+    ],
+    "answer": 1,
+    "explanation": "130.5(F) allows the incident-energy analysis method or the PPE category method. Either, but not both, on the same piece of equipment. It also forbids using an incident-energy result to specify a category from Table 130.7(C)(15)(c).",
+    "reference": "NFPA 70E-2024 130.5(F)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-012",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Which condition means the equipment is not in the normal operating condition described in 110.2(B) Exception No. 1?",
+    "choices": [
+      "Covers are on and secured, and there is no sign of impending failure",
+      "The door is open and there is evidence of arcing at the stabs",
+      "The gear is used the way the listing and the manufacturer describe",
+      "The equipment is rated for the available fault current"
+    ],
+    "answer": 1,
+    "explanation": "The exception requires doors closed and secured, covers in place, and no evidence of impending failure. Arcing and an open door each break the list. The informational note gives arcing, overheating, loose parts, damage, deterioration, and water as examples of impending failure.",
+    "reference": "NFPA 70E-2024 110.2(B) Exception No. 1",
+    "verified": true,
+    "kb": "safety.md#eswc"
+  },
+  {
+    "id": "safety-013",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A test lead jacket is nicked to the copper. What does 110.6(D) require?",
+    "choices": [
+      "Tape it and finish the outage; replace it next quarter",
+      "Remove the damaged lead from service until a person qualified to do the repair makes it safe",
+      "Keep using it below 50 V only",
+      "Derate the meter one CAT level and continue"
+    ],
+    "answer": 1,
+    "explanation": "Instruments, leads, probes, and cords are inspected before each use. A defect that could expose someone means the item is removed from service. Nobody uses it until a person qualified for that repair has restored it.",
+    "reference": "NFPA 70E-2024 110.6(D)",
+    "verified": true,
+    "kb": "safety.md#instruments"
+  },
+  {
+    "id": "safety-014",
+    "level": "ETT",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "OSHA 3120 contrasts a lockout device with a tagout device. Which description matches the booklet?",
+    "choices": [
+      "They provide the same protection; the tag is only a different color",
+      "A lock is a positive restraint that takes force or a key to defeat; a tag is a warning and, by itself, protects less",
+      "A tag is stronger because more people can read it",
+      "Locks are only for mechanical valves, tags are only for electrical breakers"
+    ],
+    "answer": 1,
+    "explanation": "OSHA 3120 describes lockout devices as positive restraints and tagout devices as prominent warnings that are easier to remove and provide less protection on their own. The electrical sequence you still follow in the field is NFPA 70E-2024 120.6.",
+    "reference": "OSHA 3120 (2002 revised), lockout/tagout booklet",
+    "verified": true,
+    "kb": "safety.md#loto"
+  },
+  {
+    "id": "safety-015",
+    "level": "I",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "On Table 130.4(E)(a), the restricted approach boundary for fixed exposed parts at 50 V to 150 V is:",
+    "choices": [
+      "1 ft 0 in",
+      "Avoid contact",
+      "3 ft 6 in",
+      "Not specified"
+    ],
+    "answer": 1,
+    "explanation": "The 50\u2013150 V row lists a limited approach of 3 ft 6 in for fixed parts and a restricted approach of avoid contact. Not specified is the under-50 V row. 1 ft 0 in is the restricted boundary starting at 151 V.",
+    "reference": "NFPA 70E-2024 Table 130.4(E)(a)",
+    "verified": true,
+    "kb": "safety.md#boundaries"
+  },
+  {
+    "id": "safety-016",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A coworker says a 40 cal/cm\u00b2 suit means the pressure wave is covered because the PPE category was selected correctly. What does the 130.7 informational note actually limit?",
+    "choices": [
+      "PPE rules are written for shock and the thermal effects of an arc; they do not claim to stop physical trauma from the blast",
+      "PPE above 40 cal/cm\u00b2 is prohibited by 130.7",
+      "The note says leather gloves stop both heat and pressure",
+      "Incident energy already includes blunt trauma, so no extra judgment is needed"
+    ],
+    "answer": 0,
+    "explanation": "The note under 130.7 says the PPE requirements address arc flash and shock. Because some arcs explode, physical trauma can still occur, and those requirements do not address trauma other than the thermal exposure. Hazard elimination in 110.2(A) is still first.",
+    "reference": "NFPA 70E-2024 130.7 informational note",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  }
+]

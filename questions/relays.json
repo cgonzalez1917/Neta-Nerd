@@ -1,0 +1,149 @@
+[
+  {
+    "id": "relay-001",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Match the device: 50, 51, and 87.",
+    "choices": [
+      "50 time overcurrent, 51 instantaneous, 87 lockout",
+      "50 instantaneous overcurrent, 51 time overcurrent, 87 differential",
+      "50 differential, 51 distance, 87 frequency",
+      "50 undervoltage, 51 overvoltage, 87 reclosing"
+    ],
+    "answer": 1,
+    "explanation": "50 is instantaneous overcurrent, 51 is time overcurrent, 87 is differential. 86 is the lockout. 27 and 59 are the voltage elements. Learn the numbers; the one-line will not spell them out.",
+    "reference": "IEEE C37.2 device numbers, as used in ATS 7.9.1 element tests",
+    "verified": false,
+    "kb": "relays.md#numbers",
+    "link": "https://wiki.testguy.net/t/protective-relay-testing-and-maintenance-overview/76"
+  },
+  {
+    "id": "relay-002",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "ATS 7.9.1 tells you to determine which of the following on an 87 differential?",
+    "choices": [
+      "Only the target color",
+      "Operating-unit pickup, restraint, slope, and harmonic restraint",
+      "The transformer's oil interfacial tension",
+      "A 10-minute polarization index of the relay case only"
+    ],
+    "answer": 1,
+    "explanation": "The 87 list is operating-unit pickup, each restraint unit, slope, harmonic restraint, instantaneous pickup, and the plotted restraint characteristic. The paragraph says to determine harmonic restraint; it does not name the second harmonic in that sentence.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-003",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Functional checks in ATS 7.9.1 include proving that relay contacts perform which scheme jobs?",
+    "choices": [
+      "Breaker trip, close inhibit, 86 lockout, and alarms",
+      "Only the front-panel lamp test",
+      "Oil sampling and a turns-ratio test",
+      "A Wenner soil box on the station ground"
+    ],
+    "answer": 0,
+    "explanation": "The functional paragraph names breaker trip tests, close inhibit, 86 lockout tests, and alarm functions, and points at Section 8. A relay that asserts in the test set but never moves the trip wire is not finished.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 functional tests",
+    "verified": true,
+    "kb": "relays.md#testing",
+    "link": "https://wiki.testguy.net/t/protective-relay-testing-and-maintenance-overview/76"
+  },
+  {
+    "id": "relay-004",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A CT primary is carrying load and someone opens the secondary at the terminal block. The hazard is:",
+    "choices": [
+      "The secondary voltage collapses to zero and is safe to hold",
+      "The secondary can develop a dangerous voltage while it tries to maintain ampere-turns",
+      "Only the revenue meter is affected; the leads stay at a few volts",
+      "The CT automatically shorts itself inside the head"
+    ],
+    "answer": 1,
+    "explanation": "An open CT secondary with primary current flowing can rise to a hazardous voltage. Short the secondary or leave it on its burden before the primary is energized. ATS also requires exactly one secondary ground, at the place the drawings show.",
+    "reference": "CT secondary practice; ANSI/NETA ATS-2025 7.10.1.B.9 (one grounding point). Open-circuit voltage is standard CT behavior.",
+    "verified": false,
+    "kb": "relays.md#testing",
+    "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
+  },
+  {
+    "id": "relay-005",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "You need to see whether an 86 contact is in the breaker close circuit. Which drawing actually shows the coil and the contact?",
+    "choices": [
+      "The one-line, because it shows every contact",
+      "The control schematic (or elementary), not the one-line",
+      "The site plot plan",
+      "The oil lab report"
+    ],
+    "answer": 1,
+    "explanation": "A one-line shows the power path and the device numbers. The control schematic shows coils, a and b contacts, and how a lockout is inserted into trip and close. Asking a one-line to carry the close-permissive contact is the print trap.",
+    "reference": "Drawing practice; ATS 7.9.1 functional tests still require the contact to perform its scheme job",
+    "verified": false,
+    "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-006",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "ATS 7.22.1 for an engine generator tells you to verify, as the application requires:",
+    "choices": [
+      "Only the fuel-filter color",
+      "Phase rotation, phasing, and synchronized operation",
+      "That synchronization is optional if the breaker is closed fast",
+      "Winding resistance instead of rotation"
+    ],
+    "answer": 1,
+    "explanation": "7.22.1.B.3 and the matching test-value line require phase rotation, phasing, and synchronizing to match the system design. Closing a generator onto a live bus with the wrong rotation is a fault, not a commissioning footnote.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.3 and D.3",
+    "verified": true,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-007",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A 51 contact energizes an 86 lockout, and an 86 contact energizes the breaker trip coil. In that path, what operates first?",
+    "choices": [
+      "The 86 coil",
+      "The 52 trip coil",
+      "The 51 element",
+      "The breaker springs, before any relay"
+    ],
+    "answer": 2,
+    "explanation": "The 51 has to pick up and close its contact before the 86 coil is energized. The 86 then seals and its contact energizes the trip coil, so the breaker opens third in this particular path. Resetting the breaker does not reset the 86.",
+    "reference": "Control-schematic sequence; ATS 7.9.1 includes 51 pickup and 86 lockout functional tests",
+    "verified": false,
+    "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-008",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "An 86 b contact is in the close-permissive string. The lockout trips (coil picked up). That b contact:",
+    "choices": [
+      "Closes and allows a close",
+      "Opens and blocks closing until the lockout is reset",
+      "Does not change, because b contacts are not used in trip circuits",
+      "Becomes an a contact automatically"
+    ],
+    "answer": 1,
+    "explanation": "A b contact is closed when the device is de-energized and open when the device is picked up. A tripped 86 opens its b contact and removes close permission. An a contact would do the opposite and is the one you would use to energize a trip or an alarm when the lockout operates.",
+    "reference": "Relay contact convention (a/b); scheme logic",
+    "verified": false,
+    "kb": "level-3.md#schemes"
+  }
+]

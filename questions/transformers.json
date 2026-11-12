@@ -1,0 +1,204 @@
+[
+  {
+    "id": "xfmr-001",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.D.3 limits turns-ratio results to a deviation of not more than:",
+    "choices": [
+      "0.1% for every transformer",
+      "one-half percent from the adjacent coils or the calculated ratio",
+      "2% of the factory winding resistance",
+      "5% of nameplate impedance"
+    ],
+    "answer": 1,
+    "explanation": "One-half percent, from the adjacent coils or from the calculated ratio. The 0.1% figure is the revenue VT ratio screen in 7.10.2, not a power-transformer TTR limit. Two percent is winding resistance.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.3",
+    "verified": true,
+    "kb": "transformers.md#ttr",
+    "link": "https://wiki.testguy.net/t/introduction-to-transformer-turns-ratio-testing/95"
+  },
+  {
+    "id": "xfmr-002",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "On a liquid-filled power transformer, turns ratio is performed:",
+    "choices": [
+      "Only on the as-found tap, to save time",
+      "At all tap positions",
+      "Only if excitation current already failed",
+      "Only on the middle phase"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.2.2.B.3 says perform turns-ratio tests at all tap positions. A bad extreme tap will not show up on the nameplate tap alone.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.3",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-003",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.D.6 describes the usual excitation-current pattern on a three-legged core as:",
+    "choices": [
+      "Three identical readings",
+      "Two similar readings and one lower reading",
+      "One very high reading and two zeros",
+      "A reading that must match the DLRO within 2%"
+    ],
+    "answer": 1,
+    "explanation": "Two similar currents and one lower current is the pattern the paragraph calls typical for a three-legged core. The test should still match the pattern for that specific core. A single phase many times higher than the others is not that pattern.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.6",
+    "verified": true,
+    "kb": "transformers.md#excitation",
+    "link": "https://wiki.testguy.net/t/transformer-diagnostics-and-condition-assessment/84"
+  },
+  {
+    "id": "xfmr-004",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Before you compare a liquid-filled transformer power factor with Table 100.3, ATS 7.2.2.D.4 says the value is:",
+    "choices": [
+      "Left at the temperature of the test",
+      "Corrected to 20 \u00b0C",
+      "Corrected to 40 \u00b0C like a motor PI",
+      "Multiplied by the turns ratio"
+    ],
+    "answer": 1,
+    "explanation": "Maximum power-factor or dissipation-factor values are corrected to 20 \u00b0C and then compared with the manufacturer or, if none, Table 100.3. Distribution transformers are compared with previous results rather than forced into the power-transformer cap.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.4; Table 100.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-005",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Manufacturer published insulation-resistance values exist and they disagree with Table 100.5. What does the ATS pattern require?",
+    "choices": [
+      "Always use the NETA table; it is the law",
+      "Use the manufacturer's data; the NETA table is for the absence of that data",
+      "Average the two numbers",
+      "Use whichever is lower, always"
+    ],
+    "answer": 1,
+    "explanation": "The insulation paragraphs are written 'in accordance with manufacturer's published data. In the absence of manufacturer's data, use Table\u2026'. When the manufacturer has spoken, that data is the screen. The table is the fallback.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.2 (and the same 'in the absence' pattern throughout Section 7)",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-006",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Mineral-oil power transformers, power factor at 20 \u00b0C, when you have no manufacturer limit. Which pair matches the books?",
+    "choices": [
+      "ATS-2025 Table 100.3 maximum 0.5%; MTS-2023 Table 100.3 oil maximum 1.0%",
+      "Both books use 0.5%",
+      "ATS uses 2.0% and MTS uses 0.5%",
+      "Neither book states a number; only the Doble set does"
+    ],
+    "answer": 0,
+    "explanation": "Acceptance Table 100.3 in ATS-2025 caps mineral-oil power transformers, regulators, and reactors at 0.5% (natural ester in that row is 1.0%). Maintenance Table 100.3 in MTS-2023 lists oil maximum 1.0% for power transformers and 2.0% for distribution transformers and apparatus. Do not file an acceptance report against the maintenance column.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.3; ANSI/NETA MTS-2023 Table 100.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-007",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Bushing capacitance has moved 7% from the nameplate. ATS 7.2.2.D.5 says:",
+    "choices": [
+      "Acceptable; the screen is 50%",
+      "Investigate; capacitance is investigated above a 5% departure, and power factor above a 50% departure",
+      "Investigate only if hot-collar watts are under 0.1",
+      "Ignore capacitance; only oil power factor matters"
+    ],
+    "answer": 1,
+    "explanation": "Investigate bushing power factor more than 50% off nameplate, capacitance more than 5% off nameplate, and hot-collar results above 0.1 W. Seven percent capacitance is over the 5% screen even if the power-factor change is still small.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.5",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-008",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS Table 100.13 lists SF6 purity greater than 98.5% by volume for pure SF6. A fair use of that table is:",
+    "choices": [
+      "Apply 98.5% to any SF6/N2 mixture without looking at the OEM",
+      "Treat it as a field guide for pure SF6, and still compare with the manufacturer; mixed gases follow the manufacturer",
+      "Ignore purity if moisture is under 200 ppmv",
+      "The table is only a lab test and has no field note"
+    ],
+    "answer": 1,
+    "explanation": "The table is derived for technical-grade pure SF6 and the notes say field results should be compared with the manufacturer's literature, and mixed gases refer to the manufacturer. Moisture, SO2, and decomposition products are separate rows, not substitutes for purity.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13 notes",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-009",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Core insulation resistance, ATS 7.2.2.D.11, shall be comparable to factory but not less than:",
+    "choices": [
+      "500 M\u03a9 at 500 V DC",
+      "100 M\u03a9 at 1000 V DC",
+      "1 M\u03a9 at 500 V DC",
+      "5000 M\u03a9 at 10 kV"
+    ],
+    "answer": 0,
+    "explanation": "Not less than 500 M\u03a9 at 500 V DC, and comparable to the factory value. If the intentional core ground is still connected, a megger reads the bond, near zero, and you have not performed this test.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.11",
+    "verified": true,
+    "kb": "transformers.md#core",
+    "link": "https://wiki.testguy.net/t/transformer-diagnostics-and-condition-assessment/84"
+  },
+  {
+    "id": "xfmr-010",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "New mineral oil in new equipment, 69 kV and below, ATS Table 100.4.1. Which set matches the table?",
+    "choices": [
+      "D1816 1 mm gap minimum 25 kV, water maximum 20 ppm, power factor at 25 \u00b0C maximum 0.05%",
+      "D1816 1 mm gap minimum 35 kV, water maximum 5 ppm, power factor 0.5%",
+      "D877 minimum 10 kV only; water is not listed",
+      "Neutralization number maximum 0.30 mg KOH/g"
+    ],
+    "answer": 0,
+    "explanation": "For \u226469 kV the table lists D1816 1 mm minimum 25 kV, 2 mm minimum 45 kV, water 20 ppm, D924 power factor at 25 \u00b0C 0.05%, and neutralization number 0.03 mg KOH/g. The 35 kV / 10 ppm column is the \u2265230 kV class. Do not slide into the next voltage column.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.4.1",
+    "verified": true,
+    "kb": "transformers.md#oil",
+    "link": "https://wiki.testguy.net/t/transformer-insulating-oil-test-methods-astm/59"
+  },
+  {
+    "id": "xfmr-011",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Three-phase equivalent leakage reactance differs from nameplate by 4%. ATS 7.2.2.D.10 says:",
+    "choices": [
+      "Acceptable; the screen is 10%",
+      "Investigate; the screen is more than 3% from nameplate",
+      "Ignore it if TTR passed",
+      "The test applies only to dry-type units under 500 kVA"
+    ],
+    "answer": 1,
+    "explanation": "Investigate a three-phase equivalent result more than 3% off nameplate. Each phase should also stay within 3% of the average of the three. A ratio that still passes does not retire a leakage-reactance change; the test is looking for winding movement.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.10",
+    "verified": true,
+    "kb": "transformers.md#core"
+  }
+]

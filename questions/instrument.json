@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ct-001",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS 7.10.1.D.2 on current transformers requires polarity results to:",
+    "choices": [
+      "Be within 2% of the adjacent phase",
+      "Agree with the transformer markings",
+      "Be ignored if the ratio is within 5%",
+      "Match the relay time dial"
+    ],
+    "answer": 1,
+    "explanation": "Polarity agrees with the marks. A ratio can look plausible while H1/X1 are reversed, and a reversed CT in a differential scheme looks like an internal fault as soon as load flows.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-002",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "How many grounding points does ATS 7.10.1 allow on a CT secondary circuit?",
+    "choices": [
+      "None; secondaries must float",
+      "Exactly one, at the location the drawings specify",
+      "One at each end of the run",
+      "One per phase plus one on the neutral"
+    ],
+    "answer": 1,
+    "explanation": "The secondary circuit is grounded, and it has only one grounding point, located where the engineer showed it, consistent with IEEE C57.13.3. A second ground circulates current. No ground lets the circuit float.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.9 and D.9",
+    "verified": true,
+    "kb": "instrument-transformers.md#ground"
+  },
+  {
+    "id": "ct-003",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS 7.10.2.D.3 ratio-error limits for voltage transformers are:",
+    "choices": [
+      "\u00b10.1% for revenue metering; the other-applications sentence states +1.2% ratio and \u00b117.5 mrad phase angle",
+      "\u00b13% for every VT, revenue included",
+      "\u00b10.5%, the power-transformer TTR rule",
+      "No numeric limit; only polarity is checked"
+    ],
+    "answer": 0,
+    "explanation": "Revenue metering is \u00b10.1% ratio and \u00b10.9 mrad. Other applications are written as not exceeding +1.2% ratio and \u00b117.5 mrad (one degree). A \u00b13% field screen from a VT manufacturer bulletin is a different test, done at very low voltage, and is not this paragraph.",
+    "reference": "ANSI/NETA ATS-2025 7.10.2.D.3",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  }
+]

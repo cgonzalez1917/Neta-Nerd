@@ -1,0 +1,20 @@
+[
+  {
+    "id": "batt-001",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Flooded lead-acid cells, ATS 7.18.1.1.D.4: cell voltages shall be:",
+    "choices": [
+      "Within 0.05 V of each other, or per the manufacturer's band",
+      "Within 0.5 V of each other",
+      "Exactly 2.17 V regardless of temperature",
+      "Ignored if the ohmic spread is under 25%"
+    ],
+    "answer": 0,
+    "explanation": "The paragraph says within 0.05 volt of each other or in accordance with the manufacturer's published data. Ohmic spread has its own 25% screen and does not replace the voltage comparison.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.D.4",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  }
+]

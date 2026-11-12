@@ -1,0 +1,75 @@
+[
+  {
+    "id": "gnd-001",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "ATS 7.13.D gives which ground-resistance screens, unless the owner specifies otherwise?",
+    "choices": [
+      "25 \u03a9 for substations and 5 \u03a9 point-to-point",
+      "5 \u03a9 for large commercial or industrial systems, 1 \u03a9 or less for generating or transmission stations, and investigate point-to-point above 0.5 \u03a9",
+      "0.5 \u03a9 for every rod, with no point-to-point test",
+      "100 \u03a9, corrected for temperature"
+    ],
+    "answer": 1,
+    "explanation": "7.13.D.2 is 5 ohms and 1 ohm, citing IEEE 142. 7.13.D.3 is 0.5 ohm point-to-point. The NEC 25-ohm supplemental-rod rule is a different document and does not replace these.",
+    "reference": "ANSI/NETA ATS-2025 7.13.D.2 and 7.13.D.3",
+    "verified": true,
+    "kb": "grounding.md#limits",
+    "link": "https://wiki.testguy.net/t/ground-resistance-testing-answers-to-frequently-asked-questions/119"
+  },
+  {
+    "id": "gnd-002",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "ATS 7.13.B.2 tells you to perform the electrode resistance test:",
+    "choices": [
+      "With a megohmmeter at 1000 V",
+      "By fall-of-potential or an alternative, in accordance with IEEE 81",
+      "By the formula 100 divided by length in feet",
+      "Only with a clamp-on meter, probes forbidden"
+    ],
+    "answer": 1,
+    "explanation": "The paragraph names fall-of-potential or an alternative, and it names IEEE 81. It does not put a 62% spacing in the NETA sentence. The 100/length formula is busway insulation resistance, not a ground rod.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-003",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A zero-sequence ground-fault sensor on a solidly grounded service should have:",
+    "choices": [
+      "All phase conductors and the neutral through the sensor in the same direction, and no equipment-grounding conductor through it",
+      "Only the equipment-grounding conductor through the sensor",
+      "Each phase through its own window in opposite directions",
+      "The neutral stopped on the load side of the sensor so it cannot be seen"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.14 visual checks: phases and neutral pass through in the same direction; grounding conductors do not. The ground bond itself lands on the source side of the sensor and of the neutral disconnect.",
+    "reference": "ANSI/NETA ATS-2025 7.14.A",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-004",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "ATS 7.14 wants the ground connection:",
+    "choices": [
+      "On the load side of the ground-fault sensor so the sensor sees neutral current",
+      "On the source side of the neutral disconnect link and on the source side of any ground-fault sensor",
+      "Removed entirely on a solidly grounded service",
+      "Run through the zero-sequence window together with the phases"
+    ],
+    "answer": 1,
+    "explanation": "Source side of the neutral disconnect and source side of the sensor. A ground on the load side of a zero-sequence sensor, or an equipment ground passed through the window, changes what the relay sees. Put the neutral link back after the neutral-to-ground insulation test.",
+    "reference": "ANSI/NETA ATS-2025 7.14.A",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  }
+]

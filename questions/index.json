@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "issuesUrl": "https://github.com/cgonzalez1917/Neta-Nerd/issues/new",
+  "topics": [
+    {
+      "id": "electrical-safety",
+      "title": "Electrical safety / NFPA 70E",
+      "file": "safety.json",
+      "idPrefix": "safety"
+    },
+    {
+      "id": "meters-math",
+      "title": "Meters and math",
+      "file": "meters.json",
+      "idPrefix": "math"
+    },
+    {
+      "id": "insulation-resistance",
+      "title": "Insulation resistance, PI, and DAR",
+      "file": "insulation.json",
+      "idPrefix": "ir"
+    },
+    {
+      "id": "contact-resistance",
+      "title": "Contact and winding resistance",
+      "file": "resistance.json",
+      "idPrefix": "dlro"
+    },
+    {
+      "id": "transformers",
+      "title": "Transformers",
+      "file": "transformers.json",
+      "idPrefix": "xfmr"
+    },
+    {
+      "id": "lv-breakers",
+      "title": "Low-voltage breakers and trip units",
+      "file": "breakers.json",
+      "idPrefix": "brkr"
+    },
+    {
+      "id": "protective-relays",
+      "title": "Protective relays",
+      "file": "relays.json",
+      "idPrefix": "relay"
+    },
+    {
+      "id": "cables",
+      "title": "Cables, hipot, and VLF",
+      "file": "cables.json",
+      "idPrefix": "cable"
+    },
+    {
+      "id": "grounding",
+      "title": "Grounding and ground resistance",
+      "file": "grounding.json",
+      "idPrefix": "gnd"
+    },
+    {
+      "id": "instrument-transformers",
+      "title": "Instrument transformers",
+      "file": "instrument.json",
+      "idPrefix": "ct"
+    },
+    {
+      "id": "batteries",
+      "title": "Station batteries",
+      "file": "batteries.json",
+      "idPrefix": "batt"
+    },
+    {
+      "id": "thermography",
+      "title": "Infrared thermography",
+      "file": "thermography.json",
+      "idPrefix": "thermo"
+    }
+  ]
+}

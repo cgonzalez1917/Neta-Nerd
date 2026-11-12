@@ -1,0 +1,20 @@
+[
+  {
+    "id": "thermo-001",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "Two similar bus joints under similar load differ by 18 \u00b0C. Table 100.18 says:",
+    "choices": [
+      "Possible deficiency; investigate when convenient next year",
+      "Major discrepancy; repair immediately",
+      "Normal, because ambient was not recorded",
+      "The table does not use Celsius"
+    ],
+    "answer": 1,
+    "explanation": "Above 15 \u00b0C between similar components is the 'repair immediately' row. 1\u20133 \u00b0C is investigate, 4\u201315 \u00b0C is repair as time permits. The table is written in \u00b0C. Load still matters, and this is not permission to open the gear without a shock and arc-flash plan.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.18",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  }
+]

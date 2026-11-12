@@ -1,0 +1,5 @@
+# Owner reference files stay off this public repo.
+*.pdf
+uploads/
+**/NFPA_70E*
+**/ANSI_NETA*

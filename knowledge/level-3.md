@@ -1,0 +1,36 @@
+# Level III expectations {#expectations}
+
+Level III is the certified technician who can run the test and defend the number. The same TestGuy study guide, citing the December 2022 outline, weights Level III about:
+
+- Safety — 13%
+- Theory — 23%
+- Component testing — 47%
+- Systems and commissioning — 17%
+
+Systems is no longer a sliver. Expect control-schematic order, interlocks, ground-fault sensor routing, and more than one step of math (fault current from percent impedance, kvar from a power factor, a temperature rise converted without adding 32).
+
+## What changes from Level II
+
+- You choose the ATS paragraph or the MTS paragraph. Acceptance and maintenance limits are not interchangeable. Checked examples: liquid-filled power-transformer power factor, 15 kV VLF withstand, and the adjustable molded-case instantaneous band.
+- Manufacturer data wins when it exists. NETA tables are what you use in the absence of that data.
+- A passing ratio does not retire excitation, and a pretty winding-resistance set does not retire the core-ground reading.
+- Print reading is text logic here: which coil picks up first, what an `a` contact and a `b` contact do when a lockout changes state, and why a second copy of a key interlock key defeats the scheme.
+
+## Exam format {#exam-format}
+
+Same source as the Level II note: the TestGuy study guide at wiki.testguy.net/t/217, citing the NETA December 2022 detailed content outline.
+
+- Closed book, Pearson VUE.
+- About 100 questions in 2 hours.
+- Formula sheet provided. Per-unit fault current, series/parallel inductors, and a wye capacitor measured line-to-line are not handed to you as finished recipes.
+- On-screen TI-30XS. Degree mode still matters when the question gives an angle instead of a power factor.
+
+## Schemes worth drilling {#schemes}
+
+**51 to 86 to 52.** A time-overcurrent element (51) that is wired to a lockout (86) picks up first. Its contact energizes the 86 coil. The 86 seals in, and an 86 contact energizes the breaker trip coil (52/TC). Resetting the breaker alone does not reset the 86.
+
+**a and b contacts.** An `a` contact follows the device: open when the coil is dropped, closed when the coil is picked up (normally open). A `b` contact is the opposite (normally closed). A close-permissive circuit often uses an 86 `b` contact so a tripped lockout opens the permissive.
+
+**Key interlocks.** The scheme only works if the trapped key is the only key. A spare cut to the same code lets someone open the grounded switch and the live switch together.
+
+**Zone interlocking.** ATS lists it as an auxiliary function to verify on a low-voltage power breaker. In the scheme, a downstream trip sends a restraint so the upstream short-time or ground function waits. No restraint, and the upstream function is allowed to trip on its faster unrestrained time. Confirm the wiring in the breaker manual; do not assume every trip unit implements it the same way.

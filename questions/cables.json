@@ -1,0 +1,111 @@
+[
+  {
+    "id": "cable-001",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS-2025 Table 100.6.3, sinusoidal VLF acceptance test for a 15 kV cable system, phase-to-ground, is:",
+    "choices": [
+      "8.7 kV for 5 minutes",
+      "16 kV for 15 minutes",
+      "21 kV rms for at least 30 minutes",
+      "56 kV DC for 15 minutes"
+    ],
+    "answer": 2,
+    "explanation": "The acceptance row is 21 kV rms, and the notes call for a minimum of 30 minutes (60 if the circuit is critical). 16 kV is the MTS-2023 maintenance value for 15 kV, not the ATS acceptance value. 56 kV DC is the extruded-dielectric DC table, which is a different test.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3",
+    "verified": true,
+    "kb": "cables.md#vlf",
+    "link": "https://wiki.testguy.net/t/power-cable-testing-and-diagnostics-overview/79"
+  },
+  {
+    "id": "cable-002",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Table 100.6.6's worked note: Uo for a new 15 kV cable is:",
+    "choices": [
+      "15 kV",
+      "8.7 kV",
+      "21 kV",
+      "1.5 kV"
+    ],
+    "answer": 1,
+    "explanation": "Uo is phase-to-ground. 15 / \u221a3 = 8.7 kV. 21 kV is the acceptance VLF withstand, not Uo. Tan-delta steps are 0.5, 1.0, and 1.5 times Uo.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.6 note",
+    "verified": true,
+    "kb": "cables.md#tan-delta"
+  },
+  {
+    "id": "cable-003",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Charging current of a cable is proportional to frequency. Moving a withstand from 60 Hz to 0.1 Hz changes that current by about:",
+    "choices": [
+      "6 times",
+      "60 times",
+      "600 times",
+      "It does not change"
+    ],
+    "answer": 2,
+    "explanation": "I = 2\u03c0fCV, so the ratio of frequencies is 60 / 0.1 = 600. That is why a VLF set can energize a long cable a 60 Hz set cannot. The voltage and the hold time still have to be the table values.",
+    "reference": "Capacitive charging current; IEEE 400.2 / ATS Table 100.6.3 is the voltage table",
+    "verified": false,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-004",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "A 15 kV shielded cable. Which VLF rms phase-to-ground voltages match ATS acceptance and MTS maintenance?",
+    "choices": [
+      "Both 21 kV",
+      "Acceptance 21 kV, maintenance 16 kV",
+      "Acceptance 16 kV, maintenance 21 kV",
+      "Both 8.7 kV"
+    ],
+    "answer": 1,
+    "explanation": "ATS-2025 Table 100.6.3 acceptance for 15 kV is 21 kV rms. MTS-2023 Table 100.6.3 maintenance for 15 kV is 16 kV rms. Both notes use a 30-minute minimum. 8.7 kV is Uo for a 15 kV system, not the withstand.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3; ANSI/NETA MTS-2023 Table 100.6.3",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-005",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS Table 100.6.1, extruded dielectric shielded cable, note 2 says:",
+    "choices": [
+      "DC testing is preferred after 5 years because it is gentler",
+      "After 5 years of service, DC testing is not recommended",
+      "DC testing is forbidden on all new cable",
+      "VLF is not recognized"
+    ],
+    "answer": 1,
+    "explanation": "The note says after 5 years of service, DC testing is not recommended. New cable still has a DC column in that table, with a 15-minute hold, but service-aged extruded cable is not where you reach for DC first. VLF is the separate table.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.1 note 2",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-006",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "PE-insulated cable, VLF tan delta, sinusoidal 0.1 Hz. Table 100.6.7.1 says tip-up (1.5 Uo minus 0.5 Uo) requires action when it is:",
+    "choices": [
+      "Above 5 \u00d7 10\u207b\u00b3",
+      "Above 80 \u00d7 10\u207b\u00b3",
+      "Above 0.1 \u00d7 10\u207b\u00b3",
+      "Any positive number"
+    ],
+    "answer": 1,
+    "explanation": "Acceptable tip-up is below 5 (in units of 10\u207b\u00b3), further study is 5 to 80, and action required is above 80. If any one of standard deviation, tip-up, or mean lands in a worse column, the cable takes that worse grade. EPR uses Table 100.6.7.2, not this one.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.7.1",
+    "verified": true,
+    "kb": "cables.md#tan-delta"
+  }
+]

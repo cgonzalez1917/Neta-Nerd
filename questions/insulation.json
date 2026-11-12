@@ -1,0 +1,166 @@
+[
+  {
+    "id": "ir-001",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "For an AC induction motor or generator, ATS 7.15.1 says the polarization index shall not be less than:",
+    "choices": [
+      "1.0",
+      "1.4",
+      "2.0",
+      "5.0"
+    ],
+    "answer": 2,
+    "explanation": "7.15.1.D.2 sets PI not less than 2.0 and DAR not less than 1.4 for those machines. The 1.0 floor is the liquid-filled transformer rule in 7.2.2.D.2, not the motor rule. 5 M\u03a9 is a Table 100.11 resistance, not a PI.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar",
+    "link": "https://wiki.testguy.net/t/insulation-resistance-test-methods-a-beginners-guide/125"
+  },
+  {
+    "id": "ir-002",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "On that same AC induction-machine section, the dielectric absorption ratio shall not be less than:",
+    "choices": [
+      "1.0",
+      "1.4",
+      "2.0",
+      "4.0"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.15.1.D.2.2: DAR not less than 1.4. A generator section elsewhere (7.22.1) uses DAR greater than 1.0, so read the section that matches the machine. Do not borrow the transformer PI number.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-003",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "An AC induction machine is larger than 200 hp. ATS 7.15.1.B.2 calls for:",
+    "choices": [
+      "A one-minute test and a 60/30 DAR",
+      "A ten-minute test and a polarization index",
+      "A spot reading only, with no ratio",
+      "A DC hipot instead of insulation resistance"
+    ],
+    "answer": 1,
+    "explanation": "Above 200 hp (150 kW) the test runs ten minutes and you calculate PI. At 200 hp and less, the test is one minute and the DAR uses the 60-second and 30-second readings.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-004",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "You want to compare a switchgear insulation reading with Table 100.1. What has to happen first?",
+    "choices": [
+      "Nothing; Table 100.1 is already corrected for any temperature",
+      "Correct the reading to 20 \u00b0C with Table 100.14.1 before you compare",
+      "Correct it to 40 \u00b0C with Table 100.14.2, the rotating-machine table",
+      "Double the test voltage and ignore temperature"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.1 minimums are at 20 \u00b0C and the notes send you to Table 100.14. Table 100.14.2 is the 40 \u00b0C table used with rotating-machine Table 100.11. Comparing a hot raw reading with the 20 \u00b0C floor fails good insulation or passes bad insulation.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.1 note 2; Table 100.14.1",
+    "verified": true,
+    "kb": "insulation.md#temp-correction"
+  },
+  {
+    "id": "ir-005",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "Table 100.11, one minute at 40 \u00b0C: the recommended minimum for AC form-wound windings built after 1970 is:",
+    "choices": [
+      "kV + 1 M\u03a9",
+      "5 M\u03a9",
+      "100 M\u03a9",
+      "1000 M\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "The after-1970 form-wound column is 100 M\u03a9 across the voltage rows in that table. Random-wound stators and form-wound coils below 1 kV are 5 M\u03a9. kV + 1 is the column for older windings, fields, and others not listed in the modern columns.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-006",
+    "level": "I",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "No manufacturer data is available for a 600 V breaker insulation-resistance test. Table 100.1 says to apply:",
+    "choices": [
+      "500 V DC, 25 M\u03a9 minimum",
+      "1000 V DC, 100 M\u03a9 minimum at 20 \u00b0C",
+      "2500 V DC, 500 M\u03a9 minimum",
+      "5000 V DC, 5000 M\u03a9 minimum"
+    ],
+    "answer": 1,
+    "explanation": "The 600 V row is a 1000 V DC test and 100 M\u03a9 at 20 \u00b0C. 500 V / 25 M\u03a9 is the 250 V row. The higher rows are for higher equipment ratings. Correct temperature before you use the minimum.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.1",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-007",
+    "level": "ETT",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "A megohmmeter is used to:",
+    "choices": [
+      "Measure a ground rod with a fall-of-potential test",
+      "Apply DC and read insulation resistance in megohms",
+      "Inject primary current through a breaker trip unit",
+      "Measure power factor of transformer oil by ASTM D924"
+    ],
+    "answer": 1,
+    "explanation": "The megohmmeter is a DC insulation instrument. Ground resistance uses a ground tester. Primary injection uses a high-current set. Oil power factor is a liquid sample test, not a megger reading on the winding.",
+    "reference": "Field practice; ATS insulation-resistance tests are DC megohm tests. A ground tester is a different instrument (see ATS 7.13).",
+    "verified": false,
+    "kb": "insulation.md#spot",
+    "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
+  },
+  {
+    "id": "ir-008",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "A PI of 1.2 is reported. Which conclusion matches the ATS sections?",
+    "choices": [
+      "Fail both a large motor and a liquid-filled transformer",
+      "It meets the liquid-filled transformer minimum of 1.0 and it does not meet the AC induction-machine minimum of 2.0",
+      "It meets the motor rule and fails the transformer rule",
+      "PI limits are identical for every apparatus in ATS"
+    ],
+    "answer": 1,
+    "explanation": "7.2.2.D.2: transformer PI not less than 1.0. 7.15.1.D.2: machine PI not less than 2.0. Use the section for the equipment. A single 'NETA PI' does not exist.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.2 and 7.15.1.D.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-009",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "You are correcting a stator insulation reading for comparison with Table 100.11. Which conversion table applies?",
+    "choices": [
+      "Table 100.14.1, to 20 \u00b0C",
+      "Table 100.14.2, to 40 \u00b0C",
+      "No correction; machine readings are temperature-proof",
+      "The copper 234.5 formula, because it is a winding"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.11 is 'for one minute at 40 \u00b0C' and points at Table 100.14. Table 100.14.2 is the 40 \u00b0C multiplier table. Table 100.14.1 corrects to 20 \u00b0C for the apparatus tables. The copper formula corrects conductor resistance, not megohms.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2",
+    "verified": true,
+    "kb": "insulation.md#temp-correction"
+  }
+]

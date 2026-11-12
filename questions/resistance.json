@@ -1,0 +1,77 @@
+[
+  {
+    "id": "dlro-001",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "Three similar breaker poles read 40, 48, and 70 \u00b5\u03a9. No manufacturer limit is published. Which reading does the 50-percent-of-the-lowest rule tell you to investigate?",
+    "choices": [
+      "40 \u00b5\u03a9, because it is the lowest",
+      "48 \u00b5\u03a9",
+      "70 \u00b5\u03a9",
+      "None; all are under 100 \u00b5\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Threshold is 1.5 times the lowest value: 40 \u00d7 1.5 = 60 \u00b5\u03a9. 70 \u00b5\u03a9 is over that screen. 48 \u00b5\u03a9 is not. There is no universal 100 \u00b5\u03a9 ceiling in the ATS wording.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.D.2 and 7.4.D.1",
+    "verified": true,
+    "kb": "resistance.md#fifty-percent",
+    "link": "https://wiki.testguy.net/t/10-critical-tests-for-new-power-circuit-breakers/113"
+  },
+  {
+    "id": "dlro-002",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "Why does a DLRO use a Kelvin (four-wire) connection?",
+    "choices": [
+      "So the test can be done at 10 kV",
+      "So lead resistance and most clip drop are left out of the voltage measurement",
+      "So the meter reads megohms instead of microhms",
+      "So all three phases can be tested at once"
+    ],
+    "answer": 1,
+    "explanation": "Current uses one pair of leads. Voltage is sensed on a second pair inside those points, so the leads are not part of the ohm reading. Two-wire ohms on a microhm joint mostly measures the leads.",
+    "reference": "Kelvin measurement practice; ATS contact-resistance tests assume a low-resistance ohmmeter",
+    "verified": false,
+    "kb": "resistance.md#dlro",
+    "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
+  },
+  {
+    "id": "dlro-003",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "ATS 7.2.2.D.8 on liquid-filled transformer winding resistance says temperature-corrected values shall compare within:",
+    "choices": [
+      "0.5% of the calculated turns ratio",
+      "2% of previous results or of the adjacent phases",
+      "50% of the lowest phase",
+      "5% of nameplate impedance"
+    ],
+    "answer": 1,
+    "explanation": "The winding-resistance screen is two percent, after temperature correction, against a previous test or the adjacent phases. One-half percent is the turns-ratio rule. Fifty percent is the bolted-connection rule. Three percent shows up on leakage reactance, not here.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.8",
+    "verified": true,
+    "kb": "resistance.md#winding",
+    "link": "https://wiki.testguy.net/t/transformer-winding-resistance-test-methods-and-procedures-explained/81"
+  },
+  {
+    "id": "dlro-004",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "A 200-foot low-voltage busway has no manufacturer insulation-resistance value. ATS 7.4.D.2.a minimum, corrected to the 100-foot basis, is:",
+    "choices": [
+      "100 M\u03a9",
+      "2 M\u03a9",
+      "0.5 M\u03a9",
+      "200 M\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Minimum megohms = 100 / length in feet = 100/200 = 0.5 M\u03a9. A shorter run has a higher minimum. Do not apply a withstand until the reading is above that floor.",
+    "reference": "ANSI/NETA ATS-2025 7.4.D.2.a",
+    "verified": true,
+    "kb": "resistance.md#busway"
+  }
+]
