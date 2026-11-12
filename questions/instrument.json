@@ -304,5 +304,23 @@
     "reference": "ANSI/NETA ATS-2025 7.1.1.A.7",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "ct-018",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Instrument transformers mounted on a liquid-filled power transformer are tested by ATS 7.2.2.B.16:",
+    "choices": [
+      "Under section 7.10",
+      "With the transformer turns-ratio set only",
+      "By oil power factor alone",
+      "Not at all, if the nameplate ratio is printed"
+    ],
+    "answer": 0,
+    "explanation": "Bushing CTs and other instrument transformers get the 7.10 tests: insulation resistance, polarity, ratio, and, for relaying CTs, excitation. The power-transformer ratio test does not cover them.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.16 and D.16",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
   }
 ]

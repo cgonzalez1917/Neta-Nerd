@@ -161,5 +161,23 @@
     "reference": "29 CFR 1910.333(b)(2)(iv); NFPA 70E-2024 120.6",
     "verified": true,
     "kb": "safety.md#loto"
+  },
+  {
+    "id": "gnd-010",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A transformer neutral grounding impedance device is judged by ATS 7.2.2.D.18 against:",
+    "choices": [
+      "The manufacturer\u2019s published data",
+      "Table 100.11",
+      "Five ohms, always",
+      "The cable-shield ohms-per-foot rule"
+    ],
+    "answer": 0,
+    "explanation": "The reactor or resistor has its own rating. ATS says to compare the measured value with what the manufacturer published. The 5-ohm ground-grid figure and the machine insulation table are different tests.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.18",
+    "verified": true,
+    "kb": "grounding.md#limits"
   }
 ]

@@ -632,5 +632,149 @@
     "reference": "ANSI/NETA ATS-2025 7.2.2.B.14; ref. IEEE C57.106-2006, clause 5.1.8",
     "verified": true,
     "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-036",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.C.2 requires cooling fans and pumps on a liquid-filled transformer to:",
+    "choices": [
+      "Operate",
+      "Be locked out for the turns-ratio test only, with no functional check",
+      "Be removed if the oil power factor passes",
+      "Run only during a dissolved-gas sample"
+    ],
+    "answer": 0,
+    "explanation": "The visual and mechanical test values say the fans and pumps shall operate. A transformer that cannot cool will not stay inside its temperature rating once it is loaded. The check is separate from the oil tests.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.C.2",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-037",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.C.1 says alarm, control, and trip circuits from temperature, level, pressure-relief, and sudden-pressure devices shall:",
+    "choices": [
+      "Operate at the manufacturer\u2019s specified settings",
+      "Be left disconnected",
+      "Be tested only with primary current",
+      "Replace the dissolved-gas test"
+    ],
+    "answer": 0,
+    "explanation": "Those devices are the transformer\u2019s own protection. They have to operate within the settings the manufacturer published. A target that never moves is not an accepted alarm.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.C.1",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-038",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.A.19 says the de-energized tap changer is left:",
+    "choices": [
+      "On the tap the specification calls for",
+      "On the highest tap, always",
+      "In a mid position with no record",
+      "Wherever the TTR leads fit"
+    ],
+    "answer": 0,
+    "explanation": "The ratio test visits the taps. The as-left position is the one the job specified, not the last tap you happened to test. Record it.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.A.19",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-039",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.A.14 checks that transformer valves are:",
+    "choices": [
+      "In the correct operating position",
+      "All closed, including the radiators, for service",
+      "Removed",
+      "Used as the oil sample point with no other check"
+    ],
+    "answer": 0,
+    "explanation": "A radiator valve left shut looks like a cooling failure once the transformer is loaded. The inspection confirms the operating position. It is not a substitute for the oil sample.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.A.14",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-040",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.A.15 on a gas-blanketed transformer checks that:",
+    "choices": [
+      "Positive pressure is maintained",
+      "The blanket is vented before the ratio test",
+      "Oxygen is added to sweeten the gas space",
+      "The sudden-pressure relay is jumpered"
+    ],
+    "answer": 0,
+    "explanation": "The gauge should show positive pressure. Losing the blanket lets air in. A later electrical value, D.12, tells you to investigate oxygen in that nitrogen space.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.A.15",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-041",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.D.19 says transformer heaters:",
+    "choices": [
+      "Shall be operational",
+      "Are optional and untested",
+      "Replace the space heater on a motor only",
+      "Are disconnected if the oil is dry"
+    ],
+    "answer": 0,
+    "explanation": "Control-cabinet heaters keep moisture off the relays and the mechanism. The test value is that they work. A dry oil sample does not prove the heater.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.19",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-042",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.1.1.A.5 checks the switchgear mimic diagram and device labels against:",
+    "choices": [
+      "The drawings",
+      "The oil color",
+      "IEEE 519 Table 1",
+      "The crew leader\u2019s certification card"
+    ],
+    "answer": 0,
+    "explanation": "A mimic that does not match the one-line will get the wrong breaker racked out. The labels are part of that same visual check.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.5",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "xfmr-043",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.1.1.A.11 says moving current-carrying parts and sliding surfaces in switchgear need:",
+    "choices": [
+      "The lubrication the design calls for",
+      "No lubricant, because grease always contaminates insulation",
+      "Oil from the transformer tank",
+      "A dielectric grease rated for the BIL only"
+    ],
+    "answer": 0,
+    "explanation": "The inspection verifies appropriate lubrication on those parts. The wrong grease, or none, is a mechanical failure of a disconnect or a shutter. It is not an insulation-resistance test.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.11",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]

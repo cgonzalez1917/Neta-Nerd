@@ -937,5 +937,113 @@
     "reference": "ANSI/NETA ATS-2025 7.3.3.B.5.2",
     "verified": true,
     "kb": "cables.md#vlf"
+  },
+  {
+    "id": "safety-053",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.1 starts the switchgear inspection by comparing the nameplate with the drawings because:",
+    "choices": [
+      "A wrong voltage class will be tested at the wrong level",
+      "The nameplate is optional on new gear",
+      "The mimic bus replaces the nameplate",
+      "Only the relay settings matter"
+    ],
+    "answer": 0,
+    "explanation": "Acceptance tests apply voltages taken from the equipment rating. If the nameplate is not the drawing, you may hipot a 5 kV bus at a 15 kV value, or the reverse, and miss a real defect. The comparison comes before the electrical tests.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.1",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-054",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.3 includes which mechanical safety checks on switchgear?",
+    "choices": [
+      "Anchorage, alignment, grounding, and required clearances",
+      "Only the paint color",
+      "Only the relay firmware",
+      "The dissolved-gas sample"
+    ],
+    "answer": 0,
+    "explanation": "A lineup that is not anchored, not aligned, poorly grounded, or short of working clearance is not ready, even if the insulation resistance is high. Those four items are in the visual inspection.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.3",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-055",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.12 tells you to inspect switchgear insulators for:",
+    "choices": [
+      "Physical damage or contaminated surfaces",
+      "The correct Duval zone",
+      "A polarization index of 2.0",
+      "Pilot-wire guard frequency"
+    ],
+    "answer": 0,
+    "explanation": "Cracked or dirty insulation is a flashover path. The visual check is required. It does not replace the insulation-resistance test that follows.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.12",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-056",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.15 requires mechanical indicating devices on switchgear to:",
+    "choices": [
+      "Operate correctly, so open and closed are not a guess",
+      "Be removed before energizing",
+      "Match the oil color",
+      "Be tested only with primary current"
+    ],
+    "answer": 0,
+    "explanation": "A false open indication is how a disconnect gets approached as de-energized. The indicators are checked in the visual inspection, before anyone relies on them.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.15",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-057",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.22.1.B.4 says to functionally test engine shutdown for:",
+    "choices": [
+      "Low oil pressure, overtemperature, and overspeed, among the protections that apply",
+      "High power factor only",
+      "A loss-of-field relay only",
+      "Cable shield resistance"
+    ],
+    "answer": 0,
+    "explanation": "The section\u2019s note says that, other than protective shutdowns, the prime mover is outside the specification. Those shutdowns are still tested. A generator that will not trip on overspeed is not an accepted emergency set.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1 note and B.4",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "safety-058",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "On panelboards, ATS 7.1.2 says a dielectric withstand:",
+    "choices": [
+      "Waits until insulation resistance is above the minimum",
+      "Replaces the insulation-resistance test",
+      "Is performed at the VLF cable voltage",
+      "Is skipped when the directory is typed"
+    ],
+    "answer": 0,
+    "explanation": "The panelboard electrical values use the same gate as switchgear. Insulation resistance is compared with the manufacturer or with Table 100.1, and withstand does not go forward while that reading is still low.",
+    "reference": "ANSI/NETA ATS-2025 7.1.2",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]

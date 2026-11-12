@@ -124,5 +124,95 @@
     "reference": "ANSI/NETA ATS-2025 7.15.1.B.12",
     "verified": true,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-008",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.1.A.10 says resistance-temperature-detector circuits on a machine must:",
+    "choices": [
+      "Conform to the drawings",
+      "Be disconnected for the polarization-index test and left that way",
+      "Read zero ohms to the frame",
+      "Be tested at 10 kV dc"
+    ],
+    "answer": 0,
+    "explanation": "The RTD wiring is checked against the drawings. A later electrical test measures the RTD circuit resistance. Neither step is a 10 kV insulation test of the detector.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.A.10",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-009",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.1.B.10 tests the motor starter:",
+    "choices": [
+      "In accordance with section 7.16",
+      "As part of the polarization index",
+      "Only if the machine is under 200 horsepower",
+      "By a dissolved-gas sample"
+    ],
+    "answer": 0,
+    "explanation": "The machine section does not restate the starter procedure. It points at 7.16. The insulation-resistance test of the winding is a different line.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.10",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-010",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "An optional surge-comparison test passes ATS 7.15.1.D.7 when, by the end of the test:",
+    "choices": [
+      "There is no distress, no insulation failure, and the waveforms nest",
+      "One phase rings at a different frequency and that is ignored",
+      "The polarization index is the only recorded number",
+      "The starter trips"
+    ],
+    "answer": 0,
+    "explanation": "The surge test looks for a winding that will not match its neighbors. Nesting waveforms and no failure are the pass. It is optional, and it does not replace insulation resistance.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.7",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-011",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "In ATS 7.15.1, vibration under load and current-signature analysis are:",
+    "choices": [
+      "Optional running tests",
+      "Required before the one-minute insulation-resistance test",
+      "Substitutes for the polarization index",
+      "Oil tests"
+    ],
+    "answer": 0,
+    "explanation": "Both are marked optional, and both require the machine to be running under load. The insulation-resistance test is the required electrical test and does not wait on them.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.13 and B.15",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-012",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Partial discharge on an AC induction machine in ATS 7.15.1.B.16 is:",
+    "choices": [
+      "Optional",
+      "The required pass/fail in place of polarization index",
+      "A VLF cable test",
+      "Required on every machine under 200 horsepower"
+    ],
+    "answer": 0,
+    "explanation": "The machine PD test is marked optional. The required insulation test is still the IEEE 43 insulation-resistance test, with a PI or a DAR depending on horsepower.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.16",
+    "verified": true,
+    "kb": "apparatus.md#motors"
   }
 ]

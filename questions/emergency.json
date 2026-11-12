@@ -88,5 +88,41 @@
     "reference": "29 CFR 1910.333(b)(2); power-factor method, per Megger DELTA4000 applications guide",
     "verified": true,
     "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "emg-006",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "ATS 7.22.1.B.3 on an engine generator requires verification of:",
+    "choices": [
+      "Phase rotation, phasing, and synchronized operation as the application requires",
+      "Only the oil dielectric strength",
+      "Zone 1 reach",
+      "A 30-minute VLF test of the stator"
+    ],
+    "answer": 0,
+    "explanation": "The generator has to land on the bus in the right rotation and in phase when the application needs that. The insulation-resistance test is a separate item, run in accordance with IEEE 43.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.3",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-007",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "ATS 7.22.1.B.6 calls for the engine-generator performance test to be run:",
+    "choices": [
+      "In accordance with NFPA 110",
+      "As a 30-minute VLF test",
+      "Only if the polarization index fails",
+      "In place of the protective-shutdown tests"
+    ],
+    "answer": 0,
+    "explanation": "The performance test follows NFPA 110. This bank does not have NFPA 110, so no runtime or load step is taken from that standard. The insulation-resistance test and the shutdown tests are separate ATS lines.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
   }
 ]

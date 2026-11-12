@@ -829,5 +829,113 @@
     "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 6.3.5.4",
     "verified": true,
     "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-047",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 50BF is:",
+    "choices": [
+      "Breaker failure",
+      "Instantaneous overcurrent with no breaker-failure logic",
+      "Bus differential",
+      "Reclosing"
+    ],
+    "answer": 0,
+    "explanation": "50BF is breaker failure in the ATS 7.9.1 list. A plain 50 is instantaneous overcurrent, and 79 is reclosing. Breaker failure has its own test items in that list.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 50BF",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-048",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 46N is:",
+    "choices": [
+      "Negative-sequence current",
+      "Phase-balance voltage",
+      "Ground detector",
+      "Volts per hertz"
+    ],
+    "answer": 0,
+    "explanation": "46N is negative-sequence current, with an alarm, a trip, and an I2-squared-t curve. 47 is the voltage phase-sequence relay. 64 is the ground detector and 24 is volts per hertz.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 46N",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-049",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "ATS 7.22.1.B.2 tests protective relays on an engine generator:",
+    "choices": [
+      "In accordance with section 7.9",
+      "By a polarization index of the relay case",
+      "Only if they are device 87",
+      "As part of NFPA 70E glove inspection"
+    ],
+    "answer": 0,
+    "explanation": "Generator relays are not a private test. They go through section 7.9, element by element, against the settings. The machine insulation test stays in the IEEE 43 item.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.2",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-050",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Before acceptance tests, ATS-2025 section 4.1 requires the owner to provide:",
+    "choices": [
+      "A short-circuit study, a coordination study, and the protective-device settings",
+      "Only the oil sample",
+      "A waiver of the interlock checks",
+      "The test technician\u2019s personal lock"
+    ],
+    "answer": 0,
+    "explanation": "Those three documents are how the installed fuses, breakers, and relays are judged. Without them, a perfect timing shot may be a shot at the wrong setting. Site hazard training is a separate item in the same section.",
+    "reference": "ANSI/NETA ATS-2025 4.1, item 1",
+    "verified": true,
+    "kb": "level-2.md#expectations"
+  },
+  {
+    "id": "relay-051",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.113-2015 clause 4.6 distinguishes local backup from remote backup as:",
+    "choices": [
+      "Local backup is at the line\u2019s own substations; remote backup is at other substations",
+      "Local backup is always zone 3 and remote backup is zone 1",
+      "They are two names for main 1",
+      "Remote backup is faster and more selective"
+    ],
+    "answer": 0,
+    "explanation": "Local backup, including a second scheme at the same terminal, avoids the delay and the loss of selectivity that come with clearing a fault from another station. Remote backup is that other station. Neither one deletes the need to test the settings.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2; ref. IEEE C37.113-2015, clause 4.6",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-052",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "For a line terminated in a transformer, IEEE C37.113-2015 clause 5.5.2 prefers the distance relay\u2019s voltages and currents from:",
+    "choices": [
+      "The line side of the transformer",
+      "The low-voltage bus, with no further correction",
+      "The station battery",
+      "A single current transformer on the neutral only"
+    ],
+    "answer": 0,
+    "explanation": "Line-side VTs and CTs see the line. Low-side instruments fold in transformer impedance, the wye-delta phase shift, and tap-changer error, and ground distance can underreach because zero-sequence current may not be available. The reach is still measured from wherever the VT actually is.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2",
+    "verified": true,
+    "kb": "relays.md#zones"
   }
 ]

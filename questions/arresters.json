@@ -52,5 +52,23 @@
     "reference": "ANSI/NETA ATS-2025 7.19.2.D.4",
     "verified": true,
     "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-004",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "When a liquid-filled transformer has surge arresters, ATS 7.2.2.B.17 says to test them:",
+    "choices": [
+      "In accordance with section 7.19",
+      "By a dissolved-gas sample of the arrester",
+      "At the VLF cable voltage",
+      "Only if they are gapped silicon carbide"
+    ],
+    "answer": 0,
+    "explanation": "The transformer section does not invent a private arrester test. It sends you to 7.19. The arrester result is then judged by 7.2.2.D.17, which points back at that same section.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.17 and D.17",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
   }
 ]

@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 330 (Level II 203, Level III 127).
+Count: 370 (Level II 227, Level III 143).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -5611,6 +5611,686 @@ Permissive overreaching transfer trip differs from direct underreaching transfer
 - 3. Has no communication channel
 
 **Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 6.3.5.4
+
+Reviewer: VERIFIED or FIX
+
+## safety-053 (II / safety) {#safety-053}
+
+<!-- q:safety-053 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.1 starts the switchgear inspection by comparing the nameplate with the drawings because:
+
+- 0. A wrong voltage class will be tested at the wrong level **← answer**
+- 1. The nameplate is optional on new gear
+- 2. The mimic bus replaces the nameplate
+- 3. Only the relay settings matter
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.1
+
+Reviewer: VERIFIED or FIX
+
+## safety-054 (II / safety) {#safety-054}
+
+<!-- q:safety-054 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.3 includes which mechanical safety checks on switchgear?
+
+- 0. Anchorage, alignment, grounding, and required clearances **← answer**
+- 1. Only the paint color
+- 2. Only the relay firmware
+- 3. The dissolved-gas sample
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.3
+
+Reviewer: VERIFIED or FIX
+
+## safety-055 (II / safety) {#safety-055}
+
+<!-- q:safety-055 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.12 tells you to inspect switchgear insulators for:
+
+- 0. Physical damage or contaminated surfaces **← answer**
+- 1. The correct Duval zone
+- 2. A polarization index of 2.0
+- 3. Pilot-wire guard frequency
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.12
+
+Reviewer: VERIFIED or FIX
+
+## safety-056 (II / safety) {#safety-056}
+
+<!-- q:safety-056 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.15 requires mechanical indicating devices on switchgear to:
+
+- 0. Operate correctly, so open and closed are not a guess **← answer**
+- 1. Be removed before energizing
+- 2. Match the oil color
+- 3. Be tested only with primary current
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.15
+
+Reviewer: VERIFIED or FIX
+
+## math-084 (II / theory) {#math-084}
+
+<!-- q:math-084 -->
+
+**Bank verified flag:** true
+
+On a switchgear control-power transformer, ATS 7.1.1.D.8 holds the turns ratio to:
+
+- 0. Within one-half percent of the calculated ratio or the adjacent coil **← answer**
+- 1. Within 5 percent
+- 2. Within 10 percent of rated current
+- 3. No limit, because it is a control circuit
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.D.8
+
+Reviewer: VERIFIED or FIX
+
+## math-085 (II / theory) {#math-085}
+
+<!-- q:math-085 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.D.4 sets the minimum insulation resistance of switchgear control wiring at:
+
+- 0. 2 megohms **← answer**
+- 1. 100 megohms
+- 2. The Table 100.11 machine value
+- 3. 0.5 ohm
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.D.4
+
+Reviewer: VERIFIED or FIX
+
+## math-086 (II / theory) {#math-086}
+
+<!-- q:math-086 -->
+
+**Bank verified flag:** true
+
+For tan-delta steps on a new 4.16 kV shielded cable, Uo is about:
+
+- 0. 4.16 kV
+- 1. 2.4 kV **← answer**
+- 2. 7.2 kV
+- 3. 21 kV
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.6.6 notes
+
+Reviewer: VERIFIED or FIX
+
+## math-087 (II / theory) {#math-087}
+
+<!-- q:math-087 -->
+
+**Bank verified flag:** true
+
+When ATS 7.3.3.B.5 chooses a power-frequency withstand (20 Hz to 300 Hz) and the manufacturer is silent, the duration is:
+
+- 0. 60 minutes **← answer**
+- 1. 30 minutes, same as VLF
+- 2. 1 minute, same as a jacket test
+- 3. 10 seconds
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.B.5.3
+
+Reviewer: VERIFIED or FIX
+
+## math-088 (II / theory) {#math-088}
+
+<!-- q:math-088 -->
+
+**Bank verified flag:** true
+
+If a VLF withstand fails and the cable is repaired, the Table 100.6.3 notes say to:
+
+- 0. Repeat the full test **← answer**
+- 1. Apply half the voltage for five minutes
+- 2. Accept the repair with no retest
+- 3. Switch to DC for the retest only
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.6.3 notes; ref. IEEE 400.2-2024
+
+Reviewer: VERIFIED or FIX
+
+## math-089 (II / theory) {#math-089}
+
+<!-- q:math-089 -->
+
+**Bank verified flag:** true
+
+ATS 7.15.1.D.6 judges an optional tip-up test on a machine as acceptable when:
+
+- 0. Power factor shows no significant increase as voltage rises **← answer**
+- 1. Power factor doubles
+- 2. The tip-up is reported in ohms
+- 3. The test replaces the polarization index
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.D.6
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-036 (II / component) {#xfmr-036}
+
+<!-- q:xfmr-036 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.C.2 requires cooling fans and pumps on a liquid-filled transformer to:
+
+- 0. Operate **← answer**
+- 1. Be locked out for the turns-ratio test only, with no functional check
+- 2. Be removed if the oil power factor passes
+- 3. Run only during a dissolved-gas sample
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.C.2
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-037 (II / component) {#xfmr-037}
+
+<!-- q:xfmr-037 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.C.1 says alarm, control, and trip circuits from temperature, level, pressure-relief, and sudden-pressure devices shall:
+
+- 0. Operate at the manufacturer’s specified settings **← answer**
+- 1. Be left disconnected
+- 2. Be tested only with primary current
+- 3. Replace the dissolved-gas test
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.C.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-038 (II / component) {#xfmr-038}
+
+<!-- q:xfmr-038 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.A.19 says the de-energized tap changer is left:
+
+- 0. On the tap the specification calls for **← answer**
+- 1. On the highest tap, always
+- 2. In a mid position with no record
+- 3. Wherever the TTR leads fit
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.A.19
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-039 (II / component) {#xfmr-039}
+
+<!-- q:xfmr-039 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.A.14 checks that transformer valves are:
+
+- 0. In the correct operating position **← answer**
+- 1. All closed, including the radiators, for service
+- 2. Removed
+- 3. Used as the oil sample point with no other check
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.A.14
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-040 (II / component) {#xfmr-040}
+
+<!-- q:xfmr-040 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.A.15 on a gas-blanketed transformer checks that:
+
+- 0. Positive pressure is maintained **← answer**
+- 1. The blanket is vented before the ratio test
+- 2. Oxygen is added to sweeten the gas space
+- 3. The sudden-pressure relay is jumpered
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.A.15
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-041 (II / component) {#xfmr-041}
+
+<!-- q:xfmr-041 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.D.19 says transformer heaters:
+
+- 0. Shall be operational **← answer**
+- 1. Are optional and untested
+- 2. Replace the space heater on a motor only
+- 3. Are disconnected if the oil is dry
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.19
+
+Reviewer: VERIFIED or FIX
+
+## arr-004 (II / component) {#arr-004}
+
+<!-- q:arr-004 -->
+
+**Bank verified flag:** true
+
+When a liquid-filled transformer has surge arresters, ATS 7.2.2.B.17 says to test them:
+
+- 0. In accordance with section 7.19 **← answer**
+- 1. By a dissolved-gas sample of the arrester
+- 2. At the VLF cable voltage
+- 3. Only if they are gapped silicon carbide
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.17 and D.17
+
+Reviewer: VERIFIED or FIX
+
+## ct-018 (II / component) {#ct-018}
+
+<!-- q:ct-018 -->
+
+**Bank verified flag:** true
+
+Instrument transformers mounted on a liquid-filled power transformer are tested by ATS 7.2.2.B.16:
+
+- 0. Under section 7.10 **← answer**
+- 1. With the transformer turns-ratio set only
+- 2. By oil power factor alone
+- 3. Not at all, if the nameplate ratio is printed
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.16 and D.16
+
+Reviewer: VERIFIED or FIX
+
+## gnd-010 (II / component) {#gnd-010}
+
+<!-- q:gnd-010 -->
+
+**Bank verified flag:** true
+
+A transformer neutral grounding impedance device is judged by ATS 7.2.2.D.18 against:
+
+- 0. The manufacturer’s published data **← answer**
+- 1. Table 100.11
+- 2. Five ohms, always
+- 3. The cable-shield ohms-per-foot rule
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.18
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-042 (II / component) {#xfmr-042}
+
+<!-- q:xfmr-042 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.5 checks the switchgear mimic diagram and device labels against:
+
+- 0. The drawings **← answer**
+- 1. The oil color
+- 2. IEEE 519 Table 1
+- 3. The crew leader’s certification card
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.5
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-043 (II / component) {#xfmr-043}
+
+<!-- q:xfmr-043 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.11 says moving current-carrying parts and sliding surfaces in switchgear need:
+
+- 0. The lubrication the design calls for **← answer**
+- 1. No lubricant, because grease always contaminates insulation
+- 2. Oil from the transformer tank
+- 3. A dielectric grease rated for the BIL only
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.11
+
+Reviewer: VERIFIED or FIX
+
+## mot-008 (II / component) {#mot-008}
+
+<!-- q:mot-008 -->
+
+**Bank verified flag:** true
+
+ATS 7.15.1.A.10 says resistance-temperature-detector circuits on a machine must:
+
+- 0. Conform to the drawings **← answer**
+- 1. Be disconnected for the polarization-index test and left that way
+- 2. Read zero ohms to the frame
+- 3. Be tested at 10 kV dc
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.A.10
+
+Reviewer: VERIFIED or FIX
+
+## mot-009 (II / component) {#mot-009}
+
+<!-- q:mot-009 -->
+
+**Bank verified flag:** true
+
+ATS 7.15.1.B.10 tests the motor starter:
+
+- 0. In accordance with section 7.16 **← answer**
+- 1. As part of the polarization index
+- 2. Only if the machine is under 200 horsepower
+- 3. By a dissolved-gas sample
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.10
+
+Reviewer: VERIFIED or FIX
+
+## emg-006 (II / systems) {#emg-006}
+
+<!-- q:emg-006 -->
+
+**Bank verified flag:** true
+
+ATS 7.22.1.B.3 on an engine generator requires verification of:
+
+- 0. Phase rotation, phasing, and synchronized operation as the application requires **← answer**
+- 1. Only the oil dielectric strength
+- 2. Zone 1 reach
+- 3. A 30-minute VLF test of the stator
+
+**Citation:** ANSI/NETA ATS-2025 7.22.1.B.3
+
+Reviewer: VERIFIED or FIX
+
+## safety-057 (III / safety) {#safety-057}
+
+<!-- q:safety-057 -->
+
+**Bank verified flag:** true
+
+ATS 7.22.1.B.4 says to functionally test engine shutdown for:
+
+- 0. Low oil pressure, overtemperature, and overspeed, among the protections that apply **← answer**
+- 1. High power factor only
+- 2. A loss-of-field relay only
+- 3. Cable shield resistance
+
+**Citation:** ANSI/NETA ATS-2025 7.22.1 note and B.4
+
+Reviewer: VERIFIED or FIX
+
+## safety-058 (III / safety) {#safety-058}
+
+<!-- q:safety-058 -->
+
+**Bank verified flag:** true
+
+On panelboards, ATS 7.1.2 says a dielectric withstand:
+
+- 0. Waits until insulation resistance is above the minimum **← answer**
+- 1. Replaces the insulation-resistance test
+- 2. Is performed at the VLF cable voltage
+- 3. Is skipped when the directory is typed
+
+**Citation:** ANSI/NETA ATS-2025 7.1.2
+
+Reviewer: VERIFIED or FIX
+
+## math-090 (III / theory) {#math-090}
+
+<!-- q:math-090 -->
+
+**Bank verified flag:** true
+
+For rotating-machine windings built before 1970, ATS Table 100.11’s recommended minimum insulation resistance is:
+
+- 0. kV + 1 megohms, not the flat 100 megohm column used for later form-wound windings **← answer**
+- 1. Always 100 megohms
+- 2. Always 5 ohms
+- 3. The control-wiring floor of 2 megohms
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11
+
+Reviewer: VERIFIED or FIX
+
+## math-091 (III / theory) {#math-091}
+
+<!-- q:math-091 -->
+
+**Bank verified flag:** true
+
+ATS Table 100.11 lists the DC test voltage for machine windings rated under 1000 V as:
+
+- 0. 500 V **← answer**
+- 1. 5000 V
+- 2. 10 kV
+- 3. 100 V
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11; test method ref. IEEE 43 per 7.15.1.B.2
+
+Reviewer: VERIFIED or FIX
+
+## math-092 (III / theory) {#math-092}
+
+<!-- q:math-092 -->
+
+**Bank verified flag:** true
+
+In ATS Table 100.11, random-wound stator coils and form-wound coils below 1 kV have a recommended minimum of:
+
+- 0. 5 megohms **← answer**
+- 1. 100 megohms
+- 2. kV + 1, with no other column
+- 3. 2 megohms, the control-wire floor
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11
+
+Reviewer: VERIFIED or FIX
+
+## math-093 (III / theory) {#math-093}
+
+<!-- q:math-093 -->
+
+**Bank verified flag:** true
+
+From 1 kV to 69 kV at the point of common coupling, IEEE 519-2022 Table 1 limits an individual voltage harmonic to:
+
+- 0. 3 percent **← answer**
+- 1. 5 percent, which is the THD limit on that row
+- 2. 8 percent
+- 3. 1 percent
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## mot-010 (III / component) {#mot-010}
+
+<!-- q:mot-010 -->
+
+**Bank verified flag:** true
+
+An optional surge-comparison test passes ATS 7.15.1.D.7 when, by the end of the test:
+
+- 0. There is no distress, no insulation failure, and the waveforms nest **← answer**
+- 1. One phase rings at a different frequency and that is ignored
+- 2. The polarization index is the only recorded number
+- 3. The starter trips
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.D.7
+
+Reviewer: VERIFIED or FIX
+
+## mot-011 (III / component) {#mot-011}
+
+<!-- q:mot-011 -->
+
+**Bank verified flag:** true
+
+In ATS 7.15.1, vibration under load and current-signature analysis are:
+
+- 0. Optional running tests **← answer**
+- 1. Required before the one-minute insulation-resistance test
+- 2. Substitutes for the polarization index
+- 3. Oil tests
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.13 and B.15
+
+Reviewer: VERIFIED or FIX
+
+## mot-012 (III / component) {#mot-012}
+
+<!-- q:mot-012 -->
+
+**Bank verified flag:** true
+
+Partial discharge on an AC induction machine in ATS 7.15.1.B.16 is:
+
+- 0. Optional **← answer**
+- 1. The required pass/fail in place of polarization index
+- 2. A VLF cable test
+- 3. Required on every machine under 200 horsepower
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.16
+
+Reviewer: VERIFIED or FIX
+
+## emg-007 (III / component) {#emg-007}
+
+<!-- q:emg-007 -->
+
+**Bank verified flag:** true
+
+ATS 7.22.1.B.6 calls for the engine-generator performance test to be run:
+
+- 0. In accordance with NFPA 110 **← answer**
+- 1. As a 30-minute VLF test
+- 2. Only if the polarization index fails
+- 3. In place of the protective-shutdown tests
+
+**Citation:** ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110
+
+Reviewer: VERIFIED or FIX
+
+## relay-047 (III / component) {#relay-047}
+
+<!-- q:relay-047 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 50BF is:
+
+- 0. Breaker failure **← answer**
+- 1. Instantaneous overcurrent with no breaker-failure logic
+- 2. Bus differential
+- 3. Reclosing
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 50BF
+
+Reviewer: VERIFIED or FIX
+
+## relay-048 (III / component) {#relay-048}
+
+<!-- q:relay-048 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 46N is:
+
+- 0. Negative-sequence current **← answer**
+- 1. Phase-balance voltage
+- 2. Ground detector
+- 3. Volts per hertz
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 46N
+
+Reviewer: VERIFIED or FIX
+
+## relay-049 (III / component) {#relay-049}
+
+<!-- q:relay-049 -->
+
+**Bank verified flag:** true
+
+ATS 7.22.1.B.2 tests protective relays on an engine generator:
+
+- 0. In accordance with section 7.9 **← answer**
+- 1. By a polarization index of the relay case
+- 2. Only if they are device 87
+- 3. As part of NFPA 70E glove inspection
+
+**Citation:** ANSI/NETA ATS-2025 7.22.1.B.2
+
+Reviewer: VERIFIED or FIX
+
+## relay-050 (III / systems) {#relay-050}
+
+<!-- q:relay-050 -->
+
+**Bank verified flag:** true
+
+Before acceptance tests, ATS-2025 section 4.1 requires the owner to provide:
+
+- 0. A short-circuit study, a coordination study, and the protective-device settings **← answer**
+- 1. Only the oil sample
+- 2. A waiver of the interlock checks
+- 3. The test technician’s personal lock
+
+**Citation:** ANSI/NETA ATS-2025 4.1, item 1
+
+Reviewer: VERIFIED or FIX
+
+## relay-051 (III / systems) {#relay-051}
+
+<!-- q:relay-051 -->
+
+**Bank verified flag:** true
+
+IEEE C37.113-2015 clause 4.6 distinguishes local backup from remote backup as:
+
+- 0. Local backup is at the line’s own substations; remote backup is at other substations **← answer**
+- 1. Local backup is always zone 3 and remote backup is zone 1
+- 2. They are two names for main 1
+- 3. Remote backup is faster and more selective
+
+**Citation:** ANSI/NETA ATS-2025 7.9.2; ref. IEEE C37.113-2015, clause 4.6
+
+Reviewer: VERIFIED or FIX
+
+## relay-052 (III / systems) {#relay-052}
+
+<!-- q:relay-052 -->
+
+**Bank verified flag:** true
+
+For a line terminated in a transformer, IEEE C37.113-2015 clause 5.5.2 prefers the distance relay’s voltages and currents from:
+
+- 0. The line side of the transformer **← answer**
+- 1. The low-voltage bus, with no further correction
+- 2. The station battery
+- 3. A single current transformer on the neutral only
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2
 
 Reviewer: VERIFIED or FIX
 

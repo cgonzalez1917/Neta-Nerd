@@ -1494,5 +1494,185 @@
     "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
     "verified": true,
     "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-084",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "On a switchgear control-power transformer, ATS 7.1.1.D.8 holds the turns ratio to:",
+    "choices": [
+      "Within one-half percent of the calculated ratio or the adjacent coil",
+      "Within 5 percent",
+      "Within 10 percent of rated current",
+      "No limit, because it is a control circuit"
+    ],
+    "answer": 0,
+    "explanation": "The CPT gets the same half-percent ratio screen the power-transformer section uses. Being a control transformer does not loosen it. Insulation resistance for that CPT still falls back to Table 100.1 when the manufacturer is silent.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.D.8",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "math-085",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS 7.1.1.D.4 sets the minimum insulation resistance of switchgear control wiring at:",
+    "choices": [
+      "2 megohms",
+      "100 megohms",
+      "The Table 100.11 machine value",
+      "0.5 ohm"
+    ],
+    "answer": 0,
+    "explanation": "Control wiring is 2 megohms in that paragraph. The 100 megohm figure is a rotating-machine column in Table 100.11, and Table 100.1 is the power-insulation table. Do not grade control wire on either of those.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.D.4",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "math-086",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "For tan-delta steps on a new 4.16 kV shielded cable, Uo is about:",
+    "choices": [
+      "4.16 kV",
+      "2.4 kV",
+      "7.2 kV",
+      "21 kV"
+    ],
+    "answer": 1,
+    "explanation": "Uo is phase-to-ground. 4.16 / \u221a3 is about 2.4 kV. The ATS note works the same example at 15 kV (8.7 kV) and at 13.8 kV operating voltage (about 8.0 kV). 21 kV is a VLF withstand row, not Uo.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.6 notes",
+    "verified": true,
+    "kb": "cables.md#tan-delta"
+  },
+  {
+    "id": "math-087",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "When ATS 7.3.3.B.5 chooses a power-frequency withstand (20 Hz to 300 Hz) and the manufacturer is silent, the duration is:",
+    "choices": [
+      "60 minutes",
+      "30 minutes, same as VLF",
+      "1 minute, same as a jacket test",
+      "10 seconds"
+    ],
+    "answer": 0,
+    "explanation": "That method is 60 minutes at the voltage in Table 100.6.5 when cable and accessory data are missing. VLF is the 30-minute test in the previous item. Do not borrow the VLF clock for the power-frequency test.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.5.3",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "math-088",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "If a VLF withstand fails and the cable is repaired, the Table 100.6.3 notes say to:",
+    "choices": [
+      "Repeat the full test",
+      "Apply half the voltage for five minutes",
+      "Accept the repair with no retest",
+      "Switch to DC for the retest only"
+    ],
+    "answer": 0,
+    "explanation": "The note calls for the full test again after the repair, not a shortened courtesy shot. The minimum hold is still 30 minutes, or 60 if the circuit was important enough for the longer test.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3 notes; ref. IEEE 400.2-2024",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "math-089",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS 7.15.1.D.6 judges an optional tip-up test on a machine as acceptable when:",
+    "choices": [
+      "Power factor shows no significant increase as voltage rises",
+      "Power factor doubles",
+      "The tip-up is reported in ohms",
+      "The test replaces the polarization index"
+    ],
+    "answer": 0,
+    "explanation": "Tip-up is the rise in power factor with voltage. The acceptance line is no significant increase. It is optional, and it does not replace the insulation-resistance test or the PI minimum of 2.0.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.6",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "math-090",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "For rotating-machine windings built before 1970, ATS Table 100.11\u2019s recommended minimum insulation resistance is:",
+    "choices": [
+      "kV + 1 megohms, not the flat 100 megohm column used for later form-wound windings",
+      "Always 100 megohms",
+      "Always 5 ohms",
+      "The control-wiring floor of 2 megohms"
+    ],
+    "answer": 0,
+    "explanation": "The older-winding column, and field windings, use kV + 1. A 4 kV machine in that column is about 5 megohms, not 100. Form-wound windings built after 1970 use the 100 megohm column. The whole table is a one-minute value at 40 \u00b0C.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "math-091",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS Table 100.11 lists the DC test voltage for machine windings rated under 1000 V as:",
+    "choices": [
+      "500 V",
+      "5000 V",
+      "10 kV",
+      "100 V"
+    ],
+    "answer": 0,
+    "explanation": "Under 1000 V, the table\u2019s DC test voltage is 500 V. The minimum resistance still depends on which column the winding belongs in, and the value is for one minute at 40 \u00b0C. Do not grab the 5 kV or 10 kV megohmmeter range because it is on the dial.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11; test method ref. IEEE 43 per 7.15.1.B.2",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "math-092",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "In ATS Table 100.11, random-wound stator coils and form-wound coils below 1 kV have a recommended minimum of:",
+    "choices": [
+      "5 megohms",
+      "100 megohms",
+      "kV + 1, with no other column",
+      "2 megohms, the control-wire floor"
+    ],
+    "answer": 0,
+    "explanation": "That column is 5 megohms. The 100 megohm column is the later form-wound winding above that description. Control wiring at 2 megohms is a switchgear rule, not this machine cell. Correct the reading to 40 \u00b0C first.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "math-093",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "From 1 kV to 69 kV at the point of common coupling, IEEE 519-2022 Table 1 limits an individual voltage harmonic to:",
+    "choices": [
+      "3 percent",
+      "5 percent, which is the THD limit on that row",
+      "8 percent",
+      "1 percent"
+    ],
+    "answer": 0,
+    "explanation": "On that row the individual harmonic is 3 percent and the total is 5 percent. Using the total as the individual limit is the loose reading. Both are weekly short-time values at the PCC. ATS 6.6 is the study that has to show them.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
   }
 ]
