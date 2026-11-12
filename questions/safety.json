@@ -1447,18 +1447,18 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "What makes a confined space permit-required is specified in:",
+    "question": "Under 29 CFR 1910.146, a confined space is permit-required when it has:",
     "choices": [
-      "ATS Table 100.12",
-      "OSHA 29 CFR 1910.146, which is not in this lookup set",
-      "NFPA 70E glove classes",
-      "IEEE 43"
+      "Limited entry only, with no atmospheric, engulfment, or configuration hazard",
+      "At least one of: a hazardous atmosphere or the potential for one, an engulfment hazard, a trapping configuration, or another recognized serious hazard",
+      "A door that a forklift can drive through",
+      "Continuous occupancy by design"
     ],
     "answer": 1,
-    "explanation": "1910.146 is on the NETA exam reference list for Levels II and III. The text is not among the OSHA sections read for this bank, so no permit-required criterion is stated here as verified. Do not use a recalled definition as if it had been checked.",
-    "reference": "29 CFR 1910.146 not in the lookup set",
-    "verified": false,
-    "kb": "safety.md#osha"
+    "explanation": "A confined space is big enough to enter, has limited entry or exit, and is not meant for continuous occupancy. It is permit-required if any one of the four characteristics is present: hazardous atmosphere (or the potential for one), a material that can engulf a person, walls or a floor that can trap or asphyxiate, or any other recognized serious safety or health hazard. Entry begins when any part of the body breaks the plane of the opening.",
+    "reference": "29 CFR 1910.146, definitions of confined space and permit-required confined space",
+    "verified": true,
+    "kb": "safety.md#confined"
   },
   {
     "id": "safety-082",

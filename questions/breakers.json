@@ -486,5 +486,23 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.12; NFPA 70B-2026 7.2.1.4; grade-mark chart not in the lookup set",
     "verified": false,
     "kb": "breakers.md#inspections"
+  },
+  {
+    "id": "brkr-028",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "ATS 7.5 switch tests measure contact resistance:",
+    "choices": [
+      "Across each switchblade and fuseholder",
+      "Only from the fuse to the station ground grid",
+      "As a maximum insulation resistance between fuses",
+      "With a 10 kV megohmmeter as the only instrument"
+    ],
+    "answer": 0,
+    "explanation": "The fuseholder and the blade are current-carrying joints. Compare them with similar joints. The section does not set a maximum insulation resistance between fuses. Fuse size still has to match the drawings and the study.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.1",
+    "verified": true,
+    "kb": "breakers.md#inspections"
   }
 ]

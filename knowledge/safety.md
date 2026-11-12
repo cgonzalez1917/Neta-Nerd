@@ -88,6 +88,10 @@ Field tests are classed online or offline, and standard or enhanced. Every test 
 
 Overall condition is the highest of three ratings: physical condition, criticality, and environment. Condition 1 is a clean, current program with nothing open. Condition 2 has at least one concern. Condition 3 is a real change, missed cycles, or an unaddressed alarm. An impending failure that threatens people is taken out of service and marked nonserviceable, unless shutting it down creates a greater hazard. Manufacturer intervals come first. Otherwise the interval table is a maximum, and any extension is written into the program. Two quiet intervals can justify a longer gap. Failures are a reason to shorten it.
 
+## Confined spaces {#confined}
+
+29 CFR 1910.146 is the permit-required confined space rule. A confined space is large enough to enter and work in, has limited entry or exit, and is not designed for continuous occupancy. It becomes permit-required if it has any one of these: a hazardous atmosphere or the potential for one, a material that could engulf a person, a shape that could trap or asphyxiate someone, or any other recognized serious safety or health hazard. Entry starts as soon as any part of the body breaks the plane of the opening.
+
 ## OSHA work practices {#osha}
 
 29 CFR 1910.147 is the general lockout/tagout rule. An energy-isolating device is a mechanical device that physically stops energy: a breaker, a disconnect, a valve. Push buttons, selector switches, and other control devices are not isolating devices. A lock holds the isolator. A tag is a warning and does not give the physical restraint of a lock. Locks and tags identify the person who put them on, and they are not used for other jobs.

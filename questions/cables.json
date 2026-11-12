@@ -341,5 +341,23 @@
     "reference": "ANSI/NETA ATS-2025 7.3.3.D.4 and D.5",
     "verified": true,
     "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-020",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "After a VLF or other dielectric withstand, ATS records a pass when:",
+    "choices": [
+      "A published discharge time in minutes has elapsed",
+      "No distress or failure is observed by the end of the voltage application",
+      "Leakage current matches a slope ATS prints for every insulation",
+      "The shield is opened"
+    ],
+    "answer": 1,
+    "explanation": "That is the withstand acceptance line. ATS does not print how many minutes the cable must then sit before it is safe to touch. Discharge it and keep the shields grounded until the charge is gone. A remembered discharge time is not this table note.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.D.4 and D.5",
+    "verified": true,
+    "kb": "cables.md#vlf"
   }
 ]

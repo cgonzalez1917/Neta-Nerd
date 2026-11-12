@@ -106,5 +106,59 @@
     "reference": "ANSI/NETA ATS-2025 7.7",
     "verified": true,
     "kb": "breakers.md#aux"
+  },
+  {
+    "id": "mvbr-007",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "ATS 7.16.1.2 visual checks on a medium-voltage motor starter include:",
+    "choices": [
+      "Dissolved-gas analysis of the contactor",
+      "Electrical and mechanical interlocks, plus barriers and shutters",
+      "A fiber OTDR",
+      "A network-protector phasing relay"
+    ],
+    "answer": 1,
+    "explanation": "The starter section tells you to prove the interlocks sequence correctly and that barriers and shutters are installed and working. Overload devices are set from the coordination study. Contactor insulation resistance, with no manufacturer voltage, uses Table 100.1.",
+    "reference": "ANSI/NETA ATS-2025 7.16.1.2.A.6, A.7, and A.10",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-008",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "The magnetron atmospheric-condition test on a medium-voltage starter\u2019s vacuum interrupters is:",
+    "choices": [
+      "The required pass/fail in place of contact resistance",
+      "Marked optional in ATS 7.16.1.2",
+      "A dissolved-gas test",
+      "Required before every across-the-line start"
+    ],
+    "answer": 1,
+    "explanation": "The MAC test carries the optional mark. Insulation resistance of the contactor is the test written without that mark. Do not skip the interlock and overload checks because a bottle is assumed to hold vacuum.",
+    "reference": "ANSI/NETA ATS-2025 7.16.1.2.B.3",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-009",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "ATS 7.7 says circuit-switcher heaters and the electrical trip of the interrupters must:",
+    "choices": [
+      "Be removed before the anti-pump test",
+      "Operate, and each protective device must be able to trip the switcher",
+      "Be tested as a flooded-cell battery",
+      "Follow the fiber bend-radius rule"
+    ],
+    "answer": 1,
+    "explanation": "Heaters are verified in operation. Each protective device is used to trip the switcher, and the electrical trip of the interrupters is checked. SF6 pressure remains the manufacturer\u2019s number. Anti-pump is in the same electrical list.",
+    "reference": "ANSI/NETA ATS-2025 7.7",
+    "verified": true,
+    "kb": "breakers.md#aux"
   }
 ]

@@ -974,5 +974,59 @@
     "reference": "ANSI/NETA ATS-2025 7.20.1.B.4",
     "verified": true,
     "kb": "cables.md#ir"
+  },
+  {
+    "id": "xfmr-055",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.12.3 says the load-tap-changer motor and drive must:",
+    "choices": [
+      "Run past the end of travel until the fuse opens",
+      "Cut off automatically at the maximum raise and maximum lower positions",
+      "Be left shipped with the bracing installed",
+      "Replace the de-energized tap changer while the winding is energized"
+    ],
+    "answer": 1,
+    "explanation": "Automatic cutoff at both ends of travel is a visual and mechanical check, along with liquid level and the operation counter. A de-energized tap changer is not moved with the transformer in service. Ratio limits remain the transformer section\u2019s one-half percent.",
+    "reference": "ANSI/NETA ATS-2025 7.12.3.A.9 and A.10",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-056",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.20.1 electrical tests on a capacitor include:",
+    "choices": [
+      "Capacitance of all terminal combinations and the internal discharge-resistor resistance",
+      "Only a turns-ratio test",
+      "A recloser count",
+      "A fiber attenuation test"
+    ],
+    "answer": 0,
+    "explanation": "Insulation resistance is also required. The specification measures the discharge resistor. It does not give a discharge time in minutes, so a remembered 1-minute or 5-minute rule is not this paragraph.",
+    "reference": "ANSI/NETA ATS-2025 7.20.1.B.3 and B.4",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "xfmr-057",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "When the manufacturer is silent, mineral-oil power factor at 20 \u00b0C for reactors in ATS Table 100.3 is grouped with:",
+    "choices": [
+      "A separate 5 percent limit",
+      "Power transformers and regulators, at 0.5 percent",
+      "The rotating-machine PI floor",
+      "Table 100.11"
+    ],
+    "answer": 1,
+    "explanation": "The table title is liquid-filled transformers, regulators, and reactors. Mineral oil in that row is 0.5 percent. Natural ester in the same row is 1.0 percent. Do not use the maintenance table\u2019s higher numbers on an acceptance test.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
   }
 ]

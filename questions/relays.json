@@ -1153,5 +1153,59 @@
     "reference": "IEEE C37.2 device numbers as listed in ATS-2025 7.9.1; control sequence",
     "verified": true,
     "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-065",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "On a scheme drawn with the device numbers in ATS 7.9.1, an a contact is:",
+    "choices": [
+      "Closed while its device is de-energized",
+      "Open while its device is de-energized, and closed when that device is picked up",
+      "A transfer contact with both states at once",
+      "The guard lead of a megohmmeter"
+    ],
+    "answer": 1,
+    "explanation": "The a contact follows the device: open when dropped out, closed when picked up. A b contact is the opposite, closed when dropped out, which is why it is used as a close permissive. The letter names Form A, Form B, and Form C were not in the IEEE text read for this bank, so those labels are not the graded terms. Resetting a breaker does not by itself reset an 86 that sealed in ahead of it.",
+    "reference": "Control-contact convention used with the device numbers in ANSI/NETA ATS-2025 7.9.1",
+    "verified": true,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-066",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Form A, Form B, and Form C contact names are:",
+    "choices": [
+      "Defined with clause numbers in the IEEE files read for this bank",
+      "Not printed in those files, so this bank does not grade the letter names",
+      "The same as devices 50, 51, and 87",
+      "Oil-test methods"
+    ],
+    "answer": 1,
+    "explanation": "Relay catalogs use Form A for a normally open contact, Form B for normally closed, and Form C for a transfer contact. That wording was not in the IEEE text available here, so the letters stay unverified. Grade the a and b behavior instead: a opens when the coil drops out, b closes when the coil drops out.",
+    "reference": "Form A/B/C letter names not in the IEEE text read for this bank; a/b behavior is the convention used with ATS 7.9.1 device numbers",
+    "verified": false,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-067",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A close circuit supervised by two 86 b contacts will allow a close only when:",
+    "choices": [
+      "Either lockout is still tripped",
+      "Both lockouts are reset, so both b contacts are closed",
+      "The 51 is picked up",
+      "One lockout is reset and the breaker is already closed"
+    ],
+    "answer": 1,
+    "explanation": "A b contact is closed only while its device is dropped out. An 86 that is still latched has opened its b contact and blocks the close. Resetting only one of two lockouts leaves the other contact open. The 51 operates first in a trip path; it is not the close permissive.",
+    "reference": "Control sequence using IEEE C37.2 device 86 as listed in ATS-2025 7.9 practice",
+    "verified": true,
+    "kb": "relays.md#schemes"
   }
 ]

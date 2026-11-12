@@ -38,6 +38,10 @@ Engine generators (7.22.1) need phase rotation, phasing, and synchronizing prove
 
 ATS 7.25 treats fiber as an optical test, not a megger test. An optical time-domain reflectometer looks down the strand for length, breaks, and splice reflections. Attenuation is reported in dB/km and is held to the site spec or, if there is none, to the manufacturer. Bend radius is the manufacturer’s minimum. A kink that still “has light” can be out of spec.
 
+## Capacitors {#capacitors}
+
+ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. It does not print a discharge time in minutes. The terminals stay charged until that resistor and a discharge path have done their work. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
+
 ## EV charging {#evse}
 
 ATS 7.26 is the charging equipment. The electrical list includes the equipment ground, protective-conductor resistance, touch voltage, personal-protection trip, nuisance trip, proximity pilot, and control pilot. Investigate a protective-conductor resistance above 0.5 Ω. Interlocks are part of the visual and mechanical inspection. The trip thresholds themselves come from the charger manual.

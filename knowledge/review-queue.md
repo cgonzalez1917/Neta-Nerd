@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 469 (Level II 306, Level III 163).
+Count: 482 (Level II 315, Level III 167).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -7827,19 +7827,18 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:safety-081 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-What makes a confined space permit-required is specified in:
+Under 29 CFR 1910.146, a confined space is permit-required when it has:
 
-- 0. ATS Table 100.12
-- 1. OSHA 29 CFR 1910.146, which is not in this lookup set **← answer**
-- 2. NFPA 70E glove classes
-- 3. IEEE 43
+- 0. Limited entry only, with no atmospheric, engulfment, or configuration hazard
+- 1. At least one of: a hazardous atmosphere or the potential for one, an engulfment hazard, a trapping configuration, or another recognized serious hazard **← answer**
+- 2. A door that a forklift can drive through
+- 3. Continuous occupancy by design
 
-**Citation:** 29 CFR 1910.146 not in the lookup set
+**Citation:** 29 CFR 1910.146, definitions of confined space and permit-required confined space
 
 Reviewer: VERIFIED or FIX
-
 ## mot-015 (II / theory) {#mot-015}
 
 <!-- q:mot-015 -->
@@ -7973,6 +7972,227 @@ The guard terminal on a megohmmeter is connected so that:
 - 3. Power factor is calculated
 
 **Citation:** Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 insulation-resistance tests
+
+Reviewer: VERIFIED or FIX
+
+## mvbr-007 (II / component) {#mvbr-007}
+
+<!-- q:mvbr-007 -->
+
+**Bank verified flag:** true
+
+ATS 7.16.1.2 visual checks on a medium-voltage motor starter include:
+
+- 0. Dissolved-gas analysis of the contactor
+- 1. Electrical and mechanical interlocks, plus barriers and shutters **← answer**
+- 2. A fiber OTDR
+- 3. A network-protector phasing relay
+
+**Citation:** ANSI/NETA ATS-2025 7.16.1.2.A.6, A.7, and A.10
+
+Reviewer: VERIFIED or FIX
+
+## mot-017 (II / component) {#mot-017}
+
+<!-- q:mot-017 -->
+
+**Bank verified flag:** true
+
+On a medium-voltage motor starter, ATS 7.16.1.2 says the overload rating is:
+
+- 0. Whatever the frame size suggests
+- 1. Checked against the application and set from the coordination study when it is adjustable **← answer**
+- 2. Taken from Table 100.7
+- 3. The same as the cable VLF voltage
+
+**Citation:** ANSI/NETA ATS-2025 7.16.1.2.A.10
+
+Reviewer: VERIFIED or FIX
+
+## mvbr-008 (III / component) {#mvbr-008}
+
+<!-- q:mvbr-008 -->
+
+**Bank verified flag:** true
+
+The magnetron atmospheric-condition test on a medium-voltage starter’s vacuum interrupters is:
+
+- 0. The required pass/fail in place of contact resistance
+- 1. Marked optional in ATS 7.16.1.2 **← answer**
+- 2. A dissolved-gas test
+- 3. Required before every across-the-line start
+
+**Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.3
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-055 (II / component) {#xfmr-055}
+
+<!-- q:xfmr-055 -->
+
+**Bank verified flag:** true
+
+ATS 7.12.3 says the load-tap-changer motor and drive must:
+
+- 0. Run past the end of travel until the fuse opens
+- 1. Cut off automatically at the maximum raise and maximum lower positions **← answer**
+- 2. Be left shipped with the bracing installed
+- 3. Replace the de-energized tap changer while the winding is energized
+
+**Citation:** ANSI/NETA ATS-2025 7.12.3.A.9 and A.10
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-056 (II / component) {#xfmr-056}
+
+<!-- q:xfmr-056 -->
+
+**Bank verified flag:** true
+
+ATS 7.20.1 electrical tests on a capacitor include:
+
+- 0. Capacitance of all terminal combinations and the internal discharge-resistor resistance **← answer**
+- 1. Only a turns-ratio test
+- 2. A recloser count
+- 3. A fiber attenuation test
+
+**Citation:** ANSI/NETA ATS-2025 7.20.1.B.3 and B.4
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-057 (II / component) {#xfmr-057}
+
+<!-- q:xfmr-057 -->
+
+**Bank verified flag:** true
+
+When the manufacturer is silent, mineral-oil power factor at 20 °C for reactors in ATS Table 100.3 is grouped with:
+
+- 0. A separate 5 percent limit
+- 1. Power transformers and regulators, at 0.5 percent **← answer**
+- 2. The rotating-machine PI floor
+- 3. Table 100.11
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.3
+
+Reviewer: VERIFIED or FIX
+
+## brkr-028 (II / component) {#brkr-028}
+
+<!-- q:brkr-028 -->
+
+**Bank verified flag:** true
+
+ATS 7.5 switch tests measure contact resistance:
+
+- 0. Across each switchblade and fuseholder **← answer**
+- 1. Only from the fuse to the station ground grid
+- 2. As a maximum insulation resistance between fuses
+- 3. With a 10 kV megohmmeter as the only instrument
+
+**Citation:** ANSI/NETA ATS-2025 7.5.1.1
+
+Reviewer: VERIFIED or FIX
+
+## mvbr-009 (II / component) {#mvbr-009}
+
+<!-- q:mvbr-009 -->
+
+**Bank verified flag:** true
+
+ATS 7.7 says circuit-switcher heaters and the electrical trip of the interrupters must:
+
+- 0. Be removed before the anti-pump test
+- 1. Operate, and each protective device must be able to trip the switcher **← answer**
+- 2. Be tested as a flooded-cell battery
+- 3. Follow the fiber bend-radius rule
+
+**Citation:** ANSI/NETA ATS-2025 7.7
+
+Reviewer: VERIFIED or FIX
+
+## cable-020 (II / component) {#cable-020}
+
+<!-- q:cable-020 -->
+
+**Bank verified flag:** true
+
+After a VLF or other dielectric withstand, ATS records a pass when:
+
+- 0. A published discharge time in minutes has elapsed
+- 1. No distress or failure is observed by the end of the voltage application **← answer**
+- 2. Leakage current matches a slope ATS prints for every insulation
+- 3. The shield is opened
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.D.4 and D.5
+
+Reviewer: VERIFIED or FIX
+
+## relay-065 (III / systems) {#relay-065}
+
+<!-- q:relay-065 -->
+
+**Bank verified flag:** true
+
+On a scheme drawn with the device numbers in ATS 7.9.1, an a contact is:
+
+- 0. Closed while its device is de-energized
+- 1. Open while its device is de-energized, and closed when that device is picked up **← answer**
+- 2. A transfer contact with both states at once
+- 3. The guard lead of a megohmmeter
+
+**Citation:** Control-contact convention used with the device numbers in ANSI/NETA ATS-2025 7.9.1
+
+Reviewer: VERIFIED or FIX
+
+## relay-066 (III / systems) {#relay-066}
+
+<!-- q:relay-066 -->
+
+**Bank verified flag:** false
+
+Form A, Form B, and Form C contact names are:
+
+- 0. Defined with clause numbers in the IEEE files read for this bank
+- 1. Not printed in those files, so this bank does not grade the letter names **← answer**
+- 2. The same as devices 50, 51, and 87
+- 3. Oil-test methods
+
+**Citation:** Form A/B/C letter names not in the IEEE text read for this bank; a/b behavior is the convention used with ATS 7.9.1 device numbers
+
+Reviewer: VERIFIED or FIX
+
+## relay-067 (III / systems) {#relay-067}
+
+<!-- q:relay-067 -->
+
+**Bank verified flag:** true
+
+A close circuit supervised by two 86 b contacts will allow a close only when:
+
+- 0. Either lockout is still tripped
+- 1. Both lockouts are reset, so both b contacts are closed **← answer**
+- 2. The 51 is picked up
+- 3. One lockout is reset and the breaker is already closed
+
+**Citation:** Control sequence using IEEE C37.2 device 86 as listed in ATS-2025 7.9 practice
+
+Reviewer: VERIFIED or FIX
+
+## mot-018 (II / component) {#mot-018}
+
+<!-- q:mot-018 -->
+
+**Bank verified flag:** true
+
+With no manufacturer voltage, insulation resistance of a medium-voltage starter contactor is:
+
+- 0. Table 100.1, one minute, phase-to-phase and phase-to-ground with the contactor closed, and across each open contact **← answer**
+- 1. A 15 kV VLF test
+- 2. The battery 0.05 V cell spread
+- 3. Optional, because the MAC test replaces it
+
+**Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
 
 Reviewer: VERIFIED or FIX
 

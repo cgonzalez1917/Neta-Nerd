@@ -286,5 +286,41 @@
     "reference": "ANSI/NETA ATS-2025 7.15.1 and 7.22.1",
     "verified": false,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-017",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "On a medium-voltage motor starter, ATS 7.16.1.2 says the overload rating is:",
+    "choices": [
+      "Whatever the frame size suggests",
+      "Checked against the application and set from the coordination study when it is adjustable",
+      "Taken from Table 100.7",
+      "The same as the cable VLF voltage"
+    ],
+    "answer": 1,
+    "explanation": "Adjustable or programmable protection is set to the study. If the manufacturer publishes no protection settings, the test values point at section 7.9. The contactor itself still gets an insulation-resistance test.",
+    "reference": "ANSI/NETA ATS-2025 7.16.1.2.A.10",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-018",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "With no manufacturer voltage, insulation resistance of a medium-voltage starter contactor is:",
+    "choices": [
+      "Table 100.1, one minute, phase-to-phase and phase-to-ground with the contactor closed, and across each open contact",
+      "A 15 kV VLF test",
+      "The battery 0.05 V cell spread",
+      "Optional, because the MAC test replaces it"
+    ],
+    "answer": 0,
+    "explanation": "7.16.1.2.B.1 is that insulation-resistance test. The magnetron test on a vacuum interrupter is optional and does not replace it. Control wiring, when tested, is 500 V or 1000 V dc depending on the cable rating.",
+    "reference": "ANSI/NETA ATS-2025 7.16.1.2.B.1",
+    "verified": true,
+    "kb": "apparatus.md#motors"
   }
 ]
