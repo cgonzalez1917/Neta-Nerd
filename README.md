@@ -31,7 +31,7 @@ Connect the GitHub repository `cgonzalez1917/Neta-Nerd`.
 | Build command | *(leave empty)* |
 | Build output directory | `/` |
 
-A push to `main` republishes the site. There is no Node build and no environment variable.
+A merge to `main` republishes the site. Contributors do not push to `main`. Open a pull request from a `bot/<name>-<topic>` branch and Cristian merges it. See `CONTRIBUTING.md`. There is no Node build and no environment variable.
 
 ## How a drill works
 
