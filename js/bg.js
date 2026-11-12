@@ -7,11 +7,11 @@
   if (!canvas) return;
   var ctx = canvas.getContext("2d", { alpha: false });
   var mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-  /* Brown, orange, yellow stand in for the reference red, blue, and gold. */
+  /* Amber, cyan, and a distinct coral so all three phases stay separate. */
   var phases = [
-    { color: "#c08040", phi: Math.PI / 2 },
-    { color: "#ff7a1a", phi: Math.PI / 2 - (2 * Math.PI / 3) },
-    { color: "#ffc93c", phi: Math.PI / 2 + (2 * Math.PI / 3) }
+    { color: "#ffb000", phi: Math.PI / 2 },
+    { color: "#00e5ff", phi: Math.PI / 2 - (2 * Math.PI / 3) },
+    { color: "#ff5a36", phi: Math.PI / 2 + (2 * Math.PI / 3) }
   ];
   var PERIOD = 19;
   var dpr = 1, W = 0, H = 0, raf = 0, t0 = 0;
@@ -32,16 +32,24 @@
   }
 
   function layout() {
-    var narrow = W < 800;
-    var amp = narrow
-      ? Math.max(48, Math.min(W * 0.155, 86))
-      : Math.max(72, Math.min(W * 0.072, 118));
-    var outer = amp * 1.28;
-    var cx = narrow ? W * 0.73 : Math.min(W * 0.78, W - outer - 20);
-    cx = Math.max(outer + 12, Math.min(cx, W - outer - 6));
-    var cy = narrow ? H * 0.40 : Math.min(H * 0.36, 300);
-    var nowX = cx - outer - Math.max(8, amp * 0.12);
-    if (nowX < 24) nowX = 24;
+    var column = Math.min(820, Math.max(0, W - 28));
+    var contentRight = (W + column) / 2;
+    var gutter = W - contentRight;
+    var roomy = gutter >= 150;
+    var outer, amp, cx, cy;
+    if (roomy) {
+      /* Sit the whole outer circle in the empty margin beside the column. */
+      outer = Math.max(78, Math.min(132, (gutter - 28) / 2));
+      amp = outer / 1.28;
+      cx = W - outer - 16;
+      cy = 72 + outer;
+    } else {
+      outer = Math.max(62, Math.min(W * 0.24, 100));
+      amp = outer / 1.28;
+      cx = W - Math.min(outer + 6, W * 0.28);
+      cy = 64 + outer;
+    }
+    var nowX = Math.max(20, cx - outer - Math.max(10, amp * 0.18));
     return { amp: amp, outer: outer, cx: cx, cy: cy, nowX: nowX };
   }
 
@@ -59,7 +67,7 @@
     var sx = x1 - Math.cos(ang) * head * 0.72;
     var sy = y1 - Math.sin(ang) * head * 0.72;
     ctx.save();
-    glow(color, 0.62, 8);
+    glow(color, 0.92, 9);
     ctx.lineWidth = 2.4;
     ctx.lineCap = "butt";
     ctx.beginPath();
@@ -85,13 +93,13 @@
     var cycles = W < 800 ? 1.15 : 1.45;
     var pxPerRad = Math.max(8, (nowX - 4) / (Math.PI * 2 * cycles));
 
-    ctx.fillStyle = "#0f0c09";
+    ctx.fillStyle = "#0b0d0f";
     ctx.fillRect(0, 0, W, H);
     ctx.shadowBlur = 0;
 
     phases.forEach(function (p) {
       ctx.save();
-      glow(p.color, 0.5, 7);
+      glow(p.color, 0.42, 7);
       ctx.lineWidth = 1.6;
       ctx.lineJoin = "round";
       ctx.beginPath();
@@ -108,8 +116,8 @@
     });
 
     ctx.save();
-    ctx.strokeStyle = "#6a6258";
-    ctx.globalAlpha = 0.45;
+    ctx.strokeStyle = "#8a9098";
+    ctx.globalAlpha = 0.7;
     ctx.lineWidth = 1;
     ctx.shadowBlur = 0;
     ctx.beginPath();
@@ -131,7 +139,7 @@
       var tipX = cx + amp * Math.cos(ang);
       var tipY = cy - amp * Math.sin(ang);
       ctx.save();
-      glow(p.color, 0.55, 6);
+      glow(p.color, 0.72, 6);
       ctx.lineWidth = 1;
       ctx.setLineDash([3, 4]);
       ctx.beginPath();
@@ -141,7 +149,7 @@
       ctx.restore();
       arrow(cx, cy, tipX, tipY, p.color);
       ctx.save();
-      glow(p.color, 0.85, 8);
+      glow(p.color, 0.95, 9);
       ctx.beginPath();
       ctx.arc(nowX, tipY, 3.6, 0, Math.PI * 2);
       ctx.fill();
