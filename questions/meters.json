@@ -1314,5 +1314,185 @@
     "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
     "verified": true,
     "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-074",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS 7.2.2.B.8 limits winding-resistance test current to:",
+    "choices": [
+      "10 percent of rated current, per IEEE C57.152",
+      "Full rated current for one hour",
+      "The instantaneous pickup of the secondary breaker",
+      "Any current the micro-ohmmeter can make"
+    ],
+    "answer": 0,
+    "explanation": "The winding is not a bus joint. ATS caps the test current at 10 percent of rated, and it points that limit at IEEE C57.152. More current heats the winding and moves the resistance you are trying to compare.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.8; ref. IEEE C57.152",
+    "verified": true,
+    "kb": "resistance.md#winding"
+  },
+  {
+    "id": "math-075",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Phase-to-phase stator resistances are 1.00, 1.02, and 1.08 ohm. ATS 7.15.1.D.4 says to:",
+    "choices": [
+      "Pass them, because all are near 1 ohm",
+      "Investigate, because a phase deviates by more than 5 percent",
+      "Ignore them below 2300 V only, with no calculation",
+      "Average them and throw out the high phase"
+    ],
+    "answer": 1,
+    "explanation": "1.08 is 8 percent above 1.00, which is past the 5 percent investigate line. The test itself is required at 2300 V and above. Do not average the outlier away.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.4",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "math-076",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 2000-foot cable shield measures 30 ohms. Per 1000 feet that is:",
+    "choices": [
+      "15 ohms, which ATS 7.3.3.D.2 says to investigate",
+      "3 ohms, which passes",
+      "30 ohms per foot",
+      "A VLF failure"
+    ],
+    "answer": 0,
+    "explanation": "30 ohms over 2000 feet is 15 ohms per 1000 feet. The investigate line is 10 ohms per 1000 feet. The shield is continuous but too resistive to accept without a look.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.D.2",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "math-077",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS Table 100.6.3 is sinusoidal rms. For a cosine-rectangular waveform the notes say to:",
+    "choices": [
+      "Use the rms number unchanged",
+      "Multiply the table voltage by the square root of 2",
+      "Divide the table voltage by 2",
+      "Use Uo and ignore the table"
+    ],
+    "answer": 1,
+    "explanation": "A 10 kV rms sinusoidal row becomes about 14.1 kV on a cosine-rectangular set. Using the rms number on that waveform under-stresses the cable relative to the note. The hold time is still the note\u2019s 30 minutes, or 60 if the circuit is critical.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3 notes; ref. IEEE 400.2-2024",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "math-078",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Compared with the weekly IEEE 519 limit, the very-short-time daily voltage-harmonic allowance is:",
+    "choices": [
+      "The same number",
+      "1.5 times the table value, and only as a short-time statistic",
+      "Ten times the table, continuously",
+      "Applied at the motor terminals instead of the PCC"
+    ],
+    "answer": 1,
+    "explanation": "Clause 5.1 lets the 3-second daily 99th percentile reach 1.5 times Table 1. The 10-minute weekly 95th percentile stays at the table. Both are still at the point of common coupling. ATS 6.6 is where the study reports them.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-079",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "ATS 6.6 tells the harmonic study to judge transformer loading under nonsinusoidal current by:",
+    "choices": [
+      "Nameplate kVA alone",
+      "The procedure in IEEE C57.110, and to flag overloaded transformers",
+      "IEEE C57.104 dissolved gas",
+      "A 500 V insulation-resistance test"
+    ],
+    "answer": 1,
+    "explanation": "Harmonic current heats a transformer differently than a sine wave. The report uses IEEE C57.110 for that capability check. This item only records that ATS requires the check. The C57.110 method itself is not in the lookup set, so no derating number is taken from it.",
+    "reference": "ANSI/NETA ATS-2025 6.6, study report item 7; ref. IEEE C57.110",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-080",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE C57.104-2019 clause 6 says a yearly rate taken from only two dissolved-gas samples is:",
+    "choices": [
+      "The preferred and sufficient method",
+      "A weak way to judge gassing, because normal scatter can dominate two points",
+      "Required before any Duval triangle",
+      "A substitute for the oil power-factor test"
+    ],
+    "answer": 1,
+    "explanation": "The guide wants a rate that survives ordinary sample-to-sample noise, which is why it uses more than one pair of bottles. A single jump still gets attention. It does not, by itself, prove the rate.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-081",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "When combustible gas is high but stable, IEEE C57.104-2019 clause 6 still wants you to remember that:",
+    "choices": [
+      "The level never matters",
+      "Rising levels are the greater concern, and the fault type matters as well as the level",
+      "Acetylene is required before any action",
+      "The sample can be left open overnight"
+    ],
+    "answer": 1,
+    "explanation": "A high stable number and a number that is climbing are not the same story. The kind of fault matters too. Air exposure, which drops hydrogen, can fake a falling trend, so the sample has to be real before the rate is.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-082",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "In IEEE 519-2022 Table 1, weekly voltage THD at the PCC is tighter above 161 kV than from 1 kV to 69 kV. The two totals are:",
+    "choices": [
+      "8 percent and 20 percent",
+      "1.5 percent above 161 kV, and 5 percent from 1 kV through 69 kV",
+      "Both 5 percent",
+      "0.5 percent at every voltage"
+    ],
+    "answer": 1,
+    "explanation": "Higher voltage buses are allowed less distortion. The low-voltage row, at or under 1 kV, is the loose one, at 8 percent THD. Use the row for the voltage at the point of common coupling, which is what ATS 6.6 compares against.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-083",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "For a PCC at or below 1.0 kV, IEEE 519-2022 Table 1 limits weekly voltage THD to:",
+    "choices": [
+      "8 percent",
+      "1.5 percent",
+      "0.5 percent",
+      "20 percent"
+    ],
+    "answer": 0,
+    "explanation": "The low-voltage row is an individual harmonic of 5 percent and a total of 8 percent. That is not the 5 percent total used from 1 kV to 69 kV. The very-short-time daily values may reach 1.5 times those numbers.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
   }
 ]

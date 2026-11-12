@@ -829,5 +829,113 @@
     "reference": "ANSI/NETA ATS-2025 7.1.1.D.2",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-047",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.10 proves a switchgear interlock by:",
+    "choices": [
+      "Defeating the interlock and leaving it defeated",
+      "Trying to close a locked-open device, trying to open a locked-closed device, and exchanging keys through the scheme",
+      "Removing the locks so the test is faster",
+      "Operating the breaker from the relay test set only"
+    ],
+    "answer": 1,
+    "explanation": "The inspection tries the blocked operations and walks the key exchange with every device in the scheme. That is a test of the interlock, not permission to bypass it. OSHA still treats a defeated interlock as temporary and qualified-person work, and it has to be restored.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.10; 29 CFR 1910.333(c)(10)",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-048",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.13 requires shutters and barriers in switchgear to be:",
+    "choices": [
+      "Removed for the life of the gear",
+      "Installed and operating correctly",
+      "Replaced with cardboard",
+      "Checked only if someone is shocked"
+    ],
+    "answer": 1,
+    "explanation": "Shutters cover the primary stabs when a breaker is withdrawn. A shutter tied open is a live-part exposure the inspection is supposed to catch before the lineup is called accepted.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.13",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-049",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.6 says fuse and breaker sizes in a lineup must agree with:",
+    "choices": [
+      "Whatever is on the truck",
+      "The drawings and the coordination study",
+      "The largest frame that fits",
+      "The relay firmware version only"
+    ],
+    "answer": 1,
+    "explanation": "The device that is installed has to be the device the study used. A larger fuse than the study can leave the downstream cable unprotected. The microprocessor breaker address is checked at the same time.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.6",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-050",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.A.16 checks filters and vents so that:",
+    "choices": [
+      "The gear can be painted",
+      "Cooling paths are actually open",
+      "The insulation-resistance test can be skipped",
+      "Shipping braces can stay in"
+    ],
+    "answer": 1,
+    "explanation": "A plugged vent is a thermal problem waiting for load. The inspection confirms filters are in place and vents are clear. It does not replace the insulation test.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.16",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-051",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Trying to close a locked-open breaker during an ATS 7.1.1 interlock check is:",
+    "choices": [
+      "A permanent defeat of the interlock",
+      "The way you prove the interlock holds",
+      "A substitute for lockout",
+      "Required only on low-voltage panelboards"
+    ],
+    "answer": 1,
+    "explanation": "The attempt should fail. If the breaker closes, the interlock does not provide the protection the drawing claims. That is different from a qualified person temporarily defeating an interlock under 29 CFR 1910.333(c)(10), which has to be put back.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.10",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-052",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "During the VLF withstand in ATS 7.3.3.B.5.2, shields and conductors not under test are:",
+    "choices": [
+      "Left floating",
+      "Grounded",
+      "Tied to the test lead",
+      "Removed from the terminations"
+    ],
+    "answer": 1,
+    "explanation": "The conductor or conductors under test are energized. Everything else, shields included, is grounded. A floating shield is a shock hazard and it changes the test.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.5.2",
+    "verified": true,
+    "kb": "cables.md#vlf"
   }
 ]

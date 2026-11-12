@@ -286,5 +286,23 @@
     "reference": "ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1",
     "verified": true,
     "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-017",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS 7.1.1.A.7 says the current and voltage transformer ratios in switchgear must:",
+    "choices": [
+      "Match the drawings",
+      "Be the highest ratio in the catalog",
+      "Be ignored if the relay is microprocessor",
+      "Match the cable shield resistance"
+    ],
+    "answer": 0,
+    "explanation": "A CT ratio that is not the ratio on the drawing makes every relay setting wrong in primary amperes. The check is visual against the nameplate and the drawing, before the electrical tests in 7.10.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.7",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]

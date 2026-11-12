@@ -541,5 +541,293 @@
     "reference": "ANSI/NETA ATS-2025 6.6, study report items 5 and 6; ref. IEEE 519-2022",
     "verified": true,
     "kb": "math.md#harmonics"
+  },
+  {
+    "id": "relay-031",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 27 is:",
+    "choices": [
+      "Undervoltage",
+      "Overvoltage",
+      "Distance",
+      "Differential"
+    ],
+    "answer": 0,
+    "explanation": "27 is undervoltage. 59 is overvoltage. They are not a matched pair you can swap on a print. 21 and 87 are impedance and differential.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 27",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-032",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 59 is:",
+    "choices": [
+      "Overvoltage",
+      "Undervoltage",
+      "Sync check",
+      "Reclosing"
+    ],
+    "answer": 0,
+    "explanation": "59 is overvoltage. 27 is undervoltage, 25 is sync check, and 79 is reclosing. An overvoltage element does not check synchronism.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 59",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-033",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 25 is:",
+    "choices": [
+      "Sync check",
+      "Distance",
+      "Frequency",
+      "Sudden pressure"
+    ],
+    "answer": 0,
+    "explanation": "25 supervises a close when two systems have to match. It is not the distance element and not the frequency element. 63 is sudden pressure.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 25",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-034",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 63 is:",
+    "choices": [
+      "Transformer sudden pressure",
+      "A pilot-wire monitor",
+      "A thermal RTD relay",
+      "Breaker failure"
+    ],
+    "answer": 0,
+    "explanation": "63 is sudden pressure. 85 is the pilot-wire monitor, 49T is the RTD temperature relay, and 50BF is breaker failure. A sudden-pressure trip is a mechanical fault detector, not a time-overcurrent curve.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 63",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-035",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 46 is:",
+    "choices": [
+      "Current balance",
+      "Phase-sequence voltage",
+      "Loss of field",
+      "Ground detector"
+    ],
+    "answer": 0,
+    "explanation": "46 is current balance. 47 is phase-sequence or phase-balance voltage, 40 is loss of field, and 64 is the ground detector. The 46 tests include pickup of each unit and slope.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 46",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-036",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 32 is:",
+    "choices": [
+      "Directional power",
+      "Distance",
+      "Differential",
+      "Reclosing"
+    ],
+    "answer": 0,
+    "explanation": "32 is directional power. It is the element that looks at watts in a direction, not a distance reach and not a reclose. 21, 87, and 79 are those other jobs.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 32",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-037",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 47 is:",
+    "choices": [
+      "Phase-sequence or phase-balance voltage",
+      "Current balance",
+      "Loss of field",
+      "Instantaneous overcurrent"
+    ],
+    "answer": 0,
+    "explanation": "47 looks at voltage sequence. 46 is current balance, 40 is loss of field, and 50 is instantaneous overcurrent. A reversed phase rotation is a 47 problem, not a 50 pickup.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 47",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-038",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.113-2015 clause 4.4 says the boundary of a protection zone is set by:",
+    "choices": [
+      "The voltage-transformer nameplate alone",
+      "Where the current transformers are, because those currents define the zone",
+      "The paint on the lineup",
+      "The reclosing timer"
+    ],
+    "answer": 1,
+    "explanation": "The CTs are the edges of the zone. Overlap is intentional so a fault on a boundary still falls in a zone. ATS 7.9.1 tests the 87 that lives inside those boundaries; this clause is why the CT location is not cosmetic.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.113-2015, clause 4.4",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-039",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 24 is:",
+    "choices": [
+      "Volts per hertz",
+      "Distance",
+      "Reclosing",
+      "Frequency"
+    ],
+    "answer": 0,
+    "explanation": "24 is volts per hertz, the overexcitation element. 21 is distance, 79 is reclosing, and 81 is frequency. Overexcitation is not a zone reach.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 24",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-040",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 49T is:",
+    "choices": [
+      "An RTD temperature relay",
+      "A thermal replica of current",
+      "Breaker failure",
+      "Sync check"
+    ],
+    "answer": 0,
+    "explanation": "49T is the temperature relay that looks at RTD resistance. 49R is the thermal replica driven by current. 50BF is breaker failure. The 49T tests are trip resistance and reset resistance.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 49T",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-041",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 60 is:",
+    "choices": [
+      "Voltage balance",
+      "Current balance",
+      "Ground detector",
+      "Pilot wire"
+    ],
+    "answer": 0,
+    "explanation": "60 compares voltages. 46 compares currents. 64 is the ground detector and 85 is the pilot-wire monitor. A blown VT fuse is the sort of unbalance a 60 is there to see.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 60",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-042",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 64 is:",
+    "choices": [
+      "A ground detector",
+      "A differential",
+      "A distance element",
+      "A frequency element"
+    ],
+    "answer": 0,
+    "explanation": "64 is the ground detector. 87 is differential, 21 is distance, and 81 is frequency. A ground detector on an ungrounded system is not a transformer differential.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 64",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-043",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 85 is:",
+    "choices": [
+      "A pilot-wire monitor",
+      "A reclosing relay",
+      "Sudden pressure",
+      "Volts per hertz"
+    ],
+    "answer": 0,
+    "explanation": "85 supervises the pilot channel. 79 recloses, 63 is sudden pressure, and 24 is volts per hertz. A dead pilot channel is not a successful pilot scheme.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 85",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-044",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.113-2015 clause 4.6 describes main 1 and main 2 as:",
+    "choices": [
+      "Two names for the same relay",
+      "Redundant schemes so one failed component does not remove all protection for that circuit",
+      "Zone 1 and zone 3 of a single distance relay",
+      "The owner\u2019s short-circuit study and the test report"
+    ],
+    "answer": 1,
+    "explanation": "Local redundancy means a second scheme at the same terminal. Remote backup is a relay at another station, which is slower and less selective. ATS still tests each scheme against its settings file.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2; ref. IEEE C37.113-2015, clause 4.6",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-045",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Direct underreaching transfer trip, as IEEE C37.113-2015 uses the term, is built on elements that are:",
+    "choices": [
+      "Set short of the remote terminal",
+      "Set past the next two lines",
+      "Nondirectional and delayed",
+      "Differential only"
+    ],
+    "answer": 0,
+    "explanation": "DUTT keys a trip from an underreaching element, the same family as zone 1, so it does not see a fault beyond the remote bus by itself. The transfer trip is what covers the far end quickly. POTT is the overreaching permissive scheme, not this one.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clauses 4.8.7 and 6.3.5.2",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-046",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Permissive overreaching transfer trip differs from direct underreaching transfer trip because POTT:",
+    "choices": [
+      "Trips from an underreaching element with no communication",
+      "Uses an overreaching element and needs a permissive from the other end",
+      "Is a dissolved-gas method",
+      "Has no communication channel"
+    ],
+    "answer": 1,
+    "explanation": "The overreaching element can see past the remote bus, so it is not allowed to trip direct. The far end has to permit the trip. DUTT can trip direct because its element is set short of that bus. Both acronyms are in IEEE C37.113-2015 clause 3.3.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 6.3.5.4",
+    "verified": true,
+    "kb": "relays.md#zones"
   }
 ]

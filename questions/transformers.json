@@ -542,5 +542,95 @@
     "reference": "ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 4.2",
     "verified": true,
     "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-031",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS 7.2.2.D.12 says to investigate:",
+    "choices": [
+      "Oxygen in the nitrogen blanket",
+      "A polarization index of 3.0 on a motor",
+      "A shield under 10 ohms per 1000 feet",
+      "Zone 1 set to 80 percent of the line"
+    ],
+    "answer": 0,
+    "explanation": "A nitrogen-blanketed tank is supposed to stay oxygen-free. Oxygen in that gas space means the blanket is not doing its job. Positive pressure on the gauge is the companion check in 7.2.2.A.15.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.12",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-032",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "IEEE C57.106-2006 clause 5.2.1 recommends ASTM D877 for:",
+    "choices": [
+      "Routine acceptance of new, unprocessed oil for circuit breakers",
+      "Dissolved-gas analysis",
+      "Every in-service transformer, in place of D1816",
+      "Furans in the paper"
+    ],
+    "answer": 0,
+    "explanation": "D877 uses flat disk electrodes and is the routine new-oil check that clause names for breakers. Transformer oil that is already in service is where D1816 earns its keep, because it reacts more to particles and water. ATS Table 100.4 is still the acceptance table.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 5.2.1",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-033",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "IEEE C57.106-2006 clause 5.3.4 describes neutralization number as:",
+    "choices": [
+      "A measure of acidic components, and of oxidation products in service-aged oil",
+      "The water content in ppm",
+      "The dielectric breakdown in kilovolts",
+      "The interfacial tension"
+    ],
+    "answer": 0,
+    "explanation": "New oil can carry a little acid from refining. In service the number tracks oxidation. ASTM D974 is the color-indicator titration and D664 is the potentiometric one, which matters when the oil is too dark to see the color change. ATS 7.2.2 lists D974 on the liquid tests.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.14; ref. IEEE C57.106-2006, clause 5.3.4",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-034",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Sweep frequency response on a liquid-filled transformer is optional in ATS 7.2.2, and the result should:",
+    "choices": [
+      "Be compared with the factory trace and with earlier field traces",
+      "Replace the turns-ratio test",
+      "Be a single number corrected to 20 \u00b0C",
+      "Match Table 100.11"
+    ],
+    "answer": 0,
+    "explanation": "SFRA is a shape comparison, not a pass/fail table in that paragraph. It is marked optional. The turns-ratio test is still required, and its limit is a separate line.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.7 and D.7",
+    "verified": true,
+    "kb": "transformers.md#excitation"
+  },
+  {
+    "id": "xfmr-035",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "IEEE C57.106-2006 clause 5.1.8 uses ASTM D1524 to look at:",
+    "choices": [
+      "Color and turbidity, which can show free water or solid contamination",
+      "Turns ratio",
+      "CT excitation",
+      "Relay timing"
+    ],
+    "answer": 0,
+    "explanation": "A visual exam can tell you the sample deserves a full lab workup. It does not replace dielectric strength, water, or dissolved gas. ATS 7.2.2 lists visual condition as ASTM D1524 on the liquid tests.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.14; ref. IEEE C57.106-2006, clause 5.1.8",
+    "verified": true,
+    "kb": "transformers.md#oil"
   }
 ]

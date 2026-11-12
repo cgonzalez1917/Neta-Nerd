@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 290 (Level II 179, Level III 111).
+Count: 330 (Level II 203, Level III 127).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -4931,6 +4931,686 @@ An ATS 6.6 harmonic-study report is supposed to include:
 - 3. The crew leader’s ETT card
 
 **Citation:** ANSI/NETA ATS-2025 6.6, study report items 5 and 6; ref. IEEE 519-2022
+
+Reviewer: VERIFIED or FIX
+
+## safety-047 (II / safety) {#safety-047}
+
+<!-- q:safety-047 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.10 proves a switchgear interlock by:
+
+- 0. Defeating the interlock and leaving it defeated
+- 1. Trying to close a locked-open device, trying to open a locked-closed device, and exchanging keys through the scheme **← answer**
+- 2. Removing the locks so the test is faster
+- 3. Operating the breaker from the relay test set only
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.10; 29 CFR 1910.333(c)(10)
+
+Reviewer: VERIFIED or FIX
+
+## safety-048 (II / safety) {#safety-048}
+
+<!-- q:safety-048 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.13 requires shutters and barriers in switchgear to be:
+
+- 0. Removed for the life of the gear
+- 1. Installed and operating correctly **← answer**
+- 2. Replaced with cardboard
+- 3. Checked only if someone is shocked
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.13
+
+Reviewer: VERIFIED or FIX
+
+## safety-049 (II / safety) {#safety-049}
+
+<!-- q:safety-049 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.6 says fuse and breaker sizes in a lineup must agree with:
+
+- 0. Whatever is on the truck
+- 1. The drawings and the coordination study **← answer**
+- 2. The largest frame that fits
+- 3. The relay firmware version only
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.6
+
+Reviewer: VERIFIED or FIX
+
+## safety-050 (II / safety) {#safety-050}
+
+<!-- q:safety-050 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.16 checks filters and vents so that:
+
+- 0. The gear can be painted
+- 1. Cooling paths are actually open **← answer**
+- 2. The insulation-resistance test can be skipped
+- 3. Shipping braces can stay in
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.16
+
+Reviewer: VERIFIED or FIX
+
+## math-074 (II / theory) {#math-074}
+
+<!-- q:math-074 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.B.8 limits winding-resistance test current to:
+
+- 0. 10 percent of rated current, per IEEE C57.152 **← answer**
+- 1. Full rated current for one hour
+- 2. The instantaneous pickup of the secondary breaker
+- 3. Any current the micro-ohmmeter can make
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.8; ref. IEEE C57.152
+
+Reviewer: VERIFIED or FIX
+
+## math-075 (II / theory) {#math-075}
+
+<!-- q:math-075 -->
+
+**Bank verified flag:** true
+
+Phase-to-phase stator resistances are 1.00, 1.02, and 1.08 ohm. ATS 7.15.1.D.4 says to:
+
+- 0. Pass them, because all are near 1 ohm
+- 1. Investigate, because a phase deviates by more than 5 percent **← answer**
+- 2. Ignore them below 2300 V only, with no calculation
+- 3. Average them and throw out the high phase
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.D.4
+
+Reviewer: VERIFIED or FIX
+
+## math-076 (II / theory) {#math-076}
+
+<!-- q:math-076 -->
+
+**Bank verified flag:** true
+
+A 2000-foot cable shield measures 30 ohms. Per 1000 feet that is:
+
+- 0. 15 ohms, which ATS 7.3.3.D.2 says to investigate **← answer**
+- 1. 3 ohms, which passes
+- 2. 30 ohms per foot
+- 3. A VLF failure
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.D.2
+
+Reviewer: VERIFIED or FIX
+
+## math-077 (II / theory) {#math-077}
+
+<!-- q:math-077 -->
+
+**Bank verified flag:** true
+
+ATS Table 100.6.3 is sinusoidal rms. For a cosine-rectangular waveform the notes say to:
+
+- 0. Use the rms number unchanged
+- 1. Multiply the table voltage by the square root of 2 **← answer**
+- 2. Divide the table voltage by 2
+- 3. Use Uo and ignore the table
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.6.3 notes; ref. IEEE 400.2-2024
+
+Reviewer: VERIFIED or FIX
+
+## math-078 (II / theory) {#math-078}
+
+<!-- q:math-078 -->
+
+**Bank verified flag:** true
+
+Compared with the weekly IEEE 519 limit, the very-short-time daily voltage-harmonic allowance is:
+
+- 0. The same number
+- 1. 1.5 times the table value, and only as a short-time statistic **← answer**
+- 2. Ten times the table, continuously
+- 3. Applied at the motor terminals instead of the PCC
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## math-079 (II / theory) {#math-079}
+
+<!-- q:math-079 -->
+
+**Bank verified flag:** true
+
+ATS 6.6 tells the harmonic study to judge transformer loading under nonsinusoidal current by:
+
+- 0. Nameplate kVA alone
+- 1. The procedure in IEEE C57.110, and to flag overloaded transformers **← answer**
+- 2. IEEE C57.104 dissolved gas
+- 3. A 500 V insulation-resistance test
+
+**Citation:** ANSI/NETA ATS-2025 6.6, study report item 7; ref. IEEE C57.110
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-031 (II / component) {#xfmr-031}
+
+<!-- q:xfmr-031 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.D.12 says to investigate:
+
+- 0. Oxygen in the nitrogen blanket **← answer**
+- 1. A polarization index of 3.0 on a motor
+- 2. A shield under 10 ohms per 1000 feet
+- 3. Zone 1 set to 80 percent of the line
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.12
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-032 (II / component) {#xfmr-032}
+
+<!-- q:xfmr-032 -->
+
+**Bank verified flag:** true
+
+IEEE C57.106-2006 clause 5.2.1 recommends ASTM D877 for:
+
+- 0. Routine acceptance of new, unprocessed oil for circuit breakers **← answer**
+- 1. Dissolved-gas analysis
+- 2. Every in-service transformer, in place of D1816
+- 3. Furans in the paper
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 5.2.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-033 (II / component) {#xfmr-033}
+
+<!-- q:xfmr-033 -->
+
+**Bank verified flag:** true
+
+IEEE C57.106-2006 clause 5.3.4 describes neutralization number as:
+
+- 0. A measure of acidic components, and of oxidation products in service-aged oil **← answer**
+- 1. The water content in ppm
+- 2. The dielectric breakdown in kilovolts
+- 3. The interfacial tension
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.14; ref. IEEE C57.106-2006, clause 5.3.4
+
+Reviewer: VERIFIED or FIX
+
+## relay-031 (II / component) {#relay-031}
+
+<!-- q:relay-031 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 27 is:
+
+- 0. Undervoltage **← answer**
+- 1. Overvoltage
+- 2. Distance
+- 3. Differential
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 27
+
+Reviewer: VERIFIED or FIX
+
+## relay-032 (II / component) {#relay-032}
+
+<!-- q:relay-032 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 59 is:
+
+- 0. Overvoltage **← answer**
+- 1. Undervoltage
+- 2. Sync check
+- 3. Reclosing
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 59
+
+Reviewer: VERIFIED or FIX
+
+## relay-033 (II / component) {#relay-033}
+
+<!-- q:relay-033 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 25 is:
+
+- 0. Sync check **← answer**
+- 1. Distance
+- 2. Frequency
+- 3. Sudden pressure
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 25
+
+Reviewer: VERIFIED or FIX
+
+## relay-034 (II / component) {#relay-034}
+
+<!-- q:relay-034 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 63 is:
+
+- 0. Transformer sudden pressure **← answer**
+- 1. A pilot-wire monitor
+- 2. A thermal RTD relay
+- 3. Breaker failure
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 63
+
+Reviewer: VERIFIED or FIX
+
+## relay-035 (II / component) {#relay-035}
+
+<!-- q:relay-035 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 46 is:
+
+- 0. Current balance **← answer**
+- 1. Phase-sequence voltage
+- 2. Loss of field
+- 3. Ground detector
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 46
+
+Reviewer: VERIFIED or FIX
+
+## mot-006 (II / component) {#mot-006}
+
+<!-- q:mot-006 -->
+
+**Bank verified flag:** true
+
+ATS 7.15.1.B.8 calls for an insulation-resistance test on:
+
+- 0. Insulated bearings, to the manufacturer’s data **← answer**
+- 1. The station ground grid
+- 2. The cable jacket at 10 kV
+- 3. The relay targets
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.8 and D.8
+
+Reviewer: VERIFIED or FIX
+
+## mot-007 (II / component) {#mot-007}
+
+<!-- q:mot-007 -->
+
+**Bank verified flag:** true
+
+ATS 7.15.1.B.12 on an AC machine is a check that:
+
+- 0. The space heater works **← answer**
+- 1. The polarization index is 1.0
+- 2. Zone 1 overreaches
+- 3. The oil neutralization number is zero
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.12
+
+Reviewer: VERIFIED or FIX
+
+## relay-036 (II / component) {#relay-036}
+
+<!-- q:relay-036 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 32 is:
+
+- 0. Directional power **← answer**
+- 1. Distance
+- 2. Differential
+- 3. Reclosing
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 32
+
+Reviewer: VERIFIED or FIX
+
+## relay-037 (II / component) {#relay-037}
+
+<!-- q:relay-037 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 47 is:
+
+- 0. Phase-sequence or phase-balance voltage **← answer**
+- 1. Current balance
+- 2. Loss of field
+- 3. Instantaneous overcurrent
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 47
+
+Reviewer: VERIFIED or FIX
+
+## ct-017 (II / component) {#ct-017}
+
+<!-- q:ct-017 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.A.7 says the current and voltage transformer ratios in switchgear must:
+
+- 0. Match the drawings **← answer**
+- 1. Be the highest ratio in the catalog
+- 2. Be ignored if the relay is microprocessor
+- 3. Match the cable shield resistance
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.7
+
+Reviewer: VERIFIED or FIX
+
+## relay-038 (II / systems) {#relay-038}
+
+<!-- q:relay-038 -->
+
+**Bank verified flag:** true
+
+IEEE C37.113-2015 clause 4.4 says the boundary of a protection zone is set by:
+
+- 0. The voltage-transformer nameplate alone
+- 1. Where the current transformers are, because those currents define the zone **← answer**
+- 2. The paint on the lineup
+- 3. The reclosing timer
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.113-2015, clause 4.4
+
+Reviewer: VERIFIED or FIX
+
+## safety-051 (III / safety) {#safety-051}
+
+<!-- q:safety-051 -->
+
+**Bank verified flag:** true
+
+Trying to close a locked-open breaker during an ATS 7.1.1 interlock check is:
+
+- 0. A permanent defeat of the interlock
+- 1. The way you prove the interlock holds **← answer**
+- 2. A substitute for lockout
+- 3. Required only on low-voltage panelboards
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.10
+
+Reviewer: VERIFIED or FIX
+
+## safety-052 (III / safety) {#safety-052}
+
+<!-- q:safety-052 -->
+
+**Bank verified flag:** true
+
+During the VLF withstand in ATS 7.3.3.B.5.2, shields and conductors not under test are:
+
+- 0. Left floating
+- 1. Grounded **← answer**
+- 2. Tied to the test lead
+- 3. Removed from the terminations
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.B.5.2
+
+Reviewer: VERIFIED or FIX
+
+## math-080 (III / theory) {#math-080}
+
+<!-- q:math-080 -->
+
+**Bank verified flag:** true
+
+IEEE C57.104-2019 clause 6 says a yearly rate taken from only two dissolved-gas samples is:
+
+- 0. The preferred and sufficient method
+- 1. A weak way to judge gassing, because normal scatter can dominate two points **← answer**
+- 2. Required before any Duval triangle
+- 3. A substitute for the oil power-factor test
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6
+
+Reviewer: VERIFIED or FIX
+
+## math-081 (III / theory) {#math-081}
+
+<!-- q:math-081 -->
+
+**Bank verified flag:** true
+
+When combustible gas is high but stable, IEEE C57.104-2019 clause 6 still wants you to remember that:
+
+- 0. The level never matters
+- 1. Rising levels are the greater concern, and the fault type matters as well as the level **← answer**
+- 2. Acetylene is required before any action
+- 3. The sample can be left open overnight
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6
+
+Reviewer: VERIFIED or FIX
+
+## math-082 (III / theory) {#math-082}
+
+<!-- q:math-082 -->
+
+**Bank verified flag:** true
+
+In IEEE 519-2022 Table 1, weekly voltage THD at the PCC is tighter above 161 kV than from 1 kV to 69 kV. The two totals are:
+
+- 0. 8 percent and 20 percent
+- 1. 1.5 percent above 161 kV, and 5 percent from 1 kV through 69 kV **← answer**
+- 2. Both 5 percent
+- 3. 0.5 percent at every voltage
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## math-083 (III / theory) {#math-083}
+
+<!-- q:math-083 -->
+
+**Bank verified flag:** true
+
+For a PCC at or below 1.0 kV, IEEE 519-2022 Table 1 limits weekly voltage THD to:
+
+- 0. 8 percent **← answer**
+- 1. 1.5 percent
+- 2. 0.5 percent
+- 3. 20 percent
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## relay-039 (III / component) {#relay-039}
+
+<!-- q:relay-039 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 24 is:
+
+- 0. Volts per hertz **← answer**
+- 1. Distance
+- 2. Reclosing
+- 3. Frequency
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 24
+
+Reviewer: VERIFIED or FIX
+
+## relay-040 (III / component) {#relay-040}
+
+<!-- q:relay-040 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 49T is:
+
+- 0. An RTD temperature relay **← answer**
+- 1. A thermal replica of current
+- 2. Breaker failure
+- 3. Sync check
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 49T
+
+Reviewer: VERIFIED or FIX
+
+## relay-041 (III / component) {#relay-041}
+
+<!-- q:relay-041 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 60 is:
+
+- 0. Voltage balance **← answer**
+- 1. Current balance
+- 2. Ground detector
+- 3. Pilot wire
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 60
+
+Reviewer: VERIFIED or FIX
+
+## relay-042 (III / component) {#relay-042}
+
+<!-- q:relay-042 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 64 is:
+
+- 0. A ground detector **← answer**
+- 1. A differential
+- 2. A distance element
+- 3. A frequency element
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 64
+
+Reviewer: VERIFIED or FIX
+
+## relay-043 (III / component) {#relay-043}
+
+<!-- q:relay-043 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 85 is:
+
+- 0. A pilot-wire monitor **← answer**
+- 1. A reclosing relay
+- 2. Sudden pressure
+- 3. Volts per hertz
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 85
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-034 (III / component) {#xfmr-034}
+
+<!-- q:xfmr-034 -->
+
+**Bank verified flag:** true
+
+Sweep frequency response on a liquid-filled transformer is optional in ATS 7.2.2, and the result should:
+
+- 0. Be compared with the factory trace and with earlier field traces **← answer**
+- 1. Replace the turns-ratio test
+- 2. Be a single number corrected to 20 °C
+- 3. Match Table 100.11
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.7 and D.7
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-035 (III / component) {#xfmr-035}
+
+<!-- q:xfmr-035 -->
+
+**Bank verified flag:** true
+
+IEEE C57.106-2006 clause 5.1.8 uses ASTM D1524 to look at:
+
+- 0. Color and turbidity, which can show free water or solid contamination **← answer**
+- 1. Turns ratio
+- 2. CT excitation
+- 3. Relay timing
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.14; ref. IEEE C57.106-2006, clause 5.1.8
+
+Reviewer: VERIFIED or FIX
+
+## relay-044 (III / systems) {#relay-044}
+
+<!-- q:relay-044 -->
+
+**Bank verified flag:** true
+
+IEEE C37.113-2015 clause 4.6 describes main 1 and main 2 as:
+
+- 0. Two names for the same relay
+- 1. Redundant schemes so one failed component does not remove all protection for that circuit **← answer**
+- 2. Zone 1 and zone 3 of a single distance relay
+- 3. The owner’s short-circuit study and the test report
+
+**Citation:** ANSI/NETA ATS-2025 7.9.2; ref. IEEE C37.113-2015, clause 4.6
+
+Reviewer: VERIFIED or FIX
+
+## relay-045 (III / systems) {#relay-045}
+
+<!-- q:relay-045 -->
+
+**Bank verified flag:** true
+
+Direct underreaching transfer trip, as IEEE C37.113-2015 uses the term, is built on elements that are:
+
+- 0. Set short of the remote terminal **← answer**
+- 1. Set past the next two lines
+- 2. Nondirectional and delayed
+- 3. Differential only
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clauses 4.8.7 and 6.3.5.2
+
+Reviewer: VERIFIED or FIX
+
+## relay-046 (III / systems) {#relay-046}
+
+<!-- q:relay-046 -->
+
+**Bank verified flag:** true
+
+Permissive overreaching transfer trip differs from direct underreaching transfer trip because POTT:
+
+- 0. Trips from an underreaching element with no communication
+- 1. Uses an overreaching element and needs a permissive from the other end **← answer**
+- 2. Is a dissolved-gas method
+- 3. Has no communication channel
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 6.3.5.4
 
 Reviewer: VERIFIED or FIX
 

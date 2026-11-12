@@ -88,5 +88,41 @@
     "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43",
     "verified": true,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-006",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.1.B.8 calls for an insulation-resistance test on:",
+    "choices": [
+      "Insulated bearings, to the manufacturer\u2019s data",
+      "The station ground grid",
+      "The cable jacket at 10 kV",
+      "The relay targets"
+    ],
+    "answer": 0,
+    "explanation": "An insulated bearing that is shorted circulates shaft current. The test follows the manufacturer\u2019s published data, and D.8 compares the result with that data or with similar machines.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.8 and D.8",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-007",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.1.B.12 on an AC machine is a check that:",
+    "choices": [
+      "The space heater works",
+      "The polarization index is 1.0",
+      "Zone 1 overreaches",
+      "The oil neutralization number is zero"
+    ],
+    "answer": 0,
+    "explanation": "Space heaters keep the winding dry while the machine is shut down. The insulation-resistance test does not prove the heater. Verify the heater itself.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.12",
+    "verified": true,
+    "kb": "apparatus.md#motors"
   }
 ]
