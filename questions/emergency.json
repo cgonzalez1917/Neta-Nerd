@@ -70,5 +70,23 @@
     "reference": "ANSI/NETA ATS-2025 7.22.2",
     "verified": true,
     "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-005",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "A step-up transformer can be back-fed from the low-voltage side. Before a power-factor test you:",
+    "choices": [
+      "Assume the LV bushings are dead because the HV breaker is open",
+      "Isolate and test both sides, because the LV side may be the source",
+      "Only ground the HV neutral",
+      "Skip LOTO if the nameplate says distribution"
+    ],
+    "answer": 1,
+    "explanation": "Opening the high side does not kill a unit fed from inverters, a generator, or another LV source. 29 CFR 1910.333 still wants every source disconnected, locked, and tested. Then the test voltage stays within the winding\u2019s line-to-ground rating.",
+    "reference": "29 CFR 1910.333(b)(2); power-factor method, per Megger DELTA4000 applications guide",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
   }
 ]

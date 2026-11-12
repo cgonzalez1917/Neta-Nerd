@@ -270,5 +270,113 @@
     "reference": "Per manufacturer data for zone-selective interlocking. ATS-2025 7.6.1.2.B.8 requires the interlock to be verified.",
     "verified": false,
     "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-016",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "On an Eaton PXR 20/25, the long-delay time dial is defined at:",
+    "choices": [
+      "1\u00d7Ir",
+      "6\u00d7Ir",
+      "The instantaneous pickup",
+      "0.625\u00d7In"
+    ],
+    "answer": 1,
+    "explanation": "The protection table in the PXR 20/25 user manual labels long delay time at 6 times Ir. A shot at some other multiple is not that dial unless you are on the published curve. Do not treat a hand-scaled time as the acceptance window.",
+    "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-017",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Long-time memory on a PXR trip unit matters during primary injection because:",
+    "choices": [
+      "It erases the rating plug",
+      "Repeated overload shots can stack and change the next trip",
+      "It disables ground fault",
+      "It sets the frame size"
+    ],
+    "answer": 1,
+    "explanation": "The PXR manual includes long-time memory so repeated overloads are not ignored. For a string of timing shots, turn that memory off if the manual tells you to, then turn it back on and restore the as-found settings.",
+    "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-018",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Instantaneous pickup on a PXR is a multiple of:",
+    "choices": [
+      "Ir, the long-time pickup",
+      "In, the sensor or rating plug",
+      "The frame\u2019s interrupting rating",
+      "6\u00d7 the short-time delay"
+    ],
+    "answer": 1,
+    "explanation": "The PXR protection table lists instantaneous as a multiple of In, while short-time pickup is a multiple of Ir. Mixing In and Ir moves the test current by a lot when the plug is not full frame.",
+    "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-019",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Short-time pickup on a PXR is a multiple of Ir, while instantaneous is a multiple of In. If the plug is 800 A in a 1600 A frame and Ir is 1.0, a 6\u00d7 short-time pickup is:",
+    "choices": [
+      "9600 A",
+      "4800 A",
+      "1600 A",
+      "6 A"
+    ],
+    "answer": 1,
+    "explanation": "Ir = 1.0 \u00d7 800 = 800 A. Short-time at 6 \u00d7 Ir is 4800 A. Instantaneous multiples use In, which on this unit is the plug, 800 A, not the 1600 A frame. Read which symbol the dial says before you set the injection current.",
+    "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-020",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Ground-fault delay on a PXR that is labeled at 0.625 \u00d7 In means the time dial is defined:",
+    "choices": [
+      "At 0.625 times sensor rating, not at an arbitrary current you happened to inject",
+      "At 6 \u00d7 Ir",
+      "At the instantaneous setting",
+      "Only when zone interlock is on"
+    ],
+    "answer": 0,
+    "explanation": "The manual\u2019s ground I\u00b2t times are at 0.625 \u00d7 In. A shot at some other current is a different point on the curve. Confirm that point in the manufacturer\u2019s curve before you fail the trip unit.",
+    "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-021",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "Zone interlock is enabled and you are timing the delayed short-time band. The restraint input is open. You should expect:",
+    "choices": [
+      "The full delayed band",
+      "A fast, unrestrained trip, so the delayed window will not show until restraint is jumpered",
+      "No trip at any current",
+      "The long-time dial to change"
+    ],
+    "answer": 1,
+    "explanation": "No restraint means the downstream device is not holding this one back, which is exactly when the scheme is supposed to be fast. Jumper the restraint the way the manual shows, take the delayed shot, then remove the jumper and restore settings.",
+    "reference": "Eaton PXR 20/25 user manual, per manufacturer instructions (zone interlock); ATS-2025 7.6.1.2.B.8",
+    "verified": true,
+    "kb": "field-methods.md#trip-window"
   }
 ]

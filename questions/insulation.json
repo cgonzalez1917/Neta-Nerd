@@ -162,5 +162,95 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2",
     "verified": true,
     "kb": "insulation.md#temp-correction"
+  },
+  {
+    "id": "ir-010",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "The guard terminal on a megohmmeter is used to:",
+    "choices": [
+      "Raise the test voltage",
+      "Keep surface leakage from being counted as insulation current",
+      "Discharge the winding faster than the negative lead",
+      "Measure power factor"
+    ],
+    "answer": 1,
+    "explanation": "Surface current is diverted to the guard so it does not pass through the meter\u2019s measuring circuit. It does not raise the voltage and it does not replace a clean, dry surface. The Megger S1-568 manual describes the guard for that leakage path.",
+    "reference": "Megger S1-568 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-011",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "A megohmmeter voltage lock (a ceiling you set and the set will not exceed) is for:",
+    "choices": [
+      "Making every test 15 kV",
+      "Keeping the applied voltage inside what the insulation is allowed to see",
+      "Replacing the temperature correction",
+      "Skipping the discharge"
+    ],
+    "answer": 1,
+    "explanation": "The S1-568 manual gives XLPE cable that should not be tested above 5000 V as the example of why a lock exists. The right voltage still comes from the equipment rating or the ATS table, not from the highest range on the dial.",
+    "reference": "Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 Table 100.1 for the voltage when the manufacturer is silent",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-012",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "After a megohmmeter test the winding is:",
+    "choices": [
+      "Left charged so the next reading is faster",
+      "Discharged through the set before the leads come off and before anyone touches it",
+      "Shorted with bare hands",
+      "Fine to handle because DC insulation tests have no stored energy"
+    ],
+    "answer": 1,
+    "explanation": "The specimen is a capacitor. The S1-568 and every other serious megohmmeter discharge at the end of the test. Pulling the leads first is how people get hit. ATS machine and transformer procedures assume you do not leave the winding hot.",
+    "reference": "Megger S1-568 user manual, per manufacturer instructions (test completion and discharge)",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-013",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "IEEE 43\u2019s minimum insulation resistance for a machine is applied:",
+    "choices": [
+      "Raw, at whatever temperature you found",
+      "After correction to 40 \u00b0C",
+      "After correction to 75 \u00b0C with the copper constant",
+      "Only if the PI is above 4"
+    ],
+    "answer": 1,
+    "explanation": "ATS Table 100.11 states the rotating-machine minima at 40 \u00b0C and points at Table 100.14. The 40 \u00b0C multipliers are Table 100.14.2. The 20 \u00b0C table is for the apparatus in Table 100.1, not for a stator you are comparing with Table 100.11.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2; IEEE 43",
+    "verified": true,
+    "kb": "insulation.md#temp-correction"
+  },
+  {
+    "id": "ir-014",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "PI on a machine whose 1-minute reading is 8000 M\u03a9 should be:",
+    "choices": [
+      "Failed if it is under 4",
+      "Not used as the pass/fail, because IEEE 43 does not recommend PI once the 1-minute value is above 5000 M\u03a9",
+      "Doubled and compared with Table 100.1",
+      "Run at twice the test voltage"
+    ],
+    "answer": 1,
+    "explanation": "The Megger S1-568 manual quotes IEEE 43 on this point: above 5000 M\u03a9 the ratio is no longer a reliable condition indicator. Report the resistance and the trend. Do not invent a failure from a flat ratio at that level.",
+    "reference": "IEEE 43, as stated in the Megger S1-568 user manual",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
   }
 ]

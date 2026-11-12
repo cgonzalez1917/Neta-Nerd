@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 190 (Level II 120, Level III 70).
+Count: 250 (Level II 155, Level III 95).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -3233,6 +3233,1026 @@ A close scheme uses an 86 b contact and a 52 b contact in series. The breaker is
 - 3. Irrelevant until the 51 times out
 
 **Citation:** a/b contact logic
+
+Reviewer: VERIFIED or FIX
+
+## safety-031 (II / safety) {#safety-031}
+
+<!-- q:safety-031 -->
+
+**Bank verified flag:** true
+
+Under 29 CFR 1910.147, which of these is an energy-isolating device?
+
+- 0. A push button
+- 1. A selector switch
+- 2. A disconnect switch that opens all ungrounded conductors **← answer**
+- 3. A relay target
+
+**Citation:** 29 CFR 1910.147(b), energy isolating device
+
+Reviewer: VERIFIED or FIX
+
+## safety-032 (II / safety) {#safety-032}
+
+<!-- q:safety-032 -->
+
+**Bank verified flag:** true
+
+29 CFR 1910.147 describes a tag, compared with a lock, as:
+
+- 0. A physical restraint equal to a lock
+- 1. A warning device that does not itself hold the isolator **← answer**
+- 2. Stronger, because more people can read it
+- 3. Required only on hydraulic valves
+
+**Citation:** 29 CFR 1910.147(c)(7)(ii)(A)
+
+Reviewer: VERIFIED or FIX
+
+## safety-033 (II / safety) {#safety-033}
+
+<!-- q:safety-033 -->
+
+**Bank verified flag:** true
+
+29 CFR 1910.333 says control-circuit devices such as push buttons and interlocks:
+
+- 0. May be the only means of de-energizing
+- 1. May not be the sole means of de-energizing, and interlocks are not a substitute for lockout **← answer**
+- 2. Replace a qualified person’s voltage test
+- 3. Are energy-isolating devices
+
+**Citation:** 29 CFR 1910.333(b)(2)(ii)(B)
+
+Reviewer: VERIFIED or FIX
+
+## safety-034 (II / safety) {#safety-034}
+
+<!-- q:safety-034 -->
+
+**Bank verified flag:** true
+
+Conductors that have been switched off but not locked or tagged are treated by 29 CFR 1910.333 as:
+
+- 0. De-energized and safe to touch
+- 1. Energized parts **← answer**
+- 2. Exempt below 1000 V
+- 3. Safe if a second person watches
+
+**Citation:** 29 CFR 1910.333(b)(1)
+
+Reviewer: VERIFIED or FIX
+
+## safety-035 (II / safety) {#safety-035}
+
+<!-- q:safety-035 -->
+
+**Bank verified flag:** true
+
+Before a test instrument is used, 29 CFR 1910.334 requires:
+
+- 0. A yearly laboratory hipot only
+- 1. A visual inspection of the instrument, leads, probes, and connectors, and removal from service if damaged **← answer**
+- 2. That the leads be wrapped in tape if nicked
+- 3. No inspection if the meter is CAT III
+
+**Citation:** 29 CFR 1910.334(c)(2)
+
+Reviewer: VERIFIED or FIX
+
+## math-049 (II / theory) {#math-049}
+
+<!-- q:math-049 -->
+
+**Bank verified flag:** true
+
+A megohmmeter manual defines DAR as the 1-minute insulation resistance divided by the 30-second reading. Readings are 200 MΩ and 160 MΩ. DAR is:
+
+- 0. 0.80
+- 1. 1.25 **← answer**
+- 2. 40 MΩ
+- 3. 360 MΩ
+
+**Citation:** Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 7.15.1.B.2
+
+Reviewer: VERIFIED or FIX
+
+## math-050 (II / theory) {#math-050}
+
+<!-- q:math-050 -->
+
+**Bank verified flag:** true
+
+IEEE 43, as quoted in the Megger S1-568 manual, treats a polarization index as unreliable when the 1-minute insulation resistance is above:
+
+- 0. 5 MΩ
+- 1. 100 MΩ
+- 2. 5000 MΩ **← answer**
+- 3. 1 Ω
+
+**Citation:** IEEE 43, as stated in the Megger S1-568 user manual
+
+Reviewer: VERIFIED or FIX
+
+## math-051 (II / theory) {#math-051}
+
+<!-- q:math-051 -->
+
+**Bank verified flag:** false
+
+A CT secondary of 5 A drives 0.3 Ω of leads and relay. Burden in volt-amperes is:
+
+- 0. 1.5 VA
+- 1. 7.5 VA **← answer**
+- 2. 15 VA
+- 3. 0.06 VA
+
+**Citation:** CT burden S = I²R
+
+Reviewer: VERIFIED or FIX
+
+## math-052 (II / theory) {#math-052}
+
+<!-- q:math-052 -->
+
+**Bank verified flag:** false
+
+An insulation specimen at 10 kV draws 2.0 mA and 4.0 W. Power factor is:
+
+- 0. 0.02%
+- 1. 2%
+- 2. 20% **← answer**
+- 3. 40%
+
+**Citation:** Insulation power factor = W / (V × I)
+
+Reviewer: VERIFIED or FIX
+
+## math-053 (II / theory) {#math-053}
+
+<!-- q:math-053 -->
+
+**Bank verified flag:** false
+
+A 240 V circuit drops 6 V. The percent drop is:
+
+- 0. 2.5% **← answer**
+- 1. 6%
+- 2. 0.25%
+- 3. 40%
+
+**Citation:** Voltage-drop percent
+
+Reviewer: VERIFIED or FIX
+
+## math-054 (II / theory) {#math-054}
+
+<!-- q:math-054 -->
+
+**Bank verified flag:** false
+
+A 2000:5 CT carries 500 A primary. Secondary current is:
+
+- 0. 5 A
+- 1. 1.25 A **← answer**
+- 2. 0.4 A
+- 3. 12.5 A
+
+**Citation:** CT ratio
+
+Reviewer: VERIFIED or FIX
+
+## math-055 (II / theory) {#math-055}
+
+<!-- q:math-055 -->
+
+**Bank verified flag:** false
+
+XL of a 25 mH reactor at 60 Hz is about:
+
+- 0. 1.5 Ω
+- 1. 9.4 Ω **← answer**
+- 2. 94 Ω
+- 3. 0.94 Ω
+
+**Citation:** XL = 2πfL
+
+Reviewer: VERIFIED or FIX
+
+## math-056 (II / theory) {#math-056}
+
+<!-- q:math-056 -->
+
+**Bank verified flag:** true
+
+Tip-up on a power-factor or tan-delta test is:
+
+- 0. The oil temperature minus 20 °C
+- 1. How much the dissipation factor rises as the test voltage is raised **← answer**
+- 2. The guard current
+- 3. The nameplate ratio error
+
+**Citation:** Power-factor / tan-delta method. ATS-2025 Table 100.6.7 defines cable tip-up as the change between voltage steps.
+
+Reviewer: VERIFIED or FIX
+
+## math-057 (II / theory) {#math-057}
+
+<!-- q:math-057 -->
+
+**Bank verified flag:** true
+
+Four-wire microhm readings remove lead resistance because:
+
+- 0. The current leads are heavier
+- 1. Voltage is sensed inside the current connections, so lead drop is not in the measured voltage **← answer**
+- 2. The meter uses AC
+- 3. Both leads are grounded
+
+**Citation:** AEMC 6240 user manual, per manufacturer instructions (four-wire Kelvin connection)
+
+Reviewer: VERIFIED or FIX
+
+## ct-010 (II / component) {#ct-010}
+
+<!-- q:ct-010 -->
+
+**Bank verified flag:** true
+
+A potential-transformer check includes polarity. Valence’s PT/VT back-to-basics list, and ATS 7.10.2, both treat a wrong polarity as:
+
+- 0. Acceptable if the ratio is close
+- 1. A failed test; the marks have to agree **← answer**
+- 2. Fixed by changing the fuse size
+- 3. Only a metering problem, not a relay problem
+
+**Citation:** ANSI/NETA ATS-2025 7.10.2.D.2; Valence, Potential transformer testing
+
+Reviewer: VERIFIED or FIX
+
+## ct-011 (II / component) {#ct-011}
+
+<!-- q:ct-011 -->
+
+**Bank verified flag:** true
+
+Valence’s PT/VT checklist calls out primary and secondary fuse sizes because:
+
+- 0. Any fuse that fits is fine
+- 1. A wrong fuse can open on a normal burden or fail to clear a faulted secondary **← answer**
+- 2. Fuses set the turns ratio
+- 3. Fuses replace the polarity test
+
+**Citation:** Valence, Potential transformer testing; ANSI/NETA ATS-2025 7.10.2 includes fuse verification in the inspection
+
+Reviewer: VERIFIED or FIX
+
+## ct-012 (II / component) {#ct-012}
+
+<!-- q:ct-012 -->
+
+**Bank verified flag:** true
+
+Turns ratio on a tapped VT, when the taps are accessible, is performed:
+
+- 0. On the in-service tap only
+- 1. On all tap positions you can reach **← answer**
+- 2. Only if the fuse is blown
+- 3. At DC
+
+**Citation:** ANSI/NETA ATS-2025 7.10.2.B.3; Valence, Potential transformer testing
+
+Reviewer: VERIFIED or FIX
+
+## dlro-005 (II / component) {#dlro-005}
+
+<!-- q:dlro-005 -->
+
+**Bank verified flag:** true
+
+On a four-wire micro-ohmmeter the potential clips belong:
+
+- 0. Outside the current clips, on the leads
+- 1. Inside the current clips, on the joint itself **← answer**
+- 2. On the same stud as the ground lead only
+- 3. One on the joint and one on the test-set chassis
+
+**Citation:** AEMC 6240 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## ir-010 (II / component) {#ir-010}
+
+<!-- q:ir-010 -->
+
+**Bank verified flag:** true
+
+The guard terminal on a megohmmeter is used to:
+
+- 0. Raise the test voltage
+- 1. Keep surface leakage from being counted as insulation current **← answer**
+- 2. Discharge the winding faster than the negative lead
+- 3. Measure power factor
+
+**Citation:** Megger S1-568 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## ir-011 (II / component) {#ir-011}
+
+<!-- q:ir-011 -->
+
+**Bank verified flag:** true
+
+A megohmmeter voltage lock (a ceiling you set and the set will not exceed) is for:
+
+- 0. Making every test 15 kV
+- 1. Keeping the applied voltage inside what the insulation is allowed to see **← answer**
+- 2. Replacing the temperature correction
+- 3. Skipping the discharge
+
+**Citation:** Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 Table 100.1 for the voltage when the manufacturer is silent
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-016 (II / component) {#xfmr-016}
+
+<!-- q:xfmr-016 -->
+
+**Bank verified flag:** true
+
+In the Megger DELTA4000 applications guide, a grounded-specimen test (GST) on a two-winding transformer is the connection that:
+
+- 0. Measures only the interwinding insulation
+- 1. Includes the path from the energized winding to ground **← answer**
+- 2. Is a DC megohm test
+- 3. Ignores capacitance
+
+**Citation:** Megger DELTA4000 applications guide, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-017 (II / component) {#xfmr-017}
+
+<!-- q:xfmr-017 -->
+
+**Bank verified flag:** true
+
+An ungrounded-specimen test (UST) between HV and LV, with ground acting as a guard, is how you read:
+
+- 0. CHL, the insulation between the windings **← answer**
+- 1. Only the core ground strap
+- 2. Oil moisture in ppm
+- 3. Excitation current
+
+**Citation:** Megger DELTA4000 applications guide, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-018 (II / component) {#xfmr-018}
+
+<!-- q:xfmr-018 -->
+
+**Bank verified flag:** true
+
+EPA’s overview of SF6 in electric power systems describes the gas as:
+
+- 0. A short-lived greenhouse gas similar to CO2
+- 1. A potent greenhouse gas that remains in the atmosphere for thousands of years **← answer**
+- 2. Harmless to vent because it is inert
+- 3. A substitute for dissolved-gas analysis
+
+**Citation:** EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018)
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-019 (II / component) {#xfmr-019}
+
+<!-- q:xfmr-019 -->
+
+**Bank verified flag:** true
+
+The preferred end of a job on SF6 equipment is:
+
+- 0. Vent the compartment, then refill from any cylinder
+- 1. Recover the gas and keep it in a closed handling cycle **← answer**
+- 2. Burn off the remainder
+- 3. Mix it with air to dilute the greenhouse effect
+
+**Citation:** ABB, Use of SF6 insulating gas in ZX switchgear (HB 605/05), paraphrased; EPA SF6 emissions overview (2018)
+
+Reviewer: VERIFIED or FIX
+
+## relay-018 (II / component) {#relay-018}
+
+<!-- q:relay-018 -->
+
+**Bank verified flag:** true
+
+Before you time a microprocessor relay element, ATS 7.9.2 expects you to:
+
+- 0. Skip settings and only ramp current
+- 1. Confirm settings and logic match the latest engineered file **← answer**
+- 2. Set every pickup to the minimum
+- 3. Megger the relay at 10 kV
+
+**Citation:** ANSI/NETA ATS-2025 7.9.2
+
+Reviewer: VERIFIED or FIX
+
+## brkr-016 (II / component) {#brkr-016}
+
+<!-- q:brkr-016 -->
+
+**Bank verified flag:** true
+
+On an Eaton PXR 20/25, the long-delay time dial is defined at:
+
+- 0. 1×Ir
+- 1. 6×Ir **← answer**
+- 2. The instantaneous pickup
+- 3. 0.625×In
+
+**Citation:** Eaton PXR 20/25 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## brkr-017 (II / component) {#brkr-017}
+
+<!-- q:brkr-017 -->
+
+**Bank verified flag:** true
+
+Long-time memory on a PXR trip unit matters during primary injection because:
+
+- 0. It erases the rating plug
+- 1. Repeated overload shots can stack and change the next trip **← answer**
+- 2. It disables ground fault
+- 3. It sets the frame size
+
+**Citation:** Eaton PXR 20/25 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## cable-012 (II / component) {#cable-012}
+
+<!-- q:cable-012 -->
+
+**Bank verified flag:** true
+
+Choosing a megohmmeter voltage for a 600 V cable when the manufacturer is silent means:
+
+- 0. The highest range on the set, to be sure
+- 1. The Table 100.1 test voltage for that rating, 1000 V DC, not a 5 kV or 10 kV shot **← answer**
+- 2. 500 V because it is safer
+- 3. AC hipot at line voltage
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.1
+
+Reviewer: VERIFIED or FIX
+
+## gnd-008 (II / component) {#gnd-008}
+
+<!-- q:gnd-008 -->
+
+**Bank verified flag:** true
+
+IEEE 81 is cited by ATS 7.13 for fall-of-potential because:
+
+- 0. NETA prints the probe spacing in feet
+- 1. The probe method lives in IEEE 81, not in a homemade spacing in the NETA paragraph **← answer**
+- 2. A megohmmeter is the instrument IEEE 81 specifies
+- 3. 25 Ω is the only passing value
+
+**Citation:** ANSI/NETA ATS-2025 7.13.B.2; IEEE 81
+
+Reviewer: VERIFIED or FIX
+
+## ir-012 (II / component) {#ir-012}
+
+<!-- q:ir-012 -->
+
+**Bank verified flag:** true
+
+After a megohmmeter test the winding is:
+
+- 0. Left charged so the next reading is faster
+- 1. Discharged through the set before the leads come off and before anyone touches it **← answer**
+- 2. Shorted with bare hands
+- 3. Fine to handle because DC insulation tests have no stored energy
+
+**Citation:** Megger S1-568 user manual, per manufacturer instructions (test completion and discharge)
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-020 (II / component) {#xfmr-020}
+
+<!-- q:xfmr-020 -->
+
+**Bank verified flag:** true
+
+Arcing in SF6 can produce:
+
+- 0. Only more pure SF6
+- 1. Decomposition products, including hydrogen fluoride **← answer**
+- 2. Dissolved acetylene in the aluminum tank
+- 3. A higher turns ratio
+
+**Citation:** EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018)
+
+Reviewer: VERIFIED or FIX
+
+## relay-019 (II / component) {#relay-019}
+
+<!-- q:relay-019 -->
+
+**Bank verified flag:** false
+
+A relay test set’s current output belongs:
+
+- 0. On the live CT secondary while the primary is in service
+- 1. On the relay side of an open, shorted test switch, with the CT shorted **← answer**
+- 2. Across the breaker primary poles
+- 3. On the station ground only
+
+**Citation:** Relay test-set practice, per manufacturer instructions; ANSI/NETA ATS-2025 7.9.2
+
+Reviewer: VERIFIED or FIX
+
+## brkr-018 (II / component) {#brkr-018}
+
+<!-- q:brkr-018 -->
+
+**Bank verified flag:** true
+
+Instantaneous pickup on a PXR is a multiple of:
+
+- 0. Ir, the long-time pickup
+- 1. In, the sensor or rating plug **← answer**
+- 2. The frame’s interrupting rating
+- 3. 6× the short-time delay
+
+**Citation:** Eaton PXR 20/25 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## safety-036 (II / systems) {#safety-036}
+
+<!-- q:safety-036 -->
+
+**Bank verified flag:** true
+
+Before circuits are re-energized, 29 CFR 1910.333 requires a qualified person to verify that:
+
+- 0. The locks stay on
+- 1. Tools, jumpers, shorts, and grounds have been removed **← answer**
+- 2. The tag may stay as a spare
+- 3. Only the control power is off
+
+**Citation:** 29 CFR 1910.333(b)(2)(v)(A)
+
+Reviewer: VERIFIED or FIX
+
+## safety-037 (II / systems) {#safety-037}
+
+<!-- q:safety-037 -->
+
+**Bank verified flag:** true
+
+An electrical safety interlock may be defeated, under 29 CFR 1910.333, only when:
+
+- 0. Anyone needs a faster test
+- 1. A qualified person does it temporarily while working, and puts the interlock back when finished **← answer**
+- 2. The tagout is in place, so the interlock is redundant forever
+- 3. The door is closed
+
+**Citation:** 29 CFR 1910.333(c)(10)
+
+Reviewer: VERIFIED or FIX
+
+## safety-038 (III / safety) {#safety-038}
+
+<!-- q:safety-038 -->
+
+**Bank verified flag:** true
+
+For a circuit over 600 V nominal, 29 CFR 1910.333 requires the test instrument used to prove de-energized to be checked:
+
+- 0. Once a year
+- 1. Immediately before and immediately after the test **← answer**
+- 2. Only after the test
+- 3. Only if it is a proximity tester
+
+**Citation:** 29 CFR 1910.333(b)(2)(iv)(B)
+
+Reviewer: VERIFIED or FIX
+
+## safety-039 (III / safety) {#safety-039}
+
+<!-- q:safety-039 -->
+
+**Bank verified flag:** true
+
+29 CFR 1910.269 does not apply to:
+
+- 0. Generation, transmission, and distribution work covered in that section
+- 1. Electrical installations and work practices covered by subpart S **← answer**
+- 2. Line-clearance tree trimming done by qualified employees for the utility
+- 3. Work on transmission lines
+
+**Citation:** 29 CFR 1910.269(a)(1)(ii)(B)
+
+Reviewer: VERIFIED or FIX
+
+## safety-040 (III / safety) {#safety-040}
+
+<!-- q:safety-040 -->
+
+**Bank verified flag:** true
+
+Work on circuit parts that have not been de-energized under 29 CFR 1910.333(b) may be done by:
+
+- 0. Any employee wearing gloves
+- 1. Only a qualified person, familiar with the practices, PPE, and insulated tools **← answer**
+- 2. A helper if a qualified person is on site but not at the point of work
+- 3. Anyone, below 480 V
+
+**Citation:** 29 CFR 1910.333(c)(2)
+
+Reviewer: VERIFIED or FIX
+
+## math-058 (III / theory) {#math-058}
+
+<!-- q:math-058 -->
+
+**Bank verified flag:** false
+
+IEEE C57.104 is used to interpret:
+
+- 0. Dissolved gases in transformer oil **← answer**
+- 1. CT knee-point markers
+- 2. VLF withstand voltage
+- 3. Breaker instantaneous tolerance
+
+**Citation:** IEEE C57.104
+
+Reviewer: VERIFIED or FIX
+
+## math-059 (III / theory) {#math-059}
+
+<!-- q:math-059 -->
+
+**Bank verified flag:** false
+
+A DGA report shows acetylene with little hydrogen and rising ethylene. The pattern IEEE C57.104 is aimed at is closest to:
+
+- 0. Cold cellulose drying
+- 1. Arcing, or a very hot fault, rather than a calm thermal aging story **← answer**
+- 2. A normal new-oil baseline with no follow-up
+- 3. A CT polarity error
+
+**Citation:** IEEE C57.104
+
+Reviewer: VERIFIED or FIX
+
+## math-060 (III / theory) {#math-060}
+
+<!-- q:math-060 -->
+
+**Bank verified flag:** true
+
+Guarding the interwinding path during a GST measurement is done so that:
+
+- 0. CHL current is kept out of the reading you are calling winding-to-ground **← answer**
+- 1. The test voltage doubles
+- 2. Oil power factor is corrected to 20 °C
+- 3. The core ground is lifted
+
+**Citation:** Megger DELTA4000 applications guide, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## math-061 (III / theory) {#math-061}
+
+<!-- q:math-061 -->
+
+**Bank verified flag:** true
+
+Oil-filled insulation power factor must be corrected to 20 °C before it is compared with ATS Table 100.3 because:
+
+- 0. The table’s recommended maxima are stated at 20 °C **← answer**
+- 1. 20 °C is the copper constant
+- 2. The megohmmeter lock is 20 °C
+- 3. IEEE 43 uses 20 °C for machines
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.4 and Table 100.3
+
+Reviewer: VERIFIED or FIX
+
+## math-062 (III / theory) {#math-062}
+
+<!-- q:math-062 -->
+
+**Bank verified flag:** false
+
+A long-time dial defined at 6×Ir is 10 s, with a published +0/−30% band. At 6×Ir, the low end of the window is:
+
+- 0. 3 s
+- 1. 7 s **← answer**
+- 2. 10 s
+- 3. 13 s
+
+**Citation:** Per manufacturer instructions where long-time time is defined at 6×Ir with a +0/−30% tolerance. ATS-2025 7.6.1.2 uses the published band when it exists.
+
+Reviewer: VERIFIED or FIX
+
+## math-063 (III / theory) {#math-063}
+
+<!-- q:math-063 -->
+
+**Bank verified flag:** false
+
+IEEE 400.2 is the guide you cite for:
+
+- 0. Dissolved gas
+- 1. Field testing shielded cable with very low frequency **← answer**
+- 2. CT polarity
+- 3. Device numbers
+
+**Citation:** IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.3
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-021 (III / component) {#xfmr-021}
+
+<!-- q:xfmr-021 -->
+
+**Bank verified flag:** true
+
+A rising power factor as test voltage is raised, with capacitance also up, is read in the DELTA4000 method as a hint of:
+
+- 0. A shorted turn only
+- 1. Moisture, until the factory report says otherwise **← answer**
+- 2. A perfect dry winding
+- 3. An open core ground
+
+**Citation:** Megger DELTA4000 applications guide, per manufacturer instructions; ANSI/NETA ATS-2025 7.2.2.D.4
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-022 (III / component) {#xfmr-022}
+
+<!-- q:xfmr-022 -->
+
+**Bank verified flag:** false
+
+Hydrogen dominant in a DGA, with little acetylene, is the IEEE C57.104 pattern associated with:
+
+- 0. Partial discharge or corona more than a hard arc **← answer**
+- 1. A welded core ground only
+- 2. Normal nitrogen blanket
+- 3. A failed turns-ratio test
+
+**Citation:** IEEE C57.104
+
+Reviewer: VERIFIED or FIX
+
+## ct-013 (III / component) {#ct-013}
+
+<!-- q:ct-013 -->
+
+**Bank verified flag:** true
+
+A low-voltage turns-ratio check on a PT proves:
+
+- 0. The nameplate accuracy class at full voltage and full burden
+- 1. That the ratio and polarity are in the right neighborhood for the marks, not the revenue accuracy **← answer**
+- 2. The fuse rating
+- 3. Excitation knee at rated voltage
+
+**Citation:** Valence, Potential transformer testing; ANSI/NETA ATS-2025 7.10.2
+
+Reviewer: VERIFIED or FIX
+
+## ct-014 (III / component) {#ct-014}
+
+<!-- q:ct-014 -->
+
+**Bank verified flag:** true
+
+VT secondary burden is measured so you can see whether:
+
+- 0. The connected relays and cable exceed what the VT was rated to drive **← answer**
+- 1. The primary fuse is the right class
+- 2. The oil is wet
+- 3. The core ground is lifted
+
+**Citation:** ANSI/NETA ATS-2025 7.10.2
+
+Reviewer: VERIFIED or FIX
+
+## ir-013 (III / component) {#ir-013}
+
+<!-- q:ir-013 -->
+
+**Bank verified flag:** true
+
+IEEE 43’s minimum insulation resistance for a machine is applied:
+
+- 0. Raw, at whatever temperature you found
+- 1. After correction to 40 °C **← answer**
+- 2. After correction to 75 °C with the copper constant
+- 3. Only if the PI is above 4
+
+**Citation:** ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2; IEEE 43
+
+Reviewer: VERIFIED or FIX
+
+## dlro-007 (III / component) {#dlro-007}
+
+<!-- q:dlro-007 -->
+
+**Bank verified flag:** true
+
+A two-wire ohmmeter on a 50 µΩ bus joint typically:
+
+- 0. Matches a Kelvin reading within 1 µΩ
+- 1. Reads high, because the leads are in the measurement **← answer**
+- 2. Reads the insulation resistance
+- 3. Cannot be used below 10 A
+
+**Citation:** AEMC 6240 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 7.4.D.1
+
+Reviewer: VERIFIED or FIX
+
+## brkr-019 (III / component) {#brkr-019}
+
+<!-- q:brkr-019 -->
+
+**Bank verified flag:** true
+
+Short-time pickup on a PXR is a multiple of Ir, while instantaneous is a multiple of In. If the plug is 800 A in a 1600 A frame and Ir is 1.0, a 6× short-time pickup is:
+
+- 0. 9600 A
+- 1. 4800 A **← answer**
+- 2. 1600 A
+- 3. 6 A
+
+**Citation:** Eaton PXR 20/25 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## brkr-020 (III / component) {#brkr-020}
+
+<!-- q:brkr-020 -->
+
+**Bank verified flag:** true
+
+Ground-fault delay on a PXR that is labeled at 0.625 × In means the time dial is defined:
+
+- 0. At 0.625 times sensor rating, not at an arbitrary current you happened to inject **← answer**
+- 1. At 6 × Ir
+- 2. At the instantaneous setting
+- 3. Only when zone interlock is on
+
+**Citation:** Eaton PXR 20/25 user manual, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## relay-020 (III / component) {#relay-020}
+
+<!-- q:relay-020 -->
+
+**Bank verified flag:** true
+
+SEL-751-class feeder relays publish pickup and timing bands in the data sheet. ATS 7.9.2 tells you to:
+
+- 0. Ignore those bands and use ±10% for every element
+- 1. Test to the manufacturer’s tolerances for the element you enabled **← answer**
+- 2. Use Table 100.8
+- 3. Skip timing if the metering screen matches
+
+**Citation:** ANSI/NETA ATS-2025 7.9.2.D.4; SEL-751 data sheet, per manufacturer instructions
+
+Reviewer: VERIFIED or FIX
+
+## cable-013 (III / component) {#cable-013}
+
+<!-- q:cable-013 -->
+
+**Bank verified flag:** true
+
+IEEE 400.2 prefers VLF for many shielded extruded cables in the field because:
+
+- 0. DC hipot is gentler on aged XLPE
+- 1. Charging current falls with frequency, so a portable set can energize a long cable **← answer**
+- 2. 0.1 Hz raises the voltage stress on purpose above the BIL
+- 3. Tan delta cannot be measured at 0.1 Hz
+
+**Citation:** IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.1 note 2 and Table 100.6.3
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-023 (III / component) {#xfmr-023}
+
+<!-- q:xfmr-023 -->
+
+**Bank verified flag:** false
+
+A DGA syringe left open, or a sample poured through air, mostly:
+
+- 0. Improves the acetylene reading
+- 1. Lets fault gases escape and lets air in, so the ppm no longer match the oil in the tank **← answer**
+- 2. Is the method IEEE C57.104 prefers
+- 3. Replaces the power-factor test
+
+**Citation:** IEEE C57.104; sampling practice so the gases stay dissolved
+
+Reviewer: VERIFIED or FIX
+
+## ir-014 (III / component) {#ir-014}
+
+<!-- q:ir-014 -->
+
+**Bank verified flag:** true
+
+PI on a machine whose 1-minute reading is 8000 MΩ should be:
+
+- 0. Failed if it is under 4
+- 1. Not used as the pass/fail, because IEEE 43 does not recommend PI once the 1-minute value is above 5000 MΩ **← answer**
+- 2. Doubled and compared with Table 100.1
+- 3. Run at twice the test voltage
+
+**Citation:** IEEE 43, as stated in the Megger S1-568 user manual
+
+Reviewer: VERIFIED or FIX
+
+## relay-021 (III / systems) {#relay-021}
+
+<!-- q:relay-021 -->
+
+**Bank verified flag:** false
+
+A close circuit is supervised by device 25 and by an 86 b contact. The breaker should close only when:
+
+- 0. Either one is satisfied
+- 1. Sync-check allows it and the lockout is reset **← answer**
+- 2. The 51 is picked up
+- 3. The test set is still connected
+
+**Citation:** IEEE C37.2 device 25 and 86; control-schematic logic
+
+Reviewer: VERIFIED or FIX
+
+## brkr-021 (III / systems) {#brkr-021}
+
+<!-- q:brkr-021 -->
+
+**Bank verified flag:** true
+
+Zone interlock is enabled and you are timing the delayed short-time band. The restraint input is open. You should expect:
+
+- 0. The full delayed band
+- 1. A fast, unrestrained trip, so the delayed window will not show until restraint is jumpered **← answer**
+- 2. No trip at any current
+- 3. The long-time dial to change
+
+**Citation:** Eaton PXR 20/25 user manual, per manufacturer instructions (zone interlock); ATS-2025 7.6.1.2.B.8
+
+Reviewer: VERIFIED or FIX
+
+## emg-005 (III / systems) {#emg-005}
+
+<!-- q:emg-005 -->
+
+**Bank verified flag:** true
+
+A step-up transformer can be back-fed from the low-voltage side. Before a power-factor test you:
+
+- 0. Assume the LV bushings are dead because the HV breaker is open
+- 1. Isolate and test both sides, because the LV side may be the source **← answer**
+- 2. Only ground the HV neutral
+- 3. Skip LOTO if the nameplate says distribution
+
+**Citation:** 29 CFR 1910.333(b)(2); power-factor method, per Megger DELTA4000 applications guide
+
+Reviewer: VERIFIED or FIX
+
+## gnd-009 (III / systems) {#gnd-009}
+
+<!-- q:gnd-009 -->
+
+**Bank verified flag:** true
+
+Temporary grounds go on only after the absence-of-voltage test because:
+
+- 0. Grounds prove the circuit is dead
+- 1. A ground on a live phase is a fault; 1910.333 and 70E both want the test first **← answer**
+- 2. The ground set replaces the lock
+- 3. IEEE 81 requires grounds before the test
+
+**Citation:** 29 CFR 1910.333(b)(2)(iv); NFPA 70E-2024 120.6
 
 Reviewer: VERIFIED or FIX
 

@@ -307,5 +307,77 @@
     "reference": "a/b contact logic",
     "verified": false,
     "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-018",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Before you time a microprocessor relay element, ATS 7.9.2 expects you to:",
+    "choices": [
+      "Skip settings and only ramp current",
+      "Confirm settings and logic match the latest engineered file",
+      "Set every pickup to the minimum",
+      "Megger the relay at 10 kV"
+    ],
+    "answer": 1,
+    "explanation": "Settings and logic should agree with the most recent engineered setting files. A perfect timing shot on the wrong file is not a passing relay. Element tolerances then come from the manufacturer, not from a generic percent.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2",
+    "verified": true,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-019",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A relay test set\u2019s current output belongs:",
+    "choices": [
+      "On the live CT secondary while the primary is in service",
+      "On the relay side of an open, shorted test switch, with the CT shorted",
+      "Across the breaker primary poles",
+      "On the station ground only"
+    ],
+    "answer": 1,
+    "explanation": "You inject into the relay, not into a CT that is still connected to a live primary. The test switch shorts the CT before the relay circuit opens. ATS 7.9.2 then judges the element against the manufacturer\u2019s tolerance.",
+    "reference": "Relay test-set practice, per manufacturer instructions; ANSI/NETA ATS-2025 7.9.2",
+    "verified": false,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-020",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "SEL-751-class feeder relays publish pickup and timing bands in the data sheet. ATS 7.9.2 tells you to:",
+    "choices": [
+      "Ignore those bands and use \u00b110% for every element",
+      "Test to the manufacturer\u2019s tolerances for the element you enabled",
+      "Use Table 100.8",
+      "Skip timing if the metering screen matches"
+    ],
+    "answer": 1,
+    "explanation": "A 50 element and a 51 element do not share one percent. The data sheet is that relay\u2019s band. 7.9.2.D.4 points at the manufacturer\u2019s recommended tolerances, and the settings still have to match the study.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.D.4; SEL-751 data sheet, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-021",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A close circuit is supervised by device 25 and by an 86 b contact. The breaker should close only when:",
+    "choices": [
+      "Either one is satisfied",
+      "Sync-check allows it and the lockout is reset",
+      "The 51 is picked up",
+      "The test set is still connected"
+    ],
+    "answer": 1,
+    "explanation": "25 permits the close when the two systems match. The 86 b contact is closed only while the lockout is reset. Both have to be true. Resetting the breaker handle does not reset the 86.",
+    "reference": "IEEE C37.2 device 25 and 86; control-schematic logic",
+    "verified": false,
+    "kb": "level-3.md#schemes"
   }
 ]

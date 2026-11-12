@@ -197,5 +197,41 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.6.3",
     "verified": true,
     "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-012",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Choosing a megohmmeter voltage for a 600 V cable when the manufacturer is silent means:",
+    "choices": [
+      "The highest range on the set, to be sure",
+      "The Table 100.1 test voltage for that rating, 1000 V DC, not a 5 kV or 10 kV shot",
+      "500 V because it is safer",
+      "AC hipot at line voltage"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.1 for a 600 V rating is a 1000 V DC test. The meter\u2019s top range is not the specimen\u2019s rating. A voltage lock on the set is how you keep from exceeding the voltage you actually chose.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.1",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "cable-013",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "IEEE 400.2 prefers VLF for many shielded extruded cables in the field because:",
+    "choices": [
+      "DC hipot is gentler on aged XLPE",
+      "Charging current falls with frequency, so a portable set can energize a long cable",
+      "0.1 Hz raises the voltage stress on purpose above the BIL",
+      "Tan delta cannot be measured at 0.1 Hz"
+    ],
+    "answer": 1,
+    "explanation": "I = 2\u03c0fCV. At 0.1 Hz the charging current is a small fraction of the 60 Hz value. ATS Table 100.6.3 is the acceptance voltage adapted from that guide, and the table\u2019s note discourages DC on extruded cable after years in service.",
+    "reference": "IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.1 note 2 and Table 100.6.3",
+    "verified": true,
+    "kb": "cables.md#vlf"
   }
 ]

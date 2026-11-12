@@ -272,5 +272,149 @@
     "reference": "Power-factor test method. ATS-2025 7.2.2.D.4 is the corrected limit you compare with after the shot.",
     "verified": false,
     "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "xfmr-016",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "In the Megger DELTA4000 applications guide, a grounded-specimen test (GST) on a two-winding transformer is the connection that:",
+    "choices": [
+      "Measures only the interwinding insulation",
+      "Includes the path from the energized winding to ground",
+      "Is a DC megohm test",
+      "Ignores capacitance"
+    ],
+    "answer": 1,
+    "explanation": "GST puts the return through ground, so you see the winding-to-ground insulation (and, depending on guards, the interwinding path). UST is the connection that measures between the leads and leaves the ground path out. The guide draws both.",
+    "reference": "Megger DELTA4000 applications guide, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "xfmr-017",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "An ungrounded-specimen test (UST) between HV and LV, with ground acting as a guard, is how you read:",
+    "choices": [
+      "CHL, the insulation between the windings",
+      "Only the core ground strap",
+      "Oil moisture in ppm",
+      "Excitation current"
+    ],
+    "answer": 0,
+    "explanation": "The DELTA4000 guide shows the UST current as the current through the interwinding insulation, with the ground paths not measured. That is the CHL specimen. It is not a substitute for a dissolved-gas sample.",
+    "reference": "Megger DELTA4000 applications guide, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "xfmr-018",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "EPA\u2019s overview of SF6 in electric power systems describes the gas as:",
+    "choices": [
+      "A short-lived greenhouse gas similar to CO2",
+      "A potent greenhouse gas that remains in the atmosphere for thousands of years",
+      "Harmless to vent because it is inert",
+      "A substitute for dissolved-gas analysis"
+    ],
+    "answer": 1,
+    "explanation": "The 2018 EPA overview calls SF6 highly potent (about 22,800 times CO2 over 100 years in that paper) and long-lived (on the order of 3,200 years). Inert when pure does not mean acceptable to release.",
+    "reference": "EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018)",
+    "verified": true,
+    "kb": "field-methods.md#sf6"
+  },
+  {
+    "id": "xfmr-019",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "The preferred end of a job on SF6 equipment is:",
+    "choices": [
+      "Vent the compartment, then refill from any cylinder",
+      "Recover the gas and keep it in a closed handling cycle",
+      "Burn off the remainder",
+      "Mix it with air to dilute the greenhouse effect"
+    ],
+    "answer": 1,
+    "explanation": "ABB\u2019s ZX SF6 manual describes recovery and reuse and a closed life cycle, not venting. EPA\u2019s emissions overview is aimed at the same point: keep the gas out of the air. Arced gas is recovered as a contaminated product, not sniffed and released.",
+    "reference": "ABB, Use of SF6 insulating gas in ZX switchgear (HB 605/05), paraphrased; EPA SF6 emissions overview (2018)",
+    "verified": true,
+    "kb": "field-methods.md#sf6"
+  },
+  {
+    "id": "xfmr-020",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Arcing in SF6 can produce:",
+    "choices": [
+      "Only more pure SF6",
+      "Decomposition products, including hydrogen fluoride",
+      "Dissolved acetylene in the aluminum tank",
+      "A higher turns ratio"
+    ],
+    "answer": 1,
+    "explanation": "EPA\u2019s SF6 overview notes that faulted gas yields toxic by-products such as hydrofluoric acid. That is why arced gas is handled, not vented and not assumed to be the same as a new cylinder.",
+    "reference": "EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018)",
+    "verified": true,
+    "kb": "field-methods.md#sf6"
+  },
+  {
+    "id": "xfmr-021",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A rising power factor as test voltage is raised, with capacitance also up, is read in the DELTA4000 method as a hint of:",
+    "choices": [
+      "A shorted turn only",
+      "Moisture, until the factory report says otherwise",
+      "A perfect dry winding",
+      "An open core ground"
+    ],
+    "answer": 1,
+    "explanation": "Loss that climbs with voltage, especially with capacitance climbing too, is the moisture pattern the applications guide tells you to investigate. You still correct to 20 \u00b0C and you still prefer the factory numbers over a rule of thumb.",
+    "reference": "Megger DELTA4000 applications guide, per manufacturer instructions; ANSI/NETA ATS-2025 7.2.2.D.4",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "xfmr-022",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Hydrogen dominant in a DGA, with little acetylene, is the IEEE C57.104 pattern associated with:",
+    "choices": [
+      "Partial discharge or corona more than a hard arc",
+      "A welded core ground only",
+      "Normal nitrogen blanket",
+      "A failed turns-ratio test"
+    ],
+    "answer": 0,
+    "explanation": "Hydrogen is the low-energy, partial-discharge gas. Acetylene is the arcing marker. One sample is not a life sentence; the guide wants the mix and the trend, and a bad sample bottle can invent hydrogen.",
+    "reference": "IEEE C57.104",
+    "verified": false,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-023",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A DGA syringe left open, or a sample poured through air, mostly:",
+    "choices": [
+      "Improves the acetylene reading",
+      "Lets fault gases escape and lets air in, so the ppm no longer match the oil in the tank",
+      "Is the method IEEE C57.104 prefers",
+      "Replaces the power-factor test"
+    ],
+    "answer": 1,
+    "explanation": "The gases you care about are dissolved. An open jar loses them. ASTM D3612-style practice is a sealed syringe or bottle. IEEE C57.104 then interprets the chromatogram you actually captured.",
+    "reference": "IEEE C57.104; sampling practice so the gases stay dissolved",
+    "verified": false,
+    "kb": "field-methods.md#dga"
   }
 ]

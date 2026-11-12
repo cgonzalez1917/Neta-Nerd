@@ -73,5 +73,41 @@
     "reference": "ANSI/NETA ATS-2025 7.4.D.2.a",
     "verified": true,
     "kb": "resistance.md#busway"
+  },
+  {
+    "id": "dlro-005",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "On a four-wire micro-ohmmeter the potential clips belong:",
+    "choices": [
+      "Outside the current clips, on the leads",
+      "Inside the current clips, on the joint itself",
+      "On the same stud as the ground lead only",
+      "One on the joint and one on the test-set chassis"
+    ],
+    "answer": 1,
+    "explanation": "Current enters outside. Voltage is read between the inner clips, so the drop in the current leads is ignored. Reversing that order puts lead resistance back into the reading.",
+    "reference": "AEMC 6240 user manual, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#microohm"
+  },
+  {
+    "id": "dlro-007",
+    "level": "III",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "A two-wire ohmmeter on a 50 \u00b5\u03a9 bus joint typically:",
+    "choices": [
+      "Matches a Kelvin reading within 1 \u00b5\u03a9",
+      "Reads high, because the leads are in the measurement",
+      "Reads the insulation resistance",
+      "Cannot be used below 10 A"
+    ],
+    "answer": 1,
+    "explanation": "Lead resistance is milliohms. The joint is microhms. Four-wire is how the AEMC 6240 and every other serious low-resistance ohmmeter drop the leads out. Then you still compare with similar joints under the 50 percent rule if the manufacturer is silent.",
+    "reference": "AEMC 6240 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 7.4.D.1",
+    "verified": true,
+    "kb": "field-methods.md#microohm"
   }
 ]

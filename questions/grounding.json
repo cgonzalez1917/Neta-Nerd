@@ -125,5 +125,41 @@
     "reference": "ANSI/NETA ATS-2025 7.14.A",
     "verified": true,
     "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-008",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "IEEE 81 is cited by ATS 7.13 for fall-of-potential because:",
+    "choices": [
+      "NETA prints the probe spacing in feet",
+      "The probe method lives in IEEE 81, not in a homemade spacing in the NETA paragraph",
+      "A megohmmeter is the instrument IEEE 81 specifies",
+      "25 \u03a9 is the only passing value"
+    ],
+    "answer": 1,
+    "explanation": "7.13.B.2 says perform fall-of-potential or an alternative in accordance with IEEE 81. The 62% rule of thumb is that method\u2019s flat-curve check, not a number ATS prints. A megger is still the wrong instrument.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; IEEE 81",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-009",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "Temporary grounds go on only after the absence-of-voltage test because:",
+    "choices": [
+      "Grounds prove the circuit is dead",
+      "A ground on a live phase is a fault; 1910.333 and 70E both want the test first",
+      "The ground set replaces the lock",
+      "IEEE 81 requires grounds before the test"
+    ],
+    "answer": 1,
+    "explanation": "You do not ground a circuit you have not proved dead. 1910.333 has the qualified person test first. NFPA 70E-2024 120.6 puts the voltage test at step 7 and the grounds, when they are required, at step 8.",
+    "reference": "29 CFR 1910.333(b)(2)(iv); NFPA 70E-2024 120.6",
+    "verified": true,
+    "kb": "safety.md#loto"
   }
 ]

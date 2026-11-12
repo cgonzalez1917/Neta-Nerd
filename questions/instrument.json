@@ -160,5 +160,95 @@
     "reference": "CT excitation practice, per the test-set manual. ATS-2025 7.10.1.D.4 compares excitation with the manufacturer curve or IEEE C57.13.1.",
     "verified": false,
     "kb": "field-methods.md#ct-knee"
+  },
+  {
+    "id": "ct-010",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A potential-transformer check includes polarity. Valence\u2019s PT/VT back-to-basics list, and ATS 7.10.2, both treat a wrong polarity as:",
+    "choices": [
+      "Acceptable if the ratio is close",
+      "A failed test; the marks have to agree",
+      "Fixed by changing the fuse size",
+      "Only a metering problem, not a relay problem"
+    ],
+    "answer": 1,
+    "explanation": "Polarity has to match the marks. A reversed VT in a directional or synchronizing scheme is a wrong torque or a wrong close. Ratio alone does not catch it. Credit: Valence, potential transformer testing.",
+    "reference": "ANSI/NETA ATS-2025 7.10.2.D.2; Valence, Potential transformer testing",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-011",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Valence\u2019s PT/VT checklist calls out primary and secondary fuse sizes because:",
+    "choices": [
+      "Any fuse that fits is fine",
+      "A wrong fuse can open on a normal burden or fail to clear a faulted secondary",
+      "Fuses set the turns ratio",
+      "Fuses replace the polarity test"
+    ],
+    "answer": 1,
+    "explanation": "The fuse has to match the VT and the burden. Too small and it opens in service; too large and a shorted secondary is not cleared. That check is visual against the drawings, then the ratio and polarity tests still happen. Credit: Valence.",
+    "reference": "Valence, Potential transformer testing; ANSI/NETA ATS-2025 7.10.2 includes fuse verification in the inspection",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-012",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Turns ratio on a tapped VT, when the taps are accessible, is performed:",
+    "choices": [
+      "On the in-service tap only",
+      "On all tap positions you can reach",
+      "Only if the fuse is blown",
+      "At DC"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.10.2 calls for a turns-ratio test on all tap positions. A bad tap will not show on the tap you happened to find in service. Valence\u2019s list says the same thing.",
+    "reference": "ANSI/NETA ATS-2025 7.10.2.B.3; Valence, Potential transformer testing",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-013",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A low-voltage turns-ratio check on a PT proves:",
+    "choices": [
+      "The nameplate accuracy class at full voltage and full burden",
+      "That the ratio and polarity are in the right neighborhood for the marks, not the revenue accuracy",
+      "The fuse rating",
+      "Excitation knee at rated voltage"
+    ],
+    "answer": 1,
+    "explanation": "A handheld TTR applies a small voltage. It will catch a wrong tap or a reversed winding. It will not reproduce the factory accuracy test at 90, 100, and 110 percent voltage. ATS 7.10.2 still requires the ratio and the polarity check.",
+    "reference": "Valence, Potential transformer testing; ANSI/NETA ATS-2025 7.10.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-014",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "VT secondary burden is measured so you can see whether:",
+    "choices": [
+      "The connected relays and cable exceed what the VT was rated to drive",
+      "The primary fuse is the right class",
+      "The oil is wet",
+      "The core ground is lifted"
+    ],
+    "answer": 0,
+    "explanation": "Burden is the load on the secondary. Too much and the VT sags and the relay or meter sees the wrong voltage. ATS 7.10.2 includes measuring the voltage-circuit burden at the transformer terminals and comparing it with the rating.",
+    "reference": "ANSI/NETA ATS-2025 7.10.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
   }
 ]

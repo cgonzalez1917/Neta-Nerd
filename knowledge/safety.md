@@ -78,6 +78,14 @@ Table 130.7(C)(7)(a), maximum use voltage (AC rms): class 00 is 500 V, class 0 i
 
 A permit’s contents are listed in 130.2(B), including shock boundaries from Table 130.4(E)(a)/(b), arc-flash results, and a briefing.
 
+## OSHA work practices {#osha}
+
+29 CFR 1910.147 is the general lockout/tagout rule. An energy-isolating device is a mechanical device that physically stops energy: a breaker, a disconnect, a valve. Push buttons, selector switches, and other control devices are not isolating devices. A lock holds the isolator. A tag is a warning and does not give the physical restraint of a lock. Locks and tags identify the person who put them on, and they are not used for other jobs.
+
+29 CFR 1910.333 is electrical work practice. Exposed live parts are de-energized before work unless the employer can show that de-energizing adds hazards or is infeasible. Parts under 50 V to ground need not be de-energized if that does not increase burn or explosion exposure. Conductors that are off but not locked or tagged are still treated as energized. Control devices and interlocks are not the only means of de-energizing, and they are not a substitute for lockout. A qualified person proves the equipment will not restart, then tests the parts people will touch. If the circuit is over 600 V nominal, that test instrument is checked immediately before and immediately after. Before the gear is re-energized, a qualified person confirms tools, jumpers, shorts, and grounds are removed. The person who hung a lock takes it off, except for the absent-worker rule in that section. Only a qualified person may defeat a safety interlock, only while the work is in progress, and the interlock goes back in service when the work is done.
+
+29 CFR 1910.334 requires test instruments, leads, and probes to be looked at before use. Damaged gear comes out of service until it is repaired and tested. 29 CFR 1910.269 covers generation, transmission, and distribution. It does not replace subpart S for ordinary workplace electrical installations.
+
 ## Common mistakes
 
 - Testing “dead” with a meter you did not prove before and after.

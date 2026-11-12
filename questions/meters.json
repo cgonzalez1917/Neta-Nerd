@@ -864,5 +864,275 @@
     "reference": "Power triangle",
     "verified": false,
     "kb": "math.md#power"
+  },
+  {
+    "id": "math-049",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A megohmmeter manual defines DAR as the 1-minute insulation resistance divided by the 30-second reading. Readings are 200 M\u03a9 and 160 M\u03a9. DAR is:",
+    "choices": [
+      "0.80",
+      "1.25",
+      "40 M\u03a9",
+      "360 M\u03a9"
+    ],
+    "answer": 1,
+    "explanation": "200 / 160 = 1.25. The one-minute value is the numerator. ATS 7.15.1 uses the same 60/30 order on small machines. Inverting the ratio makes a healthy winding look poor.",
+    "reference": "Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 7.15.1.B.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "math-050",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 43, as quoted in the Megger S1-568 manual, treats a polarization index as unreliable when the 1-minute insulation resistance is above:",
+    "choices": [
+      "5 M\u03a9",
+      "100 M\u03a9",
+      "5000 M\u03a9",
+      "1 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Above 5000 M\u03a9 the currents are so small that the ratio stops meaning much, and IEEE 43 does not recommend using PI as a condition call. The absolute resistance and the trend still matter.",
+    "reference": "IEEE 43, as stated in the Megger S1-568 user manual",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "math-051",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A CT secondary of 5 A drives 0.3 \u03a9 of leads and relay. Burden in volt-amperes is:",
+    "choices": [
+      "1.5 VA",
+      "7.5 VA",
+      "15 VA",
+      "0.06 VA"
+    ],
+    "answer": 1,
+    "explanation": "VA = I\u00b2R = 25 \u00d7 0.3 = 7.5 VA. Compare that with the CT\u2019s burden rating. I \u00d7 R is ohms law for voltage drop, not volt-amperes.",
+    "reference": "CT burden S = I\u00b2R",
+    "verified": false,
+    "kb": "math.md#ct-ratio"
+  },
+  {
+    "id": "math-052",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "An insulation specimen at 10 kV draws 2.0 mA and 4.0 W. Power factor is:",
+    "choices": [
+      "0.02%",
+      "2%",
+      "20%",
+      "40%"
+    ],
+    "answer": 2,
+    "explanation": "VA = 10000 \u00d7 0.002 = 20. PF = 4 / 20 = 0.20 = 20%. Watts divided by voltage, skipping the current, is not power factor. This is the same W/VI definition used on a power-factor set.",
+    "reference": "Insulation power factor = W / (V \u00d7 I)",
+    "verified": false,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "math-053",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 240 V circuit drops 6 V. The percent drop is:",
+    "choices": [
+      "2.5%",
+      "6%",
+      "0.25%",
+      "40%"
+    ],
+    "answer": 0,
+    "explanation": "6 / 240 \u00d7 100 = 2.5%. The volts are not already a percent.",
+    "reference": "Voltage-drop percent",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-054",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 2000:5 CT carries 500 A primary. Secondary current is:",
+    "choices": [
+      "5 A",
+      "1.25 A",
+      "0.4 A",
+      "12.5 A"
+    ],
+    "answer": 1,
+    "explanation": "Ratio is 400. 500 / 400 = 1.25 A. Five amperes would be 2000 A primary.",
+    "reference": "CT ratio",
+    "verified": false,
+    "kb": "math.md#ct-ratio"
+  },
+  {
+    "id": "math-055",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "XL of a 25 mH reactor at 60 Hz is about:",
+    "choices": [
+      "1.5 \u03a9",
+      "9.4 \u03a9",
+      "94 \u03a9",
+      "0.94 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "25 mH is 0.025 H. 2\u03c0 \u00d7 60 \u00d7 0.025 \u2248 9.4 \u03a9. The formula is on the sheet; the milli conversion is not.",
+    "reference": "XL = 2\u03c0fL",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-056",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Tip-up on a power-factor or tan-delta test is:",
+    "choices": [
+      "The oil temperature minus 20 \u00b0C",
+      "How much the dissipation factor rises as the test voltage is raised",
+      "The guard current",
+      "The nameplate ratio error"
+    ],
+    "answer": 1,
+    "explanation": "A single reading at one voltage does not show tip-up. You compare the loss at a higher voltage with the loss at a lower voltage. A steep rise suggests moisture or voids even when the low-voltage number looks calm. Confirm the voltage steps against the specimen rating.",
+    "reference": "Power-factor / tan-delta method. ATS-2025 Table 100.6.7 defines cable tip-up as the change between voltage steps.",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "math-057",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Four-wire microhm readings remove lead resistance because:",
+    "choices": [
+      "The current leads are heavier",
+      "Voltage is sensed inside the current connections, so lead drop is not in the measured voltage",
+      "The meter uses AC",
+      "Both leads are grounded"
+    ],
+    "answer": 1,
+    "explanation": "Current goes out one pair. The potential pair reads only the drop across the joint. A two-wire reading on a bus joint is mostly the leads. Place the potential clips inside the current clips.",
+    "reference": "AEMC 6240 user manual, per manufacturer instructions (four-wire Kelvin connection)",
+    "verified": true,
+    "kb": "field-methods.md#microohm"
+  },
+  {
+    "id": "math-058",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE C57.104 is used to interpret:",
+    "choices": [
+      "Dissolved gases in transformer oil",
+      "CT knee-point markers",
+      "VLF withstand voltage",
+      "Breaker instantaneous tolerance"
+    ],
+    "answer": 0,
+    "explanation": "The guide is about gases dissolved in the oil, not a field megohm or a tan-delta table. Hydrogen leans toward partial discharge, acetylene toward arcing, and the carbon oxides toward paper. The pattern and the history matter more than one ppm memorized out of context.",
+    "reference": "IEEE C57.104",
+    "verified": false,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-059",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A DGA report shows acetylene with little hydrogen and rising ethylene. The pattern IEEE C57.104 is aimed at is closest to:",
+    "choices": [
+      "Cold cellulose drying",
+      "Arcing, or a very hot fault, rather than a calm thermal aging story",
+      "A normal new-oil baseline with no follow-up",
+      "A CT polarity error"
+    ],
+    "answer": 1,
+    "explanation": "Acetylene is the gas associated with arcing. Ethylene tracks high-temperature oil. Hydrogen alone is more partial discharge. You still read the whole Duval-style picture and the trend, and you do not condemn a transformer on one number without the guide.",
+    "reference": "IEEE C57.104",
+    "verified": false,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-060",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Guarding the interwinding path during a GST measurement is done so that:",
+    "choices": [
+      "CHL current is kept out of the reading you are calling winding-to-ground",
+      "The test voltage doubles",
+      "Oil power factor is corrected to 20 \u00b0C",
+      "The core ground is lifted"
+    ],
+    "answer": 0,
+    "explanation": "The DELTA4000 guide describes a guarded GST as measuring the current to ground while the interwinding current is guarded. Without the guard, the overall GST mixes both paths. UST is how you see the interwinding path on purpose.",
+    "reference": "Megger DELTA4000 applications guide, per manufacturer instructions",
+    "verified": true,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "math-061",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Oil-filled insulation power factor must be corrected to 20 \u00b0C before it is compared with ATS Table 100.3 because:",
+    "choices": [
+      "The table\u2019s recommended maxima are stated at 20 \u00b0C",
+      "20 \u00b0C is the copper constant",
+      "The megohmmeter lock is 20 \u00b0C",
+      "IEEE 43 uses 20 \u00b0C for machines"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.2.2.D.4 and Table 100.3 are a 20 \u00b0C comparison. A summer raw reading against that table punishes good oil. Machine insulation resistance is a different correction, to 40 \u00b0C, in Table 100.14.2.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.4 and Table 100.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "math-062",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A long-time dial defined at 6\u00d7Ir is 10 s, with a published +0/\u221230% band. At 6\u00d7Ir, the low end of the window is:",
+    "choices": [
+      "3 s",
+      "7 s",
+      "10 s",
+      "13 s"
+    ],
+    "answer": 1,
+    "explanation": "0.7 \u00d7 10 = 7 s, and the high end is the dial, 10 s. A time of 6 s is fast; 12 s is slow. This arithmetic is only valid at the multiple where the manufacturer defined the dial.",
+    "reference": "Per manufacturer instructions where long-time time is defined at 6\u00d7Ir with a +0/\u221230% tolerance. ATS-2025 7.6.1.2 uses the published band when it exists.",
+    "verified": false,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "math-063",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 400.2 is the guide you cite for:",
+    "choices": [
+      "Dissolved gas",
+      "Field testing shielded cable with very low frequency",
+      "CT polarity",
+      "Device numbers"
+    ],
+    "answer": 1,
+    "explanation": "VLF withstand and tan-delta diagnosis of shielded cable live in IEEE 400.2. ATS Table 100.6.3 is the acceptance voltage table adapted from that guide. Device numbers are IEEE C37.2. DGA is IEEE C57.104.",
+    "reference": "IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.3",
+    "verified": false,
+    "kb": "cables.md#vlf"
   }
 ]

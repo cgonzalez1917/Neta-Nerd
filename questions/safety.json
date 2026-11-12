@@ -541,5 +541,185 @@
     "reference": "NFPA 70E-2024 Table 130.4(E)(b)",
     "verified": true,
     "kb": "safety.md#boundaries"
+  },
+  {
+    "id": "safety-031",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under 29 CFR 1910.147, which of these is an energy-isolating device?",
+    "choices": [
+      "A push button",
+      "A selector switch",
+      "A disconnect switch that opens all ungrounded conductors",
+      "A relay target"
+    ],
+    "answer": 2,
+    "explanation": "The definition lists breakers, disconnects, and valves. Push buttons, selector switches, and other control-circuit devices are called out as not isolating devices. A tag on a start button does not isolate the circuit.",
+    "reference": "29 CFR 1910.147(b), energy isolating device",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-032",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "29 CFR 1910.147 describes a tag, compared with a lock, as:",
+    "choices": [
+      "A physical restraint equal to a lock",
+      "A warning device that does not itself hold the isolator",
+      "Stronger, because more people can read it",
+      "Required only on hydraulic valves"
+    ],
+    "answer": 1,
+    "explanation": "The training rule says tags are warning devices and do not provide the physical restraint a lock provides. They still may not be ignored or pulled by someone else.",
+    "reference": "29 CFR 1910.147(c)(7)(ii)(A)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-033",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "29 CFR 1910.333 says control-circuit devices such as push buttons and interlocks:",
+    "choices": [
+      "May be the only means of de-energizing",
+      "May not be the sole means of de-energizing, and interlocks are not a substitute for lockout",
+      "Replace a qualified person\u2019s voltage test",
+      "Are energy-isolating devices"
+    ],
+    "answer": 1,
+    "explanation": "The circuits to be worked on are disconnected from all sources. Control devices cannot be the only step, and an interlock is not lockout. Then the absence of voltage is still proved.",
+    "reference": "29 CFR 1910.333(b)(2)(ii)(B)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-034",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Conductors that have been switched off but not locked or tagged are treated by 29 CFR 1910.333 as:",
+    "choices": [
+      "De-energized and safe to touch",
+      "Energized parts",
+      "Exempt below 1000 V",
+      "Safe if a second person watches"
+    ],
+    "answer": 1,
+    "explanation": "Paragraph (b)(1) says parts that are de-energized but not locked or tagged under that section are treated as energized. Off is not the same as isolated.",
+    "reference": "29 CFR 1910.333(b)(1)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-035",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before a test instrument is used, 29 CFR 1910.334 requires:",
+    "choices": [
+      "A yearly laboratory hipot only",
+      "A visual inspection of the instrument, leads, probes, and connectors, and removal from service if damaged",
+      "That the leads be wrapped in tape if nicked",
+      "No inspection if the meter is CAT III"
+    ],
+    "answer": 1,
+    "explanation": "Damaged instruments and leads come out of service until repaired and tested. A category rating does not excuse a cut lead.",
+    "reference": "29 CFR 1910.334(c)(2)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-036",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "Before circuits are re-energized, 29 CFR 1910.333 requires a qualified person to verify that:",
+    "choices": [
+      "The locks stay on",
+      "Tools, jumpers, shorts, and grounds have been removed",
+      "The tag may stay as a spare",
+      "Only the control power is off"
+    ],
+    "answer": 1,
+    "explanation": "Paragraph (b)(2)(v) is the return-to-service check: tools, jumpers, shorts, and grounds come off, then people are clear, then locks come off by the people who hung them. Leaving a ground set on and closing in is a fault.",
+    "reference": "29 CFR 1910.333(b)(2)(v)(A)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-037",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "An electrical safety interlock may be defeated, under 29 CFR 1910.333, only when:",
+    "choices": [
+      "Anyone needs a faster test",
+      "A qualified person does it temporarily while working, and puts the interlock back when finished",
+      "The tagout is in place, so the interlock is redundant forever",
+      "The door is closed"
+    ],
+    "answer": 1,
+    "explanation": "Only a qualified person, only while the work is in progress, and the interlock is returned to service. A defeated door switch left that way is how the next person gets hurt.",
+    "reference": "29 CFR 1910.333(c)(10)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-038",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "For a circuit over 600 V nominal, 29 CFR 1910.333 requires the test instrument used to prove de-energized to be checked:",
+    "choices": [
+      "Once a year",
+      "Immediately before and immediately after the test",
+      "Only after the test",
+      "Only if it is a proximity tester"
+    ],
+    "answer": 1,
+    "explanation": "Paragraph (b)(2)(iv)(B) adds the before-and-after check specifically when the circuit is over 600 V. NFPA 70E\u2019s before-and-after rule starts at 50 V. Know which document you are standing under.",
+    "reference": "29 CFR 1910.333(b)(2)(iv)(B)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-039",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "29 CFR 1910.269 does not apply to:",
+    "choices": [
+      "Generation, transmission, and distribution work covered in that section",
+      "Electrical installations and work practices covered by subpart S",
+      "Line-clearance tree trimming done by qualified employees for the utility",
+      "Work on transmission lines"
+    ],
+    "answer": 1,
+    "explanation": "1910.269(a)(1)(ii)(B) carves out subpart S installations. A plant distribution system maintained under subpart S is not automatically a 1910.269 job. Generation and transmission work that the section does cover still is.",
+    "reference": "29 CFR 1910.269(a)(1)(ii)(B)",
+    "verified": true,
+    "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-040",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Work on circuit parts that have not been de-energized under 29 CFR 1910.333(b) may be done by:",
+    "choices": [
+      "Any employee wearing gloves",
+      "Only a qualified person, familiar with the practices, PPE, and insulated tools",
+      "A helper if a qualified person is on site but not at the point of work",
+      "Anyone, below 480 V"
+    ],
+    "answer": 1,
+    "explanation": "1910.333(c)(2) limits that work to qualified persons who can work the circuit safely and know the PPE, shielding, and tools. Being nearby is not the same as being the qualified person at the work.",
+    "reference": "29 CFR 1910.333(c)(2)",
+    "verified": true,
+    "kb": "safety.md#osha"
   }
 ]

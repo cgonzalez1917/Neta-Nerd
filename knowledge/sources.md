@@ -60,6 +60,15 @@ Articles used as optional “Learn more” links, not as copied text:
 
 Manufacturer trip-unit manuals, relay manuals, and test-set manuals are cited as “per manufacturer data.” Job sheets and one-lines stay off this public repo. A time that was only calculated, and not read from the published curve, is not used as a quiz answer.
 
+Lookups for later questions, cited by title only. The files themselves are not in this repo.
+
+- 29 CFR 1910.147, 1910.269, 1910.331 through 1910.335 (OSHA, public text).
+- EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018).
+- ABB, Use of SF6 insulating gas in ZX switchgear, manual HB 605/05 (paraphrased).
+- Valence, Potential transformer testing (PT/VT), back to basics. Short credit only.
+- Megger DELTA4000 applications guide; Megger S1-568 user manual; AEMC 6240 user manual; Eaton PXR 20/25 user manual. Procedures paraphrased and cited as manufacturer instructions.
+- IEEE C57.104, IEEE 43, IEEE 400.2, IEEE C57.13.1, IEEE C37.2, cited by number. No IEEE text is in this repo.
+
 ## Adding a source later
 
 Append a link and one sentence on what it is allowed to support. If you use it for a number, either verify that number in ATS, MTS, or 70E and set `verified` true with the clause, or leave `verified` false and say “verify in ATS” in the reference when you are not sure.

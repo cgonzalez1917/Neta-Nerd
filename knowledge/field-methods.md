@@ -54,6 +54,20 @@ Article 430 is a sequence, not one table. For a single motor the useful order is
 
 Branch conductors are 125 percent of the table current (430.22). The overload is 125 percent or 115 percent of the nameplate, depending on the service factor and temperature rise (430.32). The branch breaker or fuse starts from Table 430.52(C)(1), and the next standard size up is allowed. The disconnect is 115 percent of the table current and in sight, which Article 100 treats as visible and not more than 50 ft. A feeder that supplies more than one motor does not get that “next size up” on the way 430.62 is written. Hermetic air-conditioning is Article 440. Do not pull a feeder number from this paragraph alone.
 
+## SF6 handling {#sf6}
+
+Sulfur hexafluoride is the insulating gas in much GIS and many breakers. EPA’s overview of SF6 emissions in electric power systems calls it a potent greenhouse gas: on a 100-year basis it is on the order of twenty thousand times CO2, and it stays in the atmosphere for thousands of years. Arcing in the gas makes decomposition products, including hydrogen fluoride. Do not vent a compartment to the room or the sky. Recover the gas, keep the cycle closed, and let trained people do the filling and the recovery. Pure gas is one thing; arced gas is another. Smell, residue, and a gas-quality reading are reasons to stop and use the handling procedure, not to crack a valve.
+
+ATS Table 100.13 is the field screen for pure SF6 (moisture, SO2, purity). The manufacturer’s limits still govern, and mixtures are not that table.
+
+## Dissolved gas {#dga}
+
+IEEE C57.104 is the usual guide for dissolved gas in mineral oil. The pattern, not a single ppm from memory, is the point: hydrogen tracks partial discharge, acetylene tracks arcing, ethylene tracks hotter oil, and carbon monoxide and dioxide track cellulose. Draw the sample so air does not strip the gases or add new ones. A laboratory chromatogram is not a field megohm.
+
+## Micro-ohmmeter {#microohm}
+
+A four-wire instrument, Kelvin style, drives current on one pair and senses voltage on the other, so lead resistance drops out. Clip the current leads outside the potential leads. A stable current and a recorded temperature beat a two-wire multimeter on a bus joint. Compare similar joints. When the manufacturer is silent, ATS still uses the 50-percent-of-the-lowest screen.
+
 ## What the sheet is for {#records}
 
 A megger sheet records test voltage, temperature, humidity, what was grounded, and the megohms, then the corrected value. Compare with the manufacturer or, if there is none, the ATS table for that equipment after the temperature correction. A ductor sheet records the current and the microhms of similar joints. Investigate a connection more than 50 percent above the lowest similar one when the manufacturer is silent.
