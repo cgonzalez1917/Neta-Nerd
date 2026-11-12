@@ -107,5 +107,95 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.6.7.1",
     "verified": true,
     "kb": "cables.md#tan-delta"
+  },
+  {
+    "id": "cable-007",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS Table 100.6.3 sinusoidal acceptance voltage for a 5 kV shielded cable, phase to ground, is:",
+    "choices": [
+      "5 kV",
+      "10 kV rms",
+      "21 kV rms",
+      "28 kV DC"
+    ],
+    "answer": 1,
+    "explanation": "The 5 kV row is 10 kV rms. 21 kV is the 15 kV row. The notes still want at least 30 minutes, and a cosine-rectangular waveform is the rms value times \u221a2.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-008",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "For a cosine-rectangular VLF set, ATS Table 100.6.3 says to take the sinusoidal rms value and:",
+    "choices": [
+      "Leave it unchanged",
+      "Multiply by \u221a2",
+      "Divide by 600",
+      "Use the maintenance column instead"
+    ],
+    "answer": 1,
+    "explanation": "The note says cosine-rectangular waveforms use the table voltage times the square root of 2. Using the sine number on a cosine-rectangular set undervoltages the cable.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3 note",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-009",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "PE-insulated cable, tan delta in units of 10\u207b\u00b3. A mean value that requires action under Table 100.6.7.1 is:",
+    "choices": [
+      "Above 4",
+      "Above 50",
+      "Any value above 0.1",
+      "Above 5 only"
+    ],
+    "answer": 1,
+    "explanation": "Mean at a step: acceptable below 4, further study from 4 to 50, action required above 50. Tip-up has its own 5 and 80 limits. One bad column sets the grade.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.7.1",
+    "verified": true,
+    "kb": "cables.md#tan-delta"
+  },
+  {
+    "id": "cable-010",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "An EPR cable\u2019s tan-delta mean is 40 \u00d7 10\u207b\u00b3. Using Table 100.6.7.2, that result is:",
+    "choices": [
+      "Acceptable, because PE\u2019s action line is 50",
+      "Further study (35 to 120), not yet action-required",
+      "Action required, because PE\u2019s acceptable line is 4",
+      "Invalid, because EPR uses the PE table"
+    ],
+    "answer": 1,
+    "explanation": "EPR\u2019s own table: mean acceptable below 35, further study from 35 to 120, action required above 120. Grading EPR with the PE mean of 4 condemns a cable the EPR table still calls further study. Fill type can move the EPR numbers; unknown fill uses this table.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.7.2",
+    "verified": true,
+    "kb": "cables.md#tan-delta"
+  },
+  {
+    "id": "cable-011",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS Table 100.6.3 acceptance voltage for a 25 kV shielded cable, sinusoidal, phase to ground, is:",
+    "choices": [
+      "25 kV",
+      "32 kV rms",
+      "16 kV",
+      "44 kV"
+    ],
+    "answer": 1,
+    "explanation": "The 25 kV row is 32 kV rms. 16 kV is the MTS maintenance value for 15 kV, not this acceptance row. Hold at least 30 minutes unless the note\u2019s 60-minute case applies.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3",
+    "verified": true,
+    "kb": "cables.md#vlf"
   }
 ]

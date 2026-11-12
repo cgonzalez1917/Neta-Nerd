@@ -1,0 +1,74 @@
+[
+  {
+    "id": "emg-001",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "A UPS acceptance test includes:",
+    "choices": [
+      "Static transfer from inverter to bypass and back",
+      "A vacuum-bottle pressure test",
+      "Tan delta of the battery jars only",
+      "Table 100.6 cable VLF in place of a function test"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.22.2 calls for the static transfer both ways, on normal load when you can. The pass criterion is the manufacturer\u2019s data for that transfer, not a cable table.",
+    "reference": "ANSI/NETA ATS-2025 7.22.2",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-002",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "Automatic transfer switch control wiring shall not be less than:",
+    "choices": [
+      "2 M\u03a9",
+      "0.5 \u03a9",
+      "100 M\u03a9 at 5 kV",
+      "The generator\u2019s PI"
+    ],
+    "answer": 0,
+    "explanation": "7.22.3.D.3 is 2 M\u03a9 on control wiring. Power-contact microhms are a different line. The generator\u2019s polarization index does not grade the transfer-switch wiring.",
+    "reference": "ANSI/NETA ATS-2025 7.22.3.D.3",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-003",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "An automatic transfer switch test is not finished when the relay picks up. ATS 7.22.3 also wants you to time:",
+    "choices": [
+      "Delay on transfer, and delay plus retransfer when normal returns",
+      "Only the generator oil pressure",
+      "The fiber attenuation",
+      "The station battery specific gravity"
+    ],
+    "answer": 0,
+    "explanation": "The section lists time delay on transfer, the transfer itself, and time delay and retransfer when normal power returns. A contact closure in the test set does not prove the switch moved and came back.",
+    "reference": "ANSI/NETA ATS-2025 7.22.3",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-004",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "During a UPS static-transfer test the inverter is the source and bypass is healthy. The test should show:",
+    "choices": [
+      "Transfer to bypass and back, within the manufacturer\u2019s time",
+      "That the bypass breaker is welded shut",
+      "A recloser vacuum test",
+      "Tan delta of the output cable instead of a transfer"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.22.2 wants the transfer both directions, preferably on real load, and the result compared with the UPS manual. A single transfer that never returns does not finish the test.",
+    "reference": "ANSI/NETA ATS-2025 7.22.2",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  }
+]

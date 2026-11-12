@@ -73,6 +73,48 @@
       "title": "Infrared thermography",
       "file": "thermography.json",
       "idPrefix": "thermo"
+    },
+    {
+      "id": "mv-breakers",
+      "title": "Medium-voltage breakers",
+      "file": "mv-breakers.json",
+      "idPrefix": "mvbr"
+    },
+    {
+      "id": "reclosers",
+      "title": "Reclosers",
+      "file": "reclosers.json",
+      "idPrefix": "recl"
+    },
+    {
+      "id": "surge-arresters",
+      "title": "Surge arresters",
+      "file": "arresters.json",
+      "idPrefix": "arr"
+    },
+    {
+      "id": "motors",
+      "title": "Motors",
+      "file": "motors.json",
+      "idPrefix": "mot"
+    },
+    {
+      "id": "emergency-systems",
+      "title": "Emergency systems",
+      "file": "emergency.json",
+      "idPrefix": "emg"
+    },
+    {
+      "id": "fiber-optic",
+      "title": "Fiber-optic cables",
+      "file": "fiber.json",
+      "idPrefix": "fbr"
+    },
+    {
+      "id": "ev-charging",
+      "title": "EV charging",
+      "file": "evse.json",
+      "idPrefix": "evse"
     }
   ]
 }

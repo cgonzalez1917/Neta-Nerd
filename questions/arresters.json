@@ -1,0 +1,56 @@
+[
+  {
+    "id": "arr-001",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Resistance from a medium-voltage arrester\u2019s ground terminal to the ground system shall be:",
+    "choices": [
+      "Less than 0.5 \u03a9",
+      "Less than 25 \u03a9",
+      "At least 100 M\u03a9",
+      "Equal to the arrester\u2019s watts-loss"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.19.2.D.3 says less than 0.5 \u03a9, and it still points at the grounding section. 25 \u03a9 is the NEC supplemental-rod idea, not this bond. Watts-loss is a separate comparison.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.D.3",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-002",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Watts-loss on a substation arrester is judged by:",
+    "choices": [
+      "A single watt limit printed for every class",
+      "Comparison with similar units and the test-set data",
+      "Table 100.7",
+      "The recloser\u2019s vacuum pressure"
+    ],
+    "answer": 1,
+    "explanation": "7.19.2.D.4 evaluates watts-loss against similar arresters and the test equipment manufacturer\u2019s data. A lone number with no twin and no baseline is not that test.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.D.4",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-003",
+    "level": "III",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Two station arresters of the same rating show very different watts-loss, and the manufacturer published nothing. ATS 7.19.2 says:",
+    "choices": [
+      "Pass both if insulation resistance is high",
+      "Compare them with each other and with the test-set data",
+      "Apply Table 100.6 VLF",
+      "Ignore watts; only the 0.5 \u03a9 ground lead matters"
+    ],
+    "answer": 1,
+    "explanation": "Watts-loss is a comparison, not a single watt cap in that paragraph. The ground lead still has its own 0.5 \u03a9 screen. A high megohm does not explain a watts outlier.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.D.4",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  }
+]

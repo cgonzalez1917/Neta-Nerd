@@ -200,5 +200,77 @@
     "reference": "ANSI/NETA ATS-2025 7.2.2.D.10",
     "verified": true,
     "kb": "transformers.md#core"
+  },
+  {
+    "id": "xfmr-012",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "New mineral oil, every voltage class in ATS Table 100.4.1, has an interfacial-tension minimum of:",
+    "choices": [
+      "38 mN/m",
+      "0.05 mN/m",
+      "100 mN/m",
+      "No IFT row"
+    ],
+    "answer": 0,
+    "explanation": "D971 interfacial tension is 38 mN/m minimum in each voltage column of that new-oil table. Water and dielectric strength do change with voltage class. Do not slide those columns into the IFT number.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.4.1",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-013",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "ATS Table 100.13 lists SF6 decomposition SO2 as:",
+    "choices": [
+      "Less than 5 ppmv",
+      "Greater than 98.5%",
+      "200 ppmv minimum",
+      "10% by volume"
+    ],
+    "answer": 0,
+    "explanation": "SO2 decomposition products are listed below 5 ppmv. Purity is a different row, above 98.5% by volume. The table is a field guide for pure SF6 and still yields to the manufacturer, especially on gas mixtures.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-014",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Natural-ester fluid in a power transformer, power factor at 20 \u00b0C, no manufacturer limit. Which pair matches the books?",
+    "choices": [
+      "ATS-2025 Table 100.3 maximum 1.0%; MTS-2023 Table 100.3 ester column 3.0%",
+      "Both books use 0.5%",
+      "ATS uses 3.0% and MTS uses 0.5%",
+      "Ester is judged with the mineral-oil 0.5% cap"
+    ],
+    "answer": 0,
+    "explanation": "Acceptance Table 100.3 puts natural ester in the power-transformer row at 1.0%. The maintenance table\u2019s ester column for power transformers is 3.0%. Mineral-oil numbers are lower. Do not file an acceptance report on the maintenance column.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.3; ANSI/NETA MTS-2023 Table 100.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-015",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A wye winding\u2019s power-factor test voltage should be held to:",
+    "choices": [
+      "The line-to-line rating",
+      "The line-to-ground rating, or a bit under it",
+      "10 kV even when that exceeds the winding",
+      "The low-voltage bushing BIL"
+    ],
+    "answer": 1,
+    "explanation": "The test-set method is 10 kV unless that exceeds the winding rating, in which case you stay at or slightly below the rating. On a wye that rating for the test is line-to-ground, not line-to-line. Lift the neutral ground strap for the specimen test and put it back.",
+    "reference": "Power-factor test method. ATS-2025 7.2.2.D.4 is the corrected limit you compare with after the shot.",
+    "verified": false,
+    "kb": "field-methods.md#pf-method"
   }
 ]

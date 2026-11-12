@@ -58,6 +58,8 @@ Articles used as optional “Learn more” links, not as copied text:
 - NETA formula sheet (the exam handout). Drill what it does not contain; see `math.md`.
 - Manufacturer breaker and relay manuals. They outrank a NETA table when ATS says “in the absence of manufacturer’s data.”
 
+Manufacturer trip-unit manuals, relay manuals, and test-set manuals are cited as “per manufacturer data.” Job sheets and one-lines stay off this public repo. A time that was only calculated, and not read from the published curve, is not used as a quiz answer.
+
 ## Adding a source later
 
 Append a link and one sentence on what it is allowed to support. If you use it for a number, either verify that number in ATS, MTS, or 70E and set `verified` true with the clause, or leave `verified` false and say “verify in ATS” in the reference when you are not sure.

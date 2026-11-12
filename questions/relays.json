@@ -145,5 +145,167 @@
     "reference": "Relay contact convention (a/b); scheme logic",
     "verified": false,
     "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-009",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "ATS 7.9.1\u2019s time-overcurrent (51) test is:",
+    "choices": [
+      "Pickup only",
+      "Minimum pickup, and time at two points on the curve",
+      "A single instantaneous shot",
+      "Slope and harmonic restraint"
+    ],
+    "answer": 1,
+    "explanation": "The 51 list is minimum pickup and time delay at two points on the curve. Slope and harmonic restraint are the 87 list. One point cannot show that the curve is the one in the study.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 device 51",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-010",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A directional overcurrent (67) test in ATS 7.9.1 includes:",
+    "choices": [
+      "Only the target reset",
+      "Directional-unit pickup at maximum torque angle, the closing zone, and the overcurrent unit",
+      "Oil dielectric of the case",
+      "A 10-minute polarization index"
+    ],
+    "answer": 1,
+    "explanation": "Direction is the point of a 67. Pickup at the maximum-torque angle, the zone where the contact closes, and the overcurrent unit all belong in that test. A non-directional 51 will not catch a reversed polarizing circuit.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 device 67",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-011",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a microprocessor feeder relay, ATS 7.9.2 says element timing is judged against:",
+    "choices": [
+      "One NETA percent for every relay",
+      "The manufacturer\u2019s recommended tolerances",
+      "Table 100.7",
+      "The inspector\u2019s stopwatch habit"
+    ],
+    "answer": 1,
+    "explanation": "7.9.2.D.4 says protection elements should operate within the manufacturer\u2019s recommended tolerances. A 50 element and a 51 element on the same relay can have different published bands. Do not borrow Table 100.7 from molded-case breakers.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.D.4",
+    "verified": true,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-012",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Restoring a relay test switch after injection, the safe order is:",
+    "choices": [
+      "Close the trip poles first so the breaker is protected while CTs are still open",
+      "Close the trip poles last, after the current circuits are restored",
+      "Leave the CT shorting blade open as a spare",
+      "Open the trip poles and go home"
+    ],
+    "answer": 1,
+    "explanation": "The trip circuit is opened first on the way in, so a stray assertion does not trip, and the CT shorting blade shorts before the current circuit opens. On the way out the trip poles close last, after current is restored. Leaving a CT open under load is the hazard.",
+    "reference": "Test-switch practice for CT and trip circuits; never open a loaded CT secondary. ATS 7.10.1 requires the secondary to stay a complete circuit.",
+    "verified": false,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-013",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Settings and logic in a microprocessor relay should agree with:",
+    "choices": [
+      "Whatever was found, because changing it is outside testing",
+      "The most recent engineered setting file",
+      "Factory default",
+      "The previous technician\u2019s memory"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.9.2 says settings and logic should agree with the latest engineered setting files. As-found that does not match gets written down. As-left is the file, not a dial you liked during the test.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2",
+    "verified": true,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-014",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A SEL-751-class feeder relay publishes its own pickup and timing tolerances. Those numbers are:",
+    "choices": [
+      "Replaced by a single NETA percent",
+      "What you test against for that relay, because 7.9.2 points at the manufacturer",
+      "Taken from Table 100.8",
+      "Optional if metering looks right"
+    ],
+    "answer": 1,
+    "explanation": "The percent on the relay manual is that relay\u2019s band. ATS 7.9.2.D.4 tells you to use the manufacturer\u2019s recommended tolerances. Quoting another relay\u2019s \u00b13% or a breaker\u2019s Table 100.8 is the wrong document.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.D.4; element tolerances per the relay manufacturer",
+    "verified": true,
+    "kb": "field-methods.md#relay-elements"
+  },
+  {
+    "id": "relay-015",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Two lockout relays, 86-1 and 86-2, both trip the same breaker and each has a b contact in the close circuit. After a trip, close permissive returns when:",
+    "choices": [
+      "Either lockout is reset",
+      "Both lockouts are reset",
+      "The breaker is closed once, which resets both",
+      "The 51 target is cleared"
+    ],
+    "answer": 1,
+    "explanation": "Each b contact is open while its coil is picked up. Series permissives mean both must be reset. Resetting one and closing into the other lockout is how a second trip surprises people.",
+    "reference": "Control-schematic logic for series 86 b contacts",
+    "verified": false,
+    "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-016",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Device 25, synchronism check, in a generator breaker close scheme should:",
+    "choices": [
+      "Close the breaker by itself as soon as frequency is near",
+      "Block the close until voltage, angle, and slip are inside the setting",
+      "Replace the 86",
+      "Be defeated for the first parallel"
+    ],
+    "answer": 1,
+    "explanation": "25 supervises the close. It does not replace the operator or the 86. ATS 7.22.1 still wants phase rotation, phasing, and synchronizing proved. Bypassing 25 for \u201cthe first time\u201d is how out-of-phase closes happen.",
+    "reference": "Device 25 practice; ANSI/NETA ATS-2025 7.22.1.B.3",
+    "verified": false,
+    "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-017",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A close scheme uses an 86 b contact and a 52 b contact in series. The breaker is closed and the lockout is reset. The 52 b contact is:",
+    "choices": [
+      "Closed, because the breaker is closed",
+      "Open, because a b contact opens when the breaker is closed",
+      "A trip contact",
+      "Irrelevant until the 51 times out"
+    ],
+    "answer": 1,
+    "explanation": "A b contact is closed only while its device is dropped out. A closed breaker has opened its b contact, which is why that contact is the anti-pump or spring-release permissive and not a seal-in of the close. The 86 b contact is closed only while the lockout is reset.",
+    "reference": "a/b contact logic",
+    "verified": false,
+    "kb": "level-3.md#schemes"
   }
 ]

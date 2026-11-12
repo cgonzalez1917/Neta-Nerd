@@ -432,5 +432,437 @@
     "reference": "ANSI/NETA ATS-2025 and ANSI/NETA MTS-2023, document titles and scope",
     "verified": true,
     "kb": "level-2.md#expectations"
+  },
+  {
+    "id": "math-025",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 20 A single-phase load has 0.25 \u03a9 of conductor each way. The round-trip voltage drop is:",
+    "choices": [
+      "5 V",
+      "10 V",
+      "20 V",
+      "0.25 V"
+    ],
+    "answer": 1,
+    "explanation": "There are two conductors. Drop = 2 \u00d7 I \u00d7 R = 2 \u00d7 20 \u00d7 0.25 = 10 V. Using one conductor only cuts the drop in half.",
+    "reference": "DC and single-phase voltage drop, I\u00d7R on both ways. Not on the NETA formula sheet as a finished recipe.",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-026",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A CT secondary carries 5 A through 0.20 \u03a9 of leads and devices. The burden is:",
+    "choices": [
+      "1 VA",
+      "5 VA",
+      "25 VA",
+      "0.04 VA"
+    ],
+    "answer": 1,
+    "explanation": "VA = I\u00b2R = 25 \u00d7 0.20 = 5 VA. Dividing 5 A by 0.20 \u03a9 gives siemens, not volt-amperes.",
+    "reference": "CT burden, S = I\u00b2R",
+    "verified": false,
+    "kb": "math.md#ct-ratio"
+  },
+  {
+    "id": "math-027",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "XL of a 50 mH coil at 60 Hz is about:",
+    "choices": [
+      "3.0 \u03a9",
+      "18.8 \u03a9",
+      "188 \u03a9",
+      "0.19 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "XL = 2\u03c0fL with L in henries. 50 mH is 0.050 H, so 2\u03c0 \u00d7 60 \u00d7 0.050 \u2248 18.8 \u03a9. Leaving the milli prefix on produces about 18 800 \u03a9.",
+    "reference": "XL = 2\u03c0fL",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-028",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "XC of a 2 \u00b5F capacitor at 60 Hz is about:",
+    "choices": [
+      "133 \u03a9",
+      "1330 \u03a9",
+      "13.3 \u03a9",
+      "5310 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "XC = 1/(2\u03c0fC) with C in farads. 2 \u00b5F is 2\u00d710\u207b\u2076 F, so XC \u2248 1326 \u03a9, about 1330 \u03a9. Microfarads left as farads make the capacitor look like a short.",
+    "reference": "XC = 1/(2\u03c0fC)",
+    "verified": false,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-029",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A load is 36 kW at 0.80 power factor. Reactive power is:",
+    "choices": [
+      "45 kvar",
+      "27 kvar",
+      "36 kvar",
+      "80 kvar"
+    ],
+    "answer": 1,
+    "explanation": "kVA = 36 / 0.80 = 45. kvar = \u221a(45\u00b2 \u2212 36\u00b2) = \u221a(2025 \u2212 1296) = \u221a729 = 27. The 45 is apparent power. The square root is not printed on the formula sheet.",
+    "reference": "Power triangle",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-030",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Solid insulation, not a rotating machine, measures 40 M\u03a9 at 25 \u00b0C. Table 100.14.1\u2019s multiplier to 20 \u00b0C is 1.25. The corrected value is:",
+    "choices": [
+      "32 M\u03a9",
+      "40 M\u03a9",
+      "50 M\u03a9",
+      "125 M\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Rc = Ra \u00d7 K = 40 \u00d7 1.25 = 50 M\u03a9. The oil column at 25 \u00b0C is 1.40, not 1.25. Use the solid-insulation column for dry gear.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.14.1",
+    "verified": true,
+    "kb": "insulation.md#temp-correction"
+  },
+  {
+    "id": "math-031",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A motor insulation test for a machine of 200 hp or less uses the 60-second and 30-second readings. Those readings are 180 M\u03a9 and 120 M\u03a9. The dielectric absorption ratio is:",
+    "choices": [
+      "0.67",
+      "1.50",
+      "60",
+      "300 M\u03a9"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.15.1 writes the short test as a 60/30 dielectric absorption ratio, so 180 / 120 = 1.50. Inverting the times gives 0.67 and fails a decent winding on paper.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "math-032",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 12 V drop on a 480 V circuit is what percent?",
+    "choices": [
+      "2.5%",
+      "12%",
+      "4.0%",
+      "0.25%"
+    ],
+    "answer": 0,
+    "explanation": "Percent drop = 12 / 480 \u00d7 100 = 2.5%. Quoting 12% treats the volts as if they were already a percent.",
+    "reference": "Voltage-drop percent",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-033",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 400:5 CT sees 80 A primary. Secondary current is:",
+    "choices": [
+      "5.0 A",
+      "1.0 A",
+      "16 A",
+      "0.2 A"
+    ],
+    "answer": 1,
+    "explanation": "The ratio is 80. Secondary = 80 / 80 = 1.0 A. Five amperes would mean full 400 A primary.",
+    "reference": "CT ratio",
+    "verified": false,
+    "kb": "math.md#ct-ratio"
+  },
+  {
+    "id": "math-034",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "6 \u03a9 in parallel with 3 \u03a9 is:",
+    "choices": [
+      "9 \u03a9",
+      "2 \u03a9",
+      "4.5 \u03a9",
+      "18 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "(6\u00d73)/(6+3) = 18/9 = 2 \u03a9. Series would be 9 \u03a9. The parallel recipe is not spelled out on the formula sheet.",
+    "reference": "Parallel resistance",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-035",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "90 kW on a 100 kVA feeder is what power factor?",
+    "choices": [
+      "0.90",
+      "1.11",
+      "0.09",
+      "90"
+    ],
+    "answer": 0,
+    "explanation": "PF = kW / kVA = 90/100 = 0.90. The formula sheet does give kW = kVA \u00d7 PF, so this one rearranges a line you are handed. 1.11 is the fraction upside down.",
+    "reference": "PF = P/S",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-036",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "An aluminum winding measures 1.00 \u03a9 at 20 \u00b0C. Using 225 as the aluminum constant, the resistance at 75 \u00b0C is about:",
+    "choices": [
+      "1.00 \u03a9",
+      "1.22 \u03a9",
+      "0.82 \u03a9",
+      "2.25 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "R75 = 1.00 \u00d7 (225+75)/(225+20) = 300/245 \u2248 1.22 \u03a9. Copper\u2019s 234.5 would give a slightly different number. The constant is not on the exam formula sheet.",
+    "reference": "Aluminum temperature correction, constant 225",
+    "verified": false,
+    "kb": "math.md#copper"
+  },
+  {
+    "id": "math-037",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Three-phase current for a 75 kVA load at 208 V is about:",
+    "choices": [
+      "208 A",
+      "361 A",
+      "125 A",
+      "75 A"
+    ],
+    "answer": 0,
+    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. The three-phase VA identity is on the sheet; the rearrangement is yours.",
+    "reference": "I = S / (\u221a3 \u00d7 VLL)",
+    "verified": false,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-038",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 15 \u00b0C rise is how many Fahrenheit degrees of rise?",
+    "choices": [
+      "15 \u00b0F",
+      "27 \u00b0F",
+      "59 \u00b0F",
+      "47 \u00b0F"
+    ],
+    "answer": 1,
+    "explanation": "A difference converts by 1.8 with no +32. 15 \u00d7 1.8 = 27 \u00b0F. Adding 32 turns a rise into a fake temperature. Table 100.18 is written in Celsius.",
+    "reference": "Temperature-difference conversion",
+    "verified": false,
+    "kb": "math.md#delta-t"
+  },
+  {
+    "id": "math-039",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Two 10 \u03a9 resistors in series on a 120 V source. Current is:",
+    "choices": [
+      "12 A",
+      "6 A",
+      "10 A",
+      "120 A"
+    ],
+    "answer": 1,
+    "explanation": "Series resistance is 20 \u03a9. I = 120/20 = 6 A. Each resistor then drops 60 V. KVL is the check: 60 + 60 = 120.",
+    "reference": "Ohm's law and series resistance",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-040",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A trip unit defines long-time delay at 6\u00d7Ir with a published tolerance of +0/\u221230%. The dial is 4 s. At 6\u00d7Ir, which measured time is inside the window?",
+    "choices": [
+      "2.1 s",
+      "3.2 s",
+      "4.8 s",
+      "8.0 s"
+    ],
+    "answer": 1,
+    "explanation": "The window is 0.7\u00d74 = 2.8 s up to 4.0 s. 3.2 s is inside. 2.1 s is fast, 4.8 s is slower than the dial. This is the band at the multiple where the dial is defined, per that manufacturer, not a time scaled to some other current.",
+    "reference": "Per manufacturer data: long-time delay defined at 6\u00d7Ir, tolerance +0/\u221230%. ATS-2025 7.6.1.2 uses the published tolerance when it exists.",
+    "verified": false,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "math-041",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A manual says long-time pickup is 110% of Ir, \u00b15%. Ir is 500 A. Which pickup current fails?",
+    "choices": [
+      "540 A",
+      "560 A",
+      "600 A",
+      "530 A"
+    ],
+    "answer": 2,
+    "explanation": "Nominal pickup is 1.10 \u00d7 500 = 550 A. Five percent of 550 is 27.5 A, so the band is about 522 A to 578 A. 600 A is outside. 530 A and 560 A sit inside. Use this only for a unit whose manual actually says 110% \u00b15%.",
+    "reference": "Per manufacturer data (long-time pickup 110% of Ir, \u00b15%). Not a NETA table.",
+    "verified": false,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "math-042",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Nameplate turns ratio is 240 (1200:5). The set measures 241.2. Percent error is about:",
+    "choices": [
+      "+0.5%",
+      "\u22120.5%",
+      "+1.2 turns",
+      "+5%"
+    ],
+    "answer": 0,
+    "explanation": "(241.2 \u2212 240) / 240 \u00d7 100 = +0.5%. The sign matters: measured high is positive. A 0.5% miss is not automatically a failure; the acceptance limit is the one for that CT\u2019s job, not this arithmetic.",
+    "reference": "Ratio error = (measured \u2212 nameplate) / nameplate",
+    "verified": false,
+    "kb": "field-methods.md#ct-knee"
+  },
+  {
+    "id": "math-043",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "You want no more than 3% drop on a 480 V circuit. The largest drop you can accept is about:",
+    "choices": [
+      "3 V",
+      "14.4 V",
+      "48 V",
+      "144 V"
+    ],
+    "answer": 1,
+    "explanation": "0.03 \u00d7 480 = 14.4 V. Three volts would be 3% of 100 V. The percent is of the system voltage, not of the load current.",
+    "reference": "Voltage-drop percent",
+    "verified": false,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-044",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Oil-immersed insulation reads 200 M\u03a9 at 10 \u00b0C. Table 100.14.1\u2019s multiplier to 20 \u00b0C for immersed oil at 10 \u00b0C is 0.50. Corrected resistance is:",
+    "choices": [
+      "400 M\u03a9",
+      "200 M\u03a9",
+      "100 M\u03a9",
+      "0.50 M\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Colder insulation reads higher. Rc = 200 \u00d7 0.50 = 100 M\u03a9 at 20 \u00b0C. Multiplying by 2 because \u201cit was cold\u201d doubles the wrong way and hides a weak winding.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.14.1",
+    "verified": true,
+    "kb": "insulation.md#temp-correction"
+  },
+  {
+    "id": "math-045",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Long-time delay is defined at 6\u00d7Ir. Someone scales tr to 12\u00d7Ir with (6/12)\u00b2 and fails the breaker on that number. What is wrong?",
+    "choices": [
+      "Nothing; the square law is always the acceptance limit",
+      "A time off the defined multiple is calculated. Confirm it on the manufacturer\u2019s curve before you call a failure",
+      "Table 100.8 already is that scaled time",
+      "Short-time delay uses the same tr dial"
+    ],
+    "answer": 1,
+    "explanation": "I\u00b2t scaling is a way to estimate. It is not a published window unless the curve or the manual gives it at that multiple. Fail the breaker on the band the document actually prints.",
+    "reference": "Per manufacturer data. Calculated times off the defined multiple are not a pass/fail by themselves.",
+    "verified": false,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "math-046",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 500 kVA transformer at 480 V has full-load current about:",
+    "choices": [
+      "500 A",
+      "601 A",
+      "1042 A",
+      "250 A"
+    ],
+    "answer": 1,
+    "explanation": "I = 500000 / (\u221a3 \u00d7 480) \u2248 601 A. 1042 A drops the \u221a3. Full-load current is the denominator when you later divide by per-unit impedance to estimate fault current.",
+    "reference": "I = S / (\u221a3 \u00d7 V)",
+    "verified": false,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-047",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "On a power-factor set, an ungrounded-specimen (UST) reading is mainly:",
+    "choices": [
+      "The insulation between the two leads, with the ground path left out",
+      "The tank-to-core resistance only",
+      "A DC megohm",
+      "The excitation current of all three phases at once"
+    ],
+    "answer": 0,
+    "explanation": "UST measures between the high-voltage lead and the return lead. GST with the other winding grounded folds in both the ground insulation and the interwinding insulation. The subtraction check is how you know the leads are telling one story.",
+    "reference": "Power-factor test method (GST versus UST). ATS-2025 7.2.2.D.4 is how you judge the corrected percent.",
+    "verified": false,
+    "kb": "field-methods.md#pf-method"
+  },
+  {
+    "id": "math-048",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "30 kW at 0.60 power factor. kvar is:",
+    "choices": [
+      "18",
+      "40",
+      "50",
+      "60"
+    ],
+    "answer": 1,
+    "explanation": "kVA = 30 / 0.60 = 50. kvar = \u221a(50\u00b2 \u2212 30\u00b2) = \u221a(2500 \u2212 900) = \u221a1600 = 40. It is the 3-4-5 triangle in kilowatts. 50 is the kVA.",
+    "reference": "Power triangle",
+    "verified": false,
+    "kb": "math.md#power"
   }
 ]

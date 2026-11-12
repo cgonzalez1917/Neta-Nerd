@@ -216,5 +216,59 @@
     "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.8; zone-interlock scheme logic",
     "verified": false,
     "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "brkr-013",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "A single-pole primary shot on a four-pole breaker with residual ground fault will often:",
+    "choices": [
+      "Look like a ground fault and trip the ground element",
+      "Prove the long-time band cleanly",
+      "Bypass the sensors",
+      "Read as a healthy three-phase load"
+    ],
+    "answer": 0,
+    "explanation": "One pole in and nowhere out is residual current, which is what the ground function is built to see. Run the return through the neutral pole, or raise the ground function the way that manual allows, then put the settings back.",
+    "reference": "Per manufacturer data for residual ground-fault trip units; ATS 7.6.1.2 still requires the ground function to be tested on purpose",
+    "verified": false,
+    "kb": "field-methods.md#trip-window"
+  },
+  {
+    "id": "brkr-014",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "The trip-unit manual publishes an instantaneous tolerance. ATS 7.6.1.2 says you:",
+    "choices": [
+      "Ignore the manual and use Table 100.8 anyway",
+      "Use the published tolerance; Table 100.8 applies only in the absence of manufacturer data",
+      "Average the manual and Table 100.8",
+      "Use the long-time 300% table"
+    ],
+    "answer": 1,
+    "explanation": "Instantaneous pickup shall be as specified and within the manufacturer\u2019s published tolerances. Table 100.8 is the fallback when that data does not exist. A manual that says \u00b110% is a tighter or different story than the adjustable molded-case band.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.D.7",
+    "verified": true,
+    "kb": "breakers.md#tolerances"
+  },
+  {
+    "id": "brkr-015",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "Short-time timing is short, about a few cycles, and zone-interlock restraint was never jumpered. The likely cause is:",
+    "choices": [
+      "The long-time dial",
+      "The element tripped unrestrained because no restraint signal was present",
+      "Table 100.7",
+      "A failed contact-resistance test"
+    ],
+    "answer": 1,
+    "explanation": "Without a restraint jumper, short-time and ground are allowed to trip on the fast unrestrained time. That is what the scheme does in service when the downstream breaker is not holding them off. Jumper only for the delayed-band shot, then remove it and restore settings.",
+    "reference": "Per manufacturer data for zone-selective interlocking. ATS-2025 7.6.1.2.B.8 requires the interlock to be verified.",
+    "verified": false,
+    "kb": "field-methods.md#trip-window"
   }
 ]

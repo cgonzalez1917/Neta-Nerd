@@ -1,0 +1,56 @@
+[
+  {
+    "id": "recl-001",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "An oil or vacuum recloser is tested under:",
+    "choices": [
+      "The molded-case breaker section only",
+      "ATS 7.24.1, its own recloser procedure",
+      "The UPS section",
+      "Table 100.7 at 300%"
+    ],
+    "answer": 1,
+    "explanation": "Reclosers and sectionalizers have their own procedure. The trip-time table for molded-case breakers does not become the recloser\u2019s curve. Control wiring, insulation, and contact resistance are still in 7.24.1, with limits that rhyme with breakers.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1",
+    "verified": true,
+    "kb": "apparatus.md#reclosers"
+  },
+  {
+    "id": "recl-002",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Recloser control wiring, ATS 7.24.1, shall not be less than:",
+    "choices": [
+      "2 M\u03a9",
+      "25 M\u03a9",
+      "0.5 \u03a9",
+      "1000 M\u03a9"
+    ],
+    "answer": 0,
+    "explanation": "7.24.1.D.4 sets control-wiring insulation resistance at not less than 2 M\u03a9, the same floor used on breaker control circuits. Power-pole insulation is judged separately.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.D.4",
+    "verified": true,
+    "kb": "apparatus.md#reclosers"
+  },
+  {
+    "id": "recl-003",
+    "level": "III",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Insulating liquid in an oil recloser is judged against:",
+    "choices": [
+      "Table 100.4",
+      "Table 100.7",
+      "The fiber dB/km limit",
+      "Table 100.18"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.24.1 points the liquid at Table 100.4, the same family of limits used for new insulating oil. Do not grade recloser oil with a breaker timing table.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.D.5",
+    "verified": true,
+    "kb": "apparatus.md#reclosers"
+  }
+]

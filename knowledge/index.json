@@ -14,6 +14,8 @@
     {"file": "grounding.md", "title": "Grounding and ground-fault protection", "level": "II"},
     {"file": "batteries.md", "title": "Station batteries", "level": "II"},
     {"file": "thermography.md", "title": "Infrared thermography", "level": "II"},
+    {"file": "field-methods.md", "title": "Field methods: injection, CTs, PF, motors", "level": "II"},
+    {"file": "apparatus.md", "title": "MV breakers, reclosers, motors, emergency, fiber, EVSE", "level": "II"},
     {"file": "sources.md", "title": "Sources and what not to copy", "level": ""}
   ]
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "evse-001",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "ATS 7.26\u2019s electrical list for a charger includes:",
+    "choices": [
+      "Proximity pilot and control pilot",
+      "A vacuum interrupter pressure test",
+      "Transformer turns ratio of the site",
+      "Table 100.7 at 300% of the charger nameplate"
+    ],
+    "answer": 0,
+    "explanation": "The procedure names protective earth, conductor resistance, touch voltage, personal protection, nuisance trip, proximity pilot, control pilot, and output checks. It is not a molded-case timing table.",
+    "reference": "ANSI/NETA ATS-2025 7.26.B",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-002",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "Which inspection item is visual and mechanical on an EV charger, not one of the pilot measurements?",
+    "choices": [
+      "Control-pilot voltage",
+      "Operation and sequencing of interlocks",
+      "Output ripple",
+      "Touch voltage"
+    ],
+    "answer": 1,
+    "explanation": "7.26.A.7 puts interlocking sequence in the visual and mechanical inspection. The pilots and touch voltage are in the electrical list. Both get done; they are not the same paragraph.",
+    "reference": "ANSI/NETA ATS-2025 7.26.A.7",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-003",
+    "level": "III",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "Protective-conductor resistance on an EV charger above 0.5 \u03a9 is:",
+    "choices": [
+      "Acceptable if the pilot looks fine",
+      "Investigated",
+      "The ground-rod target of 5 \u03a9, so it passes",
+      "A tan-delta problem"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.26.D.2.2 says investigate resistance values that exceed 0.5 \u03a9. That is the same kind of bond screen used on switchgear frames, not the 5 \u03a9 electrode target.",
+    "reference": "ANSI/NETA ATS-2025 7.26.D.2.2",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  }
+]

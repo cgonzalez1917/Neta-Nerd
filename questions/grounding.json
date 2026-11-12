@@ -71,5 +71,59 @@
     "reference": "ANSI/NETA ATS-2025 7.14.A",
     "verified": true,
     "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-005",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A fall-of-potential test is still sloping at every probe position. The useful next step is:",
+    "choices": [
+      "Average the slope and publish it",
+      "Move the current probe farther out until a flat section appears",
+      "Switch to a megohmmeter at 1000 V",
+      "Report 25 \u03a9 because that is the NEC cap"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 81, which ATS 7.13 sends you to, wants the potential probe in a flat part of the curve. A constant slope means the current probe is still inside the electrode\u2019s influence. The 25 \u03a9 figure is a different rule and is not this test\u2019s target.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; IEEE 81 method",
+    "verified": false,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-006",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A clamp-on ground tester on a single rod whose bonding has been lifted will:",
+    "choices": [
+      "Read the true electrode resistance",
+      "Lack a return path, so the reading is not the rod\u2019s resistance",
+      "Match a fall-of-potential test within 1%",
+      "Satisfy ATS 7.13 by itself"
+    ],
+    "answer": 1,
+    "explanation": "A clamp-on looks at a loop. With the bond open there is no loop, and the number is not the electrode resistance ATS asks you to compare with 5 \u03a9 or 1 \u03a9. Fall-of-potential is the method 7.13 names.",
+    "reference": "Clamp-on ground-tester limitation; ATS 7.13.B.2 names fall-of-potential or an IEEE 81 alternative",
+    "verified": false,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-007",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "A zero-sequence sensor was installed with one phase left outside the window. ATS 7.14\u2019s check that fails is:",
+    "choices": [
+      "All phase conductors and the neutral pass through in the same direction",
+      "The ground rod is under 5 \u03a9",
+      "The neutral is unbonded",
+      "Watts-loss of the arrester"
+    ],
+    "answer": 0,
+    "explanation": "Leaving a phase outside the window makes normal current look like residual. 7.14 requires every phase and the neutral through the sensor in the same direction, and it forbids the equipment ground in that window.",
+    "reference": "ANSI/NETA ATS-2025 7.14.A",
+    "verified": true,
+    "kb": "grounding.md#gfp"
   }
 ]

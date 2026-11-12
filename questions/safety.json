@@ -289,5 +289,257 @@
     "reference": "NFPA 70E-2024 130.7 informational note",
     "verified": true,
     "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-017",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Class 1 rubber insulating gloves are rated for what maximum AC use voltage in Table 130.7(C)(7)(a)?",
+    "choices": [
+      "1000 V",
+      "7500 V",
+      "17000 V",
+      "500 V"
+    ],
+    "answer": 1,
+    "explanation": "Class 00 is 500 V, class 0 is 1000 V, class 1 is 7500 V, and class 2 is 17000 V AC. The class has to cover the voltage you can actually touch.",
+    "reference": "NFPA 70E-2024 Table 130.7(C)(7)(a)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-018",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "For fixed exposed AC parts at 5.1 kV to 15 kV, Table 130.4(E)(a) lists the limited and restricted approach boundaries as:",
+    "choices": [
+      "3 ft 6 in and 1 ft 0 in",
+      "5 ft 0 in and 2 ft 2 in",
+      "10 ft 0 in and avoid contact",
+      "2 ft 1 in and 1 ft 0 in"
+    ],
+    "answer": 1,
+    "explanation": "Fixed parts in that row are a 5 ft limited approach and a 2 ft 2 in restricted approach. The 3 ft 6 in / 1 ft 0 in pair is the 151\u2013750 V row. Do not carry the low-voltage numbers onto a 15 kV termination.",
+    "reference": "NFPA 70E-2024 Table 130.4(E)(a)",
+    "verified": true,
+    "kb": "safety.md#boundaries"
+  },
+  {
+    "id": "safety-019",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Which fiber is forbidden in underlayers next to skin when arc-rated clothing is required?",
+    "choices": [
+      "Cotton",
+      "Wool",
+      "Polyester",
+      "A nonmelting fabric used only as an outer shell"
+    ],
+    "answer": 2,
+    "explanation": "130.7 bars meltable underlayers: acetate, nylon, polyester, polypropylene, and spandex. Cotton and wool are the usual nonmelting layers. An outer shell is a different rule.",
+    "reference": "NFPA 70E-2024 130.7 underlayers",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-020",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before the first use of the day, rubber insulating gloves are:",
+    "choices": [
+      "Electrically retested in the shop every morning",
+      "Air-tested along with the visual inspection",
+      "Wetted so they seal to the hand",
+      "Legal to use with a cut if the cuff is rolled"
+    ],
+    "answer": 1,
+    "explanation": "130.7(C)(7)(c) pairs the daily inspection with an air test. The electrical retest interval is six months in Table 130.7(C)(7)(b), not every morning.",
+    "reference": "NFPA 70E-2024 130.7(C)(7)(c)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-021",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "High-capacitance elements, before the associated equipment is touched, are to be:",
+    "choices": [
+      "Left charged so the megger reading stays stable",
+      "Discharged, then shorted and grounded",
+      "Only tagged, because a capacitor cannot reclose a breaker",
+      "Tested with a proximity pen and then ignored"
+    ],
+    "answer": 1,
+    "explanation": "120.5(B)(2) says capacitors are discharged and high-capacitance elements are also short-circuited and grounded. A tag does not bleed the charge.",
+    "reference": "NFPA 70E-2024 120.5(B)(2)",
+    "verified": true,
+    "kb": "safety.md#loto"
+  },
+  {
+    "id": "safety-022",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Thermography that stays outside the restricted approach boundary, done by a qualified person with the required PPE, is:",
+    "choices": [
+      "Always a permit job",
+      "One of the energized-work-permit exemptions",
+      "Forbidden above 50 V",
+      "A substitute for an absence-of-voltage test"
+    ],
+    "answer": 1,
+    "explanation": "130.2(C)(2) exempts thermography, ultrasound, and visual inspection when the restricted approach boundary is not crossed. Crossing that boundary, or opening gear into the boundary, puts the exemption away.",
+    "reference": "NFPA 70E-2024 130.2(C)(2)",
+    "verified": true,
+    "kb": "safety.md#permit"
+  },
+  {
+    "id": "safety-023",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A 480 V meter and its leads must be:",
+    "choices": [
+      "Any CAT II meter, because the panel is indoors",
+      "Rated for the circuit, approved for the use, and used as the maker instructs",
+      "Rated only for the control voltage",
+      "Replaced by a solenoid tester with no category mark"
+    ],
+    "answer": 1,
+    "explanation": "110.6(B) requires the instrument and its accessories to be rated for where they are used, approved for the purpose, and used to the instructions. The location\u2019s category still has to match the meter.",
+    "reference": "NFPA 70E-2024 110.6(B)",
+    "verified": true,
+    "kb": "safety.md#instruments"
+  },
+  {
+    "id": "safety-024",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "The arc-flash boundary and the limited approach boundary are:",
+    "choices": [
+      "Always the same distance",
+      "Independent; the arc-flash boundary can be the farther one",
+      "Both taken from Table 130.4(E)(a)",
+      "Canceled once an energized work permit is signed"
+    ],
+    "answer": 1,
+    "explanation": "The note under 130.4(E) says the shock boundaries and the arc-flash boundary are independent, and the arc-flash boundary can be farther out. Table 130.4(E)(a) is shock only; 130.5(E) is the arc-flash boundary.",
+    "reference": "NFPA 70E-2024 130.4(E) informational note",
+    "verified": true,
+    "kb": "safety.md#boundaries"
+  },
+  {
+    "id": "safety-025",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Class 4 rubber gloves, Table 130.7(C)(7)(a), maximum AC use voltage is:",
+    "choices": [
+      "26500 V",
+      "36000 V",
+      "17000 V",
+      "7500 V"
+    ],
+    "answer": 1,
+    "explanation": "Class 3 is 26500 V and class 4 is 36000 V AC. The DC column is higher and is not the number you quote for an AC line.",
+    "reference": "NFPA 70E-2024 Table 130.7(C)(7)(a)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-026",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Rubber gloves used without leather protectors, under the narrow exception, have their AC class:",
+    "choices": [
+      "Left unchanged",
+      "Reduced by half for class 00, and by one whole class for classes 0 through 4",
+      "Raised one class",
+      "Limited to control wiring only"
+    ],
+    "answer": 1,
+    "explanation": "130.7(C)(7)(a) allows bare rubber only with no cutting risk, a retest before the gloves are used again, and that voltage derating. The six-month electrical test still exists for gloves that stay in service with protectors.",
+    "reference": "NFPA 70E-2024 130.7(C)(7)(a)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-027",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An incident-energy analysis is reviewed:",
+    "choices": [
+      "Only after a fault",
+      "At intervals not exceeding 5 years, and sooner if the system changes",
+      "Every outage",
+      "When the PPE category table is also applied to the same equipment"
+    ],
+    "answer": 1,
+    "explanation": "130.5(G) says the analysis is updated when distribution changes could affect it, and reviewed at intervals not to exceed 5 years. 130.5(F) still forbids pairing that analysis with a PPE category on the same equipment.",
+    "reference": "NFPA 70E-2024 130.5(G)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-028",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before a contract crew works, the host employer\u2019s duty in 110.5(A) includes:",
+    "choices": [
+      "Lending them the host\u2019s locks with no briefing",
+      "Informing them of known hazards covered by 70E that they might not recognize",
+      "Signing their energized work permit after the job",
+      "Waiving approach boundaries for testing"
+    ],
+    "answer": 1,
+    "explanation": "The host tells the contractor about known hazards related to the work and about installation information the contractor needs. The contractor still has to train its own people and follow the standard.",
+    "reference": "NFPA 70E-2024 110.5(A)",
+    "verified": true,
+    "kb": "safety.md#eswc"
+  },
+  {
+    "id": "safety-029",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Incident energy for PPE selection is based on the distance to the worker\u2019s:",
+    "choices": [
+      "Hands only",
+      "Face and chest",
+      "Feet",
+      "The arc-flash label, whatever distance it prints"
+    ],
+    "answer": 1,
+    "explanation": "130.5(G) uses the working distance to the face and chest. Hands closer than that distance need extra protection even when the shirt is rated for the chest. The label does not invent a new distance.",
+    "reference": "NFPA 70E-2024 130.5(G)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-030",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Table 130.4(E)(b) for DC, 301 V to 1 kV, restricted approach boundary is:",
+    "choices": [
+      "Avoid contact",
+      "1 ft 0 in",
+      "3 ft 6 in",
+      "5 ft 0 in"
+    ],
+    "answer": 1,
+    "explanation": "That DC row is a 3 ft 6 in limited approach for fixed parts and a 1 ft 0 in restricted approach. Avoid contact is the 50\u2013300 V DC restricted boundary. Do not paste the AC 15 kV numbers onto a DC bus.",
+    "reference": "NFPA 70E-2024 Table 130.4(E)(b)",
+    "verified": true,
+    "kb": "safety.md#boundaries"
   }
 ]

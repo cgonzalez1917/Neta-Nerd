@@ -52,5 +52,113 @@
     "reference": "ANSI/NETA ATS-2025 7.10.2.D.3",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-004",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Insulation resistance of a current transformer and its secondary wiring, ATS 7.10.1, is:",
+    "choices": [
+      "5000 V DC for 10 minutes",
+      "1000 V DC for one minute, unless solid-state parts cannot take it",
+      "Table 100.19 AC withstand",
+      "A megger is forbidden on CT wiring"
+    ],
+    "answer": 1,
+    "explanation": "7.10.1.B.1 specifies 1000 V DC for one minute on each CT and its secondary wiring to ground. If a device on that wiring cannot survive the voltage, follow the manufacturer instead of forcing the shot.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-005",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS 7.10.1 requires an excitation test on which CTs?",
+    "choices": [
+      "Only metering CTs below 600 V",
+      "CTs used for relaying",
+      "Every window CT, and never a bushing CT",
+      "None; excitation was removed from the section"
+    ],
+    "answer": 1,
+    "explanation": "7.10.1.B.4 calls for an excitation test on transformers used for relaying, done to IEEE C57.13.1. Metering CTs still get ratio and polarity. The knee you mark has to be the criterion you agreed on.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4",
+    "verified": true,
+    "kb": "field-methods.md#ct-knee"
+  },
+  {
+    "id": "ct-006",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Burden of a CT circuit is measured:",
+    "choices": [
+      "At the shorting block, with the secondary open under load",
+      "At the CT shorting terminal block, per IEEE C57.13.1",
+      "Only on the primary bushing",
+      "With a megohmmeter"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.10.1.B.5 says measure current-circuit burdens at the CT shorting terminal block in accordance with IEEE C57.13.1. Extra lead and extra relays are what push the CT toward saturation.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.5",
+    "verified": true,
+    "kb": "field-methods.md#ct-knee"
+  },
+  {
+    "id": "ct-007",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Ratio of a CT, ATS 7.10.1, is verified by:",
+    "choices": [
+      "The voltage or current method in IEEE C57.13.1",
+      "A megohmmeter only",
+      "Primary injection at 300% for Table 100.7",
+      "Tan delta of the secondary"
+    ],
+    "answer": 0,
+    "explanation": "7.10.1.B.3 names the voltage method or the current method, both under IEEE C57.13.1. Polarity is the companion test. A ratio that matches the nameplate with the marks reversed is still a failed polarity test.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.3",
+    "verified": true,
+    "kb": "field-methods.md#ct-knee"
+  },
+  {
+    "id": "ct-008",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "You finished a CT with a DC resistance reading and skipped excitation. The core is:",
+    "choices": [
+      "Demagnetized, because DC resistance is gentle",
+      "Likely left magnetized; excitation is what works the flux back down",
+      "Unaffected by DC",
+      "Required to be hipot tested next"
+    ],
+    "answer": 1,
+    "explanation": "A resistance shot drives the core one way. An excitation run that actually reaches saturation walks it back. Stopping after resistance leaves remanence that can bite the next time the CT sees current. The test set\u2019s manual is where the minimum exciting current for that demagnetizing run is written.",
+    "reference": "Per manufacturer data for CT test sets that measure DC resistance before excitation. ATS-2025 7.10.1.B.4 still requires the excitation test on relaying CTs.",
+    "verified": false,
+    "kb": "field-methods.md#ct-knee"
+  },
+  {
+    "id": "ct-009",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "IEEE 30\u00b0, IEEE 45\u00b0, and the 10/50 knee are:",
+    "choices": [
+      "Three names for one voltage",
+      "Different markers on the excitation curve",
+      "Ratio-error classes",
+      "Burden ratings in ohms"
+    ],
+    "answer": 1,
+    "explanation": "Each rule picks a different point on the same plot. A report that says \u201cno knee\u201d often means the run stopped before that marker\u2019s slope showed up. Say which marker you used.",
+    "reference": "CT excitation practice, per the test-set manual. ATS-2025 7.10.1.D.4 compares excitation with the manufacturer curve or IEEE C57.13.1.",
+    "verified": false,
+    "kb": "field-methods.md#ct-knee"
   }
 ]

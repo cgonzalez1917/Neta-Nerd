@@ -16,5 +16,77 @@
     "reference": "ANSI/NETA ATS-2025 7.18.1.1.D.4",
     "verified": true,
     "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-002",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "On a flooded lead-acid bank, ATS 7.18.1.1 says the voltage from positive to ground and from negative to ground should be:",
+    "choices": [
+      "Equal in magnitude",
+      "The positive side twice the negative",
+      "Zero on both sides",
+      "Ignored if cell voltages match"
+    ],
+    "answer": 0,
+    "explanation": "A ground on one half of the stack makes those two readings unequal. Equal magnitude is the screen in 7.18.1.1.D.8. Cell-to-cell spread is a separate 0.05 V check.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.D.8",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-003",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "ATS 7.18.1.2 for vented nickel-cadmium includes which inspection that flooded cells also care about, but the section names it on the nickel-cadmium list?",
+    "choices": [
+      "Pilot-cell electrolyte temperature",
+      "A dissolved-gas sample of the electrolyte",
+      "A turns-ratio test of each cell",
+      "A VLF withstand of the rack"
+    ],
+    "answer": 0,
+    "explanation": "7.18.1.2.A.7 says verify electrolyte level and measure pilot-cell electrolyte temperature. Float voltage without temperature is how a charger gets set wrong. There is no turns-ratio test on a cell.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.2.A.7",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-004",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A flooded lead-acid load test is judged against:",
+    "choices": [
+      "Table 100.7 trip times",
+      "The battery manufacturer or IEEE 450",
+      "A universal 3-hour rate printed in ATS",
+      "The breaker instantaneous setting"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.18.1.1 points the load test at the manufacturer\u2019s data or IEEE 450. Table 100.7 is molded-case breaker timing, not a battery.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.D.7",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-005",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Valve-regulated lead-acid batteries are:",
+    "choices": [
+      "Tested as flooded cells, including specific gravity of every jar",
+      "Their own ATS section, 7.18.1.3, not the flooded procedure",
+      "Exempt from float-voltage checks",
+      "Graded with Table 100.6"
+    ],
+    "answer": 1,
+    "explanation": "Flooded lead-acid is 7.18.1.1, nickel-cadmium is 7.18.1.2, and VRLA is 7.18.1.3. A sealed cell does not give you a specific-gravity sample. Do not copy the flooded electrolyte checks onto it.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.3",
+    "verified": true,
+    "kb": "batteries.md#flooded"
   }
 ]

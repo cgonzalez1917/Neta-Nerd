@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mot-001",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Phase-to-phase stator resistance is an ATS electrical test on AC induction machines rated:",
+    "choices": [
+      "Every fractional-horsepower motor",
+      "2300 V and greater",
+      "Only above 15 kV",
+      "Only when the PI is already below 1.0"
+    ],
+    "answer": 1,
+    "explanation": "7.15.1.B.4 calls for the phase-to-phase stator resistance test at 2300 V and above. It sits beside the insulation-resistance test, not instead of the polarization index.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.4",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-002",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Motor branch-circuit wires are sized from:",
+    "choices": [
+      "Nameplate amperes",
+      "The Code table full-load current, at 125%",
+      "The overload relay setting alone",
+      "The service factor times 50 ft"
+    ],
+    "answer": 1,
+    "explanation": "NEC 430.6(A) sends wire, disconnect, and the branch short-circuit device to the table current. 430.22 is 125% of that table value. The nameplate is what the separate overload uses. Sizing copper from the nameplate is how the wire comes out light.",
+    "reference": "NEC 430.6(A) and 430.22",
+    "verified": false,
+    "kb": "field-methods.md#motor-size"
+  },
+  {
+    "id": "mot-003",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "The separate overload on a motor branch is set from:",
+    "choices": [
+      "Table full-load current",
+      "Nameplate current",
+      "125% of the breaker size",
+      "The feeder\u2019s next-size-up rule"
+    ],
+    "answer": 1,
+    "explanation": "NEC 430.6(A)(2) and 430.32 use the nameplate for the overload. The table current is for wire, disconnect, and the branch short-circuit device. Mixing those two currents is the classic miss.",
+    "reference": "NEC 430.6(A) and 430.32",
+    "verified": false,
+    "kb": "field-methods.md#motor-size"
+  },
+  {
+    "id": "mot-004",
+    "level": "III",
+    "topic": "motors",
+    "domain": "systems",
+    "question": "On a motor branch, the overload and the breaker do different jobs. Which statement matches Article 430?",
+    "choices": [
+      "The overload clears short circuits; the breaker only protects against a stall",
+      "The overload protects against overload and failure to start; the breaker or fuse is the short-circuit and ground-fault device",
+      "They are sized from the same nameplate current and the same table",
+      "The feeder breaker is allowed the same next-size-up as the branch"
+    ],
+    "answer": 1,
+    "explanation": "Part III is the overload, from nameplate current. Part IV is the branch short-circuit device, from table current and Table 430.52. A feeder under 430.62 does not get the branch\u2019s next-size-up. Swapping those roles leaves a stalled motor on a breaker that may never see the overload.",
+    "reference": "NEC 430.32 and 430.52",
+    "verified": false,
+    "kb": "field-methods.md#motor-size"
+  }
+]

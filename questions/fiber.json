@@ -1,0 +1,56 @@
+[
+  {
+    "id": "fbr-001",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "ATS 7.25 checks fiber length, breaks, and splices primarily with:",
+    "choices": [
+      "A megohmmeter",
+      "An optical time-domain reflectometer",
+      "A DLRO",
+      "A primary-injection set"
+    ],
+    "answer": 1,
+    "explanation": "The optical tests are OTDR for length, fractures, and splice reflections, plus a power-loss set for attenuation. A megger does not see a cracked strand.",
+    "reference": "ANSI/NETA ATS-2025 7.25.B",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-002",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "Visible bends in a fiber run are acceptable when they are:",
+    "choices": [
+      "Tighter than the trunking will allow",
+      "Not less than the manufacturer\u2019s minimum bend radius",
+      "At least 1 inch, for every cable",
+      "Ignored if the link still passes light"
+    ],
+    "answer": 1,
+    "explanation": "7.25 holds bends to the manufacturer\u2019s minimum radius. A link that still \u201chas light\u201d can be bruised enough to fail the loss spec later.",
+    "reference": "ANSI/NETA ATS-2025 7.25.A.4 and D",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-003",
+    "level": "III",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "With no project loss spec, fiber attenuation is held to:",
+    "choices": [
+      "1 dB per splice, always",
+      "The manufacturer\u2019s recommendation, reported in dB/km",
+      "Table 100.1 megohms",
+      "Whatever the OTDR defaults to"
+    ],
+    "answer": 1,
+    "explanation": "7.25.D.3 says attenuation is expressed in dB/km and, when the site has no spec, losses stay within the manufacturer\u2019s recommendation. Inventing 1 dB is not that paragraph.",
+    "reference": "ANSI/NETA ATS-2025 7.25.D.3",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
+  }
+]

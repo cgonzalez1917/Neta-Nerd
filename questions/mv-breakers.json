@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mvbr-001",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Control-wiring insulation resistance on a medium-voltage vacuum breaker shall not be less than:",
+    "choices": [
+      "2 M\u03a9",
+      "100 M\u03a9",
+      "500 M\u03a9",
+      "1 \u03a9"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.6.3.D.2 uses the same 2 M\u03a9 control-wire floor as the low-voltage power breaker. The pole insulation is a different test and goes to Table 100.1 when the manufacturer is silent.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.D.2",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-002",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "With no manufacturer contact-resistance band, a medium-voltage vacuum breaker pole is investigated when it deviates from adjacent poles by more than:",
+    "choices": [
+      "2%",
+      "10% of nameplate",
+      "50% of the lowest value",
+      "1\u00d710\u207b\u00b2 Pa"
+    ],
+    "answer": 2,
+    "explanation": "7.6.3.D.3 is the familiar 50-percent-of-the-lowest screen. The 10 percent figure is bushing power factor and capacitance. The pascal number is interrupter pressure, not microhms.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.D.3",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-003",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "The magnetron atmospheric-condition test on each vacuum interrupter is:",
+    "choices": [
+      "Required on every new bottle before any other test",
+      "Marked optional in ATS 7.6.3",
+      "A substitute for the contact-resistance test",
+      "The same test as a turns-ratio test"
+    ],
+    "answer": 1,
+    "explanation": "The MAC test carries the optional asterisk. The dielectric withstand across the open bottle is the integrity test that is written as a performed test. Do not skip the microhm check because a bottle \u201cholds vacuum.\u201d",
+    "reference": "ANSI/NETA ATS-2025 7.6.3 electrical tests",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-004",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Bushing power factor and capacitance on a medium-voltage vacuum breaker should stay within what percent of nameplate?",
+    "choices": [
+      "2%",
+      "10%",
+      "50%",
+      "0.5%"
+    ],
+    "answer": 1,
+    "explanation": "ATS 7.6.3.D.8 says within ten percent of the nameplate rating. Hot-collar results are compared with similar bushings on a milliampere or milliwatt basis, not forced into that same 10 percent sentence.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.D.8",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-005",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "With no manufacturer vacuum number, interrupter pressure shall not exceed:",
+    "choices": [
+      "1\u00d710\u207b\u00b2 Pa, and adjacent poles within two orders of magnitude",
+      "1 Pa, with poles matched within 1%",
+      "500 M\u03a9",
+      "0.5 \u03a9"
+    ],
+    "answer": 0,
+    "explanation": "7.6.3.D.9 is 1\u00d710\u207b\u00b2 Pa, and the poles shall not differ by more than two orders of magnitude. A bottle that is a hundred times softer than its neighbor is outside that screen even if you like the absolute number.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.D.9",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  }
+]

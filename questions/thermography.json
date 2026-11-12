@@ -16,5 +16,59 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.18",
     "verified": true,
     "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-002",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "Two similar lugs under similar load differ by 8 \u00b0C. Table 100.18 calls that:",
+    "choices": [
+      "Possible deficiency; investigate",
+      "Probable deficiency; repair as time permits",
+      "Major discrepancy; repair immediately",
+      "Normal, because it is under 15 \u00b0C"
+    ],
+    "answer": 1,
+    "explanation": "4 \u00b0C to 15 \u00b0C between similar components is the probable-deficiency row: repair as time permits. 1\u20133 \u00b0C is only \u201cinvestigate.\u201d Above 15 \u00b0C is immediate. 8 \u00b0C is in the middle band.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.18",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-003",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "A connection is 45 \u00b0C hotter than the surrounding air, with no similar part to compare. Table 100.18 says:",
+    "choices": [
+      "Monitor it",
+      "Repair immediately",
+      "Ignore air comparisons",
+      "Possible deficiency only"
+    ],
+    "answer": 1,
+    "explanation": "Above 40 \u00b0C over ambient is the major-discrepancy row. The 21\u201340 \u00b0C ambient band is the one that says monitor until you can fix it. Similar-part \u0394T and ambient \u0394T are different columns.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.18",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-004",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "A part runs 30 \u00b0C above ambient and you have no similar component. Table 100.18 says:",
+    "choices": [
+      "Repair immediately",
+      "Monitor until corrective measures can be done",
+      "Possible deficiency only",
+      "The table does not use ambient"
+    ],
+    "answer": 1,
+    "explanation": "21 \u00b0C to 40 \u00b0C above ambient is the monitor row. Above 40 \u00b0C above ambient, or above 15 \u00b0C between similar parts, is immediate. 30 \u00b0C over air is not yet that immediate row.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.18",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
   }
 ]
