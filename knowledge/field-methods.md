@@ -62,7 +62,9 @@ ATS Table 100.13 is the field screen for pure SF6 (moisture, SO2, purity). The m
 
 ## Dissolved gas {#dga}
 
-IEEE C57.104 is the usual guide for dissolved gas in mineral oil. The pattern, not a single ppm from memory, is the point: hydrogen tracks partial discharge, acetylene tracks arcing, ethylene tracks hotter oil, and carbon monoxide and dioxide track cellulose. Draw the sample so air does not strip the gases or add new ones. A laboratory chromatogram is not a field megohm.
+ATS 7.2.2.B.15 takes the oil sample by ASTM D923 and the dissolved-gas test by IEEE C57.104 or ASTM D3612. ATS 7.2.2.D.15 says to evaluate that result in accordance with IEEE C57.104.
+
+In IEEE C57.104-2019 clause 6.2.1, hydrogen comes mainly from corona-type partial discharge and from stray gassing. Methane, ethane, and ethylene come from heating of oil or paper. Acetylene comes from arcing at very high temperature. Carbon monoxide and carbon dioxide come from heating of cellulose or of the liquid. Clause 6.2.3’s Duval triangle uses methane, ethylene, and acetylene, not hydrogen. Clause 5.1.4.1: a sample opened to air tends to lose hydrogen. Clause 6 says a rising rate is more informative than one concentration, and a single pair of samples is a weak way to judge that rate.
 
 ## Micro-ohmmeter {#microohm}
 

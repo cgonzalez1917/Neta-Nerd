@@ -60,7 +60,9 @@ Articles used as optional “Learn more” links, not as copied text:
 
 Manufacturer trip-unit manuals, relay manuals, and test-set manuals are cited as “per manufacturer data.” Job sheets and one-lines stay off this public repo. A time that was only calculated, and not read from the published curve, is not used as a quiz answer.
 
-Lookups for later questions, cited by title only. The files themselves are not in this repo.
+Cite the ATS or MTS clause first. When that clause names an IEEE document, add the IEEE edition and clause that was actually read, for example `ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1`. Standards named by ATS or MTS that are not in the lookup set are listed in `knowledge/reference-gaps.md`.
+
+Lookups used for later questions, cited by title only. The files themselves are not in this repo.
 
 - 29 CFR 1910.147, 1910.269, 1910.331 through 1910.335 (OSHA, public text).
 - EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018).

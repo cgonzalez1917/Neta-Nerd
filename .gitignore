@@ -1,5 +1,8 @@
 # Owner reference files stay off this public repo.
+# That includes IEEE, NETA, NFPA, OSHA extracts, and manufacturer manuals.
 *.pdf
 uploads/
+IEEE_*
+ANSI_NETA*
 **/NFPA_70E*
 **/ANSI_NETA*

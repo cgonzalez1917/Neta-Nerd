@@ -250,5 +250,41 @@
     "reference": "ANSI/NETA ATS-2025 7.10.2",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-015",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS 7.10.1.B.1 insulation-resistance test on a current transformer and its secondary wiring is:",
+    "choices": [
+      "10 kV dc for 10 minutes",
+      "1000 V dc for one minute, unless solid-state parts cannot take that voltage",
+      "A power-factor test at 10 kV only",
+      "Optional for relaying CTs"
+    ],
+    "answer": 1,
+    "explanation": "Each CT and its secondary wiring is tested to ground at 1000 V dc for one minute. If solid-state parts cannot tolerate that, follow the manufacturer. The minimum resistance is Table 100.5, not a guess.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.1 and D.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-016",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS 7.10.1.B.4 requires an excitation test:",
+    "choices": [
+      "On every metering CT and never on a relaying CT",
+      "On current transformers used for relaying, in accordance with IEEE C57.13.1",
+      "Only if the ratio already failed",
+      "With the primary left connected to the bus"
+    ],
+    "answer": 1,
+    "explanation": "Relaying CTs get the excitation test. The result is compared with the manufacturer\u2019s curve or with IEEE C57.13.1 (7.10.1.D.4). The supplied C57.13.1 file had no extractable clause text, so the clause number is not cited. Metering CTs still get ratio and polarity.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
   }
 ]

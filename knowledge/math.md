@@ -92,6 +92,12 @@ Multiplying by 5.75 instead of dividing by 0.0575 is the usual miss (you land ne
 
 Table 100.18 talks about a difference, ΔT. A difference in Celsius converts by 1.8, with no +32. A 10 °C rise is an 18 °F rise. Adding 32 turns a rise into a fake temperature (50 °F) and will make a mild connection look like a fire.
 
+## Harmonics at the point of common coupling {#harmonics}
+
+ATS section 6.6 is the harmonic study. The report compares calculated voltage and current distortion with IEEE 519 and calls out anything over those limits. It also wants the impedance-versus-frequency plot, so resonances are visible, and a check of transformer capability under the nonsinusoidal current using the method in IEEE C57.110.
+
+IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common coupling, not on each drive or each panel. The weekly short-time values use the table; the very-short-time daily values are allowed up to one and a half times those table values. A bus from just over 1 kV through 69 kV is the row whose total voltage distortion limit is 5 percent. Lower voltage buses are allowed more distortion. Higher voltage buses are allowed less. Do not paste the whole table into a report; use the row for the voltage at the point of common coupling.
+
 ## Wye capacitors, line to line {#caps}
 
 Three equal capacitors in wye: a measurement from phase A to phase B sees two units in series. Series capacitance is half of one unit when they match. 100 µF cans read about 50 µF from A to B. Do not call the bank failed because the line-to-line reading is not the nameplate microfarads of one can.

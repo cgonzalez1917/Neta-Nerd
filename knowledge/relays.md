@@ -43,6 +43,14 @@ Microprocessor relays do not drift the way a dirty induction disk does. You stil
 
 Settings that do not match the coordination study get written down as found. As-left is the engineered file unless the owner directs otherwise. You do not invent a time dial to make a test pretty.
 
+## Distance zones {#zones}
+
+ATS 7.9.1 tests a 21 as a distance relay: reach, angle, and timing. IEEE C37.113-2015 is the line-relaying guide that uses those device numbers (clause 3.2 points at IEEE C37.2).
+
+Clause 4.4: the boundary of a zone is where the current transformers are. Overlap is deliberate so a fault at a boundary is in some zone. Clause 4.6: zone 2 is the time-delayed backup that covers from the end of zone 1 to the far end of the line, and it also backs up a failed zone 1. A second independent scheme (often called main 1 and main 2) is local redundancy. Remote backup is a relay at another station.
+
+Clause 5.5.2: an instantaneous, non-piloted zone 1 is set so it does not overreach the remote terminal. Reach is measured from the voltage transformers. Direction comes from the current transformers. Line-side instrument transformers are the straightforward place to measure the line. Direct underreaching transfer trip uses elements set short of the remote bus. Permissive overreaching transfer trip uses an overreaching element and a permissive signal from the far end.
+
 ## Schemes {#schemes}
 
 See the Level III page for the 51–86–52 order, `a` versus `b` contacts, and key interlocks. Short version: the 51 (or 50) decides, the 86 remembers, the 52 opens. An 86 `b` contact in the close circuit is closed only while the lockout is reset.

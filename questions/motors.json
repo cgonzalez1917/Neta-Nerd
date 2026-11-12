@@ -70,5 +70,23 @@
     "reference": "NEC 430.32 and 430.52",
     "verified": false,
     "kb": "field-methods.md#motor-size"
+  },
+  {
+    "id": "mot-005",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.1.B.2 splits the insulation-resistance test on an AC induction machine by size:",
+    "choices": [
+      "Every machine gets a one-minute spot test only",
+      "Above 200 horsepower, ten minutes and a polarization index; 200 horsepower and less, one minute and a 60/30 dielectric-absorption ratio",
+      "Above 200 horsepower, a DC hipot instead of insulation resistance",
+      "Only the bearings are tested"
+    ],
+    "answer": 1,
+    "explanation": "The test is in accordance with IEEE 43. Larger machines get the ten-minute polarization index. Smaller machines get the one-minute test and the 60/30 ratio. The PI floor in D.2 is 2.0 and the DAR floor is 1.4.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43",
+    "verified": true,
+    "kb": "apparatus.md#motors"
   }
 ]

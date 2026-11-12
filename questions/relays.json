@@ -12,9 +12,9 @@
       "50 undervoltage, 51 overvoltage, 87 reclosing"
     ],
     "answer": 1,
-    "explanation": "50 is instantaneous overcurrent, 51 is time overcurrent, 87 is differential. 86 is the lockout. 27 and 59 are the voltage elements. Learn the numbers; the one-line will not spell them out.",
-    "reference": "IEEE C37.2 device numbers, as used in ATS 7.9.1 element tests",
-    "verified": false,
+    "explanation": "ATS 7.9.1 names 50 as instantaneous overcurrent, 51 as time overcurrent, and 87 as differential. 86 is the lockout and is not one of those three. IEEE C37.113-2015 clause 3.2 says its device numbers follow IEEE C37.2; the names used here are the ones printed in the ATS list.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 devices 50, 51, and 87; ref. IEEE C37.113-2015, clause 3.2 (numbers follow IEEE C37.2)",
+    "verified": true,
     "kb": "relays.md#numbers",
     "link": "https://wiki.testguy.net/t/protective-relay-testing-and-maintenance-overview/76"
   },
@@ -379,5 +379,167 @@
     "reference": "IEEE C37.2 device 25 and 86; control-schematic logic",
     "verified": false,
     "kb": "level-3.md#schemes"
+  },
+  {
+    "id": "relay-022",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 21 is:",
+    "choices": [
+      "A distance relay",
+      "A lockout relay",
+      "A frequency relay",
+      "A reclosing relay"
+    ],
+    "answer": 0,
+    "explanation": "21 is distance. 81 is frequency, 79 is reclosing, and 86 is the lockout used on schematics. IEEE C37.113-2015 clause 3.2 uses this same numbering system.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 3.2",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-023",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 67 is:",
+    "choices": [
+      "Directional overcurrent",
+      "Undervoltage",
+      "Differential",
+      "Sync check"
+    ],
+    "answer": 0,
+    "explanation": "67 is directional overcurrent. 27 is undervoltage, 87 is differential, and 25 is sync check. The test list for 67 includes the directional unit, not an oil sample.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 67",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-024",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.113-2015 clause 5.5.2 says a non-piloted zone 1 distance element must be set so that it:",
+    "choices": [
+      "Reaches past the next line",
+      "Does not overreach the remote terminal",
+      "Trips only after zone 3",
+      "Ignores the remote bus on purpose by using no voltage"
+    ],
+    "answer": 1,
+    "explanation": "Zone 1 is instantaneous. If it sees past the remote bus it trips for a fault that belongs to the next zone. ATS 7.9.1 tests the reach of a 21; this clause is the reason that reach stops short of the far terminal.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-025",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 40 is:",
+    "choices": [
+      "Loss of field, tested as an impedance relay",
+      "A reclosing relay",
+      "A frequency relay",
+      "A sudden-pressure relay"
+    ],
+    "answer": 0,
+    "explanation": "40 is loss of field. The tests include torque angle, reach, offset, and the impedance circle. 63 is sudden pressure, 79 is reclosing, and 81 is frequency.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 40",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-026",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 79 is:",
+    "choices": [
+      "Reclosing",
+      "Distance",
+      "Differential",
+      "Undervoltage"
+    ],
+    "answer": 0,
+    "explanation": "79 is the reclosing relay. 21 is distance, 87 is differential, and 27 is undervoltage. A reclose attempt is not a zone 1 reach.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 79",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-027",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the ATS 7.9.1 list, device 81 is:",
+    "choices": [
+      "Frequency",
+      "Sync check",
+      "Pilot-wire monitor",
+      "Ground detector"
+    ],
+    "answer": 0,
+    "explanation": "81 is frequency. 25 is sync check, 85 is the pilot-wire monitor, and 64 is the ground detector. The 81 tests include pickup and time delay, not a gas sample.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 81",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-028",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.113-2015 clause 4.6 describes zone 2 on a step-distance line relay as:",
+    "choices": [
+      "The instantaneous element that must reach the next bus",
+      "Time-delayed protection from the end of zone 1 to the end of the line, and backup if zone 1 fails",
+      "A differential zone bounded only by the transformer CTs",
+      "The reclosing timer"
+    ],
+    "answer": 1,
+    "explanation": "Zone 1 covers part of the line without delay and must not overreach. Zone 2 picks up the rest of the line on a delay and also covers a failed zone 1. Zone 3 reaches beyond zone 1 as further backup. ATS tests the 21 reach; this clause is why the zones are not the same setting.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 4.6",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-029",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "IEEE C37.113-2015 clause 5.5.2 measures distance-relay reach from:",
+    "choices": [
+      "The current-transformer location only",
+      "The voltage-transformer location, with direction set by the current transformers",
+      "The remote bus, always",
+      "The station battery"
+    ],
+    "answer": 1,
+    "explanation": "The ohms start at the VT. The CT decides which way is forward. Line-side VTs and CTs see the line directly. Low-side instruments add the transformer impedance and the wye-delta shift, which the setting has to include.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2",
+    "verified": true,
+    "kb": "relays.md#zones"
+  },
+  {
+    "id": "relay-030",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "An ATS 6.6 harmonic-study report is supposed to include:",
+    "choices": [
+      "Only a single power-factor number",
+      "Voltage and current distortion compared with IEEE 519, with exceedances flagged, and an impedance-versus-frequency plot",
+      "A dissolved-gas chromatogram",
+      "The crew leader\u2019s ETT card"
+    ],
+    "answer": 1,
+    "explanation": "Item 5 of the report is the distortion table against IEEE 519. Item 6 is the resonance plot. Item 7 checks transformer capability under the nonsinusoidal current using IEEE C57.110. A passing power factor does not answer any of those.",
+    "reference": "ANSI/NETA ATS-2025 6.6, study report items 5 and 6; ref. IEEE 519-2022",
+    "verified": true,
+    "kb": "math.md#harmonics"
   }
 ]

@@ -896,9 +896,9 @@
       "1 \u03a9"
     ],
     "answer": 2,
-    "explanation": "Above 5000 M\u03a9 the currents are so small that the ratio stops meaning much, and IEEE 43 does not recommend using PI as a condition call. The absolute resistance and the trend still matter.",
-    "reference": "IEEE 43, as stated in the Megger S1-568 user manual",
-    "verified": true,
+    "explanation": "The megohmmeter manual says IEEE 43 does not recommend a polarization index once the one-minute resistance is above 5000 megohms. That clause could not be read in the IEEE 43 file on hand, so this item stays unverified against the standard itself. The acceptance floor ATS does print for AC machines is a PI not less than 2.0 (7.15.1.D.2.1).",
+    "reference": "Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.B.2 points the machine test at IEEE 43. The 5000 megohm screen was not readable as a numbered clause in the supplied IEEE 43 file.",
+    "verified": false,
     "kb": "insulation.md#pi-dar"
   },
   {
@@ -1040,9 +1040,9 @@
       "Breaker instantaneous tolerance"
     ],
     "answer": 0,
-    "explanation": "The guide is about gases dissolved in the oil, not a field megohm or a tan-delta table. Hydrogen leans toward partial discharge, acetylene toward arcing, and the carbon oxides toward paper. The pattern and the history matter more than one ppm memorized out of context.",
-    "reference": "IEEE C57.104",
-    "verified": false,
+    "explanation": "ATS 7.2.2.D.15 says to evaluate dissolved-gas results in accordance with IEEE C57.104. The guide is about gases in mineral oil. It is not the CT excitation guide, the VLF cable guide, or the breaker instantaneous table.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15 and 7.2.2.D.15; ref. IEEE C57.104-2019",
+    "verified": true,
     "kb": "field-methods.md#dga"
   },
   {
@@ -1050,7 +1050,7 @@
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "A DGA report shows acetylene with little hydrogen and rising ethylene. The pattern IEEE C57.104 is aimed at is closest to:",
+    "question": "Acetylene is present in a mineral-oil dissolved-gas result, and ethylene is also elevated. IEEE C57.104-2019 clause 6.2.1 treats acetylene as the marker for:",
     "choices": [
       "Cold cellulose drying",
       "Arcing, or a very hot fault, rather than a calm thermal aging story",
@@ -1058,9 +1058,9 @@
       "A CT polarity error"
     ],
     "answer": 1,
-    "explanation": "Acetylene is the gas associated with arcing. Ethylene tracks high-temperature oil. Hydrogen alone is more partial discharge. You still read the whole Duval-style picture and the trend, and you do not condemn a transformer on one number without the guide.",
-    "reference": "IEEE C57.104",
-    "verified": false,
+    "explanation": "Acetylene is produced by arcing in oil or paper at very high temperature. Ethylene tracks hotter heating of the oil or paper. Hydrogen can rise along with acetylene, so a low hydrogen number does not cancel the acetylene. ATS 7.2.2.D.15 says to evaluate the sample under that guide.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "verified": true,
     "kb": "field-methods.md#dga"
   },
   {
@@ -1130,9 +1130,189 @@
       "Device numbers"
     ],
     "answer": 1,
-    "explanation": "VLF withstand and tan-delta diagnosis of shielded cable live in IEEE 400.2. ATS Table 100.6.3 is the acceptance voltage table adapted from that guide. Device numbers are IEEE C37.2. DGA is IEEE C57.104.",
-    "reference": "IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.3",
-    "verified": false,
+    "explanation": "ATS Table 100.6.3 is the acceptance VLF table, adapted from IEEE 400.2-2024, and 7.3.3.B.5.2 is the VLF withstand test. Dissolved gas is IEEE C57.104. Device numbers used on a relay test are the ATS 7.9.1 list, which follows the C37.2 numbering system.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3 and 7.3.3.B.5.2; ref. IEEE 400.2-2024",
+    "verified": true,
     "kb": "cables.md#vlf"
+  },
+  {
+    "id": "math-064",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Duval Triangle 1 in IEEE C57.104-2019 clause 6.2.3 is plotted from:",
+    "choices": [
+      "Hydrogen, carbon monoxide, and carbon dioxide",
+      "Methane, ethylene, and acetylene",
+      "Oxygen, nitrogen, and moisture",
+      "Furan, acid number, and color"
+    ],
+    "answer": 1,
+    "explanation": "The triangle uses methane for lower-energy heating, ethylene for hotter faults, and acetylene for arcing. Hydrogen is interpreted with the other gases, but it is not a side of that triangle. ATS 7.2.2.D.15 sends the sample to this guide.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.3",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-065",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE C57.104-2019 clause 6.2.1 says acetylene becomes an important product:",
+    "choices": [
+      "At ordinary service temperature",
+      "Only as the fault temperature nears 1000 \u00b0C",
+      "Whenever the oil is new",
+      "Only in the nitrogen blanket"
+    ],
+    "answer": 1,
+    "explanation": "Acetylene is the very-high-temperature gas, from arcing in oil or paper. Methane, ethane, and ethylene show up at lower heating. A trace story that never reaches that temperature is not an acetylene story.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-066",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Carbon monoxide and carbon dioxide in a mineral-oil DGA point IEEE C57.104-2019 clause 6.2.1 toward:",
+    "choices": [
+      "Heating of cellulose or of the insulating liquid",
+      "A reversed CT",
+      "A low power factor on the bushing tap only",
+      "Partial discharge with no other possibility"
+    ],
+    "answer": 0,
+    "explanation": "The carbon oxides are the cellulose and liquid-heating gases. Hydrogen is the partial-discharge and stray-gassing gas. Do not read a CO rise as a turns-ratio failure.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-067",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 519-2022 clause 5 applies its voltage-distortion limits:",
+    "choices": [
+      "At each drive terminal",
+      "Only at the point of common coupling, not to individual pieces of equipment",
+      "Only inside the switchgear CPT",
+      "To DC battery chargers as a power-factor test"
+    ],
+    "answer": 1,
+    "explanation": "The limits are a system-owner duty at the point of common coupling. A harmonic study under ATS 6.6 compares the calculated distortion with those limits. Measuring one VFD and calling it an IEEE 519 failure is the wrong place.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-068",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "At a point of common coupling above 1 kV and up through 69 kV, the weekly short-time voltage THD limit in IEEE 519-2022 Table 1 is:",
+    "choices": [
+      "1.5%",
+      "5%",
+      "8%",
+      "20%"
+    ],
+    "answer": 1,
+    "explanation": "That voltage row\u2019s total harmonic distortion limit is 5 percent of rated power-frequency voltage. The low-voltage row is looser. Buses above 69 kV are tighter. The weekly value is the table itself; the very-short-time daily value may reach 1.5 times the table.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-069",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 519-2022 clause 5.1 allows the daily 99th-percentile very-short-time voltage harmonics to reach:",
+    "choices": [
+      "Half the Table 1 values",
+      "1.5 times the Table 1 values",
+      "Ten times the Table 1 values",
+      "Only the current limits, never a voltage"
+    ],
+    "answer": 1,
+    "explanation": "The very-short-time (3-second) daily statistic may be up to 1.5 times the table. The weekly short-time (10-minute) statistic is held to the table itself. Both are still at the point of common coupling.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-070",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A dissolved-gas sample matches none of the Rogers-ratio cases, even though combustible gas is high. IEEE C57.104-2019 clause 6.2.2 says:",
+    "choices": [
+      "The transformer is normal because it missed the table",
+      "The Rogers method simply did not identify a fault type",
+      "Acetylene must be ignored",
+      "The oil is ester, so mineral-oil rules do not apply"
+    ],
+    "answer": 1,
+    "explanation": "Rogers ratios miss a substantial share of real results because the ratios fall outside every case. That is a limit of the method, not a clean bill of health. Use another method in the guide, and still treat a rising trend as real.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.2",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-071",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE C57.104-2019 clause 5.1.4.1 says an air-exposed oil sample tends to show:",
+    "choices": [
+      "A large gain of acetylene",
+      "Loss of hydrogen, often with oxygen and nitrogen up",
+      "A perfect Duval triangle",
+      "No change, because hydrogen is not soluble"
+    ],
+    "answer": 1,
+    "explanation": "Hydrogen leaves the oil when the sample sees air. Oxygen and nitrogen come in. A sudden drop in hydrogen with a high oxygen-to-nitrogen ratio on a sealed transformer is a sampling problem until proved otherwise.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "math-072",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "The voltage-distortion numbers in IEEE 519-2022 clause 5.1 are expressed as:",
+    "choices": [
+      "Percent of the rated power-frequency voltage at the point of common coupling",
+      "Ohms of ground resistance",
+      "Percent of transformer exciting current",
+      "Calories per square centimeter"
+    ],
+    "answer": 0,
+    "explanation": "Both the individual harmonic and the total are percents of rated fundamental voltage at the PCC. They are not an arc-flash number and not a ground-rod number. ATS 6.6 tells the study to tabulate those factors against this standard.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-073",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 519-2022 clause 5.1 counts individual voltage harmonics:",
+    "choices": [
+      "Only the 3rd and the 5th",
+      "Integer multiples of the power frequency through the 50th",
+      "Only even harmonics",
+      "Only harmonics above 5 kHz"
+    ],
+    "answer": 1,
+    "explanation": "The table covers integer harmonics up through the 50th. Interharmonics and higher-frequency work are a different discussion. The study in ATS 6.6 still has to show the individual harmonics, not only the total.",
+    "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
+    "verified": true,
+    "kb": "math.md#harmonics"
   }
 ]

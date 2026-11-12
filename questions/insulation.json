@@ -222,7 +222,7 @@
     "level": "III",
     "topic": "insulation-resistance",
     "domain": "component",
-    "question": "IEEE 43\u2019s minimum insulation resistance for a machine is applied:",
+    "question": "ATS Table 100.11 gives rotating-machine insulation resistance for a one-minute test at 40 \u00b0C. That minimum is applied:",
     "choices": [
       "Raw, at whatever temperature you found",
       "After correction to 40 \u00b0C",
@@ -230,8 +230,8 @@
       "Only if the PI is above 4"
     ],
     "answer": 1,
-    "explanation": "ATS Table 100.11 states the rotating-machine minima at 40 \u00b0C and points at Table 100.14. The 40 \u00b0C multipliers are Table 100.14.2. The 20 \u00b0C table is for the apparatus in Table 100.1, not for a stator you are comparing with Table 100.11.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2; IEEE 43",
+    "explanation": "The table title is a one-minute value at 40 \u00b0C, and 7.15.1.D.2 sends you there. Correct to 40 \u00b0C before the comparison. The 20 \u00b0C multipliers in Table 100.14.1 are for the apparatus in Table 100.1, not for this machine table. The test is run in accordance with IEEE 43; that standard\u2019s own clause text was not readable in the file on hand.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 (one minute at 40 \u00b0C) and 7.15.1.D.2; the test method is IEEE 43 per 7.15.1.B.2",
     "verified": true,
     "kb": "insulation.md#temp-correction"
   },
@@ -248,9 +248,9 @@
       "Run at twice the test voltage"
     ],
     "answer": 1,
-    "explanation": "The Megger S1-568 manual quotes IEEE 43 on this point: above 5000 M\u03a9 the ratio is no longer a reliable condition indicator. Report the resistance and the trend. Do not invent a failure from a flat ratio at that level.",
-    "reference": "IEEE 43, as stated in the Megger S1-568 user manual",
-    "verified": true,
+    "explanation": "The megohmmeter manual attributes the 5000 megohm caution to IEEE 43. The supplied IEEE 43 file has no extractable clause text, so the flag stays false. What ATS itself requires on an AC machine is a PI not less than 2.0, from a ten-minute test when the machine is over 200 horsepower.",
+    "reference": "Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.D.2.1 sets the machine PI floor at 2.0. The 5000 megohm screen was not readable as a numbered IEEE 43 clause.",
+    "verified": false,
     "kb": "insulation.md#pi-dar"
   }
 ]

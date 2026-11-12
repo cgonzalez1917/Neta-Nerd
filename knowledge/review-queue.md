@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 250 (Level II 155, Level III 95).
+Count: 290 (Level II 179, Level III 111).
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -418,7 +418,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-001 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Match the device: 50, 51, and 87.
 
@@ -427,7 +427,7 @@ Match the device: 50, 51, and 87.
 - 2. 50 differential, 51 distance, 87 frequency
 - 3. 50 undervoltage, 51 overvoltage, 87 reclosing
 
-**Citation:** IEEE C37.2 device numbers, as used in ATS 7.9.1 element tests
+**Citation:** ANSI/NETA ATS-2025 7.9.1 devices 50, 51, and 87; ref. IEEE C37.113-2015, clause 3.2 (numbers follow IEEE C37.2)
 
 Reviewer: VERIFIED or FIX
 
@@ -3342,7 +3342,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-050 -->
 
-**Bank verified flag:** true
+**Bank verified flag:** false
 
 IEEE 43, as quoted in the Megger S1-568 manual, treats a polarization index as unreliable when the 1-minute insulation resistance is above:
 
@@ -3351,7 +3351,7 @@ IEEE 43, as quoted in the Megger S1-568 manual, treats a polarization index as u
 - 2. 5000 MΩ **← answer**
 - 3. 1 Ω
 
-**Citation:** IEEE 43, as stated in the Megger S1-568 user manual
+**Citation:** Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.B.2 points the machine test at IEEE 43. The 5000 megohm screen was not readable as a numbered clause in the supplied IEEE 43 file.
 
 Reviewer: VERIFIED or FIX
 
@@ -3886,7 +3886,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-058 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 IEEE C57.104 is used to interpret:
 
@@ -3895,7 +3895,7 @@ IEEE C57.104 is used to interpret:
 - 2. VLF withstand voltage
 - 3. Breaker instantaneous tolerance
 
-**Citation:** IEEE C57.104
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15 and 7.2.2.D.15; ref. IEEE C57.104-2019
 
 Reviewer: VERIFIED or FIX
 
@@ -3903,19 +3903,18 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-059 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-A DGA report shows acetylene with little hydrogen and rising ethylene. The pattern IEEE C57.104 is aimed at is closest to:
+Acetylene is present in a mineral-oil dissolved-gas result, and ethylene is also elevated. IEEE C57.104-2019 clause 6.2.1 treats acetylene as the marker for:
 
 - 0. Cold cellulose drying
 - 1. Arcing, or a very hot fault, rather than a calm thermal aging story **← answer**
 - 2. A normal new-oil baseline with no follow-up
 - 3. A CT polarity error
 
-**Citation:** IEEE C57.104
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1
 
 Reviewer: VERIFIED or FIX
-
 ## math-060 (III / theory) {#math-060}
 
 <!-- q:math-060 -->
@@ -3971,7 +3970,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-063 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 IEEE 400.2 is the guide you cite for:
 
@@ -3980,7 +3979,7 @@ IEEE 400.2 is the guide you cite for:
 - 2. CT polarity
 - 3. Device numbers
 
-**Citation:** IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.3
+**Citation:** ANSI/NETA ATS-2025 Table 100.6.3 and 7.3.3.B.5.2; ref. IEEE 400.2-2024
 
 Reviewer: VERIFIED or FIX
 
@@ -4005,7 +4004,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:xfmr-022 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Hydrogen dominant in a DGA, with little acetylene, is the IEEE C57.104 pattern associated with:
 
@@ -4014,7 +4013,7 @@ Hydrogen dominant in a DGA, with little acetylene, is the IEEE C57.104 pattern a
 - 2. Normal nitrogen blanket
 - 3. A failed turns-ratio test
 
-**Citation:** IEEE C57.104
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1
 
 Reviewer: VERIFIED or FIX
 
@@ -4058,17 +4057,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-IEEE 43’s minimum insulation resistance for a machine is applied:
+ATS Table 100.11 gives rotating-machine insulation resistance for a one-minute test at 40 °C. That minimum is applied:
 
 - 0. Raw, at whatever temperature you found
 - 1. After correction to 40 °C **← answer**
 - 2. After correction to 75 °C with the copper constant
 - 3. Only if the PI is above 4
 
-**Citation:** ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2; IEEE 43
+**Citation:** ANSI/NETA ATS-2025 Table 100.11 (one minute at 40 °C) and 7.15.1.D.2; the test method is IEEE 43 per 7.15.1.B.2
 
 Reviewer: VERIFIED or FIX
-
 ## dlro-007 (III / component) {#dlro-007}
 
 <!-- q:dlro-007 -->
@@ -4150,7 +4148,7 @@ IEEE 400.2 prefers VLF for many shielded extruded cables in the field because:
 - 2. 0.1 Hz raises the voltage stress on purpose above the BIL
 - 3. Tan delta cannot be measured at 0.1 Hz
 
-**Citation:** IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.1 note 2 and Table 100.6.3
+**Citation:** ANSI/NETA ATS-2025 7.3.3.B.5.2 and Table 100.6.3; ref. IEEE 400.2-2024 introduction (charging current at 0.1 Hz)
 
 Reviewer: VERIFIED or FIX
 
@@ -4158,7 +4156,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:xfmr-023 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A DGA syringe left open, or a sample poured through air, mostly:
 
@@ -4167,7 +4165,7 @@ A DGA syringe left open, or a sample poured through air, mostly:
 - 2. Is the method IEEE C57.104 prefers
 - 3. Replaces the power-factor test
 
-**Citation:** IEEE C57.104; sampling practice so the gases stay dissolved
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15 (sample per ASTM D923); ref. IEEE C57.104-2019, clause 5.1.4.1
 
 Reviewer: VERIFIED or FIX
 
@@ -4175,7 +4173,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:ir-014 -->
 
-**Bank verified flag:** true
+**Bank verified flag:** false
 
 PI on a machine whose 1-minute reading is 8000 MΩ should be:
 
@@ -4184,7 +4182,7 @@ PI on a machine whose 1-minute reading is 8000 MΩ should be:
 - 2. Doubled and compared with Table 100.1
 - 3. Run at twice the test voltage
 
-**Citation:** IEEE 43, as stated in the Megger S1-568 user manual
+**Citation:** Megger S1-568 user manual, quoting IEEE 43. ANSI/NETA ATS-2025 7.15.1.D.2.1 sets the machine PI floor at 2.0. The 5000 megohm screen was not readable as a numbered IEEE 43 clause.
 
 Reviewer: VERIFIED or FIX
 
@@ -4253,6 +4251,686 @@ Temporary grounds go on only after the absence-of-voltage test because:
 - 3. IEEE 81 requires grounds before the test
 
 **Citation:** 29 CFR 1910.333(b)(2)(iv); NFPA 70E-2024 120.6
+
+Reviewer: VERIFIED or FIX
+
+## safety-041 (II / safety) {#safety-041}
+
+<!-- q:safety-041 -->
+
+**Bank verified flag:** true
+
+ANSI/NETA ATS-2025 says, about its own safety coverage:
+
+- 0. It replaces OSHA and NFPA 70E for acceptance testing
+- 1. It does not claim to cover every safety issue, so the user still has to check the regulations that apply **← answer**
+- 2. It is only a lockout procedure
+- 3. It forbids any test above 50 V
+
+**Citation:** ANSI/NETA ATS-2025, section 1, item 3
+
+Reviewer: VERIFIED or FIX
+
+## safety-042 (II / safety) {#safety-042}
+
+<!-- q:safety-042 -->
+
+**Bank verified flag:** true
+
+ATS-2025 section 3.2 requires the on-site crew leader to hold:
+
+- 0. Any helper card
+- 1. A current ANSI/NETA ETT certification of Level 3 or higher **← answer**
+- 2. Only an OSHA 10 card
+- 3. A manufacturer’s relay-software login
+
+**Citation:** ANSI/NETA ATS-2025 3.2, item 2
+
+Reviewer: VERIFIED or FIX
+
+## safety-043 (II / safety) {#safety-043}
+
+<!-- q:safety-043 -->
+
+**Bank verified flag:** true
+
+ATS-2025 section 3.2 says the person running the tests must be able to:
+
+- 0. Skip the hazard review if the gear is new
+- 1. Work safely, know the hazards, and judge whether the equipment is fit for service **← answer**
+- 2. Sign the report without looking at the data
+- 3. Test energized parts as the normal method
+
+**Citation:** ANSI/NETA ATS-2025 3.2, item 1
+
+Reviewer: VERIFIED or FIX
+
+## safety-044 (II / safety) {#safety-044}
+
+<!-- q:safety-044 -->
+
+**Bank verified flag:** true
+
+Before switchgear is treated as ready for service, ATS 7.1.1 says to confirm that:
+
+- 0. Shipping bracing, loose parts, and papers shipped inside the cubicles are still packed in place
+- 1. Shipping bracing, loose parts, and documentation shipped inside cubicles have been removed **← answer**
+- 2. The mimic bus has been painted over
+- 3. The shutters are tied open
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.A.4
+
+Reviewer: VERIFIED or FIX
+
+## math-064 (II / theory) {#math-064}
+
+<!-- q:math-064 -->
+
+**Bank verified flag:** true
+
+Duval Triangle 1 in IEEE C57.104-2019 clause 6.2.3 is plotted from:
+
+- 0. Hydrogen, carbon monoxide, and carbon dioxide
+- 1. Methane, ethylene, and acetylene **← answer**
+- 2. Oxygen, nitrogen, and moisture
+- 3. Furan, acid number, and color
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.3
+
+Reviewer: VERIFIED or FIX
+
+## math-065 (II / theory) {#math-065}
+
+<!-- q:math-065 -->
+
+**Bank verified flag:** true
+
+IEEE C57.104-2019 clause 6.2.1 says acetylene becomes an important product:
+
+- 0. At ordinary service temperature
+- 1. Only as the fault temperature nears 1000 °C **← answer**
+- 2. Whenever the oil is new
+- 3. Only in the nitrogen blanket
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1
+
+Reviewer: VERIFIED or FIX
+
+## math-066 (II / theory) {#math-066}
+
+<!-- q:math-066 -->
+
+**Bank verified flag:** true
+
+Carbon monoxide and carbon dioxide in a mineral-oil DGA point IEEE C57.104-2019 clause 6.2.1 toward:
+
+- 0. Heating of cellulose or of the insulating liquid **← answer**
+- 1. A reversed CT
+- 2. A low power factor on the bushing tap only
+- 3. Partial discharge with no other possibility
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1
+
+Reviewer: VERIFIED or FIX
+
+## math-067 (II / theory) {#math-067}
+
+<!-- q:math-067 -->
+
+**Bank verified flag:** true
+
+IEEE 519-2022 clause 5 applies its voltage-distortion limits:
+
+- 0. At each drive terminal
+- 1. Only at the point of common coupling, not to individual pieces of equipment **← answer**
+- 2. Only inside the switchgear CPT
+- 3. To DC battery chargers as a power-factor test
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5
+
+Reviewer: VERIFIED or FIX
+
+## math-068 (II / theory) {#math-068}
+
+<!-- q:math-068 -->
+
+**Bank verified flag:** true
+
+At a point of common coupling above 1 kV and up through 69 kV, the weekly short-time voltage THD limit in IEEE 519-2022 Table 1 is:
+
+- 0. 1.5%
+- 1. 5% **← answer**
+- 2. 8%
+- 3. 20%
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## math-069 (II / theory) {#math-069}
+
+<!-- q:math-069 -->
+
+**Bank verified flag:** true
+
+IEEE 519-2022 clause 5.1 allows the daily 99th-percentile very-short-time voltage harmonics to reach:
+
+- 0. Half the Table 1 values
+- 1. 1.5 times the Table 1 values **← answer**
+- 2. Ten times the Table 1 values
+- 3. Only the current limits, never a voltage
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-024 (II / component) {#xfmr-024}
+
+<!-- q:xfmr-024 -->
+
+**Bank verified flag:** true
+
+Hydrogen in mineral oil, with no acetylene, is read by IEEE C57.104-2019 clause 6.2.1 as:
+
+- 0. Proof of an arc
+- 1. Primarily corona partial discharge or stray gassing, not by itself an arc **← answer**
+- 2. A failed turns-ratio test
+- 3. Water in the sample only
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-025 (II / component) {#xfmr-025}
+
+<!-- q:xfmr-025 -->
+
+**Bank verified flag:** true
+
+Methane, ethane, and ethylene in IEEE C57.104-2019 clause 6.2.1 come from:
+
+- 0. Heating of oil or paper **← answer**
+- 1. A CT polarity error
+- 2. The gauge on the nitrogen bottle only
+- 3. A VLF withstand
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15 and D.15; ref. IEEE C57.104-2019, clause 6.2.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-026 (II / component) {#xfmr-026}
+
+<!-- q:xfmr-026 -->
+
+**Bank verified flag:** true
+
+ATS 7.2.2.B.15 says the insulating-liquid sample for dissolved gas is taken:
+
+- 0. In an open coffee can
+- 1. In accordance with ASTM D923, then analyzed per IEEE C57.104 or ASTM D3612 **← answer**
+- 2. From the cooling-fan motor only
+- 3. After the transformer is back in service and still moving oil through an open hose
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-027 (II / component) {#xfmr-027}
+
+<!-- q:xfmr-027 -->
+
+**Bank verified flag:** true
+
+IEEE C57.104-2019 clause 5.1.3 warns that a dissolved-gas sample can be useless because:
+
+- 0. The syringe was too clean
+- 1. The sample was tied to the wrong equipment, or a main-tank sample was swapped with a tap-changer sample **← answer**
+- 2. The oil was mineral oil
+- 3. The test was run at 60 Hz
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 5.1.3
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-028 (II / component) {#xfmr-028}
+
+<!-- q:xfmr-028 -->
+
+**Bank verified flag:** true
+
+IEEE C57.104-2019, in the discussion that opens clause 6, treats gas results as:
+
+- 0. A single ppm that outranks the rate of change
+- 1. More concerning when the levels are rising than when you only have the level itself **← answer**
+- 2. Valid only if acetylene is zero
+- 3. A substitute for a turns-ratio test
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6
+
+Reviewer: VERIFIED or FIX
+
+## cable-014 (II / component) {#cable-014}
+
+<!-- q:cable-014 -->
+
+**Bank verified flag:** true
+
+When the manufacturer is silent, ATS 7.3.3.B.4 sets the one-minute jacket test at:
+
+- 0. 500 V for every cable
+- 1. At least 2 kV up to 35 kV cable, and at least 5 kV above 35 kV **← answer**
+- 2. The same voltage as the VLF withstand
+- 3. Phase-to-phase system voltage for 30 minutes
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.B.4
+
+Reviewer: VERIFIED or FIX
+
+## cable-015 (II / component) {#cable-015}
+
+<!-- q:cable-015 -->
+
+**Bank verified flag:** true
+
+ATS 7.3.3.D.2 says to investigate a cable shield whose resistance is:
+
+- 0. Under 1 ohm total
+- 1. More than 10 ohms per 1000 feet **← answer**
+- 2. Exactly the conductor resistance
+- 3. Infinite, which is required
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.D.2
+
+Reviewer: VERIFIED or FIX
+
+## cable-016 (II / component) {#cable-016}
+
+<!-- q:cable-016 -->
+
+**Bank verified flag:** true
+
+An offline partial-discharge test on shielded cable passes ATS 7.3.3.D.8 when:
+
+- 0. Any discharge is present at operating voltage
+- 1. There is no partial discharge at or below the threshold in the manufacturer’s data or in IEEE 400.3 **← answer**
+- 2. The jacket ohms are above 10 per foot
+- 3. The VLF set trips on overcurrent
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.D.8; ref. IEEE 400.3-2022
+
+Reviewer: VERIFIED or FIX
+
+## ct-015 (II / component) {#ct-015}
+
+<!-- q:ct-015 -->
+
+**Bank verified flag:** true
+
+ATS 7.10.1.B.1 insulation-resistance test on a current transformer and its secondary wiring is:
+
+- 0. 10 kV dc for 10 minutes
+- 1. 1000 V dc for one minute, unless solid-state parts cannot take that voltage **← answer**
+- 2. A power-factor test at 10 kV only
+- 3. Optional for relaying CTs
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.1 and D.1
+
+Reviewer: VERIFIED or FIX
+
+## ct-016 (II / component) {#ct-016}
+
+<!-- q:ct-016 -->
+
+**Bank verified flag:** true
+
+ATS 7.10.1.B.4 requires an excitation test:
+
+- 0. On every metering CT and never on a relaying CT
+- 1. On current transformers used for relaying, in accordance with IEEE C57.13.1 **← answer**
+- 2. Only if the ratio already failed
+- 3. With the primary left connected to the bus
+
+**Citation:** ANSI/NETA ATS-2025 7.10.1.B.4 and D.4; ref. IEEE C57.13.1
+
+Reviewer: VERIFIED or FIX
+
+## relay-022 (II / component) {#relay-022}
+
+<!-- q:relay-022 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 21 is:
+
+- 0. A distance relay **← answer**
+- 1. A lockout relay
+- 2. A frequency relay
+- 3. A reclosing relay
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 3.2
+
+Reviewer: VERIFIED or FIX
+
+## relay-023 (II / component) {#relay-023}
+
+<!-- q:relay-023 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 67 is:
+
+- 0. Directional overcurrent **← answer**
+- 1. Undervoltage
+- 2. Differential
+- 3. Sync check
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 67
+
+Reviewer: VERIFIED or FIX
+
+## mot-005 (II / component) {#mot-005}
+
+<!-- q:mot-005 -->
+
+**Bank verified flag:** true
+
+ATS 7.15.1.B.2 splits the insulation-resistance test on an AC induction machine by size:
+
+- 0. Every machine gets a one-minute spot test only
+- 1. Above 200 horsepower, ten minutes and a polarization index; 200 horsepower and less, one minute and a 60/30 dielectric-absorption ratio **← answer**
+- 2. Above 200 horsepower, a DC hipot instead of insulation resistance
+- 3. Only the bearings are tested
+
+**Citation:** ANSI/NETA ATS-2025 7.15.1.B.2 and D.2; ref. IEEE 43
+
+Reviewer: VERIFIED or FIX
+
+## relay-024 (II / systems) {#relay-024}
+
+<!-- q:relay-024 -->
+
+**Bank verified flag:** true
+
+IEEE C37.113-2015 clause 5.5.2 says a non-piloted zone 1 distance element must be set so that it:
+
+- 0. Reaches past the next line
+- 1. Does not overreach the remote terminal **← answer**
+- 2. Trips only after zone 3
+- 3. Ignores the remote bus on purpose by using no voltage
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2
+
+Reviewer: VERIFIED or FIX
+
+## safety-045 (III / safety) {#safety-045}
+
+<!-- q:safety-045 -->
+
+**Bank verified flag:** true
+
+Before acceptance testing starts, ATS-2025 section 4.1 says the owner’s representative provides:
+
+- 0. Only the transformer oil sample
+- 1. Site-specific hazard notification and safety training **← answer**
+- 2. A waiver of lockout
+- 3. The test set’s calibration sticker
+
+**Citation:** ANSI/NETA ATS-2025 4.1, item 8
+
+Reviewer: VERIFIED or FIX
+
+## safety-046 (III / safety) {#safety-046}
+
+<!-- q:safety-046 -->
+
+**Bank verified flag:** true
+
+ATS 7.1.1.D.2 says a dielectric withstand on switchgear bus:
+
+- 0. Comes before the insulation-resistance test, to save time
+- 1. Does not proceed until insulation resistance is above the minimum **← answer**
+- 2. Replaces the insulation-resistance test
+- 3. Is optional whenever the gear is indoor
+
+**Citation:** ANSI/NETA ATS-2025 7.1.1.D.2
+
+Reviewer: VERIFIED or FIX
+
+## math-070 (III / theory) {#math-070}
+
+<!-- q:math-070 -->
+
+**Bank verified flag:** true
+
+A dissolved-gas sample matches none of the Rogers-ratio cases, even though combustible gas is high. IEEE C57.104-2019 clause 6.2.2 says:
+
+- 0. The transformer is normal because it missed the table
+- 1. The Rogers method simply did not identify a fault type **← answer**
+- 2. Acetylene must be ignored
+- 3. The oil is ester, so mineral-oil rules do not apply
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.2
+
+Reviewer: VERIFIED or FIX
+
+## math-071 (III / theory) {#math-071}
+
+<!-- q:math-071 -->
+
+**Bank verified flag:** true
+
+IEEE C57.104-2019 clause 5.1.4.1 says an air-exposed oil sample tends to show:
+
+- 0. A large gain of acetylene
+- 1. Loss of hydrogen, often with oxygen and nitrogen up **← answer**
+- 2. A perfect Duval triangle
+- 3. No change, because hydrogen is not soluble
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1
+
+Reviewer: VERIFIED or FIX
+
+## math-072 (III / theory) {#math-072}
+
+<!-- q:math-072 -->
+
+**Bank verified flag:** true
+
+The voltage-distortion numbers in IEEE 519-2022 clause 5.1 are expressed as:
+
+- 0. Percent of the rated power-frequency voltage at the point of common coupling **← answer**
+- 1. Ohms of ground resistance
+- 2. Percent of transformer exciting current
+- 3. Calories per square centimeter
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## math-073 (III / theory) {#math-073}
+
+<!-- q:math-073 -->
+
+**Bank verified flag:** true
+
+IEEE 519-2022 clause 5.1 counts individual voltage harmonics:
+
+- 0. Only the 3rd and the 5th
+- 1. Integer multiples of the power frequency through the 50th **← answer**
+- 2. Only even harmonics
+- 3. Only harmonics above 5 kHz
+
+**Citation:** ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-029 (III / component) {#xfmr-029}
+
+<!-- q:xfmr-029 -->
+
+**Bank verified flag:** true
+
+IEEE C57.106-2006 clause 5.2.1 prefers ASTM D1816 over D877 when you are watching oil from a transformer because:
+
+- 0. D877 uses round electrodes that ignore water
+- 1. D1816 responds more to particles and dissolved water **← answer**
+- 2. D1816 is only for SF6
+- 3. D877 is the dissolved-gas method
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 5.2.1
+
+Reviewer: VERIFIED or FIX
+
+## xfmr-030 (III / component) {#xfmr-030}
+
+<!-- q:xfmr-030 -->
+
+**Bank verified flag:** true
+
+IEEE C57.106-2006 clause 4.2 lists these as especially sensitive to contamination:
+
+- 0. Turns ratio, excitation current, and winding resistance
+- 1. Interfacial tension, dissipation factor, dielectric breakdown, color, water, and neutralization number **← answer**
+- 2. CT polarity and relay targets
+- 3. Jacket thickness and bend radius
+
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 4.2
+
+Reviewer: VERIFIED or FIX
+
+## cable-017 (III / component) {#cable-017}
+
+<!-- q:cable-017 -->
+
+**Bank verified flag:** true
+
+In IEEE 400.3-2022 clause 3.1, partial-discharge inception voltage is:
+
+- 0. The voltage where repetitive discharges first appear as the voltage is raised **← answer**
+- 1. The voltage where discharges stop as the voltage is lowered
+- 2. The shield resistance
+- 3. The 30-minute VLF withstand
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.B.8; ref. IEEE 400.3-2022, clause 3.1
+
+Reviewer: VERIFIED or FIX
+
+## cable-018 (III / component) {#cable-018}
+
+<!-- q:cable-018 -->
+
+**Bank verified flag:** true
+
+ATS 7.3.3.D.7, for an online partial-discharge test of shielded cable, expects:
+
+- 0. A reported discharge from the cable at operating voltage
+- 1. No evidence of partial discharge from the cable, with background noise kept out of the report **← answer**
+- 2. A 30-minute DC hipot
+- 3. A turns-ratio test of the splice
+
+**Citation:** ANSI/NETA ATS-2025 7.3.3.D.7
+
+Reviewer: VERIFIED or FIX
+
+## relay-025 (III / component) {#relay-025}
+
+<!-- q:relay-025 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 40 is:
+
+- 0. Loss of field, tested as an impedance relay **← answer**
+- 1. A reclosing relay
+- 2. A frequency relay
+- 3. A sudden-pressure relay
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 40
+
+Reviewer: VERIFIED or FIX
+
+## relay-026 (III / component) {#relay-026}
+
+<!-- q:relay-026 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 79 is:
+
+- 0. Reclosing **← answer**
+- 1. Distance
+- 2. Differential
+- 3. Undervoltage
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 79
+
+Reviewer: VERIFIED or FIX
+
+## relay-027 (III / component) {#relay-027}
+
+<!-- q:relay-027 -->
+
+**Bank verified flag:** true
+
+In the ATS 7.9.1 list, device 81 is:
+
+- 0. Frequency **← answer**
+- 1. Sync check
+- 2. Pilot-wire monitor
+- 3. Ground detector
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 81
+
+Reviewer: VERIFIED or FIX
+
+## relay-028 (III / systems) {#relay-028}
+
+<!-- q:relay-028 -->
+
+**Bank verified flag:** true
+
+IEEE C37.113-2015 clause 4.6 describes zone 2 on a step-distance line relay as:
+
+- 0. The instantaneous element that must reach the next bus
+- 1. Time-delayed protection from the end of zone 1 to the end of the line, and backup if zone 1 fails **← answer**
+- 2. A differential zone bounded only by the transformer CTs
+- 3. The reclosing timer
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 4.6
+
+Reviewer: VERIFIED or FIX
+
+## relay-029 (III / systems) {#relay-029}
+
+<!-- q:relay-029 -->
+
+**Bank verified flag:** true
+
+IEEE C37.113-2015 clause 5.5.2 measures distance-relay reach from:
+
+- 0. The current-transformer location only
+- 1. The voltage-transformer location, with direction set by the current transformers **← answer**
+- 2. The remote bus, always
+- 3. The station battery
+
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2
+
+Reviewer: VERIFIED or FIX
+
+## relay-030 (III / systems) {#relay-030}
+
+<!-- q:relay-030 -->
+
+**Bank verified flag:** true
+
+An ATS 6.6 harmonic-study report is supposed to include:
+
+- 0. Only a single power-factor number
+- 1. Voltage and current distortion compared with IEEE 519, with exceedances flagged, and an impedance-versus-frequency plot **← answer**
+- 2. A dissolved-gas chromatogram
+- 3. The crew leader’s ETT card
+
+**Citation:** ANSI/NETA ATS-2025 6.6, study report items 5 and 6; ref. IEEE 519-2022
 
 Reviewer: VERIFIED or FIX
 

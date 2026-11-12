@@ -229,8 +229,98 @@
       "Tan delta cannot be measured at 0.1 Hz"
     ],
     "answer": 1,
-    "explanation": "I = 2\u03c0fCV. At 0.1 Hz the charging current is a small fraction of the 60 Hz value. ATS Table 100.6.3 is the acceptance voltage adapted from that guide, and the table\u2019s note discourages DC on extruded cable after years in service.",
-    "reference": "IEEE 400.2; ANSI/NETA ATS-2025 Table 100.6.1 note 2 and Table 100.6.3",
+    "explanation": "The 400.2-2024 introduction, which is not a numbered requirement of the standard, explains that charging current at 0.1 Hz is on the order of 1/600 of the 60 Hz value, so a portable set can energize a long shielded cable. ATS Table 100.6.3 is the acceptance voltage adapted from that guide, and the table\u2019s DC note discourages DC on extruded cable after years in service.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.5.2 and Table 100.6.3; ref. IEEE 400.2-2024 introduction (charging current at 0.1 Hz)",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-014",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "When the manufacturer is silent, ATS 7.3.3.B.4 sets the one-minute jacket test at:",
+    "choices": [
+      "500 V for every cable",
+      "At least 2 kV up to 35 kV cable, and at least 5 kV above 35 kV",
+      "The same voltage as the VLF withstand",
+      "Phase-to-phase system voltage for 30 minutes"
+    ],
+    "answer": 1,
+    "explanation": "The jacket test is not the insulation withstand. Up through 35 kV the floor in that sentence is 2 kV; above 35 kV it is 5 kV. Manufacturer data still wins when it exists.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.4",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-015",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS 7.3.3.D.2 says to investigate a cable shield whose resistance is:",
+    "choices": [
+      "Under 1 ohm total",
+      "More than 10 ohms per 1000 feet",
+      "Exactly the conductor resistance",
+      "Infinite, which is required"
+    ],
+    "answer": 1,
+    "explanation": "The shield has to be continuous. More than 10 ohms per 1000 feet is the investigate line. A shield that reads open will not do its job for the withstand or for a ground-fault return.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.D.2",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-016",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "An offline partial-discharge test on shielded cable passes ATS 7.3.3.D.8 when:",
+    "choices": [
+      "Any discharge is present at operating voltage",
+      "There is no partial discharge at or below the threshold in the manufacturer\u2019s data or in IEEE 400.3",
+      "The jacket ohms are above 10 per foot",
+      "The VLF set trips on overcurrent"
+    ],
+    "answer": 1,
+    "explanation": "Offline PD is judged against the manufacturer\u2019s voltage threshold or IEEE 400.3. A trip of the withstand set is a failure of a different test. Record inception, extinction, location, and the phase pattern rather than a single beep.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.D.8; ref. IEEE 400.3-2022",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-017",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "In IEEE 400.3-2022 clause 3.1, partial-discharge inception voltage is:",
+    "choices": [
+      "The voltage where repetitive discharges first appear as the voltage is raised",
+      "The voltage where discharges stop as the voltage is lowered",
+      "The shield resistance",
+      "The 30-minute VLF withstand"
+    ],
+    "answer": 0,
+    "explanation": "Inception is the first appearance on the way up. Extinction is the cease point on the way down. ATS 7.3.3.B.8 tells you to record both, along with location and magnitude. The withstand voltage is a different test.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.8; ref. IEEE 400.3-2022, clause 3.1",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-018",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "ATS 7.3.3.D.7, for an online partial-discharge test of shielded cable, expects:",
+    "choices": [
+      "A reported discharge from the cable at operating voltage",
+      "No evidence of partial discharge from the cable, with background noise kept out of the report",
+      "A 30-minute DC hipot",
+      "A turns-ratio test of the splice"
+    ],
+    "answer": 1,
+    "explanation": "Online, there should be no cable discharge. If something is there, record amplitude, repetition, and the phase pattern so internal, surface, and corona can be told apart. Background noise is not reported as cable PD.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.D.7",
     "verified": true,
     "kb": "cables.md#vlf"
   }

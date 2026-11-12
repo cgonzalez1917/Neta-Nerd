@@ -721,5 +721,113 @@
     "reference": "29 CFR 1910.333(c)(2)",
     "verified": true,
     "kb": "safety.md#osha"
+  },
+  {
+    "id": "safety-041",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ANSI/NETA ATS-2025 says, about its own safety coverage:",
+    "choices": [
+      "It replaces OSHA and NFPA 70E for acceptance testing",
+      "It does not claim to cover every safety issue, so the user still has to check the regulations that apply",
+      "It is only a lockout procedure",
+      "It forbids any test above 50 V"
+    ],
+    "answer": 1,
+    "explanation": "Section 1 says the work can involve hazardous voltages and that the specifications do not purport to address every safety issue. The user reviews the applicable regulations. ATS is the test specification, not the safety manual.",
+    "reference": "ANSI/NETA ATS-2025, section 1, item 3",
+    "verified": true,
+    "kb": "level-2.md#expectations"
+  },
+  {
+    "id": "safety-042",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS-2025 section 3.2 requires the on-site crew leader to hold:",
+    "choices": [
+      "Any helper card",
+      "A current ANSI/NETA ETT certification of Level 3 or higher",
+      "Only an OSHA 10 card",
+      "A manufacturer\u2019s relay-software login"
+    ],
+    "answer": 1,
+    "explanation": "Technicians are certified under ANSI/NETA ETT. The crew leader on site holds a current Level 3 or higher. A software password does not replace that certification.",
+    "reference": "ANSI/NETA ATS-2025 3.2, item 2",
+    "verified": true,
+    "kb": "level-2.md#expectations"
+  },
+  {
+    "id": "safety-043",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS-2025 section 3.2 says the person running the tests must be able to:",
+    "choices": [
+      "Skip the hazard review if the gear is new",
+      "Work safely, know the hazards, and judge whether the equipment is fit for service",
+      "Sign the report without looking at the data",
+      "Test energized parts as the normal method"
+    ],
+    "answer": 1,
+    "explanation": "The technician is trained on the apparatus, can run the tests safely with a real knowledge of the hazards, and has to judge serviceability from the data. New equipment does not cancel that.",
+    "reference": "ANSI/NETA ATS-2025 3.2, item 1",
+    "verified": true,
+    "kb": "safety.md#before-you-test"
+  },
+  {
+    "id": "safety-044",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before switchgear is treated as ready for service, ATS 7.1.1 says to confirm that:",
+    "choices": [
+      "Shipping bracing, loose parts, and papers shipped inside the cubicles are still packed in place",
+      "Shipping bracing, loose parts, and documentation shipped inside cubicles have been removed",
+      "The mimic bus has been painted over",
+      "The shutters are tied open"
+    ],
+    "answer": 1,
+    "explanation": "Visual inspection includes a clean unit with shipping bracing, loose parts, and shipped paperwork removed. Leaving a brace in a cubicle is how a new lineup is damaged on the first close.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.A.4",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-045",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before acceptance testing starts, ATS-2025 section 4.1 says the owner\u2019s representative provides:",
+    "choices": [
+      "Only the transformer oil sample",
+      "Site-specific hazard notification and safety training",
+      "A waiver of lockout",
+      "The test set\u2019s calibration sticker"
+    ],
+    "answer": 1,
+    "explanation": "The owner also supplies studies, drawings, and notice of when the gear is available. The hazard notification and the site safety training are the owner\u2019s item in that list, not something the test crew invents after the first shock.",
+    "reference": "ANSI/NETA ATS-2025 4.1, item 8",
+    "verified": true,
+    "kb": "safety.md#before-you-test"
+  },
+  {
+    "id": "safety-046",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ATS 7.1.1.D.2 says a dielectric withstand on switchgear bus:",
+    "choices": [
+      "Comes before the insulation-resistance test, to save time",
+      "Does not proceed until insulation resistance is above the minimum",
+      "Replaces the insulation-resistance test",
+      "Is optional whenever the gear is indoor"
+    ],
+    "answer": 1,
+    "explanation": "Insulation resistance is compared with the manufacturer or with Table 100.1. Withstand waits until that resistance is high enough. A low reading is investigated, not hipot\u2019d through.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.D.2",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]
