@@ -86,6 +86,26 @@
     });
   }
 
+  function levelLabel(level) {
+    if (!level) return "NETA level missing";
+    if (level === "ETT") return "NETA ETT";
+    return "NETA Level " + level;
+  }
+
+  function domainLabel(id) {
+    var d = DOMAINS.find(function (x) { return x.id === id; });
+    return d ? d.label : id;
+  }
+
+  function questionTags(q) {
+    return h("div", { class: "tags" },
+      h("span", { class: "tag level" }, levelLabel(q.level)),
+      h("span", { class: "tag domain" }, domainLabel(q.domain)),
+      h("span", { class: "tag topic" }, topicTitle(q.topic)),
+      h("span", { class: "meta id" }, q.id)
+    );
+  }
+
   function topicTitle(id) {
     var t = state.bank.topics.find(function (x) { return x.id === id; });
     return t ? t.title : id;
@@ -379,6 +399,11 @@
       var ok = isCorrect(item);
       var link = safeHttps(q.link || "");
       feedback = h("div", { class: "feedback " + (ok ? "good" : "bad"), role: "status" },
+        h("div", { class: "tags" },
+          h("span", { class: "tag level" }, levelLabel(q.level)),
+          h("span", { class: "tag domain" }, domainLabel(q.domain)),
+          h("span", { class: "tag topic" }, topicTitle(q.topic))
+        ),
         h("h3", {}, ok ? "Correct" : "Not quite"),
         h("p", {}, q.explanation),
         h("p", { class: "ref" }, "Reference: " + q.reference),
@@ -391,7 +416,7 @@
     app.append(
       head,
       h("div", { class: "panel" },
-        h("p", { class: "meta" }, q.id + " · Level " + q.level + " · " + q.domain + " · " + topicTitle(q.topic)),
+        questionTags(q),
         h("h2", { class: "stem" }, q.question),
         h("div", { role: "radiogroup", "aria-label": "Answer choices" }, choiceEls),
         feedback,
@@ -472,6 +497,9 @@
           var yours = row.choice == null ? "No answer" : q.choices[row.choice];
           return h("li", {},
             h("span", { class: "tag " + (row.correct ? "ok" : "bad") }, row.correct ? "Correct" : "Missed"),
+            h("span", { class: "tag level" }, levelLabel(q.level)),
+            h("span", { class: "tag domain" }, domainLabel(q.domain)),
+            h("span", { class: "tag topic" }, topicTitle(q.topic)),
             h("span", { class: "meta" }, q.id),
             h("p", {}, q.question),
             h("p", {}, "Your answer: " + yours),

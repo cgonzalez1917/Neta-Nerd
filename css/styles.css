@@ -176,12 +176,19 @@ h2 { font-size: 1.25rem; margin: 0 0 8px; }
 .score-num { font-size: 2.4rem; color: var(--amber); margin: 0; }
 .miss-list { list-style: none; padding: 0; margin: 0; }
 .miss-list li { border-top: 1px solid var(--line); padding: 10px 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 12px; }
+.tags .meta.id { margin-left: auto; }
 .tag {
-  display: inline-block; border: 1px solid var(--line); padding: 1px 6px;
-  font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim); margin-right: 4px;
+  display: inline-block; border: 1px solid var(--line); padding: 2px 8px;
+  font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim); letter-spacing: 0.03em;
 }
+.tag.level { color: var(--amber-ink); background: var(--amber); border-color: var(--amber); font-weight: 700; }
+.tag.domain { color: var(--cyan); border-color: var(--cyan); }
+.tag.topic { color: var(--text); border-color: var(--line-strong); }
 .tag.ok { color: var(--ok); border-color: var(--ok); }
 .tag.bad { color: var(--bad); border-color: var(--bad); }
+.feedback .tags { margin-bottom: 8px; }
+.miss-list .tag { margin: 0 6px 6px 0; }
 
 .study h1, .study h2, .study h3 { margin-top: 1.2em; }
 .study h2 { border-top: 1px solid var(--line); padding-top: 12px; }

@@ -48,7 +48,8 @@ for (const topic of index.topics) {
       if (!REQUIRED.includes(key) && !OPTIONAL.has(key)) fail(`${where} unknown field ${key}`);
     }
     if (typeof q.id !== "string" || !idRe.test(q.id)) fail(`${where} id must match ${topic.idPrefix}-###`);
-    if (!LEVELS.has(q.level)) fail(`${where} bad level ${q.level}`);
+    if (q.level == null || (typeof q.level === "string" && !q.level.trim())) fail(`${where} missing level`);
+    else if (!LEVELS.has(q.level)) fail(`${where} bad level ${q.level}; expected ETT, I, II, III, or IV`);
     if (!DOMAINS.has(q.domain)) fail(`${where} bad domain ${q.domain}`);
     if (q.topic !== topic.id) fail(`${where} topic ${q.topic} != ${topic.id}`);
     if (typeof q.question !== "string" || !q.question.trim()) fail(`${where} empty question`);
