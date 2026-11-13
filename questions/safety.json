@@ -2575,5 +2575,257 @@
     "reference": "ANSI/NETA ECS-2024, 3.2; ANSI/NETA ATS-2025, 3.2 item 2",
     "verified": true,
     "kb": "level-3.md#crew-leader"
+  },
+  {
+    "id": "safety-146",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "What minimum positive pressure must a purged and pressurized enclosure hold while its equipment runs, under NFPA 496?",
+    "choices": [
+      "2.5 kPa (10 in. of water)",
+      "25 Pa (0.1 in. of water) above the surrounding atmosphere",
+      "1 psi",
+      "Any pressure above zero"
+    ],
+    "answer": 1,
+    "explanation": "The enclosure stays at least 25 Pa, about a tenth of an inch of water column, above ambient while protected equipment is energized. Supplies serving other than Type X need an alarm when that pressure can't be kept. Source: NFPA 496-2027, 4.4.1 to 4.4.5.",
+    "reference": "NFPA 496-2027, 4.4.1 to 4.4.5",
+    "verified": true,
+    "kb": "life-safety.md#purged-enclosures"
+  },
+  {
+    "id": "safety-147",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "A Type X purged enclosure has 20 ft\u00b3 of free volume. How much protective gas must pass before energizing, if it holds a control panel? A motor?",
+    "choices": [
+      "20 ft\u00b3 for either",
+      "80 ft\u00b3 for the panel (4 volumes) and 200 ft\u00b3 for the motor (10 volumes)",
+      "40 ft\u00b3 and 80 ft\u00b3",
+      "200 ft\u00b3 for either"
+    ],
+    "answer": 1,
+    "explanation": "Before energizing, at least 4 times the enclosure volume in protective gas flows through, or ten for rotating machines, while keeping 25 Pa. 4 \u00d7 20 = 80 ft\u00b3 and 10 \u00d7 20 = 200 ft\u00b3. Source: NFPA 496-2027, 5.4.1 to 5.4.2 and 5.5.1 to 5.5.1.1.",
+    "reference": "NFPA 496-2027, 5.4.1 to 5.4.2 and 5.5.1 to 5.5.1.1",
+    "verified": true,
+    "kb": "life-safety.md#purged-enclosures"
+  },
+  {
+    "id": "safety-148",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "Pressure is lost in a purged enclosure. How do Type X and Type Z responses differ under NFPA 496?",
+    "choices": [
+      "Both must remove power at once",
+      "Both only alarm",
+      "Type Z removes power; Type X only alarms",
+      "Type X generally removes power automatically; Type Z only has to alarm or indicate"
+    ],
+    "answer": 3,
+    "explanation": "Type X protects equipment not suitable for Division 1 or Zone 1, so pressure failure cuts power through a sensor on the enclosure. A short delay is allowed if a sudden shutdown is more dangerous, with alarms at an attended spot. Type Z only has to detect and annunciate. Source: NFPA 496-2027, 4.9.1 to 4.9.1.2 and 4.11.1 to 4.11.1.1.",
+    "reference": "NFPA 496-2027, 4.9.1 to 4.9.1.2 and 4.11.1 to 4.11.1.1",
+    "verified": true,
+    "kb": "life-safety.md#purged-enclosures"
+  },
+  {
+    "id": "safety-149",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "A Type X enclosure door opens without a key or tool. What does NFPA 496 require?",
+    "choices": [
+      "An interlock that de-energizes the unsuitable circuits immediately when the door opens",
+      "A warning label only",
+      "A padlock hasp",
+      "Nothing, if the pressure alarm works"
+    ],
+    "answer": 0,
+    "explanation": "If someone can open it by hand, opening it has to kill the circuits not approved for the location right away. Source: NFPA 496-2027, 5.5.2.",
+    "reference": "NFPA 496-2027, 5.5.2",
+    "verified": true,
+    "kb": "life-safety.md#purged-enclosures"
+  },
+  {
+    "id": "safety-150",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "Which NFPA 496 enclosure type may be energized right away, without a purge, when it holds at least 25 Pa and the inside atmosphere is known to be below an ignitible level?",
+    "choices": [
+      "Type X",
+      "Any type",
+      "Type Y or Type Z",
+      "None"
+    ],
+    "answer": 2,
+    "explanation": "The immediate-energization allowance is written for Type Y and Type Z. It does not extend to Type X, which always purges first. Source: NFPA 496-2027, 5.4.2.",
+    "reference": "NFPA 496-2027, 5.4.2",
+    "verified": true,
+    "kb": "life-safety.md#purged-enclosures"
+  },
+  {
+    "id": "safety-151",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "Under NFPA 497, what separates a Division 1 area from a Division 2 area?",
+    "choices": [
+      "Division 1 is indoors and Division 2 is outdoors",
+      "Division 2 is more dangerous than Division 1",
+      "Division 1 can have an ignitible mixture in normal operation, including frequent maintenance; Division 2 only under abnormal conditions",
+      "They depend only on the gas group"
+    ],
+    "answer": 2,
+    "explanation": "Division 1 covers places where a flammable mixture can show up during normal work, including releases from frequent repairs. Division 2 covers places where it is likely only if something goes wrong, short of a catastrophe. Source: NFPA 497-2027, 5.3.1.1 to 5.3.1.3 and 5.3.2.",
+    "reference": "NFPA 497-2027, 5.3.1.1 to 5.3.1.3 and 5.3.2",
+    "verified": true,
+    "kb": "life-safety.md#hazloc"
+  },
+  {
+    "id": "safety-152",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "In the Zone system, what does Zone 0 mean under NFPA 497?",
+    "choices": [
+      "An ignitible mixture is present all the time or for long periods",
+      "The area is unclassified",
+      "A mixture appears only during abnormal conditions",
+      "Combustible dust is present"
+    ],
+    "answer": 0,
+    "explanation": "Zone 0 is the most severe gas zone, where the mixture is present continuously or for long stretches. Zone and Division labels are not interchangeable. Source: NFPA 497-2027, 5.4.1.",
+    "reference": "NFPA 497-2027, 5.4.1",
+    "verified": true,
+    "kb": "life-safety.md#hazloc"
+  },
+  {
+    "id": "safety-153",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "What should the size of a classified area be based on under NFPA 497?",
+    "choices": [
+      "A fixed 10 ft radius around every valve",
+      "The color of the piping",
+      "The NEC article number",
+      "The material, its release conditions and the site's real ventilation and layout, not a stock diagram"
+    ],
+    "answer": 3,
+    "explanation": "Extent depends on things like vapor density, LFL, temperature, pressure, release size and ventilation. Barriers, wind and room shape matter too. Ask operations and maintenance about leaks and routine work. Source: NFPA 497-2027, 5.6.1 to 5.6.4 and 5.9.2.1 to 5.9.2.4.",
+    "reference": "NFPA 497-2027, 5.6.1 to 5.6.4 and 5.9.2.1 to 5.9.2.4",
+    "verified": true,
+    "kb": "life-safety.md#hazloc"
+  },
+  {
+    "id": "safety-154",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "Under NFPA 499, combustible dust clouds form during normal operation or frequent maintenance. Which classification does that support?",
+    "choices": [
+      "Class I, Division 2",
+      "Zone 20 or 21, or Class II, Division 1",
+      "Class III",
+      "Unclassified"
+    ],
+    "answer": 1,
+    "explanation": "Dust clouds in normal operation or frequent maintenance point to Class II, Division 1 in the Division system, or Zone 20 or 21. Rare releases of some dust groups may fall to Division 2 or Zone 22. Source: NFPA 499-2027, 6.2.3.2 to 6.2.3.5.",
+    "reference": "NFPA 499-2027, 6.2.3.2 to 6.2.3.5",
+    "verified": true,
+    "kb": "life-safety.md#hazloc"
+  },
+  {
+    "id": "safety-155",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "During a site walk you see a dust layer on a motor. Does NFPA 499 give a dust thickness that passes or fails the motor electrically?",
+    "choices": [
+      "Yes. Over 1/8 in. fails the insulation test",
+      "No. Layer depth is an input to the area classification review, not an electrical test limit",
+      "Yes. Any dust fails",
+      "Yes. Over 1 in. requires a hipot"
+    ],
+    "answer": 1,
+    "explanation": "NFPA 499 has the team ask how thick layers get and how fast dust builds up, as part of classifying the area. Housekeeping and tight equipment help limit the classified area. It is not a pass/fail number for the equipment. Source: NFPA 499-2027, 6.6.2.2 and 6.8.6.",
+    "reference": "NFPA 499-2027, 6.6.2.2 and 6.8.6",
+    "verified": true,
+    "kb": "life-safety.md#hazloc"
+  },
+  {
+    "id": "safety-156",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under NFPA 70E-2027 120.6, how is the absence-of-voltage test done on a low-voltage circuit?",
+    "choices": [
+      "Test one phase to ground at the panel and assume the rest",
+      "Use the panel voltmeter",
+      "Check that the breaker handle is in the off position",
+      "At every work location, check every phase and circuit part line to line and line to ground, proving the tester on a live source before and after"
+    ],
+    "answer": 3,
+    "explanation": "The tester has to be rated for the job. Prove it on a live source you trust, test every phase at every work point both line to line and line to ground, then prove the tester again. Source: NFPA 70E-2027, 120.6(7).",
+    "reference": "NFPA 70E-2027, 120.6(7)",
+    "verified": true,
+    "kb": "life-safety.md#test-before-touch-2027"
+  },
+  {
+    "id": "safety-157",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "On a 13.8 kV system, may a noncontact capacitive tester replace contact testing under NFPA 70E-2027?",
+    "choices": [
+      "Yes, over 1000 V an appropriately rated noncontact tester may check each phase, but it can't prove absolute absence of voltage",
+      "No, never",
+      "Yes, on any system of any voltage",
+      "Only if it is used at the remote end"
+    ],
+    "answer": 0,
+    "explanation": "Exception 2 allows noncontact capacitive instruments above 1000 V. The note explains that these devices have a minimum operating voltage, so they show no detectable voltage, not zero voltage. Source: NFPA 70E-2027, 120.6(7) Exception 2.",
+    "reference": "NFPA 70E-2027, 120.6(7) Exception 2",
+    "verified": true,
+    "kb": "life-safety.md#test-before-touch-2027"
+  },
+  {
+    "id": "safety-158",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "On a current-driven circuit, the absence-of-voltage test alone doesn't prove the circuit is de-energized. What does NFPA 70E-2027 require?",
+    "choices": [
+      "Nothing more; a zero-voltage reading is enough",
+      "Apply grounds and skip testing",
+      "Additional test methods, such as testing for absence of current",
+      "Repeat the voltage test three times"
+    ],
+    "answer": 2,
+    "explanation": "Exception 3 says when a voltage test can't settle the question, use more methods. The informational example is checking for absence of current on circuits driven by a current source. Source: NFPA 70E-2027, 120.6(7) Exception 3.",
+    "reference": "NFPA 70E-2027, 120.6(7) Exception 3",
+    "verified": true,
+    "kb": "life-safety.md#test-before-touch-2027"
+  },
+  {
+    "id": "safety-159",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under NFPA 70E-2027, an energized work permit calls for shock or arc-flash PPE. Who else must be there?",
+    "choices": [
+      "Nobody, if the worker is qualified",
+      "A second worker inside the restricted approach boundary",
+      "At least one person trained in emergency response, standing beyond whichever is bigger: the limited approach boundary or the arc-flash boundary",
+      "The AHJ"
+    ],
+    "answer": 2,
+    "explanation": "The 2027 edition requires at least one extra person with the emergency response training of 110.4(C)(1). That person stays beyond the bigger of the two boundaries, limited approach or arc flash. Source: NFPA 70E-2027, 130.2(A)(2).",
+    "reference": "NFPA 70E-2027, 130.2(A)(2)",
+    "verified": true,
+    "kb": "life-safety.md#test-before-touch-2027"
   }
 ]

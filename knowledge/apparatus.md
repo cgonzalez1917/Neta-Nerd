@@ -32,7 +32,7 @@ AC induction machines are ATS 7.15.1. Above 200 hp (150 kW) the insulation test 
 
 ## Emergency systems {#emergency}
 
-Engine generators (7.22.1) need phase rotation, phasing, and synchronizing proved before they are paralleled. A UPS (7.22.2) is proved by a static transfer to bypass and back, on real load when you can. An automatic transfer switch (7.22.3) is timed: delay on transfer, transfer, delay and retransfer when normal returns. Control wiring on the transfer switch is not less than 2 MΩ, and the power contacts still get a microhm check. These are system tests. A relay that “passes” in the panel does not prove the transfer.
+Engine generators (7.22.1) need phase rotation, phasing, and synchronizing proved before they are paralleled. A UPS (7.22.2) is proved by a static transfer to bypass and back, on real load when you can. An automatic transfer switch (7.22.3) is timed: delay on transfer, transfer, delay and retransfer when normal returns. Control wiring on the transfer switch is not less than 2 MΩ, and the power contacts still get a microhm check. These are system tests. A relay that “passes” in the panel does not prove the transfer. For emergency lighting, UPS, hospital, fire alarm and fire pump tests, see [life-safety power](#/study/life-safety.md/life-safety).
 
 ## Fiber {#fiber}
 

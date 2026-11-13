@@ -17,6 +17,7 @@
     {"file": "thermography.md", "title": "Infrared thermography", "level": "II"},
     {"file": "field-methods.md", "title": "Field methods: injection, CTs, PF, motors", "level": "II"},
     {"file": "apparatus.md", "title": "MV breakers, reclosers, motors, emergency, fiber, EVSE", "level": "II"},
+    {"file": "life-safety.md", "title": "Life-safety power and other NFPA tests", "level": "II"},
     {"file": "sources.md", "title": "Sources and what not to copy", "level": ""}
   ]
 }

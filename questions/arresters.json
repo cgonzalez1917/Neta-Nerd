@@ -214,5 +214,41 @@
     "reference": "IEEE C62.11-2020, 3.1 (duty-cycle voltage rating)",
     "verified": true,
     "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-013",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Under NFPA 780, what nominal discharge current rating must the service-entrance SPD have?",
+    "choices": [
+      "At least 3 kA per phase",
+      "At least 200 kA total",
+      "20 kA or more per phase (8/20 \u00b5s wave)",
+      "At least 10 kA (10/350 \u00b5s) total"
+    ],
+    "answer": 2,
+    "explanation": "A lightning-protected structure needs an SPD at every power service, built into or right next to the service equipment. Size it for a nominal discharge current of 20 kA or more on each phase, using the 8/20 \u00b5s wave. Source: NFPA 780-2026, 4.19.2.1 and 4.19.2.5 to 4.19.2.7.",
+    "reference": "NFPA 780-2026, 4.19.2.1 and 4.19.2.5 to 4.19.2.7",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "arr-014",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "systems",
+    "question": "Besides the service, where else does NFPA 780 require SPDs on power circuits?",
+    "choices": [
+      "At every receptacle",
+      "Only at the generator",
+      "Where feeders or branch circuits enter or leave the building to another building over runs longer than 100 ft (30 m)",
+      "Nowhere else"
+    ],
+    "answer": 2,
+    "explanation": "Long runs between buildings pick up surge energy, so SPDs go where those circuits enter or leave when the run is over 100 ft. There is an exception, under engineering supervision, when the threat is negligible or equal protection exists. Source: NFPA 780-2026, 4.19.2.2 and 4.19.2.4.",
+    "reference": "NFPA 780-2026, 4.19.2.2 and 4.19.2.4",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
   }
 ]

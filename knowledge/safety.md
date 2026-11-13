@@ -31,7 +31,7 @@ Operating a disconnect to create the safe condition, or to return equipment to s
 
 ## Test instruments {#instruments}
 
-110.6(A): only a qualified person tests, troubleshoots, or measures voltage where a hazard exists. 110.6(B): the instrument and its leads are rated for the circuit, approved for the purpose, and used as the manufacturer says. 110.6(D): look at the instrument and the leads before each use. If anything is damaged, it comes out of service until someone qualified repairs it. 110.6(E): on a circuit at 50 volts or more, prove the instrument on a known source before the absence-of-voltage test and again after it.
+110.6(A): only a qualified person tests, troubleshoots, or measures voltage where a hazard exists. 110.6(B): the instrument and its leads are rated for the circuit, approved for the purpose, and used as the manufacturer says. 110.6(D): look at the instrument and the leads before each use. If anything is damaged, it comes out of service until someone qualified repairs it. 110.6(E): on a circuit at 50 volts or more, prove the instrument on a known source before the absence-of-voltage test and again after it. For 70E-2027 changes to testing, see [test before touch](#/study/life-safety.md/test-before-touch-2027).
 
 Capacitors are called out in 120.5(B)(2): discharge them, and short and ground high-capacitance elements before the associated gear is touched.
 
