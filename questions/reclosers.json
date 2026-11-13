@@ -178,5 +178,23 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.16; ANSI/NETA MTS-2023 Table 100.16",
     "verified": true,
     "kb": "apparatus.md#sectionalizers"
+  },
+  {
+    "id": "recl-011",
+    "level": "IV",
+    "topic": "reclosers",
+    "domain": "systems",
+    "question": "A recloser's fast curve crosses a 20 A tap fuse's minimum-melt curve at about 800 A. A fault downstream of the fuse draws 1500 A. With a conventional C37.230 fuse-saving scheme, what happens, and what does partial-range fuse saving change?",
+    "choices": [
+      "The recloser always clears first, so the fuse is saved at any current",
+      "Only the fuse operates, because fast curves are blocked above pickup",
+      "Both lock out, because fuse saving turns off reclosing",
+      "Above the crossing, the fuse melts and the recloser fast curve trips too, so every customer gets a momentary and the fuse is not saved. Partial-range saving caps the fast curve near 800 A so faults above it are left to the fuse"
+    ],
+    "answer": 3,
+    "explanation": "Fuse saving works only where the recloser fast curve is below the fuse minimum-melt curve. C37.230 explains that above the crossing both devices operate. The fuse is lost anyway and the whole feeder sees a needless momentary. Partial-range fuse saving limits the fast curve's response near the crossing current, so faults above it go to the fuse while the recloser holds on its slow curve. Source: IEEE C37.230-2020, 5.2.1 and 5.2.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE C37.230-2020, 5.2.1 and 5.2.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "relays.md#coordination"
   }
 ]

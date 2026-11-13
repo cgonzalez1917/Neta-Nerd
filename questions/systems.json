@@ -970,5 +970,95 @@
     "reference": "Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Situation 8",
     "verified": true,
     "kb": "apparatus.md#studies"
+  },
+  {
+    "id": "sys-055",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Before closing a tie between two 480Y/277 V buses, you read 392 V from A on one bus to A on the other, and the same on B and C. What is the angle between the systems, and what can you tell about lead or lag?",
+    "choices": [
+      "About 90 degrees (a bit over 1.4 x the 277 V line-to-ground value). Lead or lag cannot be told from voltage readings alone",
+      "About 30 degrees, and bus 1 leads",
+      "About 120 degrees, which is a simple lead rotation",
+      "About 90 degrees, and bus 2 lags, because the reading is below 480 V"
+    ],
+    "answer": 0,
+    "explanation": "Across like phases, the voltage is 2 x VLG x sin(angle / 2). 392 / 277 is about 1.41, and 2 x sin 45 degrees is 1.414, so the angle is about 90 degrees. Lautenschlager's Table 1 puts 90 degrees at a bit over 1.4 x VLG and notes that leading and lagging cannot be found from voltage measurements. A phase-angle meter or scope can show it. Do not parallel. Source: Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Table 1; ANSI/NETA ETT-2026, 8.4.2.A.4.",
+    "reference": "Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Table 1; ANSI/NETA ETT-2026, 8.4.2.A.4",
+    "verified": true,
+    "kb": "apparatus.md#paralleling-math"
+  },
+  {
+    "id": "sys-056",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Using phasing sticks on a 12.47Y/7.2 kV tie, you read about 12.47 kV between like phases on all three pairs, and both systems show the same rotation. What does that mean, and what is the fix?",
+    "choices": [
+      "The systems are 180 degrees apart; swap any two leads",
+      "The systems are in phase, because the reading equals the nominal voltage",
+      "The systems have opposite rotation; swap two leads on one side",
+      "The systems are 120 degrees apart with the same rotation. Roll the three leads on one side one position (A to the B position, and so on) and phase again; repeat once more if still 120 degrees"
+    ],
+    "answer": 3,
+    "explanation": "A reading equal to phase-to-phase voltage between like phases is the 120 degree row of Lautenschlager's Table 1 (2 x 7.2 x sin 60 degrees is about 12.47 kV). With the same rotation on all three pairs, this is Situation 2: shift the leads on one system one position and phase again. Opposite rotation shows a different pattern, with two pairs at phase-to-phase and one pair at zero. Source: Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Table 1 and Situation 2; ANSI/NETA ETT-2026, 8.4.2.A.4.",
+    "reference": "Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Table 1 and Situation 2; ANSI/NETA ETT-2026, 8.4.2.A.4",
+    "verified": true,
+    "kb": "apparatus.md#paralleling-math"
+  },
+  {
+    "id": "sys-057",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "On a 4160Y/2400 V system you are told the two sources may be 60 degrees apart. What reading between like phases should you expect if that is true?",
+    "choices": [
+      "About 4160 V, equal to phase-to-phase voltage",
+      "About 2400 V, equal to the phase-to-ground voltage",
+      "About 1200 V, half of phase-to-ground",
+      "About 4800 V, twice phase-to-ground"
+    ],
+    "answer": 1,
+    "explanation": "2 x VLG x sin(60 / 2) = 2 x 2400 x 0.5 = 2400 V. Lautenschlager's Table 1 lists phase-to-ground voltage for a 60 degree displacement, phase-to-phase for 120 degrees, and twice phase-to-ground for 180 degrees. Source: Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Table 1; ANSI/NETA ETT-2026, 8.4.2.A.4.",
+    "reference": "Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, Table 1; ANSI/NETA ETT-2026, 8.4.2.A.4",
+    "verified": true,
+    "kb": "apparatus.md#paralleling-math"
+  },
+  {
+    "id": "sys-058",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Two transformers on the same tap will be paralleled. One is 5.75% Z. Using the Lautenschlager pre-phasing check, which impedance range is acceptable for the other unit, and is 6.25% inside it?",
+    "choices": [
+      "About 5.25% to 6.25%, so 6.25% is acceptable",
+      "About 5.32% to 6.18%, so 6.25% is outside the window",
+      "About 5.00% to 6.50%, so 6.25% is acceptable",
+      "Any impedance is fine if the taps match"
+    ],
+    "answer": 1,
+    "explanation": "Lautenschlager asks that one transformer's %Z be within 92.5% to 107.5% of the other's. 0.925 x 5.75 = 5.32% and 1.075 x 5.75 = 6.18%. A 6.25% unit is about 108.7% of 5.75, just outside. The lower-%Z unit holds up its voltage better under load and takes more of the load. Source: Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, section on checks before phasing; ANSI/NETA ETT-2026, 8.4.2.A.4.",
+    "reference": "Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, section on checks before phasing; ANSI/NETA ETT-2026, 8.4.2.A.4",
+    "verified": true,
+    "kb": "apparatus.md#paralleling-math"
+  },
+  {
+    "id": "sys-059",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Two 1000 kVA transformers on the same tap, 5.0% Z and 6.0% Z, are paralleled to carry 1800 kVA. Treating the impedances as current dividers on the same base, about how is the load split?",
+    "choices": [
+      "900 kVA each, because the ratings match",
+      "About 818 kVA on the 5.0% unit and 982 kVA on the 6.0% unit",
+      "About 1500 kVA on the 5.0% unit and 300 kVA on the 6.0% unit",
+      "About 982 kVA on the 5.0% unit and 818 kVA on the 6.0% unit"
+    ],
+    "answer": 3,
+    "explanation": "Parallel paths share current in inverse proportion to their impedance. The 5.0% unit carries 1800 x 6.0 / (5.0 + 6.0), about 982 kVA, and the 6.0% unit carries 1800 x 5.0 / 11, about 818 kVA. That fits Lautenschlager's point that the lower-%Z transformer carries more of the load. Here the 5% unit is about 98% loaded while the other is about 82%. Source: Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, section on checks before phasing; Blackburn and Domin, Protective Relaying, 4th ed., 2.6 and 2.10; ANSI/NETA ETT-2026, 8.4.2.A.4.",
+    "reference": "Lautenschlager, A Guide to Paralleling Electrical Systems, NETA World, Fall 2008, section on checks before phasing; Blackburn and Domin, Protective Relaying, 4th ed., 2.6 and 2.10; ANSI/NETA ETT-2026, 8.4.2.A.4",
+    "verified": true,
+    "kb": "apparatus.md#paralleling-math"
   }
 ]

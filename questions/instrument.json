@@ -1024,5 +1024,203 @@
     "reference": "IEEE C37.110-2023, 5.5",
     "verified": true,
     "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-058",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A 600:5 C200 relaying CT has 0.30 ohm winding resistance. It feeds a microprocessor relay (0.05 ohm) over 150 m one-way of #10 copper, taken as 1.0 ohm per 300 m. The maximum symmetrical fault is 12 kA. Using the C37.110 scalar burden method, what voltage must the CT develop?",
+    "choices": [
+      "About 135 V",
+      "About 85 V, counting only one lead",
+      "About 105 V, leaving out the winding resistance",
+      "About 6.75 V, using rated 5 A instead of fault current"
+    ],
+    "answer": 0,
+    "explanation": "Lead resistance is a loop: 2 x 150 m = 300 m, or 1.0 ohm. Adding the burdens as scalars, as C37.110 suggests for a first check, gives 0.30 + 1.0 + 0.05 = 1.35 ohms. The secondary fault current is 12,000 / 120 = 100 A, so the CT must develop about 1.35 x 100 = 135 V. Source: IEEE C37.110-2023, 5.1 (sample burden calculation); ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 5.1 (sample burden calculation); ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-059",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "The CT circuit above needs 135 V at maximum fault on a C200 rating. Using the C37.110 saturation ratio from the C classification, how secure is the application?",
+    "choices": [
+      "The ratio is about 0.68, and anything under 1.0 is secure",
+      "The ratio is about 1.48, so the CT is saturated even at load",
+      "The ratio is about 0.68, above the 0.5 the guide treats as reasonably secure, so reduce burden or use a better CT or ratio",
+      "The ratio cannot be found without a T-class overcurrent ratio curve"
+    ],
+    "answer": 2,
+    "explanation": "C37.110 compares the secondary terminal voltage at maximum fault with the voltage the C class supports, here 200 V. 135 / 200 is about 0.68. The guide calls an application reasonably secure when the saturation ratio is 0.5 or less. The C rating is a way of specifying steady-state voltage, not a recommended operating point. Source: IEEE C37.110-2023, 4.5.2.1 and 4.5.2.1.1, and Clause 5 introduction; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.5.2.1 and 4.5.2.1.1, and Clause 5 introduction; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-060",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A line relay CT is on its 1000:5 tap. The maximum fault is 15 kA with a primary X/R of 12, and total secondary impedance is 0.80 ohm. To avoid saturation on a fully offset fault with a resistive burden, what saturation voltage does C37.110 require?",
+    "choices": [
+      "More than about 720 V, using X/R instead of 1 + X/R",
+      "More than about 60 V, the ac-only requirement",
+      "More than about 780 V",
+      "More than about 156,000 V, using primary current instead of secondary"
+    ],
+    "answer": 2,
+    "explanation": "Secondary current is 15,000 / 200 = 75 A. The ac-only requirement is Vx > Is x Zs = 75 x 0.80 = 60 V. With full dc offset and a resistive burden, C37.110 multiplies by (1 + X/R): 60 x 13 = 780 V. The guide warns these limits often lead to very large CTs, so other steps may be needed. Source: IEEE C37.110-2023, 4.5.2.3 Equations (10) and (11), and 6.2.3.1; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.5.2.3 Equations (10) and (11), and 6.2.3.1; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-061",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A 1200:5 C400 multi-ratio CT is connected on its 600:5 tap. What is the most secondary burden it can carry and still hold rated accuracy at 20 times rated secondary current?",
+    "choices": [
+      "About 2.0 ohms",
+      "About 4.0 ohms, using the full-winding C400 rating",
+      "About 8.0 ohms, inverting the tap ratio",
+      "About 1.0 ohm, derating twice"
+    ],
+    "answer": 0,
+    "explanation": "Secondary voltage capability is proportional to the turns in use, so on the 600:5 tap the CT supports 400 x 600 / 1200 = 200 V. Twenty times 5 A is 100 A, so the maximum burden is 200 / 100 = 2.0 ohms. A multi-ratio CT's class rating applies to the full winding. Source: IEEE C37.110-2023, 4.4.2 Example 2 and 4.5.3; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.4.2 Example 2 and 4.5.3; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-062",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A study shows the fault path impedance at an angle of 80 degrees. The relay CT will carry 50 A secondary at maximum fault into 1.2 ohms, and its saturation voltage on the tap in use is 360 V. Does it meet the C37.110 offset criterion?",
+    "choices": [
+      "Yes. It needs only 60 V, so 360 V has plenty of margin",
+      "Yes. It needs about 340 V, using X/R instead of 1 + X/R",
+      "No. It needs about 4800 V, using 80 as the X/R ratio",
+      "No. X/R is about 5.67 (tan 80 degrees), so it needs more than about 400 V, and 360 V falls short"
+    ],
+    "answer": 3,
+    "explanation": "X/R is the tangent of the impedance angle: tan 80 degrees is about 5.67. The required voltage is Is x Zs x (1 + X/R) = 50 x 1.2 x 6.67, about 400 V. 360 V is less, so change the ratio, the class, or the burden and check again, as the C37.110 line-relay procedure describes. Source: IEEE C37.110-2023, 6.2.3.1 to 6.2.3.3; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 6.2.3.1 to 6.2.3.3; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-063",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A CT needs about 400 V to ride through an offset fault with no remanence. If the core can be left with 50% remanence in the worst direction, how does that change the requirement, treating the usable flux swing as 1 minus the per-unit remanence?",
+    "choices": [
+      "It rises to about 600 V, adding 50% instead of dividing by 0.5",
+      "It roughly doubles, to about 800 V",
+      "It falls to about 200 V",
+      "It does not change, because remanence decays in service"
+    ],
+    "answer": 1,
+    "explanation": "Worst-direction remanence uses up part of the flux the core could otherwise swing, leaving only 1 - 0.5 = 0.5 of it. To avoid saturation the voltage capability has to rise by 1 / 0.5, so 400 / 0.5 = 800 V. C37.110 notes that remanence barely decays in service and can reach 80% of saturation flux. At that level the usable swing is only 20%. Source: IEEE C37.110-2023, 4.5.2.3 Equation (13), 4.6, and 4.6.1; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.5.2.3 Equation (13), 4.6, and 4.6.1; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-064",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "After a dc winding-resistance test, you want to drive remanence in a CT below 10% of saturation flux. The CT knee-point is about 300 V. Per C37.110, about what voltage has to be applied during demagnetization?",
+    "choices": [
+      "About 30 V, 10% of the knee-point",
+      "About 180 V or more, roughly 60% of the knee-point",
+      "About 300 V held steady, because only the knee-point works",
+      "About 600 V, twice the knee-point"
+    ],
+    "answer": 1,
+    "explanation": "C37.110 says dc testing leaves remanence, and that about 60% of the knee-point voltage has to be applied to bring remanence below 10% of saturation flux density. 0.60 x 300 = 180 V. Demagnetize the CT the way the manufacturer or C57.13.1 describes, and do not hold it above the knee. Source: IEEE C37.110-2023, 4.6; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.6; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-065",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A setting engineer has only the nameplate class, C800, and needs a first estimate of the knee-point to compare with a calculated excitation voltage. What range does C37.110 suggest?",
+    "choices": [
+      "Exactly 800 V, the class voltage",
+      "About 1000 V to 1200 V, above the class voltage",
+      "About 80 V, one-tenth of the class",
+      "About 400 V to 600 V, since the knee may be 50% to 75% of the class voltage"
+    ],
+    "answer": 3,
+    "explanation": "C37.110 notes the knee-point may be 50% to 75% of the standard class voltage. For C800 that is 400 V to 600 V. Use the actual excitation curve when you have it, because the class voltage is not an operating point. Source: IEEE C37.110-2023, 4.5.2.2 and Clause 5 introduction; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.5.2.2 and Clause 5 introduction; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-066",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A time-to-saturation estimate needs the primary dc time constant. The fault X/R is 12 on a 60 Hz system. What is the time constant?",
+    "choices": [
+      "About 31.8 ms",
+      "About 200 ms, dividing X/R by 60",
+      "About 12 ms, reading X/R as milliseconds",
+      "About 0.22 ms, dividing 1 by X/R and by 2 pi f"
+    ],
+    "answer": 0,
+    "explanation": "The time constant is X / (omega R), with omega = 2 pi f = 377 rad/s at 60 Hz. 12 / 377 is about 0.0318 s, or 31.8 ms, which matches the C37.110 time-to-saturate example. In that example the conservative equation gives 2.1 ms and the more accurate one gives 6.8 ms. Source: IEEE C37.110-2023, 4.5.3.1 (time-to-saturate example); ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 4.5.3.1 (time-to-saturate example); ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-067",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "An electromechanical relay with a 14 VA burden at 5 A is replaced by a microprocessor relay rated 0.3 VA at 5 A. How many ohms of burden does each one put on the CT at 5 A?",
+    "choices": [
+      "About 2.8 ohms and 0.06 ohm, dividing VA by 5 instead of 25",
+      "About 350 ohms and 7.5 ohms, multiplying VA by 25",
+      "About 0.56 ohm for the electromechanical relay and about 0.012 ohm for the microprocessor relay",
+      "The same, because VA ratings do not change ohms"
+    ],
+    "answer": 2,
+    "explanation": "Ohms equals VA divided by current squared. 14 / 25 = 0.56 ohm and 0.3 / 25 = 0.012 ohm. C37.110 notes electromechanical relays can range from 2 VA to 14 VA and microprocessor relays from about 0.01 VA to 0.3 VA at 5 A, which is why lead and winding resistance usually dominate on modern panels. Source: IEEE C37.110-2023, 5.1; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 5.1; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-068",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A new feeder sees 30 kA maximum symmetrical fault. Following the C37.110 ratio-selection rule that secondary current should not exceed 20 times rated, what is the smallest standard 5 A ratio that works?",
+    "choices": [
+      "300:5, using fault current divided by 100 as the primary rating",
+      "600:5, using 50 times rated",
+      "1500:5",
+      "6000:5, using 1 times rated"
+    ],
+    "answer": 2,
+    "explanation": "Twenty times 5 A is 100 A. The ratio must be at least 30,000 / 100 = 300 to 1, which is 1500:5. C37.110 also favors the highest ratio the relays can use, to lower wiring burden and raise CT capability. Source: IEEE C37.110-2023, 5.2; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G.",
+    "reference": "IEEE C37.110-2023, 5.2; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-saturation-math"
   }
 ]

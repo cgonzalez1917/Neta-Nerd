@@ -1,10 +1,14 @@
 # Low-resistance ohms {#dlro}
 
+*Levels: II*
+
 A DLRO (digital low-resistance ohmmeter) measures milliohms and microhms. Four terminals — Kelvin — split the job: one pair drives current, the other pair reads voltage inside the current leads, so lead resistance and most of the clip contact drop out of the answer. Two-wire ohms on a breaker pole is a measurement of the leads.
 
 Use a stable current, write the current down, and do not unclip an inductive winding until the test set has ramped the current off. The collapse will bite.
 
 ## The 50 percent rule {#fifty-percent}
+
+*Levels: II, IV*
 
 ATS repeats this for bolted connections and for many breaker poles. Wording from 7.4.D.1, and the same idea at 7.6.1.2.D.2 and 7.2.2.D.1:
 
@@ -20,6 +24,8 @@ Millivolt drop is the same fact at a known current. `V = IR`. 200 A through 150 
 
 ## Winding resistance {#winding}
 
+*Levels: II, III*
+
 Liquid-filled transformers, ATS 7.2.2.D.8: temperature-corrected winding resistance shall compare within two percent of a previous test or of the adjacent phases.
 
 Wait until the number stops drifting. Inductance, especially on a large delta, makes the first seconds lie. Record the tap, the winding temperature (not just the air), and the current. Correct copper with 234.5 and aluminum with 225 before you declare a phase high. See the math page.
@@ -29,6 +35,8 @@ Demagnetize when the test set offers it. Residual flux from a DC winding-resista
 A single shorted turn may barely move DC resistance and still shout on excitation current and sometimes on TTR. Resistance is the better test for a loose joint, a broken strand, or a tap-changer contact.
 
 ## Busway insulation, because it is a resistance minimum {#busway}
+
+*Levels: II*
 
 ATS 7.4.D.2.a, low-voltage metal-enclosed busway, no manufacturer data: correct the reading to a nominal 100-foot run.
 

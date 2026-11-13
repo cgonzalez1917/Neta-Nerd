@@ -1,5 +1,7 @@
 # Flooded lead-acid {#flooded}
 
+*Levels: II, III, IV*
+
 ATS 7.18.1.1 is flooded lead-acid. Vented nickel-cadmium is 7.18.1.2. Valve-regulated lead-acid is 7.18.1.3. The pass/fail numbers are not interchangeable. Nickel-cadmium inspection includes pilot-cell electrolyte temperature (7.18.1.2.A.7). VRLA does not get watered, and a specific-gravity reading is not available the way it is on a flooded cell.
 
 Flooded lead-acid electrical values, 7.18.1.1.D:
@@ -17,11 +19,15 @@ Intercell hardware gets an oxide inhibitor where the section calls for it, and t
 
 ## Common mistakes
 
+*Levels: II, III, IV*
+
 - Using the flooded 0.05 V rule on a VRLA monoblock the manual treats differently.
 - Comparing ohmic readings between a full charge and a discharged string and calling 25 percent.
 - Leaving the charger in equalize.
 
 ## Specific gravity, float, and equalize {#specific-gravity}
+
+*Levels: II*
 
 Sources: IEEE 450-2020 5.3.3, 5.4.3, 5.5, Annex A and Annex B; ATS-2025 7.18.1.1.
 
@@ -34,6 +40,8 @@ Sources: IEEE 450-2020 5.3.3, 5.4.3, 5.5, Annex A and Annex B; ATS-2025 7.18.1.1
 - **Charger settings.** ATS has you measure float and equalize voltage and set them to the battery maker's values, not the charger's defaults.
 
 ## Capacity tests {#capacity-test}
+
+*Levels: II, III, IV*
 
 Sources: IEEE 450-2020 Clause 3, 7.2, 7.3 and 7.4.1.
 

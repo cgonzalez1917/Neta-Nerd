@@ -2485,5 +2485,617 @@
     "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.9",
     "verified": true,
     "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-139",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A substation feeder's maximum steady-state load is 320 A, and the 51 sees 600:5 CTs. Using the C37.230 range for phase time-overcurrent pickup, what secondary pickup range is reasonable before you check reach?",
+    "choices": [
+      "About 2.7 A secondary, equal to load",
+      "About 0.4 A to 0.96 A secondary, dividing by 1000",
+      "About 3.3 A to 8.0 A secondary (400 A to 960 A primary)",
+      "About 400 A to 960 A secondary, forgetting the CT ratio"
+    ],
+    "answer": 2,
+    "explanation": "C37.230 notes that utilities commonly place phase time-overcurrent pickup between 1.25x and 3.00x of the heaviest steady load. 1.25 x 320 = 400 A and 3.00 x 320 = 960 A primary. Through a 120:1 CT that is about 3.33 A to 8.0 A secondary. Then confirm the pickup still sees the minimum end-of-line phase-to-phase fault. Source: IEEE C37.230-2020, 6.1.1; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE C37.230-2020, 6.1.1; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-140",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A feeder fast curve must not trip on inrush of a 150 kVA single-phase 7.2 kV transformer near a strong source. Using the conservative C37.230 factors for small single-phase units, which inrush points do you plot?",
+    "choices": [
+      "About 250 A at 0.1 s and about 521 A at 0.01 s (12 and 25 times about 20.8 A)",
+      "About 144 A at 0.1 s and 301 A at 0.01 s, using a line-to-line voltage with the square root of 3",
+      "About 21 A at both times, which is full-load current",
+      "About 187 A at 0.1 s and 250 A at 0.01 s, using the large three-phase factors"
+    ],
+    "answer": 0,
+    "explanation": "Full-load current is 150 / 7.2, about 20.8 A. C37.230 gives conservative rms-equivalent factors of 12x (0.1 s) and 25x (0.01 s) for small single-phase units of 200 kVA or less, so about 250 A and 521 A. The fast or instantaneous response has to stay clear of those points, higher in time or current. Source: IEEE C37.230-2020, 6.1.3; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE C37.230-2020, 6.1.3; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-141",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A 138 kV delta to 12.5 kV grounded-wye station transformer has phase overcurrent on the high side. For a 9000 A phase-to-ground fault out on a 12.5 kV feeder, the C37.230 example finds about 471 A in one high-side phase. For coordination on the feeder base, what feeder-side pickup is a 100 A high-side pickup equivalent to?",
+    "choices": [
+      "About 1104 A, using the turns ratio alone",
+      "About 960 A, using 87% of the turns ratio",
+      "About 100 A, because the high side sees the same current",
+      "About 1912 A (the 9000 / 470.6 ratio is about 19.1, which is the turns ratio times the square root of 3)"
+    ],
+    "answer": 3,
+    "explanation": "When the wye-side fault involves ground, the delta side carries only the positive- and negative-sequence parts. C37.230 works the case: 9000 A on the 12.5 kV side becomes about 470.6 A in one 138 kV phase, a ratio of about 19.12. That equals 1.732 x 138 / 12.5. A 100 A high-side pickup therefore acts like 1912 A on the feeder base for this fault. Source: IEEE C37.230-2020, 6.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE C37.230-2020, 6.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-142",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "On a 115 kV delta to 13.2 kV grounded-wye bank, you shift the high-side phase overcurrent curve onto the 13.2 kV base to check a close-in feeder phase-to-phase fault, the tightest case. Per C37.230, what shift factor do you use, and where does a 200 A high-side pickup land?",
+    "choices": [
+      "About 8.71, the turns ratio alone, so about 1742 A",
+      "About 7.58 (87% of the 8.71 turns ratio), so about 1516 A on the 13.2 kV base",
+      "About 15.1, the turns ratio times the square root of 3, so about 3018 A",
+      "About 5.03, the turns ratio divided by the square root of 3, so about 1006 A"
+    ],
+    "answer": 1,
+    "explanation": "For a feeder phase-to-phase fault, two feeder phases see 87% of the three-phase current, while one high-side phase sees the full three-phase value. C37.230 accounts for that by shifting the high-side curve by 87% of the turns ratio. 115 / 13.2 = 8.71, and 0.87 x 8.71 is about 7.58, so 200 A becomes about 1516 A. If the phase relays coordinate here, they coordinate for all fault types. Source: IEEE C37.230-2020, 6.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE C37.230-2020, 6.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-143",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A downstream fuse's total clearing time is 0.25 s at the maximum current both devices see. The upstream feeder relay has been field calibrated. Per IEEE 242, what is the minimum relay operate time at that current for an induction-disk relay, and for a static relay?",
+    "choices": [
+      "About 0.55 s for both, adding a 0.30 s relay-to-relay interval",
+      "About 0.47 s for the induction-disk relay (0.25 + 0.22) and about 0.37 s for the static relay (0.25 + 0.12)",
+      "About 0.33 s for both, adding the 0.08 s breaker time",
+      "About 0.25 s, because the fuse curve already includes all margins"
+    ],
+    "answer": 1,
+    "explanation": "When a relay backs up a fuse, start from the fuse total clearing time; the breaker opening time is not part of that interval. IEEE 242 gives 0.22 s for a calibrated induction-disk relay (overtravel plus tolerance) and 0.12 s for a static relay. So 0.25 + 0.22 = 0.47 s and 0.25 + 0.12 = 0.37 s. Source: IEEE 242-2001, 15.5 and Table 15-2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, 15.5 and Table 15-2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-144",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A microprocessor 51 element is set to the IEEE C37.112 very inverse curve, and its time dial multiplies the Table 1 constants directly, so a time-dial factor of 1.0 gives the Table 1 curve. At factor 1.0 the fault is 5 times pickup. What operate time should you expect?",
+    "choices": [
+      "About 1.31 s",
+      "About 0.82 s",
+      "About 5.39 s",
+      "About 0.49 s"
+    ],
+    "answer": 0,
+    "explanation": "The trip equation is t = A / (M^p - 1) + B. For the very inverse curve A is 19.61, B is 0.4910, and p is 2. With M = 5, M squared minus 1 is 24, so A / 24 is about 0.817 s. Add B and the time is about 1.308 s. Leaving off B gives 0.82 s, using M instead of M squared gives about 5.39 s, and B alone is only the flat part of the curve at very high multiples. Source: IEEE C37.112-2018, 3.2 Equation (2) and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2) and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-145",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A feeder 51 uses the IEEE C37.112 extremely inverse curve with a time-dial factor of 0.5 applied to the Table 1 constants. Pickup is 4.0 A secondary, and you inject 20.0 A secondary. What time should the test set record?",
+    "choices": [
+      "About 1.30 s",
+      "About 0.59 s",
+      "About 0.06 s",
+      "About 0.65 s"
+    ],
+    "answer": 3,
+    "explanation": "First find the multiple of pickup: 20.0 / 4.0 = 5. For the extremely inverse curve A is 28.2, B is 0.1217, and p is 2, so the factor-1.0 time is 28.2 / 24 + 0.1217, about 1.297 s. C37.112 scales A and B in proportion to the time dial, so a factor of 0.5 halves the whole result to about 0.65 s. Forgetting the factor gives 1.30 s, scaling only A gives about 0.59 s, and scaling only B gives about 0.06 s plus the unscaled A term. Source: IEEE C37.112-2018, 3.2 Equation (2), 3.3, and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2), 3.3, and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-146",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A relay is on the IEEE C37.112 moderately inverse curve at a time-dial factor of 1.0, and the fault is 10 times pickup. A coworker plugs p = 2 into the equation because the other two curves use 2. What is the correct operate time?",
+    "choices": [
+      "About 0.11 s, using p = 2",
+      "About 1.21 s, because the moderately inverse exponent p is 0.02, not 2",
+      "About 0.05 s, which is A alone",
+      "About 1.09 s, leaving out B"
+    ],
+    "answer": 1,
+    "explanation": "Table 1 gives the moderately inverse curve A = 0.0515, B = 0.1140, and p = 0.0200. Ten raised to 0.02 is about 1.0471, so M^p - 1 is about 0.0471. A divided by that is about 1.093 s, and adding B gives about 1.207 s. Using p = 2 makes the denominator 99 and gives an answer near 0.11 s, which is far too fast. Source: IEEE C37.112-2018, 3.2 Equation (2) and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2) and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-147",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A 51 element fed from a 600:5 CT has a pickup of 5.0 A secondary and uses the IEEE C37.112 very inverse curve at a time-dial factor of 1.0. The study shows a 4800 A primary fault. What operate time does the study expect?",
+    "choices": [
+      "About 19.6 s, from treating 4800 A against a 5 A pickup without the CT ratio",
+      "About 0.80 s at 8 times pickup",
+      "About 1.31 s, from assuming 5 times pickup",
+      "About 0.49 s, from using B only"
+    ],
+    "answer": 1,
+    "explanation": "Put both currents on the same side of the CT. The 600:5 ratio is 120, so 4800 A primary is 40 A secondary, and 40 / 5.0 = 8 times pickup. (Equivalently, the pickup is 5.0 x 120 = 600 A primary and 4800 / 600 = 8.) Then t = 19.61 / (64 - 1) + 0.4910, which is about 0.311 + 0.491 = 0.80 s. Source: IEEE C37.112-2018, 3.2 Equation (2) and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2) and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-148",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A study asks for an IEEE C37.112 extremely inverse 51 to operate in 0.60 s at 6 times pickup. The relay's time-dial factor multiplies the Table 1 constants directly. About what factor gives that time?",
+    "choices": [
+      "About 1.55",
+      "About 0.60",
+      "About 0.81",
+      "About 0.65"
+    ],
+    "answer": 3,
+    "explanation": "At factor 1.0 and M = 6, t = 28.2 / 35 + 0.1217, about 0.806 + 0.122 = 0.927 s. Because A and B both scale with the dial, the factor needed is 0.60 / 0.927, about 0.65. Dividing the other way gives about 1.55, using 0.60 directly ignores the curve, and 0.81 is the A term alone without B. Source: IEEE C37.112-2018, 3.2 Equation (2), 3.3, and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2), 3.3, and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-149",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Two microprocessor relays in series both use the IEEE C37.112 very inverse curve. For the maximum through fault, the feeder relay sees 15 times its pickup at a time-dial factor of 0.5, and the main relay sees 5 times its pickup at a factor of 0.4. Both relays were field calibrated. What is the margin, and how does it compare with IEEE 242 practice?",
+    "choices": [
+      "About 0.23 s. That meets the 0.20 s field-calibrated static-relay interval in IEEE 242, but it would not meet the 0.30 s interval used for field-tested electromechanical relays",
+      "About 1.02 s, so the main relay can be made much faster",
+      "About 0.23 s, which fails every IEEE 242 interval because 0.40 s is the only accepted value",
+      "About 0.52 s, which is the main relay time and is the margin by itself"
+    ],
+    "answer": 0,
+    "explanation": "Feeder: 0.5 x (19.61 / 224 + 0.4910) = 0.5 x 0.5785, about 0.289 s. Main: 0.4 x (19.61 / 24 + 0.4910) = 0.4 x 1.308, about 0.523 s. The margin is about 0.234 s. IEEE 242 Table 15-2 builds a 0.30 s interval for field-calibrated electromechanical relays and 0.20 s for static relays, because static relays have no disk overtravel. Using factor 1.0 on the main relay by mistake would give a margin near 1.02 s. Source: IEEE C37.112-2018, 3.2 Equation (2) and Table 1; IEEE 242-2001, 15.5 and Tables 15-1 and 15-2; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2) and Table 1; IEEE 242-2001, 15.5 and Tables 15-1 and 15-2; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-150",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "On an IEEE C37.112 very inverse curve at a time-dial factor of 1.0, you time a relay at 5 times pickup and read 1.40 s. A coworker says it passes because it is inside the C37.112 conformance band. What is the correct view?",
+    "choices": [
+      "1.40 s fails because C37.112 sets a plus or minus 5% accuracy tolerance",
+      "1.40 s passes because the conformance band is the accuracy tolerance for every relay",
+      "1.40 s is inside the 0.85 to 1.15 template (about 1.11 s to 1.50 s around 1.31 s), but that band only classifies curve shape. Judge accuracy against the manufacturer's published tolerance",
+      "The band only applies below pickup, so 5 times pickup cannot be judged"
+    ],
+    "answer": 2,
+    "explanation": "The expected time is 19.61 / 24 + 0.4910, about 1.308 s. The C37.112 conformance band runs from 0.85 to 1.15 times the curve, about 1.11 s to 1.50 s, from 1.5 to 20 times pickup. The standard says plainly that these bands are templates for sorting curve shapes, not limits on how accurate or repeatable a relay must be. Use the relay maker's pickup and timing tolerances for the pass or fail call. Source: IEEE C37.112-2018, 3.4 and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.4 and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-151",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A relay emulates the IEEE C37.112 extremely inverse reset characteristic at a time-dial factor of 1.0 (tr = 29.1 s). After a trip, load current settles at 0.5 times pickup. How long does a full reset take?",
+    "choices": [
+      "About 29.1 s",
+      "About 7.3 s",
+      "About 38.8 s",
+      "About 58.2 s"
+    ],
+    "answer": 2,
+    "explanation": "Below pickup the reset equation is t = tr / (M^2 - 1), and the negative result only shows the disk is running backward. With M = 0.5, M squared minus 1 is -0.75, so the magnitude is 29.1 / 0.75 = 38.8 s. 29.1 s is the reset time with zero current. Multiplying by 0.25 or dividing by 0.5 are the usual slips. Source: IEEE C37.112-2018, 3.2 Equation (1), Table 1, and A.2; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (1), Table 1, and A.2; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-152",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A feeder relay emulates the IEEE C37.112 very inverse reset (tr = 21.6 s at factor 1.0) at a time-dial factor of 0.5. Its recloser has a 5 s first open interval, and the downstream device resets instantly. What does C37.230 point to as the risk, and what do you check?",
+    "choices": [
+      "Full reset at zero current takes about 10.8 s, longer than the 5 s open interval, so the upstream relay can ratchet toward trip and lock out. Match reset styles, add coordination time, or lengthen the open interval",
+      "Reset takes about 43.2 s, so reclosing must be turned off",
+      "Reset takes about 0.5 s, so the reset style has no effect",
+      "Reset only matters on fuses, not on relays"
+    ],
+    "answer": 0,
+    "explanation": "C37.112 scales tr with the time dial, so 0.5 x 21.6 = 10.8 s. If the device nearer the source resets slowly and the one nearer the fault resets instantly, IEEE C37.230 warns the reclose sequence can lock out the upstream device. Its fixes are to match the reset characteristic, add coordination time for the ratcheting, or lengthen the dead time. Source: IEEE C37.112-2018, 3.3 and Table 1; IEEE C37.230-2020, 6.2.1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.3 and Table 1; IEEE C37.230-2020, 6.2.1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#coordination"
+  },
+  {
+    "id": "relay-153",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A fault on a very inverse 51 (IEEE C37.112, time-dial factor 1.0) starts at 5 times pickup for 0.5 s, then a parallel source trips and the current jumps to 10 times pickup. Using the C37.112 integral for varying current, about when does the relay trip?",
+    "choices": [
+      "About 0.69 s",
+      "About 1.31 s",
+      "About 1.19 s",
+      "About 0.93 s after fault start"
+    ],
+    "answer": 3,
+    "explanation": "C37.112 Equation (3) adds up the fraction of trip travel used at each current. At 5 times pickup the full time is about 1.308 s, so 0.5 s uses about 0.382 of the travel. At 10 times pickup the full time is 19.61 / 99 + 0.4910, about 0.689 s. The remaining 0.618 takes 0.618 x 0.689, about 0.426 s, for a total near 0.93 s. Using only the 10-times time gives 0.69 s, and ignoring the step gives 1.31 s. Source: IEEE C37.112-2018, 3.2 Equation (2) and Equation (3), Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 Equation (2) and Equation (3), Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-154",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "An IEC-curve 51 operated in 1.20 s at 6 times setting with TMS = 0.30. The setting sheet changes only TMS, to 0.10. What should the same test now read?",
+    "choices": [
+      "About 3.60 s",
+      "About 0.40 s",
+      "About 1.00 s",
+      "About 0.12 s"
+    ],
+    "answer": 1,
+    "explanation": "IEC 60255-151 writes the dependent-time law as TMS times a bracket that depends only on the curve constants and the multiple of setting. With the multiple unchanged, the time scales directly with TMS: 1.20 x 0.10 / 0.30 = 0.40 s. Dividing the other way gives 3.60 s, and subtracting the TMS change from the time has no basis. Source: IEC 60255-151:2009, 3.10 and 4.4.1.3 Equation (1); ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEC 60255-151:2009, 3.10 and 4.4.1.3 Equation (1); ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-155",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "An IEC dependent-time element has a setting GS of 1.0 A. Per IEC 60255-151, what threshold and timing range should the test plan cover?",
+    "choices": [
+      "Operation is guaranteed exactly at 1.0 A, and the curve is checked from 1.0 A to 10 A",
+      "Guaranteed operation starts somewhere from 1.0 A to 1.3 A (the declared GT), and the dependent-time curve is checked from 2.0 A up to GD, which is at least 20 A",
+      "GT may be anywhere up to 2.0 A, and the curve stops at 10 times setting",
+      "The curve is only defined above 20 times setting"
+    ],
+    "answer": 1,
+    "explanation": "IEC 60255-151 puts the threshold GT between GS and 1.3 times GS, declared by the maker. The effective range of the dependent-time portion runs from 2 times GS to GD, and GD is at least 20 times GS. With GS = 1.0 A that is a 1.0 A to 1.3 A threshold band and a 2.0 A to at least 20 A timing range. Source: IEC 60255-151:2009, 4.4.1.3 and Figure 4; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEC 60255-151:2009, 4.4.1.3 and Figure 4; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-156",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "On a very inverse C37.112 curve at a time-dial factor of 1.0, the operate time barely changes between 30 and 40 times pickup and stays just above 0.49 s. Which part of the equation explains that, and is it in the IEC form?",
+    "choices": [
+      "The exponent p, which IEC sets to zero",
+      "The reset constant tr, which takes over above 20 times pickup",
+      "CT saturation in the test set, because the equation keeps falling toward zero",
+      "The constant B, a definite-time term that models core saturation in induction relays. At 40 times pickup the time is about 0.50 s, almost all B. The IEC form has no B constant"
+    ],
+    "answer": 3,
+    "explanation": "C37.112 notes that its trip equation matches the IEC equation except for the added constant B, which provides the definite-time part caused by electromagnet saturation. At M = 40 the inverse term is 19.61 / 1599, about 0.012 s, so the total is about 0.503 s and B (0.4910) dominates. Source: IEEE C37.112-2018, 3.2 and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, 3.2 and Table 1; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-157",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "Annex A of IEEE C37.112 explains how induction relays get their curve shapes. At about what multiple of pickup does each standard shape start to saturate the electromagnet?",
+    "choices": [
+      "Extremely inverse at about 4 times pickup, very inverse at about 2 times, and moderately inverse at about pickup",
+      "All three at 20 times pickup",
+      "Moderately inverse at 4 times, very inverse at 2 times, extremely inverse at pickup",
+      "None of them saturate; the shapes come only from spring tension"
+    ],
+    "answer": 0,
+    "explanation": "Annex A shows that without deliberate saturation the induction curve would be the straight log-log line of a fuse. The extremely inverse design saturates near 4 multiples, the very inverse near 2, and the moderately inverse near pickup, each half the one before. That saturation is what adds the definite-time term that becomes B. Source: IEEE C37.112-2018, Annex A.3; ANSI/NETA ETT-2026, 8.4.2.H.4.",
+    "reference": "IEEE C37.112-2018, Annex A.3; ANSI/NETA ETT-2026, 8.4.2.H.4",
+    "verified": true,
+    "kb": "relays.md#curve-math"
+  },
+  {
+    "id": "relay-158",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "You are checking the Zone 1 loss-of-field (40) setting for a 13.8 kV, 120 MVA generator (Xd = 1.80 pu, Xd' = 0.25 pu on machine base) with 6000:5 CTs and 14,400:120 VTs. The owner uses the C37.102 two-zone negative-offset scheme. In relay secondary ohms, what diameter and offset should Zone 1 have?",
+    "choices": [
+      "Diameter about 1.59 ohms and offset about 0.20 ohms, left in primary ohms",
+      "Diameter about 0.16 ohms and offset about 0.02 ohms, with CTR / VTR inverted",
+      "Diameter about 15.9 ohms and offset about 3.97 ohms, using the full Xd'",
+      "Diameter about 15.9 ohms (1.0 pu) and offset about 1.98 ohms (Xd'/2)"
+    ],
+    "answer": 3,
+    "explanation": "Base impedance is 13.8 squared / 120 = 1.587 primary ohms. Secondary ohms are primary ohms times CTR / VTR = 1200 / 120 = 10, so 1.0 pu is 15.87 secondary ohms. C37.102 sets Zone 1 of scheme 1 to a 1.0 pu diameter, so 15.87 ohms, with an offset of one-half the transient reactance: 0.125 pu x 15.87 = 1.98 ohms. It suggests a short delay of about 0.1 s. Source: IEEE C37.102-2023, 4.5.2.4.2 (scheme 1); ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.2.4.2 (scheme 1); ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-159",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "For a 13.8 kV, 120 MVA generator (Xd = 1.80 pu, Xd' = 0.25 pu on machine base) with 6000:5 CTs and 14,400:120 VTs, Zone 2 of the C37.102 negative-offset 40 scheme is set from Xd. What diameter in secondary ohms and what time delay does the guide give?",
+    "choices": [
+      "About 3.97 ohms, using Xd' for the diameter, with a 0.1 s delay",
+      "About 28.6 ohms (1.80 x 15.87), with roughly a half-second delay (0.5-0.6 s)",
+      "About 2.86 ohms in primary ohms, with roughly a half-second delay (0.5-0.6 s)",
+      "About 28.6 ohms, with a 1 min delay"
+    ],
+    "answer": 1,
+    "explanation": "Base impedance is 13.8 squared / 120 = 1.587 primary ohms. Secondary ohms are primary ohms times CTR / VTR = 1200 / 120 = 10, so 1.0 pu is 15.87 secondary ohms. Zone 2 uses a diameter equal to Xd: 1.80 x 15.87, about 28.6 ohms, with the same Xd'/2 offset as Zone 1, and C37.102 gives it a delay of 0.5-0.6 s. Xd' is the offset input, not the diameter. Source: IEEE C37.102-2023, 4.5.2.4.2 (scheme 1); ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.2.4.2 (scheme 1); ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-160",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "An older plant protects a 13.8 kV, 120 MVA generator (Xd = 1.80 pu, Xd' = 0.25 pu on machine base) with 6000:5 CTs and 14,400:120 VTs with a single legacy 40 relay set the C37.102 way. On the R-X diagram, how far down the -X axis does the far edge of the circle reach, in secondary ohms?",
+    "choices": [
+      "About 28.6 ohms, because the offset is not added",
+      "About 30.5 ohms: an offset of about 1.98 ohms plus a diameter of about 28.6 ohms",
+      "About 32.5 ohms, using the full Xd' as offset",
+      "About 3.05 ohms, left in primary ohms"
+    ],
+    "answer": 1,
+    "explanation": "Base impedance is 13.8 squared / 120 = 1.587 primary ohms. Secondary ohms are primary ohms times CTR / VTR = 1200 / 120 = 10, so 1.0 pu is 15.87 secondary ohms. The legacy single relay uses a diameter equal to Xd and an offset of Xd'/2, with a 0.5-0.6 s delay. The circle starts 1.98 ohms below the origin and extends another 28.57 ohms, so the far edge sits near 30.55 ohms. Source: IEEE C37.102-2023, 4.5.2.4.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.2.4.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-161",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "For a 13.8 kV, 120 MVA generator (Xd = 1.80 pu, Xd' = 0.25 pu on machine base) with 6000:5 CTs and 14,400:120 VTs, the impedance scheme 2 Zone 2 element (positive offset, directional supervision) is set from the steady-state stability limit. The system impedance beyond the terminals is 0.20 pu on machine base. What reach and offset does C37.102 give, in secondary ohms?",
+    "choices": [
+      "Reach about 31.7 ohms (Xd + Xs) and offset about 3.17 ohms",
+      "Reach about 31.4 ohms (1.1 Xd) and offset about 1.98 ohms (Xd'/2)",
+      "Reach about 3.46 ohms and offset about 0.32 ohms, left in primary ohms",
+      "Reach about 34.6 ohms (1.1 Xd + Xs) and offset about 3.17 ohms (Xs)"
+    ],
+    "answer": 3,
+    "explanation": "Base impedance is 13.8 squared / 120 = 1.587 primary ohms. Secondary ohms are primary ohms times CTR / VTR = 1200 / 120 = 10, so 1.0 pu is 15.87 secondary ohms. Xd is 28.57 ohms and Xs is 0.20 x 15.87 = 3.17 ohms. C37.102 sets the positive-offset mho with a 10% margin beyond the SSSL: reach = 1.1 Xd + Xs = 31.42 + 3.17, about 34.6 ohms, and offset = Xs. The 1.1 Xd with Xd'/2 offset is the separate Zone 1 of that scheme. Source: IEEE C37.102-2023, 4.5.2.4.2 (scheme 2) and Equations (3) and (4); ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.2.4.2 (scheme 2) and Equations (3) and (4); ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-162",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "The turbine data for a 100 MW steam unit says it motors at 1.0% of rated power. The 32 element sees 6000:5 CTs and 14,400:120 VTs and is set in three-phase secondary watts. What is that motoring power on the relay side?",
+    "choices": [
+      "About 6.9 W three-phase secondary",
+      "About 833 W, dividing by the CT ratio only",
+      "About 2.3 W, a per-phase value",
+      "About 0.69 W, dividing by the CT ratio twice"
+    ],
+    "answer": 0,
+    "explanation": "One percent of 100 MW is 1.0 MW primary. Secondary power is primary power divided by both ratios: 1,000,000 / (1200 x 120), about 6.94 W three-phase. The reverse-power pickup has to sit below that. C37.102 notes steam turbines under vacuum need about 0.5% to 3% of rated power to motor, which is why a sensitive 32 is used. Source: IEEE C37.102-2023, 4.5.6.3.4; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.6.3.4; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-163",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A 2 MW diesel standby generator uses 150:5 CTs and 4200:120 VTs. Following the C37.102 practice for reciprocating engines, what reverse-power pickup in three-phase secondary watts and what delay would you expect on the setting sheet?",
+    "choices": [
+      "About 6667 W with a 30 s delay, as for a steam turbine",
+      "About 63 W per phase with a 60 s delay",
+      "About 190 W (10% of 2 MW = 200 kW) with a delay of about 6 s to 10 s",
+      "About 190 W with a 2 s to 3 s sequential-trip delay"
+    ],
+    "answer": 2,
+    "explanation": "C37.102 says reciprocating engines typically get a pickup of about 10% of rated power and a shorter delay of about 6 s to 10 s because of the fire and explosion risk. Ten percent of 2 MW is 200 kW. The ratios are 30 and 35, so 200,000 / (30 x 35) is about 190 W secondary. Steam units typically get about 30 s, and 2 s to 3 s is the sequential-tripping delay. Source: IEEE C37.102-2023, 4.5.6.3.4 and 4.5.6.3.5; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.6.3.4 and 4.5.6.3.5; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-164",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "During startup a 13.8 kV, 60 Hz generator is at rated voltage while frequency is only 54 Hz. The unit has a single-level V/Hz relay set the C37.102 way. What is the V/Hz in per unit, and what should happen?",
+    "choices": [
+      "1.00 pu, because voltage is at rating",
+      "About 0.90 pu, so no action",
+      "About 1.11 pu (111%), which is above the 110% setting, so it alarms and trips after about 6 s",
+      "About 1.11 pu, which only alarms because 24 never trips"
+    ],
+    "answer": 2,
+    "explanation": "V/Hz per unit is per-unit voltage divided by per-unit frequency: 1.00 / (54 / 60) = 1.11. C37.102 describes a single relay set at 110% that alarms at once and trips in 6 s. Rated voltage at low frequency still overfluxes the core, which is why a plain 59 does not protect this case. Source: IEEE C37.102-2023, 4.5.5.1 and 4.5.5.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.5.1 and 4.5.5.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-165",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A 13.8 kV, 60 Hz unit is running at 14.49 kV and 58 Hz. Where does that sit against the C37.102 V/Hz limits for the generator and for a unit transformer at no load?",
+    "choices": [
+      "About 1.086 pu: above the 1.05 pu generator limit, below the 1.10 pu transformer no-load limit, and below a 110% alarm level",
+      "About 1.050 pu, exactly at the generator limit, because frequency is ignored",
+      "About 1.015 pu, inside every limit",
+      "About 1.086 pu, which exceeds the 118% to 120% definite-time level"
+    ],
+    "answer": 0,
+    "explanation": "Per-unit voltage is 14.49 / 13.8 = 1.05 and per-unit frequency is 58 / 60 = 0.967, so V/Hz is about 1.086 pu. C37.102 lists 1.05 pu for generators and, for transformers, 1.05 pu loaded and 1.1 pu unloaded. A 110% single-level relay would not yet pick up. Source: IEEE C37.102-2023, 4.5.5.1 and 4.5.5.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.5.1 and 4.5.5.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-166",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A 24 element reads a 14,400:120 VT on a 13.8 kV, 60 Hz generator. The relay shows 126 V secondary at 57 Hz. A coworker uses 120 V as the base. What is the correct V/Hz per unit?",
+    "choices": [
+      "About 1.11 pu, using a 120 V base",
+      "About 1.05 pu, ignoring frequency",
+      "About 1.00 pu, using the VT rating",
+      "About 1.15 pu, using the 115 V secondary that corresponds to 13.8 kV"
+    ],
+    "answer": 3,
+    "explanation": "The machine base on the VT secondary is 13,800 / 120 = 115 V, not 120 V. Per-unit voltage is 126 / 115 = 1.096 and per-unit frequency is 57 / 60 = 0.95, so V/Hz is about 1.15 pu. That is close to the 118% to 120% region where C37.102 prefers a definite-time trip of 2 s to 6 s. Using 120 V understates it at about 1.11 pu. Source: IEEE C37.102-2023, 4.5.5.1, 4.5.5.3, and 4.5.5.4; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.5.1, 4.5.5.3, and 4.5.5.4; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-167",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "For a 13.8 kV, 120 MVA generator (Xd = 1.80 pu, Xd' = 0.25 pu on machine base) with 6000:5 CTs and 14,400:120 VTs, an auxiliary-contact inadvertent-energization scheme is being set. The study says the minimum accidental energizing current is 1.2 pu of machine rating. Per C37.102, what stator overcurrent pickup in secondary amperes fits?",
+    "choices": [
+      "About 5.0 A, the full 1.2 pu with no margin",
+      "About 2.5 A secondary (50% of 1.2 pu of about 5020 A)",
+      "About 4.3 A, dividing rated MVA by kV without the square root of 3",
+      "About 0.42 A, sized for an auxiliary backfeed"
+    ],
+    "answer": 1,
+    "explanation": "Rated current is 120,000 kVA / (1.732 x 13.8 kV), about 5020 A. 1.2 pu is about 6025 A. C37.102 sets the stator overcurrent relays in this scheme to half of the lowest expected energizing current, about 3012 A primary. Divided by 1200, that is about 2.5 A secondary, with no intentional trip delay once armed. Source: IEEE C37.102-2023, 5.4.1 and 5.4.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 5.4.1 and 5.4.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-168",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A voltage-supervised 50/27 inadvertent-energization scheme on a 13.8 kV, 120 MVA generator (Xd = 1.80 pu, Xd' = 0.25 pu on machine base) with 6000:5 CTs and 14,400:120 VTs uses CTs at the stator neutral. The owner wants it to catch a backfeed from the station auxiliary transformer as well as from the grid. Which 50 pickup meets that goal?",
+    "choices": [
+      "About 2.5 A secondary, the same as for a grid-side energization",
+      "Below about 0.42 A secondary, because an auxiliary backfeed can drop to about 0.1 pu of rated current (about 502 A primary)",
+      "About 5.0 A secondary, rated current",
+      "Any value, because the 27 element alone trips the unit"
+    ],
+    "answer": 1,
+    "explanation": "C37.102 says grid energization can drive 1 pu to 4 pu, but a backfeed from the auxiliary transformer may be only 0.1-0.2 pu. To cover both, the 50 has to sit below the minimum auxiliary current. At 0.1 pu, 0.1 x 5020 is about 502 A primary, or 0.42 A secondary through 6000:5 CTs. Source: IEEE C37.102-2023, 5.4.1 and 5.4.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 5.4.1 and 5.4.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-169",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A directly cooled 300 MVA cylindrical-rotor generator has I2 squared t = K capability with K = 10. An uncleared unbalanced fault holds negative-sequence current at 0.5 pu. How long can the machine tolerate it?",
+    "choices": [
+      "About 20 s, dividing K by I2 instead of I2 squared",
+      "About 5 s, multiplying K by I2",
+      "About 10 s, which is K itself",
+      "About 40 s"
+    ],
+    "answer": 3,
+    "explanation": "C37.102 lists the short-time negative-sequence capability as I2 squared times t = K, with K = 10 for directly cooled cylindrical rotors from 0 MVA to 800 MVA. With I2 = 0.5 pu, I2 squared is 0.25, so t = 10 / 0.25 = 40 s. A digital 46 can be matched to this curve. Source: IEEE C37.102-2023, 4.5.3.1 and 4.5.3.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.3.1 and 4.5.3.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-170",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "What continuous negative-sequence current does C37.102 list for a directly cooled 400 MVA cylindrical-rotor generator, and can a legacy electromechanical 46 with the typical pickup protect it for that condition?",
+    "choices": [
+      "About 7.8% (8 minus (400 - 350) / 300). A typical electromechanical 46 picks up near 0.6 pu, so it cannot see that continuous level",
+      "10%, and the electromechanical 46 covers it",
+      "5%, and the electromechanical 46 covers it",
+      "About 7.8%, and the electromechanical 46 covers it because it picks up at 0.03 pu"
+    ],
+    "answer": 0,
+    "explanation": "For directly cooled machines from 351 MVA to 1250 MVA, the continuous I2 is 8 - (MVA - 350) / 300 percent. For 400 MVA that is 8 - 0.167, about 7.83%. C37.102 notes the electromechanical negative-sequence relay generally picks up near 0.6 pu, so it may miss open conductors or severe load unbalance. Digital relays can trip down to the continuous capability. Source: IEEE C37.102-2023, 4.5.3.1 and 4.5.3.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.5.3.1 and 4.5.3.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-171",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A voltage-restrained 51V on a generator is set at 6.0 A secondary pickup at nominal voltage. C37.102 describes one design whose pickup falls to 25% of its set value when voltage reaches zero. What pickup does that design have during a close-in fault that collapses the voltage, and why not use a plain 51?",
+    "choices": [
+      "About 24 A, because restraint raises pickup at low voltage",
+      "6.0 A, because restraint does not change pickup",
+      "About 1.5 A. A plain 51 would need 1.5 to 2 times full-load current to ride through overloads, and after 0.5 s the fault current set by Xd can fall below that",
+      "About 1.5 A, and a plain 51 works just as well because fault current never decays"
+    ],
+    "answer": 2,
+    "explanation": "In the voltage-restrained relay the pickup drops with voltage. In the design C37.102 describes, it falls to 25% of nominal at zero volts, so 0.25 x 6.0 = 1.5 A. A plain time-overcurrent backup would need a pickup of 1.5 to 2 times full-load current, and the guide warns the generator's fault current can decay below full-load current after about 0.5 s. Source: IEEE C37.102-2023, 4.6.2.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.6.2.3; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
+  },
+  {
+    "id": "relay-172",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A high-resistance grounded 13.8 kV generator has a 59G across a 14,400:240 distribution-transformer secondary. For a bolted ground fault at the generator terminals, what does the 59G see, and with a 5 V pickup about how much of the winding is covered?",
+    "choices": [
+      "About 230 V, using line-to-line voltage, so coverage is about 98%",
+      "About 133 V, so coverage is only 5% of the winding",
+      "About 133 V, so a 5 V pickup reaches to about 3.8% from the neutral, covering about 96% of the winding",
+      "About 33 V, dividing by 240 instead of using the 60:1 ratio, so coverage is about 85%"
+    ],
+    "answer": 2,
+    "explanation": "For a terminal fault the full line-to-neutral voltage, 13,800 / 1.732 = 7967 V, appears across the grounding impedance. Through a 60:1 transformer that is about 132.8 V. Voltage falls in proportion as the fault moves toward the neutral, so 5 V is reached at 5 / 132.8, about 3.8% from the neutral. That fits C37.102's statement that a 5 V setting typically sees ground faults up to the last 2-5% of winding near the neutral. Source: IEEE C37.102-2023, 4.3.3.2.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J.",
+    "reference": "IEEE C37.102-2023, 4.3.3.2.2; ANSI/NETA ETT-2026, 8.4.3.E and 8.4.3.J",
+    "verified": true,
+    "kb": "relays.md#gen-math"
   }
 ]

@@ -2556,5 +2556,203 @@
     "reference": "IEEE 519-2022; IEEE 141-1993, Chapter 8; ANSI/NETA ETT-2026, 8.4.2.H.7",
     "verified": true,
     "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-165",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 15 MVA substation transformer has 8.0% impedance on its own base. The short-circuit study uses a 100 MVA base at the same voltages. What is the transformer impedance on the study base?",
+    "choices": [
+      "1.2% (0.012 pu), with the MVA ratio inverted",
+      "8.0%, because percent impedance never changes",
+      "About 53.3% (0.533 pu)",
+      "About 0.533%, mixing percent and per unit"
+    ],
+    "answer": 2,
+    "explanation": "When the base voltages match the equipment voltages, the base change uses only the MVA ratio: new pu = old pu x (new MVA / old MVA) = 0.08 x 100 / 15, about 0.533 pu or 53.3%. Inverting the ratio gives 1.2%. The per-unit value of a transformer is the same from either side of the bank. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.7 and 2.10 Equation 2.34; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.7 and 2.10 Equation 2.34; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#fault-math"
+  },
+  {
+    "id": "math-166",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 25 MVA, 13.2 kV generator has a saturated subtransient reactance of 18%. The study base is 100 MVA, 13.8 kV on the same bus. What is X''d on the study base?",
+    "choices": [
+      "0.720 pu, leaving out the voltage-squared term",
+      "About 0.787 pu, with the voltage ratio inverted",
+      "About 0.659 pu",
+      "About 0.045 pu, with the MVA ratio inverted"
+    ],
+    "answer": 2,
+    "explanation": "Because the generator's rated voltage differs from the base voltage at the same level, use the full base change: new pu = 0.18 x (100 / 25) x (13.2 / 13.8) squared = 0.72 x 0.915, about 0.659 pu. Blackburn stresses that the voltage-squared term is used only within one voltage level, never to move across a transformer. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.10 Equation 2.33 and 2.10.2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.10 Equation 2.33 and 2.10.2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#fault-math"
+  },
+  {
+    "id": "math-167",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A reactor rated 20 MVA at 13.8 kV is listed at 12% on its own base. What is its reactance in ohms?",
+    "choices": [
+      "About 1.14 ohms",
+      "About 0.229 ohm, using a 100 MVA base by mistake",
+      "About 0.0126 ohm, dividing the base impedance by 12",
+      "About 79.4 ohms, dividing the base impedance by 0.12"
+    ],
+    "answer": 0,
+    "explanation": "Base impedance is kV squared / MVA = 13.8 squared / 20 = 9.52 ohms. Ohms = pu x base ohms = 0.12 x 9.52, about 1.14 ohms. Per-unit values mean nothing without both the MVA base and the kV base. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.5 Equation 2.14 and 2.6 Equation 2.17; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.5 Equation 2.14 and 2.6 Equation 2.17; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#fault-math"
+  },
+  {
+    "id": "math-168",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 2500 kVA, 480 V transformer has 5.75% impedance. The utility says 500 MVA is available at the primary. Including the utility source, what is the bolted three-phase fault at the secondary terminals?",
+    "choices": [
+      "About 52 kA, the infinite-bus value",
+      "About 57 kA, subtracting the source instead of adding it",
+      "About 3.0 kA, which is full-load current",
+      "About 48 kA"
+    ],
+    "answer": 3,
+    "explanation": "Put both impedances on the 2.5 MVA base. The source is 2.5 / 500 = 0.005 pu, and the transformer is 0.0575 pu, so the total is 0.0625 pu. Full-load current is 2,500,000 / (1.732 x 480), about 3007 A. Fault current is 3007 / 0.0625, about 48.1 kA. Ignoring the source gives about 52.3 kA, which is high and therefore conservative for duty but not exact. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.6 and 2.10 Equation 2.34; IEEE 242-2001, Clause 2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.6 and 2.10 Equation 2.34; IEEE 242-2001, Clause 2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#fault-math"
+  },
+  {
+    "id": "math-169",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 50 MVA, 13.8 kV generator has X''d = 0.15 pu and X'd = 0.25 pu (saturated). For the maximum initial symmetrical current at its terminals, which reactance do you use, and what is the current?",
+    "choices": [
+      "Use X'd: about 8.4 kA",
+      "Use X''d: about 13.9 kA",
+      "Use X''d but leave out the square root of 3: about 24.2 kA",
+      "Use Xd, because steady state is what the relay measures"
+    ],
+    "answer": 1,
+    "explanation": "Rated current is 50,000 kVA / (1.732 x 13.8 kV), about 2092 A. Blackburn notes that saturated subtransient reactance gives the highest initial current, lasting about the first six cycles. 2092 / 0.15 is about 13.9 kA. Transient reactance governs later, from roughly cycle 6 out to somewhere between 30 and 60 cycles. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.8; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.8; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#fault-math"
+  },
+  {
+    "id": "math-170",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 100 MVA generator (X''d = 0.20 pu) feeds a 100 MVA GSU (X = 10%) into a 138 kV bus. Ignoring the system, what is the initial symmetrical fault current on the 138 kV side for a bus fault?",
+    "choices": [
+      "About 2092 A, using the generator reactance only",
+      "About 1395 A",
+      "About 4184 A, using the transformer reactance only",
+      "About 41.8 kA, using the 13.8 kV base current"
+    ],
+    "answer": 1,
+    "explanation": "On a 100 MVA base the series reactance is 0.20 + 0.10 = 0.30 pu. Base current at 138 kV is 100,000 / (1.732 x 138), about 418.4 A, the same figure Blackburn works out. 1 / 0.30 = 3.33 pu, so the fault is about 3.33 x 418.4, or 1395 A at 138 kV. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.6 Equation 2.19 and 2.7; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.6 Equation 2.19 and 2.7; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#fault-math"
+  },
+  {
+    "id": "math-171",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A breaker's interrupting check needs the total rms current a half cycle into a 20 kA symmetrical fault with X/R = 15. Using the IEEE 242 approximate asymmetry factor, what is it?",
+    "choices": [
+      "About 40 kA, doubling the symmetrical value",
+      "About 28.3 kA, multiplying by the square root of 2",
+      "About 32 kA, always using 1.6 regardless of X/R",
+      "About 30.4 kA (factor about 1.52)"
+    ],
+    "answer": 3,
+    "explanation": "IEEE 242 gives the factor as the square root of (1 + 2e^(-2 pi / (X/R))). With X/R = 15, e^(-0.419) is about 0.658, so the factor is the square root of 2.316, about 1.52. 20 kA x 1.52 is about 30.4 kA. The 1.6 multiplier is the upper bound IEEE 242 mentions for X/R of 25 or less. Source: IEEE 242-2001, 2.4 Equation (2-3); ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, 2.4 Equation (2-3); ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#sequence"
+  },
+  {
+    "id": "math-172",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "IEEE 242 says that for X/R of 25 or less, the total rms current a half cycle into the fault stays at or below 1.6 x the symmetrical value. What does the approximate asymmetry formula give at exactly X/R = 25?",
+    "choices": [
+      "About 1.60",
+      "About 1.41, the square root of 2",
+      "About 1.73, the square root of 3",
+      "2.00, full offset doubling the rms"
+    ],
+    "answer": 0,
+    "explanation": "With X/R = 25, 2 pi / 25 is about 0.251, and e^(-0.251) is about 0.778. The factor is the square root of (1 + 2 x 0.778), the square root of 2.556, about 1.60. That is where the 1.6 rule of thumb comes from. Source: IEEE 242-2001, 2.4 Equation (2-3); ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, 2.4 Equation (2-3); ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#sequence"
+  },
+  {
+    "id": "math-173",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "At the far end of a feeder, the study shows a minimum three-phase fault of 2400 A. The phase 51 pickup is 600 A primary. Per C37.230, what multiple of pickup does the relay see for a line-to-line fault there?",
+    "choices": [
+      "4.0 times pickup, using the three-phase value",
+      "About 2.0 times pickup, using one-half",
+      "About 3.5 times pickup (0.87 x 2400 = 2088 A)",
+      "About 6.9 times pickup, multiplying by the square root of 3"
+    ],
+    "answer": 2,
+    "explanation": "C37.230 puts a line-to-line fault at 0.87 of the three-phase value at that spot. 0.87 x 2400 = 2088 A, and 2088 / 600 is about 3.48 times pickup. Check reach for the phase-to-phase case using the maximum source impedance. Source: IEEE C37.230-2020, 6.1.1; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "IEEE C37.230-2020, 6.1.1; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#sequence"
+  },
+  {
+    "id": "math-174",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 13.8 kV resistance-grounded system has Z1 = Z2 = 0.5 ohm and Z0 = 0.6 ohm at the fault, and the ground return including the neutral resistor totals 8 ohms. Treating everything as resistive, what is the line-to-ground fault current?",
+    "choices": [
+      "About 2490 A, adding Zg once instead of 3 Zg",
+      "About 311 A, using line-to-neutral voltage without the factor 3",
+      "About 934 A",
+      "About 15.9 kA, the bolted three-phase value"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 242 gives I = 3 VLN / (Z1 + Z2 + Z0 + 3 ZG). VLN is 13,800 / 1.732 = 7967 V, so the numerator is 23,900 V. The denominator is 0.5 + 0.5 + 0.6 + 24 = 25.6 ohms. 23,900 / 25.6 is about 934 A. The ground impedance counts three times because all three sequence currents flow through it. Source: IEEE 242-2001, 8.3.2 and 2.7; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, 8.3.2 and 2.7; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#sequence"
+  },
+  {
+    "id": "math-175",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "On a solidly grounded feeder, phase A carries 600 A to a ground fault, and phases B and C carry essentially nothing. What are the sequence components of phase A current, and what does a residual ground relay see?",
+    "choices": [
+      "I0 = I1 = I2 = 200 A, and the residual (3 I0) is 600 A",
+      "I1 = 600 A and I0 = I2 = 0, and the residual is 0",
+      "I0 = 600 A and I1 = I2 = 0, and the residual is 1800 A",
+      "I0 = I1 = I2 = 200 A, and the residual is 200 A"
+    ],
+    "answer": 0,
+    "explanation": "With Ib = Ic = 0, the IEEE 242 sequence equations reduce to one-third of Ia for each component, so I0 = I1 = I2 = 600 / 3 = 200 A. The residual connection adds the three phase currents, which is 3 I0 = 600 A, the same as the faulted-phase current. Source: IEEE 242-2001, 2.7 Equations (2-4) and (2-5); Blackburn and Domin, Protective Relaying, 4th ed., Ch. 4; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, 2.7 Equations (2-4) and (2-5); Blackburn and Domin, Protective Relaying, 4th ed., Ch. 4; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
+    "verified": true,
+    "kb": "math.md#sequence"
   }
 ]

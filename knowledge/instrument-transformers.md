@@ -1,5 +1,7 @@
 # Ratio and polarity {#ratio}
 
+*Levels: II, III*
+
 Current transformers, ATS 7.10.1. Voltage transformers, ATS 7.10.2. Insulation resistance of instrument transformers is held to Table 100.5, not to a guess.
 
 Polarity results shall agree with the marks (7.10.1.D.2 and 7.10.2.D.2). H1 and X1 are the pair: current into H1 leaves X1.
@@ -17,6 +19,8 @@ Ratio verification is not an accuracy class test. For bushing CTs on a power tra
 
 ## Excitation {#excitation}
 
+*Levels: II, III, IV*
+
 CT excitation (saturation) is compared with the manufacturer curve or IEEE C57.13.1 (ATS 7.10.1.D.4). You are looking for the knee, not for a turns ratio. A CT that saturates early under a fault delivers less secondary current than the relay was set for, so an overcurrent relay can be slow or blind, and a differential scheme can false-trip if the two CTs saturate differently on a through-fault. That is why percentage restraint exists.
 
 Measure burden and compare it with the CT rating (7.10.1.D.5). Extra cable and extra devices push the CT toward the knee.
@@ -31,17 +35,23 @@ Remanence shortens the time a CT stays unsaturated when the leftover flux has th
 
 ## One ground {#ground}
 
+*Levels: II*
+
 ATS 7.10.1.B.9 and D.9, and the VT companion: the secondary circuit is grounded at one point, where the engineer showed it, consistent with IEEE C57.13.3. Two grounds circulate current and can move a differential off balance. Zero grounds let the secondary float.
 
 Dielectric withstand, when the optional or required test applies, uses Table 100.9. A 15 kV, 95 kV or 110 kV BIL instrument transformer has a field AC withstand of 25.5 kV in that table. Do not apply the factory BIL.
 
 ## Common mistakes
 
+*Levels: II, III, IV*
+
 - Calling a 0.3% metering class “failed” because a handheld TTR at 8 V missed by 1%.
 - Leaving a second ground on a long CT run because both ends “should be safe.”
 - Opening a CT secondary to “see if it’s dead.”
 
 ## CT field tests, what each one proves {#ct-field}
+
+*Levels: II, III, IV*
 
 ATS 7.10.1.B points to IEEE C57.13.1-2017 for the methods.
 
@@ -56,7 +66,46 @@ Demagnetize after any dc test, including a dc polarity kick or an ohmmeter check
 
 Burden and the knee: a C-class rating is the secondary voltage the CT delivers to a standard burden at 20 times rated current within 10% error (IEEE C57.13-2016 6.4.1.3). A C100 CT with 1.5 Ω of total loop burden would need 100 A × 1.5 Ω = 150 V at 20 times rated, which is past its rating, so expect saturation on a big fault.
 
+## CT saturation math {#ct-saturation-math}
+
+*Levels: IV*
+
+Sources: IEEE C37.110-2023, 4.4.2, 4.5.2, 4.5.3, 4.6, 5.1, 5.2, and 6.2.3; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G. The numbers are worked examples.
+
+**Step 1: total burden.** Add winding resistance, lead loop resistance, and relay burden. For a quick check, add them as plain numbers.
+
+Example: 600:5 C200 CT with 0.30 ohm winding, 150 m one way of #10 copper (taken as 1.0 ohm per 300 m), and a 0.05 ohm relay.
+
+1. Lead loop: 2 x 150 m = 300 m, so 1.0 ohm. Count both wires.
+2. Total: `0.30 + 1.0 + 0.05 = 1.35 ohms`.
+3. A 12 kA fault is `12,000 / 120 = 100 A` secondary.
+4. Required voltage: `100 x 1.35 = 135 V`.
+
+**Step 2: compare to the class voltage.** The ratio of required to class voltage tells you how close to saturation you are. Here `135 / 200 ≈ 0.68`. A ratio of about one half or less is a comfortable target in the guide. Above that, expect some distortion on the worst faults.
+
+**Step 3: dc offset.** A fully offset fault needs more volts. With a resistive burden, the guide multiplies the ac requirement by `(1 + X/R)`.
+
+Example: 1000:5 tap (ratio 200), 15 kA fault, X/R 12, 0.80 ohm total.
+
+1. Secondary current: `15,000 / 200 = 75 A`.
+2. Ac requirement: `75 x 0.80 = 60 V`.
+3. With offset: `60 x 13 = 780 V`.
+
+If the angle of the system is given instead of X/R, X/R is the tangent of that angle. At 80 degrees X/R is about 5.67, so 50 A into 1.2 ohms needs about `60 x 6.67 ≈ 400 V`.
+
+**Taps reduce capability.** Usable voltage scales with the turns in use. A C400 full winding of 1200:5 on its 600:5 tap supports about 200 V. Dividing by the 100 A secondary fault gives an allowed burden of about 2.0 ohms.
+
+**Remanence.** Flux left in the core from a prior offset fault eats into the margin. If a CT may be left with half its saturation flux, the required voltage roughly doubles: 400 V becomes 800 V. Demagnetizing the CT after dc winding tests or a heavy offset fault reduces the problem.
+
+**Time to saturate.** The dc offset decays with the primary time constant `T = X / (omega x R)`. For X/R = 12 at 60 Hz, `12 / 377 ≈ 0.0318 s`, or 31.8 ms. A longer time constant means a longer stretch of offset to ride through.
+
+**Relay burden in ohms.** Burden in VA at 5 A converts to ohms by dividing by 25. A 14 VA electromechanical relay is about 0.56 ohm; a 0.3 VA microprocessor relay is about 0.012 ohm.
+
+**Ratio choice.** Pick a ratio so the maximum fault is no more than about 20 times rated secondary current. A 30 kA fault then calls for at least 1500:5.
+
 ## CT hazards {#ct-hazards}
+
+*Levels: II, III*
 
 - **Open secondary.** IEEE C57.13-2016 6.7.1: never operate a CT with the secondary open, because hazardous peak voltages can develop. Conforming CTs only have to survive one minute open-circuited, and only where the open-circuit voltage stays at or below 3500 V peak. Above that, the user should consider a varistor or spark gap. Short at the shorting block before lifting a wire.
 - **Lifting the ground while the primary is energized.** C57.13.1 Annex A.1: dangerous voltage can appear on the secondary through electrostatic coupling even with no primary current.
