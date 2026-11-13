@@ -127,7 +127,7 @@
   },
   {
     "id": "mvbr-008",
-    "level": "III",
+    "level": "II",
     "topic": "mv-breakers",
     "domain": "component",
     "question": "The magnetron atmospheric-condition test on a medium-voltage starter\u2019s vacuum interrupters is:",
@@ -163,7 +163,7 @@
   },
   {
     "id": "mvbr-010",
-    "level": "III",
+    "level": "II",
     "topic": "mv-breakers",
     "domain": "component",
     "question": "Which item is NOT on the medium-voltage breaker electrical list in NFPA 70B-2026 Table 15.4.5?",
@@ -181,7 +181,7 @@
   },
   {
     "id": "mvbr-011",
-    "level": "III",
+    "level": "II",
     "topic": "mv-breakers",
     "domain": "systems",
     "question": "Low-voltage and medium-voltage breakers in NFPA 70B-2026, when the manufacturer gives no interval, both fall on:",
@@ -202,7 +202,7 @@
     "level": "II",
     "topic": "mv-breakers",
     "domain": "theory",
-    "question": "15 kV-class metal-clad switchgear has a factory power-frequency withstand of 36 kV. Per C37.20.2, the highest power-frequency withstand to apply in the field is:",
+    "question": "15 kV-class metal-clad switchgear has a factory power-frequency withstand of 36 kV. The highest power-frequency withstand to apply in the field is:",
     "choices": [
       "36 kV",
       "27 kV",
@@ -210,8 +210,8 @@
       "37.5 kV"
     ],
     "answer": 1,
-    "explanation": "Field power-frequency withstand on metal-clad gear is limited to 75% of the factory value: 0.75 × 36 = 27 kV. 37.5 kV is the separate dc field value for this class.",
-    "reference": "IEEE C37.20.2-2025, 6.4 and Table 1",
+    "explanation": "Field power-frequency withstand on metal-clad gear is limited to 75% of the factory value: 0.75 \u00d7 36 = 27 kV. 37.5 kV is the separate dc field value for this class. Source: ANSI/NETA ATS-2025 7.1.1.B.3 and Table 100.2 note 1; ref. IEEE C37.20.2-2025, 6.4 and Table 1.",
+    "reference": "ANSI/NETA ATS-2025 7.1.1.B.3 and Table 100.2 note 1; ref. IEEE C37.20.2-2025, 6.4 and Table 1",
     "verified": true,
     "kb": "apparatus.md#switchgear"
   },
@@ -220,7 +220,7 @@
     "level": "III",
     "topic": "mv-breakers",
     "domain": "component",
-    "question": "You want a dc field withstand on 27 kV-class metal-clad switchgear. C37.20.2 says:",
+    "question": "You want a dc field withstand on 27 kV-class metal-clad switchgear. What value applies?",
     "choices": [
       "Use 37.5 kV, the same as the 15 kV class",
       "No dc value is recommended for that class. Contact the manufacturer before applying dc",
@@ -238,7 +238,7 @@
     "level": "II",
     "topic": "mv-breakers",
     "domain": "component",
-    "question": "Before a field dielectric withstand on a metal-clad lineup, C37.20.2 says to disconnect these at their terminals:",
+    "question": "Before a field dielectric withstand on a metal-clad lineup, which devices do you disconnect at their terminals?",
     "choices": [
       "The main bus and the ground bus",
       "The breaker secondary disconnects only",
@@ -246,7 +246,7 @@
       "Voltage transformers, control power transformers, and surge arresters mounted in the gear"
     ],
     "answer": 3,
-    "explanation": "VTs, CPTs, and arresters would either load the test set or be overstressed, so they come off at their terminals and are tested under their own standards. With dc, also short or disconnect wound-type CT primaries in the primary circuit.",
+    "explanation": "VTs, CPTs, and arresters would either load the test set or be overstressed, so they come off at their terminals and are tested under their own standards. With dc, also short or disconnect wound-type CT primaries in the primary circuit. Source: IEEE C37.20.2-2025, 6.4.",
     "reference": "IEEE C37.20.2-2025, 6.4",
     "verified": true,
     "kb": "apparatus.md#switchgear"
@@ -256,7 +256,7 @@
     "level": "II",
     "topic": "mv-breakers",
     "domain": "component",
-    "question": "A metal-clad breaker is racked partway, between test and connected. Per C37.20.2, the interlocks should:",
+    "question": "A metal-clad breaker is racked partway, between test and connected. The interlocks should:",
     "choices": [
       "Allow closing, since the shutters are open",
       "Keep it from closing until it is fully connected or in the test position",
@@ -264,7 +264,7 @@
       "Trip the upstream main"
     ],
     "answer": 1,
-    "explanation": "One required interlock blocks closing unless the primary disconnects are fully engaged or a safe distance apart (the test position). Another keeps a closed breaker from being moved to or from the connected position. Check both before the gear is energized.",
+    "explanation": "One required interlock blocks closing unless the primary disconnects are fully engaged or a safe distance apart (the test position). Another keeps a closed breaker from being moved to or from the connected position. Check both before the gear is energized. Source: IEEE C37.20.2-2025, 7.10 items a) and b); 9.5.",
     "reference": "IEEE C37.20.2-2025, 7.10 items a) and b); 9.5",
     "verified": true,
     "kb": "apparatus.md#switchgear"
@@ -274,7 +274,7 @@
     "level": "III",
     "topic": "mv-breakers",
     "domain": "component",
-    "question": "Which feature is part of the C37.20.2 definition of metal-clad switchgear, and not required of all metal-enclosed gear?",
+    "question": "Which feature makes switchgear metal-clad, and isn't required of all metal-enclosed gear?",
     "choices": [
       "A fixed-mounted breaker bolted to the bus",
       "Bare primary bus with no barriers between compartments",
@@ -282,8 +282,98 @@
       "Primary bus and connections covered with insulating material throughout, plus automatic shutters over the primary disconnects"
     ],
     "answer": 3,
-    "explanation": "Metal-clad gear means a drawout interrupting device with self-aligning disconnects, grounded metal barriers around the major primary parts, automatic shutters, insulated primary bus, and mechanical interlocks. Fixed breakers or bare bus are not metal-clad.",
+    "explanation": "Metal-clad gear means a drawout interrupting device with self-aligning disconnects, grounded metal barriers around the major primary parts, automatic shutters, insulated primary bus, and mechanical interlocks. Fixed breakers or bare bus are not metal-clad. Source: IEEE C37.20.2-2025, 3.1 (metal-clad switchgear).",
     "reference": "IEEE C37.20.2-2025, 3.1 (metal-clad switchgear)",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-017",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Acceptance testing a circuit switcher, the contact-resistance test is done on:",
+    "choices": [
+      "The interrupters only",
+      "The isolating switch only",
+      "Both the interrupters and the isolating switch",
+      "Neither; only bolted joints are measured"
+    ],
+    "answer": 2,
+    "explanation": "ATS calls for a contact-resistance test of both the interrupters and the isolating switches, in addition to the low-resistance check through bolted connections. Without manufacturer data, investigate poles that differ by more than 50% of the lowest value. Source: ANSI/NETA ATS-2025 7.7.B.1, B.2 and D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.7.B.2 and 7.7.D.2",
+    "verified": true,
+    "kb": "breakers.md#contact"
+  },
+  {
+    "id": "mvbr-018",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "You read the circuit switcher operation counter at 1,204, run one close-open cycle, and read it again. A good counter now shows:",
+    "choices": [
+      "1,204",
+      "1,205",
+      "1,206",
+      "Any value, as long as it moved"
+    ],
+    "answer": 1,
+    "explanation": "The counter must advance one count per close-open cycle. Record it as found and as left. Source: ANSI/NETA ATS-2025 7.7.A.12 and C.7.",
+    "reference": "ANSI/NETA ATS-2025 7.7.C.7",
+    "verified": true,
+    "kb": "breakers.md#aux"
+  },
+  {
+    "id": "mvbr-019",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "On a circuit switcher, the optional insulation power-factor test is run:",
+    "choices": [
+      "Only with the switcher closed",
+      "On each pole with the switcher open, and on each phase with it closed",
+      "Only on the isolating switch blades",
+      "On the control wiring"
+    ],
+    "answer": 1,
+    "explanation": "The ATS optional power-factor or dissipation-factor test covers each pole open and each phase closed. Results are compared with manufacturer data, or with similar units and test-equipment data. Source: ANSI/NETA ATS-2025 7.7.B.10 and D.10.",
+    "reference": "ANSI/NETA ATS-2025 7.7.B.10 and 7.7.D.10",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "mvbr-020",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Metal-enclosed bus where all three phases share one enclosure but are separated by metal barriers is called:",
+    "choices": [
+      "Nonsegregated-phase bus",
+      "Segregated-phase bus",
+      "Isolated-phase bus",
+      "Cable bus"
+    ],
+    "answer": 1,
+    "explanation": "Nonsegregated bus has no barriers between phases. Segregated bus adds metal barriers between phases in a common enclosure. Isolated-phase bus gives each phase its own housing with air space between. Cable bus uses insulated cables. ATS Table 100.17 lists different field withstand values by type. Source: IEEE C37.23-2015, definitions; ANSI/NETA ATS-2025 Table 100.17.",
+    "reference": "IEEE C37.23-2015, 3 (types of metal-enclosed bus assemblies); ANSI/NETA ATS-2025 Table 100.17",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-021",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "The metal-enclosed bus withstand values in ATS Table 100.17 are lower than the factory values because:",
+    "choices": [
+      "They are dc values",
+      "Field power-frequency tests on installed bus are limited to 75% of the factory test value",
+      "The bus is tested with the transformers connected",
+      "Field tests are 50% of BIL"
+    ],
+    "answer": 1,
+    "explanation": "Field power-frequency withstand tests on installed bus are limited to 75% of the factory value, and the ATS table applies that multiplier. The dc column is for reference only and does not mean a dc test is required. Source: ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17 note 1; IEEE C37.23-2015, 6.4.3.",
+    "reference": "ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17, note 1; ref. IEEE C37.23-2015, 6.4.3",
     "verified": true,
     "kb": "apparatus.md#switchgear"
   }

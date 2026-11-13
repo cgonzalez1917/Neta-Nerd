@@ -220,7 +220,7 @@
     "level": "II",
     "topic": "motors",
     "domain": "component",
-    "question": "IEEE 43-2013 clause 12.2.1 says a polarization index is not applicable to:",
+    "question": "You're planning PI tests on a plant's rotating machines. Where is a polarization index not applicable?",
     "choices": [
       "A form-wound stator",
       "Squirrel-cage rotor bars that are not insulated from the rotor body, and field windings with bare copper",
@@ -320,6 +320,114 @@
     "answer": 0,
     "explanation": "7.16.1.2.B.1 is that insulation-resistance test. The magnetron test on a vacuum interrupter is optional and does not replace it. Control wiring, when tested, is 500 V or 1000 V dc depending on the cable rating.",
     "reference": "ANSI/NETA ATS-2025 7.16.1.2.B.1",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-019",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "In an IEEE 95-2002 step (stepped-voltage) dc test on a stator winding, the first voltage step is usually held about how long, and why?",
+    "choices": [
+      "1 minute, to get a spot reading",
+      "About 10 minutes, to get absorption ratio, insulation resistance, and polarization index",
+      "30 seconds, to get DAR only",
+      "60 minutes, to dry the winding"
+    ],
+    "answer": 1,
+    "explanation": "In a step test the dc voltage rises in uniform or graded steps. The first step is usually held about 10 minutes so you can determine absorption ratio, insulation resistance, and polarization index. Later steps can be timed to linearize the absorption current. Source: IEEE 95-2002, 3.23.",
+    "reference": "IEEE 95-2002, 3.23",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-020",
+    "level": "II",
+    "topic": "motors",
+    "domain": "component",
+    "question": "A small motor on resilient mounts, NEMA frame 210 or under, is checked uncoupled at no load. Under ATS acceptance limits, unfiltered housing vibration velocity for grade A should not exceed:",
+    "choices": [
+      "0.06 in/s pk",
+      "0.10 in/s pk",
+      "0.15 in/s pk",
+      "0.30 in/s pk"
+    ],
+    "answer": 2,
+    "explanation": "Table 100.10 lists grade A, resilient mounting, frame 210 and under, at 2.4 mils pk-pk or 0.15 in/s pk. Grade B is tighter (0.06 in/s pk for that frame). The table is derived from NEMA MG 1 Section 7.8 and applies to machines uncoupled at no load. Source: ANSI/NETA ATS-2025 Table 100.10.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.10 and notes 1-2 (from NEMA MG 1-2021, 7.8, Table 7-11)",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-021",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Per NEMA MG 1-2016 (Rev 2018) Part 12, what's the one-minute high-potential test voltage for the stator of a new 460 V, 50 hp induction motor?",
+    "choices": [
+      "920 V",
+      "1500 V",
+      "1920 V",
+      "2760 V"
+    ],
+    "answer": 2,
+    "explanation": "For induction motors over 1/2 hp the stator test voltage is 1000 V plus twice rated voltage, but not less than 1500 V: 1000 + 2 \u00d7 460 = 1920 V. MG 1 also warns that repeated hipot applications are not recommended because they overstress the insulation. Source: NEMA MG 1-2016 (Rev 2018) Part 12, 12.3.",
+    "reference": "NEMA MG 1-2016 (Rev 2018) Part 12, 12.3 (table and note 3)",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-022",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "systems",
+    "question": "A general-purpose 460 V motor is fed from a VFD. Per NEMA MG 1-2016 (Rev 2018) Part 30, what terminal voltage stress can it see without significant life reduction?",
+    "choices": [
+      "Vpeak \u2264 1 kV with rise time \u2265 2 \u00b5s",
+      "Vpeak \u2264 3.1 \u00d7 rated with rise time \u2265 0.1 \u00b5s",
+      "Vpeak \u2264 2.04 \u00d7 rated with rise time \u2265 1 \u00b5s",
+      "Any peak, as long as rms is 460 V"
+    ],
+    "answer": 0,
+    "explanation": "For general-purpose motors rated 600 V or less, Part 30 assumes no significant service-life loss if Vpeak at the motor terminals stays at or below 1 kV with rise time at least 2 \u00b5s. Above 600 V the limit is 2.04 \u00d7 rated with rise time at least 1 \u00b5s. The 3.1 \u00d7 rated value belongs to Part 31 definite-purpose inverter-fed motors. Source: NEMA MG 1-2016 (Rev 2018) Part 30, 30.2.2.8.",
+    "reference": "NEMA MG 1-2016 (Rev 2018) Part 30, 30.2.2.8",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-023",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "systems",
+    "question": "A definite-purpose inverter-fed motor rated 460 V is used on a drive whose input doesn't exceed motor rating. Per NEMA MG 1-2016 (Rev 2018) Part 31, its insulation must withstand a terminal peak of about:",
+    "choices": [
+      "650 V",
+      "1000 V",
+      "1426 V",
+      "2000 V"
+    ],
+    "answer": 2,
+    "explanation": "Part 31 motors rated 600 V or less are designed to withstand Vpeak \u2264 1.1 \u00d7 2 \u00d7 \u221a2 \u00d7 Vrated \u2248 3.1 \u00d7 Vrated with rise time \u2265 0.1 \u00b5s: 3.1 \u00d7 460 \u2248 1426 V. If drive input voltage exceeds motor rating, the peak needs to be worked out more carefully. Source: NEMA MG 1-2016 (Rev 2018) Part 31, 31.4.4.2.",
+    "reference": "NEMA MG 1-2016 (Rev 2018) Part 31, 31.4.4.2",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-024",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "The NEMA MG 1-2016 (Rev 2018) Part 30 harmonic derating curve (Figure 30-1) is meant for which case?",
+    "choices": [
+      "A VFD-fed motor running below base speed",
+      "A constant-speed motor at rated frequency on a bus whose voltage has harmonic content",
+      "Any motor with voltage unbalance",
+      "Motors over 7200 V"
+    ],
+    "answer": 1,
+    "explanation": "Clause 30.1.2 has you multiply rated horsepower by the Figure 30-1 factor when a motor at rated conditions sees voltage with non-fundamental components. It assumes only odd, non-triplen harmonics and negligible unbalance, and it does not apply to operation at other than rated frequency or from adjustable-voltage or adjustable-frequency supplies. Source: NEMA MG 1-2016 (Rev 2018) Part 30, 30.1.2.",
+    "reference": "NEMA MG 1-2016 (Rev 2018) Part 30, 30.1.2 and Figure 30-1",
     "verified": true,
     "kb": "apparatus.md#motors"
   }

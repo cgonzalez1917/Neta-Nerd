@@ -163,7 +163,7 @@
   },
   {
     "id": "emg-010",
-    "level": "III",
+    "level": "II",
     "topic": "emergency-systems",
     "domain": "component",
     "question": "Which test is on the battery-energy-storage list in NFPA 70B-2026 Table 32.3.5 and would be the wrong list for a standby battery jar?",
@@ -199,7 +199,7 @@
   },
   {
     "id": "emg-012",
-    "level": "III",
+    "level": "II",
     "topic": "emergency-systems",
     "domain": "component",
     "question": "Which test is listed for a transfer switch in NFPA 70B-2026 Table 39.3.5?",
@@ -235,7 +235,7 @@
   },
   {
     "id": "emg-014",
-    "level": "III",
+    "level": "II",
     "topic": "emergency-systems",
     "domain": "systems",
     "question": "When the manufacturer is silent, NFPA 70B-2026 Table 32.2 puts battery-energy-storage performance, conditions 1, 2, and 3, at:",

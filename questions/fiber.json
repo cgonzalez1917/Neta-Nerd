@@ -70,5 +70,59 @@
     "reference": "ANSI/NETA ATS-2025 7.25",
     "verified": true,
     "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-005",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "Connector and splice loss on a new fiber run is measured with an optical power loss test set. From where?",
+    "choices": [
+      "From one end only",
+      "From both ends of the cable",
+      "At the midpoint splice",
+      "From the OTDR end only"
+    ],
+    "answer": 1,
+    "explanation": "ATS has the connector and splice loss measured from both ends of the cable with an optical loss test set. Fiber loss can differ by direction, so one end is not enough. Source: ANSI/NETA ATS-2025 7.25.B.4.",
+    "reference": "ANSI/NETA ATS-2025 7.25.B.4",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-006",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "On a relay fiber link, the transmit and receive power readings at the local and remote devices are judged against:",
+    "choices": [
+      "The manufacturer's published data",
+      "A fixed 3 dB limit",
+      "The cable's bend radius",
+      "The OTDR trace length"
+    ],
+    "answer": 0,
+    "explanation": "ATS has you measure transmit and receive power at both devices and compare the results to the manufacturer's published data. Source: ANSI/NETA ATS-2025 7.25.B.5 and D.5.",
+    "reference": "ANSI/NETA ATS-2025 7.25.B.5 and D.5",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-007",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "How do you spot an excessive splice loss on an OTDR result?",
+    "choices": [
+      "By reading the reflected power versus distance graph",
+      "By the meter's pass/fail lamp only",
+      "By measuring insulation resistance of the jacket",
+      "By the cable's printed footage marks"
+    ],
+    "answer": 0,
+    "explanation": "ATS says the OTDR signal is analyzed for backscatter and for excessive connection or splice loss by viewing the reflected power against distance graph. Source: ANSI/NETA ATS-2025 7.25.D.1 and D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.25.D.2",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
   }
 ]

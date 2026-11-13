@@ -218,7 +218,7 @@
   },
   {
     "id": "gnd-013",
-    "level": "III",
+    "level": "II",
     "topic": "grounding",
     "domain": "component",
     "question": "Which test is on the NFPA 70B-2026 Table 20.3.5 grounding list?",
@@ -265,7 +265,7 @@
       "100 ft from the rod, next to the current probe"
     ],
     "answer": 0,
-    "explanation": "The 62% rule puts the potential probe at roughly 0.618 of the rod-to-current-probe distance, measured from the electrode under test, when both probes are on the same side. 0.62 × 100 ft is about 62 ft. Measuring from the current probe end (38 ft) is the classic mix-up.",
+    "explanation": "The 62% rule puts the potential probe at roughly 0.618 of the rod-to-current-probe distance, measured from the electrode under test, when both probes are on the same side. 0.62 \u00d7 100 ft is about 62 ft. Measuring from the current probe end (38 ft) is the classic mix-up.",
     "reference": "IEEE 81-2012, 8.2.2.4 and 8.2.2.4.1",
     "verified": true,
     "kb": "grounding.md#fop"
@@ -275,7 +275,7 @@
     "level": "III",
     "topic": "grounding",
     "domain": "component",
-    "question": "IEEE 81 says the 62% probe position gives a trustworthy fall-of-potential reading only when:",
+    "question": "On an ATS 7.13 fall-of-potential test, the 62% probe position gives a trustworthy reading only when:",
     "choices": [
       "The soil is fairly uniform, the probes are far enough out to act like hemispheres, and the electrode has no outside ground connections",
       "The current probe is within one rod length of the electrode",
@@ -283,8 +283,8 @@
       "The test is run at exactly 60 Hz so the reading matches power frequency"
     ],
     "answer": 0,
-    "explanation": "The 62% figure comes from theory for a small electrode in uniform soil with remote probes. Layered soil, short spacing, or a ground that is still tied to other grounds (neutrals, shields, other grids) all move the correct probe spot, so the rule stops applying and you fall back on plotting a curve.",
-    "reference": "IEEE 81-2012, 8.2.2.4.1",
+    "explanation": "The 62% figure comes from theory for a small electrode in uniform soil with remote probes. Layered soil, short spacing, or a ground that is still tied to other grounds (neutrals, shields, other grids) all move the correct probe spot, so the rule stops applying and you fall back on plotting a curve. Source: ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 8.2.2.4.1.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 8.2.2.4.1",
     "verified": true,
     "kb": "grounding.md#fop"
   },
@@ -293,7 +293,7 @@
     "level": "II",
     "topic": "grounding",
     "domain": "component",
-    "question": "For a fall-of-potential test, IEEE 81 says the current probe is typically placed at least how far from the ground electrode under test?",
+    "question": "Setting up an ATS 7.13 fall-of-potential test, how far from the electrode under test does the current probe typically go?",
     "choices": [
       "Equal to the depth of the rod",
       "62% of the electrode's largest dimension",
@@ -302,7 +302,7 @@
     ],
     "answer": 2,
     "explanation": "The current probe has to be far enough out that the electrode's and probe's resistance zones do not overlap. The guide's typical figure is at least five times the electrode's largest dimension, which is why a large grid needs very long leads.",
-    "reference": "IEEE 81-2012, 8.2.2.4",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 8.2.2.4",
     "verified": true,
     "kb": "grounding.md#fop"
   },
@@ -311,15 +311,15 @@
     "level": "II",
     "topic": "grounding",
     "domain": "theory",
-    "question": "A Wenner four-point soil test uses equal probe spacing a = 3 m, probes driven shallow (no deeper than a tenth of the spacing). The meter reads R = 5 Ω. Apparent resistivity is about:",
+    "question": "A Wenner four-point soil test uses equal probe spacing a = 3 m, probes driven shallow (no deeper than a tenth of the spacing). The meter reads R = 5 \u03a9. Apparent resistivity is about:",
     "choices": [
-      "94 Ω·m",
-      "15 Ω·m",
-      "47 Ω·m",
-      "188 Ω·m"
+      "94 \u03a9\u00b7m",
+      "15 \u03a9\u00b7m",
+      "47 \u03a9\u00b7m",
+      "188 \u03a9\u00b7m"
     ],
     "answer": 0,
-    "explanation": "With shallow probes the Wenner formula reduces to ρ = 2πaR. 2 × 3.1416 × 3 m × 5 Ω ≈ 94 Ω·m. Leaving out the 2 gives 47, and leaving out π gives roughly 30. The result is the average resistivity to a depth of about a.",
+    "explanation": "With shallow probes the Wenner formula reduces to \u03c1 = 2\u03c0aR. 2 \u00d7 3.1416 \u00d7 3 m \u00d7 5 \u03a9 \u2248 94 \u03a9\u00b7m. Leaving out the 2 gives 47, and leaving out \u03c0 gives roughly 30. The result is the average resistivity to a depth of about a.",
     "reference": "IEEE 81-2012, 7.2.3, Equation (3)",
     "verified": true,
     "kb": "grounding.md#fop"
@@ -329,7 +329,7 @@
     "level": "III",
     "topic": "grounding",
     "domain": "component",
-    "question": "You are asked to check a substation ground grid, which has many paths to earth, with a clamp-on (stakeless) ground tester. IEEE 81 says:",
+    "question": "You're asked to check a substation ground grid, which has many paths to earth, with a clamp-on (stakeless) ground tester. What's the problem?",
     "choices": [
       "Clamp-on is the preferred method for substation grids because no probes are needed",
       "The clamp-on method does not apply to a multiply connected system like a substation grid, so use fall-of-potential or another staked method",
@@ -338,7 +338,7 @@
     ],
     "answer": 1,
     "explanation": "A clamp-on meter assumes everything except the electrode under test is close to zero ohms, so it only works on one electrode tied to a low-impedance multigrounded neutral or shield. The guide lists substation grids and multiconnected poles or structures as places where the method does not apply.",
-    "reference": "IEEE 81-2012, 8.2.2.5 item d)",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 8.2.2.5 item d)",
     "verified": true,
     "kb": "grounding.md#fop"
   },
@@ -347,15 +347,15 @@
     "level": "II",
     "topic": "grounding",
     "domain": "component",
-    "question": "You are testing a large grid expected to read below 1 Ω, and the current and potential leads run side by side for hundreds of feet. What is the concern, and how do you fix it?",
+    "question": "You are testing a large grid expected to read below 1 \u03a9, and the current and potential leads run side by side for hundreds of feet. What is the concern, and how do you fix it?",
     "choices": [
       "Lead resistance adds to the reading. Use a thicker potential lead",
       "Parallel leads cancel the test current. Twist the leads together",
-      "There is no concern below 1 Ω, because coupling only matters above 10 Ω",
+      "There is no concern below 1 \u03a9, because coupling only matters above 10 \u03a9",
       "Mutual coupling from the current lead adds voltage to the potential lead. Separate the leads or cross them at right angles"
     ],
     "answer": 3,
-    "explanation": "Ac coupling between parallel leads puts an error voltage on the potential circuit. It does not matter much at 10 Ω and up, but it almost always matters at 1 Ω or less, which is exactly where big grids land. Route the leads apart, or at 90° where they must cross.",
+    "explanation": "Ac coupling between parallel leads puts an error voltage on the potential circuit. It does not matter much at 10 \u03a9 and up, but it almost always matters at 1 \u03a9 or less, which is exactly where big grids land. Route the leads apart, or at 90\u00b0 where they must cross.",
     "reference": "IEEE 81-2012, 6.6",
     "verified": true,
     "kb": "grounding.md#fop"
@@ -365,7 +365,7 @@
     "level": "II",
     "topic": "grounding",
     "domain": "component",
-    "question": "The ground tester flags low test current because the current probe's own resistance is too high in dry soil. Which fix does IEEE 81 favor?",
+    "question": "The ground tester flags low test current because the current probe's own resistance is too high in dry soil. What's the right fix?",
     "choices": [
       "Mix salt into the water, since salt rather than moisture is what lowers probe resistance",
       "Lower the probe resistance: drive it deeper, wet the soil around it, or add rods in parallel spaced at least their buried length apart",
@@ -374,7 +374,7 @@
     ],
     "answer": 1,
     "explanation": "The usual cure is to lower the current-electrode resistance. The guide notes that moisture does the work and salt adds very little. Higher-voltage instruments are possible, but above 50 V the leads and probes become a shock hazard to people.",
-    "reference": "IEEE 81-2012, 6.2",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 6.2",
     "verified": true,
     "kb": "grounding.md#fop"
   },
@@ -383,15 +383,15 @@
     "level": "III",
     "topic": "grounding",
     "domain": "theory",
-    "question": "Three-point (triangulation) method on a rod: rod to probe 2 reads 30 Ω, rod to probe 3 reads 34 Ω, probe 2 to probe 3 reads 40 Ω. The rod resistance is:",
+    "question": "Three-point (triangulation) method on a rod: rod to probe 2 reads 30 \u03a9, rod to probe 3 reads 34 \u03a9, probe 2 to probe 3 reads 40 \u03a9. The rod resistance is:",
     "choices": [
-      "18 Ω",
-      "32 Ω",
-      "12 Ω",
-      "52 Ω"
+      "18 \u03a9",
+      "32 \u03a9",
+      "12 \u03a9",
+      "52 \u03a9"
     ],
     "answer": 2,
-    "explanation": "Each reading is the sum of two electrode resistances, so solving the three equations gives r1 = (r12 + r13 − r23) / 2 = (30 + 34 − 40) / 2 = 12 Ω. If the electrodes are too close together, mutual resistance can produce nonsense such as zero or negative answers.",
+    "explanation": "Each reading is the sum of two electrode resistances, so solving the three equations gives r1 = (r12 + r13 \u2212 r23) / 2 = (30 + 34 \u2212 40) / 2 = 12 \u03a9. If the electrodes are too close together, mutual resistance can produce nonsense such as zero or negative answers.",
     "reference": "IEEE 81-2012, 8.2.2.2, Equation (8)",
     "verified": true,
     "kb": "grounding.md#fop"
@@ -401,7 +401,7 @@
     "level": "II",
     "topic": "grounding",
     "domain": "safety",
-    "question": "You want to test the ground lead of a surge arrester whose line terminal is still connected to an energized line. IEEE 81 says:",
+    "question": "You want to test the ground lead of a surge arrester whose line terminal is still connected to an energized line. What's the rule?",
     "choices": [
       "Never disconnect the arrester ground while the line terminal is energized, because the arrester base can rise toward line potential",
       "Lift the ground lead briefly, since arresters carry no current at normal voltage",
@@ -419,7 +419,7 @@
     "level": "II",
     "topic": "grounding",
     "domain": "component",
-    "question": "A fall-of-potential reading from one ground riser comes in far higher than the design value. Per IEEE 81, a sensible first step is:",
+    "question": "A fall-of-potential reading from one ground riser comes in far higher than the design value. A sensible first step is:",
     "choices": [
       "Accept the reading, since one riser represents the whole grid",
       "Move the potential probe to 90% of the current-probe distance",
@@ -427,8 +427,8 @@
       "Suspect a poor connection from that riser to the grid and repeat the test from other points on the grid"
     ],
     "answer": 3,
-    "explanation": "The test measures from the point you clip to, out to remote earth. If that conductor is poorly bonded to the grid, the reading jumps. Repeat from other risers. Large differences between them point to grid damage, and a grid integrity (continuity) test is the next step.",
-    "reference": "IEEE 81-2012, 8.2.2.4.1",
+    "explanation": "The test measures from the point you clip to, out to remote earth. If that conductor is poorly bonded to the grid, the reading jumps. Repeat from other risers. Large differences between them point to grid damage, and a grid integrity (continuity) test is the next step. Source: ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 8.2.2.4.1.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 8.2.2.4.1",
     "verified": true,
     "kb": "grounding.md#fop"
   },
@@ -457,13 +457,13 @@
     "domain": "theory",
     "question": "A 4160 V wye system is to be low-resistance grounded with ground-fault current limited to 400 A. Ignoring system impedance, the neutral resistor is about:",
     "choices": [
-      "6.0 Ω",
-      "10.4 Ω",
-      "3.5 Ω",
-      "0.6 Ω"
+      "6.0 \u03a9",
+      "10.4 \u03a9",
+      "3.5 \u03a9",
+      "0.6 \u03a9"
     ],
     "answer": 0,
-    "explanation": "Size the resistor from the line-to-neutral voltage: R = Vln / Ig. 4160 / √3 ≈ 2402 V, and 2402 / 400 ≈ 6.0 Ω. Using the line-to-line voltage gives 10.4 Ω, which lets less current flow than intended.",
+    "explanation": "Size the resistor from the line-to-neutral voltage: R = Vln / Ig. 4160 / \u221a3 \u2248 2402 V, and 2402 / 400 \u2248 6.0 \u03a9. Using the line-to-line voltage gives 10.4 \u03a9, which lets less current flow than intended.",
     "reference": "IEEE 142-2007, 1.4.3.2",
     "verified": true,
     "kb": "grounding.md#gfp"
@@ -478,7 +478,7 @@
       "Zero",
       "Half the line-to-neutral voltage",
       "Unchanged at line-to-neutral voltage",
-      "Line-to-line voltage, √3 times their normal line-to-neutral voltage"
+      "Line-to-line voltage, \u221a3 times their normal line-to-neutral voltage"
     ],
     "answer": 3,
     "explanation": "With one phase at ground, the system's capacitive neutral shifts, and the other two phases see full line-to-line voltage to ground. The total charging current that flows into the fault is three times the normal per-phase value.",
@@ -491,22 +491,22 @@
     "level": "II",
     "topic": "grounding",
     "domain": "component",
-    "question": "A single driven rod reads 22 Ω, and someone says the plant ground system is therefore fine because it is under the NEC 25 Ω figure. IEEE 142's view is:",
+    "question": "A single driven rod reads 22 \u03a9, and someone says the plant ground system is fine because it's under the NEC 25 \u03a9 figure. Is that right?",
     "choices": [
-      "Correct: 25 Ω is the recommended value for industrial substations",
+      "Correct: 25 \u03a9 is the recommended value for industrial substations",
       "Correct, as long as the reading was taken in dry season",
       "The NEC figure applies only to generating stations",
-      "The 25 Ω value only decides whether a single electrode needs a supplemental electrode. It is not a satisfactory system value"
+      "The 25 \u03a9 value only decides whether a single electrode needs a supplemental electrode. It is not a satisfactory system value"
     ],
     "answer": 3,
-    "explanation": "The Green Book describes 1 Ω to 5 Ω as generally suitable for industrial plant substations and large commercial buildings, and below 1 Ω for large substations and generating stations. The NEC 25 Ω number is only a trigger for adding a second electrode.",
+    "explanation": "The Green Book describes 1 \u03a9 to 5 \u03a9 as generally suitable for industrial plant substations and large commercial buildings, and below 1 \u03a9 for large substations and generating stations. The NEC 25 \u03a9 number is only a trigger for adding a second electrode.",
     "reference": "IEEE 142-2007, 4.1.3",
     "verified": true,
     "kb": "grounding.md#limits"
   },
   {
     "id": "gnd-029",
-    "level": "III",
+    "level": "IV",
     "topic": "grounding",
     "domain": "systems",
     "question": "When a high-resistance grounding resistor is sized, its let-through current is chosen to be:",
@@ -521,5 +521,167 @@
     "reference": "IEEE 142-2007, 1.4.3.1",
     "verified": true,
     "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-030",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "A new industrial plant substation's ground system measures 3 \u03a9. Against common industry guidance, that is:",
+    "choices": [
+      "Too high; every system must be under 1 \u03a9",
+      "In the 1 to 5 \u03a9 range generally found suitable for industrial plant substations and large commercial buildings",
+      "Only acceptable if under the 25 \u03a9 single-electrode value",
+      "Not something a resistance value can judge"
+    ],
+    "answer": 1,
+    "explanation": "Grounding guidance puts 1 to 5 \u03a9 as generally suitable for industrial plant substations, buildings, and large commercial sites. Under 1 \u03a9 is for large substations, transmission lines, and generating stations. ATS uses the same 5 \u03a9 figure when the owner gives no other value. Source: IEEE 142-2007, 4.1.3; ANSI/NETA ATS-2025 7.13.D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.13.D.2; ref. IEEE 142-2007, 4.1.3",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-031",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "To lower a high-reading electrode, a contractor proposes adding rods 4 ft apart around the existing rod. The better practice is:",
+    "choices": [
+      "Fine; closer is better",
+      "Space them farther apart; spacings under about 3 m (10 ft) tend not to use the material economically",
+      "Bond them with insulated wire only",
+      "Use one shorter rod instead"
+    ],
+    "answer": 1,
+    "explanation": "Rods placed close together share the same soil and add little. Grounding guidance says spacings under about 3 m (10 ft) may not be the most economical use of material, and deeper rods often help because soil resistivity usually falls with depth. Source: IEEE 142-2007, 4.2 and 4.2.2.",
+    "reference": "IEEE 142-2007, 4.2 and 4.2.2",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-032",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "An electrode was improved years ago by chemically treating the soil, and its resistance has been rising at each test since. What is the likely reason?",
+    "choices": [
+      "Chemical treatment is not permanent and has to be replenished",
+      "The rod has grown longer",
+      "Treatment makes soil resistivity rise over time by design",
+      "The test method changed"
+    ],
+    "answer": 0,
+    "explanation": "Chemical treatment can cut soil resistivity a great deal, but it washes out and must be renewed on a maintenance schedule. It can also speed corrosion of the electrode. Periodic tests are how you see the rise. Source: IEEE 142-2007, 4.1.7 and 4.4.3.",
+    "reference": "IEEE 142-2007, 4.1.7 and 4.4.3",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-033",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "A substation ground grid measures 0.4 \u03a9, and the study shows a maximum grid current of 5000 A for a ground fault. The ground potential rise is about:",
+    "choices": [
+      "2000 V",
+      "12,500 V",
+      "200 V",
+      "5000 V"
+    ],
+    "answer": 0,
+    "explanation": "Ground potential rise is the maximum grid current times the grid resistance: 5000 A \u00d7 0.4 \u03a9 = 2000 V relative to remote earth. Source: IEEE 80-2013, 8.1 (definition of GPR).",
+    "reference": "IEEE 80-2013, 8.1",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-034",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "safety",
+    "question": "When a step and touch voltage study uses the 70 kg body-weight criterion instead of 50 kg, where is that appropriate?",
+    "choices": [
+      "Anywhere",
+      "Where the people exposed can be expected to average at least 70 kg, such as fenced switchyards closed to the public",
+      "Only outside the fence",
+      "Only for metal-to-metal touch"
+    ],
+    "answer": 1,
+    "explanation": "The 70 kg constant gives higher tolerable voltages. It is meant for places the public cannot reach, such as fenced or walled switchyards. For areas outside the fence, an assessment should decide whether the 50 kg criterion is needed. Source: IEEE 80-2013, 6.2 and its footnote.",
+    "reference": "IEEE 80-2013, 6.2",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-035",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "safety",
+    "question": "Using IEEE 80-2013, find the tolerable touch voltage for a 50 kg person, fault clearing in 0.5 s, no surface layer, soil 100 \u03a9\u00b7m.",
+    "choices": [
+      "About 189 V",
+      "About 164 V",
+      "About 133 V",
+      "About 271 V"
+    ],
+    "answer": 0,
+    "explanation": "Etouch50 = (1000 + 1.5\u00b7Cs\u00b7\u03c1s) \u00d7 0.116 / \u221ats. With no surface layer, Cs = 1 and \u03c1s = soil \u03c1. (1000 + 150) \u00d7 0.116 / 0.707 \u2248 189 V. Source: IEEE 80-2013, 8.4, Equation (32).",
+    "reference": "IEEE 80-2013, 8.4, Equation (32)",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-036",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "safety",
+    "question": "In IEEE 80-2013, what happens to the touch voltage limit for metal-to-metal contact, such as hand to a structure while standing on a grounded platform?",
+    "choices": [
+      "It uses \u03c1s = 0, so only the 1000 \u03a9 body resistance limits current and the tolerable voltage is lowest",
+      "It doubles",
+      "It uses the step equation",
+      "It is ignored"
+    ],
+    "answer": 0,
+    "explanation": "For metal-to-metal contact, foot resistance drops out (\u03c1s = 0), so the circuit is just the body's 1000 \u03a9. At 0.5 s and 50 kg, that's 1000 \u00d7 0.116 / 0.707 \u2248 164 V. Source: IEEE 80-2013, 7.1 and 8.4.",
+    "reference": "IEEE 80-2013, 7.1 and 8.4",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-037",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "Dalziel's body-current equation in IEEE 80-2013 (IB = k/\u221ats) is valid over what range of shock durations?",
+    "choices": [
+      "0.001 s to 1 s",
+      "0.03 s to 3.0 s",
+      "0.5 s to 10 s",
+      "Any duration"
+    ],
+    "answer": 1,
+    "explanation": "The equation is based on tests between 0.03 s and 3.0 s, so it isn't valid for very short or long durations. For 50 kg, k = 0.116, giving 116 mA at 1 s and 367 mA at 0.1 s. Source: IEEE 80-2013, 6.1.",
+    "reference": "IEEE 80-2013, 6.1, Equations (7) and (8)",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-038",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "safety",
+    "question": "Why does IEEE 80-2013 recommend a 0.08 m to 0.15 m layer of crushed rock or similar in a substation yard?",
+    "choices": [
+      "To improve grid resistance",
+      "High-resistivity surface material adds foot resistance and cuts shock current, and it slows topsoil drying",
+      "To lower GPR",
+      "To protect conductors from frost"
+    ],
+    "answer": 1,
+    "explanation": "A high-resistivity layer increases the foot contact resistance in the step and touch equations (through Cs\u00b7\u03c1s), reducing body current. It also slows moisture loss from topsoil in dry weather. It does not reduce the grid's resistance or GPR. Source: IEEE 80-2013, 7.4 and 12.5.",
+    "reference": "IEEE 80-2013, 7.4 and 12.5",
+    "verified": true,
+    "kb": "grounding.md#limits"
   }
 ]

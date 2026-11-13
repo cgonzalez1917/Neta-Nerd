@@ -55,7 +55,7 @@
   },
   {
     "id": "thermo-004",
-    "level": "III",
+    "level": "II",
     "topic": "thermography",
     "domain": "component",
     "question": "A part runs 30 \u00b0C above ambient and you have no similar component. Table 100.18 says:",
@@ -73,7 +73,7 @@
   },
   {
     "id": "thermo-005",
-    "level": "III",
+    "level": "II",
     "topic": "thermography",
     "domain": "safety",
     "question": "NFPA 70B-2026 infrared inspections are made:",
@@ -91,7 +91,7 @@
   },
   {
     "id": "thermo-006",
-    "level": "III",
+    "level": "II",
     "topic": "thermography",
     "domain": "systems",
     "question": "In NFPA 70B-2026 Table 9.3.2, infrared thermography for conditions 1, 2, and 3 is:",

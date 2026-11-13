@@ -13,7 +13,7 @@
     ],
     "answer": 2,
     "explanation": "kVA = 200 / 0.80 = 250. kvar = \u221a(kVA\u00b2 \u2212 kW\u00b2) = \u221a(62500 \u2212 40000) = \u221a22500 = 150. That square root is the step you have to remember. 250 kVA is the apparent power, not the kvar.",
-    "reference": "Engineering fundamentals (power triangle)",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -49,7 +49,7 @@
     ],
     "answer": 0,
     "explanation": "10 mH is 0.010 H. XL = 2\u03c0 \u00d7 60 \u00d7 0.010 \u2248 3.77 \u03a9. Dropping the milli prefix produces about 3770 \u03a9, a common calculator miss the sheet will not catch.",
-    "reference": "Engineering fundamentals (XL = 2\u03c0fL)",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -158,7 +158,7 @@
     ],
     "answer": 2,
     "explanation": "R75 = 0.420 \u00d7 (234.5+75)/(234.5+25) = 0.420 \u00d7 309.5/259.5 = 0.501 \u03a9. 0.352 \u03a9 is the fraction upside down. 1.26 \u03a9 is 0.420 \u00d7 75/25, temperatures used as a simple ratio.",
-    "reference": "Engineering fundamentals (copper temperature correction)",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 5.8.6 (temperature correction of winding resistance)",
     "verified": true,
     "kb": "math.md#copper",
     "link": "https://wiki.testguy.net/t/transformer-winding-resistance-test-methods-and-procedures-explained/81"
@@ -195,7 +195,7 @@
     ],
     "answer": 2,
     "explanation": "10 \u00b5F = 10e-6 F. XC = 1/(2\u03c0\u00d760\u00d710e-6) \u2248 265 \u03a9. Using 10 F, or 10e-3 F, moves the answer by orders of magnitude.",
-    "reference": "Engineering fundamentals (XC = 1/(2\u03c0fC))",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2\u03c0fC))",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -213,7 +213,7 @@
     ],
     "answer": 0,
     "explanation": "Net reactance is 10 \u2212 4 = 6 \u03a9. Z = \u221a(3\u00b2 + 6\u00b2) = \u221a45 \u2248 6.7 \u03a9. Adding the reactances gives 17 \u03a9 and ignores the sign already printed on the sheet.",
-    "reference": "Engineering fundamentals (impedance)",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (impedance)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -291,7 +291,7 @@
   },
   {
     "id": "math-017",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "Table 100.18 is written as a temperature difference. A 10 \u00b0C rise between two similar lugs is what rise in Fahrenheit?",
@@ -327,7 +327,7 @@
   },
   {
     "id": "math-019",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "A 100 kW load is at 0.60 lagging power factor. Reactive power is about:",
@@ -339,13 +339,13 @@
     ],
     "answer": 2,
     "explanation": "kVA = 100 / 0.60 \u2248 166.7. kvar = \u221a(166.7\u00b2 \u2212 100\u00b2) \u2248 133. Equivalently sin(arccos 0.6) = 0.8, and kvar = kW \u00d7 tan \u03b8 = 100 \u00d7 (0.8/0.6). 167 kvar is the kVA. The arccos step is not on the formula sheet.",
-    "reference": "Engineering fundamentals (power triangle)",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
     "verified": true,
     "kb": "math.md#power"
   },
   {
     "id": "math-020",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "Two 20 mH coils. Series inductance and parallel inductance are:",
@@ -363,7 +363,7 @@
   },
   {
     "id": "math-021",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "A nameplate says 5.75% impedance. As a per-unit number that is:",
@@ -447,7 +447,7 @@
     ],
     "answer": 1,
     "explanation": "XL = 2\u03c0fL with L in henries. 50 mH is 0.050 H, so 2\u03c0 \u00d7 60 \u00d7 0.050 \u2248 18.8 \u03a9. Leaving the milli prefix on produces about 18 800 \u03a9.",
-    "reference": "Engineering fundamentals (XL = 2\u03c0fL)",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -465,7 +465,7 @@
     ],
     "answer": 1,
     "explanation": "XC = 1/(2\u03c0fC) with C in farads. 2 \u00b5F is 2\u00d710\u207b\u2076 F, so XC \u2248 1326 \u03a9, about 1330 \u03a9. Microfarads left as farads make the capacitor look like a short.",
-    "reference": "Engineering fundamentals (XC = 1/(2\u03c0fC))",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2\u03c0fC))",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -483,7 +483,7 @@
     ],
     "answer": 1,
     "explanation": "kVA = 36 / 0.80 = 45. kvar = \u221a(45\u00b2 \u2212 36\u00b2) = \u221a(2025 \u2212 1296) = \u221a729 = 27. The 45 is apparent power. That kvar square root is not printed on the formula sheet.",
-    "reference": "Engineering fundamentals (power triangle)",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -591,7 +591,7 @@
     ],
     "answer": 0,
     "explanation": "PF = kW / kVA = 90/100 = 0.90. The sheet prints power factor as kW/kVA, so this rearranges a line you are handed. 1.11 is the fraction upside down.",
-    "reference": "Engineering fundamentals (power factor)",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (power factor)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -609,7 +609,7 @@
     ],
     "answer": 1,
     "explanation": "R75 = 1.00 \u00d7 (225+75)/(225+20) = 300/245 \u2248 1.22 \u03a9. Copper\u2019s 234.5 would give a slightly different number. The constant is not on the exam formula sheet.",
-    "reference": "Engineering fundamentals (aluminum temperature correction)",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 5.8.6 (temperature correction of winding resistance)",
     "verified": true,
     "kb": "math.md#copper"
   },
@@ -663,7 +663,7 @@
     ],
     "answer": 1,
     "explanation": "Series resistance is 20 \u03a9. I = 120/20 = 6 A. Each resistor then drops 60 V. KVL is the check: 60 + 60 = 120.",
-    "reference": "Engineering fundamentals (Ohm's law)",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Ohm's law)",
     "verified": true,
     "kb": "math.md#kvl"
   },
@@ -723,7 +723,7 @@
   },
   {
     "id": "math-043",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "You want no more than 3% drop on a 480 V circuit. The largest drop you can accept is about:",
@@ -777,7 +777,7 @@
   },
   {
     "id": "math-046",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "A 500 kVA transformer at 480 V has full-load current about:",
@@ -813,7 +813,7 @@
   },
   {
     "id": "math-048",
-    "level": "III",
+    "level": "II",
     "topic": "meters-math",
     "domain": "theory",
     "question": "30 kW at 0.60 power factor. kvar is:",
@@ -825,7 +825,7 @@
     ],
     "answer": 1,
     "explanation": "kVA = 30 / 0.60 = 50. kvar = \u221a(50\u00b2 \u2212 30\u00b2) = \u221a(2500 \u2212 900) = \u221a1600 = 40. It is the 3-4-5 triangle in kilowatts. 50 is the kVA.",
-    "reference": "Engineering fundamentals (power triangle)",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -844,24 +844,6 @@
     "answer": 1,
     "explanation": "200 / 160 = 1.25. The one-minute value is the numerator. ATS 7.15.1 uses the same 60/30 order on small machines. Inverting the ratio makes a healthy winding look poor.",
     "reference": "Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 7.15.1.B.2",
-    "verified": true,
-    "kb": "insulation.md#pi-dar"
-  },
-  {
-    "id": "math-050",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE 43-2013 says the polarization index should not be used to judge the winding when the 1-minute insulation resistance is above:",
-    "choices": [
-      "5 M\u03a9",
-      "100 M\u03a9",
-      "5000 M\u03a9",
-      "1 \u03a9"
-    ],
-    "answer": 2,
-    "explanation": "Clause 12.2.2 says that once the 1-minute value is higher than 5000 megohms, the current is so small that humidity, voltage drift, and the leads can move the 10-minute ratio. The index may or may not describe the insulation, so it is not used as the assessment. Clause 11.2 says the same thing: the index can be disregarded. ATS 7.15.1.B.2 still runs the test in accordance with IEEE 43, and 7.15.1.D.2.1 still prints a PI floor of 2.0 when the index is used.",
-    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2.1; ref. IEEE 43-2013, clauses 11.2 and 12.2.2",
     "verified": true,
     "kb": "insulation.md#pi-dar"
   },
@@ -897,7 +879,7 @@
     ],
     "answer": 2,
     "explanation": "VA = 10000 \u00d7 0.002 = 20. PF = 4 / 20 = 0.20 = 20%. Watts divided by voltage, skipping the current, is not power factor. This is the same W/VI definition used on a power-factor set. The item is the arithmetic. A real insulation specimen at 20% power factor would be in very bad shape.",
-    "reference": "Engineering fundamentals (insulation power factor = W / (V \u00d7 I))",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (insulation power factor = W / (V \u00d7 I))",
     "verified": true,
     "kb": "field-methods.md#pf-method"
   },
@@ -951,7 +933,7 @@
     ],
     "answer": 1,
     "explanation": "25 mH is 0.025 H. 2\u03c0 \u00d7 60 \u00d7 0.025 \u2248 9.4 \u03a9. The formula is on the sheet; the milli conversion is not.",
-    "reference": "Engineering fundamentals (XL = 2\u03c0fL)",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -990,42 +972,6 @@
     "reference": "AEMC 6240 user manual, per manufacturer instructions (four-wire Kelvin connection)",
     "verified": true,
     "kb": "field-methods.md#microohm"
-  },
-  {
-    "id": "math-058",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE C57.104 is used to interpret:",
-    "choices": [
-      "Dissolved gases in transformer oil",
-      "CT knee-point markers",
-      "VLF withstand voltage",
-      "Breaker instantaneous tolerance"
-    ],
-    "answer": 0,
-    "explanation": "ATS 7.2.2.D.15 says to evaluate dissolved-gas results in accordance with IEEE C57.104. The guide is about gases in mineral oil. It is not the CT excitation guide, the VLF cable guide, or the breaker instantaneous table.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15 and 7.2.2.D.15; ref. IEEE C57.104-2019",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-059",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "Acetylene is present in a mineral-oil dissolved-gas result, and ethylene is also elevated. IEEE C57.104-2019 clause 6.2.1 treats acetylene as the marker for:",
-    "choices": [
-      "Cold cellulose drying",
-      "Arcing, or a very hot fault, rather than a calm thermal aging story",
-      "A normal new-oil baseline with no follow-up",
-      "A CT polarity error"
-    ],
-    "answer": 1,
-    "explanation": "Acetylene is produced by arcing in oil or paper at very high temperature. Ethylene tracks hotter heating of the oil or paper. Hydrogen can rise along with acetylene, so a low hydrogen number does not cancel the acetylene. ATS 7.2.2.D.15 says to evaluate the sample under that guide.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
-    "verified": true,
-    "kb": "field-methods.md#dga"
   },
   {
     "id": "math-060",
@@ -1082,83 +1028,11 @@
     "kb": "field-methods.md#trip-window"
   },
   {
-    "id": "math-063",
+    "id": "math-067",
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "IEEE 400.2 is the guide you cite for:",
-    "choices": [
-      "Dissolved gas",
-      "Field testing shielded cable with very low frequency",
-      "CT polarity",
-      "Device numbers"
-    ],
-    "answer": 1,
-    "explanation": "ATS Table 100.6.3 is the acceptance VLF table, adapted from IEEE 400.2-2024, and 7.3.3.B.5.2 is the VLF withstand test. Dissolved gas is IEEE C57.104. Device numbers used on a relay test are the ATS 7.9.1 list, which follows the C37.2 numbering system.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.6.3 and 7.3.3.B.5.2; ref. IEEE 400.2-2024",
-    "verified": true,
-    "kb": "cables.md#vlf"
-  },
-  {
-    "id": "math-064",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "Duval Triangle 1 in IEEE C57.104-2019 clause 6.2.3 is plotted from:",
-    "choices": [
-      "Hydrogen, carbon monoxide, and carbon dioxide",
-      "Methane, ethylene, and acetylene",
-      "Oxygen, nitrogen, and moisture",
-      "Furan, acid number, and color"
-    ],
-    "answer": 1,
-    "explanation": "The triangle uses methane for lower-energy heating, ethylene for hotter faults, and acetylene for arcing. Hydrogen is interpreted with the other gases, but it is not a side of that triangle. ATS 7.2.2.D.15 sends the sample to this guide.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.3",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-065",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "In the text that opens IEEE C57.104-2019 clause 4, acetylene becomes an important product:",
-    "choices": [
-      "At ordinary service temperature",
-      "Only as the fault temperature nears 1000 \u00b0C",
-      "Whenever the oil is new",
-      "Only in the nitrogen blanket"
-    ],
-    "answer": 1,
-    "explanation": "Acetylene shows up in a meaningful amount only as the fault temperature gets up near 1000 \u00b0C. That point is in the text that opens clause 4. Methane, ethane, and ethylene show up with lower heating. A story that never reaches that temperature is not an acetylene story.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, opening of clause 4",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-066",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "Carbon monoxide and carbon dioxide in a mineral-oil DGA point IEEE C57.104-2019 clause 6.2.1 toward:",
-    "choices": [
-      "Heating of cellulose or of the insulating liquid",
-      "A reversed CT",
-      "A low power factor on the bushing tap only",
-      "Partial discharge with no other possibility"
-    ],
-    "answer": 0,
-    "explanation": "The carbon oxides are the cellulose and liquid-heating gases. Hydrogen is the partial-discharge and stray-gassing gas. Do not read a CO rise as a turns-ratio failure.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-067",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE 519-2022 clause 5 applies its voltage-distortion limits:",
+    "question": "A harmonic study per ATS 6.6 checks voltage distortion against utility limits. Where do those voltage-distortion limits apply?",
     "choices": [
       "At each drive terminal",
       "Only at the point of common coupling, not to individual pieces of equipment",
@@ -1173,10 +1047,10 @@
   },
   {
     "id": "math-068",
-    "level": "II",
+    "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "At a point of common coupling above 1 kV and up through 69 kV, the weekly short-time voltage THD limit in IEEE 519-2022 Table 1 is:",
+    "question": "A harmonic study per ATS 6.6 looks at a PCC above 1 kV and up through 69 kV. The weekly short-time voltage THD limit there is:",
     "choices": [
       "1.5%",
       "5%",
@@ -1191,10 +1065,10 @@
   },
   {
     "id": "math-069",
-    "level": "II",
+    "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "IEEE 519-2022 clause 5.1 allows the daily 99th-percentile very-short-time voltage harmonics to reach:",
+    "question": "In a harmonic study, how high may the daily 99th-percentile very-short-time voltage harmonics go compared with the weekly limits?",
     "choices": [
       "Half the Table 1 values",
       "1.5 times the Table 1 values",
@@ -1208,47 +1082,11 @@
     "kb": "math.md#harmonics"
   },
   {
-    "id": "math-070",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "A dissolved-gas sample matches none of the Rogers-ratio cases, even though combustible gas is high. IEEE C57.104-2019 clause 6.2.2 says:",
-    "choices": [
-      "The transformer is normal because it missed the table",
-      "The Rogers method simply did not identify a fault type",
-      "Acetylene must be ignored",
-      "The oil is ester, so mineral-oil rules do not apply"
-    ],
-    "answer": 1,
-    "explanation": "Rogers ratios miss a substantial share of real results because the ratios fall outside every case. That is a limit of the method, not a clean bill of health. Use another method in the guide, and still treat a rising trend as real.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.2",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-071",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE C57.104-2019 clause 5.1.4.1 says an air-exposed oil sample tends to show:",
-    "choices": [
-      "A large gain of acetylene",
-      "Loss of hydrogen, often with oxygen and nitrogen up",
-      "A perfect Duval triangle",
-      "No change, because hydrogen is not soluble"
-    ],
-    "answer": 1,
-    "explanation": "Hydrogen leaves the oil when the sample sees air. Oxygen and nitrogen come in. A sudden drop in hydrogen with a high oxygen-to-nitrogen ratio on a sealed transformer is a sampling problem until proved otherwise.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
     "id": "math-072",
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "The voltage-distortion numbers in IEEE 519-2022 clause 5.1 are expressed as:",
+    "question": "In a harmonic study per ATS 6.6, voltage-distortion limits are expressed as:",
     "choices": [
       "Percent of the rated power-frequency voltage at the point of common coupling",
       "Ohms of ground resistance",
@@ -1266,7 +1104,7 @@
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "IEEE 519-2022 clause 5.1 counts individual voltage harmonics:",
+    "question": "When a harmonic study counts individual voltage harmonics against the limits, which ones does it include?",
     "choices": [
       "Only the 3rd and the 5th",
       "Integer multiples of the power frequency through the 50th",
@@ -1353,10 +1191,10 @@
   },
   {
     "id": "math-078",
-    "level": "II",
+    "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Compared with the weekly IEEE 519 limit, the very-short-time daily voltage-harmonic allowance is:",
+    "question": "In a harmonic study, how does the very-short-time daily voltage-harmonic allowance compare with the weekly limit?",
     "choices": [
       "The same number",
       "1.5 times the table value, and only as a short-time statistic",
@@ -1371,7 +1209,7 @@
   },
   {
     "id": "math-079",
-    "level": "II",
+    "level": "III",
     "topic": "meters-math",
     "domain": "theory",
     "question": "ATS 6.6 tells the harmonic study to judge transformer loading under nonsinusoidal current by:",
@@ -1388,47 +1226,11 @@
     "kb": "math.md#harmonics"
   },
   {
-    "id": "math-080",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE C57.104-2019 clause 6 says a yearly rate taken from only two dissolved-gas samples is:",
-    "choices": [
-      "The preferred and sufficient method",
-      "A weak way to judge gassing, because normal scatter can dominate two points",
-      "Required before any Duval triangle",
-      "A substitute for the oil power-factor test"
-    ],
-    "answer": 1,
-    "explanation": "The guide wants a rate that survives ordinary sample-to-sample noise, which is why it uses more than one pair of bottles. A single jump still gets attention. It does not, by itself, prove the rate.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-081",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "When combustible gas is high but stable, IEEE C57.104-2019 clause 6 still wants you to remember that:",
-    "choices": [
-      "The level never matters",
-      "Rising levels are the greater concern, and the fault type matters as well as the level",
-      "Acetylene is required before any action",
-      "The sample can be left open overnight"
-    ],
-    "answer": 1,
-    "explanation": "A high stable number and a number that is climbing are not the same story. The kind of fault matters too. Air exposure, which drops hydrogen, can fake a falling trend, so the sample has to be real before the rate is.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
     "id": "math-082",
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "In IEEE 519-2022 Table 1, weekly voltage THD at the PCC is tighter above 161 kV than from 1 kV to 69 kV. The two totals are:",
+    "question": "A harmonic study per ATS 6.6 compares weekly voltage THD limits at a PCC above 161 kV and one from 1 kV to 69 kV. The two limits are:",
     "choices": [
       "8 percent and 20 percent",
       "1.5 percent above 161 kV, and 5 percent from 1 kV through 69 kV",
@@ -1446,7 +1248,7 @@
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "For a PCC at or below 1.0 kV, IEEE 519-2022 Table 1 limits weekly voltage THD to:",
+    "question": "A harmonic study per ATS 6.6 looks at a PCC at or below 1.0 kV. The weekly voltage THD limit is:",
     "choices": [
       "8 percent",
       "1.5 percent",
@@ -1454,7 +1256,7 @@
       "20 percent"
     ],
     "answer": 0,
-    "explanation": "The low-voltage row is an individual harmonic of 5 percent and a total of 8 percent. That is not the 5 percent total used from 1 kV to 69 kV. The very-short-time daily values may reach 1.5 times those numbers.",
+    "explanation": "The low-voltage row is an individual harmonic of 5 percent and a total of 8 percent. That is not the 5 percent total used from 1 kV to 69 kV. The very-short-time daily values may reach 1.5 times those numbers. Source: ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1.",
     "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
     "verified": true,
     "kb": "math.md#harmonics"
@@ -1568,65 +1370,11 @@
     "kb": "apparatus.md#motors"
   },
   {
-    "id": "math-090",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "For rotating-machine windings built before 1970, ATS Table 100.11\u2019s recommended minimum insulation resistance is:",
-    "choices": [
-      "kV + 1 megohms, not the flat 100 megohm column used for later form-wound windings",
-      "Always 100 megohms",
-      "Always 5 ohms",
-      "The control-wiring floor of 2 megohms"
-    ],
-    "answer": 0,
-    "explanation": "The older-winding column, and field windings, use kV + 1. A 4 kV machine in that column is about 5 megohms, not 100. Form-wound windings built after 1970 use the 100 megohm column. The whole table is a one-minute value at 40 \u00b0C.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11",
-    "verified": true,
-    "kb": "insulation.md#spot"
-  },
-  {
-    "id": "math-091",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "ATS Table 100.11 lists the DC test voltage for machine windings rated under 1000 V as:",
-    "choices": [
-      "500 V",
-      "5000 V",
-      "10 kV",
-      "100 V"
-    ],
-    "answer": 0,
-    "explanation": "Under 1000 V, the table\u2019s DC test voltage is 500 V. The minimum resistance still depends on which column the winding belongs in, and the value is for one minute at 40 \u00b0C. Do not grab the 5 kV or 10 kV megohmmeter range because it is on the dial.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11; test method ref. IEEE 43 per 7.15.1.B.2",
-    "verified": true,
-    "kb": "insulation.md#spot"
-  },
-  {
-    "id": "math-092",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "In ATS Table 100.11, random-wound stator coils and form-wound coils below 1 kV have a recommended minimum of:",
-    "choices": [
-      "5 megohms",
-      "100 megohms",
-      "kV + 1, with no other column",
-      "2 megohms, the control-wire floor"
-    ],
-    "answer": 0,
-    "explanation": "That column is 5 megohms. The 100 megohm column is the later form-wound winding above that description. Control wiring at 2 megohms is a switchgear rule, not this machine cell. Correct the reading to 40 \u00b0C first.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11",
-    "verified": true,
-    "kb": "insulation.md#spot"
-  },
-  {
     "id": "math-093",
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "From 1 kV to 69 kV at the point of common coupling, IEEE 519-2022 Table 1 limits an individual voltage harmonic to:",
+    "question": "A harmonic study per ATS 6.6 looks at a PCC from 1 kV to 69 kV. The limit for any individual voltage harmonic is:",
     "choices": [
       "3 percent",
       "5 percent, which is the THD limit on that row",
@@ -1638,114 +1386,6 @@
     "reference": "ANSI/NETA ATS-2025 6.6; ref. IEEE 519-2022, clause 5.1",
     "verified": true,
     "kb": "math.md#harmonics"
-  },
-  {
-    "id": "math-094",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "Unless another pair of times is stated, IEEE 43-2013 clause 5.4 defines the polarization index as:",
-    "choices": [
-      "The 1-minute resistance divided by the 10-minute resistance",
-      "The 10-minute resistance divided by the 1-minute resistance",
-      "The 30-second resistance divided by the 1-minute resistance",
-      "A spot reading at 1 minute only"
-    ],
-    "answer": 1,
-    "explanation": "The index is the 10-minute value over the 1-minute value. Inverting it makes a healthy winding look bad. ATS 7.15.1.B.2 uses that 10-minute test on machines larger than 200 horsepower. Smaller machines in that section use the 60/30 ratio instead.",
-    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 5.4",
-    "verified": true,
-    "kb": "insulation.md#pi-dar"
-  },
-  {
-    "id": "math-095",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "For a machine winding rated under 1000 V, IEEE 43-2013 Table 1 guides the insulation-resistance test voltage to:",
-    "choices": [
-      "500 V dc",
-      "2500 V dc",
-      "10 kV dc",
-      "The highest range on the megohmmeter"
-    ],
-    "answer": 0,
-    "explanation": "Clause 5.3 and Table 1 put windings at or under 1000 V on a 500 V direct test. ATS Table 100.11 uses that same 500 V step. A higher range can overstress a small or wet winding. The reading is still corrected to 40 \u00b0C before it is compared.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3 and Table 1",
-    "verified": true,
-    "kb": "insulation.md#spot"
-  },
-  {
-    "id": "math-096",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE C37.91-2021 clause 6.5.3 describes magnetizing inrush as:",
-    "choices": [
-      "A sine wave with no harmonics",
-      "Rich in harmonics, particularly the second, and not necessarily rich in every phase",
-      "Only a fifth-harmonic overexcitation problem",
-      "A differential current that restraint cannot see"
-    ],
-    "answer": 1,
-    "explanation": "Inrush violates the idea that current in equals current out, and it is full of harmonics, especially the second. Those harmonics are not always large in every phase. ATS 7.9.1 tells you to determine harmonic restraint on an 87. This clause is why that restraint exists. A scheme that only blocks during the instant of energizing is not enough, because inrush also follows faults and out-of-step closing.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3",
-    "verified": true,
-    "kb": "relays.md#testing"
-  },
-  {
-    "id": "math-097",
-    "level": "II",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE C57.155-2014 clause 4.1, compared with mineral-oil dissolved-gas guides, says ester liquids:",
-    "choices": [
-      "Make entirely different gases, so hydrogen no longer means anything",
-      "Make the same fault gases, but in different ratios and at different rates, so an unmodified mineral-oil interpretation is not reliable",
-      "Can be judged with IEEE C57.104 ratios unchanged",
-      "Do not produce acetylene"
-    ],
-    "answer": 1,
-    "explanation": "The gases are the same family. The proportions and the rates are not. ATS 7.2.2.D.15 points a mineral-oil sample at IEEE C57.104. An ester-filled transformer is this other guide. Do not paste a mineral-oil Duval call onto ester oil.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1. Mineral-oil DGA remains IEEE C57.104-2019.",
-    "verified": true,
-    "kb": "field-methods.md#dga"
-  },
-  {
-    "id": "math-098",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE 43-2013 Table 3 sets the minimum polarization index for thermal class 105 (class A) at:",
-    "choices": [
-      "1.0",
-      "1.5",
-      "2.0, the same number it uses for class 130 and above",
-      "4.0"
-    ],
-    "answer": 1,
-    "explanation": "Class 105 is 1.5. Class 130 and above is 2.0. ATS 7.15.1.D.2.1 prints a single floor of 2.0 for the AC machines in that section, which is the higher of those two IEEE floors. Do not use 1.5 to pass a machine that ATS holds to 2.0, and do not quote 2.0 as the IEEE floor for class A.",
-    "reference": "ANSI/NETA ATS-2025 7.15.1.D.2.1; ref. IEEE 43-2013, clause 12.2 and Table 3",
-    "verified": true,
-    "kb": "insulation.md#pi-dar"
-  },
-  {
-    "id": "math-099",
-    "level": "III",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "IEEE 43-2013 clause 12.3 says the insulation resistance of one phase, with the other two grounded, can be:",
-    "choices": [
-      "Exactly three times the whole-winding value, always",
-      "Lower than three times the whole-winding value, because of phase-to-phase current",
-      "Higher than the Table 4 minimum with no correction",
-      "Independent of temperature"
-    ],
-    "answer": 1,
-    "explanation": "Current between phases adds to the reading, so one phase can look worse than a simple three-times rule. The value you compare is still the observed resistance corrected to 40 \u00b0C. ATS Table 100.11 is that 40 \u00b0C table.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11; ref. IEEE 43-2013, clause 12.3",
-    "verified": true,
-    "kb": "insulation.md#spot"
   },
   {
     "id": "math-100",
@@ -1779,7 +1419,7 @@
     ],
     "answer": 0,
     "explanation": "Line current is kVA times 1000, divided by \u221a3 times volts. 150000 / (1.732 \u00d7 480) is about 180 A. Dropping the \u221a3 lands near 312 A. This is bank current, not the discharge-resistor current.",
-    "reference": "Three-phase I = S / (\u221a3 \u00d7 V)",
+    "reference": "Engineering fundamentals (Three-phase I = S / (\u221a3 \u00d7 V))",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1797,7 +1437,7 @@
     ],
     "answer": 1,
     "explanation": "VA = V \u00d7 I and V = I \u00d7 R, so VA = V\u00b2 / R. V\u00b2 = 5120 \u00d7 5 = 25600, and V = 160. The current is 32 A. Do not report 5120 divided by 5 as the voltage.",
-    "reference": "Single-phase S = V\u00b2 / R",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Single-phase S = V\u00b2 / R)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1815,7 +1455,7 @@
     ],
     "answer": 1,
     "explanation": "XL = 2\u03c0fL is about 0.38 ohm. The resistor is 250 ohms, so the current is about 0.48 A and the inductor drop is a fraction of a volt. The 120 V is across the resistor. Forgetting to convert millihenries would invent a large reactance.",
-    "reference": "XL = 2\u03c0fL; series voltage division",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL; series voltage division)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -1833,7 +1473,7 @@
     ],
     "answer": 1,
     "explanation": "The parallel pair is 5 ohms. Series with 10 ohms is 15 ohms. Adding all three as series is 30 ohms. The formula sheet will not draw the network for you.",
-    "reference": "Series and parallel resistance",
+    "reference": "Engineering fundamentals (Series and parallel resistance)",
     "verified": true,
     "kb": "math.md#kvl"
   },
@@ -1851,7 +1491,7 @@
     ],
     "answer": 2,
     "explanation": "The ratio is 100. 1.25 \u00d7 100 = 125 A primary. 1.25 \u00d7 5 is not the primary. Read the tap as secondary amperes unless the sheet says otherwise.",
-    "reference": "CT ratio Ip = Is \u00d7 (primary / secondary)",
+    "reference": "Engineering fundamentals (CT ratio Ip = Is \u00d7 (primary / secondary))",
     "verified": true,
     "kb": "math.md#ct-ratio"
   },
@@ -1869,7 +1509,7 @@
     ],
     "answer": 0,
     "explanation": "I = P / (\u221a3 \u00d7 V \u00d7 PF) = 30000 / (1.732 \u00d7 208 \u00d7 0.9) \u2248 92.5 A. Leaving out \u221a3 is about 160 A. Leaving out the power factor treats kW as kVA.",
-    "reference": "Three-phase P = \u221a3 \u00d7 V \u00d7 I \u00d7 PF",
+    "reference": "Engineering fundamentals (Three-phase P = \u221a3 \u00d7 V \u00d7 I \u00d7 PF)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1908,5 +1548,77 @@
     "reference": "ANSI/NETA ATS-2025 7.6.1.3.B.3 and D.3",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "math-109",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "At a 13.8 kV PCC with ISC/IL of 35, what TDD limit does IEEE 519-2022 Table 2 set?",
+    "choices": [
+      "5.0%",
+      "8.0%",
+      "12.0%",
+      "15.0%"
+    ],
+    "answer": 1,
+    "explanation": "For systems 120 V through 69 kV, Table 2 sets TDD at 5.0% for ISC/IL under 20, 8.0% for 20 to 50, 12.0% for 50 to 100, 15.0% for 100 to 1000, and 20.0% above 1000. Source: IEEE 519-2022, 5.3 and Table 2.",
+    "reference": "IEEE 519-2022, 5.3 and Table 2",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-110",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Under IEEE 519-2022 Table 2, how are even harmonics of order 6 or less treated?",
+    "choices": [
+      "Same limits as odd harmonics",
+      "Limited to 50% of the table values",
+      "Unlimited",
+      "Limited to 25% of the table values"
+    ],
+    "answer": 1,
+    "explanation": "Even harmonics h \u2264 6 are limited to 50% of the table limits, and current distortion that produces a dc offset, such as from half-wave converters, is not allowed. Source: IEEE 519-2022, Table 2 notes a and b.",
+    "reference": "IEEE 519-2022, Table 2 notes a and b",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "math-111",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "systems",
+    "question": "A plant's 480 V service runs a little outside its normal voltage band during a few heavy-load periods but stays inside the wider band. In the ANSI C84.1 tables the Red Book reprints, which range describes those short excursions?",
+    "choices": [
+      "Range A",
+      "Range B",
+      "Range C",
+      "Utilization range only"
+    ],
+    "answer": 1,
+    "explanation": "C84.1 sets two tolerance ranges: Range A covers most operating conditions, and Range B allows minor excursions outside the Range A limits. Source: IEEE 141-1993 (Red Book), 3.1.2.",
+    "reference": "IEEE 141-1993, 3.1.2 (Table 3-1, ANSI C84.1 ranges)",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-112",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "component",
+    "question": "A power-factor capacitor bank sees a lot of harmonic voltage. Per the Red Book's capacitor ratings, what continuous reactive power, fundamental plus harmonics, should a capacitor unit be able to carry?",
+    "choices": [
+      "100% of rated kvar",
+      "110% of rated kvar",
+      "135% of rated kvar",
+      "180% of rated kvar"
+    ],
+    "answer": 2,
+    "explanation": "Capacitor units are built for continuous operation at 135% of rated reactive power (fundamental and harmonic voltages included), 110% of rated terminal voltage, and 180% of rated rms current at one per-unit voltage. Near the current limit, consult the manufacturer about fuse selection. Source: IEEE 141-1993, 8.10.1.",
+    "reference": "IEEE 141-1993, 8.10.1",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
   }
 ]
