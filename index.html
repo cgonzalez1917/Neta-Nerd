@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Neta Nerd · NETA practice drills</title>
-<meta name="description" content="Original NETA Levels II–IV practice drills for electrical acceptance and maintenance testing. Dark, phone-friendly, no build step.">
+<title>Neta Nerd</title>
+<meta name="description" content="Field desk for NETA study. Original Levels II–IV practice drills, study notes, and example field-tool concepts. Dark, phone-friendly, no build step.">
 <meta name="theme-color" content="#0b0d0f">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/math.css">
+<link rel="stylesheet" href="css/desk.css">
 </head>
 <body>
 <a class="skip" href="#app">Skip to content</a>
@@ -26,15 +27,26 @@
     </a>
     <span class="header-meta">II–IV</span>
   </div>
+  <div class="nav-bar">
+    <nav class="site-nav" aria-label="Site">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/study" data-nav="study">Studying</a>
+      <a href="#/tools" data-nav="tools">Tools</a>
+      <a href="#/manuals" data-nav="manuals"><svg class="lock-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Manuals</a>
+    </nav>
+  </div>
 </header>
 <main id="app" class="wrap">Loading the question bank…</main>
 <footer class="site-footer">
   <div class="footer-in">
     <div class="footer-links">
-      <a href="#/study">Study</a>
+      <a href="#/">Home</a>
+      <a href="#/study">Studying</a>
+      <a href="#/tools">Tools</a>
+      <a href="#/manuals">Manuals</a>
+      <a href="#/drills">Drills</a>
       <a href="#/math">Math Cheat Sheet</a>
       <a href="#/about">About</a>
-      <a href="#/">Drills</a>
       <a href="https://testguy.net/" target="_blank" rel="noopener noreferrer">TestGuy</a>
       <a href="https://www.netaworld.org" target="_blank" rel="noopener noreferrer">NETA</a>
     </div>
@@ -45,6 +57,7 @@
 <script src="js/bg.js"></script>
 <script src="js/md.js"></script>
 <script src="js/math-sheet.js"></script>
+<script src="js/placeholders.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
