@@ -52,5 +52,41 @@
     "reference": "ANSI/NETA MTS-2023 7.5.1.3.A.5 and B.2; ref. IEEE C37.30.1-2022, D.4 items b), d), and e)",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "airsw-006",
+    "level": "II",
+    "topic": "air-switches",
+    "domain": "component",
+    "question": "An outdoor group-operated air switch on a 14.4 kV system gets a dielectric withstand test, and the manufacturer is silent. ATS 7.5.1.3 sends you to Table 100.19, which gives a maximum ac test voltage of:",
+    "choices": [
+      "15.6 kV",
+      "20.4 kV",
+      "27 kV",
+      "28.8 kV"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.19 lists 20.4 kV ac and 28.8 kV dc for the 14.4 kV class. The 15.6 kV value belongs to the 8.3 kV class, and 27 kV is a switchgear value from Table 100.2. Source: ANSI/NETA ATS-2025 7.5.1.3.B.5 and Table 100.19.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.3.B.5 and Table 100.19",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "airsw-007",
+    "level": "II",
+    "topic": "air-switches",
+    "domain": "component",
+    "question": "Which inspection item is in ATS 7.5.1.3 for a motor-operated open air switch but not in the low-voltage switch procedure?",
+    "choices": [
+      "Blade alignment and travel stops",
+      "Fuse size against the coordination study",
+      "Grounding of the enclosure",
+      "Motor-operator limit switch adjustment"
+    ],
+    "answer": 3,
+    "explanation": "Open medium- and high-voltage air switches often have a motor operator, so ATS checks its limit switches and mechanical interlocks. ATS 7.5.1.3 also has you record the operation counter. Source: ANSI/NETA ATS-2025 7.5.1.3.A.6.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.3.A.6",
+    "verified": true,
+    "kb": "apparatus.md#switches"
   }
 ]

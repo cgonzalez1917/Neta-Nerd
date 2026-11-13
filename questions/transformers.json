@@ -1730,5 +1730,41 @@
     "reference": "IEEE C57.12.00-2021, 5.11.1.1 and 5.11.1.5",
     "verified": true,
     "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-097",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A mineral-oil distribution transformer has a winding insulation power factor of 1.4% at 20 \u00b0C. How do ATS and MTS Table 100.3 treat it?",
+    "choices": [
+      "Both fail it, since 0.5% is the mineral-oil limit",
+      "ATS: compare to prior results; MTS: 2.0% max",
+      "Both pass it, since the limit is 3.0%",
+      "ATS allows 2.0%; MTS requires 0.5%"
+    ],
+    "answer": 1,
+    "explanation": "The ATS table gives numbers only for power transformers, regulators, and reactors. Note 2 says distribution transformers compare with prior results. MTS gives distribution and apparatus transformers 2.0% for mineral oil. Source: ANSI/NETA ATS-2025 Table 100.3 note 2; ANSI/NETA MTS-2023 Table 100.3.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.3 note 2; ANSI/NETA MTS-2023 Table 100.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-098",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A liquid-filled transformer with a 13.8 kV winding is megger tested at acceptance and again at maintenance. How do the ATS and MTS Table 100.5 minimums compare?",
+    "choices": [
+      "MTS allows half the ATS value",
+      "The same: 5000 V and 5000 M\u03a9",
+      "ATS uses 2500 V; MTS uses 5000 V",
+      "MTS has no table; it uses trending only"
+    ],
+    "answer": 1,
+    "explanation": "Both tables list 5000 V dc and 5000 M\u03a9 for liquid-filled windings above 5 kV (25,000 M\u03a9 for dry). ATS adds a note that natural-ester units read lower and are compared with factory or previous results. Source: ANSI/NETA ATS-2025 Table 100.5; ANSI/NETA MTS-2023 Table 100.5.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.5; ANSI/NETA MTS-2023 Table 100.5",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
   }
 ]

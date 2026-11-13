@@ -862,5 +862,59 @@
     "reference": "IEEE 1106-2015, 7.3.1 item e)",
     "verified": true,
     "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-049",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Which measurement is the first electrical test listed in ATS for a valve-regulated lead-acid battery?",
+    "choices": [
+      "Specific gravity of each cell",
+      "Negative post temperature",
+      "Electrolyte level in each jar",
+      "Positive plate color"
+    ],
+    "answer": 1,
+    "explanation": "VRLA cells are sealed, so specific gravity and electrolyte level aren't available. ATS has you measure negative post temperature and judge it by the manufacturer's data or IEEE 1188. Source: ANSI/NETA ATS-2025 7.18.1.3.B.1 and D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.3.B.1 and D.2",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-050",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Ohmic readings on identical cells in a flooded string are 0.50, 0.52, and 0.66 m\u03a9. Under ATS 7.18.1.1:",
+    "choices": [
+      "Investigate the 0.66 m\u03a9 cell (about 32% high)",
+      "Accept, because all are below 1 m\u03a9",
+      "Investigate the 0.50 m\u03a9 cell, because the lowest reading is the outlier",
+      "Accept, because a 30% band applies"
+    ],
+    "answer": 0,
+    "explanation": "Cell-to-cell ohmic values shouldn't vary by more than 25% between identical cells in a fully charged state. 0.66 / 0.50 = 1.32, so that cell stands out. Source: ANSI/NETA ATS-2025 7.18.1.1.D.6.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.D.6",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-051",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "During acceptance of a battery charger, which ATS 7.18.2 result is judged against both the charger and the battery manufacturers' data?",
+    "choices": [
+      "Specific gravity of each cell",
+      "Insulation power factor of the charger's input transformer",
+      "Polarization index of the battery rack",
+      "AC ripple imposed on the battery"
+    ],
+    "answer": 3,
+    "explanation": "Charger tests include float and equalize settings, high-voltage shutdown settings, load sharing, ac ripple, and optional full-load and current-limit checks. Ripple has to meet the charger specification and the battery manufacturer's data. Source: ANSI/NETA ATS-2025 7.18.2.",
+    "reference": "ANSI/NETA ATS-2025 7.18.2",
+    "verified": true,
+    "kb": "batteries.md#flooded"
   }
 ]

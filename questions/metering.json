@@ -1,0 +1,236 @@
+[
+  {
+    "id": "mtr-001",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "A switchboard meter uses 600:5 CTs and 4200:120 VTs. Its instrument multiplier, which ATS 7.11.1 has you verify, is:",
+    "choices": [
+      "1200",
+      "4200",
+      "120",
+      "35"
+    ],
+    "answer": 1,
+    "explanation": "Multiplier = CT ratio x VT ratio = 120 x 35 = 4200. A wrong multiplier makes every reading wrong even when the meter itself is accurate. Source: ANSI/NETA ATS-2025 7.11.1.B.3; IEEE 141-1993, 11.7.1.",
+    "reference": "ANSI/NETA ATS-2025 7.11.1.B.3; IEEE 141-1993, 11.7.1",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-002",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "Besides calibration, ATS 7.11.1 has you check what about a meter's instrument transformer circuits?",
+    "choices": [
+      "That the CT secondaries are left open for safety",
+      "That the CT and VT secondary circuits are intact",
+      "That the VT fuses are bypassed during the test",
+      "That the CT ratio matches the breaker frame size"
+    ],
+    "answer": 1,
+    "explanation": "A calibrated meter on a broken secondary circuit reads nothing useful. ATS asks you to confirm the instrument transformer secondaries are complete. Source: ANSI/NETA ATS-2025 7.11.1.B.4.",
+    "reference": "ANSI/NETA ATS-2025 7.11.1.B.4",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-003",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "Before testing a microprocessor-based meter under ATS 7.11.2, which item is recorded during inspection?",
+    "choices": [
+      "The CT knee-point voltage",
+      "The disk constant Kh",
+      "The ambient humidity",
+      "The firmware revision"
+    ],
+    "answer": 3,
+    "explanation": "Digital meters are inspected like small computers. ATS has you record firmware and software revisions and passwords, and then load the owner's settings. Source: ANSI/NETA ATS-2025 7.11.2.A.5.",
+    "reference": "ANSI/NETA ATS-2025 7.11.2.A.5",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-004",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "In IEEE C37.2-2022 terms, a remote terminal unit (RTU) in a substation is:",
+    "choices": [
+      "The main interface to the SCADA master",
+      "A relay that trips breakers on loss of communication",
+      "A recorder that captures fault waveforms only",
+      "An I/O module that has no SCADA connection"
+    ],
+    "answer": 0,
+    "explanation": "C37.2 defines the RTU as the primary interface to SCADA. A remote I/O module is distinguished by having no connection to the SCADA master, and a DFR records disturbances. Source: IEEE C37.2-2022, 3.2.20 and 3.2.19.",
+    "reference": "IEEE C37.2-2022, 3.2.20 and 3.2.19",
+    "verified": true,
+    "kb": "apparatus.md#automation"
+  },
+  {
+    "id": "mtr-005",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "A three-phase, four-wire wye service is metered. By Blondel's theorem, the number of meter elements needed for correct measurement is:",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explanation": "For N conductors, N - 1 properly connected elements measure the power, with the voltage coils tied to the conductor that has no current coil. Four wires need three elements. A three-wire delta needs two. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 2 (Blondel's Theorem).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 2 (Blondel's Theorem)",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-006",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "A watthour meter registers 101.5 kWh while the true energy was 100.0 kWh. Its percent registration and percent error are:",
+    "choices": [
+      "98.5% registration, -1.5% error",
+      "101.5% registration, +1.5% error",
+      "100% registration, 1.5% error",
+      "1.5% registration, +101.5% error"
+    ],
+    "answer": 1,
+    "explanation": "Percent registration = registered / true x 100 = 101.5%. Percent error is the difference from 100%, so +1.5%. The meter reads high. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 3 (Basic Computations Used in Metering).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 3 (Basic Computations Used in Metering)",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-007",
+    "level": "II",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "A breaker status input in a SCADA RTU keeps flickering on and off many times a second because of a bad auxiliary contact. Which feature disables that point when it changes state too often?",
+    "choices": [
+      "Select-before-operate",
+      "A deadband",
+      "Scan enable",
+      "A chatter filter"
+    ],
+    "answer": 3,
+    "explanation": "IEEE C37.1 defines a chatter filter as the feature that disables a digital input when it changes state too many times within a set interval. Deadband applies to analog values, and select-before-operate applies to control commands. Source: IEEE C37.1-2007, 3.1.3.",
+    "reference": "IEEE C37.1-2007, 3.1.3",
+    "verified": true,
+    "kb": "apparatus.md#automation"
+  },
+  {
+    "id": "mtr-008",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "An electromechanical meter with Kh = 1.8 runs on 80:1 instrument transformers (combined multiplier). The disk makes 10 revolutions in 36 seconds. The primary load is:",
+    "choices": [
+      "1.8 kW",
+      "64.8 kW",
+      "144 kW",
+      "180 kW"
+    ],
+    "answer": 2,
+    "explanation": "kW = 3.6 x revolutions x Kh x multiplier / seconds = 3.6 x 10 x 1.8 x 80 / 36 = 144 kW. Leaving out the multiplier gives 1.8 kW at the meter. Source: IEEE 141-1993, 11.7.1.",
+    "reference": "IEEE 141-1993, 11.7.1",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-009",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "A 4-wire wye service is metered with a 2-element meter. What does the EEI Handbook say about this?",
+    "choices": [
+      "It isn't a Blondel connection, so it can misregister",
+      "It is the correct connection, since the neutral carries no power",
+      "It is accurate as long as the CTs are 0.3 class",
+      "It reads exactly double and is corrected through the meter multiplier"
+    ],
+    "answer": 0,
+    "explanation": "Blondel's theorem needs N - 1 elements for N wires, so a 4-wire wye needs three. A 2-element (non-Blondel) arrangement depends on assumptions about balance and can register in error. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 2 (Blondel's Theorem) and ch. 11.",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 2 (Blondel's Theorem) and ch. 11",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-010",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A new microprocessor meter passed its bench injection. After energization, it shows negative kW on a feeder that is clearly carrying load away from the bus. ATS 7.11.2 says:",
+    "choices": [
+      "The meter passed bench calibration, so the reading is accepted",
+      "Negative kW is normal on feeders and needs no action",
+      "Repeat the bench test at a higher accuracy class",
+      "Readings must match load; check CT polarity"
+    ],
+    "answer": 3,
+    "explanation": "Calibration proves the meter, not the installed circuit. ATS has you confirm after energization that readings match the loads (per ECS). A sign reversal usually points to reversed CT polarity or a wiring error. Source: ANSI/NETA ATS-2025 7.11.2.B.3 and D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.11.2.B.3 and D.3",
+    "verified": true,
+    "kb": "apparatus.md#metering"
+  },
+  {
+    "id": "mtr-011",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "An analog point in a new substation RTU doesn't update at SCADA for small load changes, but large changes come through. Which setting is behind this, and which ATS 7.23 test checks it?",
+    "choices": [
+      "The chatter filter; ATS has you verify failover time",
+      "The deadband; ATS checks deadband operation",
+      "The select-before-operate timer; ATS has you verify tagging",
+      "The scan enable flag; ATS has you verify date and time"
+    ],
+    "answer": 1,
+    "explanation": "Data change detection stores a new value only when the change exceeds the deadband, so small changes are suppressed by design. ATS 7.23 includes verifying deadband and zero deadband. Source: IEEE C37.1-2007, 6.4.3.1 item b); ANSI/NETA ATS-2025 7.23.B.7.",
+    "reference": "IEEE C37.1-2007, 6.4.3.1 item b); ANSI/NETA ATS-2025 7.23.B.7",
+    "verified": true,
+    "kb": "apparatus.md#automation"
+  },
+  {
+    "id": "mtr-012",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "Why does a SCADA breaker control use select-before-operate?",
+    "choices": [
+      "To speed up control by skipping the confirmation step",
+      "So the right point is armed and confirmed first",
+      "To let two operators command the same breaker at the same time",
+      "To keep analog values from updating during a control"
+    ],
+    "answer": 1,
+    "explanation": "SBO is a two-part sequence. The point is selected (armed) and confirmed, then an operate command must arrive before a timer expires. The goal is to avoid operating the wrong point or more than one point. Source: IEEE C37.1-2007, 3.1.20 and Annex D.1.",
+    "reference": "IEEE C37.1-2007, 3.1.20 and Annex D.1",
+    "verified": true,
+    "kb": "apparatus.md#automation"
+  },
+  {
+    "id": "mtr-013",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "Sequence-of-events records from three relays in a new substation disagree by several seconds. Which commissioning checks address this?",
+    "choices": [
+      "Raise the deadband on the analog points",
+      "Clear the event buffers on each relay before every test",
+      "Increase the SCADA scan cycle",
+      "Check time synchronization and device date/time"
+    ],
+    "answer": 3,
+    "explanation": "ECS for medium voltage asks for IEDs and SCADA to be on an adequate time-sync source with correct date and time. ATS 7.23 also checks date and time and requires accurate timestamps. Source: ANSI/NETA ECS-2024 7.2.A.24; ANSI/NETA ATS-2025 7.23.A.10 and C.4.",
+    "reference": "ANSI/NETA ECS-2024 7.2.A.24; ANSI/NETA ATS-2025 7.23.A.10 and C.4",
+    "verified": true,
+    "kb": "apparatus.md#automation"
+  }
+]

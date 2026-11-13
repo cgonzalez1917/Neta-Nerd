@@ -1,0 +1,164 @@
+[
+  {
+    "id": "bus-001",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "Two busway tie sections are fed from separate sources. ATS 7.4 requires a phasing test, and it must be done:",
+    "choices": [
+      "From a temporary generator before the permanent sources are connected",
+      "From the permanent sources that will feed them",
+      "With a phase-rotation meter on de-energized bus",
+      "Only if the busway is rated above 1000 V"
+    ],
+    "answer": 1,
+    "explanation": "The purpose is to prove the real sources line up in phase across the tie. A temporary source can't prove that, so ATS says the test must come from the permanent sources. Source: ANSI/NETA ATS-2025 7.4.B.5 and D.5.",
+    "reference": "ANSI/NETA ATS-2025 7.4.B.5 and D.5",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-002",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "A 4.76 kV nonsegregated-phase bus run gets a field withstand test, and the manufacturer is silent. The maximum ac value in ATS Table 100.17 is:",
+    "choices": [
+      "2.25 kV",
+      "14.2 kV",
+      "20 kV",
+      "27.0 kV"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.17 gives 14.2 kV ac for 4.76 kV nonsegregated bus. 27.0 kV is the 8.25 kV and 15.0 kV row. That table has no dc value for this class, and ATS says to use the ac value where no dc value is shown. Source: ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17.",
+    "reference": "ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-003",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "How is the dielectric withstand applied to a metal-enclosed busway under ATS 7.4?",
+    "choices": [
+      "All three phases tied together and tested to ground in one shot",
+      "Phase-to-phase only, with ground floating",
+      "Phase-to-neutral, with the enclosure isolated",
+      "Phase-to-ground, with the phases not under test grounded"
+    ],
+    "answer": 3,
+    "explanation": "Each phase is tested to ground with the other phases grounded. Values come from the manufacturer or Table 100.17. Source: ANSI/NETA ATS-2025 7.4.B.3.",
+    "reference": "ANSI/NETA ATS-2025 7.4.B.3",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-004",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "On outdoor rigid bus rated 34.5 kV (nominal), the manufacturer gives no withstand value. ATS 7.21 uses Table 100.19, which gives a maximum ac test of:",
+    "choices": [
+      "30.0 kV",
+      "42.0 kV",
+      "57.0 kV",
+      "59.4 kV"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.19 lists 42.0 kV ac and 59.4 kV dc for the 34.5 kV class, applied for one minute. 30.0 kV is the 25 kV class and 57.0 kV is the 46 kV class. Source: ANSI/NETA ATS-2025 7.21.B.3 and Table 100.19.",
+    "reference": "ANSI/NETA ATS-2025 7.21.B.3 and Table 100.19",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-005",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "Which inspection item is specific to outdoor bus structures in ATS 7.21?",
+    "choices": [
+      "Support insulators are clean and undamaged",
+      "Weep-hole plugs are installed per the manufacturer",
+      "Busway joint shields are in place",
+      "Space heaters are energized"
+    ],
+    "answer": 0,
+    "explanation": "Outdoor bus is carried on station post insulators, so ATS checks that they are clean and intact. Weep-hole plugs, joint shields, and heaters belong to metal-enclosed busway under ATS 7.4. Source: ANSI/NETA ATS-2025 7.21.A.4.",
+    "reference": "ANSI/NETA ATS-2025 7.21.A.4",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-006",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "How does ATS 7.21 set up the insulation-resistance test on outdoor bus rated below 46 kV?",
+    "choices": [
+      "All phases tied together and measured to ground in one reading",
+      "Phase-to-phase only, with ground lifted",
+      "Each phase to ground, with the other phases grounded",
+      "Across each support insulator individually"
+    ],
+    "answer": 2,
+    "explanation": "Each bus phase is measured to ground with the other phases grounded. The voltage comes from the manufacturer or Table 100.1. The step is written for equipment rated below 46 kV. Source: ANSI/NETA ATS-2025 7.21.B.2.",
+    "reference": "ANSI/NETA ATS-2025 7.21.B.2",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-007",
+    "level": "III",
+    "topic": "bus",
+    "domain": "component",
+    "question": "A 350 ft low-voltage busway run reads 0.25 M\u03a9 phase-to-ground, and the manufacturer gives no minimum. Under ATS 7.4:",
+    "choices": [
+      "Accept, because 0.25 M\u03a9 exceeds 100 k\u03a9",
+      "Investigate; the minimum is about 0.29 M\u03a9",
+      "Accept, because long runs have no minimum",
+      "Proceed to the withstand test to see whether the insulation holds"
+    ],
+    "answer": 1,
+    "explanation": "Minimum M\u03a9 = 100 / length in feet = 100 / 350 = 0.286 M\u03a9. The reading is below that, so investigate. ATS says not to proceed with the dielectric withstand until insulation resistance is raised above minimum. Source: ANSI/NETA ATS-2025 7.4.D.2.a.",
+    "reference": "ANSI/NETA ATS-2025 7.4.D.2.a",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-008",
+    "level": "III",
+    "topic": "bus",
+    "domain": "component",
+    "question": "A 69 kV outdoor bus structure is being accepted with no manufacturer data. Which statement matches ATS 7.21?",
+    "choices": [
+      "Insulation resistance at 5 kV is required first, then a 160 kV ac withstand for 1 minute",
+      "Withstand up to 84 kV ac for 1 minute; the IR step covers only below 46 kV",
+      "No dielectric test applies above 46 kV",
+      "Withstand at 118.8 kV ac for 15 minutes"
+    ],
+    "answer": 1,
+    "explanation": "Table 100.19 gives 84.0 kV ac (118.8 kV dc) for the 69 kV class, for one minute. The 7.21 insulation-resistance step names equipment below 46 kV. Power factor is optional. Source: ANSI/NETA ATS-2025 7.21.B.2, B.3, B.4 and Table 100.19.",
+    "reference": "ANSI/NETA ATS-2025 7.21.B.2, B.3, B.4 and Table 100.19",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-009",
+    "level": "III",
+    "topic": "bus",
+    "domain": "component",
+    "question": "You have only a dc hipot, and Table 100.17 shows no dc value for 15 kV nonsegregated bus. ATS 7.4 says:",
+    "choices": [
+      "Use 1.414 times the ac value as dc",
+      "Skip the withstand and rely on megger readings",
+      "Use the 37.5 kV dc value borrowed from the switchgear table, Table 100.2",
+      "Use the ac value, so the withstand is done at 27 kV ac"
+    ],
+    "answer": 3,
+    "explanation": "Where Table 100.17 shows no dc value, ATS says an ac value is to be used. Its note also says the dc column, where it exists, doesn't create a requirement for dc testing. Source: ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17 note 2.",
+    "reference": "ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17 note 2",
+    "verified": true,
+    "kb": "apparatus.md#bus"
+  }
+]

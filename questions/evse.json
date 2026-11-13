@@ -88,5 +88,77 @@
     "reference": "ANSI/NETA ATS-2025 7.26",
     "verified": true,
     "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-006",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "An EV charger's maximum load is 48 A. NFPA 70 treats EV charging as continuous. The minimum branch overcurrent protection rating is:",
+    "choices": [
+      "48 A",
+      "50 A",
+      "60 A",
+      "96 A"
+    ],
+    "answer": 2,
+    "explanation": "625.41 sets OCP at no less than 125% of the maximum load: 48 x 1.25 = 60 A. Source: NFPA 70-2023 625.41 and 625.42.",
+    "reference": "NFPA 70-2023 625.41 and 625.42",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-007",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "Under NFPA 70 Article 625, which EV outlet must be on an individual branch circuit?",
+    "choices": [
+      "Any EV outlet, regardless of rating",
+      "Only outlets in commercial garages",
+      "One supplying EVSE over 16 A or over 120 V",
+      "Only dc fast chargers rated above 50 kW output"
+    ],
+    "answer": 2,
+    "explanation": "Article 625 requires an individual branch circuit for an outlet that supplies EVSE rated above 16 A or above 120 V. Small 120 V, 16 A or lower equipment may share a circuit. Source: NFPA 70-2023 625.40.",
+    "reference": "NFPA 70-2023 625.40",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-008",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "Which output check is on the ATS 7.26 electrical list for an EV charger?",
+    "choices": [
+      "Output voltage, and frequency (ac) or ripple (dc)",
+      "Battery state of health of the test vehicle",
+      "Cable jacket withstand at 5 kV",
+      "Insulation power factor of the charger cord and connector"
+    ],
+    "answer": 0,
+    "explanation": "ATS has you measure the charger's output voltage and either the ac output frequency or the dc ripple, in addition to pilot and protective-earth tests. Source: ANSI/NETA ATS-2025 7.26.B.2.8 and B.2.9.",
+    "reference": "ANSI/NETA ATS-2025 7.26.B.2.8 and B.2.9",
+    "verified": true,
+    "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-009",
+    "level": "III",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "A feeder supplies four 48 A EV chargers. An energy management system limits their total to 120 A, as NFPA 70 625.42(A) allows. The minimum overcurrent rating for that feeder load is:",
+    "choices": [
+      "120 A",
+      "150 A",
+      "192 A",
+      "240 A"
+    ],
+    "answer": 1,
+    "explanation": "With an EMS, the maximum load is the EMS limit, 120 A. EV charging is continuous, so 120 x 1.25 = 150 A. Without the EMS it would be 4 x 48 x 1.25 = 240 A. Source: NFPA 70-2023 625.42(A) and 625.41.",
+    "reference": "NFPA 70-2023 625.42(A) and 625.41",
+    "verified": true,
+    "kb": "apparatus.md#evse"
   }
 ]

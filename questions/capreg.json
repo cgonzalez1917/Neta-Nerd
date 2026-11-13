@@ -1,0 +1,272 @@
+[
+  {
+    "id": "capr-001",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Insulation resistance on a power capacitor unit under ATS 7.20.1 is measured:",
+    "choices": [
+      "Between the two bushings of each unit",
+      "From the discharge resistor to ground",
+      "From the terminals to the case",
+      "Across the fuse of each unit"
+    ],
+    "answer": 2,
+    "explanation": "The test checks the insulation from the live parts to the case. Capacitance across the terminals and discharge-resistor values are separate tests. Source: ANSI/NETA ATS-2025 7.20.1.B.2.",
+    "reference": "ANSI/NETA ATS-2025 7.20.1.B.2",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-002",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A 480 V power-factor capacitor bank is disconnected. ATS 7.20.1, citing NFPA 70 Article 460, expects its residual voltage to fall to 50 V or less within:",
+    "choices": [
+      "1 minute",
+      "5 minutes",
+      "10 seconds",
+      "15 minutes"
+    ],
+    "answer": 0,
+    "explanation": "For capacitors rated 600 V and below, the residual must reach 50 V within 1 minute. Above 600 V the time is 5 minutes. A discharge resistor that misses this is investigated. Source: ANSI/NETA ATS-2025 7.20.1.D.4; NFPA 70-2023 460.6(A).",
+    "reference": "ANSI/NETA ATS-2025 7.20.1.D.4; NFPA 70-2023 460.6(A)",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-003",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A 60 kvar, 480 V three-phase capacitor bank draws about 72 A. NFPA 70 sets its conductor ampacity at no less than 135% of rated current. The minimum is about:",
+    "choices": [
+      "72 A",
+      "90 A",
+      "97 A",
+      "108 A"
+    ],
+    "answer": 2,
+    "explanation": "I = 60,000 / (1.732 x 480) = 72.2 A, and 72.2 x 1.35 = 97.4 A. 90 A is the 125% multiplier used for continuous loads, which does not apply here. Source: NFPA 70-2023 460.8(A).",
+    "reference": "NFPA 70-2023 460.8(A)",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-004",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A capacitor is connected on the load side of a motor controller, so the motor's line current drops. NFPA 70 says the motor overload is set from:",
+    "choices": [
+      "The nameplate full-load current, with no adjustment",
+      "The capacitor's rated current",
+      "The corrected (improved) motor-circuit power factor",
+      "The branch breaker's trip rating"
+    ],
+    "answer": 2,
+    "explanation": "With the capacitor on the motor side of the overload, the overload sees less current than nameplate. The setting is based on the improved power factor, and the effect of the capacitor is not ignored. Source: NFPA 70-2023 460.9.",
+    "reference": "NFPA 70-2023 460.9",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-005",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A new single-phase step-voltage regulator arrives by truck. ATS 7.12.1.1 says to check its impact recorder:",
+    "choices": [
+      "Before the regulator is unloaded",
+      "After it is set on the pad and bolted down",
+      "Only if the tank shows dents",
+      "At the first maintenance interval"
+    ],
+    "answer": 0,
+    "explanation": "Reading the recorder before unloading tells you whether a hard hit happened in transit and who is responsible for it. After it is offloaded, that evidence is mixed with handling at site. Source: ANSI/NETA ATS-2025 7.12.1.1.A.3.",
+    "reference": "ANSI/NETA ATS-2025 7.12.1.1.A.3",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-006",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A step-voltage regulator has no factory polarization-index data. ATS 7.12.1.1 accepts a PI of:",
+    "choices": [
+      "Not less than 2.0",
+      "Not less than 1.4",
+      "Exactly 1.25 or more after correction",
+      "Not less than 1.0"
+    ],
+    "answer": 3,
+    "explanation": "With no factory data, the regulator's polarization index must not be less than 1.0. The 2.0 figure applies elsewhere, such as generator stator windings. Source: ANSI/NETA ATS-2025 7.12.1.1.D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.12.1.1.D.2",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-007",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Winding resistance on a dry-type air-core reactor is compared with the factory test. ATS 7.20.3.1 investigates a difference of more than:",
+    "choices": [
+      "1%",
+      "2%",
+      "5%",
+      "10%"
+    ],
+    "answer": 0,
+    "explanation": "For dry reactors the band is 1% from factory. Liquid-filled reactors and step regulators use 2% instead. Source: ANSI/NETA ATS-2025 7.20.3.1.D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.20.3.1.D.3",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-008",
+    "level": "II",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A liquid-filled shunt reactor has a nitrogen blanket. During inspection, ATS 7.20.3.2 wants the blanket to show:",
+    "choices": [
+      "A slight vacuum",
+      "Positive pressure",
+      "Atmospheric pressure exactly",
+      "At least 5% oxygen"
+    ],
+    "answer": 1,
+    "explanation": "A sealed nitrogen blanket should hold positive pressure. ATS also tests the gas for oxygen, because oxygen in the blanket points to a leak. Source: ANSI/NETA ATS-2025 7.20.3.2.",
+    "reference": "ANSI/NETA ATS-2025 7.20.3.2",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-009",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Three equal capacitors are connected in delta. Measuring between two terminals with the third terminal open reads 30 \u00b5F. Each capacitor is:",
+    "choices": [
+      "10 \u00b5F",
+      "20 \u00b5F",
+      "30 \u00b5F",
+      "45 \u00b5F"
+    ],
+    "answer": 1,
+    "explanation": "Between two terminals you see one capacitor (C) in parallel with the other two in series (C/2): 1.5C = 30 \u00b5F, so C = 20 \u00b5F. ATS 7.20.1 measures capacitance across all terminal combinations. Source: ANSI/NETA ATS-2025 7.20.1.B.3; Engineering fundamentals (series and parallel capacitance).",
+    "reference": "ANSI/NETA ATS-2025 7.20.1.B.3; Engineering fundamentals (series and parallel capacitance)",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-010",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A single-phase 480 V capacitor measures 230 \u00b5F. Its reactive output at 60 Hz is about:",
+    "choices": [
+      "8.7 kvar",
+      "11.5 kvar",
+      "20 kvar",
+      "34.6 kvar"
+    ],
+    "answer": 2,
+    "explanation": "XC = 1/(2 pi x 60 x 230e-6) = 11.53 ohms, so Q = V^2 / XC = 480^2 / 11.53 = 19,980 var. Comparing that with the nameplate kvar is a quick check on capacitance. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2 pi f C)); Engineering fundamentals (Q = V^2/XC).",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2 pi f C)); Engineering fundamentals (Q = V^2/XC)",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-011",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A 4.16 kV capacitor bank was just disconnected. Per ATS 7.20.1 (citing NFPA 70 Article 460), the discharge resistors should bring it to 50 V within:",
+    "choices": [
+      "1 minute",
+      "5 minutes",
+      "15 minutes",
+      "30 seconds"
+    ],
+    "answer": 1,
+    "explanation": "Above 600 V the discharge time is 5 minutes. For 600 V and below it is 1 minute. Even after that, verify absence of voltage and ground the bank before contact. Source: ANSI/NETA ATS-2025 7.20.1.D.4.",
+    "reference": "ANSI/NETA ATS-2025 7.20.1.D.4",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-012",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A dry-type reactor's factory ac withstand was 34 kV. With no other guidance, the highest field ac withstand under ATS 7.20.3.1 is:",
+    "choices": [
+      "22.5 kV",
+      "25.5 kV",
+      "27 kV",
+      "34 kV"
+    ],
+    "answer": 1,
+    "explanation": "ATS limits the field ac test to 75% of the factory test for one minute: 0.75 x 34 = 25.5 kV. A dc test may go up to 100% of the factory rms value. Source: ANSI/NETA ATS-2025 7.20.3.1.D.4.",
+    "reference": "ANSI/NETA ATS-2025 7.20.3.1.D.4",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-013",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "On a step-voltage regulator, the calculated ratio at one step is 60.00 and you measure 60.42. Under ATS 7.12.1.1, that step:",
+    "choices": [
+      "Investigated; 0.7% off, limit 0.5%",
+      "Passes, because it is within 1%",
+      "Passes, because regulators have no ratio limit",
+      "Fails only if the adjacent step also deviates by the same amount"
+    ],
+    "answer": 0,
+    "explanation": "(60.42 - 60.00)/60.00 = 0.7%. Each step is held to 0.5% of the calculated ratio. Source: ANSI/NETA ATS-2025 7.12.1.1.B.10 and D.10.",
+    "reference": "ANSI/NETA ATS-2025 7.12.1.1.B.10 and D.10",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-014",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Winding resistance is compared step to step on a step-voltage regulator and on a power-transformer LTC. Which pair of ATS limits is right?",
+    "choices": [
+      "Both 1%",
+      "Regulator 0.5% of calculated; LTC 2% of factory",
+      "Regulator 2%; LTC 1% between adjacent taps",
+      "Both 5%"
+    ],
+    "answer": 2,
+    "explanation": "ATS 7.12.1.1 investigates a regulator over 2% from factory or adjacent readings. The optional LTC winding-resistance test at each tap in 7.12.3 uses 1% between adjacent taps. Source: ANSI/NETA ATS-2025 7.12.1.1.D.5; 7.12.3.D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.12.1.1.D.5; 7.12.3.D.3",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-015",
+    "level": "III",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "During the full electrical test of a step-voltage regulator control, which settings does ATS 7.12.1.1 have you verify?",
+    "choices": [
+      "Only the voltage level",
+      "CT knee point and VT burden",
+      "Bandwidth, time delay, voltage level, and line-drop compensation",
+      "Breaker trip coil pickup, close coil pickup, and anti-pump operation"
+    ],
+    "answer": 2,
+    "explanation": "The control is checked for accurate bandwidth, time delay, voltage level, and line-drop compensation. The voltage range limiter and the motor cutoffs at maximum raise and lower are verified as well. Source: ANSI/NETA ATS-2025 7.12.1.1.B.11 and B.12.",
+    "reference": "ANSI/NETA ATS-2025 7.12.1.1.B.11 and B.12",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  }
+]

@@ -756,5 +756,95 @@
     "reference": "NEMA AB 4-2017, 6.5.4; ANSI/NETA ATS-2025 Table 100.7 note 1",
     "verified": true,
     "kb": "breakers.md#primary"
+  },
+  {
+    "id": "brkr-043",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "A network protector has a submersible enclosure. ATS 7.8 calls for:",
+    "choices": [
+      "A leak test, per the manufacturer",
+      "A vacuum-bottle magnetron test",
+      "An SF6 moisture sample",
+      "A 5 kV jacket test of the enclosure"
+    ],
+    "answer": 0,
+    "explanation": "Submersible protectors sit in vaults that can flood, so the enclosure's seal is checked with a leak test using the manufacturer's method. Source: ANSI/NETA ATS-2025 7.8.A.17.",
+    "reference": "ANSI/NETA ATS-2025 7.8.A.17",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "brkr-044",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "A network protector's rated control voltage is 120 V. Its motor control relay picks up at 96 V. Under ATS 7.8:",
+    "choices": [
+      "Accept, because 96 V is within 80% of rated",
+      "Accept, because pickup only has to be below rated control voltage",
+      "Investigate; the limit is 90 V (75%)",
+      "Investigate, because pickup must be below 60 V"
+    ],
+    "answer": 2,
+    "explanation": "ATS requires the motor control relay to pick up at no more than 75% of rated control voltage: 0.75 x 120 = 90 V. The motor and trip actuator have the same 75% criterion. Source: ANSI/NETA ATS-2025 7.8.B.7 and D.7.",
+    "reference": "ANSI/NETA ATS-2025 7.8.B.7 and D.7",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "brkr-045",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "A short circuit occurs on a primary feeder that supplies one of several network transformers. Per IEEE C37.108, what usually happens next?",
+    "choices": [
+      "The protectors open first, then the feeder breaker",
+      "The whole network drops until the feeder is repaired",
+      "Feeder breaker trips, then protectors open on reverse power; the network stays up",
+      "The protectors open first on overcurrent, then the feeder breaker trips and the network drops"
+    ],
+    "answer": 2,
+    "explanation": "Operation is sequential. The substation feeder breaker clears, then each network master relay sees reverse power (transformer magnetizing and feeder load) and opens its protector. Other feeders carry the network, so customers don't lose service. Source: IEEE C37.108-2021, 5.1.",
+    "reference": "IEEE C37.108-2021, 5.1",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "brkr-046",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "On an electromechanical network protector, what does the phasing relay add to the master relay's closing logic?",
+    "choices": [
+      "It permits closing only when transformer voltage leads the network",
+      "It trips the protector on any forward power",
+      "It closes the protector whenever the network voltage leads the transformer voltage",
+      "It blocks tripping when the feeder breaker is open"
+    ],
+    "answer": 0,
+    "explanation": "The master relay holds the trip and close functions. The phasing relay supervises closing so the protector closes only when the transformer side leads the network, which means power will flow into the network. Source: IEEE C37.108-2021, 6.1.5.",
+    "reference": "IEEE C37.108-2021, 6.1.5",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "brkr-047",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "An arcing fault develops inside a network protector enclosure. Per IEEE C37.108, why might the network master relay not clear it?",
+    "choices": [
+      "The master relay has no current inputs",
+      "The master relay only trips on undervoltage",
+      "The master relay is blocked whenever the feeder breaker is still closed at the substation",
+      "It is directional, and that fault doesn't look like reverse power to it"
+    ],
+    "answer": 3,
+    "explanation": "The master relay responds to power flowing back toward the transformer. A fault inside the protector isn't seen that way and may burn until the primary feeder relays finally see it. Source: IEEE C37.108-2021, 5.2.3.",
+    "reference": "IEEE C37.108-2021, 5.2.3",
+    "verified": true,
+    "kb": "apparatus.md#network"
   }
 ]

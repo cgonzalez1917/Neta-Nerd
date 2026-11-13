@@ -88,5 +88,95 @@
     "reference": "ANSI/NETA ATS-2025 7.24.1",
     "verified": true,
     "kb": "apparatus.md#reclosers"
+  },
+  {
+    "id": "recl-006",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Testing an automatic line sectionalizer under ATS 7.24.2, lockout is verified:",
+    "choices": [
+      "Only at the final count",
+      "Only on the first count",
+      "At the count printed on the control door",
+      "At every counting position"
+    ],
+    "answer": 3,
+    "explanation": "The sectionalizer must lock out correctly for every count setting it can take. Reset timing is also verified. Source: ANSI/NETA ATS-2025 7.24.2.B.7.",
+    "reference": "ANSI/NETA ATS-2025 7.24.2.B.7",
+    "verified": true,
+    "kb": "apparatus.md#sectionalizers"
+  },
+  {
+    "id": "recl-007",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Insulating liquid from an oil recloser is sampled. ATS 7.24.1 lists which dielectric breakdown method?",
+    "choices": [
+      "ASTM D1816 only",
+      "ASTM D877",
+      "IEEE 400.2",
+      "ASTM D924"
+    ],
+    "answer": 1,
+    "explanation": "The recloser fluid list calls for dielectric breakdown by ASTM D877, plus the other fluid tests in the procedure. D924 is the power-factor method. Source: ANSI/NETA ATS-2025 7.24.1.B.5.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.B.5",
+    "verified": true,
+    "kb": "apparatus.md#reclosers"
+  },
+  {
+    "id": "recl-008",
+    "level": "III",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "ATS 7.24.1's dielectric withstand step for an oil or vacuum recloser (no manufacturer data) sends you to which table?",
+    "choices": [
+      "Table 100.15",
+      "Table 100.2",
+      "Table 100.19",
+      "Table 100.17"
+    ],
+    "answer": 2,
+    "explanation": "Even though ATS has a recloser hipot table (100.15), the 7.24.1 withstand step points to Table 100.19 when the manufacturer is silent. MTS 7.24.1 does the same. Read the procedure, not just the table list. Source: ANSI/NETA ATS-2025 7.24.1.B.11; ANSI/NETA MTS-2023 7.24.1.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.B.11; ANSI/NETA MTS-2023 7.24.1",
+    "verified": true,
+    "kb": "apparatus.md#reclosers"
+  },
+  {
+    "id": "recl-009",
+    "level": "III",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Compare the recloser hipot tables for a 14.4 kV-class recloser rated 15.5 kV maximum, 110 kV BIL. ATS Table 100.15 versus MTS Table 100.15:",
+    "choices": [
+      "50 kV acceptance; 37.5 kV maintenance",
+      "35 kV at acceptance; 26.2 kV for maintenance",
+      "37.5 kV at acceptance; 50 kV for maintenance",
+      "50 kV for both"
+    ],
+    "answer": 0,
+    "explanation": "The MTS value is the acceptance value with a 0.75 factor applied, rounded down. The 35/26.2 pair belongs to the 15.0 kV, 95 kV BIL row. Source: ANSI/NETA ATS-2025 Table 100.15; ANSI/NETA MTS-2023 Table 100.15.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.15; ANSI/NETA MTS-2023 Table 100.15",
+    "verified": true,
+    "kb": "apparatus.md#reclosers"
+  },
+  {
+    "id": "recl-010",
+    "level": "III",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "For a 14.4 kV-class line sectionalizer, the 15-minute dc withstand in the sectionalizer tables is:",
+    "choices": [
+      "39 kV in ATS; 53 kV in MTS",
+      "35 kV in both",
+      "78 kV in ATS; 58.5 kV in MTS",
+      "53 kV in ATS; 39 kV in MTS"
+    ],
+    "answer": 3,
+    "explanation": "ATS lists 35 kV ac / 53 kV dc and MTS lists 26.2 kV ac / 39 kV dc. The 78/58.5 pair belongs to the 24.9 kV class. Source: ANSI/NETA ATS-2025 Table 100.16; ANSI/NETA MTS-2023 Table 100.16.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.16; ANSI/NETA MTS-2023 Table 100.16",
+    "verified": true,
+    "kb": "apparatus.md#sectionalizers"
   }
 ]

@@ -121,6 +121,42 @@
       "title": "High-voltage air switches",
       "file": "air-switches.json",
       "idPrefix": "airsw"
+    },
+    {
+      "id": "switches-fuses",
+      "title": "Switches and fuses",
+      "file": "switches.json",
+      "idPrefix": "sw"
+    },
+    {
+      "id": "bus",
+      "title": "Busways and outdoor bus",
+      "file": "bus.json",
+      "idPrefix": "bus"
+    },
+    {
+      "id": "capacitors-regulators",
+      "title": "Capacitors, reactors, and regulators",
+      "file": "capreg.json",
+      "idPrefix": "capr"
+    },
+    {
+      "id": "drives-mcc",
+      "title": "Drives, starters, and MCCs",
+      "file": "drives.json",
+      "idPrefix": "asd"
+    },
+    {
+      "id": "metering-automation",
+      "title": "Metering, SCADA, and automation",
+      "file": "metering.json",
+      "idPrefix": "mtr"
+    },
+    {
+      "id": "systems",
+      "title": "Systems, studies, and commissioning",
+      "file": "systems.json",
+      "idPrefix": "sys"
     }
   ]
 }
