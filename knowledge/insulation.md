@@ -1,5 +1,7 @@
 # Insulation resistance {#spot}
 
+*Levels: II, III*
+
 A megohmmeter applies DC and reports megohms. It is the wrong instrument for a ground-rod resistance and the wrong instrument for a circuit board. Discharge the winding before you take the leads off. People have been knocked down by a “finished” megger test.
 
 ATS separates the minimums:
@@ -14,6 +16,8 @@ Manufacturer data wins. Every insulation paragraph you will use says “in the a
 
 ## PI and DAR {#pi-dar}
 
+*Levels: II, III*
+
 ATS 7.15.1.B.2, AC induction machines, and the same pattern on DC machines in 7.15.3:
 
 - Larger than 200 hp (150 kW): ten-minute test, calculate polarization index.
@@ -27,6 +31,8 @@ In field practice PI is the 10-minute reading divided by the 1-minute reading, w
 
 ## Temperature {#temp-correction}
 
+*Levels: II, III*
+
 Insulation resistance falls as temperature rises. Compare only after correction.
 
 Table 100.14.1 corrects to 20 °C (`Rc = Ra × K`). Use it with Table 100.1 and with transformer insulation that is being compared at 20 °C. Oil-immersed insulation at 40 °C (104 °F) uses K = 3.95. The table’s own pattern: 2 MΩ measured there becomes 7.9 MΩ at 20 °C. Solid insulation (not rotating machines) at the same 40 °C uses K = 2.50.
@@ -37,6 +43,8 @@ Do not “correct” a hot reading downward. The multiplier for a temperature ab
 
 ## Setup habits
 
+*Levels: II, III*
+
 - One minute is the usual spot test unless the machine rule above says ten.
 - Record temperature, humidity, test voltage, which winding, and what was grounded.
 - Phase-to-phase and phase-to-ground mean different circuits. A breaker test is both, plus across the open pole.
@@ -45,12 +53,16 @@ Do not “correct” a hot reading downward. The multiplier for a temperature ab
 
 ## Common mistakes
 
+*Levels: II, III*
+
 - Comparing tonight’s 40 °C reading with last winter’s 20 °C reading raw.
 - Using the motor PI of 2.0 to fail a transformer, or the transformer PI of 1.0 to accept a large motor.
 - Quoting Table 100.1 for a stator.
 - Leaving the winding charged.
 
 ## What the megger is actually measuring {#current-components}
+
+*Levels: II, III*
 
 IEEE 43-2013 (clauses 3 and 5.1) splits the dc current into parts:
 
@@ -67,6 +79,8 @@ Pick the DC test voltage from IEEE 43-2013 Table 1 or the ATS table for the equi
 
 ## Discharge and recovery voltage {#discharge}
 
+*Levels: II, III*
+
 The test isn't over when the set stops. IEEE 43-2013 clause 4 and 6.5:
 
 - Start discharged. Leftover charge from an earlier test corrupts the reading. Check that discharge current is near zero and there's no meaningful return voltage before you begin.
@@ -76,6 +90,8 @@ The test isn't over when the set stops. IEEE 43-2013 clause 4 and 6.5:
 The discharge current has two parts: a fast capacitive part and a slow absorption part that flows opposite to the charging current. Discharge-current diagnostics, such as the dielectric-discharge reading some test sets offer, are built on that slow part. IEEE 43 Annex C covers monitoring charge and discharge current. Acceptance limits for those diagnostics come from the test-set manufacturer, not from ATS.
 
 ## Field sequence {#ir-field}
+
+*Levels: II, III*
 
 1. Get the equipment in an electrically safe work condition and confirm the isolation points on the one-line.
 2. Read the nameplate, find the section for the equipment (ATS 7.15.1 for induction machines, 7.2 for transformers, 7.6 for breakers), and pick the test voltage and minimum from the manufacturer or the ATS table that section names.
@@ -88,9 +104,13 @@ The discharge current has two parts: a fast capacitive part and a slow absorptio
 
 ## Field guide: step-voltage insulation test {#step-voltage}
 
+*Levels: II, III*
+
 A step-voltage test applies dc in equal steps and checks whether insulation resistance holds as the stress goes up. It is a controlled overvoltage test. Sources: IEEE 95-2002 3.23, 6.4, 7.6 and 7.8; IEEE 43-2013 12.1; Megger S1-568 user guide 8.6. No test voltages are given here. Pick them from the manufacturer, the ATS section for the equipment, or the test specification.
 
 ### Setup
+
+*Levels: II, III*
 
 - Equipment in an electrically safe work condition. Isolate surge capacitors, arresters, VFDs, and electronics.
 - Run an insulation-resistance or PI test first. A winding below the IEEE 43 minimum isn't a candidate for any overvoltage test.
@@ -99,9 +119,13 @@ A step-voltage test applies dc in equal steps and checks whether insulation resi
 
 ### Connections
 
+*Levels: II, III*
+
 Same as a normal insulation test: line lead to the winding (all phases tied together, or one phase with the others grounded), earth lead to the frame, guard where needed. Keep the high-voltage lead off the floor and away from sharp edges. Corona at the leads can look like a failing winding.
 
 ### Procedure
+
+*Levels: II, III*
 
 1. Choose the final voltage and divide it into equal steps. A common tester routine uses five steps of equal voltage and time. IEEE 95 also allows graded steps and a smooth ramp.
 2. Set each step quickly at the start, then leave the setting alone. IEEE 95 says adjust within the first 10 s and don't readjust, because changing voltage mid-step injects charging current.
@@ -111,6 +135,8 @@ Same as a normal insulation test: line lead to the winding (all phases tied toge
 
 ### What the readings mean
 
+*Levels: II, III*
+
 - **Flat or slightly rising resistance:** no sign of voltage-dependent weakness.
 - **Resistance falling at higher steps,** or current curving upward faster than voltage: cracks, contamination, or moisture are starting to conduct. Confirm with one more step and stop if the trend repeats.
 - **Current rising with time at a constant step:** a warning of approaching breakdown.
@@ -118,11 +144,15 @@ Same as a normal insulation test: line lead to the winding (all phases tied toge
 
 ### Common mistakes
 
+*Levels: II, III*
+
 - Skipping the PI test and starting the steps on a wet winding.
 - Comparing step readings taken at different temperatures or on different plotting scales.
 - Chasing the voltage up and down during each step.
 - Blaming the winding for corona at a test clip.
 
 ### Safety
+
+*Levels: II, III*
 
 Stored charge is the main hazard. The winding stays dangerous until it is discharged and solidly grounded, and a big machine can recover voltage after a short ground. Barricade the far end of the circuit and anything connected to it.

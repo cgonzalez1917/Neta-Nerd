@@ -1,8 +1,12 @@
 # Sources {#sources}
 
+*Levels: II, III, IV*
+
 Question writers: use this list, then read the standard. Do not paste a forum memory into the bank and call it an exam item. Do not commit PDFs, the NFPA 70E text, or copied tables into this public repository.
 
 ## Standards checked for this bank
+
+*Levels: II, III, IV*
 
 Private copies used for lookup only. They are not in git.
 
@@ -15,6 +19,8 @@ Private copies used for lookup only. They are not in git.
 IEEE, NEC, and ASTM are cited generally unless the number also appears inside ATS or MTS (for example IEEE C57.106 as the source note under ATS Table 100.4.1).
 
 ## TestGuy study guide and threads
+
+*Levels: II, III, IV*
 
 Exam format (closed book, about 100 questions, 2 hours, formula sheet, TI-30XS) and the domain percentages are taken from the TestGuy study guide, which cites the NETA December 2022 detailed content outline. Forum posts are anecdotal and vary by exam version.
 
@@ -55,6 +61,8 @@ Articles used as optional “Learn more” links, not as copied text:
 
 ## Also useful, not copied
 
+*Levels: II, III, IV*
+
 - https://www.netaworld.org
 - Exam format (100 questions / 2 hours for Levels II and III, 65 / 2 hours for Level IV, Pearson VUE, scaled 410): https://www.netaworld.org/certification-exam/technician-certification671 and https://www.netaworld.org/certification-exam/exam-preparation686 — InterNational Electrical Testing Association
 - Official NETA Electrical Formulae Sheet, updated June 29, 2017, one page, shown on screen during the exam. Linked from https://www.netaworld.org/certification-exam/exam-preparation686. An older website PDF is an incomplete excerpt of that sheet. What the official sheet prints, and what it leaves out, is in `math.md`. Do not commit the PDF.
@@ -74,6 +82,8 @@ Lookups used for later questions, cited by title only. The files themselves are 
 - IEEE C57.104, IEEE 43, IEEE 400.2, IEEE C57.13.1, IEEE C37.2, cited by number. No IEEE text is in this repo.
 
 ## Adding a source later
+
+*Levels: II, III, IV*
 
 Append a link and one sentence on what it is allowed to support. If you use it for a number, either verify that number in ATS, MTS, or 70E and set `verified` true with the clause, or leave `verified` false and say “verify in ATS” in the reference when you are not sure.
 

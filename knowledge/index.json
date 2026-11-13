@@ -3,102 +3,193 @@
     {
       "file": "level-2.md",
       "title": "Level II \u2014 expectations and exam format",
-      "level": "II"
+      "level": "II",
+      "levels": [
+        "II"
+      ]
     },
     {
       "file": "level-3.md",
       "title": "Level III \u2014 expectations and exam format",
-      "level": "III"
+      "level": "III",
+      "levels": [
+        "III"
+      ]
     },
     {
       "file": "level-4.md",
       "title": "Level IV \u2014 expectations and field topics",
-      "level": "IV"
+      "level": "IV",
+      "levels": [
+        "IV"
+      ]
     },
     {
       "file": "test-day.md",
       "title": "Test day, Pearson, and the TI-30XS",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "safety.md",
       "title": "Safety, LOTO, and NFPA 70E-2024",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "math.md",
       "title": "Math, formula sheet, and worked examples",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "insulation.md",
       "title": "Insulation resistance, PI, and DAR",
-      "level": "II"
+      "level": "II, III",
+      "levels": [
+        "II",
+        "III"
+      ]
     },
     {
       "file": "resistance.md",
       "title": "DLRO, bolted connections, winding resistance",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "transformers.md",
       "title": "Transformers: TTR, excitation, PF, oil",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "breakers.md",
       "title": "Low-voltage breakers and trip units",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "relays.md",
       "title": "Protective relays and control logic",
-      "level": "III"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "instrument-transformers.md",
       "title": "CTs and VTs",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "cables.md",
       "title": "Cables, VLF, and tan delta",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "grounding.md",
       "title": "Grounding and ground-fault protection",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "batteries.md",
       "title": "Station batteries",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "thermography.md",
       "title": "Infrared thermography",
-      "level": "II"
+      "level": "II, III",
+      "levels": [
+        "II",
+        "III"
+      ]
     },
     {
       "file": "field-methods.md",
       "title": "Field methods: injection, CTs, PF, motors",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "apparatus.md",
       "title": "MV breakers, reclosers, motors, emergency, fiber, EVSE",
-      "level": "II"
+      "level": "II, III, IV",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     },
     {
       "file": "life-safety.md",
       "title": "Life-safety power and other NFPA tests",
-      "level": "II"
+      "level": "II, III",
+      "levels": [
+        "II",
+        "III"
+      ]
     },
     {
       "file": "sources.md",
       "title": "Sources and what not to copy",
-      "level": ""
+      "level": "",
+      "levels": [
+        "II",
+        "III",
+        "IV"
+      ]
     }
   ]
 }

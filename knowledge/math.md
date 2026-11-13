@@ -1,5 +1,7 @@
 # Math you do not get for free {#not-on-sheet}
 
+*Levels: II, III*
+
 The certification exam shows a one-page formula sheet on screen. This bank follows the official NETA Electrical Formulae Sheet, updated June 29, 2017. It is linked from NETA’s exam-preparation page: https://www.netaworld.org/certification-exam/exam-preparation686
 
 An older one-page PDF, from the previous exam-preparation address, is an incomplete excerpt. It stops after the power-factor line and drops the rest of the official sheet. Study the June 29, 2017 sheet.
@@ -43,6 +45,8 @@ Insulation-resistance temperature multipliers are a table, not a line on the she
 
 ## Power {#power}
 
+*Levels: II, III, IV*
+
 The sheet prints single-phase `P = VI cos θ`, power factor as `kW/kVA`, three-phase `VA = √3 × V × I`, and `kW = kVA × PF`.
 
 `S (VA) = √3 × VLL × IL`
@@ -60,6 +64,8 @@ Worked, two loads on one feeder: 100 kW at 0.80 lagging, and 60 kVA at 0.50 lagg
 Worked: 480 V, 100 A, unity PF. `P = 1.732 × 480 × 100 = 83.1 kW`. Drop the √3 and you report the single-phase product, 48 kW.
 
 ## Also on the official sheet {#official-rest}
+
+*Levels: II, III, IV*
 
 Balanced delta: line current is 1.732 times phase current, and line voltage equals phase voltage. A delta phase current of 10 A is a line current of 17.32 A. The voltage you read line to line is the phase voltage.
 
@@ -83,6 +89,8 @@ Watthour meters are a note, not one algebra line. Kh is the watthours one revolu
 
 ## Reactance {#xl}
 
+*Levels: II, III*
+
 `XL = 2πfL` is on the sheet. Henries are not millihenries. 10 mH is 0.010 H.
 
 At 60 Hz, `XL = 2 × π × 60 × 0.010 ≈ 3.77 Ω`. Leave the “milli” off and you publish about 3770 Ω.
@@ -95,6 +103,8 @@ Net reactance on the sheet is `XL − XC`, not the sum. `R = 3 Ω`, `XL = 10 Ω`
 
 ## Circuit laws the sheet assumes {#kvl}
 
+*Levels: II*
+
 Series resistances add. Two equal resistors in parallel are half of one: 12 Ω || 12 Ω = 6 Ω. `Rparallel = (R1 × R2) / (R1 + R2)`.
 
 A divider: 480 V across 30 Ω in series with 10 Ω. Current is `480 / 40 = 12 A`. The 10 Ω resistor drops 120 V. The two drops add to the source (KVL). They do not split in proportion to the smaller resistor’s name.
@@ -103,6 +113,8 @@ Inductors combine like resistors. 20 mH in series with 20 mH is 40 mH. The same 
 
 ## CT ratio {#ct-ratio}
 
+*Levels: II*
+
 Secondary amperes = primary amperes × (secondary rating / primary rating).
 
 A 600:5 CT with 240 A primary: ratio 120, secondary `240 / 120 = 2.0 A`.
@@ -110,6 +122,8 @@ A 600:5 CT with 240 A primary: ratio 120, secondary `240 / 120 = 2.0 A`.
 Polarity in the field: current into H1 leaves X1. One ground on the secondary circuit, where the drawings put it.
 
 ## Turns-ratio percent {#ttr-pct}
+
+*Levels: II*
 
 Percent accuracy on the official sheet is `(actual − specified) / specified × 100`. For a turns-ratio check, the calculated ratio is the specified value and the measured ratio is the actual value:
 
@@ -120,6 +134,8 @@ Nameplate 13800 / 480 = 28.75. Measured 28.95.
 `(28.95 − 28.75) / 28.75 × 100 = 0.70%`, which is outside the one-half percent ATS allows. The half-percent rule is in the transformer pages; the arithmetic is yours.
 
 ## Copper temperature correction {#copper}
+
+*Levels: II*
 
 Not on the official sheet. For copper windings:
 
@@ -137,6 +153,8 @@ Insulation resistance moves the other way: hotter insulation reads lower megohms
 
 ## Per-unit fault current {#per-unit}
 
+*Levels: II, III*
+
 Percent impedance on a transformer nameplate is the percent of rated voltage that, applied to one winding with the other shorted, circulates rated current.
 
 `Isc ≈ IFL / Zpu` when the source is stiff and you ignore cable. `Zpu = percent / 100`.
@@ -149,11 +167,56 @@ At 5.75% Z, `Zpu = 0.0575`, `Isc ≈ 1804 / 0.0575 ≈ 31.4 kA`.
 
 Multiplying by 5.75 instead of dividing by 0.0575 is the usual miss (you land near 10 kA).
 
+## Base changes and fault math {#fault-math}
+
+*Levels: IV*
+
+Sources: Blackburn and Domin, Protective Relaying, 4th ed., 2.5 through 2.8 and 2.10; IEEE 242-2001, Clause 2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.
+
+**Changing the MVA base.** Per-unit impedance grows in proportion to the base MVA: `Znew = Zold x (MVAnew / MVAold)`. An 8% impedance on a 15 MVA base is `0.08 x 100 / 15 ≈ 0.533 pu` (53.3%) on a 100 MVA base.
+
+**Changing the voltage base.** If the rated voltage of the equipment differs from the study base at the same point, also multiply by `(kVold / kVnew)^2`. A 25 MVA, 13.2 kV generator with Xd'' = 0.18 on a 100 MVA, 13.8 kV base:
+
+1. MVA change: `0.18 x 100 / 25 = 0.72`.
+2. Voltage change: `(13.2 / 13.8)^2 ≈ 0.915`.
+3. Result: `0.72 x 0.915 ≈ 0.659 pu`.
+
+Apply the voltage term only when the two kV values belong to the same voltage level. Across a transformer, the bases are linked by the turns ratio.
+
+**Per-unit to ohms.** `Zohms = Zpu x kV^2 / MVA`. Take a 12% reactance rated 20 MVA at 13.8 kV: the result is `0.12 x 9.52 ≈ 1.14 ohms`.
+
+**Add the source.** For a 2500 kVA, 480 V, 5.75% transformer fed from a 500 MVA utility source, put both on the transformer base: source `2.5 / 500 = 0.005 pu`, total `0.0625 pu`. Full-load current is about 3007 A, so the bolted fault is about `3007 / 0.0625 ≈ 48 kA`. The infinite-bus answer is about 52 kA.
+
+**Generator contribution.** Use saturated subtransient reactance for the first few cycles. A 50 MVA, 13.8 kV machine with Xd'' = 0.15 has rated current near 2092 A and a terminal fault near `2092 / 0.15 ≈ 13.9 kA`.
+
+**Base current.** `Ibase = MVA / (1.732 x kV)`. At 100 MVA and 138 kV this is about 418 A, so a 0.30 pu impedance to the fault gives about 1395 A.
+
+## Symmetrical components and asymmetry {#sequence}
+
+*Levels: IV*
+
+Sources: IEEE 242-2001, 2.4 Equation (2-3), 2.7, and 8.3.2; Blackburn and Domin, Protective Relaying, 4th ed., Chapter 4; IEEE C37.230-2020, 6.2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.G.
+
+**Asymmetrical rms factor.** The first-cycle rms current with full offset is the symmetrical current times `sqrt(1 + 2 x e^(-2 pi / (X/R)))`.
+
+- X/R = 15: `2 pi / 15 ≈ 0.419`, `e^(-0.419) ≈ 0.658`, factor `sqrt(2.316) ≈ 1.52`. A 20 kA symmetrical fault is about 30.4 kA asymmetrical.
+- X/R = 25: `e^(-0.251) ≈ 0.778`, factor `sqrt(2.556) ≈ 1.60`. That is the familiar 1.6 multiplier, which is only valid up to about this X/R.
+
+**Phase-to-phase faults.** A bolted line-to-line fault is about 0.87 of the three-phase value. If the three-phase fault is 2400 A and pickup is 600 A, the phase-to-phase multiple is `0.87 x 2400 / 600 ≈ 3.48`.
+
+**Single line-to-ground fault.** `IF = 3 x VLN / (Z1 + Z2 + Z0 + 3 x ZG)`. On a 13.8 kV system, `3 x 7967 ≈ 23,900 V`. With Z1 = Z2 = 0.5, Z0 = 0.6, and an 8 ohm ground impedance, the bottom is `0.5 + 0.5 + 0.6 + 24 = 25.6 ohms`, so IF is about 934 A. Forgetting the 3 on ZG overstates the current by more than double.
+
+**Sequence currents in a ground fault.** With one phase faulted to ground, I0 = I1 = I2 = IF / 3. A 600 A fault has 200 A in each sequence, and the residual (3 x I0) a ground relay sees is 600 A.
+
 ## A temperature rise is not a temperature {#delta-t}
+
+*Levels: II*
 
 Table 100.18 talks about a difference, ΔT. A difference in Celsius converts by 1.8, with no +32. A 10 °C rise is an 18 °F rise. Adding 32 turns a rise into a fake temperature (50 °F) and will make a mild connection look like a fire.
 
 ## Harmonics at the point of common coupling {#harmonics}
+
+*Levels: III, IV*
 
 ATS section 6.6 is the harmonic study. The report compares calculated voltage and current distortion with IEEE 519 and calls out anything over those limits. It also wants the impedance-versus-frequency plot, so resonances are visible, and a check of transformer capability under the nonsinusoidal current using the method in IEEE C57.110.
 
@@ -163,9 +226,13 @@ IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common
 
 ## Wye capacitors, line to line {#caps}
 
+*Levels: III*
+
 Three equal capacitors in wye: a measurement from phase A to phase B sees two units in series. Series capacitance is half of one unit when they match. 100 µF cans read about 50 µF from A to B. Do not call the bank failed because the line-to-line reading is not the nameplate microfarads of one can.
 
 ## Unit prefixes {#prefixes}
+
+*Levels: II*
 
 Not on the sheet. Every step is a factor of 1000.
 
@@ -182,6 +249,8 @@ Capital M is mega and lowercase m is milli. That one letter is the difference be
 
 ## Single-loop RLC, start to finish {#rlc}
 
+*Levels: II, III*
+
 The sheet gives every piece: `XL = 2πfL`, `XC = 1/(2πfC)`, `Z = √(R² + (XL − XC)²)`, `V = IZ`, and `cos θ = R/Z`. The work is doing them in order without dropping a prefix.
 
 Worked: 120 V, 60 Hz, R = 30 Ω, L = 0.20 H, C = 50 µF.
@@ -197,6 +266,8 @@ If XC is the larger one, the circuit is capacitive and current leads. ELI the IC
 
 ## Combining capacitors and resistors {#cap-combos}
 
+*Levels: II*
+
 Not on the sheet.
 
 - Resistors and inductors: series add. Parallel use reciprocals: `1/R = 1/R1 + 1/R2 + …`. The parallel total is always below the smallest branch.
@@ -205,6 +276,8 @@ Not on the sheet.
 Three resistors in parallel, 60, 30, and 20 Ω: `1/60 + 1/30 + 1/20 = 6/60`, so the total is 10 Ω. Product over sum works only two at a time.
 
 ## 4–20 mA scaling {#loop-scaling}
+
+*Levels: II*
 
 Not on the sheet. Analog transducers and transmitters commonly use a 4–20 mA loop (IEEE C37.1 lists it as a standard dc analog signal range). 4 mA is the bottom of the range, not zero current, and the live span is 16 mA.
 
@@ -215,11 +288,15 @@ Worked: 0–150 °C transmitter at 8 mA: `(8 − 4) / 16 × 150 = 37.5 °C`. A 0
 
 ## RMS, peak, and peak-to-peak {#rms-peak}
 
+*Levels: II, III*
+
 The sheet prints `Vpeak = √2 × Vrms`. Peak-to-peak is twice peak, and that step is not printed. Meters and relays usually report rms. Oscilloscopes and some event records show peak or peak-to-peak.
 
 Worked: 480 V rms peaks at 679 V. A scope trace of 340 V peak-to-peak is 170 V peak, which is 120 V rms.
 
 ## More drills on the lower block {#sheet-drills}
+
+*Levels: II, III*
 
 - **Delta and wye.** Delta line current 52 A is a phase current of `52 / 1.732 = 30 A`. A 4160 V wye has `4160 / 1.732 = 2402 V` per phase.
 - **Capacitor on another voltage.** 100 kvar at 480 V on a 440 V bus: `100 × (440/480)² = 84 kvar`. The square matters.
@@ -232,6 +309,8 @@ Worked: 480 V rms peaks at 679 V. A scope trace of 340 V peak-to-peak is 170 V p
 - **Percent accuracy.** Divide by the specified value, not the measured one. Keep the sign.
 
 ## Resistance and run length {#run-length}
+
+*Levels: II*
 
 Conductor resistance is proportional to length. Check the units every time you use the resistance-and-length line: a longer run must read more ohms.
 

@@ -1,5 +1,7 @@
 # Fall-of-potential {#fop}
 
+*Levels: II, III*
+
 ATS 7.13.B.2: perform a fall-of-potential test, or an alternative, on the main grounding electrode or system in accordance with IEEE 81. NETA is telling you which standard owns the probe method. It is not, in that paragraph, giving you a homemade spacing.
 
 In IEEE 81 practice the current probe is driven far enough that the potential probe can sit in a flat part of the resistance curve, classically near 62% of the current-probe distance for a simple electrode in uniform soil. You confirm the plateau with readings around that point (for example near 50%, 62%, and 70%). If the curve is still a slope, the current probe is too close. That 62% figure is IEEE 81 method, not an ATS table value. Mark it that way when you write a question.
@@ -10,6 +12,8 @@ A clamp-on ground tester measures a loop. It needs a return path through other g
 
 ## Limits {#limits}
 
+*Levels: II, III, IV*
+
 ATS 7.13.D.2: resistance between the main grounding electrode and ground no greater than 5 ohms for large commercial or industrial systems, and 1 ohm or less for generating or transmission station grounds, unless the owner specifies otherwise. The citation in the paragraph is IEEE 142.
 
 ATS 7.13.D.3: investigate point-to-point resistance above 0.5 ohm between the main grounding system and major frames, the system neutral, and derived neutrals.
@@ -19,6 +23,8 @@ These are not the NEC 25-ohm rod rule. NEC 250.53(A)(2) says a single rod, pipe,
 Bolted ground connections still use the 50-percent-of-the-lowest screen (7.13.D.1) and Table 100.12 when the manufacturer is silent.
 
 ## Ground-fault sensors {#gfp}
+
+*Levels: II, III, IV*
 
 Low-voltage ground-fault protection is ATS 7.14, and the visual checks are where the scheme is won or lost:
 
@@ -40,11 +46,15 @@ A reduced-control-voltage trip check is also required (7.14.B.7 and D.7): 55 per
 
 ## Common mistakes
 
+*Levels: II, III, IV*
+
 - Reporting 25 ohms as the NETA substation target.
 - Leaving the test probes inside the electrode’s sphere of influence and writing down the first number.
 - Running the equipment-grounding conductor through a zero-sequence CT “so the fault has a path.”
 
 ## Soil resistivity (Wenner four-point) {#soil}
+
+*Levels: II*
 
 IEEE 81-2012 7.2.3. Four probes go in a straight line at equal spacing `a`. Current flows through the outer two, and voltage is read across the inner two. `R = V / I`.
 
@@ -55,6 +65,8 @@ Each spacing samples to a depth of roughly `a`. Take a series of spacings. If th
 Soil moisture and temperature move the numbers. For conservative design data, IEEE 81 8.1.2 suggests measuring under adverse conditions, such as dry weather, and taking resistivity and grid readings under similar weather.
 
 ## Fall-of-potential in the field {#fop-field}
+
+*Levels: II, III*
 
 IEEE 81-2012 8.2.2.4:
 
@@ -67,6 +79,8 @@ IEEE 81-2012 8.2.2.4:
 ATS 7.13 adds point-to-point checks from the main grounding system to frames, the system neutral, and derived neutrals. Investigate anything above 0.5 Ω (7.13.D.3).
 
 ## Clamp-on (stakeless) testers {#clamp-on}
+
+*Levels: II, III*
 
 IEEE 81-2012 8.2.2.5 and Annex E.2. The clamp induces a test voltage and measures the loop current. The loop is the electrode under test in series with every other ground in parallel. The reading is only that electrode's resistance when the parallel return is close to zero ohms, which is the case for a pole ground on a long multigrounded neutral.
 

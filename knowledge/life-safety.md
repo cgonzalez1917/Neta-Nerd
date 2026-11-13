@@ -1,10 +1,14 @@
 # Life-safety power and other NFPA field tests {#life-safety}
 
+*Levels: II, III*
+
 This page covers the NFPA documents a NETA tester runs into on emergency, health-care, fire, hazardous-area and storage jobs. It points to the edition and section for each item. The NFPA text itself is not reproduced here; read the adopted edition on NFPA LiNK or your client's copy. Which edition applies, and whether a document applies at all, is decided by local adoption and the AHJ.
 
 Generator Type, Class and Level, and the NFPA 110 test program, are in the [transfer switch field guide](#/study/apparatus.md/ats-functional).
 
 ## Emergency lighting and exit signs (NFPA 101-2027) {#emergency-lighting}
+
+*Levels: II, III*
 
 - **Duration.** Emergency lighting has to last at least 1.5 hours after normal lighting fails (7.9.2.1). A new generator feeding it is rated Type 10, Class 1.5, Level 1 or better (7.9.2.2).
 - **Light levels at the start (7.9.2.1.1).** On the egress path floor, the average must be at least 1 foot-candle and no single spot may be under 0.1 foot-candle. Check both. A good average does not excuse a dark spot.
@@ -19,6 +23,8 @@ Generator Type, Class and Level, and the NFPA 110 test program, are in the [tran
 - **Exit signs.** An externally lit sign needs at least 5 foot-candles on the face, with a contrast ratio of 0.5 or better (7.10.6.3). An internally lit sign is listed to UL 924 (7.10.7.1). Battery exit signs are tested the same way as battery emergency lights (7.10.9).
 
 ## Stored-energy systems (NFPA 111-2025) {#stored-energy}
+
+*Levels: II, III*
 
 NFPA 111 is the UPS and battery version of NFPA 110.
 
@@ -38,6 +44,8 @@ NFPA 111 is the UPS and battery version of NFPA 110.
 
 ## Hospital essential electrical system (NFPA 99-2027) {#hospital-ees}
 
+*Levels: II, III*
+
 - **Branches.** The life safety and critical branches come back automatically within 10 seconds (6.7.5.3.1). The equipment branch follows on a delay, or by hand in sequence, so the source isn't overloaded (6.7.5.1.4.2, 6.7.3.4.1).
 - **Monthly tests (6.7.4.1.1.5).** On-site sources are tested 12 times a year, 20 to 40 days apart. The test runs under load and simulates a real failure, and EES loads are transferred both automatically and manually. Generators are tested the NFPA 110 Chapter 8 way.
 - **The 10-second rule on monthly runs (6.7.4.1.1.2).** The 10-second target isn't enforced on the monthly test. If it is missed, the facility needs a set way to confirm the capability once a year.
@@ -45,6 +53,8 @@ NFPA 111 is the UPS and battery version of NFPA 110.
 - **Program (6.9).** EES components belong in an NFPA 70B maintenance program. Table 6.9.4.1 puts transfer equipment on a monthly inspection, with service and test every 3 years. Records are kept 5 years.
 
 ## Patient-care grounding and receptacles {#patient-care-grounding}
+
+*Levels: II, III*
 
 From NFPA 99-2027, section 6.3.3.
 
@@ -60,12 +70,16 @@ From NFPA 99-2027, section 6.3.3.
 
 ## Isolated power and the LIM {#isolated-power}
 
+*Levels: II, III*
+
 - **Installation (6.3.2.9.2).** Each isolated conductor, receptacles included, must show more than 200,000 ohms to ground. Afterward, restore the LIM ground and record its unloaded reading for future comparison.
 - **What the LIM does (6.3.2.9.3).** Green means isolation is good. Red plus an audible alarm come on at 5.0 mA of total hazard current. It must stay quiet below 3.7 mA of fault hazard current.
 - **Before service (6.3.3.3.2).** Ground each line in turn through a resistor of 200 ohms per volt of measured line voltage. Both the light and the horn must work. On 120 V that is 200 × 120 = 24,000 ohms. Repeat after distribution repairs or renovation (6.3.3.3.4).
 - **Routine (6.3.3.3.3).** Press the test switch at least monthly, or up to every 12 months for a LIM with automatic self-test and self-calibration.
 
 ## Fire alarm power and batteries (NFPA 72-2025) {#fire-alarm-power}
+
+*Levels: II, III*
 
 - **Transfer (10.6.6).** The secondary supply takes over within 10 seconds at the protected premises.
 - **Capacity (10.6.7.2).**
@@ -87,6 +101,8 @@ From NFPA 99-2027, section 6.3.3.
 
 ## Fire pump controllers and transfer switches (NFPA 20-2025) {#fire-pump}
 
+*Levels: II, III*
+
 - **Voltage limits (9.4).** During starting, the controller line terminals may drop no more than 15% below the controller rating. With the motor drawing 115% of full-load amps, the contactor load terminals may drop no more than 5% below the motor rating.
 - **Transfer switch (10.8).**
   - A manual transfer switch between the two supplies is not allowed.
@@ -106,6 +122,8 @@ From NFPA 99-2027, section 6.3.3.
 
 ## Lightning protection (NFPA 780-2026) {#lightning}
 
+*Levels: II, III*
+
 - **Electrodes (4.12).** Each down conductor ends at its own lightning electrodes, or at a bonded multi-electrode system with a ground ring. Rods measure at least 8 ft by 1/2 in. When it is practical, connected rods sit no closer than their driven depths added together. Pipes and rods of other systems don't count as lightning electrodes.
 - **Bonding (4.13, 4.14).** Grounded systems are tied together within 12 ft of the structure base. Over 60 ft tall, use a ground loop and add a roof-level tie within 12 ft of the main roof.
 - **SPDs (4.19).** An SPD goes at every power service, with 20 kA or more nominal discharge per phase (8/20 µs). SPDs also go where circuits between buildings run over 100 ft.
@@ -117,6 +135,8 @@ From NFPA 99-2027, section 6.3.3.
 
 ## Battery energy storage commissioning (NFPA 855-2026) {#bess}
 
+*Levels: II, III*
+
 - **Timing (6.1).** Commission after installation and before final inspection and approval.
 - **Plan (6.1.3).** The installer or commissioning agent writes it. It covers the system, its controls and its safety systems: detection, suppression, thermal management, ventilation, spill control and safety interlocks.
 - **Report (6.1.5).** It goes to the owner and the AHJ before approval, and a copy stays with the O&M manuals. Open issues need an AHJ-accepted corrective plan before service.
@@ -124,6 +144,8 @@ From NFPA 99-2027, section 6.3.3.
 - **Ongoing tests (7.3).** They follow the manufacturer and the O&M documents. The general chapter gives no single calendar interval.
 
 ## Machine wiring tests (NFPA 79-2024) {#machine-wiring}
+
+*Levels: II, III*
 
 - **What is always required (18.1).** Continuity of the ground-fault current path is always verified and documented. The other tests below are done when they apply.
 - **Continuity (18.2).** Either measure impedance, 0.1 ohm or less after subtracting the leads, or drive at least 10 A from a SELV source and keep the drop within Table 18.2. For 14 AWG that is 1.9 V.
@@ -133,6 +155,8 @@ From NFPA 99-2027, section 6.3.3.
 
 ## Purged and pressurized enclosures (NFPA 496-2027) {#purged-enclosures}
 
+*Levels: II, III*
+
 - **Pressure (4.4).** Keep the inside at 25 Pa (0.1 in. water) or more over ambient whenever the equipment is on. A bypass needs an alarm and tool or password protection.
 - **On pressure loss.** Type X generally cuts power automatically, with a short delay allowed only where a sudden trip is worse, and alarms at an attended spot (4.11). Type Z only has to detect and alarm or indicate (4.9).
 - **Purge before energizing (5.4, 5.5).** At least 4 enclosure volumes, or 10 for motors and generators, while holding 25 Pa. Type Y and Z may skip the purge when pressure is up and the inside is known to be safe. Type X may not.
@@ -140,6 +164,8 @@ From NFPA 99-2027, section 6.3.3.
 - **Field note.** These are function checks, not a calendar interval. Follow the equipment instructions.
 
 ## Hazardous-area classification (NFPA 497 and 499, 2027) {#hazloc}
+
+*Levels: II, III*
 
 Both are recommended practices. They tell the classification team how to draw the boundaries. They don't set an electrical test schedule.
 
@@ -155,6 +181,8 @@ Both are recommended practices. They tell the classification team how to draw th
 
 ## Test before touch: 70E-2027 points {#test-before-touch-2027}
 
+*Levels: II, III*
+
 This bank's safety page is written to 70E-2024. These are 2027 items the notes support. They are not a full change list.
 
 - **Absence of voltage (120.6(7)).** At every work location, check each phase line to line and line to ground, with a rated tester proved on a live source before and after.
@@ -163,6 +191,8 @@ This bank's safety page is written to 70E-2024. These are 2027 items the notes s
 - **Standby person (130.2(A)(2)).** If a permit specifies shock or arc-flash PPE, a second person trained in emergency response must be present, standing beyond whichever boundary is bigger, limited approach or arc flash.
 
 ## IT rooms, telecom, plants and fuel cells (NFPA 75, 76, 850, 853) {#other-nfpa}
+
+*Levels: II*
 
 - **NFPA 75-2024.** The IT room disconnect also separates a room UPS battery from the load (11.5.1). Replacement lithium-ion UPS batteries must match the UPS listing (11.5.4.2).
 - **NFPA 76-2024.** Battery-room fan failure and hydrogen alarms send a supervisory signal, plus local warning if staff are at risk (8.4.2.2.5 to 8.4.2.2.6).
