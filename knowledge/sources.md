@@ -56,8 +56,8 @@ Articles used as optional “Learn more” links, not as copied text:
 ## Also useful, not copied
 
 - https://www.netaworld.org
-- Exam format (100 questions / 2 hours for Levels II and III, 65 / 2 hours for Level IV, Pearson VUE, scaled 410): https://www.netaworld.org/certification-exam/technician-certification671 and https://www.netaworld.org/accreditation/exam-preparation — InterNational Electrical Testing Association
-- NETA Certification Exam Formulae Sheet, March 2020, one page, shown on screen during the exam. Linked from https://www.netaworld.org/accreditation/exam-preparation. What it prints, and what it leaves out, is in `math.md`. Do not commit the PDF.
+- Exam format (100 questions / 2 hours for Levels II and III, 65 / 2 hours for Level IV, Pearson VUE, scaled 410): https://www.netaworld.org/certification-exam/technician-certification671 and https://www.netaworld.org/certification-exam/exam-preparation686 — InterNational Electrical Testing Association
+- Official NETA Electrical Formulae Sheet, updated June 29, 2017, one page, shown on screen during the exam. Linked from https://www.netaworld.org/certification-exam/exam-preparation686. An older website PDF is an incomplete excerpt of that sheet. What the official sheet prints, and what it leaves out, is in `math.md`. Do not commit the PDF.
 - Manufacturer breaker and relay manuals. They outrank a NETA table when ATS says “in the absence of manufacturer’s data.”
 
 Manufacturer trip-unit manuals, relay manuals, and test-set manuals are cited as “per manufacturer data.” Job sheets and one-lines stay off this public repo. A time that was only calculated, and not read from the published curve, is not used as a quiz answer.

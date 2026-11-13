@@ -49,7 +49,7 @@
     ],
     "answer": 0,
     "explanation": "10 mH is 0.010 H. XL = 2\u03c0 \u00d7 60 \u00d7 0.010 \u2248 3.77 \u03a9. Dropping the milli prefix produces about 3770 \u03a9, a common calculator miss the sheet will not catch.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XL = 2\u03c0fL)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -122,7 +122,7 @@
     ],
     "answer": 1,
     "explanation": "(28.95 \u2212 28.75) / 28.75 \u00d7 100 = 0.70%. The formula sheet prints that percent-accuracy form. Whether 0.70% passes is a separate ATS limit (one-half percent). This item is that arithmetic.",
-    "reference": "NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3",
     "verified": true,
     "kb": "math.md#ttr-pct"
   },
@@ -195,7 +195,7 @@
     ],
     "answer": 2,
     "explanation": "10 \u00b5F = 10e-6 F. XC = 1/(2\u03c0\u00d760\u00d710e-6) \u2248 265 \u03a9. Using 10 F, or 10e-3 F, moves the answer by orders of magnitude.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2\u03c0fC))",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XC = 1/(2\u03c0fC))",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -213,7 +213,7 @@
     ],
     "answer": 0,
     "explanation": "Net reactance is 10 \u2212 4 = 6 \u03a9. Z = \u221a(3\u00b2 + 6\u00b2) = \u221a45 \u2248 6.7 \u03a9. Adding the reactances gives 17 \u03a9 and ignores the sign already printed on the sheet.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (impedance)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (impedance)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -222,16 +222,16 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Which of these identities is printed on the NETA certification exam formula sheet?",
+    "question": "Which of these is not printed on the official NETA Electrical Formulae Sheet?",
     "choices": [
       "1 hp = 746 W",
       "XC = 1/(2\u03c0fC)",
       "The copper temperature constant 234.5",
-      "PI = 10 min / 1 min"
+      "VA = \u221a3 \u00d7 V \u00d7 I"
     ],
-    "answer": 1,
-    "explanation": "The March 2020 formula sheet, shown on screen during the exam, includes XC = 1/(2\u03c0fC). It does not include 1 hp = 746 W, the copper constant 234.5, or the polarization-index time points. Those three have to be memorized.",
-    "reference": "NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020)",
+    "answer": 2,
+    "explanation": "The official sheet updated June 29, 2017 prints 1 hp = 746 W, XC = 1/(2\u03c0fC), and three-phase VA = \u221a3 \u00d7 V \u00d7 I. It does not print the copper temperature constant 234.5. That constant has to be memorized.",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017)",
     "verified": true,
     "kb": "math.md#not-on-sheet"
   },
@@ -447,7 +447,7 @@
     ],
     "answer": 1,
     "explanation": "XL = 2\u03c0fL with L in henries. 50 mH is 0.050 H, so 2\u03c0 \u00d7 60 \u00d7 0.050 \u2248 18.8 \u03a9. Leaving the milli prefix on produces about 18 800 \u03a9.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XL = 2\u03c0fL)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -465,7 +465,7 @@
     ],
     "answer": 1,
     "explanation": "XC = 1/(2\u03c0fC) with C in farads. 2 \u00b5F is 2\u00d710\u207b\u2076 F, so XC \u2248 1326 \u03a9, about 1330 \u03a9. Microfarads left as farads make the capacitor look like a short.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2\u03c0fC))",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XC = 1/(2\u03c0fC))",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -591,7 +591,7 @@
     ],
     "answer": 0,
     "explanation": "PF = kW / kVA = 90/100 = 0.90. The sheet prints power factor as kW/kVA, so this rearranges a line you are handed. 1.11 is the fraction upside down.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (power factor)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (power factor)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -626,8 +626,8 @@
       "75 A"
     ],
     "answer": 0,
-    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. Three-phase power, \u221a3 \u00d7 V \u00d7 I, is not on the formula sheet. You have to remember it.",
-    "reference": "Engineering fundamentals (three-phase current)",
+    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. Three-phase VA = \u221a3 \u00d7 V \u00d7 I is printed on the official formulae sheet. Solve that line for current.",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (three-phase VA = \u221a3 \u00d7 V \u00d7 I)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -663,7 +663,7 @@
     ],
     "answer": 1,
     "explanation": "Series resistance is 20 \u03a9. I = 120/20 = 6 A. Each resistor then drops 60 V. KVL is the check: 60 + 60 = 120.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Ohm's law)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (Ohm's law)",
     "verified": true,
     "kb": "math.md#kvl"
   },
@@ -879,7 +879,7 @@
     ],
     "answer": 2,
     "explanation": "VA = 10000 \u00d7 0.002 = 20. PF = 4 / 20 = 0.20 = 20%. Watts divided by voltage, skipping the current, is not power factor. This is the same W/VI definition used on a power-factor set. The item is the arithmetic. A real insulation specimen at 20% power factor would be in very bad shape.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (insulation power factor = W / (V \u00d7 I))",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (insulation power factor = W / (V \u00d7 I))",
     "verified": true,
     "kb": "field-methods.md#pf-method"
   },
@@ -933,7 +933,7 @@
     ],
     "answer": 1,
     "explanation": "25 mH is 0.025 H. 2\u03c0 \u00d7 60 \u00d7 0.025 \u2248 9.4 \u03a9. The formula is on the sheet; the milli conversion is not.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XL = 2\u03c0fL)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -1437,7 +1437,7 @@
     ],
     "answer": 1,
     "explanation": "VA = V \u00d7 I and V = I \u00d7 R, so VA = V\u00b2 / R. V\u00b2 = 5120 \u00d7 5 = 25600, and V = 160. The current is 32 A. Do not report 5120 divided by 5 as the voltage.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Single-phase S = V\u00b2 / R)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (Single-phase S = V\u00b2 / R)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1455,7 +1455,7 @@
     ],
     "answer": 1,
     "explanation": "XL = 2\u03c0fL is about 0.38 ohm. The resistor is 250 ohms, so the current is about 0.48 A and the inductor drop is a fraction of a volt. The 120 V is across the resistor. Forgetting to convert millihenries would invent a large reactance.",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2\u03c0fL; series voltage division)",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XL = 2\u03c0fL; series voltage division)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -1634,8 +1634,8 @@
       "120 V"
     ],
     "answer": 1,
-    "explanation": "Z = sqrt(6^2 + 8^2) = 10 ohms, I = 120 / 10 = 12 A, and VR = 12 x 6 = 72 V. The 96 V across the reactance is 90 degrees out of phase, so the two don't add arithmetically to 120 V. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (Z = sqrt(R^2 + (XL - XC)^2), V = IZ).",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Z = sqrt(R^2 + (XL - XC)^2), V = IZ)",
+    "explanation": "Z = sqrt(6^2 + 8^2) = 10 ohms, I = 120 / 10 = 12 A, and VR = 12 x 6 = 72 V. The 96 V across the reactance is 90 degrees out of phase, so the two don't add arithmetically to 120 V. Source: NETA Electrical Formulae Sheet (updated June 29, 2017) (Z = sqrt(R^2 + (XL - XC)^2), V = IZ).",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (Z = sqrt(R^2 + (XL - XC)^2), V = IZ)",
     "verified": true,
     "kb": "math.md#kvl"
   },
@@ -1652,8 +1652,8 @@
       "150 kW"
     ],
     "answer": 2,
-    "explanation": "At PF 0.8, sin(theta) = 0.6, so kVA = 90 / 0.6 = 150 and kW = 150 x 0.8 = 120. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle).",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
+    "explanation": "At PF 0.8, sin(theta) = 0.6, so kVA = 90 / 0.6 = 150 and kW = 150 x 0.8 = 120. Source: NETA Electrical Formulae Sheet (updated June 29, 2017) (PF = kW/kVA); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle).",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (PF = kW/kVA); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1670,8 +1670,8 @@
       "554 V"
     ],
     "answer": 1,
-    "explanation": "Vpeak = 1.414 x Vrms = 1.414 x 277 = 392 V. 480 V is the line-to-line rms of a 277 V wye system, not a peak. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (Vpeak = sqrt(2) x Vrms).",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Vpeak = sqrt(2) x Vrms)",
+    "explanation": "Vpeak = 1.414 x Vrms = 1.414 x 277 = 392 V. 480 V is the line-to-line rms of a 277 V wye system, not a peak. Source: NETA Electrical Formulae Sheet (updated June 29, 2017) (Vpeak = sqrt(2) x Vrms).",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (Vpeak = sqrt(2) x Vrms)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1742,8 +1742,8 @@
       "1728 W at 0.60 PF"
     ],
     "answer": 3,
-    "explanation": "Z = sqrt(12^2 + 16^2) = 20 ohms, I = 12 A, PF = R/Z = 0.60, and P = I^2 x R = 144 x 12 = 1728 W. 2880 is the volt-amperes. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z, P = I^2 R).",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z, P = I^2 R)",
+    "explanation": "Z = sqrt(12^2 + 16^2) = 20 ohms, I = 12 A, PF = R/Z = 0.60, and P = I^2 x R = 144 x 12 = 1728 W. 2880 is the volt-amperes. Source: NETA Electrical Formulae Sheet (updated June 29, 2017) (Z, PF = R/Z, P = I^2 R).",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (Z, PF = R/Z, P = I^2 R)",
     "verified": true,
     "kb": "math.md#power"
   },
@@ -1760,8 +1760,8 @@
       "9.4 ohms"
     ],
     "answer": 3,
-    "explanation": "Series inductance adds: 25 mH. XL = 2 x pi x 60 x 0.025 = 9.42 ohms. 2.3 ohms would be the parallel combination (6 mH). Source: NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2 pi f L); Engineering fundamentals (series inductance).",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2 pi f L); Engineering fundamentals (series inductance)",
+    "explanation": "Series inductance adds: 25 mH. XL = 2 x pi x 60 x 0.025 = 9.42 ohms. 2.3 ohms would be the parallel combination (6 mH). Source: NETA Electrical Formulae Sheet (updated June 29, 2017) (XL = 2 pi f L); Engineering fundamentals (series inductance).",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XL = 2 pi f L); Engineering fundamentals (series inductance)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -1778,8 +1778,8 @@
       "6 ohms, resistive, PF 1.0"
     ],
     "answer": 0,
-    "explanation": "Add in rectangular form: (4 + 2) + j(3 - 11) = 6 - j8. Magnitude = 10 ohms. The negative j means net capacitive, and PF = 6 / 10 = 0.6 leading. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers); NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z).",
-    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers); NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z)",
+    "explanation": "Add in rectangular form: (4 + 2) + j(3 - 11) = 6 - j8. Magnitude = 10 ohms. The negative j means net capacitive, and PF = 6 / 10 = 0.6 leading. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers); NETA Electrical Formulae Sheet (updated June 29, 2017) (Z, PF = R/Z).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers); NETA Electrical Formulae Sheet (updated June 29, 2017) (Z, PF = R/Z)",
     "verified": true,
     "kb": "math.md#xl"
   },
@@ -1814,8 +1814,8 @@
       "About 100 kvar"
     ],
     "answer": 2,
-    "explanation": "Present kvar = 400 x tan(acos 0.80) = 300. Target kvar = 400 x tan(acos 0.95) = 131.5. Needed = 300 - 131.5 = 168.5 kvar. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle); NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA).",
-    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle); NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA)",
+    "explanation": "Present kvar = 400 x tan(acos 0.80) = 300. Target kvar = 400 x tan(acos 0.95) = 131.5. Needed = 300 - 131.5 = 168.5 kvar. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle); NETA Electrical Formulae Sheet (updated June 29, 2017) (PF = kW/kVA).",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle); NETA Electrical Formulae Sheet (updated June 29, 2017) (PF = kW/kVA)",
     "verified": true,
     "kb": "math.md#power"
   },

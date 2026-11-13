@@ -1,12 +1,14 @@
 # Math you do not get for free {#not-on-sheet}
 
-The certification exam shows a one-page formula sheet on screen. The sheet confirmed for this bank is the Formulae Sheet dated March 2020, linked from NETA's Exam Preparation page: https://www.netaworld.org/accreditation/exam-preparation
+The certification exam shows a one-page formula sheet on screen. This bank follows the official NETA Electrical Formulae Sheet, updated June 29, 2017. It is linked from NETA’s exam-preparation page: https://www.netaworld.org/certification-exam/exam-preparation686
 
-Exactly what that page prints:
+An older one-page PDF, from the previous exam-preparation address, is an incomplete excerpt. It stops after the power-factor line and drops the rest of the official sheet. Study the June 29, 2017 sheet.
+
+Printed on that official sheet:
 
 - DC: `V = IR`, `P = IV`
-- AC: `% accuracy = (actual − specified) / specified × 100%`
-- For a sine wave: `Vpeak = √2 × Vrms`
+- Percent accuracy: `(actual − specified) / specified × 100%`
+- Sine wave: `Vpeak = √2 × Vrms`
 - `V(L-L) = √3 × V(L-N)`
 - `V = IZ`
 - `XL = 2πfL`
@@ -14,24 +16,66 @@ Exactly what that page prints:
 - `Z = √(R² + (XL − XC)²)`
 - `P = VI cos θ = I²R`
 - `cos θ = R/Z = power factor = watts / volt-amperes = kW/kVA`
+- Three-phase: `VA = √3 × V × I`, and `kW = kVA × PF`
+- Balanced delta: line current = `1.732 ×` phase current, and line voltage = phase voltage
+- Balanced wye: line current = phase current, and line voltage = `1.732 ×` phase voltage
+- `1 hp = 746 W`
+- Torque: `33,000 × hp / (6.28 × rpm)` (pound-feet)
+- Resistance per 1000 ft: measured resistance × (length of the run in feet / 1000)
+- `C = VAR / (2πf V²)`
+- `kVAR = kV² × 1000 / XC`
+- Capacitor kvar at another voltage: `kVAR1 = kVAR2 × (kV1 / kV2)²`
+- Resonance: `f = 1 / (2π √(LC))`
+- Machine frequency: `f = P × ns / 120` (P is poles, ns is synchronous rpm)
+- Watthour meters: Kh is the watthours one disk revolution stands for. With instrument transformers, the primary Kh is the energy figure for the primary circuit.
 
-Not on the sheet, so memorize them: `1 hp = 746 W`, temperature correction, copper's 234.5 constant (aluminum uses 225), polarization index and dielectric absorption, and three-phase power `√3 × V × I`. Also memorize the sine and cosine of ordinary angles, which way current sits on an inductor or a capacitor, unit prefixes, the parallel-resistor recipe, insulation-resistance multipliers, and kvar when you only know kW and kVA.
+Not on the sheet, so memorize them. Each of these was checked against the June 29, 2017 sheet and is absent:
 
-The on-screen calculator is a TI-30XS. If it is in radians, `cos(60)` is not one half. Switch to degrees before an angle problem.
+- Sine, cosine, and tangent of ordinary angles. The sheet uses `cos θ` inside the power and power-factor lines. It does not print a value for 30°, 45°, or 60°, and it does not print `tan θ`.
+- ELI and ICE: current lags voltage in an inductor and leads in a capacitor.
+- Copper temperature correction with the constant 234.5. Aluminum uses 225. Neither constant is printed.
+- Polarization index (10 min / 1 min) and dielectric absorption (60 s / 30 s).
+- The kvar triangle identity `kvar = √(kVA² − kW²)`.
+- Parallel-resistor shortcuts, including product over sum.
+- Unit prefixes (milli, micro, and the rest). The reactance lines want henries and farads.
+
+Insulation-resistance temperature multipliers are a table, not a line on the sheet. The on-screen calculator is a TI-30XS. If it is in radians, `cos(60)` is not one half. Switch to degrees before an angle problem.
 
 ## Power {#power}
 
-The sheet prints single-phase `P = VI cos θ` and power factor as `kW/kVA`. It does not print three-phase power. Balanced three-phase apparent power is one you memorize:
+The sheet prints single-phase `P = VI cos θ`, power factor as `kW/kVA`, three-phase `VA = √3 × V × I`, and `kW = kVA × PF`.
 
 `S (VA) = √3 × VLL × IL`
 
-`P (W) = S × PF`
+`P (W) = S × PF`, the same statement as `kW = kVA × PF`.
 
 `kvar = √(kVA² − kW²)` when you were not given the angle. That square root is not on the sheet. If you were given θ, `kvar = kW × tan θ`, and tan is also not printed for you.
 
 Worked: 200 kW at 0.80 PF. `kVA = 200 / 0.80 = 250`. `kvar = √(250² − 200²) = √22500 = 150`.
 
 Worked: 480 V, 100 A, unity PF. `P = 1.732 × 480 × 100 = 83.1 kW`. Drop the √3 and you report the single-phase product, 48 kW.
+
+## Also on the official sheet {#official-rest}
+
+Balanced delta: line current is 1.732 times phase current, and line voltage equals phase voltage. A delta phase current of 10 A is a line current of 17.32 A. The voltage you read line to line is the phase voltage.
+
+Balanced wye: line current equals phase current, and line voltage is 1.732 times phase voltage. 277 V from line to neutral is `1.732 × 277 ≈ 480 V` line to line. That is the same relationship as `V(L-L) = √3 × V(L-N)`. The sheet writes 1.732 on the delta and wye lines and a radical on the line-to-neutral line.
+
+`1 hp = 746 W` is printed. Shaft horsepower is output. A 25 hp shaft is `25 × 746 = 18,650 W` out of the shaft. Line current that also folds in efficiency is not printed as one formula. Build it from this line, three-phase VA, and the efficiency you were given.
+
+Torque in pound-feet: `33,000 × hp / (6.28 × rpm)`. The 6.28 stands in for 2π. At 10 hp and 1800 rpm, `330,000 / (6.28 × 1800) ≈ 29.2 lb-ft`.
+
+Resistance per 1000 ft, as printed: measured ohms × (length of the run in feet / 1000). A 500 ft run that measures 0.20 Ω gives `0.20 × (500 / 1000) = 0.10 Ω` on that line.
+
+Capacitance from reactive power: `C = VAR / (2πf V²)`, farads. A 10,000 var capacitor at 480 V and 60 Hz is about 115 µF. The companion line is `kVAR = kV² × 1000 / XC`. At 0.48 kV and `XC = 23.04 Ω`, that is `0.2304 × 1000 / 23.04 = 10 kvar`.
+
+A capacitor moved to another voltage: `kVAR1 = kVAR2 × (kV1 / kV2)²`. A 100 kvar unit rated 4.16 kV, energized at 4.00 kV, delivers `100 × (4.00 / 4.16)² ≈ 92.4 kvar`.
+
+Series resonance: `f = 1 / (2π √(LC))`. `L = 0.20 H` and `C = 50 µF` (`50 × 10⁻⁶ F`) resonate near 50.3 Hz.
+
+Machine frequency: `f = P × ns / 120`. Four poles at 1800 rpm synchronous is `4 × 1800 / 120 = 60 Hz`.
+
+Watthour meters are a note, not one algebra line. Kh is the watthours one revolution of the disk stands for. When instrument transformers feed the meter, the primary Kh is the constant for energy in the primary circuit.
 
 ## Reactance {#xl}
 
@@ -63,7 +107,7 @@ Polarity in the field: current into H1 leaves X1. One ground on the secondary ci
 
 ## Turns-ratio percent {#ttr-pct}
 
-Percent accuracy on the March 2020 sheet is `(actual − specified) / specified × 100`. For a turns-ratio check, the calculated ratio is the specified value and the measured ratio is the actual value:
+Percent accuracy on the official sheet is `(actual − specified) / specified × 100`. For a turns-ratio check, the calculated ratio is the specified value and the measured ratio is the actual value:
 
 `% deviation = (measured − calculated) / calculated × 100`
 
@@ -73,7 +117,7 @@ Nameplate 13800 / 480 = 28.75. Measured 28.95.
 
 ## Copper temperature correction {#copper}
 
-Not on the formula sheet. For copper windings:
+Not on the official sheet. For copper windings:
 
 `R2 = R1 × (234.5 + T2) / (234.5 + T1)`
 

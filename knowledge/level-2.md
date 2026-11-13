@@ -30,8 +30,8 @@ NETA’s technician-certification pages describe the administered exams as close
 - Level III: 100 questions, 2 hours.
 - Level IV: 65 questions, 2 hours.
 
-Confirm the current sheet on NETA’s exam-preparation page before test day: https://www.netaworld.org/accreditation/exam-preparation
+Confirm the current sheet on NETA’s exam-preparation page before test day: https://www.netaworld.org/certification-exam/exam-preparation686
 
-The on-screen formula sheet is the one-page Formulae Sheet dated March 2020, linked from https://www.netaworld.org/accreditation/exam-preparation. What it prints, and what you still have to memorize, is on the math page. The on-screen calculator is commonly a TI-30XS style. Confirm degree mode before any cosine or angle.
+The on-screen formula sheet is the official one-page NETA Electrical Formulae Sheet updated June 29, 2017, linked from that page. An older PDF from the previous exam-preparation address is an incomplete excerpt, not the sheet the exam shows. What the official sheet prints, and what you still have to memorize, is on the math page. The on-screen calculator is commonly a TI-30XS style. Confirm degree mode before any cosine or angle.
 
 Do not treat forum posts that recall specific items as the exam. This bank writes original questions about the same skills.
