@@ -2,6 +2,7 @@
   "docs": [
     {"file": "level-2.md", "title": "Level II — expectations and exam format", "level": "II"},
     {"file": "level-3.md", "title": "Level III — expectations and exam format", "level": "III"},
+    {"file": "test-day.md", "title": "Test day, Pearson, and the TI-30XS", "level": "II"},
     {"file": "safety.md", "title": "Safety, LOTO, and NFPA 70E-2024", "level": "II"},
     {"file": "math.md", "title": "Math, formula sheet, and worked examples", "level": "II"},
     {"file": "insulation.md", "title": "Insulation resistance, PI, and DAR", "level": "II"},

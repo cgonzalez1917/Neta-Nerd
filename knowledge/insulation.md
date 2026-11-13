@@ -49,3 +49,39 @@ Do not “correct” a hot reading downward. The multiplier for a temperature ab
 - Using the motor PI of 2.0 to fail a transformer, or the transformer PI of 1.0 to accept a large motor.
 - Quoting Table 100.1 for a stator.
 - Leaving the winding charged.
+
+## What the megger is actually measuring {#current-components}
+
+IEEE 43-2013 (clauses 3 and 5.1) splits the dc current into parts:
+
+- **Geometric capacitive current.** Large and brief. It charges the winding's capacitance and dies away in seconds.
+- **Absorption (polarization) current.** Starts high and decays over minutes as the insulation polarizes.
+- **Conduction current.** Steady. It flows through the bulk insulation.
+- **Surface leakage current.** Also steady. It runs over dirty or damp surfaces, such as end turns. The guard terminal can steer it away from the measurement.
+
+The reading is applied voltage divided by total current. As absorption decays, total current falls and megohms climb. That rise is what PI captures. On small random-wound machines the absorption current is gone in seconds, so PI tells you little (5.4).
+
+Low readings caused by dirt or moisture can often be recovered by cleaning and drying, and PI is a common way to judge when drying can stop (11.2). A winding below its minimums should not get an overvoltage test.
+
+Pick the DC test voltage from IEEE 43-2013 Table 1 or the ATS table for the equipment's rating. Use the manufacturer's value first. Good, dry insulation reads about the same at any voltage up to the peak of its rating. A sharp drop as voltage rises points to cracks or contamination (6.4).
+
+## Discharge and recovery voltage {#discharge}
+
+The test isn't over when the set stops. IEEE 43-2013 clause 4 and 6.5:
+
+- Start discharged. Leftover charge from an earlier test corrupts the reading. Check that discharge current is near zero and there's no meaningful return voltage before you begin.
+- Ground through a resistor after the test, and keep it grounded for at least four times as long as voltage was applied. A 10-minute PI test means 40 minutes or more.
+- A brief ground is not enough. When dc is removed, the absorption current reverses and bleeds out slowly, sometimes for more than 30 minutes on large insulation (5.5). Lift the ground early and voltage climbs back onto the terminals.
+
+The discharge current has two parts: a fast capacitive part and a slow absorption part that flows opposite to the charging current. Discharge-current diagnostics, such as the dielectric-discharge reading some test sets offer, are built on that slow part. IEEE 43 Annex C covers monitoring charge and discharge current. Acceptance limits for those diagnostics come from the test-set manufacturer, not from ATS.
+
+## Field sequence {#ir-field}
+
+1. Get the equipment in an electrically safe work condition and confirm the isolation points on the one-line.
+2. Read the nameplate, find the section for the equipment (ATS 7.15.1 for induction machines, 7.2 for transformers, 7.6 for breakers), and pick the test voltage and minimum from the manufacturer or the ATS table that section names.
+3. Isolate anything that can't take the voltage: solid-state trip units, relays, surge devices, VFD inputs.
+4. Ground everything not under test. Connect the guard if surface leakage will mislead you.
+5. Record winding and ambient temperature and humidity.
+6. Run the timed test (one minute, or ten for the PI machines) and record the readings the section asks for.
+7. Discharge and keep grounded per the section above.
+8. Correct to the table's base temperature, then compare. Compare with earlier results only after correction.

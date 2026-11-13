@@ -32,3 +32,26 @@ Dielectric withstand, when the optional or required test applies, uses Table 100
 - Calling a 0.3% metering class “failed” because a handheld TTR at 8 V missed by 1%.
 - Leaving a second ground on a long CT run because both ends “should be safe.”
 - Opening a CT secondary to “see if it’s dead.”
+
+## CT field tests, what each one proves {#ct-field}
+
+ATS 7.10.1.B points to IEEE C57.13.1-2017 for the methods.
+
+- **Ratio** (C57.13.1 6.1). Proves the installed ratio and taps are what was specified and wired to the right terminals. It is not an accuracy-class test.
+- **Polarity** (6.2, clause 9). Proves secondary current flows the predicted direction. It matters most where currents are summed or compared: differential, directional, and residual ground. Methods include a dc kick, ac with an oscilloscope, ac current comparison, and phase angle.
+- **Excitation** (6.5, clause 12). Confirms the accuracy class and finds shorted turns by comparison with the manufacturer's curve. It's run by applying voltage to the secondary with the primary open, because driving the primary would put high voltage on the open secondary and need a very large current (12.3).
+- **Winding resistance** (6.4). Finds high-resistance joints in the CT or its leads.
+- **Burden** (6.7, ATS B.5). Measured at the CT shorting block. Compare with the CT rating (ATS D.5).
+- **One ground** (ATS B.9). Prove it by removing the intended ground and checking insulation to ground at that point (C57.13.1 Annex A.1).
+
+Demagnetize after any dc test, including a dc polarity kick or an ohmmeter check through a test switch. The voltage method drives the core into saturation with ac on the secondary and ramps the voltage smoothly to zero (5.1).
+
+Burden and the knee: a C-class rating is the secondary voltage the CT delivers to a standard burden at 20 times rated current within 10% error (IEEE C57.13-2016 6.4.1.3). A C100 CT with 1.5 Ω of total loop burden would need 100 A × 1.5 Ω = 150 V at 20 times rated, which is past its rating, so expect saturation on a big fault.
+
+## CT hazards {#ct-hazards}
+
+- **Open secondary.** IEEE C57.13-2016 6.7.1: never operate a CT with the secondary open, because hazardous peak voltages can develop. Conforming CTs only have to survive one minute open-circuited, and only where the open-circuit voltage stays at or below 3500 V peak. Above that, the user should consider a varistor or spark gap. Short at the shorting block before lifting a wire.
+- **Lifting the ground while the primary is energized.** C57.13.1 Annex A.1: dangerous voltage can appear on the secondary through electrostatic coupling even with no primary current.
+- **Breaking a dc polarity circuit.** C57.13.1 9.1: interrupting the battery can kick a dangerous voltage. Put a resistor near the winding's dc resistance across it first, or make and break with a hot stick or rubber gloves.
+- **Tapped windings.** Voltage on one tap section appears, scaled up, across the full winding (12.1). Don't hold voltage above the knee longer than the readings need.
+- **Demagnetizing.** The terminal voltage can approach the secondary limit while you do it (5.1).

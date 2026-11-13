@@ -81,3 +81,19 @@ MTS Appendix C ties study updates to events. New work, an annual data check, or 
 ## Commissioning (ECS) {#commissioning}
 
 ANSI/NETA ECS-2024 starts where ATS stops. Components are proved by factory and field acceptance tests. Commissioning then proves the system against the Owner's Project Requirements (what the owner needs and how success is measured) and the Basis of Design (how the designer met them). The commissioning authority drafts the commissioning plan during design and keeps it current through construction, acceptance, and occupancy. The work runs in three phases: pre-energization (document reviews, settings, CT circuits, interlocks, energization plan), energization (restricted access, grounds removed, phasing and rotation, differential operate and restraint at medium voltage), and post-energization (fluid and gas samples, infrared under load, loading checks, report). The commissioning organization is an independent third party. The report includes an issues log of open and closed items. Turnover replaces commissioning locks and tags with the operator's.
+
+## Vacuum breaker field sequence {#mv-vacuum-field}
+
+ATS-2025 7.6.3, in a workable order:
+
+1. Nameplate against drawings. Confirm the manufacturer's special tools and gauges are on hand (A.1, A.4).
+2. Mechanical operation per the manual, critical distances such as contact gap (manufacturer values, A.7 and C.1), torque, cell fit, racking, lubrication.
+3. Contact timing (A.12, required). Coil current signature (A.13) and motion analysis (A.14) are optional. Timing, coil current, travel, and velocity are all judged against the manufacturer (C.4–C.6).
+4. Counter as-found and as-left. One count per close-open cycle (A.15, C.7).
+5. Insulation resistance, one minute, closed and across each open pole (B.1). For 15 kV class with no manufacturer value, Table 100.1 gives 2,500 V dc and 5,000 MΩ. Control wiring is at least 2 MΩ (D.2).
+6. Contact resistance (B.3), with the 50%-of-lowest screen when there's no manufacturer band.
+7. Minimum pickup on trip and close coils (B.4). With no manufacturer data, Table 100.20.1 for 125 V dc: closing 100–140 V indoor, opening 70–140 V.
+8. Trip-free, antipump, electrical close and trip (B.5). Then trip the breaker from each protective device and reset targets (B.6). That end-to-end trip is the check injection alone can't give.
+9. Vacuum bottle integrity: a withstand across each open interrupter, strictly per the manufacturer (B.10). The magnetron atmospheric-condition test is optional (B.9).
+10. Overall withstand per the manufacturer, or Table 100.19 (B.11). The 15 kV class row is 20.4 kV ac or 28.8 kV dc maximum in the field.
+11. Heaters (B.12) and the breaker's instrument transformers per 7.10 (B.13).

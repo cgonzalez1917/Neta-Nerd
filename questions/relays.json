@@ -1909,5 +1909,131 @@
     "reference": "ANSI/NETA ATS-2025 7.9.1 (device 32)",
     "verified": true,
     "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-107",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Which drawing shows the course of a power system with single lines and graphic symbols, usually ignoring physical layout?",
+    "choices": [
+      "One-line (single-line) diagram",
+      "Schematic (elementary) diagram",
+      "Wiring (connection) diagram",
+      "Panel layout drawing"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 315 defines the single-line diagram as one that shows, by single lines and symbols, the course of a circuit or system and its component devices. It's the drawing for switching, isolation points, and protection zones. Source: IEEE 315-1975 (R1993), A4.1.1; Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., Ch. 1 (types of diagrams).",
+    "reference": "IEEE 315-1975 (R1993), A4.1.1; Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., Ch. 1 (types of diagrams)",
+    "verified": true,
+    "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-108",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "You need to trace why a breaker won't close from its control switch. Which drawing is meant for following a circuit's function regardless of where devices physically sit?",
+    "choices": [
+      "One-line diagram",
+      "Site plan",
+      "Conduit and raceway schedule",
+      "Schematic (elementary) diagram"
+    ],
+    "answer": 3,
+    "explanation": "A schematic shows the electrical connections and functions of a circuit without regard to the size, shape, or location of the parts. It's the drawing for troubleshooting control logic: coils, contacts, and interlocks in order. Source: IEEE 315-1975 (R1993), A4.1.2.",
+    "reference": "IEEE 315-1975 (R1993), A4.1.2",
+    "verified": true,
+    "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-109",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "You need to find which terminal block point a CT lead lands on inside a relay panel. Which drawing is built for that?",
+    "choices": [
+      "One-line diagram",
+      "Wiring (connection) diagram",
+      "Schematic (elementary) diagram",
+      "Block diagram"
+    ],
+    "answer": 1,
+    "explanation": "A wiring or connection diagram locates and identifies devices, terminals, and interconnecting wires in an assembly. The schematic shows what the circuit does; the wiring diagram shows where the wire physically goes. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., Ch. 1 (types of diagrams).",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., Ch. 1 (types of diagrams)",
+    "verified": true,
+    "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-110",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "A drawing has a chart showing which contacts of a control switch are closed in TRIP, NORMAL, and CLOSE. That is a:",
+    "choices": [
+      "One-line diagram",
+      "Control sequence (truth-table) diagram",
+      "Wiring diagram",
+      "Elevation drawing"
+    ],
+    "answer": 1,
+    "explanation": "A control sequence or truth-table diagram lists the contact positions or connections made for each position of a control device. IEEE C37.2 shows charts of this kind for switch contacts on elementary diagrams. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., Ch. 1 (types of diagrams); IEEE C37.2-2022, 4.5.2.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., Ch. 1 (types of diagrams); IEEE C37.2-2022, 4.5.2",
+    "verified": true,
+    "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-111",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Under ANSI/NETA ECS-2024, what has to happen with the drawing packages at the end of commissioning?",
+    "choices": [
+      "The original design set is returned to the engineer",
+      "Only the one-line needs updating",
+      "Drawings are optional if test reports are complete",
+      "They must be as-built; a complete set stays on site and a duplicate goes to the owner/operator"
+    ],
+    "answer": 3,
+    "explanation": "ECS-2024's documentation list says all applicable drawing packages shall be as-built, with a complete set left on site and a duplicate submitted to the owner/operator. Drawings that don't match the field are a hazard the next time someone switches. Source: ANSI/NETA ECS-2024, 5.4 (documentation, drawing packages).",
+    "reference": "ANSI/NETA ECS-2024, 5.4 (documentation, drawing packages)",
+    "verified": true,
+    "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-112",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "On an elementary diagram, how does IEEE C37.2 recommend showing a contact on a device with no de-energized position, such as a manual-automatic switch or a breaker-housing TOC switch?",
+    "choices": [
+      "Drawn normally open, with a mark saying in which position it closes",
+      "Drawn normally closed with no label",
+      "Left off the drawing",
+      "Drawn in whatever position it was in during commissioning"
+    ],
+    "answer": 0,
+    "explanation": "Devices without a standard reference position should preferably be drawn normally open, and each contact identified by when it closes (for example A for automatic, M for manual, or the breaker position for a TOC). Source: IEEE C37.2-2022, 4.5.3.",
+    "reference": "IEEE C37.2-2022, 4.5.3",
+    "verified": true,
+    "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-113",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Nearly every ATS inspection list opens with 'compare equipment nameplate data with drawings.' The main reason is:",
+    "choices": [
+      "To record serial numbers for warranty",
+      "To check the drawing title block is signed",
+      "To catch equipment that doesn't match the design before its settings and tests are based on wrong data",
+      "Because nameplates fade over time"
+    ],
+    "answer": 2,
+    "explanation": "Settings, test values, and protective device sizes all come from the drawings and studies. A wrong rating or ratio found at the nameplate step saves everything that would follow from it. Source: ANSI/NETA ATS-2025 7.6.1.2.A.1, 7.10.1.A.1, 7.6.3.A.1.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.A.1, 7.10.1.A.1, 7.6.3.A.1",
+    "verified": true,
+    "kb": "relays.md#drawings"
   }
 ]

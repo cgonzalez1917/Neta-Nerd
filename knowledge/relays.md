@@ -65,3 +65,16 @@ Never open a current-transformer secondary while the primary can carry current. 
 - Reporting a numeric relay “in cal” because the software element picked up, with the breaker trip contact lifted.
 - Leaving a shipping screw in an electromechanical disk.
 - Meggering through a shorting bar that was left open, or the reverse, and calling the result a ratio.
+
+## Reading the drawing set {#drawings}
+
+Different drawings answer different questions. Grab the right one.
+
+- **One-line (single-line).** Single lines and symbols show the course of the power system and its devices. Physical layout is ignored (IEEE 315 A4.1.1). Use it for switching, isolation points, sources, CT and VT locations, and protection zones.
+- **Three-line.** All three phases drawn out. Use it when phasing, CT polarity, or delta connections matter.
+- **Schematic (elementary).** Shows how a circuit works without regard to where parts physically sit (IEEE 315 A4.1.2). Use it to trace control logic: the 52a contact, the 86 seal-in, the trip coil. Devices are drawn de-energized. A device with no de-energized position, such as a control switch or a breaker-housing TOC, is drawn normally open with a note on when it closes (IEEE C37.2-2022 4.5.3).
+- **Wiring (connection).** Locates devices, terminals, and wires in an assembly. Use it to find which terminal a lead lands on.
+- **Control sequence (truth table).** A chart of which contacts are made in each position of a switch (C37.2 4.5.2).
+- **As-built.** The drawing corrected to match what was installed. ECS-2024 5.4 wants all drawing packages as-built, a full set left on site, and a duplicate to the owner. Its pre-energization lists have test data, as-built drawings, and relay as-left files submitted before energizing.
+
+Almost every ATS section starts with "compare equipment nameplate data with drawings." Settings and test values come from the drawings and studies, so a mismatch caught there saves everything after it.
