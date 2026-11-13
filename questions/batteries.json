@@ -1312,5 +1312,41 @@
     "reference": "NFPA 855-2026, 7.3.1 to 7.3.2.1",
     "verified": true,
     "kb": "life-safety.md#bess"
+  },
+  {
+    "id": "batt-074",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A vented lead-acid station battery has just completed its first year in service. No performance test has been run yet. The expected service life is 20 years and there are no signs of degradation. When should the first performance test be done, and what interval should you plan after that?",
+    "choices": [
+      "Wait until year 10 for the first test, then repeat every 10 years",
+      "Complete a capacity performance test by the end of the second year in service, then space later tests at no more than 25 percent of expected service life, which is five years for a 20-year battery, unless degradation or age later requires a shorter interval",
+      "A performance test is required only when the battery is first installed, not in service",
+      "Annual performance tests are required from year one on every battery, even with no degradation"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 450 says the first in-service capacity performance test should be completed by the end of year two, and that later tests should be spaced at no more than 25 percent of expected service life. For a 20-year battery that cap is five years. Annual tests come later if the battery shows degradation or reaches 85 percent of expected service life, with a stated exception when capacity remains at least 100 percent of rating and there is no degradation. Source: IEEE 450-2020, 6.3.",
+    "reference": "IEEE 450-2020, 6.3",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
+  },
+  {
+    "id": "batt-075",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A vented lead-acid battery is at 85 percent of the service life expected for the application. The latest performance test was 100 percent of the manufacturer's rating, and capacity has not dropped more than 10 percent from the previous performance test or fallen below 90 percent of rating. What performance-test interval does IEEE 450 allow?",
+    "choices": [
+      "The battery must be on annual performance tests from this point, with no exception",
+      "A two-year test spacing is still acceptable, and it can stay that way until degradation appears",
+      "Performance testing can stop once the battery reaches 85 percent of expected life",
+      "The interval may stretch to 10 years because the last result was 100 percent"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 450 generally calls for annual performance tests once a battery shows degradation or has reached 85 percent of expected service life. Degradation is indicated when capacity drops by more than 10 percent from the last capacity test, or has fallen under 90 percent of the manufacturer's rating. If the battery has reached 85 percent of expected life, still delivers 100 percent or more of rating, and has shown no signs of degradation, a two-year test spacing remains acceptable until degradation appears. Source: IEEE 450-2020, 6.3.",
+    "reference": "IEEE 450-2020, 6.3",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
   }
 ]

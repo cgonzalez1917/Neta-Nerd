@@ -592,5 +592,221 @@
     "reference": "NFPA 850-2026, 6.1.4.1 to 6.1.4.3 and Table 6.1.4.3",
     "verified": true,
     "kb": "life-safety.md#other-nfpa"
+  },
+  {
+    "id": "sys-034",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "A project is still in design, and the owner asks when the commissioning plan should be written and who should write it. What does ANSI/NETA ECS require?",
+    "choices": [
+      "The installing contractor writes the plan after energization, and it is never updated",
+      "The plan is written only during occupancy, after punch-list work is complete",
+      "The commissioning authority should write the plan while the project is still in design, then the team should keep it current through construction, acceptance, and occupancy",
+      "The authority having jurisdiction must author the plan during factory testing"
+    ],
+    "answer": 2,
+    "explanation": "ECS has the commissioning authority write the plan while the project is still in design, and has the team keep that plan current through construction, acceptance, and occupancy. Waiting until after energization is too late for the plan to guide the work. Source: ANSI/NETA ECS-2024, 6.4.",
+    "reference": "ANSI/NETA ECS-2024, 6.4",
+    "verified": true,
+    "kb": "apparatus.md#commissioning"
+  },
+  {
+    "id": "sys-035",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Two versions of the commissioning plan are in circulation: last month's draft on a technician's laptop and a later revision on the project site. The crew is about to start functional tests from the laptop copy. What should you require?",
+    "choices": [
+      "Stop and have everyone work from the most up-to-date version of the commissioning plan",
+      "Either copy is fine if the equipment list looks similar",
+      "Field crews should prefer the oldest plan because it was issued in design",
+      "Functional tests do not have to follow the commissioning plan"
+    ],
+    "answer": 0,
+    "explanation": "ECS requires parties involved in executing the commissioning plan to work from the most up-to-date version. A stale draft can omit later tests, sequence changes, or owner revisions. Resolve the version issue before the tests proceed. Source: ANSI/NETA ECS-2024, 6.4.",
+    "reference": "ANSI/NETA ECS-2024, 6.4",
+    "verified": true,
+    "kb": "apparatus.md#commissioning"
+  },
+  {
+    "id": "sys-036",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "You are reviewing a commissioning plan and need to confirm that it describes the work around energization. Which set of activities does ECS say the plan should generally describe?",
+    "choices": [
+      "Only post-energization monitoring; pre-energization work is outside the plan",
+      "Only factory tests; field energization is not part of commissioning",
+      "Only occupancy-phase training, with no description of energization work",
+      "The work that will be done before, during, and after energization"
+    ],
+    "answer": 3,
+    "explanation": "ECS lists the contents of the commissioning plan, including a general description of the work before, during, and after energization. A plan that skips those activities is incomplete for a senior technician who has to develop or review it. Source: ANSI/NETA ECS-2024, 6.4.",
+    "reference": "ANSI/NETA ECS-2024, 6.4",
+    "verified": true,
+    "kb": "apparatus.md#commissioning"
+  },
+  {
+    "id": "sys-037",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "An owner document lists project goals, how the facility will be used, measurable performance criteria, and success measures. A second document records the concepts, calculations, product selections, and code decisions used to meet that first document. How should you tell them apart?",
+    "choices": [
+      "The first is the Basis of Design and the second is the Owner's Project Requirements",
+      "The first is the Owner's Project Requirements. The second is the Basis of Design, which is the record of how the design meets those requirements and the applicable rules",
+      "Both documents are commissioning plans, and the names can be used interchangeably",
+      "The first is a factory test procedure and the second is an as-built drawing list"
+    ],
+    "answer": 1,
+    "explanation": "ECS, following the ASHRAE Guideline 0 usage it cites, treats the Owner's Project Requirements as the written statement of functional needs and how the project will be used and operated, including what the owner wants the project to achieve, how success will be measured, cost limits, and supporting information. The Basis of Design is the record of the concepts, calculations, product choices, and code decisions used to satisfy those needs and the applicable rules. A senior technician reviewing scope has to know which document is which. Source: ANSI/NETA ECS-2024, 6.2 and 6.3.",
+    "reference": "ANSI/NETA ECS-2024, 6.2 and 6.3",
+    "verified": true,
+    "kb": "apparatus.md#commissioning"
+  },
+  {
+    "id": "sys-038",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Component tests on a new lineup have all passed, and the crew wants to call the job complete without system function tests because every relay and breaker was already tested on the bench. What is the right call?",
+    "choices": [
+      "Bench tests of each device are a complete substitute for system function tests",
+      "Require system function tests. They are how you show that sensing, processing, and action devices work together correctly, and ATS says to perform them following ECS",
+      "System function tests are only used in maintenance, not at acceptance",
+      "System function tests can be skipped when insulation resistance is acceptable"
+    ],
+    "answer": 1,
+    "explanation": "ATS describes system function tests as the way to show that sensing, processing, and action devices work together correctly, and it points those tests at ECS. Passing isolated component tests does not prove that the devices work together as a system. Source: ANSI/NETA ATS-2025, Section 8; ANSI/NETA ECS-2024, Section 6.",
+    "reference": "ANSI/NETA ATS-2025, Section 8; ANSI/NETA ECS-2024, Section 6",
+    "verified": true,
+    "kb": "apparatus.md#commissioning"
+  },
+  {
+    "id": "sys-039",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Factory and field acceptance reports on a new substation still list open deficiencies. A superintendent wants to energize anyway and finish the paperwork later. What should you do?",
+    "choices": [
+      "Energize now; deficiencies can always be closed after the system is live",
+      "Only factory reports matter; field deficiencies can be ignored",
+      "Energization is allowed as long as a commissioning plan exists, even if it was never followed",
+      "Do not energize until factory and field acceptance records, including open deficiencies, have been reviewed and the equipment is in acceptable condition and is ready for first energization"
+    ],
+    "answer": 3,
+    "explanation": "ECS includes a review of factory and field acceptance records, including open deficiencies, so you can confirm the equipment is in acceptable condition and is ready for first energization and for final acceptance. Open deficiencies that affect suitability are not a paperwork exercise to be finished after the equipment is already live. Source: ANSI/NETA ECS-2024, Section 6.",
+    "reference": "ANSI/NETA ECS-2024, Section 6",
+    "verified": true,
+    "kb": "apparatus.md#commissioning"
+  },
+  {
+    "id": "sys-040",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "A Category IV transformer will be applied on a feeder that recloses. The short-circuit study is being used to judge through-fault duty. Which duration check belongs in that review?",
+    "choices": [
+      "Confirm that the total time of repeated through-faults from reclosing stays within the two-second single-event limit that applies to Category II through IV units unless the user specified another duration",
+      "Ignore reclosing; only the first fault counts for Category IV",
+      "Allow up to 30 seconds of accumulated fault time on any Category IV unit",
+      "Category IV has no short-circuit duration limit in C57.12.00"
+    ],
+    "answer": 0,
+    "explanation": "IEEE C57.12.00 limits the defined short-circuit duration for Category II, III, and IV units to two seconds unless the user specifies otherwise, and it requires transformers on reclosing circuits to ride through repeated faults so long as the total time stays within that single-event maximum. Applying a study on a reclosing feeder means checking that accumulated duty, not only the first shot. Source: IEEE C57.12.00-2021, 7.1.3.1.",
+    "reference": "IEEE C57.12.00-2021, 7.1.3.1",
+    "verified": true,
+    "kb": "apparatus.md#studies"
+  },
+  {
+    "id": "sys-041",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "After a feeder fault, the event record shows the downstream device should have cleared first, but the upstream main opened instead. Drawings, the coordination study, and the as-left settings have not been compared. What should you do first?",
+    "choices": [
+      "Raise the main pickup immediately so it cannot trip again",
+      "Replace the downstream breaker without looking at the study or the event record",
+      "Review the documentation, the coordination study, and the as-left settings, and analyze the event record before you recommend a corrective action or change a setting",
+      "Ignore the event record; documentation review is only a design-phase task"
+    ],
+    "answer": 2,
+    "explanation": "Senior-level troubleshooting starts with documentation and event information, then a cause, then a recommended correction. Changing a setting or swapping a device before the study and the as-left settings are compared to the event can make coordination worse. ECS and the Level IV systems outline both expect that review-and-recommend sequence. Source: ANSI/NETA ECS-2024, Section 6; IEEE 242-2001, Chapter 15.",
+    "reference": "ANSI/NETA ECS-2024, Section 6; IEEE 242-2001, Chapter 15",
+    "verified": true,
+    "kb": "apparatus.md#studies"
+  },
+  {
+    "id": "sys-042",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "Temporary meters on a 480 V bus show flat-topped voltage and elevated current in a capacitor bank next to a large rectifier, while transformers on the same bus are running hotter than the kVA load would suggest. What is the most useful first recommendation?",
+    "choices": [
+      "Add more capacitors immediately to correct power factor; heating will then stop",
+      "Ignore the rectifier; capacitor heating is almost always a loose bolt only",
+      "Treat this as a harmonic problem from the nonlinear load, keep the monitoring in place long enough to characterize it, and recommend a study or mitigation before adding more capacitors",
+      "Remove all metering; a single snapshot is enough to close a power-quality complaint"
+    ],
+    "answer": 2,
+    "explanation": "Level IV systems work includes power-quality monitoring and recognizing anomalies. Nonlinear loads inject harmonic current. Capacitors have falling impedance with frequency and can absorb a large share of that current and overheat, and transformers see extra heating as well. Adding capacitors without characterizing the harmonic environment can make the condition worse. Temporary monitoring should be used to support the recommendation. Source: IEEE 519-2022; IEEE 141-1993, Chapter 8.",
+    "reference": "IEEE 519-2022; IEEE 141-1993, Chapter 8",
+    "verified": true,
+    "kb": "math.md#harmonics"
+  },
+  {
+    "id": "sys-043",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "theory",
+    "question": "You are reviewing a coordination plot before a main-breaker test. The study shows the feeder's curve clearing below the main, with a coordinating interval between them. The field setting sheet on the main is faster than the study. What do you do?",
+    "choices": [
+      "Install the faster field setting; a shorter time is always safer",
+      "Ignore the study because field technicians do not apply study data",
+      "Raise both pickups until the two curves overlap completely",
+      "Hold the test and get the setting reconciled with the coordination study before you energize or apply the field setting"
+    ],
+    "answer": 3,
+    "explanation": "Level IV theory includes reading coordination curves and applying data from short-circuit and coordination studies. If the field setting does not match the study, the coordination you think you have is not the coordination that will be in service. Resolve the mismatch with the engineer or the study author before the equipment goes on the line. Source: IEEE 242-2001, Chapter 15; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, Chapter 15; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "apparatus.md#studies"
+  },
+  {
+    "id": "sys-044",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "theory",
+    "question": "A plant adds a large transformer and several motors but no one updates the short-circuit study. You are asked to accept a new breaker using the old interrupting-duty numbers. What is the right call?",
+    "choices": [
+      "Do not accept the old numbers. A change in system impedance, configuration, or loading is a reason to update the short-circuit study before you apply those values",
+      "The old study is fine for five more years regardless of changes",
+      "Only the coordination study needs an update; short-circuit duty never changes when motors are added",
+      "You can scale the old duties by nameplate kVA and skip a new study"
+    ],
+    "answer": 0,
+    "explanation": "MTS Appendix C lists the conditions that call for updating power-system studies, including a change in impedance, configuration, or loading. Added transformers and motors change available fault current and motor contribution. Interrupting ratings taken from a study that no longer represents the system are not a basis for acceptance. Source: ANSI/NETA MTS-2023, Appendix C; IEEE 242-2001, Chapter 2; ANSI/NETA ETT-2026, 8.4.2.H.6 and 8.4.2.H.9.",
+    "reference": "ANSI/NETA MTS-2023, Appendix C; IEEE 242-2001, Chapter 2; ANSI/NETA ETT-2026, 8.4.2.H.6 and 8.4.2.H.9",
+    "verified": true,
+    "kb": "apparatus.md#studies"
+  },
+  {
+    "id": "sys-045",
+    "level": "IV",
+    "topic": "systems",
+    "domain": "theory",
+    "question": "A coordination study is being applied to set a low-voltage breaker that must also meet its interrupting rating. Which calculated current from the short-circuit study is used to check that interrupting duty?",
+    "choices": [
+      "Only the 30-cycle current, because low-voltage breakers are slow",
+      "The transformer inrush current from the last energization",
+      "The first-cycle (momentary) or interrupting-duty current the study produces for that bus, including motor contribution as the study specifies",
+      "The arcing current from an incident-energy study, in place of bolted-fault current"
+    ],
+    "answer": 2,
+    "explanation": "Short-circuit studies produce different current values for different purposes. Interrupting duty for low-voltage breakers and fuses is checked with the appropriate first-cycle or interrupting current from the study, including motor contribution where the study applies it. Time-delayed currents are used for other checks, such as overcurrent-relay sensitivity, not as a substitute for interrupting duty. Source: IEEE 242-2001, Chapter 2; IEEE 399-1997, Chapter 6; ANSI/NETA ETT-2026, 8.4.2.H.5 and 8.4.2.H.6.",
+    "reference": "IEEE 242-2001, Chapter 2; IEEE 399-1997, Chapter 6; ANSI/NETA ETT-2026, 8.4.2.H.5 and 8.4.2.H.6",
+    "verified": true,
+    "kb": "apparatus.md#studies"
   }
 ]

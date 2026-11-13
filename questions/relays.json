@@ -2215,5 +2215,77 @@
     "reference": "SEL-751 Instruction Manual (date code 20240329), Table 4.72 and 4.194; IEEE C37.2-2022, 4.5.1",
     "verified": true,
     "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-124",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Element pickup and timing on a new microprocessor relay all match the setting file, but no one has walked the internal logic against the owner's logic diagram. The technician wants to accept the relay. What should you do?",
+    "choices": [
+      "Walk the internal scheme logic against the owner's narrative or logic diagram, and confirm that the settings and the logic still match the latest engineered files, before you accept the relay",
+      "Element tests are enough; internal logic is proven automatically when pickup is correct",
+      "Logic checks are only required on electromechanical relays",
+      "Accept the relay now and compare logic to the drawings after energization"
+    ],
+    "answer": 0,
+    "explanation": "ATS requires a check of the internal scheme logic against the owner's narrative or logic diagram, and it requires the settings and the logic to match the latest engineered files. Proving an element in isolation is not the same as proving the scheme. Source: ANSI/NETA ATS-2025, 7.9.2.B.3 and 7.9.2.C.3.",
+    "reference": "ANSI/NETA ATS-2025, 7.9.2.B.3 and 7.9.2.C.3",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-125",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A generator protective scheme must trip if the machine motors on a loss of its prime mover and power flows into the machine. Which IEEE C37.2 device is provided for that condition?",
+    "choices": [
+      "Device 40, which is reserved for reverse-power conditions only",
+      "Device 87, which operates only on reverse power and never on differential current",
+      "Device 32, the directional power relay. IEEE C37.2 uses the example of reverse power when a generator motors after it loses its prime mover",
+      "Device 27, which is the standard reverse-power function"
+    ],
+    "answer": 2,
+    "explanation": "IEEE C37.2 lists device 32 as the directional power relay and gives the example of reverse power when a generator motors after it loses its prime mover. Device 40 is the field over/under-excitation relay, not the reverse-power function. Source: IEEE C37.2-2022, 3.1.32.",
+    "reference": "IEEE C37.2-2022, 3.1.32",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-126",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A synchronous generator needs a relay that will operate for abnormally high or low field current, or for an excessive reactive component of armature current that indicates abnormal field excitation. Which IEEE C37.2 device is that?",
+    "choices": [
+      "Device 32, which is only a directional power relay",
+      "Device 24, which IEEE C37.2 assigns to field excitation only",
+      "Device 40, which IEEE C37.2 names the field over/under-excitation relay",
+      "Device 64, which is the standard loss-of-field function"
+    ],
+    "answer": 2,
+    "explanation": "IEEE C37.2 lists device 40 as the field over/under-excitation relay. It operates for unusual or failed field current, or for reactive armature current that points to a field-excitation problem. That is the identify-level function used for loss-of-field and overexcitation field problems. Deeper setting practice is left to a later generator-protection source. Source: IEEE C37.2-2022, 3.1.40.",
+    "reference": "IEEE C37.2-2022, 3.1.40",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-127",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A trip output is programmed as 50 AND 67, with an 86 contact in series so that once the lockout is up the trip stays up. During a test the 50 and 67 elements both assert, but the breaker does not trip because the 86 was still reset and a wiring error held its series contact open. What should you conclude?",
+    "choices": [
+      "The relay has failed because any asserted 50 should trip the breaker by itself",
+      "The internal elements asserted, but the scheme logic and trip path still have to be proved end-to-end, including the 86 series contact",
+      "Once 50 and 67 are picked up, the 86 contact can be ignored",
+      "Boolean AND is only used in SCADA, not in trip circuits"
+    ],
+    "answer": 1,
+    "explanation": "Level IV theory includes Boolean logic in protection and control. An AND condition requires every input to be true. A series 86 contact is another required true condition in the trip path. Proving the elements in isolation is not the same as proving the scheme. Verify internal logic and the trip path together before you accept the installation. Source: IEEE C37.2-2022, Clause 3 and device 86; ANSI/NETA ATS-2025, 7.9.2; ANSI/NETA ETT-2026, 8.4.2.B.2.",
+    "reference": "IEEE C37.2-2022, Clause 3 and device 86; ANSI/NETA ATS-2025, 7.9.2; ANSI/NETA ETT-2026, 8.4.2.B.2",
+    "verified": true,
+    "kb": "relays.md#logic"
   }
 ]

@@ -268,5 +268,77 @@
     "reference": "ANSI/NETA ATS-2025 7.12.1.1.B.11 and B.12",
     "verified": true,
     "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-016",
+    "level": "IV",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Capacitance measurements on a new capacitor bank do not match the manufacturer's published values, but insulation resistance is acceptable. What should you do?",
+    "choices": [
+      "Investigate the capacitance results. ATS requires those values to be compared with the manufacturer's published data and calls for investigation when they differ",
+      "Accept the bank on the insulation-resistance test alone",
+      "Capacitance is informational only and is never investigated at acceptance",
+      "Recalculate nameplate kvar from system voltage and ignore the measured capacitance"
+    ],
+    "answer": 0,
+    "explanation": "ATS requires the capacitance of all terminal combinations to be measured and says to investigate values that differ from the manufacturer's published data. A satisfactory insulation-resistance test does not excuse a capacitance mismatch, which can mean a failed can, an open internal fuse, or a wrong unit. Source: ANSI/NETA ATS-2025, 7.20.1.B.3 and 7.20.1.D.3.",
+    "reference": "ANSI/NETA ATS-2025, 7.20.1.B.3 and 7.20.1.D.3",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-017",
+    "level": "IV",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Internal discharge resistors are being evaluated on capacitor units. One 480 V unit and one 4160 V unit are in the same yard. What residual-voltage discharge times does ATS require you to use when investigating those resistors?",
+    "choices": [
+      "Both units have five minutes to reach 50 V",
+      "Both units have one minute to reach 50 V",
+      "Discharge time is not evaluated; only the resistor ohmic value is recorded",
+      "Residual voltage must be reduced to 50 V within one minute on the 480 V unit and within five minutes on the 4160 V unit, the intervals ATS gives from the National Electrical Code capacitor rule"
+    ],
+    "answer": 3,
+    "explanation": "ATS says to investigate discharge-resistor values that differ from the manufacturer's published data, and it states the residual-voltage requirement from the National Electrical Code: residual voltage shall be reduced to 50 V in one minute for units rated under 600 V and in five minutes for units rated over 600 V. Source: ANSI/NETA ATS-2025, 7.20.1.B.4 and 7.20.1.D.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.20.1.B.4 and 7.20.1.D.4",
+    "verified": true,
+    "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "capr-018",
+    "level": "IV",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "A load-tap-changer motor drives past the end of the raise range and the automatic cutoff never stops it. Mechanical inspections otherwise look fine. What should you do?",
+    "choices": [
+      "Accept it if the operation counter still advances by one count per tap change",
+      "Do not accept the tap-changer. The motor, the drive, and the end-of-travel cutoff must work as designed, and the cutoff must stop the drive at both ends of raise and lower travel",
+      "Automatic cutoff is optional when a hand crank is provided",
+      "Only the maximum lower cutoff is required; raise-end travel can be limited by the operator"
+    ],
+    "answer": 1,
+    "explanation": "ATS requires you to confirm that the motor, the drive, and the end-of-travel cutoff work, and that the cutoff stops the drive at both ends of raise and lower travel. Those functions must work as the manufacturer and the design intend. An operation-counter increment does not prove the cutoff. Source: ANSI/NETA ATS-2025, 7.12.3.A.9 and 7.12.3.C.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.12.3.A.9 and 7.12.3.C.4",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
+  },
+  {
+    "id": "capr-019",
+    "level": "IV",
+    "topic": "capacitors-regulators",
+    "domain": "component",
+    "question": "Turns-ratio tests on a load-tap-changer are complete at every tap. Several raise positions differ from the calculated voltage ratio by about one percent, and the steps do not follow a normal progression. What is the right evaluation?",
+    "choices": [
+      "Accept any result within two percent of the calculated ratio",
+      "Ratio tests are required only at rated tap, so the other positions can be ignored",
+      "A one percent difference is the ATS acceptance band for every LTC tap",
+      "Investigate and do not accept the results as they stand. Each step should follow a normal pattern from one voltage step to the next, and no position should differ from the calculated ratio by more than one-half percent"
+    ],
+    "answer": 3,
+    "explanation": "ATS requires a turns-ratio test at all tap positions. The results should follow a normal pattern from one voltage step to the next, and they must stay within one-half percent of the calculated ratio. A one percent mismatch and an irregular step pattern both fall outside that rule. Source: ANSI/NETA ATS-2025, 7.12.3.B.7 and 7.12.3.D.7.",
+    "reference": "ANSI/NETA ATS-2025, 7.12.3.B.7 and 7.12.3.D.7",
+    "verified": true,
+    "kb": "apparatus.md#regulators"
   }
 ]

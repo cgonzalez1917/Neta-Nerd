@@ -1420,5 +1420,23 @@
     "reference": "NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2",
     "verified": true,
     "kb": "life-safety.md#other-nfpa"
+  },
+  {
+    "id": "emg-080",
+    "level": "IV",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "A UPS is being accepted. Inverter output looks clean on a meter, but no one has tested static transfer from the inverter to bypass and back. What should you require?",
+    "choices": [
+      "A clean inverter voltage reading is enough to accept the static switch",
+      "Static transfer is only tested from bypass to inverter, never the reverse",
+      "UPS static-transfer tests are optional and may be left for the first outage",
+      "Test static transfer from the inverter to bypass and back, using normal load if possible, and confirm that the static transfer works the way the manufacturer specifies"
+    ],
+    "answer": 3,
+    "explanation": "ATS requires a static-transfer test from the inverter to bypass and back, using normal load if possible, and requires the static transfer to work the way the manufacturer specifies. A waveform check on the inverter does not prove the transfer path. Source: ANSI/NETA ATS-2025, 7.22.2.B.2 and 7.22.2.D.2.",
+    "reference": "ANSI/NETA ATS-2025, 7.22.2.B.2 and 7.22.2.D.2",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
   }
 ]

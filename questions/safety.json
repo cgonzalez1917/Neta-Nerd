@@ -2827,5 +2827,239 @@
     "reference": "NFPA 70E-2027, 130.2(A)(2)",
     "verified": true,
     "kb": "life-safety.md#test-before-touch-2027"
+  },
+  {
+    "id": "safety-160",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "A new double-ended 480 V switchboard is ready for energization from either utility source. Mechanical inspections are complete, but no one has confirmed bus phasing from both sources. What should you require before the lineup is accepted?",
+    "choices": [
+      "Perform phasing checks from each source and confirm that the bus phasing matches the intended design before the sources can be paralleled or transferred",
+      "Skip phasing on a double-ended board; nameplate voltage is enough",
+      "Megger each bus section and treat a passing insulation-resistance test as proof of correct phasing",
+      "Energize one source only and assume the second source is already in phase"
+    ],
+    "answer": 0,
+    "explanation": "On double-ended or dual-source switchgear, ATS requires phasing checks so that bus phasing from each source is correct and agrees with the design. A clean insulation-resistance test does not prove phase rotation or phase correspondence between sources. Accepting the lineup without that check leaves a paralleling or transfer error waiting to happen. Source: ANSI/NETA ATS-2025, 7.1.1.B.13 and 7.1.1.D.13.",
+    "reference": "ANSI/NETA ATS-2025, 7.1.1.B.13 and 7.1.1.D.13",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-161",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "You are proving the current wiring in a new switchgear lineup. The plan is to inject into each CT secondary so that at least 1.0 A flows in the secondary wiring and then read the current only at the first relay in each section. Is that enough?",
+    "choices": [
+      "Yes. If 1.0 A is seen at the first relay, the rest of the circuit can be assumed correct",
+      "Secondary injection is not used for this check; only a 50 A primary shot at the bus is accepted",
+      "Any convenient secondary current is fine, and you only need to confirm that the wiring is continuous with a buzzer",
+      "No. Inject so that at least 1.0 A flows in the secondary circuit, and verify the correct current magnitude at each device in that circuit"
+    ],
+    "answer": 3,
+    "explanation": "ATS current-injection tests that cover every current path in the lineup call for a secondary current of at least 1.0 A and a check that the correct magnitude appears at each device. Proving one relay does not prove a tap, a shorted winding, or a swapped lead farther down the circuit. Optional primary injection uses the same 1.0 A secondary criterion. Source: ANSI/NETA ATS-2025, 7.1.1.B.10 and 7.1.1.D.10.",
+    "reference": "ANSI/NETA ATS-2025, 7.1.1.B.10 and 7.1.1.D.10",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-162",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "component",
+    "question": "A double-ended lineup has automatic control-power transfer relays. After CPT tests, a technician reports that secondary voltage is correct and wants to close the job without operating the transfer relays. What is the right call?",
+    "choices": [
+      "Correct CPT secondary voltage is enough; transfer relays are only a maintenance item",
+      "Require the control-power transfer relays to be operated and shown to perform as designed before you accept the lineup",
+      "Transfer relays are proven by the bus dielectric test",
+      "Leave the transfer relays to the owner to try after energization"
+    ],
+    "answer": 1,
+    "explanation": "ATS treats control-power transformer tests and control-transfer-relay function as separate checks. Secondary voltage can be right while a transfer relay fails to switch sources, leaving a dead control bus on loss of one CPT. The transfer relays must perform as designed before acceptance. Source: ANSI/NETA ATS-2025, 7.1.1.B.7.5 and 7.1.1.D.8.5.",
+    "reference": "ANSI/NETA ATS-2025, 7.1.1.B.7.5 and 7.1.1.D.8.5",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "safety-163",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "You are the person in charge of locking out a lineup that has two sources, two crews, and a shift change mid-job. What does NFPA 70E require of a complex lockout/tagout?",
+    "choices": [
+      "A written plan of execution that names the person in charge, who has overall responsibility",
+      "Each qualified person may run a simple lockout on their own cubicle with no common plan",
+      "A tag on the main breaker is enough if everyone on the crew has been briefed",
+      "Only the host employer's safety manager may place locks; testers do not take part"
+    ],
+    "answer": 0,
+    "explanation": "NFPA 70E treats simple and complex lockout as two forms of hazardous-energy control. On a simple lockout the qualified person is in charge. On a complex lockout the person in charge has overall responsibility, and the procedure requires a written plan of execution that identifies that person. Multiple sources, more than one crew, or a job that spans a shift are the usual reasons a lockout is treated as complex. Source: NFPA 70E-2024, 120.3(H) and 120.5.",
+    "reference": "NFPA 70E-2024, 120.3(H) and 120.5",
+    "verified": true,
+    "kb": "safety.md#loto"
+  },
+  {
+    "id": "safety-164",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A crew lead wants to isolate a motor with the stop pushbutton and hang a tag on the start station, leaving the disconnect shut. What is your call under NFPA 70E?",
+    "choices": [
+      "Accept it if the tag says Do Not Operate and the stop button is taped down",
+      "Accept it for jobs shorter than one shift",
+      "Reject it. Locks and tags go on the circuit disconnecting means, not on control devices such as pushbuttons",
+      "Accept it when the motor is less than 50 hp"
+    ],
+    "answer": 2,
+    "explanation": "Locks and tags are installed only on circuit disconnecting means. Control devices such as pushbuttons or selector switches are not the primary isolating device. The disconnect has to be opened and locked, and every person who could be exposed, directly or indirectly, is involved in the procedure. Source: NFPA 70E-2024, 120.3(A) and 120.3(E).",
+    "reference": "NFPA 70E-2024, 120.3(A) and 120.3(E)",
+    "verified": true,
+    "kb": "safety.md#loto"
+  },
+  {
+    "id": "safety-165",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "How often does NFPA 70E require a qualified person to audit the lockout/tagout program and procedures, and what must that audit include?",
+    "choices": [
+      "Once every five years, by reviewing paperwork only",
+      "Only after an incident, and a tabletop review is enough",
+      "At intervals not exceeding one year, and it must cover at least one lockout/tagout in progress",
+      "Monthly, by the same person who wrote the procedure"
+    ],
+    "answer": 2,
+    "explanation": "The lockout/tagout program and the procedures in 120.2 through 120.6 are audited by a qualified person at intervals not to exceed one year. The audit has to cover at least one lockout in progress and is meant to catch problems in the program, the training, and how workers actually carry out the procedure. The employer is responsible for those audits. Source: NFPA 70E-2024, 110.3(L)(3) and 120.2(B).",
+    "reference": "NFPA 70E-2024, 110.3(L)(3) and 120.2(B)",
+    "verified": true,
+    "kb": "safety.md#loto"
+  },
+  {
+    "id": "safety-166",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Your testing company is coming onto a plant site as a contractor. Under NFPA 70E, what information must the host and the outside testing contractor share with each other?",
+    "choices": [
+      "The host must tell the contractor about known hazards related to the work; the contractor must brief its people on those hazards and on the host's safety rules, and must tell the host about unique hazards the contractor brings",
+      "Only the host's written safety manual needs to be handed over; no discussion is required",
+      "The contractor is solely responsible, so the host has no duty to mention site hazards",
+      "A single signed waiver replaces any information exchange"
+    ],
+    "answer": 0,
+    "explanation": "The host employer informs contract employers of known hazards related to the contractor's work that the contractor might not recognize, and of information the contractor needs for its assessments. The contract employer makes sure its people are informed of those hazards and follow the host's safety-related work rules, and advises the host of unique hazards the contractor's work creates. Where the host knows of hazards related to the contractor's work, the meeting is documented. Source: NFPA 70E-2024, 110.5.",
+    "reference": "NFPA 70E-2024, 110.5",
+    "verified": true,
+    "kb": "safety.md#loto"
+  },
+  {
+    "id": "safety-167",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before a crew starts work on a lineup that may have exposed energized parts, what must the job safety plan include under NFPA 70E?",
+    "choices": [
+      "Only a toolbox talk about PPE, with no documented assessments",
+      "Only the incident-energy number from the last five-year study, with no shock assessment",
+      "A generic permit that does not address this equipment",
+      "A shock assessment that follows 130.4 and an arc-flash assessment that follows 130.5, plus a description of the job and the tasks"
+    ],
+    "answer": 3,
+    "explanation": "Before starting each job, a job safety plan and a job briefing are required. The plan has to describe the job and the individual tasks, include a shock risk assessment per 130.4 when there is a shock hazard, and include an arc-flash risk assessment per 130.5. Approving those assessments is a senior-technician duty on the Level IV outline. Source: NFPA 70E-2024, 110.3(I) and 110.3(H).",
+    "reference": "NFPA 70E-2024, 110.3(I) and 110.3(H)",
+    "verified": true,
+    "kb": "safety.md#before-you-test"
+  },
+  {
+    "id": "safety-168",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A supervisor wants to solve an arc-flash problem on a 480 V lineup by buying higher-rated clothing and leaving the equipment and work methods unchanged. What does NFPA 70E's hierarchy of risk control require you to consider first?",
+    "choices": [
+      "PPE is the preferred first control because it is the fastest to implement",
+      "Start at the top of the hierarchy (elimination, then substitution, then engineering controls) and use PPE only after those higher-order measures are addressed",
+      "Awareness signs alone satisfy the hierarchy if they are posted on the door",
+      "Once clothing is selected from the PPE-category tables, no other controls are considered"
+    ],
+    "answer": 1,
+    "explanation": "The risk-assessment procedure requires that preventive and protective controls be applied following the hierarchy of risk control. Higher-order controls such as elimination, substitution, and engineering are applied at the source. Administrative controls and PPE come later and do not replace a decision about whether the hazard can be reduced or removed. Source: NFPA 70E-2024, 110.3(H)(3).",
+    "reference": "NFPA 70E-2024, 110.3(H)(3)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-169",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A qualified technician is only going to take voltage readings and check a relay, staying on the test procedures in Chapter 1 and using the right PPE. Is an energized electrical work permit required?",
+    "choices": [
+      "Yes. Any approach to energized parts requires a signed permit, with no exceptions",
+      "No. Testing, troubleshooting, or voltage measuring by a qualified person using appropriate safe work practices and PPE is an exemption",
+      "No only if the incident energy is below 1.2 cal/cm2",
+      "Yes unless the plant manager verbally waives the permit"
+    ],
+    "answer": 1,
+    "explanation": "An energized electrical work permit is required for energized work when 110.2(B) applies, but 130.2(C) lists exemptions. Testing, troubleshooting, or voltage measuring is one of them, provided a qualified person uses appropriate safe work practices and PPE. Thermography, ultrasound, or visual inspections, access and egress, and housekeeping can also be exempt when the restricted approach boundary is not crossed. Source: NFPA 70E-2024, 130.2(C).",
+    "reference": "NFPA 70E-2024, 130.2(C)",
+    "verified": true,
+    "kb": "safety.md#permit"
+  },
+  {
+    "id": "safety-170",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "You manage rubber insulating gloves for a test crew. What does NFPA 70E require for in-service gloves?",
+    "choices": [
+      "A visual check once a year is enough if the gloves look clean",
+      "Electrical retests are required only after a known puncture",
+      "New gloves may go into service without any prior electrical test",
+      "Inspect and air-test them before each day's use, and electrically retest issued gloves at intervals not exceeding six months"
+    ],
+    "answer": 3,
+    "explanation": "Insulating gloves are checked for damage at the start of each workday and given an air test as part of that check. Rubber insulating equipment also gets periodic electrical tests, and gloves that have been issued for service must be retested electrically at least every six months. New insulating equipment stays out of service if its last electrical test is more than a year old. Source: NFPA 70E-2024, 130.7(C)(7)(c) and Table 130.7(C)(7)(b).",
+    "reference": "NFPA 70E-2024, 130.7(C)(7)(c) and Table 130.7(C)(7)(b)",
+    "verified": true,
+    "kb": "safety.md#gloves"
+  },
+  {
+    "id": "safety-171",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "The arc-flash labels on a switchgear lineup are several years old, and no one can show when the supporting data was last checked. What does NFPA 70E require?",
+    "choices": [
+      "The data behind the labels must be checked for accuracy at least once every five years, and a label is updated if that check finds a change that makes it inaccurate",
+      "Labels never need review once they are applied",
+      "A review is required only after a personal injury",
+      "Any label applied before the current edition must be replaced immediately, even if the system has not changed"
+    ],
+    "answer": 0,
+    "explanation": "The method of calculating and the data that support the label information are documented. That data is checked for accuracy at least once every five years. If the review finds a change that makes the label inaccurate, the label is updated. The owner of the equipment is responsible for documentation, installation, and maintenance of the marked label. An older label can remain if it met the edition in effect when it was applied and the system has not changed in a way that makes it inaccurate. Source: NFPA 70E-2024, 130.5(H).",
+    "reference": "NFPA 70E-2024, 130.5(H)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-172",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An incident-energy study used a relay's time-current curve but ignored the fact that the breaker's last maintenance was years overdue and the trip unit is sticky. What does NFPA 70E require of the incident energy analysis?",
+    "choices": [
+      "Maintenance condition is ignored; only the manufacturer's published clearing time is used",
+      "Only bolted-fault current matters; clearing time is not part of the analysis",
+      "The calculation must account for the overcurrent device's operating characteristics, how long it takes to clear, and whether the device is in proper condition of maintenance",
+      "Condition of maintenance is considered only for outdoor equipment"
+    ],
+    "answer": 2,
+    "explanation": "If incident energy is calculated rather than taken from a PPE-category table, the exposure is based on the working distance of the employee's face and chest from a prospective arc source for the specific task. The calculation must account for the overcurrent device's operating characteristics, how long it takes to clear, and whether the device is in proper condition of maintenance. A device that may not operate as designed cannot be assumed to clear in the published time. Source: NFPA 70E-2024, 130.5(G).",
+    "reference": "NFPA 70E-2024, 130.5(G)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
   }
 ]

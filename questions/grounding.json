@@ -1151,5 +1151,95 @@
     "reference": "NFPA 780-2026, 4.13.1 to 4.13.3 and 4.14.2",
     "verified": true,
     "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-065",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "During a walk-down of a low-voltage ground-fault protection system you find the equipment grounding conductor routed through the zero-sequence current transformer along with the phase conductors and the neutral. What should you require?",
+    "choices": [
+      "Leave it; any conductor in the window only makes the relay more sensitive",
+      "Remove the neutral from the window and leave the grounding conductor in place",
+      "Reroute the grounding conductor so it does not pass through the zero-sequence sensor, then retest. A grounding conductor in the window can cancel or distort the residual current the relay is supposed to see",
+      "Accept the routing if the relay has a self-test button"
+    ],
+    "answer": 2,
+    "explanation": "ATS requires a check that a grounding conductor is kept out of a zero-sequence window, and that the phase conductors and the neutral all go through that window in one direction. A grounding conductor in the window is a classic mis-wire. Correct the routing before you treat a pickup test as meaningful. Source: ANSI/NETA ATS-2025, 7.14.A.2.3 and 7.14.A.2.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.14.A.2.3 and 7.14.A.2.4",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-066",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A residual ground-fault pickup is set at 400 A. Primary-injection tests produce a pickup at 350 A. How should you evaluate that result?",
+    "choices": [
+      "Fail it and investigate. For a 400 A setting the measured pickup must be above 360 A (90 percent of the setting) and below 500 A, which is the smaller of 125 percent of the setting and 1200 A",
+      "Accept 350 A; any pickup under the 400 A setting is conservative and therefore passing",
+      "Fail it only if pickup exceeds 1200 A; values below the setting are always accepted",
+      "Accept 350 A because 350 is within 15 percent of 400"
+    ],
+    "answer": 0,
+    "explanation": "ATS requires the pickup test to be done by primary current injection. The measured pickup must be greater than 90 percent of the device setting and less than the smaller of 125 percent of the setting and 1200 A. For 400 A that window is 360 A to 500 A. 350 A is below the lower bound and is not acceptable. Source: ANSI/NETA ATS-2025, 7.14.B.4 and 7.14.D.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.14.B.4 and 7.14.D.4",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-067",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "You need to confirm the time delay of a low-voltage ground-fault trip set at 400 A pickup. At what test current is the delay measured, and what upper bound does ATS place on the time at 3000 A?",
+    "choices": [
+      "Measure the delay at 10 percent of pickup, and allow up to five seconds at 3000 A",
+      "Timing is not tested in the field; only pickup is required",
+      "Measure only at the exact pickup value, and accept any time under one minute",
+      "Measure the delay at 150 percent of pickup or higher. Timing must follow the manufacturer's data and, at 3000 A, must stay at or under one second"
+    ],
+    "answer": 3,
+    "explanation": "ATS has you measure the time delay of the ground-fault device at 150 percent of pickup or more. The recorded time must agree with the manufacturer's data and, at 3000 A, must stay at or under one second, the value ATS cites from the National Electrical Code rule on equipment ground-fault protection. Source: ANSI/NETA ATS-2025, 7.14.B.6 and 7.14.D.6.",
+    "reference": "ANSI/NETA ATS-2025, 7.14.B.6 and 7.14.D.6",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-068",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A 480 V ground-fault trip is powered from an ac control source. The crew wants to skip the reduced-voltage trip check because the device trips at rated control voltage. What should you require?",
+    "choices": [
+      "A trip at rated control voltage is enough; reduced-voltage checks apply only to close coils",
+      "Prove that the interrupting device still trips when ac control voltage is lowered to 55 percent of nominal. If the control source were dc, the corresponding check is 80 percent of nominal",
+      "Use 80 percent of nominal for ac control and 55 percent for dc control",
+      "Reduced-voltage tripping is optional and may be omitted on 480 V systems"
+    ],
+    "answer": 1,
+    "explanation": "ATS requires a reduced-control-voltage trip check: 55 percent of nominal on ac control and 80 percent of nominal on dc control. A trip at full control voltage does not prove the device will still operate when the control source is depressed during a fault or a battery dip. Source: ANSI/NETA ATS-2025, 7.14.B.7 and 7.14.D.7.",
+    "reference": "ANSI/NETA ATS-2025, 7.14.B.7 and 7.14.D.7",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-069",
+    "level": "IV",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "You are preparing to measure insulation resistance from the system neutral to ground on a low-voltage ground-fault scheme that has a neutral disconnect link. How is the test done, and what minimum result does ATS require?",
+    "choices": [
+      "Leave the link in place so the test includes the system ground, and accept any reading above 0.1 megohm",
+      "Temporarily remove the neutral disconnect link, measure, and then replace the link. The insulation resistance must be at least one megohm",
+      "Remove the link and leave it out after the test; one megohm is only a target, not a minimum",
+      "This measurement is not required if a pickup test was already performed"
+    ],
+    "answer": 1,
+    "explanation": "ATS requires the system neutral-to-ground insulation resistance to be measured with the neutral disconnect link temporarily removed, and then the link is replaced. The result must be at least one megohm. Leaving the link in place shorts the measurement to the grounding system and hides a neutral-to-ground bond on the load side of the sensor. Source: ANSI/NETA ATS-2025, 7.14.B.2 and 7.14.D.2.",
+    "reference": "ANSI/NETA ATS-2025, 7.14.B.2 and 7.14.D.2",
+    "verified": true,
+    "kb": "grounding.md#gfp"
   }
 ]
