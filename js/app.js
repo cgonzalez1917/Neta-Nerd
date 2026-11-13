@@ -1291,7 +1291,7 @@
       h("p", { class: "lede" }, "Neta Nerd is an independent practice site. It is not a NETA exam and it is not affiliated with NETA. The questions are original. Nothing here is a recalled exam item."),
       h("div", { class: "panel" },
         h("h2", {}, "Exam format"),
-        h("p", {}, "NETA’s published description of the administered certification exams: closed book, proctored at Pearson VUE, with an on-screen calculator and a formula sheet. You do not bring your own. The pass mark is a scaled 410 or higher on a 200 to 500 scale."),
+        h("p", {}, "NETA’s published description of the administered certification exams: closed book, proctored at Pearson VUE, with an on-screen calculator and a formula sheet. You do not bring your own. The pass mark is a scaled 410 or higher on a 200 to 500 scale. The on-screen sheet is the official NETA Electrical Formulae Sheet updated June 29, 2017. An older PDF from a previous exam-preparation page is an incomplete excerpt."),
         h("ul", {},
           h("li", {}, "Level II and Level III: 100 questions, 2 hours."),
           h("li", {}, "Level IV: 65 questions, 2 hours.")
@@ -1300,7 +1300,7 @@
         h("p", {},
           h("a", { href: "https://www.netaworld.org/certification-exam/technician-certification671", target: "_blank", rel: "noopener noreferrer" }, "NETA technician certification"),
           " · ",
-          h("a", { href: "https://www.netaworld.org/accreditation/exam-preparation", target: "_blank", rel: "noopener noreferrer" }, "NETA exam preparation")
+          h("a", { href: "https://www.netaworld.org/certification-exam/exam-preparation686", target: "_blank", rel: "noopener noreferrer" }, "NETA exam preparation")
         ),
         h("p", { class: "meta" }, "Format and the 410 scaled score are from those NETA pages, as checked against the association’s public exam-preparation material. Domain weights in this bank follow the December 2022 detailed content outline as summarized in the study notes.")
       ),

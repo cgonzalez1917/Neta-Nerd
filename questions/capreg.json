@@ -174,8 +174,8 @@
       "34.6 kvar"
     ],
     "answer": 2,
-    "explanation": "XC = 1/(2 pi x 60 x 230e-6) = 11.53 ohms, so Q = V^2 / XC = 480^2 / 11.53 = 19,980 var. Comparing that with the nameplate kvar is a quick check on capacitance. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2 pi f C)); Engineering fundamentals (Q = V^2/XC).",
-    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XC = 1/(2 pi f C)); Engineering fundamentals (Q = V^2/XC)",
+    "explanation": "XC = 1/(2 pi x 60 x 230e-6) = 11.53 ohms, so Q = V^2 / XC = 480^2 / 11.53 = 19,980 var. Comparing that with the nameplate kvar is a quick check on capacitance. Source: NETA Electrical Formulae Sheet (updated June 29, 2017) (XC = 1/(2 pi f C)); Engineering fundamentals (Q = V^2/XC).",
+    "reference": "NETA Electrical Formulae Sheet (updated June 29, 2017) (XC = 1/(2 pi f C)); Engineering fundamentals (Q = V^2/XC)",
     "verified": true,
     "kb": "apparatus.md#capacitors"
   },

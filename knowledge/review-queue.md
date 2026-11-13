@@ -888,7 +888,7 @@ Calculated ratio is 28.75. The TTR reads 28.95. Percent accuracy, (actual − sp
 - 2. 2.0%
 - 3. 7.0%
 
-**Citation:** NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3
+**Citation:** NETA Electrical Formulae Sheet (updated June 29, 2017), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3
 
 Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
@@ -1891,7 +1891,7 @@ Three-phase current for a 75 kVA load at 208 V is about:
 - 2. 125 A
 - 3. 75 A
 
-**Citation:** Engineering fundamentals (three-phase current)
+**Citation:** NETA Electrical Formulae Sheet (updated June 29, 2017) (three-phase VA = √3 × V × I)
 
 Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 

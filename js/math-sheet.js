@@ -7,7 +7,7 @@
       id: "dc",
       jump: "DC",
       title: "DC circuits",
-      banner: "On the March 2020 sheet",
+      banner: "On the official sheet",
       cards: [
         {
           title: "Ohm's law and DC power",
@@ -215,12 +215,11 @@
       id: "three-phase",
       jump: "Three-phase",
       title: "Three-phase power and voltage unbalance",
-      banner: "Memorize",
       cards: [
         {
           title: "Three-phase power",
-          badge: "memorize",
-          formulas: ["kVA = \u221a3 \u00d7 VLL \u00d7 I / 1000", "kW = kVA \u00d7 PF"],
+          badge: "sheet",
+          formulas: ["VA = \u221a3 \u00d7 V \u00d7 I", "kW = kVA \u00d7 PF"],
           variables: [
             ["kVA", "three-phase apparent power"],
             ["kW", "three-phase real power"],
@@ -229,7 +228,7 @@
             ["PF", "power factor as a decimal"],
             ["\u221a3", "1.732 in these examples, for a balanced load"]
           ],
-          field: "Balanced three-phase apparent power, then real power once you know the power factor. The \u221a3 is required because line-to-line voltage is not the phase voltage. Use it for a load check from a clamp meter and a line-to-line voltage. Leave \u221a3 out and you report the single-phase product. When you only have kW and kVA, kvar is on the math study page.",
+          field: "The official sheet prints three-phase VA as \u221a3 \u00d7 V \u00d7 I, and real power as kVA times power factor. Divide VA by 1000 when you want kVA. The \u221a3 is required because line-to-line voltage is not the phase voltage. Use it for a load check from a clamp meter and a line-to-line voltage. Leave \u221a3 out and you report the single-phase product. When you only have kW and kVA, the kvar square root is not printed. That identity is on the math study page.",
           example: "A balanced 480 V load draws 100 A. Power factor is 0.80. \u221a3 = 1.732.",
           steps: [
             "\u221a3 \u00d7 VLL = 1.732 \u00d7 480 V = 831.36.",
@@ -251,7 +250,7 @@
             ["1000", "turns kVA into volt-amperes"],
             ["\u221a3", "1.732 here, for a balanced three-phase load"]
           ],
-          field: "This is the three-phase kVA formula solved for current. Use it to turn a transformer nameplate into amperes before you talk about loading or about fault current.",
+          field: "The sheet prints VA = \u221a3 \u00d7 V \u00d7 I. It does not print this card\u2019s solved-for-current line, so the rearrangement is one you do. The 1000 turns kVA back into volt-amperes. Use it to turn a transformer nameplate into amperes before you talk about loading or about fault current.",
           example: "A 1,500 kVA transformer rated 480 V line-to-line. \u221a3 = 1.732.",
           steps: [
             "Volt-amperes = 1,500 kVA \u00d7 1,000 = 1,500,000 VA.",
@@ -374,10 +373,24 @@
       title: "Motors",
       cards: [
         {
-          title: "Horsepower and motor full-load current",
+          title: "Horsepower in watts",
+          badge: "sheet",
+          formulas: ["1 hp = 746 W"],
+          variables: [
+            ["hp", "shaft output, in horsepower. This is not watts drawn from the line."],
+            ["746", "watts in one horsepower, printed on the official sheet"]
+          ],
+          field: "The official sheet prints 1 hp = 746 W. That is shaft output, not the watts the line has to supply. Efficiency and power factor are still yours. The line-current formula that includes them is the next card.",
+          example: "A shaft is rated 25 hp.",
+          steps: [
+            "25 \u00d7 746 = 18,650 W of shaft output.",
+            "That 18,650 W is not yet line input. Divide by efficiency before you turn it into current."
+          ]
+        },
+        {
+          title: "Motor line current from horsepower",
           badge: "memorize",
           formulas: [
-            "1 hp = 746 W",
             "I = (hp \u00d7 746) / (\u221a3 \u00d7 VLL \u00d7 efficiency \u00d7 PF)"
           ],
           variables: [
@@ -389,7 +402,7 @@
             ["I", "line current, in amperes, for a three-phase motor"],
             ["\u221a3", "1.732 here. Drop it for a single-phase motor."]
           ],
-          field: "Nameplate horsepower is shaft output. The line has to supply that output plus the losses, which is why efficiency is in the denominator, and it has to supply the reactive part, which is why power factor is there too. Use this for a three-phase motor when you have horsepower, voltage, efficiency, and power factor, and the ampere line of the nameplate is not in front of you. A single-phase motor uses the same relationship without the \u221a3.",
+          field: "Nameplate horsepower is shaft output. The 746 W per horsepower and the three-phase VA line are on the sheet. Efficiency is not, so this combined current formula is one you build. The line has to supply the output plus the losses, which is why efficiency is in the denominator, and it has to supply the reactive part, which is why power factor is there too. Use this for a three-phase motor when you have horsepower, voltage, efficiency, and power factor, and the ampere line of the nameplate is not in front of you. A single-phase motor uses the same relationship without the \u221a3.",
           example: "A three-phase motor, 25 hp, 460 V, efficiency 0.95, power factor 0.88. \u221a3 = 1.732.",
           steps: [
             "Shaft output = 25 \u00d7 746 = 18,650 W.",
@@ -398,6 +411,161 @@
             "796.72 \u00d7 0.88 = 701.1136, which is 701.11 to two decimals.",
             "I = 19,631.58 W / 701.11 V = 28.00 A.",
             "Check: 701.11 \u00d7 28.00 = 19,631.08 W, which is 0.50 W under the input, so the current is 28.00 A."
+          ]
+        },
+        {
+          title: "Motor torque",
+          badge: "sheet",
+          formulas: ["Torque = 33,000 \u00d7 hp / (6.28 \u00d7 rpm)"],
+          variables: [
+            ["Torque", "shaft torque, in pound-feet"],
+            ["hp", "shaft horsepower"],
+            ["33,000", "foot-pounds per minute in one horsepower"],
+            ["6.28", "the sheet\u2019s stand-in for 2\u03c0"],
+            ["rpm", "shaft speed, in revolutions per minute"]
+          ],
+          field: "The official sheet prints this torque line next to 1 hp = 746 W. The 6.28 is 2\u03c0 rounded to three figures, so the result matches the usual 5,252 \u00d7 hp / rpm form. Use it when a question gives horsepower and speed and asks for pound-feet. It is shaft torque, not the bolt torque in a mechanical table.",
+          example: "10 hp at 1,800 rpm.",
+          steps: [
+            "6.28 \u00d7 1,800 = 11,304.",
+            "33,000 \u00d7 10 = 330,000.",
+            "330,000 / 11,304 = 29.19, which is 29.2 lb-ft."
+          ]
+        }
+      ]
+    },
+    {
+      id: "official-rest",
+      jump: "Sheet, cont.",
+      title: "More lines on the official sheet",
+      banner: "On the official sheet",
+      cards: [
+        {
+          title: "Balanced delta and wye",
+          badge: "sheet",
+          formulas: [
+            "Delta: Iline = 1.732 \u00d7 Iphase, Vline = Vphase",
+            "Wye: Iline = Iphase, Vline = 1.732 \u00d7 Vphase"
+          ],
+          variables: [
+            ["Iline and Iphase", "line current and the current in one winding, in amperes"],
+            ["Vline and Vphase", "line-to-line voltage and the voltage across one winding, in volts"],
+            ["1.732", "the sheet\u2019s decimal for \u221a3 on these two lines"]
+          ],
+          field: "Printed for a balanced delta and a balanced wye. In delta the line current is the larger one and the line voltage is the phase voltage. In wye the line current is the phase current and the line voltage is 1.732 times the phase voltage. That wye voltage line is the same relationship as V(L-L) = \u221a3 \u00d7 V(L-N).",
+          example: "A balanced delta winding carries 10 A per phase. A balanced wye measures 277 V from line to neutral.",
+          steps: [
+            "Delta line current = 1.732 \u00d7 10 A = 17.32 A. Delta line voltage equals the phase voltage.",
+            "Wye line voltage = 1.732 \u00d7 277 V = 479.8 V, about 480 V. Wye line current equals the phase current."
+          ]
+        },
+        {
+          title: "Resistance per 1000 ft",
+          badge: "sheet",
+          formulas: ["R per 1000 ft = measured resistance \u00d7 (length of the run in feet / 1000)"],
+          variables: [
+            ["measured resistance", "the ohms you read on that run"],
+            ["length of the run", "the length of the conductor you measured, in feet"],
+            ["1000", "the sheet scales the reading with the run length over 1000"]
+          ],
+          field: "The official sheet prints this length correction for ohms per 1000 ft. Multiply the measured ohms by the run length in feet, then divide by 1000. It is not the copper temperature correction. 234.5 is still one you memorize.",
+          example: "A 500 ft run measures 0.20 \u03a9.",
+          steps: [
+            "500 / 1000 = 0.50.",
+            "0.20 \u03a9 \u00d7 0.50 = 0.10 \u03a9 per 1000 ft on the printed line."
+          ]
+        },
+        {
+          title: "Capacitance and capacitor kvar",
+          badge: "sheet",
+          formulas: [
+            "C = VAR / (2 \u00d7 \u03c0 \u00d7 f \u00d7 V\u00b2)",
+            "kVAR = kV\u00b2 \u00d7 1000 / XC"
+          ],
+          variables: [
+            ["C", "capacitance, in farads"],
+            ["VAR", "reactive power, in vars"],
+            ["V", "voltage across the capacitor, in volts"],
+            ["kV", "that same voltage, in kilovolts"],
+            ["XC", "capacitive reactance, in ohms"],
+            ["f", "frequency, in hertz"]
+          ],
+          field: "Both lines are on the official sheet. The first turns a var reading and a voltage into farads. The second turns kilovolts and capacitive reactance into kvar. Microfarads are still a prefix you apply yourself.",
+          example: "10,000 var at 480 V and 60 Hz. Separately, XC = 23.04 \u03a9 at 0.48 kV.",
+          steps: [
+            "V\u00b2 = 480 \u00d7 480 = 230,400.",
+            "2 \u00d7 \u03c0 \u00d7 60 = 376.99.",
+            "376.99 \u00d7 230,400 = 86,858,000, to the nearest thousand.",
+            "C = 10,000 / 86,858,000 = 0.0001151 F, about 115 \u00b5F.",
+            "kVAR = 0.48\u00b2 \u00d7 1000 / 23.04. 0.48\u00b2 = 0.2304. Then 0.2304 \u00d7 1000 = 230.4, and 230.4 / 23.04 = 10 kvar."
+          ]
+        },
+        {
+          title: "Capacitor kvar at another voltage",
+          badge: "sheet",
+          formulas: ["kVAR1 = kVAR2 \u00d7 (kV1 / kV2)\u00b2"],
+          variables: [
+            ["kVAR2", "nameplate kvar at the rated voltage kV2"],
+            ["kV1", "the voltage you actually apply, in kilovolts"],
+            ["kVAR1", "kvar delivered at kV1"]
+          ],
+          field: "Printed capacitor conversion. kvar moves with the square of the voltage. Use the same units on both kilovolt numbers. A lower applied voltage delivers less than nameplate kvar.",
+          example: "A 100 kvar capacitor rated 4.16 kV, energized at 4.00 kV.",
+          steps: [
+            "4.00 / 4.16 = 0.9615.",
+            "0.9615\u00b2 = 0.9245.",
+            "100 \u00d7 0.9245 = 92.45, about 92.4 kvar."
+          ]
+        },
+        {
+          title: "Series resonance",
+          badge: "sheet",
+          formulas: ["f = 1 / (2 \u00d7 \u03c0 \u00d7 \u221a(L \u00d7 C))"],
+          variables: [
+            ["f", "resonant frequency, in hertz"],
+            ["L", "inductance, in henries"],
+            ["C", "capacitance, in farads"],
+            ["\u03c0", "the pi key on the calculator"]
+          ],
+          field: "The official sheet prints the series resonant frequency. L is henries and C is farads. Leaving a micro prefix on C makes the frequency come out far too low.",
+          example: "L = 0.20 H and C = 50 \u00b5F. 50 \u00b5F is 0.000050 F.",
+          steps: [
+            "L \u00d7 C = 0.20 \u00d7 0.000050 = 0.000010.",
+            "\u221a0.000010 = 0.003162.",
+            "2 \u00d7 \u03c0 \u00d7 0.003162 = 0.01987.",
+            "f = 1 / 0.01987 = 50.3 Hz."
+          ]
+        },
+        {
+          title: "Machine frequency",
+          badge: "sheet",
+          formulas: ["f = P \u00d7 ns / 120"],
+          variables: [
+            ["f", "frequency, in hertz"],
+            ["P", "number of poles"],
+            ["ns", "synchronous speed, in revolutions per minute"],
+            ["120", "the sheet\u2019s constant on this line"]
+          ],
+          field: "Printed machine frequency. Poles times synchronous rpm, divided by 120. Use it to go from a nameplate speed and pole count to hertz, or to check that an 1800 rpm machine on 60 Hz is a 4-pole machine.",
+          example: "4 poles, 1,800 rpm synchronous.",
+          steps: [
+            "4 \u00d7 1,800 = 7,200.",
+            "7,200 / 120 = 60 Hz."
+          ]
+        },
+        {
+          title: "Watthour constant",
+          badge: "sheet",
+          formulas: ["Kh: watthours per disk revolution", "With CTs or PTs, use the primary Kh"],
+          variables: [
+            ["Kh", "watthour constant. One revolution of the disk stands for this many watthours."],
+            ["primary Kh", "the constant for energy on the primary side when instrument transformers feed the meter"]
+          ],
+          field: "The official sheet states this as a note, not as one algebra line. Kh is the watthours counted by a single turn of the disk. When the meter is fed through instrument transformers, the primary constant is the one for energy in the primary circuit. The sheet does not print the CT ratio formula. That ratio is still one you remember.",
+          example: "A meter Kh is 7.2 watthours per revolution, and the disk makes 10 revolutions.",
+          steps: [
+            "Energy at the meter = 7.2 \u00d7 10 = 72 watthours.",
+            "If CTs or PTs are in the circuit, 72 watthours is not yet the primary energy. Use the primary Kh for the primary circuit."
           ]
         }
       ]
@@ -459,7 +627,7 @@
             ["\u03b4", "loss angle, the complement of \u03b8, so \u03b4 = 90\u00b0 \u2212 \u03b8"],
             ["DF", "dissipation factor, tan \u03b4. In the square-root line, PF is the decimal, not the percent."]
           ],
-          field: "Percent power factor is real watts divided by volt-amperes, times 100. Dissipation factor is the tangent of the loss angle. On a good specimen both percents are small and nearly the same number. Use them on an insulation power-factor set and on a tan-delta cable set. Liquid-filled results get a temperature correction before a comparison, and that factor is a table. See the ATS table. A tan-delta figure published in thousandths is not already a percent.",
+          field: "Watts over volt-amperes is the power-factor line on the official sheet. The percent, the loss angle, and dissipation factor are not printed, so this card stays in the memorize set. Percent power factor is real watts divided by volt-amperes, times 100. Dissipation factor is the tangent of the loss angle. On a good specimen both percents are small and nearly the same number. Use them on an insulation power-factor set and on a tan-delta cable set. Liquid-filled results get a temperature correction before a comparison, and that factor is a table. See the ATS table. A tan-delta figure published in thousandths is not already a percent.",
           example: "Drill numbers, chosen so the square root is obvious, not a specimen you would accept: 10,000 V, 0.00300 A, and 6.00 W.",
           steps: [
             "Volt-amperes = 10,000 V \u00d7 0.00300 A = 30.0 VA.",
@@ -607,9 +775,9 @@
     );
 
     app.append(
-      h("p", { class: "kicker" }, "Formula sheet \u00b7 March 2020"),
+      h("p", { class: "kicker" }, "Formula sheet \u00b7 June 29, 2017"),
       h("h1", {}, "Math cheat sheet"),
-      h("p", { class: "lede" }, "The certification exam shows a formula sheet on screen. These badges follow the Formulae Sheet dated March 2020. ON NETA SHEET is printed for you. MEMORIZE is the set you have to remember."),
+      h("p", { class: "lede" }, "The certification exam shows the official NETA Electrical Formulae Sheet on screen, updated June 29, 2017. These badges follow that sheet. An older website PDF is an incomplete excerpt and stops before three-phase VA, horsepower, and the rest of the page. ON NETA SHEET is printed for you. MEMORIZE is the set you have to remember."),
       h("div", { class: "math-legend" },
         h("span", { class: "math-badge sheet" }, "ON NETA SHEET"),
         h("span", { class: "math-badge mem" }, "MEMORIZE")
@@ -620,7 +788,7 @@
         h("a", { class: "btn primary", href: "#/study/math.md" }, "Math study page"),
         h("a", {
           class: "btn ghost",
-          href: "https://www.netaworld.org/accreditation/exam-preparation",
+          href: "https://www.netaworld.org/certification-exam/exam-preparation686",
           target: "_blank",
           rel: "noopener noreferrer"
         }, "NETA exam preparation")
