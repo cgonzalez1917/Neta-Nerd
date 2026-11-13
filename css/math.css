@@ -1,0 +1,114 @@
+/* Math cheat sheet. Uses the palette in styles.css. Square edges, no new colors. */
+
+.math-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 12px 0;
+}
+.math-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 8px;
+}
+.math-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 4px;
+}
+.math-banner { margin: 26px 0 0; }
+.math-sec { scroll-margin-top: 78px; }
+.math-sec h2 {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: 8px;
+}
+.math-sec > .lede { margin-top: 0; }
+
+.formula { margin-top: 14px; }
+.formula-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.formula-head h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  flex: 1 1 14rem;
+}
+.math-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.math-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.math-badge.sheet {
+  background: var(--amber);
+  color: var(--amber-ink);
+  border-color: var(--amber);
+  font-weight: 700;
+}
+.math-badge.mem {
+  background: var(--cyan);
+  color: var(--cyan-ink);
+  border-color: var(--cyan);
+  font-weight: 700;
+}
+.math-badge.thumb {
+  background: transparent;
+  color: var(--amber);
+  border-color: var(--amber);
+  font-weight: 700;
+}
+
+.eq {
+  font-family: var(--mono);
+  color: var(--amber-2);
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  margin: 8px 0 0;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 0.95rem;
+}
+.formula h4 {
+  margin: 14px 0 4px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+.formula p { margin: 8px 0; }
+.formula .example { color: var(--text); }
+.vars, .steps { margin: 0; padding-left: 1.2rem; }
+.vars li, .steps li { margin: 4px 0; }
+.vars b {
+  color: var(--amber);
+  font-family: var(--mono);
+  font-weight: 700;
+}
+.math-end { margin-top: 22px; }
+
+@media (max-width: 640px) {
+  .eq { font-size: 0.86rem; padding: 8px; }
+  .formula { padding: 12px; }
+  .formula-head h3 { flex-basis: 100%; }
+  .math-jump .btn { flex: 1 1 calc(50% - 6px); }
+}
