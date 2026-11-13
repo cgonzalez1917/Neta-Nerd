@@ -45,6 +45,7 @@ Every topic file under `questions/` is open to any contributor. The list and the
 | `emergency-systems` | `questions/emergency.json` | `emg` |
 | `fiber-optic` | `questions/fiber.json` | `fbr` |
 | `ev-charging` | `questions/evse.json` | `evse` |
+| `air-switches` | `questions/air-switches.json` | `airsw` |
 
 Append new question objects at the end of the array. Do not reorder, renumber, or rewrite existing questions in the same edit. If two people append to the same file, keep both objects and fix only a duplicate id.
 

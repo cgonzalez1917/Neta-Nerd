@@ -1603,5 +1603,203 @@
     "reference": "NFPA 70B-2026, Table 9.3.2, 13.1.1, 13.2, and Table 13.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "safety-090",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "You need incident energy for a 24.9 kV overhead line. Does the IEEE 1584-2018 empirical model apply directly?",
+    "choices": [
+      "Yes. It applies to any ac voltage",
+      "Yes, if the working distance is at least 36 in",
+      "Only if the bolted fault is below 65 kA",
+      "No. The model covers three-phase systems from 208 V to 15 kV, so you need another method"
+    ],
+    "answer": 3,
+    "explanation": "The 2018 model's range is 208 V to 15,000 V three-phase, with limits on bolted-fault current, gap, and working distance. Outside that range, the guide says alternative methods exist and that you should research them, but it does not endorse one.",
+    "reference": "IEEE 1584-2018, 4.2",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-091",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A 240 V single-phase panel needs an incident energy estimate. IEEE 1584-2018 says:",
+    "choices": [
+      "Single-phase systems never need an arc-flash calculation",
+      "Divide the three-phase result by √3",
+      "Use the dc method instead",
+      "The model does not cover single phase. Using the three-phase equations with the single-phase bolted current gives a result expected to be conservative"
+    ],
+    "answer": 3,
+    "explanation": "Single-phase arcs were not tested enough to build their own model. The guide suggests running the three-phase equations with the single-phase bolted-fault current and voltage, and it expects the answer to come out on the high side.",
+    "reference": "IEEE 1584-2018, 4.11",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-092",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An upstream relay will not clear an arcing fault for 4 s. When can IEEE 1584-2018's 2 s arc-duration assumption be used?",
+    "choices": [
+      "When the worker can reasonably move away from the arc. It is not appropriate when egress is blocked, such as in a bucket or inside an enclosure",
+      "Always. Arc duration is capped at 2 s by the standard",
+      "Never. You must always use the full 4 s",
+      "Only for systems at 600 V and below"
+    ],
+    "answer": 0,
+    "explanation": "The guide treats 2 s as a usually reasonable time for a person to get clear when clearing takes longer. It also says to use engineering judgment, because a worker in a bucket truck or inside equipment may not be able to escape that quickly.",
+    "reference": "IEEE 1584-2018, 6.9.1",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-093",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "The manufacturer's time-current curve for the upstream device is a band, not a single line. For arc duration, IEEE 1584-2018 says to read:",
+    "choices": [
+      "The shortest time in the band",
+      "The longest time in the band at the calculated arcing current",
+      "The midpoint of the band",
+      "The time at the bolted fault current instead of the arcing current"
+    ],
+    "answer": 1,
+    "explanation": "Use the slow edge of the band at the arcing current. Taking the fast edge understates exposure. Remember to check both the average arcing current and the reduced minimum arcing current.",
+    "reference": "IEEE 1584-2018, 6.9.1",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-094",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "A fuse curve gives only the average melting time, 0.050 s at the arcing current. Using IEEE 1584-2018, total clearing time is about:",
+    "choices": [
+      "0.050 s",
+      "0.055 s",
+      "0.059 s",
+      "0.100 s"
+    ],
+    "answer": 2,
+    "explanation": "When only the average melt curve is available, add 10% of the time plus 0.004 s: 0.050 × 1.10 + 0.004 = 0.059 s. If a total-clearing curve exists, use that curve instead.",
+    "reference": "IEEE 1584-2018, 6.9.2",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-095",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A low-voltage power breaker has a retrofit trip unit, and its curve shows only the trip unit's sensing time. For arc duration, IEEE 1584-2018 says to:",
+    "choices": [
+      "Use the trip-unit time as is",
+      "Double the trip-unit time",
+      "Use 2 s",
+      "Add a breaker operating time, typically about 0.05 s (three cycles)"
+    ],
+    "answer": 3,
+    "explanation": "Curves that ship with integral trip units usually already include the breaker's opening and clearing. Retrofit trip-unit curves may not. If they don't, add the mechanism time, which the guide gives as typically 0.05 s, or three cycles.",
+    "reference": "IEEE 1584-2018, 6.9.3",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-096",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "IEEE 1584-2018 lists a typical working distance for low-voltage switchgear of:",
+    "choices": [
+      "18 in (457.2 mm)",
+      "36 in (914.4 mm)",
+      "24 in (609.6 mm)",
+      "12 in (305 mm)"
+    ],
+    "answer": 2,
+    "explanation": "The guide's typical value for low-voltage switchgear is 24 in. Low-voltage MCCs, panelboards, and cable junction boxes are typically 18 in, and 5 kV and 15 kV gear is typically 36 in. Twelve inches is the model's lower limit, not a typical value. Use a different distance when the task puts the worker closer or farther.",
+    "reference": "IEEE 1584-2018, 6.7 (Table 10)",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-097",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Why does IEEE 1584-2018 have you run a second arc-duration calculation at a reduced arcing current?",
+    "choices": [
+      "The reduced current always gives the lower, less conservative answer, so it can be discarded",
+      "It is required only above 600 V",
+      "A lower arcing current can push the protective device onto a slower part of its curve and raise incident energy",
+      "It replaces the need for a short-circuit study"
+    ],
+    "answer": 2,
+    "explanation": "Arcing current varies. The variation factor gives a lower bound, Iarc_min, and that lower current may trip the device later. Check both and keep the worse result. The guide says the effect is largest from 208 V to 600 V.",
+    "reference": "IEEE 1584-2018, 4.5",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-098",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A plant can run with its secondary tie open or closed, and with generators on or off. IEEE 1584-2018 says the incident energy at each bus should be:",
+    "choices": [
+      "Calculated only at maximum available fault current",
+      "Calculated only for the normal mode",
+      "Calculated for every realistic mode of operation, using the highest result for each location",
+      "Averaged across the modes"
+    ],
+    "answer": 2,
+    "explanation": "Maximum fault current is not always the worst case, because lower current can mean longer clearing. The guide has you study the modes that give both maximum and minimum available fault current and take the highest incident energy and arc-flash boundary at each point.",
+    "reference": "IEEE 1584-2018, 6.3",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-099",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "IEEE 1584-2018 incident energy results account for which hazard?",
+    "choices": [
+      "Thermal, blast pressure, and noise combined",
+      "Thermal burn from the arc only. Blast pressure, shrapnel, molten metal, light, sound, and toxic by-products are not included",
+      "Shock hazard at the limited approach boundary",
+      "All arc-flash effects, so the label covers every injury"
+    ],
+    "answer": 1,
+    "explanation": "The guide is built on tests of thermal incident energy. It says plainly that the explosive effects of an arc, including pressure waves, projectiles, molten splatter, light, noise, and toxic gases, are outside its scope.",
+    "reference": "IEEE 1584-2018, 6.12",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-100",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "During a ground-grid test, the remote current probe is out of sight of the test operator in an area the public can reach. IEEE 81 says:",
+    "choices": [
+      "Leave it unattended, since the test current is small",
+      "Flag it with tape and keep testing",
+      "Ground the remote probe to the grid",
+      "Post a spotter in radio contact at that point for as long as the test signal is applied or remote potentials exceed 50 V"
+    ],
+    "answer": 3,
+    "explanation": "Test leads that run out to remote earth can carry hazardous voltage, from the test set or from a fault that occurs during the test. The guide calls for continuous watch by a spotter in radio contact when probes are out of sight or publicly accessible, and while leads remain connected to the grid.",
+    "reference": "IEEE 81-2012, 5.1 item d)",
+    "verified": true,
+    "kb": "safety.md#before-you-test"
   }
 ]

@@ -1279,5 +1279,185 @@
     "reference": "NFPA 70B-2026, Tables 35.3.1 and 35.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "relay-072",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In IEEE C37.2-2022, device number 52 is:",
+    "choices": [
+      "An ac circuit breaker",
+      "A dc circuit breaker",
+      "A line switch",
+      "A lockout relay"
+    ],
+    "answer": 0,
+    "explanation": "52 is an ac breaker, which closes and interrupts an ac power circuit in normal service and interrupts it under fault. A dc breaker is 72, a line switch is 89, and a lockout relay is 86.",
+    "reference": "IEEE C37.2-2022, 3.1.52",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-073",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "IEEE C37.2-2022 describes device 86 as a device that:",
+    "choices": [
+      "Trips and holds the equipment out of service until an operator resets it, locally or remotely",
+      "Resets itself as soon as the fault clears",
+      "Measures differential current",
+      "Recloses the breaker after a time delay"
+    ],
+    "answer": 0,
+    "explanation": "The lockout relay's job is to keep the equipment off until a person resets it. A self-resetting trip relay is device 94, and reclosing is device 79.",
+    "reference": "IEEE C37.2-2022, 3.1.86",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-074",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a one-line diagram, device 89 under IEEE C37.2-2022 is:",
+    "choices": [
+      "A line switch, such as a disconnect, load-interrupter, or isolating switch, usually numbered only when it is motor operated or has electrical accessories",
+      "A frequency relay",
+      "A ground detector",
+      "A dc circuit breaker"
+    ],
+    "answer": 0,
+    "explanation": "89 covers disconnecting, load-interrupter, circuit-switcher, and isolating switches. The guide notes the number normally is not needed unless the switch is electrically operated or has items like auxiliary switches or magnetic locks.",
+    "reference": "IEEE C37.2-2022, 3.1.89",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-075",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "What separates device 94 from device 86 in IEEE C37.2-2022?",
+    "choices": [
+      "94 is a self-resetting tripping or trip-free relay. 86 holds the equipment locked out until an operator resets it",
+      "94 is hand-reset, and 86 is self-resetting",
+      "They are the same function with different numbers",
+      "94 is a dc breaker, and 86 is an ac breaker"
+    ],
+    "answer": 0,
+    "explanation": "94 trips a breaker or contactor, lets other devices trip it immediately, or blocks immediate reclosing, and then resets on its own. 86 latches and requires a reset. Mixing them up changes how the scheme behaves after a trip.",
+    "reference": "IEEE C37.2-2022, 3.1.86 and 3.1.94",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-076",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Device 62 in IEEE C37.2-2022 is a time-delay stopping or opening relay. Its own example of 62 with a suffix, 62BF, is:",
+    "choices": [
+      "A battery-float alarm",
+      "A bus-fault differential",
+      "A breaker-failure function with no current monitoring",
+      "A breaker-failure function that supervises with current detectors"
+    ],
+    "answer": 2,
+    "explanation": "The guide uses 62BF as breaker failure done purely on a timer, with no current check. Current-monitored breaker failure takes the suffix on device 50 instead, as 50BF. Device 2 is the matching time-delay starting or closing relay.",
+    "reference": "IEEE C37.2-2022, 3.1.2, 3.1.50 and 3.1.62",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-077",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Under IEEE C37.2-2022, a 52a auxiliary contact on a power circuit breaker is:",
+    "choices": [
+      "Open when the breaker is open (its reference position) and closed when the breaker is closed",
+      "Closed when the breaker is open",
+      "A contact on the switchgear housing that tracks rack position",
+      "A contact that opens only on a trip"
+    ],
+    "answer": 0,
+    "explanation": "An 'a' contact is open in the device's standard reference position and closes when the device changes state. A 'b' contact does the opposite. For a power circuit breaker, the reference position is main contacts open, so 52a follows the main contacts and 52b is the inverse.",
+    "reference": "IEEE C37.2-2022, 4.1 and Table 1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-078",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a drawout breaker schematic, IEEE C37.2-2022 uses the suffixes TOC and MOC to mean:",
+    "choices": [
+      "Truck-operated contact (on the housing, changes with rack position) and mechanism-operated contact (driven by the breaker mechanism)",
+      "Time overcurrent and maximum overcurrent",
+      "Trip output coil and motor operator coil",
+      "Top of cubicle and middle of cubicle"
+    ],
+    "answer": 0,
+    "explanation": "Both are auxiliary switches mounted on the stationary housing. TOC switches change with the breaker truck's position. MOC switches are moved by the breaker's operating mechanism. Neither is the breaker's own a/b auxiliary switch, which is a common troubleshooting mix-up.",
+    "reference": "IEEE C37.2-2022, 3.5.4 (TOC and MOC notes)",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-079",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In IEEE 315, the surge (lightning) arrester symbol sits in the same item group as:",
+    "choices": [
+      "Fuse symbols",
+      "Current transformer symbols",
+      "Battery symbols",
+      "Gap symbols, such as horn gap, protective gap, sphere gap, and valve or film elements"
+    ],
+    "answer": 3,
+    "explanation": "IEEE 315 item 9.3 covers the arrester along with its gap and valve-element variants and their combinations. Fuses are 9.1 and breakers are 9.4. Knowing the arrester family helps you pick it out on a one-line drawing.",
+    "reference": "IEEE 315-1975 (R1993), 9.3",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-080",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On an IEEE 315 battery symbol with no polarity marks, the positive terminal is:",
+    "choices": [
+      "The short line",
+      "Whichever side is drawn on top",
+      "Not shown by the symbol",
+      "The long line"
+    ],
+    "answer": 3,
+    "explanation": "IEEE 315 says the long line of the battery or cell symbol is always positive. Polarity signs may be added, but they are not needed. This matters when you read dc control drawings before you check a trip circuit.",
+    "reference": "IEEE 315-1975 (R1993), 2.5",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-081",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "An IEEE 315 drawing shows a chassis or frame connection symbol rather than the general ground symbol. That tells you:",
+    "choices": [
+      "The conductor ties to a frame or chassis that may be at substantial potential relative to earth",
+      "The point is bonded directly to earth",
+      "The point is a protective earth for shock protection",
+      "The conductor is a neutral"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 315 keeps three symbols apart: the general ground (a connection to earth, or to a structure acting as earth), the protective ground, and the chassis or frame connection. The chassis symbol does not promise earth potential, so do not treat it as a safety ground when you plan test connections.",
+    "reference": "IEEE 315-1975 (R1993), 3.9.1, 3.9.1.2 and 3.9.2",
+    "verified": true,
+    "kb": "relays.md#numbers"
   }
 ]

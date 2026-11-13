@@ -214,5 +214,221 @@
     "reference": "NFPA 70B-2026, Table 36.2 and 32.1.2",
     "verified": true,
     "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-013",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Which check belongs on the monthly IEEE 450 inspection of a vented lead-acid battery, not only on the yearly one?",
+    "choices": [
+      "Float voltage at the battery terminals and charger output current and voltage",
+      "Cell-to-cell and terminal connection resistance",
+      "Specific gravity of every cell",
+      "Structural integrity of the rack"
+    ],
+    "answer": 0,
+    "explanation": "The monthly list covers terminal float voltage, charger output, electrolyte level, cracks or leaks, corrosion, ambient temperature, ventilation, pilot cells, and unintentional grounds. Connection resistance, rack integrity, and the detailed cell-condition check are added in the yearly inspection.",
+    "reference": "IEEE 450-2020, 5.2.2 and 5.2.4",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-014",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Quarterly, IEEE 450 has you record electrolyte temperature on a representative sample of cells. On a 120-cell string, that is about:",
+    "choices": [
+      "6 cells",
+      "60 cells",
+      "12 cells",
+      "Every cell"
+    ],
+    "answer": 2,
+    "explanation": "The quarterly sample is 10% of the cells, such as every tenth cell. 10% of 120 is 12. Use the same cells each time so the readings trend.",
+    "reference": "IEEE 450-2020, 5.2.3 item b)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-015",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "An intercell connection read 20 µΩ at installation and reads 25 µΩ now. IEEE 450 says:",
+    "choices": [
+      "No action, because anything under 50 µΩ is fine",
+      "Replace the cell",
+      "Equalize the battery and recheck in a year",
+      "Retorque and retest, because it is more than 20% above the installation value"
+    ],
+    "answer": 3,
+    "explanation": "25 µΩ is 25% above the 20 µΩ baseline, which is over the 20% trigger (or over any ceiling the manufacturer set). Retorque and retest. If it stays high, take the joint apart, clean it, reassemble it, and test again.",
+    "reference": "IEEE 450-2020, 5.3.2 item c)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-016",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "There is no installation baseline and no manufacturer value. Connections average 50 µΩ, and one reads 56 µΩ. IEEE 450 says:",
+    "choices": [
+      "Leave it, because it is within 20% of the average",
+      "Replace the connector immediately",
+      "Average it in with the others and record the string total",
+      "Retorque and retest it, because it is more than 10% above the average"
+    ],
+    "answer": 3,
+    "explanation": "With no baseline and no manufacturer number, the screen is 10% above the average of the string's connections. 56 is 12% above 50, so it gets retorqued and retested. The 20% figure applies only when you have an installation value to compare against.",
+    "reference": "IEEE 450-2020, 5.3.2 item c)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-017",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "IEEE 450 recommends replacing a vented lead-acid battery when its tested capacity drops below:",
+    "choices": [
+      "90% of the manufacturer's rating",
+      "80% of the manufacturer's rating",
+      "50% of the manufacturer's rating",
+      "100% of rating on any test"
+    ],
+    "answer": 1,
+    "explanation": "Below 80% capacity, deterioration is speeding up, so the guide recommends replacement. It suggests doing so within a year at most, and sooner if the rate-adjusted method was used. Ninety percent is the floor for a new cell at acceptance, not the replacement trigger.",
+    "reference": "IEEE 450-2020, Clause 8",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-018",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A battery has a 20-year expected service life and shows no degradation. IEEE 450 recommends the interval between performance tests be no more than:",
+    "choices": [
+      "2 years",
+      "5 years",
+      "10 years",
+      "1 year"
+    ],
+    "answer": 1,
+    "explanation": "The recommended performance-test interval is no more than 25% of expected service life, and 25% of 20 years is 5 years. Testing goes to annual once the battery shows degradation or reaches 85% of its expected life (with a two-year allowance if capacity is still at or above 100% of rating).",
+    "reference": "IEEE 450-2020, 6.3 item c)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-019",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Under IEEE 450, a battery is treated as showing signs of degradation, and goes to annual performance testing, when:",
+    "choices": [
+      "Capacity has dropped more than 10% from the previous performance test, or is below 90% of the manufacturer's rating",
+      "Any single cell float voltage is 0.01 V low",
+      "The electrolyte level touches the low line",
+      "Capacity is 100% of rating on a rate-adjusted test"
+    ],
+    "answer": 0,
+    "explanation": "The guide defines degradation as a capacity drop of more than 10% from the last performance test, or capacity under 90% of rating. Either one moves the battery to annual capacity testing.",
+    "reference": "IEEE 450-2020, 6.3 item c)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-020",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "A time-adjusted performance test starts at 25 °C, where the temperature factor is 1.000. The rated time to end voltage is 3.0 h, and the battery reaches end voltage at 2.7 h. Capacity is:",
+    "choices": [
+      "111%",
+      "70%",
+      "97%",
+      "90%"
+    ],
+    "answer": 3,
+    "explanation": "Time-adjusted capacity is actual time divided by rated time (times the temperature factor, which is 1 at 25 °C), × 100. 2.7 / 3.0 = 0.90, or 90%. Flipping the ratio gives 111%.",
+    "reference": "IEEE 450-2020, 7.4.2.2 Equation (1) and Table 1",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-021",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A 120-cell battery has a minimum design voltage of 1.75 V per cell. A performance discharge is continued until battery terminal voltage falls to:",
+    "choices": [
+      "210 V",
+      "240 V",
+      "175 V",
+      "264 V"
+    ],
+    "answer": 0,
+    "explanation": "The test ends when terminal voltage reaches the minimum average volts per cell times the number of cells: 120 × 1.75 = 210 V. A 2.0 V nominal cell gives 240 V, which is not the end point.",
+    "reference": "IEEE 450-2020, 7.5 item d)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-022",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Before a capacity test, the battery was given an equalizing charge. IEEE 450 says it should then be on float for at least how long before the discharge starts?",
+    "choices": [
+      "1 h",
+      "72 h",
+      "8 h",
+      "No wait is needed after an equalize"
+    ],
+    "answer": 1,
+    "explanation": "The initial conditions are: equalize if the manufacturer recommends it, then float for at least 72 hours. After that, check connections, record float current, cell voltages, and temperature on 10% or more of the cells, and isolate the battery from critical loads.",
+    "reference": "IEEE 450-2020, 7.2 item a)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-023",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Float current on a vented lead-acid string is steady and in the normal range. IEEE 450 says float current does NOT confirm:",
+    "choices": [
+      "That the intercell connections are sound",
+      "That the charger is working",
+      "That the string is continuous",
+      "That the battery has returned to full charge after a discharge"
+    ],
+    "answer": 0,
+    "explanation": "Stabilized float current indicates full charge, charger operation, and an unbroken string. It cannot show whether individual connections are in good shape, which is why connection resistance is measured separately. A float current of zero can mean a charger failure or an open string.",
+    "reference": "IEEE 450-2020, 5.5",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-024",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "During the duty-cycle (service-test) portion of a modified performance test, a weak cell may:",
+    "choices": [
+      "Be bypassed at any time to keep the test going",
+      "Not be bypassed. Bypassing is allowed only after the duty-cycle portion is complete",
+      "Be bypassed only if its voltage reverses",
+      "Be replaced with a spare without stopping the test"
+    ],
+    "answer": 1,
+    "explanation": "The modified performance test has to prove the battery as found can carry the duty cycle, so cells cannot be jumpered out during that part. Once the duty cycle is satisfied, bypassing a weak cell for the rest of the capacity portion is allowed.",
+    "reference": "IEEE 450-2020, 6.5",
+    "verified": true,
+    "kb": "batteries.md#flooded"
   }
 ]

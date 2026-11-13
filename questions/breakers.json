@@ -612,5 +612,59 @@
     "reference": "NFPA 70B-2026, Table 15.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "brkr-035",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "theory",
+    "question": "Low-voltage power circuit breaker switchgear for a 480 V system (508 V rated maximum) has a 2.2 kV power-frequency withstand. Per C37.20.1, the field withstand should not exceed:",
+    "choices": [
+      "2.2 kV",
+      "1.0 kV",
+      "3.1 kV",
+      "1.65 kV"
+    ],
+    "answer": 3,
+    "explanation": "Field withstand on LV switchgear is limited to 75% of the factory value: 0.75 × 2.2 kV = 1.65 kV. Field tests are mainly for added sections or after major changes, and only on gear that has first been cleaned and put in good condition.",
+    "reference": "IEEE C37.20.1-2015, 6.5 and Table 1",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "brkr-036",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Commissioning a lineup with key interlocks, you find spare duplicate keys in the shipping box. C37.20.1 says they should be:",
+    "choices": [
+      "Destroyed, or kept where only authorized personnel can get them",
+      "Hung on the gear next to each lock",
+      "Given to every operator",
+      "Left in the box with the breaker manuals"
+    ],
+    "answer": 0,
+    "explanation": "A key interlock works only if one key exists per sequence. Spare keys defeat it, so the guide says to destroy them or lock them away from everyone except authorized people.",
+    "reference": "IEEE C37.20.1-2015, C.5",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "brkr-037",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "safety",
+    "question": "A drawout LV power breaker has a stored-energy closing spring. C37.20.1 requires protection from an accidental spring discharge during removal by one of these means:",
+    "choices": [
+      "Blocking full withdrawal while the spring is charged, blocking the close function first, or discharging the spring automatically during withdrawal",
+      "A warning label only",
+      "Requiring the breaker to be closed before withdrawal",
+      "Grounding the breaker frame"
+    ],
+    "answer": 0,
+    "explanation": "The mechanism also must not release unless it is fully charged. For removal, the gear either stops full withdrawal while charged, blocks closing, or dumps the stored energy on the way out. Check that during commissioning.",
+    "reference": "IEEE C37.20.1-2015, 7.11.2 item c)",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]

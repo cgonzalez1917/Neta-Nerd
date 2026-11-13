@@ -109,5 +109,95 @@
     "reference": "AEMC 6240 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 7.4.D.1",
     "verified": true,
     "kb": "field-methods.md#microohm"
+  },
+  {
+    "id": "dlro-008",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "theory",
+    "question": "A copper winding measures 0.500 Ω at 20 °C. Corrected to an 85 °C reference temperature, it is about:",
+    "choices": [
+      "0.398 Ω",
+      "0.628 Ω",
+      "0.536 Ω",
+      "0.500 Ω"
+    ],
+    "answer": 1,
+    "explanation": "R at the new temperature = R measured × (Ts + Tk) / (Tm + Tk), with Tk = 234.5 for copper (225 for aluminum). 0.500 × (85 + 234.5) / (20 + 234.5) = 0.500 × 319.5 / 254.5 ≈ 0.628 Ω. Inverting the ratio gives 0.398 Ω.",
+    "reference": "IEEE C57.12.90-2021, 5.2, Equation (1)",
+    "verified": true,
+    "kb": "resistance.md#winding"
+  },
+  {
+    "id": "dlro-009",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "When measuring transformer winding resistance, the dc test current should not exceed what share of the winding's rated current?",
+    "choices": [
+      "50%",
+      "100%",
+      "15%",
+      "1%"
+    ],
+    "answer": 2,
+    "explanation": "More current than about 15% of rated heats the winding during the test, which changes the resistance you are trying to read. The liquid-immersed and dry-type test codes both set this ceiling.",
+    "reference": "IEEE C57.12.90-2021, 5.3.1 item f); IEEE C57.12.91-2020, 5.2.3",
+    "verified": true,
+    "kb": "resistance.md#winding"
+  },
+  {
+    "id": "dlro-010",
+    "level": "III",
+    "topic": "contact-resistance",
+    "domain": "theory",
+    "question": "A delta winding is measured terminal to terminal with the delta closed: 0.20 Ω, 0.20 Ω, and 0.20 Ω. Per C57.12.90, the reported total winding resistance is:",
+    "choices": [
+      "0.60 Ω",
+      "0.30 Ω",
+      "0.90 Ω",
+      "0.40 Ω"
+    ],
+    "answer": 2,
+    "explanation": "With the delta closed, the total is the sum of the three readings times 1.5: 0.60 × 1.5 = 0.90 Ω. (Each closed-delta reading is one phase in parallel with the other two, which is two-thirds of one phase.) For a wye measured terminal to terminal, the sum is divided by 2.",
+    "reference": "IEEE C57.12.90-2021, 5.4.1 and 5.4.2",
+    "verified": true,
+    "kb": "resistance.md#winding"
+  },
+  {
+    "id": "dlro-011",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "Wye winding resistance on the same tap reads 1.000, 1.010, and 1.045 mΩ by phase. C57.152 says:",
+    "choices": [
+      "The third phase is more than 2% from the others, so look for a loose connection, broken strands, or tap-changer contact trouble",
+      "All within 5%, so no comparison is needed",
+      "Resistance must be corrected to 75 °C before phases can be compared",
+      "A 4% spread is normal for any LTC"
+    ],
+    "answer": 0,
+    "explanation": "The guide expects phases to agree within 2% of each other. 1.045 is about 4.5% above 1.000. Because the comparison is phase to phase, temperature correction is not normally needed on site.",
+    "reference": "IEEE C57.152-2025, 7.2.7.1",
+    "verified": true,
+    "kb": "resistance.md#winding"
+  },
+  {
+    "id": "dlro-012",
+    "level": "II",
+    "topic": "contact-resistance",
+    "domain": "safety",
+    "question": "After a winding resistance test on a large power transformer, the leads should come off:",
+    "choices": [
+      "Only after the test set shows the winding is fully discharged, because stored energy can produce a large inductive kick",
+      "Immediately, since dc leaves no stored energy",
+      "Once the current display reads zero, even if the discharge light is still on",
+      "After grounding only the tank"
+    ],
+    "answer": 0,
+    "explanation": "The dc current stores energy in the winding's inductance. Breaking the circuit early can produce a dangerous voltage spike. Use a test set with a discharge circuit and an indicator, and wait for it to clear.",
+    "reference": "IEEE C57.152-2025, 7.2.7.4",
+    "verified": true,
+    "kb": "resistance.md#winding"
   }
 ]
