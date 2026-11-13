@@ -1118,5 +1118,257 @@
     "reference": "NFPA 70B-2026, Tables 11.3.1 and 11.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "xfmr-063",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Checking single-phase polarity by inductive kick: dc flows in the HV winding, and the voltmeter leads are moved to the adjacent LV leads. When the dc is broken, the pointer swings the opposite way. The polarity is:",
+    "choices": [
+      "Additive",
+      "Reversed core magnetization, so retest",
+      "Cannot be determined with dc",
+      "Subtractive"
+    ],
+    "answer": 3,
+    "explanation": "In the inductive-kick method, a swing opposite to the first deflection means subtractive polarity, and a swing in the same direction means additive. Polarity matters mainly when you parallel or bank transformers.",
+    "reference": "IEEE C57.12.90-2021, 6.2.2",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-064",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Ratio-testing a delta-wye transformer whose wye neutral is not brought out, using a single-phase ratio set. The C57.12.90 approach is to:",
+    "choices": [
+      "Skip ratio. It cannot be done without the neutral",
+      "Short out one phase of the delta winding to create a virtual neutral, and measure phase by phase",
+      "Test line-to-line on both sides and divide by √3 on both",
+      "Ground one LV terminal and read to the tank"
+    ],
+    "answer": 1,
+    "explanation": "With no X0, you short one delta phase so the applied voltage appears across a single winding pair with no neutral shift, then move the short for each phase. The test code shows this connection for a delta HV with a wye LV whose neutral is inaccessible.",
+    "reference": "IEEE C57.12.90-2021, 7.1.4",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-065",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Before an insulation power-factor test on a liquid-filled transformer, C57.12.90 has the windings:",
+    "choices": [
+      "Left open so the test set can read each terminal separately",
+      "Short-circuited on themselves (each winding's terminals jumpered together), with bushings in place and windings under liquid",
+      "Grounded through the neutral bushing only",
+      "Energized at rated voltage"
+    ],
+    "answer": 1,
+    "explanation": "Shorting each winding keeps winding inductance out of the measurement, so you read the insulation alone. The test code also wants bushings installed, windings immersed, and a temperature between 10 °C and 40 °C, as close to 20 °C as practical.",
+    "reference": "IEEE C57.12.90-2021, 10.10.1",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-066",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Per C57.12.90, the voltage for an insulation power-factor test on a liquid-filled transformer winding shall not exceed:",
+    "choices": [
+      "Rated line-to-line voltage",
+      "Half the winding's low-frequency test voltage, or 10 kV, whichever is lower",
+      "Twice the operating voltage",
+      "1000 V for every winding"
+    ],
+    "answer": 1,
+    "explanation": "The cap is half the applied (low-frequency) test level for that winding or 10 kV, whichever is lower. So a low-voltage winding gets a lower test voltage than the HV winding. The 1000 V cap is the dry-type rule, not this one.",
+    "reference": "IEEE C57.12.90-2021, 10.10.3",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-067",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A dry-type transformer with a 13.8 kV primary gets an insulation power-factor test. C57.12.91 limits the applied voltage to:",
+    "choices": [
+      "10 kV, the same as a liquid-filled unit",
+      "The winding's operating voltage to ground or 1000 V, whichever is lower, which here is 1000 V",
+      "Half the BIL",
+      "13.8 kV"
+    ],
+    "answer": 1,
+    "explanation": "Dry-type units get a much lower ceiling than liquid-filled units: operating voltage to ground or 1000 V, whichever is lower. Using the liquid-filled 10 kV practice on a dry-type unit is the classic mistake.",
+    "reference": "IEEE C57.12.91-2020, 10.9.4",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-068",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "C57.12.91 on dry-type insulation power factor says the most useful way to judge a result is:",
+    "choices": [
+      "Comparison with the factory value and with earlier field tests, since no standard pass/fail values have been set for dry types",
+      "The same 0.5% limit used for mineral-oil transformers",
+      "Anything under 5% passes",
+      "A single reading is decisive, so trending is unnecessary"
+    ],
+    "answer": 0,
+    "explanation": "The test code says standard dry-type power-factor values have not been established, because power factor has shown little relation to dielectric withstand. Trend against the factory baseline and earlier results rather than a fixed number.",
+    "reference": "IEEE C57.12.91-2020, 10.9.5 (note)",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-069",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A 12,470 V delta to 480Y/277 V transformer is on nominal tap. When a delta winding is tested against its matching wye phase-to-neutral winding, the expected ratio is about:",
+    "choices": [
+      "26.0",
+      "15.0",
+      "77.9",
+      "45.0"
+    ],
+    "answer": 3,
+    "explanation": "On a wye winding, the ratio is judged against phase-to-neutral voltage, which is line-to-line divided by √3. 12,470 / 277 ≈ 45.0. Dividing by 480 (26.0) is the common error for delta-wye units.",
+    "reference": "IEEE C57.152-2025, 7.2.10.4",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-070",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "The calculated ratio is 45.02, and one phase measures 45.40. Against the C57.152 tolerance, that phase is:",
+    "choices": [
+      "About 0.84% off, outside the 0.5% tolerance, so investigate",
+      "About 0.08% off, acceptable",
+      "About 0.38% off, acceptable",
+      "About 8.4% off, a shorted turn for certain"
+    ],
+    "answer": 0,
+    "explanation": "(45.40 − 45.02) / 45.02 × 100 ≈ 0.84%. The guide's voltage-ratio tolerance is 0.5% of the nameplate value, so this phase needs investigation.",
+    "reference": "IEEE C57.152-2025, 7.2.10.4",
+    "verified": true,
+    "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-071",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A three-legged core-form transformer gives a low-high-low excitation-current pattern instead of the expected high-low-high. Before suspecting a winding fault, C57.152 says to check:",
+    "choices": [
+      "Only the oil dielectric strength",
+      "Whether the tank was grounded to the station grid",
+      "The test protocol, for example whether the third terminal of a delta winding was grounded or whether the wye neutral was accessible",
+      "The ambient temperature correction"
+    ],
+    "answer": 2,
+    "explanation": "On a three-legged core, the outer phases normally read high and the center phase low. The guide lists an inverted pattern as a result of not following the usual test connections, an inaccessible high-side wye neutral, or an ungrounded third delta terminal. It is also normal for a four-legged core.",
+    "reference": "IEEE C57.152-2025, 7.2.11.2.5",
+    "verified": true,
+    "kb": "transformers.md#excitation"
+  },
+  {
+    "id": "xfmr-072",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "You plan to run winding resistance, excitation current, SFRA, and TTR on the same transformer, with no demagnetizing step. C57.152 suggests:",
+    "choices": [
+      "Run excitation, FRA, and TTR first and winding resistance last, because the dc test magnetizes the core",
+      "Run winding resistance first so the core is saturated for the other tests",
+      "Order does not matter",
+      "Run winding resistance between each of the other tests"
+    ],
+    "answer": 0,
+    "explanation": "Dc winding-resistance current leaves residual magnetism that distorts excitation current and frequency response. Either demagnetize after the resistance test or put it at the end of the sequence.",
+    "reference": "IEEE C57.152-2025, 7.2.7.1 (note)",
+    "verified": true,
+    "kb": "transformers.md#excitation"
+  },
+  {
+    "id": "xfmr-073",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "Per-phase leakage reactance results on a three-phase transformer are 10.0%, 10.1%, and 10.6%. Using the C57.152 per-phase criterion, the 10.6% phase is:",
+    "choices": [
+      "Within 3% of the average, acceptable",
+      "Judged only against nameplate, not the average",
+      "Acceptable, since leakage reactance has no field limit",
+      "About 3.6% above the three-phase average, outside the 3% band, so investigate"
+    ],
+    "answer": 3,
+    "explanation": "The average is (10.0 + 10.1 + 10.6) / 3 ≈ 10.23%. 10.6 / 10.23 ≈ 1.036, which is 3.6% high. Per-phase results should sit within 3% of the three-phase average. A deviation that size can point to winding movement.",
+    "reference": "IEEE C57.152-2025, 7.2.12.1.5",
+    "verified": true,
+    "kb": "transformers.md#core"
+  },
+  {
+    "id": "xfmr-074",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A 138 kV mineral-oil power transformer tests 0.7% insulation power factor, corrected to 20 °C. C57.152 reads this as:",
+    "choices": [
+      "Normal for a new unit",
+      "Over the serviceability limit, so remove it from service now",
+      "Not comparable, since mineral oil has no published limit",
+      "Above the new or normal limit but under the 1.0% serviceability limit, so do more testing and investigation, and trend it"
+    ],
+    "answer": 3,
+    "explanation": "For mineral-oil units below 230 kV, the guide gives 0.5% as the new or normal limit and 1.0% as the serviceability limit, both at 20 °C. Results between those two call for added testing to make sure the condition is not getting worse.",
+    "reference": "IEEE C57.152-2025, 7.2.14.8",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-075",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A condenser bushing's C1 power factor has doubled since its initial test. C57.152, summarizing C57.19.100, says to:",
+    "choices": [
+      "Test it more often or remove it from service. Removal is called for if it reaches three times the initial value",
+      "Ignore it, since only capacitance matters on condenser bushings",
+      "Remove it only if it reaches ten times initial",
+      "Correct the reading to 20 °C and stop trending"
+    ],
+    "answer": 0,
+    "explanation": "A rise to 1.5 to 2 times the initial power factor means either more frequent testing or removal. Tripling means removal. Any bushing whose power factor keeps climbing should be scheduled out of service and the manufacturer consulted.",
+    "reference": "IEEE C57.152-2025, 7.3.4.1",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-076",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A solid (bulk) bushing with no test or voltage tap is mounted on the transformer. C57.152 suggests assessing it with:",
+    "choices": [
+      "A C1/C2 power-factor test through the tap",
+      "A hot collar test, judged on watt loss, with about 0.1 W as the generally accepted limit",
+      "A tip-up test at 10 kV through the tap",
+      "Insulation resistance at 15 kV"
+    ],
+    "answer": 1,
+    "explanation": "With no tap there is no C1/C2 measurement. A hot collar energizes a band around the porcelain with the conductor grounded, and you compare watt loss (about 0.1 W is the common limit) and current between similar bushings. It can also find cracks or a low oil level.",
+    "reference": "IEEE C57.152-2025, 7.3.4.1 and 7.3.4.4",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
   }
 ]

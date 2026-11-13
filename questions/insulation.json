@@ -270,5 +270,59 @@
     "reference": "Megger S1-568 user manual, per manufacturer instructions; ANSI/NETA ATS-2025 insulation-resistance tests",
     "verified": true,
     "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-016",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "A transformer winding's insulation resistance to ground reads close to zero. C57.152 says this points to a grounded winding, a winding-to-winding short, or heavy carbon tracking, and that you should:",
+    "choices": [
+      "Accept it if the oil is new",
+      "Retest at a higher voltage until it reads higher",
+      "Correct it to 20 °C, and it will pass",
+      "Confirm with other tests, such as polarization index, insulation power factor, or moisture in the insulating liquid"
+    ],
+    "answer": 3,
+    "explanation": "A very low reading is a symptom, not a diagnosis. Back it up with PI, power factor, and liquid moisture before deciding. For normal readings, comparison with factory or earlier results means more than the absolute number of megohms.",
+    "reference": "IEEE C57.152-2025, 7.2.13.4",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-017",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "A natural-ester-filled transformer reads lower insulation resistance than a similar mineral-oil unit. C57.152 says:",
+    "choices": [
+      "Ester units must meet the same absolute megohm value as mineral oil",
+      "Low insulation resistance in an ester unit always means water in the paper",
+      "This is generally expected for ester-filled units. Judge it against that unit's own factory and earlier results",
+      "Insulation resistance cannot be measured on ester units"
+    ],
+    "answer": 2,
+    "explanation": "The guide notes that ester-filled transformers generally have lower insulation resistance than mineral-oil units, and that higher temperature lowers readings too. The most useful comparison is with factory and earlier results.",
+    "reference": "IEEE C57.152-2025, 7.2.13.4",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-018",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "During a stepped dc insulation-resistance test on a transformer winding, the current starts climbing without leveling off. The guides say to:",
+    "choices": [
+      "Raise the voltage to the next step to see if it stabilizes",
+      "Hold for 10 minutes to get a PI",
+      "Switch to a lower-range megohmmeter and continue",
+      "Stop the test immediately"
+    ],
+    "answer": 3,
+    "explanation": "Current that keeps rising at constant voltage points to insulation heading toward breakdown. The test codes say to stop at once. Afterward, ground the terminals long enough for trapped charge to bleed off.",
+    "reference": "IEEE C57.12.90-2021, 10.11.4 item c); IEEE C57.152-2025, 7.2.13.3",
+    "verified": true,
+    "kb": "insulation.md#spot"
   }
 ]

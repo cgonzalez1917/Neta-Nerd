@@ -115,6 +115,12 @@
       "title": "EV charging",
       "file": "evse.json",
       "idPrefix": "evse"
+    },
+    {
+      "id": "air-switches",
+      "title": "High-voltage air switches",
+      "file": "air-switches.json",
+      "idPrefix": "airsw"
     }
   ]
 }

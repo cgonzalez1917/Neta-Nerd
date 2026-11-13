@@ -251,5 +251,275 @@
     "reference": "NFPA 70B-2026, Table 20.3.5 and 7.2.1.3.2 through 7.2.1.3.3",
     "verified": true,
     "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-015",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Fall-of-potential on a single driven rod, probes in a straight line on the same side. The current probe is 100 ft from the rod. Using the 62% rule, the potential probe goes about:",
+    "choices": [
+      "62 ft from the rod",
+      "38 ft from the rod",
+      "50 ft from the rod, halfway",
+      "100 ft from the rod, next to the current probe"
+    ],
+    "answer": 0,
+    "explanation": "The 62% rule puts the potential probe at roughly 0.618 of the rod-to-current-probe distance, measured from the electrode under test, when both probes are on the same side. 0.62 × 100 ft is about 62 ft. Measuring from the current probe end (38 ft) is the classic mix-up.",
+    "reference": "IEEE 81-2012, 8.2.2.4 and 8.2.2.4.1",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-016",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "IEEE 81 says the 62% probe position gives a trustworthy fall-of-potential reading only when:",
+    "choices": [
+      "The soil is fairly uniform, the probes are far enough out to act like hemispheres, and the electrode has no outside ground connections",
+      "The current probe is within one rod length of the electrode",
+      "The electrode stays bonded to the utility neutral during the test",
+      "The test is run at exactly 60 Hz so the reading matches power frequency"
+    ],
+    "answer": 0,
+    "explanation": "The 62% figure comes from theory for a small electrode in uniform soil with remote probes. Layered soil, short spacing, or a ground that is still tied to other grounds (neutrals, shields, other grids) all move the correct probe spot, so the rule stops applying and you fall back on plotting a curve.",
+    "reference": "IEEE 81-2012, 8.2.2.4.1",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-017",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "For a fall-of-potential test, IEEE 81 says the current probe is typically placed at least how far from the ground electrode under test?",
+    "choices": [
+      "Equal to the depth of the rod",
+      "62% of the electrode's largest dimension",
+      "About five times the largest dimension of the electrode",
+      "A fixed 10 ft, whatever the electrode size"
+    ],
+    "answer": 2,
+    "explanation": "The current probe has to be far enough out that the electrode's and probe's resistance zones do not overlap. The guide's typical figure is at least five times the electrode's largest dimension, which is why a large grid needs very long leads.",
+    "reference": "IEEE 81-2012, 8.2.2.4",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-018",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "A Wenner four-point soil test uses equal probe spacing a = 3 m, probes driven shallow (no deeper than a tenth of the spacing). The meter reads R = 5 Ω. Apparent resistivity is about:",
+    "choices": [
+      "94 Ω·m",
+      "15 Ω·m",
+      "47 Ω·m",
+      "188 Ω·m"
+    ],
+    "answer": 0,
+    "explanation": "With shallow probes the Wenner formula reduces to ρ = 2πaR. 2 × 3.1416 × 3 m × 5 Ω ≈ 94 Ω·m. Leaving out the 2 gives 47, and leaving out π gives roughly 30. The result is the average resistivity to a depth of about a.",
+    "reference": "IEEE 81-2012, 7.2.3, Equation (3)",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-019",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "You are asked to check a substation ground grid, which has many paths to earth, with a clamp-on (stakeless) ground tester. IEEE 81 says:",
+    "choices": [
+      "Clamp-on is the preferred method for substation grids because no probes are needed",
+      "The clamp-on method does not apply to a multiply connected system like a substation grid, so use fall-of-potential or another staked method",
+      "Clamp-on works on a grid if you clamp the largest down conductor",
+      "Clamp-on reads the grid correctly as long as the jaws are clean"
+    ],
+    "answer": 1,
+    "explanation": "A clamp-on meter assumes everything except the electrode under test is close to zero ohms, so it only works on one electrode tied to a low-impedance multigrounded neutral or shield. The guide lists substation grids and multiconnected poles or structures as places where the method does not apply.",
+    "reference": "IEEE 81-2012, 8.2.2.5 item d)",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-020",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "You are testing a large grid expected to read below 1 Ω, and the current and potential leads run side by side for hundreds of feet. What is the concern, and how do you fix it?",
+    "choices": [
+      "Lead resistance adds to the reading. Use a thicker potential lead",
+      "Parallel leads cancel the test current. Twist the leads together",
+      "There is no concern below 1 Ω, because coupling only matters above 10 Ω",
+      "Mutual coupling from the current lead adds voltage to the potential lead. Separate the leads or cross them at right angles"
+    ],
+    "answer": 3,
+    "explanation": "Ac coupling between parallel leads puts an error voltage on the potential circuit. It does not matter much at 10 Ω and up, but it almost always matters at 1 Ω or less, which is exactly where big grids land. Route the leads apart, or at 90° where they must cross.",
+    "reference": "IEEE 81-2012, 6.6",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-021",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "The ground tester flags low test current because the current probe's own resistance is too high in dry soil. Which fix does IEEE 81 favor?",
+    "choices": [
+      "Mix salt into the water, since salt rather than moisture is what lowers probe resistance",
+      "Lower the probe resistance: drive it deeper, wet the soil around it, or add rods in parallel spaced at least their buried length apart",
+      "Move the potential probe closer to the electrode under test",
+      "Switch the tester to a higher voltage, since test voltage above 50 V carries no extra hazard"
+    ],
+    "answer": 1,
+    "explanation": "The usual cure is to lower the current-electrode resistance. The guide notes that moisture does the work and salt adds very little. Higher-voltage instruments are possible, but above 50 V the leads and probes become a shock hazard to people.",
+    "reference": "IEEE 81-2012, 6.2",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-022",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "Three-point (triangulation) method on a rod: rod to probe 2 reads 30 Ω, rod to probe 3 reads 34 Ω, probe 2 to probe 3 reads 40 Ω. The rod resistance is:",
+    "choices": [
+      "18 Ω",
+      "32 Ω",
+      "12 Ω",
+      "52 Ω"
+    ],
+    "answer": 2,
+    "explanation": "Each reading is the sum of two electrode resistances, so solving the three equations gives r1 = (r12 + r13 − r23) / 2 = (30 + 34 − 40) / 2 = 12 Ω. If the electrodes are too close together, mutual resistance can produce nonsense such as zero or negative answers.",
+    "reference": "IEEE 81-2012, 8.2.2.2, Equation (8)",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-023",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "safety",
+    "question": "You want to test the ground lead of a surge arrester whose line terminal is still connected to an energized line. IEEE 81 says:",
+    "choices": [
+      "Never disconnect the arrester ground while the line terminal is energized, because the arrester base can rise toward line potential",
+      "Lift the ground lead briefly, since arresters carry no current at normal voltage",
+      "Disconnect the ground lead only during dry weather",
+      "Disconnect the ground lead, but wear Class 0 gloves"
+    ],
+    "answer": 0,
+    "explanation": "An arrester with its ground removed and its top still on the line can put the base near line voltage. The guide says the ground lead can be tested only with suitable precautions, and never lifted while the primary is connected to an energized line.",
+    "reference": "IEEE 81-2012, 5.2",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "gnd-024",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A fall-of-potential reading from one ground riser comes in far higher than the design value. Per IEEE 81, a sensible first step is:",
+    "choices": [
+      "Accept the reading, since one riser represents the whole grid",
+      "Move the potential probe to 90% of the current-probe distance",
+      "Divide the reading by the number of risers",
+      "Suspect a poor connection from that riser to the grid and repeat the test from other points on the grid"
+    ],
+    "answer": 3,
+    "explanation": "The test measures from the point you clip to, out to remote earth. If that conductor is poorly bonded to the grid, the reading jumps. Repeat from other risers. Large differences between them point to grid damage, and a grid integrity (continuity) test is the next step.",
+    "reference": "IEEE 81-2012, 8.2.2.4.1",
+    "verified": true,
+    "kb": "grounding.md#fop"
+  },
+  {
+    "id": "gnd-025",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "On a high-resistance grounded system, the first line-to-ground fault is usually handled by:",
+    "choices": [
+      "Instantaneous tripping of the main breaker",
+      "Letting several thousand amps flow so the feeder breaker clears it",
+      "Alarming and continuing to run, with fault current typically held to about 10 A or less",
+      "Blowing the neutral fuse"
+    ],
+    "answer": 2,
+    "explanation": "High-resistance grounding keeps ground-fault current low enough to flow for a long time, so protection is normally detection and alarm, not immediate trip. That is why the resistor needs a continuous rating, and why the fault still has to be found and cleared.",
+    "reference": "IEEE 142-2007, 1.2.7 and 1.4.3.1",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-026",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "A 4160 V wye system is to be low-resistance grounded with ground-fault current limited to 400 A. Ignoring system impedance, the neutral resistor is about:",
+    "choices": [
+      "6.0 Ω",
+      "10.4 Ω",
+      "3.5 Ω",
+      "0.6 Ω"
+    ],
+    "answer": 0,
+    "explanation": "Size the resistor from the line-to-neutral voltage: R = Vln / Ig. 4160 / √3 ≈ 2402 V, and 2402 / 400 ≈ 6.0 Ω. Using the line-to-line voltage gives 10.4 Ω, which lets less current flow than intended.",
+    "reference": "IEEE 142-2007, 1.4.3.2",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-027",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "On an ungrounded three-phase system, phase C faults solidly to ground. The two healthy phases now sit at about what voltage to ground?",
+    "choices": [
+      "Zero",
+      "Half the line-to-neutral voltage",
+      "Unchanged at line-to-neutral voltage",
+      "Line-to-line voltage, √3 times their normal line-to-neutral voltage"
+    ],
+    "answer": 3,
+    "explanation": "With one phase at ground, the system's capacitive neutral shifts, and the other two phases see full line-to-line voltage to ground. The total charging current that flows into the fault is three times the normal per-phase value.",
+    "reference": "IEEE 142-2007, 1.4.2",
+    "verified": true,
+    "kb": "grounding.md#gfp"
+  },
+  {
+    "id": "gnd-028",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A single driven rod reads 22 Ω, and someone says the plant ground system is therefore fine because it is under the NEC 25 Ω figure. IEEE 142's view is:",
+    "choices": [
+      "Correct: 25 Ω is the recommended value for industrial substations",
+      "Correct, as long as the reading was taken in dry season",
+      "The NEC figure applies only to generating stations",
+      "The 25 Ω value only decides whether a single electrode needs a supplemental electrode. It is not a satisfactory system value"
+    ],
+    "answer": 3,
+    "explanation": "The Green Book describes 1 Ω to 5 Ω as generally suitable for industrial plant substations and large commercial buildings, and below 1 Ω for large substations and generating stations. The NEC 25 Ω number is only a trigger for adding a second electrode.",
+    "reference": "IEEE 142-2007, 4.1.3",
+    "verified": true,
+    "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-029",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "When a high-resistance grounding resistor is sized, its let-through current is chosen to be:",
+    "choices": [
+      "Well below the charging current, so the fault current stays as small as possible",
+      "Equal to the three-phase bolted fault current",
+      "Large enough to trip the feeder instantaneous element",
+      "Equal to or slightly greater than the system's total capacitive charging current"
+    ],
+    "answer": 3,
+    "explanation": "Setting the resistor current at or a little above the total charging current (3Ico) is what controls transient overvoltage from arcing or restriking ground faults. A resistor that lets through less than the charging current loses that benefit. The guide also cautions against high-resistance grounding where ground-fault current would exceed about 10 A.",
+    "reference": "IEEE 142-2007, 1.4.3.1",
+    "verified": true,
+    "kb": "grounding.md#gfp"
   }
 ]

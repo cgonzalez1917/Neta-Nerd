@@ -196,5 +196,95 @@
     "reference": "NFPA 70B-2026, 15.2 and Table 9.3.2",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "mvbr-012",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "theory",
+    "question": "15 kV-class metal-clad switchgear has a factory power-frequency withstand of 36 kV. Per C37.20.2, the highest power-frequency withstand to apply in the field is:",
+    "choices": [
+      "36 kV",
+      "27 kV",
+      "18 kV",
+      "37.5 kV"
+    ],
+    "answer": 1,
+    "explanation": "Field power-frequency withstand on metal-clad gear is limited to 75% of the factory value: 0.75 × 36 = 27 kV. 37.5 kV is the separate dc field value for this class.",
+    "reference": "IEEE C37.20.2-2025, 6.4 and Table 1",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-013",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "You want a dc field withstand on 27 kV-class metal-clad switchgear. C37.20.2 says:",
+    "choices": [
+      "Use 37.5 kV, the same as the 15 kV class",
+      "No dc value is recommended for that class. Contact the manufacturer before applying dc",
+      "Use twice the rated voltage",
+      "Use 75% of BIL"
+    ],
+    "answer": 1,
+    "explanation": "The field dc table gives values only for the lower classes (20 kV for 4.76 kV gear, 37.5 kV for 8.25 kV and 15 kV gear). For 27 kV and above it gives no value, because dc voltage distributes unevenly. The manufacturer has to be asked.",
+    "reference": "IEEE C37.20.2-2025, 6.4 and Table 8",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-014",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Before a field dielectric withstand on a metal-clad lineup, C37.20.2 says to disconnect these at their terminals:",
+    "choices": [
+      "The main bus and the ground bus",
+      "The breaker secondary disconnects only",
+      "Nothing. Test the gear as assembled",
+      "Voltage transformers, control power transformers, and surge arresters mounted in the gear"
+    ],
+    "answer": 3,
+    "explanation": "VTs, CPTs, and arresters would either load the test set or be overstressed, so they come off at their terminals and are tested under their own standards. With dc, also short or disconnect wound-type CT primaries in the primary circuit.",
+    "reference": "IEEE C37.20.2-2025, 6.4",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-015",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A metal-clad breaker is racked partway, between test and connected. Per C37.20.2, the interlocks should:",
+    "choices": [
+      "Allow closing, since the shutters are open",
+      "Keep it from closing until it is fully connected or in the test position",
+      "Allow closing only by the manual push button",
+      "Trip the upstream main"
+    ],
+    "answer": 1,
+    "explanation": "One required interlock blocks closing unless the primary disconnects are fully engaged or a safe distance apart (the test position). Another keeps a closed breaker from being moved to or from the connected position. Check both before the gear is energized.",
+    "reference": "IEEE C37.20.2-2025, 7.10 items a) and b); 9.5",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-016",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Which feature is part of the C37.20.2 definition of metal-clad switchgear, and not required of all metal-enclosed gear?",
+    "choices": [
+      "A fixed-mounted breaker bolted to the bus",
+      "Bare primary bus with no barriers between compartments",
+      "Fuses in place of a breaker",
+      "Primary bus and connections covered with insulating material throughout, plus automatic shutters over the primary disconnects"
+    ],
+    "answer": 3,
+    "explanation": "Metal-clad gear means a drawout interrupting device with self-aligning disconnects, grounded metal barriers around the major primary parts, automatic shutters, insulated primary bus, and mechanical interlocks. Fixed breakers or bare bus are not metal-clad.",
+    "reference": "IEEE C37.20.2-2025, 3.1 (metal-clad switchgear)",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]
