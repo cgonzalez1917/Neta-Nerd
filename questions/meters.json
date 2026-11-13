@@ -4,7 +4,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "A load draws 200 kW at 0.80 power factor. The formula sheet gives kW = kVA \u00d7 PF. It does not print the kvar identity. What is the reactive power?",
+    "question": "A load draws 200 kW at 0.80 power factor. The formula sheet gives power factor as kW/kVA. It does not print the kvar identity. What is the reactive power?",
     "choices": [
       "50 kvar",
       "160 kvar",
@@ -113,7 +113,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Calculated ratio is 28.75. The TTR reads 28.95. Percent deviation from calculated, which the formula sheet does not print, is about:",
+    "question": "Calculated ratio is 28.75. The TTR reads 28.95. Percent accuracy, (actual \u2212 specified) / specified \u00d7 100, is about:",
     "choices": [
       "0.20%",
       "0.70%",
@@ -121,8 +121,8 @@
       "7.0%"
     ],
     "answer": 1,
-    "explanation": "(28.95 \u2212 28.75) / 28.75 \u00d7 100 = 0.70%. Whether 0.70% passes is a separate ATS limit (one-half percent). This item is only the arithmetic.",
-    "reference": "Engineering fundamentals (turns-ratio percent deviation); ANSI/NETA ATS-2025 7.2.2.D.3",
+    "explanation": "(28.95 \u2212 28.75) / 28.75 \u00d7 100 = 0.70%. The formula sheet prints that percent-accuracy form. Whether 0.70% passes is a separate ATS limit (one-half percent). This item is that arithmetic.",
+    "reference": "NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3",
     "verified": true,
     "kb": "math.md#ttr-pct"
   },
@@ -222,17 +222,17 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Which of these is on the NETA formula sheet, as the TestGuy study guide describes that sheet, so you should not re-derive it from memory?",
+    "question": "Which of these identities is printed on the NETA certification exam formula sheet?",
     "choices": [
       "1 hp = 746 W",
-      "Copper constant 234.5",
-      "PI = 10 min / 1 min",
-      "\u00b0C rise \u00d7 1.8 = \u00b0F rise"
+      "XC = 1/(2\u03c0fC)",
+      "The copper temperature constant 234.5",
+      "PI = 10 min / 1 min"
     ],
-    "answer": 0,
-    "explanation": "The study guide lists horsepower at 746 W among the supplied formulas. The copper constant, the PI time points, and the rise-only Celsius conversion are exactly the things that list says you do not get.",
-    "reference": "TestGuy study guide summary of the NETA formula sheet (about 2017)",
-    "verified": false,
+    "answer": 1,
+    "explanation": "The March 2020 formula sheet, shown on screen during the exam, includes XC = 1/(2\u03c0fC). It does not include 1 hp = 746 W, the copper constant 234.5, or the polarization-index time points. Those three have to be memorized.",
+    "reference": "NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020)",
+    "verified": true,
     "kb": "math.md#not-on-sheet"
   },
   {
@@ -518,7 +518,7 @@
       "80 kvar"
     ],
     "answer": 1,
-    "explanation": "kVA = 36 / 0.80 = 45. kvar = \u221a(45\u00b2 \u2212 36\u00b2) = \u221a(2025 \u2212 1296) = \u221a729 = 27. The 45 is apparent power. The square root is not printed on the formula sheet.",
+    "explanation": "kVA = 36 / 0.80 = 45. kvar = \u221a(45\u00b2 \u2212 36\u00b2) = \u221a(2025 \u2212 1296) = \u221a729 = 27. The 45 is apparent power. That kvar square root is not printed on the formula sheet.",
     "reference": "Engineering fundamentals (power triangle)",
     "verified": true,
     "kb": "math.md#power"
@@ -626,7 +626,7 @@
       "90"
     ],
     "answer": 0,
-    "explanation": "PF = kW / kVA = 90/100 = 0.90. The formula sheet does give kW = kVA \u00d7 PF, so this one rearranges a line you are handed. 1.11 is the fraction upside down.",
+    "explanation": "PF = kW / kVA = 90/100 = 0.90. The sheet prints power factor as kW/kVA, so this rearranges a line you are handed. 1.11 is the fraction upside down.",
     "reference": "Engineering fundamentals (power factor)",
     "verified": true,
     "kb": "math.md#power"
@@ -662,7 +662,7 @@
       "75 A"
     ],
     "answer": 0,
-    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. The three-phase VA identity is on the sheet; the rearrangement is yours.",
+    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. Three-phase power, \u221a3 \u00d7 V \u00d7 I, is not on the formula sheet. You have to remember it.",
     "reference": "Engineering fundamentals (three-phase current)",
     "verified": true,
     "kb": "math.md#power"

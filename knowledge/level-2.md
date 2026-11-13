@@ -32,6 +32,6 @@ NETA’s technician-certification pages describe the administered exams as close
 
 Level I is an employer assessment, not one of those Pearson VUE exams. Confirm the current sheet on NETA’s exam-preparation page before test day: https://www.netaworld.org/accreditation/exam-preparation
 
-The TestGuy Level II study guide (wiki.testguy.net/t/217) is the source for what is missing from the formula sheet: trig, most of the power triangle beyond `kW = kVA × PF`, copper constants, insulation multipliers, and the PI time points. The on-screen calculator is commonly a TI-30XS style. Confirm degree mode before any cosine or angle.
+The on-screen formula sheet is the one-page Formulae Sheet dated March 2020, linked from https://www.netaworld.org/accreditation/exam-preparation. What it prints, and what you still have to memorize, is on the math page. The on-screen calculator is commonly a TI-30XS style. Confirm degree mode before any cosine or angle.
 
 Do not treat forum posts that recall specific items as the exam. This bank writes original questions about the same skills.

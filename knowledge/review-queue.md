@@ -4,7 +4,7 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 462 (Level II 303, Level III 159).
+Count: 461 (Level II 302, Level III 159).
 
 A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. Items that still need a source are under [Needs source](#needs-source). The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK. ir-007 (ETT) and math-023 (Level I) were in the first pass and are noted at the end, because this queue is Level II and Level III only.
 
@@ -779,7 +779,7 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-A load draws 200 kW at 0.80 power factor. The formula sheet gives kW = kVA × PF. It does not print the kvar identity. What is the reactive power?
+A load draws 200 kW at 0.80 power factor. The formula sheet gives power factor as kW/kVA. It does not print the kvar identity. What is the reactive power?
 
 - 0. 50 kvar
 - 1. 160 kvar
@@ -881,14 +881,14 @@ Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 **Bank verified flag:** true
 
-Calculated ratio is 28.75. The TTR reads 28.95. Percent deviation from calculated, which the formula sheet does not print, is about:
+Calculated ratio is 28.75. The TTR reads 28.95. Percent accuracy, (actual − specified) / specified × 100, is about:
 
 - 0. 0.20%
 - 1. 0.70% **← answer**
 - 2. 2.0%
 - 3. 7.0%
 
-**Citation:** Engineering fundamentals (turns-ratio percent deviation); ANSI/NETA ATS-2025 7.2.2.D.3
+**Citation:** NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3
 
 Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
@@ -7827,26 +7827,7 @@ Reviewer: VERIFIED or FIX
 
 ## Needs source
 
-These two items stayed `verified: false`. The deciding fact needs a source this review did not have.
-
-### math-013 (II / theory) {#math-013}
-
-<!-- q:math-013 -->
-
-**Bank verified flag:** false
-
-Which of these is on the NETA formula sheet, as the TestGuy study guide describes that sheet, so you should not re-derive it from memory?
-
-- 0. 1 hp = 746 W **← answer**
-- 1. Copper constant 234.5
-- 2. PI = 10 min / 1 min
-- 3. °C rise × 1.8 = °F rise
-
-**Citation:** TestGuy study guide summary of the NETA formula sheet (about 2017)
-
-**Needs source:** the current NETA certification exam formula sheet. It is not a standard, and it was not in the lookup set. Whether 746 W/hp is on that sheet, and the other three values are not, can only be checked against the sheet itself.
-
-Reviewer: neta field ref, Nov 12 2026 — NEEDS-SOURCE
+This item stayed `verified: false`. The deciding fact needs a source this review did not have.
 
 ### safety-080 (II / safety) {#safety-080}
 
