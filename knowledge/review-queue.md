@@ -4,9 +4,9 @@ Level II and Level III questions for a human pass. The bank flag `verified: true
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 461 (Level II 302, Level III 159).
+Count: 460 (Level II 301, Level III 159).
 
-A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. Items that still need a source are under [Needs source](#needs-source). The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK. ir-007 (ETT) and math-023 (Level I) were in the first pass and are noted at the end, because this queue is Level II and Level III only.
+A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK. ir-007 (ETT) and math-023 (Level I) were in the first pass and are noted at the end, because this queue is Level II and Level III only.
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -7824,29 +7824,6 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 **Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
 
 Reviewer: VERIFIED or FIX
-
-## Needs source
-
-This item stayed `verified: false`. The deciding fact needs a source this review did not have.
-
-### safety-080 (II / safety) {#safety-080}
-
-<!-- q:safety-080 -->
-
-**Bank verified flag:** false
-
-A one-line symbol for a surge arrester is defined in:
-
-- 0. ATS Table 100.1
-- 1. IEEE 315 graphic symbols, which this bank does not have, so no symbol is graded here **← answer**
-- 2. NFPA 70E Table 130.4(E)(a)
-- 3. The glove voltage table
-
-**Citation:** IEEE 315 not in the lookup set; ATS 7.19.2 identifies the arrester by nameplate, not by a symbol quiz
-
-**Needs source:** IEEE 315 (graphic symbols). It was not in the lookup set, so this review could not confirm the symbol standard. The item grades no symbol.
-
-Reviewer: neta field ref, Nov 12 2026 — NEEDS-SOURCE
 
 ## Reviewed outside this queue
 

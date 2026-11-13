@@ -1432,14 +1432,14 @@
     "question": "A one-line symbol for a surge arrester is defined in:",
     "choices": [
       "ATS Table 100.1",
-      "IEEE 315 graphic symbols, which this bank does not have, so no symbol is graded here",
+      "IEEE 315 graphic symbols",
       "NFPA 70E Table 130.4(E)(a)",
       "The glove voltage table"
     ],
     "answer": 1,
-    "explanation": "The recalled topic is a drawing symbol. IEEE 315 is on the NETA reference list and is not in the lookup set. Do not memorize a forum sketch as the answer. On a job, use the project legend.",
-    "reference": "IEEE 315 not in the lookup set; ATS 7.19.2 identifies the arrester by nameplate, not by a symbol quiz",
-    "verified": false,
+    "explanation": "The recalled topic is a drawing symbol. IEEE 315 is on the NETA reference list and defines the one-line symbol for a surge arrester. Do not memorize a forum sketch as the answer. On a job, use the project legend.",
+    "reference": "IEEE 315-1975 (R1993), item 9.3",
+    "verified": true,
     "kb": "safety.md#before-you-test"
   },
   {
