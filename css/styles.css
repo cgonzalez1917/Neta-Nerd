@@ -170,6 +170,15 @@ h2 { font-size: 1.25rem; margin: 0 0 8px; }
 .dot.on { color: var(--text); border-color: var(--text-dim); }
 .dot.here { border-color: var(--amber); color: var(--amber); }
 
+.resume-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  margin: 0 0 14px;
+  box-shadow: var(--shadow), inset 4px 0 0 var(--amber);
+}
+.resume-banner .resume-copy { margin: 0; }
+.resume-banner .resume-copy b { color: var(--amber); letter-spacing: 0.02em; }
+.resume-banner .actions { margin-top: 0; }
+.resume-banner .timer { color: var(--cyan); }
 .timer { font-family: var(--mono); color: var(--amber); font-size: 1.1rem; }
 .timer.mock { font-size: 1.7rem; font-weight: 700; letter-spacing: 0.04em; }
 .timer.low { color: var(--bad); }
@@ -225,6 +234,8 @@ h2 { font-size: 1.25rem; margin: 0 0 8px; }
   .timer.mock { font-size: 1.45rem; }
   .dot { width: 40px; height: 40px; }
   .mock-nav .btn { flex: 1 1 calc(50% - 8px); }
+  .resume-banner .actions { width: 100%; }
+  .resume-banner .actions .btn { flex: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto; }
