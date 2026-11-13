@@ -91,43 +91,6 @@
     "kb": "insulation.md#spot"
   },
   {
-    "id": "ir-006",
-    "level": "I",
-    "topic": "insulation-resistance",
-    "domain": "component",
-    "question": "No manufacturer data is available for a 600 V breaker insulation-resistance test. Table 100.1 says to apply:",
-    "choices": [
-      "500 V DC, 25 M\u03a9 minimum",
-      "1000 V DC, 100 M\u03a9 minimum at 20 \u00b0C",
-      "2500 V DC, 500 M\u03a9 minimum",
-      "5000 V DC, 5000 M\u03a9 minimum"
-    ],
-    "answer": 1,
-    "explanation": "The 600 V row is a 1000 V DC test and 100 M\u03a9 at 20 \u00b0C. 500 V / 25 M\u03a9 is the 250 V row. The higher rows are for higher equipment ratings. Correct temperature before you use the minimum.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.1",
-    "verified": true,
-    "kb": "insulation.md#spot"
-  },
-  {
-    "id": "ir-007",
-    "level": "ETT",
-    "topic": "insulation-resistance",
-    "domain": "component",
-    "question": "A megohmmeter is used to:",
-    "choices": [
-      "Measure a ground rod with a fall-of-potential test",
-      "Apply DC and read insulation resistance in megohms",
-      "Inject primary current through a breaker trip unit",
-      "Measure power factor of transformer oil by ASTM D924"
-    ],
-    "answer": 1,
-    "explanation": "The megohmmeter is a DC insulation instrument. Ground resistance uses a ground tester. Primary injection uses a high-current set. Oil power factor is a liquid sample test, not a megger reading on the winding.",
-    "reference": "Engineering fundamentals; ANSI/NETA ATS-2025 7.13.B.2 and 7.2.2",
-    "verified": true,
-    "kb": "insulation.md#spot",
-    "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
-  },
-  {
     "id": "ir-008",
     "level": "III",
     "topic": "insulation-resistance",

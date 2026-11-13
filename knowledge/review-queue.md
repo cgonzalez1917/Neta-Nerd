@@ -6,7 +6,7 @@ Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any
 
 Count: 460 (Level II 301, Level III 159).
 
-A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK. ir-007 (ETT) and math-023 (Level I) were in the first pass and are noted at the end, because this queue is Level II and Level III only.
+A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK.
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -7824,10 +7824,3 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 **Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
 
 Reviewer: VERIFIED or FIX
-
-## Reviewed outside this queue
-
-This file lists Level II and Level III only. The same pass also covered two items that sit outside it.
-
-- ir-007 (ETT) — VERIFIED. Reviewer: neta field ref, Nov 12 2026. Citation: Engineering fundamentals; ANSI/NETA ATS-2025 7.13.B.2 and 7.2.2
-- math-023 (Level I) — VERIFIED. Reviewer: neta field ref, Nov 12 2026. Citation: Engineering fundamentals (Ohm's law)

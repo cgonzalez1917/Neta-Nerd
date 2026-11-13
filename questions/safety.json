@@ -237,42 +237,6 @@
     "kb": "safety.md#instruments"
   },
   {
-    "id": "safety-014",
-    "level": "ETT",
-    "topic": "electrical-safety",
-    "domain": "safety",
-    "question": "OSHA 3120 contrasts a lockout device with a tagout device. Which description matches the booklet?",
-    "choices": [
-      "They provide the same protection; the tag is only a different color",
-      "A lock is a positive restraint that takes force or a key to defeat; a tag is a warning and, by itself, protects less",
-      "A tag is stronger because more people can read it",
-      "Locks are only for mechanical valves, tags are only for electrical breakers"
-    ],
-    "answer": 1,
-    "explanation": "OSHA 3120 describes lockout devices as positive restraints and tagout devices as prominent warnings that are easier to remove and provide less protection on their own. The electrical sequence you still follow in the field is NFPA 70E-2024 120.6.",
-    "reference": "OSHA 3120 (2002 rev.), lockout and tagout device descriptions",
-    "verified": true,
-    "kb": "safety.md#loto"
-  },
-  {
-    "id": "safety-015",
-    "level": "I",
-    "topic": "electrical-safety",
-    "domain": "safety",
-    "question": "On Table 130.4(E)(a), the restricted approach boundary for fixed exposed parts at 50 V to 150 V is:",
-    "choices": [
-      "1 ft 0 in",
-      "Avoid contact",
-      "3 ft 6 in",
-      "Not specified"
-    ],
-    "answer": 1,
-    "explanation": "The 50\u2013150 V row lists a limited approach of 3 ft 6 in for fixed parts and a restricted approach of avoid contact. Not specified is the under-50 V row. 1 ft 0 in is the restricted boundary starting at 151 V.",
-    "reference": "NFPA 70E-2024 Table 130.4(E)(a), 50-150 V row",
-    "verified": true,
-    "kb": "safety.md#boundaries"
-  },
-  {
     "id": "safety-016",
     "level": "IV",
     "topic": "electrical-safety",

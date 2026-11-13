@@ -8,7 +8,8 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const LEVELS = new Set(["ETT", "I", "II", "III", "IV"]);
+const LEVELS = new Set(["II", "III", "IV"]);
+const REMOVED_LEVELS = new Set(["ETT", "I"]);
 const DOMAINS = new Set(["safety", "theory", "component", "systems"]);
 const REQUIRED = ["id", "level", "topic", "domain", "question", "choices", "answer", "explanation", "reference", "verified", "kb"];
 const OPTIONAL = new Set(["link"]);
@@ -48,8 +49,10 @@ for (const topic of index.topics) {
       if (!REQUIRED.includes(key) && !OPTIONAL.has(key)) fail(`${where} unknown field ${key}`);
     }
     if (typeof q.id !== "string" || !idRe.test(q.id)) fail(`${where} id must match ${topic.idPrefix}-###`);
-    if (q.level == null || (typeof q.level === "string" && !q.level.trim())) fail(`${where} missing level`);
-    else if (!LEVELS.has(q.level)) fail(`${where} bad level ${q.level}; expected ETT, I, II, III, or IV`);
+    const levelValues = Array.isArray(q.level) ? q.level : [q.level];
+    if (q.level == null || (typeof q.level === "string" && !q.level.trim()) || (Array.isArray(q.level) && !q.level.length)) fail(`${where} missing level`);
+    else if (levelValues.some((level) => REMOVED_LEVELS.has(level))) fail(`${where} level ${JSON.stringify(q.level)} is not allowed; ETT and I were removed`);
+    else if (levelValues.length !== 1 || !LEVELS.has(levelValues[0])) fail(`${where} bad level ${JSON.stringify(q.level)}; expected II, III, or IV`);
     if (!DOMAINS.has(q.domain)) fail(`${where} bad domain ${q.domain}`);
     if (q.topic !== topic.id) fail(`${where} topic ${q.topic} != ${topic.id}`);
     if (typeof q.question !== "string" || !q.question.trim()) fail(`${where} empty question`);
@@ -110,7 +113,7 @@ if (errors.length) {
 }
 
 console.log(`OK ${questions.length} questions, ${verified} marked verified.`);
-for (const level of ["ETT", "I", "II", "III", "IV"]) {
+for (const level of ["II", "III", "IV"]) {
   const row = by[level] || {};
   const n = Object.values(row).reduce((a, b) => a + b, 0);
   const bits = ["safety", "theory", "component", "systems"].map((d) => `${d} ${row[d] || 0}`).join(", ");

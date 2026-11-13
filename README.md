@@ -1,6 +1,6 @@
 # Neta Nerd
 
-Practice drills for NETA electrical testing: ETT and certification Levels I–IV, weighted toward Level II and then Level III. The questions are original. They are not recalled exam items, and this site is not affiliated with NETA, NFPA, or IEEE.
+Practice drills for NETA electrical testing: certification Levels II–IV, weighted toward Level II and then Level III. The questions are original. They are not recalled exam items, and this site is not affiliated with NETA, NFPA, or IEEE.
 
 The question bank is JSON under `questions/`. The study notes question-writers use are Markdown under `knowledge/`. Nothing here needs a build.
 
