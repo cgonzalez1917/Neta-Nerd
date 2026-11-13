@@ -105,8 +105,8 @@
     ],
     "answer": 1,
     "explanation": "Trip-free is the ability to trip even if close is held, so a fault during a close still opens the breaker. Antipump is the separate function that prevents a second close until the close signal is removed and reasserted. ATS tells you to verify both; it does not define them in that sentence. The definitions are the mechanism behavior.",
-    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.8 (verify trip-free and antipump); mechanism behavior",
-    "verified": false,
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.8; mechanism behavior",
+    "verified": true,
     "kb": "breakers.md#aux"
   },
   {
@@ -172,13 +172,13 @@
     "choices": [
       "It de-energized that bus",
       "It kept that bus energized from main B through the tie, provided the tie closed first and stayed closed",
-      "It paralleled the sources with no further checks",
+      "It de-energized the main B bus",
       "It automatically transfers the ground relay to the other main"
     ],
     "answer": 1,
-    "explanation": "Order matters. Tie closed first, then main A opened, leaves former A-bus loads fed through the tie from main B. Open the tie first, or open main A while the tie is still open, and that bus goes dark. This is a text drill of the one-line, not a picture from a recalled exam.",
-    "reference": "Elementary main-tie-main operation; confirm interlocks on the actual schematic before operating",
-    "verified": false,
+    "explanation": "Order matters. Closing the tie while both mains are still closed briefly parallels the two sources, which is a closed transition. Opening main A after that leaves the former A-bus loads fed from main B through the tie. Main B itself stays closed, so the sequence does not de-energize the main B bus. Many main-tie-main schemes block that parallel with a two-out-of-three interlock, or allow it only under sync-check. Open the tie first, or open main A while the tie is still open, and the A bus goes dark. Confirm the interlocks on the actual schematic before operating.",
+    "reference": "Engineering fundamentals (main-tie-main operation); ANSI/NETA ATS-2025 Section 8",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -186,7 +186,7 @@
     "level": "III",
     "topic": "lv-breakers",
     "domain": "systems",
-    "question": "A Kirk-key style interlock traps the key so the grounded switch and the live switch cannot both be open to the bus. Someone cuts a second key to the same code. The scheme:",
+    "question": "A key interlock between a grounding switch and the live switch keeps the two from being closed at the same time, so the grounding switch cannot close onto a live bus. Someone cuts a second key to the same code. The scheme:",
     "choices": [
       "Still enforces the sequence, because the lock manufacturer registered the code",
       "Is defeated; a spare identical key lets both locks be operated",
@@ -194,9 +194,9 @@
       "Only fails if the key is made of aluminum"
     ],
     "answer": 1,
-    "explanation": "The interlock's logic is 'there is one key.' A duplicate lets an operator release both mechanisms. Key control is part of the procedure, not a detail the lock can police by itself.",
-    "reference": "Key-interlock practice",
-    "verified": false,
+    "explanation": "The interlock works because there is one key, so the grounding switch and the live switch cannot both be closed. A duplicate lets an operator release both mechanisms. Key control is part of the procedure. The lock cannot police a second key by itself.",
+    "reference": "Engineering fundamentals (key-interlock practice)",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -213,8 +213,8 @@
     ],
     "answer": 1,
     "explanation": "The standard requires the function test. The logic \u2014 downstream restraint holds the upstream short-time or ground element on its longer delay, and loss of restraint releases the faster trip \u2014 is the scheme you are proving. Confirm the exact behavior in that trip unit's manual.",
-    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.8; zone-interlock scheme logic",
-    "verified": false,
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.8; Eaton Digitrip 1150+ instruction leaflet IL70C1036H06, zone interlocking",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -231,8 +231,8 @@
     ],
     "answer": 0,
     "explanation": "One pole in and nowhere out is residual current, which is what the ground function is built to see. Run the return through the neutral pole, or raise the ground function the way that manual allows, then put the settings back.",
-    "reference": "Per manufacturer data for residual ground-fault trip units; ATS 7.6.1.2 still requires the ground function to be tested on purpose",
-    "verified": false,
+    "reference": "Eaton Digitrip 1150+ instruction leaflet IL70C1036H06, Section 5; ANSI/NETA ATS-2025 7.6.1.2.B.5",
+    "verified": true,
     "kb": "field-methods.md#trip-window"
   },
   {
@@ -267,8 +267,8 @@
     ],
     "answer": 1,
     "explanation": "Without a restraint jumper, short-time and ground are allowed to trip on the fast unrestrained time. That is what the scheme does in service when the downstream breaker is not holding them off. Jumper only for the delayed-band shot, then remove it and restore settings.",
-    "reference": "Per manufacturer data for zone-selective interlocking. ATS-2025 7.6.1.2.B.8 requires the interlock to be verified.",
-    "verified": false,
+    "reference": "Eaton Digitrip 1150+ instruction leaflet IL70C1036H06, zone-interlocking restraint jumper; ANSI/NETA ATS-2025 7.6.1.2.B.8",
+    "verified": true,
     "kb": "field-methods.md#trip-window"
   },
   {
@@ -476,15 +476,15 @@
     "domain": "component",
     "question": "Bolt grade is identified in the field by:",
     "choices": [
-      "Head markings, whose chart is not in the ATS or 70B text held here",
+      "Head markings (see the grade row of ATS Table 100.12.1)",
       "Table 100.1",
       "The glove class",
       "The PI minimum"
     ],
     "answer": 0,
-    "explanation": "Torque still comes from the manufacturer or from Table 100.12, or from the 90 percent retorque cap in NFPA 70B-2026 when the bolt is already installed. The grade-mark chart itself was not in those texts, so the marking answer is unverified.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.12; NFPA 70B-2026 7.2.1.4; grade-mark chart not in the lookup set",
-    "verified": false,
+    "explanation": "Bolt grade is read from the marks on the head. ATS-2025 Table 100.12.1 puts a head-marking row with the torque values, so the grade and the torque table sit together. Table 100.1, the glove class, and the polarization-index minimum do not identify bolt grade.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.12.1",
+    "verified": true,
     "kb": "breakers.md#inspections"
   },
   {

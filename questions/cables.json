@@ -50,8 +50,8 @@
     ],
     "answer": 2,
     "explanation": "I = 2\u03c0fCV, so the ratio of frequencies is 60 / 0.1 = 600. That is why a VLF set can energize a long cable a 60 Hz set cannot. The voltage and the hold time still have to be the table values.",
-    "reference": "Capacitive charging current; IEEE 400.2 / ATS Table 100.6.3 is the voltage table",
-    "verified": false,
+    "reference": "Engineering fundamentals (I = 2\u03c0fCV); ANSI/NETA ATS-2025 Table 100.6.3",
+    "verified": true,
     "kb": "cables.md#vlf"
   },
   {

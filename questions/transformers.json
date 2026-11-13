@@ -268,9 +268,9 @@
       "The low-voltage bushing BIL"
     ],
     "answer": 1,
-    "explanation": "The test-set method is 10 kV unless that exceeds the winding rating, in which case you stay at or slightly below the rating. On a wye that rating for the test is line-to-ground, not line-to-line. Lift the neutral ground strap for the specimen test and put it back.",
-    "reference": "Power-factor test method. ATS-2025 7.2.2.D.4 is the corrected limit you compare with after the shot.",
-    "verified": false,
+    "explanation": "On a wye winding, keep the power-factor test voltage at or a little under the winding's line-to-ground rating. Do not use the line-to-line rating, and do not go above the winding. Lift the neutral ground strap for the specimen measurement and put it back when you are done. ATS-2025 7.2.2.B.4 is the test method and 7.2.2.D.4 is the corrected result you compare afterward.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.4 and 7.2.2.D.4; test-equipment practice",
+    "verified": true,
     "kb": "field-methods.md#pf-method"
   },
   {

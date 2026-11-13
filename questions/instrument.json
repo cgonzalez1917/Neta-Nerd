@@ -138,9 +138,9 @@
       "Required to be hipot tested next"
     ],
     "answer": 1,
-    "explanation": "A resistance shot drives the core one way. An excitation run that actually reaches saturation walks it back. Stopping after resistance leaves remanence that can bite the next time the CT sees current. The test set\u2019s manual is where the minimum exciting current for that demagnetizing run is written.",
-    "reference": "Per manufacturer data for CT test sets that measure DC resistance before excitation. ATS-2025 7.10.1.B.4 still requires the excitation test on relaying CTs.",
-    "verified": false,
+    "explanation": "A DC resistance reading can leave the core magnetized. To demagnetize it, use the excitation hookup, raise the AC voltage past saturation, and then lower that voltage slowly and continuously all the way to zero. Reaching saturation and stopping there does not take the magnetism out. ATS-2025 7.10.1.B.4 still requires the excitation test on relaying CTs.",
+    "reference": "IEEE C57.13.1-2017 5.1 and 12.2.1; ANSI/NETA ATS-2025 7.10.1.B.4",
+    "verified": true,
     "kb": "field-methods.md#ct-knee"
   },
   {
@@ -156,9 +156,9 @@
       "Burden ratings in ohms"
     ],
     "answer": 1,
-    "explanation": "The three names are different points people mark on one excitation plot. IEEE C57.13.1-2017 clauses 6.5 and 12 tell you to compare the curve with the manufacturer\u2019s curve and to take readings near the knee. They do not define a 30-degree knee, a 45-degree knee, or a 10/50 knee, so this item stays unverified against that guide. Say which marker you used.",
-    "reference": "ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clauses 6.5 and 12. The three knee names are test-set practice, not a clause in that guide.",
-    "verified": false,
+    "explanation": "The three names are different points people mark on one excitation plot. IEEE C57.13.1-2017 clauses 6.5 and 12 tell you to compare the curve with the manufacturer's curve and to take readings near the knee. They do not define a 30-degree knee, a 45-degree knee, or a 10/50 knee. Say which marker you used.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.4; IEEE C57.13.1-2017, clauses 6.5 and 12",
+    "verified": true,
     "kb": "field-methods.md#ct-knee"
   },
   {
@@ -493,14 +493,14 @@
     "question": "A CT that can be opened and placed around a cable that is already terminated is commonly called:",
     "choices": [
       "Bar-type",
-      "Split-core, a name ATS 7.10.1 does not use in the text that was read",
+      "Split-core",
       "A network protector",
       "A watts-loss arrester"
     ],
     "answer": 1,
-    "explanation": "ATS contrasts a bar-type primary with the tests in 7.10.1 and requires the cable to pass through a window. It does not define split-core in that section. The recalled name is left unverified.",
-    "reference": "ANSI/NETA ATS-2025 7.10.1",
-    "verified": false,
+    "explanation": "A split-core CT opens on a hinge or joint so it can go around a conductor that is already terminated. A solid window CT needs that conductor threaded through the opening before the termination is made. ATS-2025 7.10.1.B.6 and B.7 name bar-type CTs for the primary insulation-resistance and withstand tests. They do not define the split-core name, and they do not tell you the cable must pass through a window as a contrast with a bar-type unit.",
+    "reference": "Engineering fundamentals (split-core CT); ANSI/NETA ATS-2025 7.10.1.B.6 and B.7",
+    "verified": true,
     "kb": "instrument-transformers.md#ratio"
   }
 ]

@@ -85,9 +85,9 @@
       "Report 25 \u03a9 because that is the NEC cap"
     ],
     "answer": 1,
-    "explanation": "IEEE 81, which ATS 7.13 sends you to, wants the potential probe in a flat part of the curve. A constant slope means the current probe is still inside the electrode\u2019s influence. The 25 \u03a9 figure is a different rule and is not this test\u2019s target.",
-    "reference": "ANSI/NETA ATS-2025 7.13.B.2; IEEE 81 method",
-    "verified": false,
+    "explanation": "If the fall-of-potential curve never flattens, the current probe is still inside the electrode's resistance area. Move it farther out until a flat section appears, and set the potential probe on that flat part. ATS-2025 7.13.B.2 names fall-of-potential for this test. The 25 \u03a9 figure is a different rule and is not this test's target.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; engineering fundamentals (fall-of-potential)",
+    "verified": true,
     "kb": "grounding.md#fop"
   },
   {
@@ -103,9 +103,9 @@
       "Satisfy ATS 7.13 by itself"
     ],
     "answer": 1,
-    "explanation": "A clamp-on looks at a loop. With the bond open there is no loop, and the number is not the electrode resistance ATS asks you to compare with 5 \u03a9 or 1 \u03a9. Fall-of-potential is the method 7.13 names.",
-    "reference": "Clamp-on ground-tester limitation; ATS 7.13.B.2 names fall-of-potential or an IEEE 81 alternative",
-    "verified": false,
+    "explanation": "A clamp-on looks at a loop. With the bond open there is no loop, and the number is not the electrode's resistance to earth. ATS 7.13.D.2 is where the 5 \u03a9 and 1 \u03a9 comparison values sit. Fall-of-potential is the method 7.13.B.2 names.",
+    "reference": "Engineering fundamentals (clamp-on ground tester); ANSI/NETA ATS-2025 7.13.B.2 and 7.13.D.2",
+    "verified": true,
     "kb": "grounding.md#fop"
   },
   {

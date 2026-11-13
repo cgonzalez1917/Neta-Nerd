@@ -1473,9 +1473,9 @@
       "Ignore it if the mimic is correct"
     ],
     "answer": 1,
-    "explanation": "NFPA 70E puts energized work last and requires an electrically safe condition when the task allows it. The specific claim that a sweet smell is ozone was not found as a numbered rule in the texts on hand, so that diagnosis stays unverified. The work practice does not.",
-    "reference": "NFPA 70E-2024 110.2; ozone diagnosis not found in the lookup set",
-    "verified": false,
+    "explanation": "Hissing and a sweet smell can be corona making ozone. That diagnosis is field fundamentals, not a numbered 70E rule. Treat the condition as a possible energized hazard and establish an electrically safe work condition before a close inspection. Do not open the door to sniff it.",
+    "reference": "NFPA 70E-2024 110.2; engineering fundamentals (corona and ozone)",
+    "verified": true,
     "kb": "safety.md#before-you-test"
   },
   {

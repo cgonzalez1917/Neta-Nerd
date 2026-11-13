@@ -122,8 +122,8 @@
     ],
     "answer": 1,
     "explanation": "The megohmmeter is a DC insulation instrument. Ground resistance uses a ground tester. Primary injection uses a high-current set. Oil power factor is a liquid sample test, not a megger reading on the winding.",
-    "reference": "Field practice; ATS insulation-resistance tests are DC megohm tests. A ground tester is a different instrument (see ATS 7.13).",
-    "verified": false,
+    "reference": "Engineering fundamentals; ANSI/NETA ATS-2025 7.13.B.2 and 7.2.2",
+    "verified": true,
     "kb": "insulation.md#spot",
     "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
   },
