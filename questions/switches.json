@@ -214,5 +214,167 @@
     "reference": "ANSI/NETA ATS-2025 7.5.5.A.5",
     "verified": true,
     "kb": "apparatus.md#fuses"
+  },
+  {
+    "id": "sw-013",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A fuse has no interrupting rating marked on its barrel. Under NEC 240.60(C), what rating does that imply?",
+    "choices": [
+      "10,000 A; higher ratings must be marked",
+      "200,000 A",
+      "5,000 A",
+      "No rating, so it can't be installed"
+    ],
+    "answer": 0,
+    "explanation": "Fuses carry an interrupting-rating marking when it is other than 10,000 A, along with 'current limiting' where that applies. Breakers use a different default (5,000 A, in 240.83(C)). Source: NFPA 70-2023 (NEC), 240.60(C) and 240.83(C).",
+    "reference": "NFPA 70-2023 (NEC), 240.60(C) and 240.83(C)",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-014",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "Why won't a Class H fuse go into a Class RK1 fuseholder built to NEC 240.60(B)?",
+    "choices": [
+      "Class H fuses are longer than any 600 V holder",
+      "RK1 holders accept only 250 V fuses, and Class H is 600 V",
+      "Current-limiting holders must reject non-current-limiting fuses",
+      "The holder rejects any fuse above 30 A"
+    ],
+    "answer": 2,
+    "explanation": "240.60(B) requires current-limiting fuseholders to refuse non-current-limiting fuses, so a low-interrupting fuse can't end up where a high fault current is available. Source: NFPA 70-2023 (NEC), 240.60(B); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1, Table 8.1.",
+    "reference": "NFPA 70-2023 (NEC), 240.60(B); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1, Table 8.1",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-015",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A 600 V fused switch carries 2000 A fuses on a bus with very high available fault current. Which UL fuse class fits that current, and what interrupting rating does Gill's Table 8.1 list for it?",
+    "choices": [
+      "Class H, up to 600 A, 10,000 A",
+      "Class J, 0 to 600 A, 200,000 A symmetrical",
+      "Class L, 601 to 6000 A, 200,000 A symmetrical",
+      "Class K, 0 to 600 A, 50,000 A symmetrical"
+    ],
+    "answer": 2,
+    "explanation": "Class L is the current-limiting class above 600 A, rated 600 V and 200 kA symmetrical. J, T, R, and K stop at 600 A, and non-current-limiting Class H is limited to 10 kA. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1, Table 8.1.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1, Table 8.1",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-016",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "theory",
+    "question": "A current-limiting fuse lets through a peak of 30 kA. Treating the let-through as a triangular wave, the rms let-through is about:",
+    "choices": [
+      "10 kA",
+      "17.3 kA",
+      "21.2 kA",
+      "30 kA"
+    ],
+    "answer": 1,
+    "explanation": "Gill models the let-through as a triangle, whose rms is the peak divided by \u221a3, not by \u221a2. 30 \u00f7 1.732 \u2248 17.3 kA. Using 0.707 would overstate it at 21.2 kA. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (triangular wave).",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (triangular wave)",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-017",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "theory",
+    "question": "On a 480 V system, Gill takes the first half-cycle rms asymmetrical current as 1.4 times the symmetrical and the peak as 1.7 times the asymmetrical. With 20 kA symmetrical available, the half-cycle peak is about:",
+    "choices": [
+      "28 kA",
+      "34 kA",
+      "40 kA",
+      "48 kA"
+    ],
+    "answer": 3,
+    "explanation": "1.4 \u00d7 1.7 \u2248 2.4 times the symmetrical rms. 20 \u00d7 2.4 = 48 kA. A current-limiting fuse clears before the current reaches that peak. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (first half-cycle current).",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (first half-cycle current)",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-018",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "Fuse resistances on one switch read 0.50, 0.52 and 0.60 m\u03a9. Under ATS 7.5.1.1, what is the call?",
+    "choices": [
+      "Investigate the 0.60 m\u03a9 fuse: it is 20% above 0.50 m\u03a9",
+      "Acceptable: all three are under 1 m\u03a9",
+      "Investigate only 0.52 m\u03a9, the middle value",
+      "Acceptable: the limit is 50% of the lowest"
+    ],
+    "answer": 0,
+    "explanation": "ATS has you investigate fuse resistances that deviate from each other by more than 15%. 0.60 \u00f7 0.50 = 1.20. The 50% rule is for contact and bolted-connection resistance, not fuses. Source: ANSI/NETA ATS-2025, 7.5.1.1.B.4 and D.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.5.1.1.B.4 and D.4",
+    "verified": true,
+    "kb": "apparatus.md#switch-values"
+  },
+  {
+    "id": "sw-019",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A 600 V fused switch has no manufacturer's insulation data. Which test voltage and minimum does ATS Table 100.1 give for it?",
+    "choices": [
+      "500 V dc, 25 M\u03a9",
+      "2,500 V dc, 1,500 M\u03a9",
+      "1,000 V dc, 25 M\u03a9",
+      "1,000 V dc, 100 M\u03a9"
+    ],
+    "answer": 3,
+    "explanation": "Table 100.1 lists 1,000 V dc and 100 M\u03a9 for 600 V equipment. ATS 7.5.1.1 takes one-minute readings on every pole, between phases and to ground with the switch closed, plus across every open pole. Source: ANSI/NETA ATS-2025, 7.5.1.1.B.3 and D.3; Table 100.1.",
+    "reference": "ANSI/NETA ATS-2025, 7.5.1.1.B.3 and D.3; Table 100.1",
+    "verified": true,
+    "kb": "apparatus.md#switch-values"
+  },
+  {
+    "id": "sw-020",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "safety",
+    "question": "A 1600 A fused service switch is installed. Under NEC 240.67, which option meets the arc energy reduction rule?",
+    "choices": [
+      "Any Class L fuse, with no check of clearing time",
+      "Fuses clearing in 0.07 s or less at the arcing current, or a listed means",
+      "A larger fuse size so the fuse never operates on arcing faults",
+      "An arc-flash label on the switch door alone"
+    ],
+    "answer": 1,
+    "explanation": "240.67 applies to fuses rated 1200 A or more. It asks for documentation, a method that clears fast enough at the arcing current, and performance testing on site. Source: NFPA 70-2023 (NEC), 240.67(A) and (B).",
+    "reference": "NFPA 70-2023 (NEC), 240.67(A) and (B)",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-021",
+    "level": "III",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "How must the arc energy reduction system on a 1200 A fused switch be tested when first installed?",
+    "choices": [
+      "Secondary injection of the relay only, with no record",
+      "Primary injection or another approved method, with a written record",
+      "Visual inspection by the installer at startup",
+      "No test; the product listing already covers performance"
+    ],
+    "answer": 1,
+    "explanation": "240.67(C) requires a performance test on site at first installation, done per the manufacturer's instructions, with a written record kept for the AHJ. Source: NFPA 70-2023 (NEC), 240.67(C).",
+    "reference": "NFPA 70-2023 (NEC), 240.67(C)",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
   }
 ]

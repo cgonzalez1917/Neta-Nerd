@@ -863,5 +863,185 @@
     "reference": "IEEE 400-2023, Table 12",
     "verified": true,
     "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-049",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "What separates a VLF monitored withstand from a simple withstand?",
+    "choices": [
+      "Tan delta or PD is watched during the test and used in the verdict",
+      "A monitored withstand uses dc instead of VLF",
+      "A simple withstand always runs at a higher voltage",
+      "A monitored withstand runs without any applied test voltage at all"
+    ],
+    "answer": 0,
+    "explanation": "A simple withstand applies a set voltage for a set time and passes if the cable survives. A monitored withstand watches tan delta, PD, or leakage while the voltage is on and uses that data in the verdict. Source: IEEE 400.2-2024, Clause 3 definitions.",
+    "reference": "IEEE 400.2-2024, Clause 3 definitions",
+    "verified": true,
+    "kb": "cables.md#vlf-modes"
+  },
+  {
+    "id": "cable-050",
+    "level": "II",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "A tan delta report lists 0.1 \u00d7 10\u207b\u00b3. The same value as a percentage is:",
+    "choices": [
+      "0.001%",
+      "0.01%",
+      "0.1%",
+      "1%"
+    ],
+    "answer": 1,
+    "explanation": "Multiply the 10\u207b\u00b3 value by 100 to get percent: 0.1 \u00d7 10\u207b\u00b3 = 0.0001, and \u00d7 100 = 0.01%. Mixing up the units can make a good cable look 100 times worse. Source: IEEE 400.2-2024, 5.4.3.",
+    "reference": "IEEE 400.2-2024, 5.4.3",
+    "verified": true,
+    "kb": "cables.md#vlf-modes"
+  },
+  {
+    "id": "cable-051",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Shielded cable runs through a window-type ground-fault CT, and the shield is grounded at the CT end. How should that shield ground lead be run?",
+    "choices": [
+      "Outside the CT, bypassing the window to avoid saturating it",
+      "Wrapped around the CT body several times",
+      "Cut, leaving the shield floating at that end",
+      "Back through the CT window, so the two currents cancel"
+    ],
+    "answer": 3,
+    "explanation": "When the shield ground lead passes back through the window, the CT sees equal and opposite currents and its output isn't affected. ATS 7.3.3 asks you to confirm shields are terminated correctly for protective-device operation. Source: IEEE C57.13.3-2014, A.2; IEEE 242-2001, 10.5.2.3.4; ANSI/NETA ATS-2025, 7.3.3.A.8.",
+    "reference": "IEEE C57.13.3-2014, A.2; IEEE 242-2001, 10.5.2.3.4; ANSI/NETA ATS-2025, 7.3.3.A.8",
+    "verified": true,
+    "kb": "cables.md#shield-tests"
+  },
+  {
+    "id": "cable-052",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "How does ATS 7.3.3 have you check the metallic shield itself on a medium-voltage cable?",
+    "choices": [
+      "Megger the shield to the conductor at 15 kV",
+      "Measure shield continuity with an ohmmeter",
+      "Run a VLF withstand on the shield",
+      "Check shield polarity with a phase rotation meter"
+    ],
+    "answer": 1,
+    "explanation": "B.2 is a continuity measurement on the shield with an ohmmeter. Insulation resistance is a separate item, each conductor to its shield with the other conductors grounded. Source: ANSI/NETA ATS-2025, 7.3.3.B.1 and B.2.",
+    "reference": "ANSI/NETA ATS-2025, 7.3.3.B.1 and B.2",
+    "verified": true,
+    "kb": "cables.md#shield-tests"
+  },
+  {
+    "id": "cable-053",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "On an offline cable PD test, signals are already present before any voltage is applied to the cable. How should you treat them?",
+    "choices": [
+      "As PD in the terminations",
+      "As noise, since the cable can't discharge with no voltage",
+      "As proof that the cable has failed",
+      "As the near-end calibration pulse from the last test"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 400.3 says anything measured before the voltage is raised can be treated as noise. Some noise can still change with voltage, so not every voltage-dependent signal is real PD. Source: IEEE 400.3-2022, 7.3.",
+    "reference": "IEEE 400.3-2022, 7.3",
+    "verified": true,
+    "kb": "cables.md#cable-pd"
+  },
+  {
+    "id": "cable-054",
+    "level": "III",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "IEEE 400.2 orders the three tan delta figures of merit by how sensitive they are to insulation deterioration. From most to least sensitive:",
+    "choices": [
+      "Mean tan delta, then tip-up, then time stability",
+      "Tip-up, then mean tan delta, then time stability",
+      "All three are equally sensitive",
+      "Time stability, then tip-up, then the mean tan delta"
+    ],
+    "answer": 3,
+    "explanation": "The guide arranges its tables in that order: stability over time at constant voltage is most sensitive, then the change with voltage, then the value itself. They work best compared with history for the same cable type. Source: IEEE 400.2-2024, 5.4.3.",
+    "reference": "IEEE 400.2-2024, 5.4.3",
+    "verified": true,
+    "kb": "cables.md#vlf-modes"
+  },
+  {
+    "id": "cable-055",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Which limitation does IEEE 400.2 list for a simple VLF withstand on a new cable system?",
+    "choices": [
+      "It finds mainly gross workmanship defects and doesn't monitor the cable",
+      "It always damages good insulation at the test voltage",
+      "It can't be used on extruded cable, only on paper-insulated cable",
+      "It measures PD magnitude in picocoulombs"
+    ],
+    "answer": 0,
+    "explanation": "The guide lists these as disadvantages of simple withstand testing. Adding diagnostics turns it into a monitored withstand that can show how the insulation responds. Source: IEEE 400.2-2024, 5.2.4 and 5.3.4.",
+    "reference": "IEEE 400.2-2024, 5.2.4 and 5.3.4",
+    "verified": true,
+    "kb": "cables.md#vlf-modes"
+  },
+  {
+    "id": "cable-056",
+    "level": "III",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "An electrical tree has started in a cable, and its PD extinction voltage is below the operating voltage. What does IEEE 400.3 warn?",
+    "choices": [
+      "PD will stop by itself as soon as operating voltage is reached",
+      "Trees do not grow in extruded cable",
+      "Discharge can keep running in service, and the tree can grow to failure",
+      "It only matters for paper-insulated cable"
+    ],
+    "answer": 2,
+    "explanation": "If PDEV is under operating voltage, discharge started by a transient doesn't stop at normal voltage, and the tree keeps growing. The guide says a confirmed electrical tree calls for prompt replacement. Source: IEEE 400.3-2022, Clause 3 (PDEV definition) and 5.2.2.3.",
+    "reference": "IEEE 400.3-2022, Clause 3 (PDEV definition) and 5.2.2.3",
+    "verified": true,
+    "kb": "cables.md#cable-pd"
+  },
+  {
+    "id": "cable-057",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Before an offline PD test, a calibration or sensitivity pulse is injected. Where first, and why?",
+    "choices": [
+      "At the far end only, because near-end pulses saturate the detector",
+      "At the midpoint splice",
+      "At the near end first to prove the setup, then at the far end",
+      "No injection is needed for UWB systems"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 400.3 injects first at the near end to confirm the setup works, then at the far end where possible to judge sensitivity to distant sources against the noise. ATS 7.3.3 also asks you to record the calibration pulse on offline PD tests. Source: IEEE 400.3-2022, 8.4.3; ANSI/NETA ATS-2025, 7.3.3.B.8.",
+    "reference": "IEEE 400.3-2022, 8.4.3; ANSI/NETA ATS-2025, 7.3.3.B.8",
+    "verified": true,
+    "kb": "cables.md#cable-pd"
+  },
+  {
+    "id": "cable-058",
+    "level": "III",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "One PD report gives magnitudes in pC and another in mV. What does IEEE 400.3 say about comparing them?",
+    "choices": [
+      "pC comes from IEC 60270 calibration; UWB mV isn't directly convertible",
+      "They are the same unit with a factor of 1,000",
+      "mV readings are always more accurate than pC readings",
+      "Both must be converted and reported in dB above the noise floor"
+    ],
+    "answer": 0,
+    "explanation": "Factory-style systems calibrated per IEC 60270 report apparent charge in picocoulombs. UWB systems use a sensitivity check and report in millivolts. Without a true charge calibration, the two can't be compared one for one. Source: IEEE 400.3-2022, 8.4.3.",
+    "reference": "IEEE 400.3-2022, 8.4.3",
+    "verified": true,
+    "kb": "cables.md#cable-pd"
   }
 ]

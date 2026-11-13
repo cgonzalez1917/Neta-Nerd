@@ -97,3 +97,84 @@ ATS-2025 7.6.3, in a workable order:
 9. Vacuum bottle integrity: a withstand across each open interrupter, strictly per the manufacturer (B.10). The magnetron atmospheric-condition test is optional (B.9).
 10. Overall withstand per the manufacturer, or Table 100.19 (B.11). The 15 kV class row is 20.4 kV ac or 28.8 kV dc maximum in the field.
 11. Heaters (B.12) and the breaker's instrument transformers per 7.10 (B.13).
+
+## Field guide: transfer switch functional test {#ats-functional}
+
+A transfer switch test proves two things: the switch itself is sound, and the whole emergency sequence works the way the design says. Sources: ATS-2025 7.22.3, NFPA 70-2023 Articles 700 and 701. NFPA 110 isn't in the held set, so this guide doesn't publish timing values from it. Timing comes from the manufacturer and the design (ATS 7.22.3.D.8).
+
+### Setup
+
+- Coordinate with the owner. A functional test transfers real load, and the building's life-safety loads ride on it.
+- Get the design settings: pickup and dropout of the voltage and frequency sensing relays, time delay on engine start, time delay on transfer, retransfer delay, cooldown.
+- Have a stopwatch or a recorder that sees both sources and the switch position, and a phase rotation meter.
+
+### Component checks first (switch de-energized and isolated)
+
+- Manual transfer operation and positive mechanical interlocking between sources (A.9, A.10).
+- One-minute insulation readings on every pole, between phases and to ground, with the switch in each source position, plus across open poles (B.2). Optional control-wiring test: 500 V dc for 300 V cable, 1,000 V dc for 600 V cable, 2 MΩ minimum (B.3, D.3).
+- Contact or pole resistance. Without manufacturer data, investigate poles more than 50% above the lowest (B.4, D.4).
+- Relays and timers calibrated per Section 7.9 (B.6). Phase rotation, phasing, and synchronized operation where the application uses it (B.7).
+
+### Functional sequence (B.8)
+
+1. Fail the normal source the way the design expects, usually by opening the normal feeder breaker. Note the time.
+2. Normal-source sensing relays drop out. Start the time delay on engine start.
+3. Engine starts. The alternate-source sensing relays pick up when voltage and frequency are right.
+4. After the time delay on transfer, the switch transfers. Check interlocks and limit switches.
+5. Restore normal. The retransfer time delay runs, then the switch retransfers.
+6. Engine runs its cooldown and shuts down.
+
+Record each setting and each measured time. Compare them with the manufacturer's data and the design, not with a number you remember from another job.
+
+### NEC points to know
+
+- Emergency transfer equipment is automatic, listed, and marked for emergency use. It prevents inadvertent interconnection of the sources, and it carries only emergency loads (700.5(A), (E)). An ATS is electrically operated and mechanically held (700.5(C)). Reconditioned transfer switches aren't permitted (700.2).
+- When emergency loads are on a single feeder, redundant transfer equipment or a bypass-isolation switch is required so the ATS can be maintained (700.5(D)).
+- Emergency power within the required time, not to exceed 10 s (700.12). Legally required standby within 60 s (701.12).
+- A time delay keeps the switch from retransferring on a brief return of normal power (700.12(D)(1)).
+- The AHJ witnesses the commissioning test. Periodic tests follow an approved schedule, and a written record of tests and maintenance is kept (700.3).
+
+### Common mistakes
+
+- Testing by pressing the switch's test button only. That doesn't prove the normal-source sensing works on a real loss of the feeder.
+- Forgetting to restore the delay settings you changed to speed up the test.
+- Not checking phase rotation on the alternate source after generator work.
+
+### Safety
+
+The load side stays live through the whole test. Keep the switch doors closed during the functional sequence and wear the PPE the arc-flash label calls for when you operate the source breakers.
+
+## Fuse ratings and let-through {#fuse-ratings}
+
+Sources: NFPA 70-2023 110.9, 240.60, 240.67 and 240.83(C); Gill 2nd ed. 7.2.2 and 8.4.1 (Table 8.1).
+
+- **Interrupting rating** must be at least the available fault current at the line terminals (110.9). Fuses are marked with their interrupting rating when it is other than 10,000 A, and with "current limiting" where that applies. Breakers are marked when it is other than 5,000 A.
+- **Rejection.** Holders for current-limiting fuses must refuse non-current-limiting fuses (240.60(B)). That is what stops a 10 kA Class H fuse from going where 65 kA is available.
+- **Classes from Gill's Table 8.1:**
+  - Non-current-limiting: plug fuses and Class H, 10,000 A maximum.
+  - Current-limiting, 200,000 A symmetrical: Class J, T, RK1, RK5, R, G, CC (and L).
+  - Class K: 50,000 to 200,000 A.
+  - Class L: 601 to 6000 A at 600 V.
+- **Current limitation.** A current-limiting fuse clears in less than a half cycle. Total clearing time is melting time plus arcing time. Gill takes the first half-cycle asymmetrical rms as 1.4 times the symmetrical rms and the peak as 1.7 times that, about 2.4 times the symmetrical rms. Let-through is close to a triangle, so its rms is the peak divided by √3. Worked: a 30 kA peak is about 17.3 kA rms.
+- **Arc energy reduction, fuses 1200 A and up (240.67).** Documentation of the fuse locations. A fuse that clears in 0.07 s or less at the arcing current, or a listed means set below the arcing current (differential relaying, an energy-reducing maintenance switch, active arc-flash mitigation, electronically actuated current-limiting fuses). Performance testing by primary injection or another approved method at first installation, with a written record for the AHJ.
+
+## Low-voltage switch test values {#switch-values}
+
+Source: ATS-2025 7.5.1.1 and Table 100.1.
+
+- **Insulation resistance:** one-minute readings on every pole, between phases and to ground with the switch closed, plus across every open pole. Without manufacturer data, use Table 100.1. For 600 V equipment that is 1,000 V dc and 100 MΩ.
+- **Contact resistance** across each blade and fuseholder: within the manufacturer's range. Otherwise investigate values more than 50% above the lowest of adjacent poles or similar switches.
+- **Fuse resistance:** investigate fuses that deviate from each other by more than 15%. Worked: 0.50 and 0.60 mΩ differ by 20%.
+- **Other items:** a ground-fault test per 7.14 where fitted, other protective devices per 7.9, and space heaters working.
+- Don't mix up the 15% fuse rule and the 50% contact rule. They answer different questions.
+
+## Voltage and current unbalance {#unbalance}
+
+Sources: Gill 2nd ed. 12.6.3.9 and 10.4.4; NEMA MG 1-2016 (Rev 2018) 14.3, from the summary of changes in the held excerpt. The MG 1 12.45 and 14.36 derating text isn't in the held excerpt.
+
+- **Formula:** percent unbalance = largest deviation from the average ÷ average × 100. Use it for voltage and for current.
+- **Worked, voltage:** 460, 467, 450 V. Average 459. Largest deviation 9. 9 ÷ 459 × 100 ≈ 1.96%.
+- **Worked, current:** 100, 108, 94 A. Average 100.67. Largest deviation 7.33. About 7.3%.
+- **Guidance:** Gill keeps voltage unbalance within 1–2%. The current effect is roughly 8 times larger. About 3% raises winding temperature by about 25%, 2–3% heats like a 10% overload, and a motor is derated at 4%. MG 1 treats more than 1% supply unbalance as an unusual service condition.
+- **Current unbalance** generally stays under 10%. It can be tolerated if the highest leg is within FLA × service factor. When voltage unbalance and distortion are fine but current unbalance is high, suspect the motor: winding damage or an uneven air gap.
+- **Causes on the supply side:** loose connections and worn contacts as often as uneven single-phase loading. A blown fuse can leave a motor single-phasing.

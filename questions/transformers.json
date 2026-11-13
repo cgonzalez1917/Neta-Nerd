@@ -1766,5 +1766,257 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.5; ANSI/NETA MTS-2023 Table 100.5",
     "verified": true,
     "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-099",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A pad-mount nameplate lists the high-voltage winding as 12470GrdY/7200. What does the GrdY tell you before you connect it?",
+    "choices": [
+      "The winding can be reconnected delta for a 12,470 V ungrounded system",
+      "The neutral is fully insulated and may float",
+      "Reduced neutral-end insulation, for an effectively grounded system only",
+      "The winding is grounded through a resistor inside the tank"
+    ],
+    "answer": 2,
+    "explanation": "GrdY marks a wye winding with reduced insulation at the neutral end. It may be tied to the tank only where the neutral is effectively grounded. It is not a reconnectable delta winding and is not for an ungrounded system. Source: IEEE C57.12.00-2021, 5.12.3, Table 7 item (1)(d) and Table 8 item (2)(f).",
+    "reference": "IEEE C57.12.00-2021, 5.12.3, Table 7 item (1)(d) and Table 8 item (2)(f)",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-100",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A three-phase nameplate shows 2400/4160Y for one winding. That winding is:",
+    "choices": [
+      "Delta on a 2,400 V system, or wye with no neutral out on 4,160 V",
+      "Permanently wye-connected with 2,400 V available from line to neutral",
+      "Rated 2,400 V on one tap and 4,160 V on another tap",
+      "Suitable only for a grounded 4,160 V wye system"
+    ],
+    "answer": 0,
+    "explanation": "The E/E1Y form means the same winding can be connected delta for E volts or wye for E1 volts with the neutral not brought out. 4160Y/2400, written the other way round, is the permanently wye form with a fully insulated neutral brought out. Source: IEEE C57.12.00-2021, 5.12.3, Table 8 items (2)(c) and (2)(d).",
+    "reference": "IEEE C57.12.00-2021, 5.12.3, Table 8 items (2)(c) and (2)(d)",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-101",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "In the nameplate form E/E1Y, E1 is the wye line-to-line voltage. For a 7,200 V delta rating, what E1 would the nameplate show?",
+    "choices": [
+      "8,320 V",
+      "10,180 V",
+      "12,470 V",
+      "14,400 V"
+    ],
+    "answer": 2,
+    "explanation": "Table 7's notes define E1 as \u221a3 times E. 7,200 \u00d7 1.732 \u2248 12,470 V. That is why 7200/12470Y and 12470GrdY/7200 pair up. Source: IEEE C57.12.00-2021, 5.12.3, Table 7 Notes 1 and 2.",
+    "reference": "IEEE C57.12.00-2021, 5.12.3, Table 7 Notes 1 and 2",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-102",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A single-phase nameplate reads 240/120. Compared with a 120/240 winding, what does it allow?",
+    "choices": [
+      "Full kVA from each 120 V half at the same time as full kVA at 240 V",
+      "Series or parallel connection only, with no center terminal",
+      "Operation at 120 V only, with 240 V as a test rating",
+      "Full kVA at 240 V, or three-wire with half kVA per 120 V half"
+    ],
+    "answer": 3,
+    "explanation": "2E/E is a 2E-volt winding that carries full kVA between the outer terminals. As a three-wire service, each half (midpoint to an outer terminal) is limited to half the kVA. E/2E (120/240) can be paralleled for E or put in series for 2E. Source: IEEE C57.12.00-2021, 5.12.3, Table 7 items (1)(e) and (1)(f).",
+    "reference": "IEEE C57.12.00-2021, 5.12.3, Table 7 items (1)(e) and (1)(f)",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-103",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "On a de-energized tap changer, the nameplate tap list runs 1 through 5 (or A through E). Which position gives the highest ratio of HV volts to LV volts?",
+    "choices": [
+      "Tap 3, the middle position",
+      "Tap 1 (or A)",
+      "Tap 5 (or E)",
+      "Whichever tap is marked N"
+    ],
+    "answer": 1,
+    "explanation": "The standard assigns the numeral 1 or letter A to the voltage giving the maximum ratio of transformation. The ratio is HV volts divided by LV volts. N is the neutral position of a load tap changer, not of a de-energized tap changer. Source: IEEE C57.12.00-2021, 5.12.2, Table 6 note d.",
+    "reference": "IEEE C57.12.00-2021, 5.12.2, Table 6 note d",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-104",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "For which transformers must the nameplate percent impedance be the tested value rather than a design value?",
+    "choices": [
+      "Only single-phase units",
+      "Transformers rated 501 kVA and larger",
+      "Every transformer regardless of size",
+      "Only units with a BIL of 150 kV or more"
+    ],
+    "answer": 1,
+    "explanation": "Note e says %Z is given between each pair of windings, and for units of 501 kVA and larger it is the measured value. The voltage connection follows each %Z, and the kVA base is stated if there is more than one rating. Source: IEEE C57.12.00-2021, 5.12.2, Table 6 note e.",
+    "reference": "IEEE C57.12.00-2021, 5.12.2, Table 6 note e",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-105",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A 300 kVA unit with a 95 kV BIL high-voltage winding carries Nameplate A. Which item from a larger unit's Nameplate C will you NOT find on it?",
+    "choices": [
+      "Percent impedance between windings",
+      "Tap voltages for the de-energized tap changer",
+      "Average winding temperature rise",
+      "Basic lightning impulse insulation levels (BIL)"
+    ],
+    "answer": 3,
+    "explanation": "Nameplate A is for units of 500 kVA or less with HV BIL under 150 kV, and its BIL row is blank. Nameplates B and C list BIL. Impedance, taps, and temperature rise are on all three. Source: IEEE C57.12.00-2021, 5.12.2 and Table 6.",
+    "reference": "IEEE C57.12.00-2021, 5.12.2 and Table 6",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-106",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A single-phase pole-type nameplate shows additive polarity. Which unit is that consistent with?",
+    "choices": [
+      "A 100 kVA unit with a 7,200 V high-voltage winding",
+      "A 500 kVA unit with a 7,200 V high-voltage winding",
+      "A 100 kVA unit with a 13,800 V high-voltage winding",
+      "Any three-phase unit"
+    ],
+    "answer": 0,
+    "explanation": "Single-phase units of 200 kVA or less with HV of 8,660 V or less are additive. All other single-phase units are subtractive. Polarity applies to single-phase units. Three-phase units show a phasor diagram instead. Source: IEEE C57.12.00-2021, 5.7.1 and Table 6 rows 10 and 11.",
+    "reference": "IEEE C57.12.00-2021, 5.7.1 and Table 6 rows 10 and 11",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-107",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A nameplate is stamped 65 \u00b0C rise. Under the standard's usual service conditions, what is that rise measured above?",
+    "choices": [
+      "The liquid temperature at the top of the tank",
+      "A fixed 20 \u00b0C reference",
+      "The ambient air, max 40 \u00b0C and 30 \u00b0C 24-hour average",
+      "The temperature of the hottest spot in the winding"
+    ],
+    "answer": 2,
+    "explanation": "65 \u00b0C is the average winding rise over ambient. The hottest-spot rise allowed with it is 80 \u00b0C. The usual service conditions cap ambient at 40 \u00b0C and the 24-hour average at 30 \u00b0C. Source: IEEE C57.12.00-2021, 4.1.2.1 and 5.11.1.1.",
+    "reference": "IEEE C57.12.00-2021, 4.1.2.1 and 5.11.1.1",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-108",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "On a sealed-tank transformer, the pressure-vacuum gauge reads zero every visit, in hot and cold weather and at all loads. What is the most likely meaning?",
+    "choices": [
+      "The transformer is lightly loaded and healthy",
+      "The pressure relief device has been reset correctly",
+      "A leak in the gas space",
+      "The liquid level is too high for the season"
+    ],
+    "answer": 2,
+    "explanation": "A sealed tank keeps the gas plus liquid volume fixed, so the gauge should swing above and below zero as the liquid warms and cools. A reading stuck at zero points to a gas-space leak. Moisture can then get in, so a top sample for water is the next step. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 4.5.2.2; IEEE C57.12.00-2021, 6.6.2.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 4.5.2.2; IEEE C57.12.00-2021, 6.6.2",
+    "verified": true,
+    "kb": "transformers.md#gauges"
+  },
+  {
+    "id": "xfmr-109",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "During acceptance testing of a liquid-filled transformer, what does ATS want done with the temperature and liquid-level indicators?",
+    "choices": [
+      "Check the settings against the spec, then operate the alarm and trip circuits",
+      "Record the dial readings only; circuits are checked by the owner",
+      "Replace the indicators with calibrated units",
+      "Bypass the trip contacts so the unit cannot trip during energization"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.2.2 asks for both: settings on temperature and level indicators as specified, and a check that their alarm, control, and trip circuits really operate. The same check covers the pressure relief device, gas accumulator, and fault-pressure relay. Source: ANSI/NETA ATS-2025, 7.2.2.A.9 and A.10; ANSI/NETA MTS-2023, 7.2.2.A.6.",
+    "reference": "ANSI/NETA ATS-2025, 7.2.2.A.9 and A.10; ANSI/NETA MTS-2023, 7.2.2.A.6",
+    "verified": true,
+    "kb": "transformers.md#gauges"
+  },
+  {
+    "id": "xfmr-110",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A Nameplate C transformer has a gas cushion above the oil. Which nameplate data lets you judge the liquid-level gauge reading on a hot afternoon?",
+    "choices": [
+      "The percent impedance and the kVA base it was measured on",
+      "The BIL of each winding and the neutral",
+      "The untanking weight of the core and coils",
+      "The 25 \u00b0C level below the flange and the change per 10 \u00b0C"
+    ],
+    "answer": 3,
+    "explanation": "Note m puts the 25 \u00b0C level and the change per 10 \u00b0C on the nameplate for units with a gas cushion. Correct the expected level for today's liquid temperature before calling it low or high. Source: IEEE C57.12.00-2021, 5.12.2, Table 6 row 23 and note m.",
+    "reference": "IEEE C57.12.00-2021, 5.12.2, Table 6 row 23 and note m",
+    "verified": true,
+    "kb": "transformers.md#gauges"
+  },
+  {
+    "id": "xfmr-111",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "On a nitrogen-blanketed transformer, the MTS visual inspection includes which pressure check?",
+    "choices": [
+      "Verify the blanket is at atmospheric pressure",
+      "Verify positive pressure is maintained on the gas blanket",
+      "Vent the blanket before each inspection",
+      "Verify a slight vacuum is held on the gas space"
+    ],
+    "answer": 1,
+    "explanation": "Both ATS and MTS list verifying positive pressure on gas-blanketed transformers. A blanket that has dropped to zero can let in air and moisture. MTS also offers an optional oxygen-percentage check of the blanket. Source: ANSI/NETA MTS-2023, 7.2.2.A.10 and B.12; ANSI/NETA ATS-2025, 7.2.2.A.15.",
+    "reference": "ANSI/NETA MTS-2023, 7.2.2.A.10 and B.12; ANSI/NETA ATS-2025, 7.2.2.A.15",
+    "verified": true,
+    "kb": "transformers.md#gauges"
+  },
+  {
+    "id": "xfmr-112",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A delta-wye step-down transformer is built to the IEEE standard angular displacement. The low-voltage phase-to-neutral voltages relative to the high-voltage ones:",
+    "choices": [
+      "Lead by 30\u00b0",
+      "Lag by 30\u00b0",
+      "Are in phase (0\u00b0)",
+      "Lag by 60\u00b0"
+    ],
+    "answer": 1,
+    "explanation": "For delta-wye and wye-delta three-phase units, the standard displacement has the low-voltage side lagging the high-voltage side by 30\u00b0. Delta-delta and wye-wye units are 0\u00b0. The nameplate phasor diagram shows it. Source: IEEE C57.12.00-2021, 5.7.2.",
+    "reference": "IEEE C57.12.00-2021, 5.7.2",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
   }
 ]

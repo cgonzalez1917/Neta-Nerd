@@ -376,5 +376,185 @@
     "reference": "ANSI/NETA ATS-2025 7.22.1.B.1 and D.1",
     "verified": true,
     "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-022",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "Emergency loads hang on a single feeder through one automatic transfer switch. What does NEC 700.5 add so the switch can be maintained?",
+    "choices": [
+      "Nothing; the switch is taken out of service for maintenance",
+      "A second utility service only",
+      "A portable generator connection in place of the transfer switch",
+      "Redundant transfer equipment or a bypass-isolation switch"
+    ],
+    "answer": 3,
+    "explanation": "700.5(D) asks for redundant transfer equipment or a bypass-isolation switch when emergency loads are on a single feeder, so 700.3(C) maintenance can be done without losing the loads. 700.5(B) says bypass-isolation switches must prevent inadvertent paralleling. If the backup path is manual, a qualified person actively supervises it while the automatic switch is out. Source: NFPA 70-2023 (NEC), 700.5(B) and (D).",
+    "reference": "NFPA 70-2023 (NEC), 700.5(B) and (D)",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-023",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "Where does ATS 7.22.3 direct insulation-resistance testing of a transfer switch?",
+    "choices": [
+      "Every pole with the switch in each source position, plus across open poles",
+      "Phase-to-ground only, with the switch in the normal position",
+      "Only across the closed contacts",
+      "Control wiring only, at 2,500 V dc"
+    ],
+    "answer": 0,
+    "explanation": "B.2 covers both source positions and across each open pole. Control wiring is a separate item at 500 V dc for 300 V cable or 1,000 V dc for 600 V cable, with 2 M\u03a9 minimum. Source: ANSI/NETA ATS-2025, 7.22.3.B.2, B.3 and D.3.",
+    "reference": "ANSI/NETA ATS-2025, 7.22.3.B.2, B.3 and D.3",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-024",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "Contact resistance across the poles of a transfer switch reads 42, 45 and 66 \u00b5\u03a9. With no manufacturer's range, what does ATS say?",
+    "choices": [
+      "Accept all three: they are under 100 \u00b5\u03a9",
+      "Investigate the 45 \u00b5\u03a9 pole, since it differs from the 42 \u00b5\u03a9 pole",
+      "Investigate the 66 \u00b5\u03a9 pole: it is more than 50% above the lowest value",
+      "Investigate only if a pole exceeds twice the average"
+    ],
+    "answer": 2,
+    "explanation": "Without manufacturer data, ATS compares poles and flags any that deviate by more than 50% of the lowest. 42 \u00d7 1.5 = 63 \u00b5\u03a9, so 66 \u00b5\u03a9 is over and 45 \u00b5\u03a9 is not. Source: ANSI/NETA ATS-2025, 7.22.3.B.4 and D.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.22.3.B.4 and D.4",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-025",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "How does NEC 700.5(C) require an automatic transfer switch for an emergency system to be operated and held?",
+    "choices": [
+      "Manually operated and electrically held",
+      "Electrically operated and electrically held",
+      "Electrically operated and mechanically held",
+      "Spring operated with no holding means"
+    ],
+    "answer": 2,
+    "explanation": "An emergency ATS must be electrically operated and mechanically held. The holding is mechanical, not dependent on a coil staying energized. Source: NFPA 70-2023 (NEC), 700.5(C).",
+    "reference": "NFPA 70-2023 (NEC), 700.5(C)",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-026",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "Under the NEC, an emergency-system transfer switch must be:",
+    "choices": [
+      "Automatic, listed for emergency use, and unable to interconnect the sources",
+      "Manual, so a qualified person on site decides every single transfer",
+      "Shared with standby loads so the generator stays loaded",
+      "Reconditioned equipment, if it passes a functional test"
+    ],
+    "answer": 0,
+    "explanation": "700.5 requires automatic, listed, emergency-marked transfer equipment that cannot interconnect the sources by accident. It supplies only emergency loads. Reconditioned transfer switches are not allowed. Source: NFPA 70-2023 (NEC), 700.5(A) and (E); 700.2.",
+    "reference": "NFPA 70-2023 (NEC), 700.5(A) and (E); 700.2",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-027",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "Under NEC 700.12, how quickly must an emergency system supply power after normal power fails?",
+    "choices": [
+      "Within 60 seconds",
+      "Within 5 minutes, measured from the generator reaching rated speed",
+      "There is no time limit; it depends only on the generator",
+      "Within the time required for the application, but not more than 10 seconds"
+    ],
+    "answer": 3,
+    "explanation": "700.12 caps emergency systems at 10 seconds. Legally required standby under 701.12 gets 60 seconds. The project specification can be stricter, so check it too. Source: NFPA 70-2023 (NEC), 700.12 and 701.12.",
+    "reference": "NFPA 70-2023 (NEC), 700.12 and 701.12",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-028",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "Normal power comes back for only a moment during a test, and the emergency transfer switch should not run straight back to normal. Which NEC feature is that?",
+    "choices": [
+      "An in-phase monitor on the alternate source",
+      "A time delay that rides through a brief return of normal power",
+      "An elevator pre-signal contact that warns the elevator controller",
+      "A load-shed contact that drops nonessential loads"
+    ],
+    "answer": 1,
+    "explanation": "700.12 calls for a time delay so that a short return of normal power does not cause a retransfer. ATS 7.22.3 has you time the retransfer delay against the design during the functional test. Source: NFPA 70-2023 (NEC), 700.12(D)(1); ANSI/NETA ATS-2025, 7.22.3.B.8.",
+    "reference": "NFPA 70-2023 (NEC), 700.12(D)(1); ANSI/NETA ATS-2025, 7.22.3.B.8",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-029",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "Who witnesses the commissioning test of an NEC Article 700 emergency system, and what must be kept afterward?",
+    "choices": [
+      "The generator vendor only, with no written record required",
+      "The AHJ witnesses it, and a written test and maintenance record is kept",
+      "The serving utility, which keeps the records in its own files",
+      "The electrical inspector only if a failure occurs"
+    ],
+    "answer": 1,
+    "explanation": "700.3 has the AHJ witness the test on installation and periodically, sets periodic tests on an approved schedule, requires maintenance, and requires a written record of tests and maintenance. Source: NFPA 70-2023 (NEC), 700.3(A)-(D).",
+    "reference": "NFPA 70-2023 (NEC), 700.3(A)-(D)",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-030",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "On a transfer switch functional test, the engine-start, transfer, retransfer and cooldown delays all operate. How do you judge the measured times?",
+    "choices": [
+      "Against a fixed NETA table of seconds for each delay",
+      "Against the previous technician's notes only",
+      "Any time under 60 seconds passes for every delay in the sequence",
+      "Against the manufacturer's data and the system design settings"
+    ],
+    "answer": 3,
+    "explanation": "ATS 7.22.3.D.8 sends you to the manufacturer and the system design. It has no fixed table of seconds. Record each setting and each measured time so the next test can compare. Source: ANSI/NETA ATS-2025, 7.22.3.D.8.",
+    "reference": "ANSI/NETA ATS-2025, 7.22.3.D.8",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-031",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "Besides the timing list, which two electrical items does ATS 7.22.3 add for a transfer switch's controls and sources?",
+    "choices": [
+      "Relays and timers set per Section 7.9, and phase rotation and phasing verified",
+      "Measure turns ratio and excitation current on the switch's control transformer",
+      "Run a VLF withstand on the load cables in both source positions",
+      "Perform a dissolved-gas analysis of the switch"
+    ],
+    "answer": 0,
+    "explanation": "B.6 sends relays and timers to Section 7.9. B.7 checks that both sources have matching rotation and phasing, plus synchronized operation where the application uses it. Source: ANSI/NETA ATS-2025, 7.22.3.B.6 and B.7.",
+    "reference": "ANSI/NETA ATS-2025, 7.22.3.B.6 and B.7",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
   }
 ]

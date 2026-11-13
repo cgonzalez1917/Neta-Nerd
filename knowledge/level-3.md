@@ -31,3 +31,7 @@ Per-unit fault current, series and parallel inductors, and a wye capacitor measu
 **Key interlocks.** The scheme only works if the trapped key is the only key. A spare cut to the same code lets someone open the grounded switch and the live switch together.
 
 **Zone interlocking.** ATS lists it as an auxiliary function to verify on a low-voltage power breaker. In the scheme, a downstream trip sends a restraint so the upstream short-time or ground function waits. No restraint, and the upstream function is allowed to trip on its faster unrestrained time. Confirm the wiring in the breaker manual; do not assume every trip unit implements it the same way.
+
+## Who leads the crew {#crew-leader}
+
+ATS-2025 and MTS-2023 both say, in 3.2 item 2, that technicians are certified under ANSI/NETA ETT, and each on-site crew leader holds a current Level 3 or higher certification in electrical testing. ECS-2024 3.2 requires commissioning personnel to be trained, experienced, and able to work safely and judge the data, but it names no certification level. So the Level 3 crew-leader rule applies when the job is written to ATS or MTS. Check which standard the specification calls up.
