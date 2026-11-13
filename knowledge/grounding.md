@@ -37,3 +37,38 @@ Neutral-to-ground insulation is measured with the neutral disconnect link remove
 - Reporting 25 ohms as the NETA substation target.
 - Leaving the test probes inside the electrode’s sphere of influence and writing down the first number.
 - Running the equipment-grounding conductor through a zero-sequence CT “so the fault has a path.”
+
+## Soil resistivity (Wenner four-point) {#soil}
+
+IEEE 81-2012 7.2.3. Four probes go in a straight line at equal spacing `a`. Current flows through the outer two, and voltage is read across the inner two. `R = V / I`.
+
+With the probes driven no deeper than about a tenth of the spacing, apparent resistivity is `ρ = 2πaR`, in ohm-meters when `a` is in meters. Example: `a = 10 m`, `R = 1.5 Ω` gives about 94 Ω·m.
+
+Each spacing samples to a depth of roughly `a`. Take a series of spacings. If the resistivity changes a lot from one spacing to the next, the soil is layered, and that profile is what the grid designer needs.
+
+Soil moisture and temperature move the numbers. For conservative design data, IEEE 81 8.1.2 suggests measuring under adverse conditions, such as dry weather, and taking resistivity and grid readings under similar weather.
+
+## Fall-of-potential in the field {#fop-field}
+
+IEEE 81-2012 8.2.2.4:
+
+- Drive the current probe well away from the electrode, typically at least five times the electrode's largest dimension.
+- Put the potential probe in line with it. The 62% position is correct only for fairly uniform soil, probes far enough away to act like hemispheres, and an electrode with no other connections.
+- Take readings on either side of 62%. A flat stretch means the reading is real. A steady slope means the current probe is too close.
+- High probe resistance in dry soil has little effect on accuracy. It can starve the tester of current, so wet the probes or drive them deeper.
+- Where the soil isn't uniform or the electrical center is unclear, Tagg's slope method takes readings at 0.2, 0.4, and 0.6 of the current-probe distance, computes `μ = (R3 − R2) / (R2 − R1)`, and looks up the true probe position in the guide's table.
+
+ATS 7.13 adds point-to-point checks from the main grounding system to frames, the system neutral, and derived neutrals. Investigate anything above 0.5 Ω (7.13.D.3).
+
+## Clamp-on (stakeless) testers {#clamp-on}
+
+IEEE 81-2012 8.2.2.5 and Annex E.2. The clamp induces a test voltage and measures the loop current. The loop is the electrode under test in series with every other ground in parallel. The reading is only that electrode's resistance when the parallel return is close to zero ohms, which is the case for a pole ground on a long multigrounded neutral.
+
+Where it goes wrong:
+
+- No return loop (an isolated rod with its bond lifted). There is nothing to measure.
+- A grid or structure with many paths to earth. The loop never leaves the grid.
+- Test frequency of roughly 1–3.4 kHz. On a long neutral or shield, the inductive reactance can swamp the resistance.
+- Corroded neutral splices. Jaws that don't mate cleanly. Noise on high-resistance grounds. These meters also need frequent calibration.
+
+Use fall-of-potential when the result has to stand on its own.

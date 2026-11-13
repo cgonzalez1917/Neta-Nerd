@@ -846,5 +846,221 @@
     "reference": "IEEE C37.108-2021, 5.2.3",
     "verified": true,
     "kb": "apparatus.md#network"
+  },
+  {
+    "id": "brkr-048",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "You read a low-voltage power breaker's operations counter, run one close-open cycle, and read it again. Per ATS 7.6.1.2, a good counter:",
+    "choices": [
+      "Advanced two counts, one for close and one for open",
+      "Advanced exactly one count",
+      "Didn't move, since the counter only logs trips",
+      "Reset to zero after the cycle"
+    ],
+    "answer": 1,
+    "explanation": "ATS has you record the as-found and as-left counter readings. The test value is that the counter advances one digit per close-open cycle. Source: ANSI/NETA ATS-2025 7.6.1.2.A.15 and C.4.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.A.15 and C.4",
+    "verified": true,
+    "kb": "breakers.md#field-sequence"
+  },
+  {
+    "id": "brkr-049",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Which pair of items is in the ATS 7.6.1.2 visual and mechanical list for a drawout low-voltage power breaker?",
+    "choices": [
+      "Contact resistance and insulation resistance",
+      "Cell fit and element alignment, and racking mechanism operation",
+      "Primary injection of long-time and short-time",
+      "Trip-unit battery condition and zone interlocking"
+    ],
+    "answer": 1,
+    "explanation": "Cell fit, element alignment, and racking operation are mechanical checks in part A. Contact and insulation resistance, the injection tests, and the auxiliary-feature checks (battery, zone interlocking) are electrical tests in part B. Source: ANSI/NETA ATS-2025 7.6.1.2.A.11, A.12, and B.1\u2013B.8.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.A.11, A.12, and B.1\u2013B.8",
+    "verified": true,
+    "kb": "breakers.md#field-sequence"
+  },
+  {
+    "id": "brkr-050",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "A 480 V power breaker has no manufacturer insulation-test data. What does the ATS 7.6.1.2 test look like?",
+    "choices": [
+      "Ten minutes phase-to-ground only, at 500 V dc with 25 M\u03a9 minimum",
+      "One minute across open poles only, at 2500 V dc",
+      "One minute at 5000 V dc, phase-to-phase only",
+      "One minute, each pole phase-to-phase and phase-to-ground closed and across each open pole, at 1000 V dc with 100 M\u03a9 as the minimum"
+    ],
+    "answer": 3,
+    "explanation": "B.1 covers closed (phase-to-phase and phase-to-ground) and open (across each pole) connections for one minute. With no manufacturer data, Table 100.1 for 600 V equipment gives 1000 V dc and a 100 M\u03a9 minimum at 20 \u00b0C. Source: ANSI/NETA ATS-2025 7.6.1.2.B.1; Table 100.1.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.1; Table 100.1",
+    "verified": true,
+    "kb": "breakers.md#field-sequence"
+  },
+  {
+    "id": "brkr-051",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "After primary injection on a low-voltage power breaker is finished, ATS 7.6.1.2 tells you to:",
+    "choices": [
+      "Reset all trip logs and indicators",
+      "Leave the trip targets showing for the owner",
+      "Clear only the ground-fault target",
+      "Remove the trip-unit battery to clear memory"
+    ],
+    "answer": 0,
+    "explanation": "The last step of B.8, after verifying auxiliary features, is to reset trip logs and indicators. A breaker that goes back in service with old targets showing will confuse the next person who reads them after a real trip. Source: ANSI/NETA ATS-2025 7.6.1.2.B.8.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.8",
+    "verified": true,
+    "kb": "breakers.md#field-sequence"
+  },
+  {
+    "id": "brkr-052",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "ATS 7.6.1.2 lists 'verify operation of charging mechanism' as an electrical test. What is the result judged against?",
+    "choices": [
+      "Table 100.20 control voltage limits only",
+      "A fixed recharge time of 10 seconds",
+      "The manufacturer's published data",
+      "The coordination study"
+    ],
+    "answer": 2,
+    "explanation": "B.9 checks the spring-charging mechanism, and D.10 says it shall operate per the manufacturer's published data. ATS gives no generic recharge time. Source: ANSI/NETA ATS-2025 7.6.1.2.B.9 and D.10.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.B.9 and D.10",
+    "verified": true,
+    "kb": "breakers.md#field-sequence"
+  },
+  {
+    "id": "brkr-053",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "safety",
+    "question": "What does an energy-reducing maintenance switch (maintenance mode) on a breaker trip unit do?",
+    "choices": [
+      "Opens the breaker so the gear is de-energized for maintenance",
+      "Raises the instantaneous pickup to stop nuisance trips during work",
+      "Temporarily sets the trip unit to operate faster while someone works inside the arc flash boundary, then goes back to normal",
+      "Bypasses the trip unit so the breaker can't trip during testing"
+    ],
+    "answer": 2,
+    "explanation": "NFPA 70E's design annex lists energy-reducing maintenance switching with a local status indicator as an incident-energy reduction method. It speeds up tripping during the work and is set back to normal afterward. The gear stays energized. Source: NFPA 70E-2024, Informative Annex O, O.2.3(3).",
+    "reference": "NFPA 70E-2024, Informative Annex O, O.2.3(3)",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-054",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "theory",
+    "question": "Why does making a breaker trip faster lower the arc-flash incident energy downstream of it?",
+    "choices": [
+      "Incident energy rises roughly in proportion to arc duration, so shorter clearing time means less energy",
+      "Faster tripping lowers the available fault current",
+      "It raises the arcing voltage, which shortens the arc",
+      "It reduces the working distance"
+    ],
+    "answer": 0,
+    "explanation": "The IEEE 1584 test program concluded that arc duration has a linear effect on incident energy. Cutting the clearing time by half cuts the energy roughly in half. Available fault current and working distance don't change. Source: IEEE 1584-2018, Annex G.3 a).",
+    "reference": "IEEE 1584-2018, Annex G.3 a)",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-055",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "A main breaker's maintenance mode is left ON after work is done. A fault on a downstream feeder exceeds the maintenance pickup. What is likely?",
+    "choices": [
+      "Nothing changes, since maintenance mode only acts on faults inside the main's own cubicle",
+      "The feeder breaker is forced to trip faster",
+      "The main locks out and won't trip at all",
+      "The main trips with no intentional delay, taking out the whole bus instead of only the feeder"
+    ],
+    "answer": 3,
+    "explanation": "In maintenance mode the trip unit trips with no intentional delay whenever the set pickup is exceeded, regardless of the normal instantaneous setting. That defeats the time separation the coordination study relied on. Turn it off and confirm the indicator when the work ends. Source: Eaton MN013003EN, PXR 20/25 Trip Unit for Series NRX User Manual, 4.6.",
+    "reference": "Eaton MN013003EN, PXR 20/25 Trip Unit for Series NRX User Manual, 4.6",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-056",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "On an Eaton PXR trip unit with the ARMS (maintenance mode) switch, how can you tell maintenance mode is active?",
+    "choices": [
+      "The LONG pickup LED flashes",
+      "A blue ring around the maintenance switch lights",
+      "The breaker's spring-charge flag turns yellow",
+      "The display shows only the ground-fault setting"
+    ],
+    "answer": 1,
+    "explanation": "The PXR manual says a blue ring around the maintenance mode switch always lights to confirm the function is enabled. There's also an optional normally open contact for remote indication. Source: Eaton MN013003EN, PXR 20/25 Trip Unit for Series NRX User Manual, 3.5 and 4.6.1.",
+    "reference": "Eaton MN013003EN, PXR 20/25 Trip Unit for Series NRX User Manual, 3.5 and 4.6.1",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-057",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "On a PXR trip unit, maintenance mode was turned on through communications software. A tech flips the front switch to ON and back to OFF/Remote. What is the result?",
+    "choices": [
+      "Maintenance mode turns off",
+      "Maintenance mode stays on; it has to be turned off through communications",
+      "The trip unit resets to factory settings",
+      "The breaker trips to confirm the change"
+    ],
+    "answer": 1,
+    "explanation": "The manual says that when maintenance mode is enabled remotely or over communications it must also be disabled the same way. Cycling the local switch does not disable it. Check the blue indicator before you leave. Source: Eaton MN013003EN, PXR 20/25 Trip Unit for Series NRX User Manual, 4.6.1.",
+    "reference": "Eaton MN013003EN, PXR 20/25 Trip Unit for Series NRX User Manual, 4.6.1",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-058",
+    "level": "III",
+    "topic": "lv-breakers",
+    "domain": "systems",
+    "question": "A relay-based arc energy reduction scheme uses a maintenance setting group and light sensors. ATS-2025 7.27 is marked reserved. Where do the acceptance checks come from?",
+    "choices": [
+      "Nowhere, so the scheme is accepted untested",
+      "7.6.1.1 molded-case breakers",
+      "Table 100.8 instantaneous tolerances only",
+      "The microprocessor relay section, 7.9.2.B.6, which includes verifying logic for normal and maintenance modes"
+    ],
+    "answer": 3,
+    "explanation": "ATS 7.9.2.B.6 lists arc energy reduction items: pickup and timing of the elements used, zone interlocking, normal versus maintenance mode logic, communication-failure alarms, light-sensor ambient and pickup, and current supervision. Source: ANSI/NETA ATS-2025 7.9.2.B.6 and 7.27.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.B.6 and 7.27",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-059",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "safety",
+    "question": "An incident energy analysis assumed a feeder breaker clears in its normal time. The breaker hasn't been exercised in years and now trips slowly. Under NFPA 70E, why does that matter?",
+    "choices": [
+      "The analysis must account for the device's clearing time including its condition of maintenance, so the label may understate the hazard",
+      "It doesn't, since labels are based on available fault current only",
+      "Only the arc flash boundary changes, not the incident energy",
+      "A slow breaker lowers incident energy"
+    ],
+    "answer": 0,
+    "explanation": "70E 130.5(G) requires the incident energy analysis to consider the overcurrent device's characteristics and clearing time, including its condition of maintenance. Longer clearing time means more incident energy than the label shows. Source: NFPA 70E-2024, 130.5(G).",
+    "reference": "NFPA 70E-2024, 130.5(G)",
+    "verified": true,
+    "kb": "breakers.md#maintenance-mode"
   }
 ]

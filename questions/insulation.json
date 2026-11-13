@@ -431,5 +431,203 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.11; ref. IEEE 43-2013, clause 12.3",
     "verified": true,
     "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-027",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "When a megohmmeter applies dc to a winding, which current component stays essentially constant with time?",
+    "choices": [
+      "Geometric capacitive charging current",
+      "Absorption (polarization) current",
+      "Conduction (leakage) current through and over the insulation",
+      "Inrush current from the test set"
+    ],
+    "answer": 2,
+    "explanation": "The capacitive charging current dies out in seconds and the absorption current decays over minutes. The conduction current through the bulk insulation and the surface leakage current are constant in time, so they are what the reading settles on. Source: IEEE 43-2013, 3 (definitions) and 5.1.",
+    "reference": "IEEE 43-2013, 3 (definitions) and 5.1",
+    "verified": true,
+    "kb": "insulation.md#current-components"
+  },
+  {
+    "id": "ir-028",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "On clean, dry insulation, the megohm reading keeps climbing over the first several minutes of a test. The main reason is:",
+    "choices": [
+      "The test set's output voltage is ramping up",
+      "The insulation is heating and its resistance is rising",
+      "The absorption current is decaying while the leakage current stays steady",
+      "Surface leakage is increasing as the winding charges"
+    ],
+    "answer": 2,
+    "explanation": "Total current is capacitive + absorption + conduction. As the absorption part decays, total current falls and the indicated resistance rises. That slope is what the polarization index measures. Source: IEEE 43-2013, 5.1 and 5.4.",
+    "reference": "IEEE 43-2013, 5.1 and 5.4",
+    "verified": true,
+    "kb": "insulation.md#current-components"
+  },
+  {
+    "id": "ir-029",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "Why may a polarization index tell you little on a small random-wound motor?",
+    "choices": [
+      "Its absorption current dies out within seconds, so the 10-minute and 1-minute readings come out nearly equal",
+      "Random-wound machines can't be tested above 500 V",
+      "PI is only defined for transformers",
+      "The winding's capacitance is too large to charge in 10 minutes"
+    ],
+    "answer": 0,
+    "explanation": "PI depends on the absorption current still being significant at one minute. On small random windings it becomes negligible in seconds, so the 10/1 ratio stays close to 1 whatever the condition. Source: IEEE 43-2013, 5.4.",
+    "reference": "IEEE 43-2013, 5.4",
+    "verified": true,
+    "kb": "insulation.md#current-components"
+  },
+  {
+    "id": "ir-030",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "A 300 hp induction motor reads 950 M\u03a9 at 1 minute and 1,900 M\u03a9 at 10 minutes. Under ATS 7.15.1, the polarization index is:",
+    "choices": [
+      "0.5, which fails",
+      "2.0, which fails because it must exceed 2.0",
+      "1.0, which meets the transformer rule only",
+      "2.0, which meets the 2.0 minimum"
+    ],
+    "answer": 3,
+    "explanation": "PI = 10-minute reading / 1-minute reading = 1,900 / 950 = 2.0. ATS says not less than 2.0, so exactly 2.0 passes. Dividing the other way gives 0.5. Source: ANSI/NETA ATS-2025 7.15.1.B.2 and 7.15.1.D.2; IEEE 43-2013, 5.4.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and 7.15.1.D.2; IEEE 43-2013, 5.4",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-031",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "A motor's PI and insulation resistance come in low, and the end turns are visibly dirty and damp. IEEE 43 suggests what before writing it off?",
+    "choices": [
+      "Run an overvoltage test to burn off the contamination",
+      "Clean and dry it, then retest; PI can also show when drying is far enough along",
+      "Reverse the test leads to cancel surface leakage",
+      "Accept it, since contamination doesn't affect PI"
+    ],
+    "answer": 1,
+    "explanation": "Low readings from dirt or moisture can often be brought back to acceptable values by cleaning and drying, and PI is a common indicator for when drying can stop. A winding below the minimums should not get an overvoltage test. Source: IEEE 43-2013, 11.2.",
+    "reference": "IEEE 43-2013, 11.2",
+    "verified": true,
+    "kb": "insulation.md#current-components"
+  },
+  {
+    "id": "ir-032",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "You start a megger test on a winding that was tested an hour ago and never fully discharged. What happens to the reading?",
+    "choices": [
+      "Nothing, since the test set compensates automatically",
+      "Residual charge makes it inaccurate, so discharge first and confirm discharge current is near zero",
+      "It reads high but the PI is unaffected",
+      "It reads the same as long as you use the same voltage"
+    ],
+    "answer": 1,
+    "explanation": "Leftover charge or unrelaxed polarization in the insulation corrupts the measurement. IEEE 43 calls for full discharge before testing and suggests checking discharge current at the start. Source: IEEE 43-2013, 6.5.",
+    "reference": "IEEE 43-2013, 6.5",
+    "verified": true,
+    "kb": "insulation.md#discharge"
+  },
+  {
+    "id": "ir-033",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "safety",
+    "question": "You just finished a 10-minute PI test on a large stator. Per IEEE 43, how long should the winding stay grounded before it's handled or retested?",
+    "choices": [
+      "About 1 minute",
+      "10 minutes, the same as the test",
+      "Until the test set's display reads zero",
+      "At least 40 minutes, four times the voltage-application time"
+    ],
+    "answer": 3,
+    "explanation": "IEEE 43 recommends a minimum discharge (grounding) time of four times the time voltage was applied. Ten minutes of test means at least forty minutes grounded, and the test isn't over until there's no measurable voltage. Source: IEEE 43-2013, 4 and 6.5.",
+    "reference": "IEEE 43-2013, 4 and 6.5",
+    "verified": true,
+    "kb": "insulation.md#discharge"
+  },
+  {
+    "id": "ir-034",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "safety",
+    "question": "A cable was grounded briefly after an insulation test, then the ground was removed. A few minutes later a voltage reappears on the conductor. This is:",
+    "choices": [
+      "Absorption (dielectric) recovery voltage as stored polarization charge bleeds back out",
+      "Induction from the test set's internal transformer",
+      "A sign the test set failed to shut off",
+      "Normal for any conductor and harmless"
+    ],
+    "answer": 0,
+    "explanation": "After the dc is removed, the absorption current reverses and decays slowly, sometimes for more than 30 minutes on large insulation. A short ground removes only the fast capacitive charge. Keep it grounded. Source: IEEE 43-2013, 4 and 5.5.",
+    "reference": "IEEE 43-2013, 4 and 5.5",
+    "verified": true,
+    "kb": "insulation.md#discharge"
+  },
+  {
+    "id": "ir-035",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "When the dc source is removed after a long insulation test and the winding is grounded through a resistor, the discharge current has:",
+    "choices": [
+      "Only a capacitive part that ends almost instantly",
+      "Only a conduction part equal to the leakage current",
+      "A fast capacitive part plus a slow absorption part flowing opposite to the charging current",
+      "An absorption part that flows the same direction as during charging"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 43 describes two discharge components: the geometric capacitive discharge, which is nearly instantaneous, and the absorption discharge, which decays slowly with opposite polarity. Monitoring that discharge is the basis of discharge-current diagnostics. Source: IEEE 43-2013, 5.5 and Annex C.",
+    "reference": "IEEE 43-2013, 5.5 and Annex C",
+    "verified": true,
+    "kb": "insulation.md#discharge"
+  },
+  {
+    "id": "ir-036",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "component",
+    "question": "Per IEEE 43 Table 1, a 4160 V motor winding gets an insulation-resistance test in what dc voltage range?",
+    "choices": [
+      "250 V to 500 V",
+      "500 V to 1000 V",
+      "1000 V to 2500 V",
+      "5000 V to 10,000 V"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 43 Table 1 gives 1000\u20132500 V dc for windings rated 2501\u20135000 V. A machine rated 1000\u20132500 V gets 500\u20131000 V, and over 12 kV gets 5000\u201310,000 V. Use the manufacturer's value when it exists. Source: IEEE 43-2013, Table 1.",
+    "reference": "IEEE 43-2013, Table 1",
+    "verified": true,
+    "kb": "insulation.md#ir-field"
+  },
+  {
+    "id": "ir-037",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "You test a dry, clean winding at 500 V and then at 2500 V (still within its rating). Its insulation resistance drops sharply at the higher voltage. That suggests:",
+    "choices": [
+      "Possible flaws such as cracks, made worse by moisture or dirt",
+      "Normal behavior for good insulation",
+      "A test set calibration error only",
+      "The winding is too cold for an accurate reading"
+    ],
+    "answer": 0,
+    "explanation": "Good, dry insulation gives about the same resistance at any test voltage up to the peak of its rating. A marked drop as voltage rises points to imperfections or fractures, often aggravated by contamination. Source: IEEE 43-2013, 6.4.",
+    "reference": "IEEE 43-2013, 6.4",
+    "verified": true,
+    "kb": "insulation.md#ir-field"
   }
 ]

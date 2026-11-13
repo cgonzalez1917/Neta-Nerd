@@ -65,7 +65,7 @@ Balanced wye: line current equals phase current, and line voltage is 1.732 times
 
 Torque in pound-feet: `33,000 × hp / (6.28 × rpm)`. The 6.28 stands in for 2π. At 10 hp and 1800 rpm, `330,000 / (6.28 × 1800) ≈ 29.2 lb-ft`.
 
-Resistance per 1000 ft, as printed: measured ohms × (length of the run in feet / 1000). A 500 ft run that measures 0.20 Ω gives `0.20 × (500 / 1000) = 0.10 Ω` on that line.
+Resistance and length of run, as printed: resistance × (length of the run in feet / 1000). Read it as scaling a per-1000-ft value up or down to a run: 0.20 Ω per 1000 ft over a 500 ft run is `0.20 × (500 / 1000) = 0.10 Ω`. To go the other way, from a measured run to a per-1000-ft value, multiply by 1000 / length. A 500 ft run that measures 0.20 Ω is 0.40 Ω per 1000 ft. See [run length](#/study/math.md/run-length).
 
 Capacitance from reactive power: `C = VAR / (2πf V²)`, farads. A 10,000 var capacitor at 480 V and 60 Hz is about 115 µF. The companion line is `kVAR = kV² × 1000 / XC`. At 0.48 kV and `XC = 23.04 Ω`, that is `0.2304 × 1000 / 23.04 = 10 kvar`.
 
@@ -158,3 +158,78 @@ IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common
 ## Wye capacitors, line to line {#caps}
 
 Three equal capacitors in wye: a measurement from phase A to phase B sees two units in series. Series capacitance is half of one unit when they match. 100 µF cans read about 50 µF from A to B. Do not call the bank failed because the line-to-line reading is not the nameplate microfarads of one can.
+
+## Unit prefixes {#prefixes}
+
+Not on the sheet. Every step is a factor of 1000.
+
+- tera (T) = 10¹²
+- giga (G) = 10⁹
+- mega (M) = 10⁶
+- kilo (k) = 10³
+- milli (m) = 10⁻³
+- micro (µ, sometimes typed u) = 10⁻⁶
+- nano (n) = 10⁻⁹
+- pico (p) = 10⁻¹²
+
+Capital M is mega and lowercase m is milli. That one letter is the difference between a megohm and a milliohm. Worked: 2,500 MΩ = 2.5 GΩ. 0.047 µF = 47 nF. 1,500 µΩ = 1.5 mΩ.
+
+## Single-loop RLC, start to finish {#rlc}
+
+The sheet gives every piece: `XL = 2πfL`, `XC = 1/(2πfC)`, `Z = √(R² + (XL − XC)²)`, `V = IZ`, and `cos θ = R/Z`. The work is doing them in order without dropping a prefix.
+
+Worked: 120 V, 60 Hz, R = 30 Ω, L = 0.20 H, C = 50 µF.
+
+1. `XL = 2π × 60 × 0.20 = 75.4 Ω`
+2. `XC = 1 / (2π × 60 × 50×10⁻⁶) = 53.1 Ω`
+3. Net `X = 75.4 − 53.1 = 22.3 Ω`, inductive because XL is larger
+4. `Z = √(30² + 22.3²) = 37.4 Ω`
+5. `I = 120 / 37.4 = 3.21 A`
+6. `PF = 30 / 37.4 = 0.80`, lagging. `θ = cos⁻¹(0.80) = 36.7°` in degree mode
+
+If XC is the larger one, the circuit is capacitive and current leads. ELI the ICE man tells you the direction. The sheet doesn't.
+
+## Combining capacitors and resistors {#cap-combos}
+
+Not on the sheet.
+
+- Resistors and inductors: series add. Parallel use reciprocals: `1/R = 1/R1 + 1/R2 + …`. The parallel total is always below the smallest branch.
+- Capacitors are backward: parallel add, and series use reciprocals. 10 µF and 15 µF in series is 6 µF. In parallel it's 25 µF.
+
+Three resistors in parallel, 60, 30, and 20 Ω: `1/60 + 1/30 + 1/20 = 6/60`, so the total is 10 Ω. Product over sum works only two at a time.
+
+## 4–20 mA scaling {#loop-scaling}
+
+Not on the sheet. Analog transducers and transmitters commonly use a 4–20 mA loop (IEEE C37.1 lists it as a standard dc analog signal range). 4 mA is the bottom of the range, not zero current, and the live span is 16 mA.
+
+- Reading from current: `value = (mA − 4) / 16 × full range`
+- Current from reading: `mA = 4 + 16 × (value / full range)`
+
+Worked: 0–150 °C transmitter at 8 mA: `(8 − 4) / 16 × 150 = 37.5 °C`. A 0–2000 A transducer at 1200 A: `4 + 16 × 0.6 = 13.6 mA`. The usual miss is treating the loop as 0–20 mA.
+
+## RMS, peak, and peak-to-peak {#rms-peak}
+
+The sheet prints `Vpeak = √2 × Vrms`. Peak-to-peak is twice peak, and that step is not printed. Meters and relays usually report rms. Oscilloscopes and some event records show peak or peak-to-peak.
+
+Worked: 480 V rms peaks at 679 V. A scope trace of 340 V peak-to-peak is 170 V peak, which is 120 V rms.
+
+## More drills on the lower block {#sheet-drills}
+
+- **Delta and wye.** Delta line current 52 A is a phase current of `52 / 1.732 = 30 A`. A 4160 V wye has `4160 / 1.732 = 2402 V` per phase.
+- **Capacitor on another voltage.** 100 kvar at 480 V on a 440 V bus: `100 × (440/480)² = 84 kvar`. The square matters.
+- **kvar from reactance.** `kVAR = kV² × 1000 / XC`. At 0.48 kV and 4.608 Ω: 50 kvar. Enter kilovolts, not volts.
+- **Resonance.** 10 mH and 100 µF: `f = 1 / (2π √(0.010 × 100×10⁻⁶)) = 159 Hz`. At resonance Z = R.
+- **Machine speed.** `ns = 120 × f / P`. Six poles at 60 Hz is 1200 rpm. Four poles at 50 Hz is 1500 rpm.
+- **Watthour meters.** Kh is watthours per disk revolution. `kW = 3.6 × revolutions × Kh / seconds`, where 3.6 is 3600 seconds per hour divided by 1000 W per kW. Primary Kh = Kh × CT ratio × VT ratio.
+- **Torque.** 50 hp at 1750 rpm: `33,000 × 50 / (6.28 × 1750) = 150 lb-ft`.
+- **Motor current.** Build it: hp × 746 = output watts, divide by efficiency for input watts, divide by PF for VA, then `I = VA / (1.732 × V)`.
+- **Percent accuracy.** Divide by the specified value, not the measured one. Keep the sign.
+
+## Resistance and run length {#run-length}
+
+Conductor resistance is proportional to length. Check the units every time you use the resistance-and-length line: a longer run must read more ohms.
+
+- From a per-1000-ft value to a run: `R_run = R_per_1000ft × (length / 1000)`. 0.20 Ω per 1000 ft over 2,500 ft is 0.50 Ω. This is the arrangement the sheet's line prints.
+- From a measured run to a per-1000-ft value: `R_per_1000ft = R_measured × (1000 / length)`. A 2,000 ft shield that measures 30 Ω is 15 Ω per 1000 ft.
+
+If an answer says a long run reads less than its per-1000-ft value, the fraction is upside down.

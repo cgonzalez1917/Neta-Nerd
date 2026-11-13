@@ -683,5 +683,185 @@
     "reference": "IEEE 80-2013, 7.4 and 12.5",
     "verified": true,
     "kb": "grounding.md#limits"
+  },
+  {
+    "id": "gnd-039",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "A Wenner four-point test uses equal spacing a = 10 m with shallow probes and reads R = 1.5 \u03a9. The apparent soil resistivity is about:",
+    "choices": [
+      "15 \u03a9\u00b7m",
+      "47 \u03a9\u00b7m",
+      "94 \u03a9\u00b7m",
+      "188 \u03a9\u00b7m"
+    ],
+    "answer": 2,
+    "explanation": "With probes no deeper than a tenth of the spacing, IEEE 81 simplifies the Wenner equation to \u03c1 = 2\u03c0aR = 2\u03c0 \u00d7 10 \u00d7 1.5 = 94 \u03a9\u00b7m. 188 \u03a9\u00b7m uses 4\u03c0aR, the deep-probe form, without its correction terms. Source: IEEE 81-2012, 7.2.3, Equation (3).",
+    "reference": "IEEE 81-2012, 7.2.3, Equation (3)",
+    "verified": true,
+    "kb": "grounding.md#soil"
+  },
+  {
+    "id": "gnd-040",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "In a Wenner four-point soil resistivity test, the four probes are used how?",
+    "choices": [
+      "Current and voltage both on the inner two",
+      "Current between probes 1 and 3, voltage between 2 and 4",
+      "Each probe is measured separately to remote earth",
+      "Test current flows between the outer two; voltage is measured between the inner two"
+    ],
+    "answer": 3,
+    "explanation": "The four probes sit in a straight line at equal spacing. Current is passed through the outer pair and the potential is read across the inner pair. V/I is the R used in \u03c1 = 2\u03c0aR. Source: IEEE 81-2012, 7.2.3.",
+    "reference": "IEEE 81-2012, 7.2.3",
+    "verified": true,
+    "kb": "grounding.md#soil"
+  },
+  {
+    "id": "gnd-041",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "Wenner readings are taken at spacings of 2 m, 5 m, 10 m, and 20 m, and the calculated resistivity changes a lot from one spacing to the next. That tells you:",
+    "choices": [
+      "The tester is faulty, since soil resistivity is constant",
+      "The soil has layers of different resistivity at different depths",
+      "The probes were driven too deep",
+      "The readings must be averaged into one value"
+    ],
+    "answer": 1,
+    "explanation": "Each spacing samples roughly to a depth equal to a. A set of spacings plotted against resistivity shows whether there are distinct layers and roughly how deep they sit. That profile feeds grid design. Source: IEEE 81-2012, 7.2.3.",
+    "reference": "IEEE 81-2012, 7.2.3",
+    "verified": true,
+    "kb": "grounding.md#soil"
+  },
+  {
+    "id": "gnd-042",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "For a conservative ground-system design, when does IEEE 81 suggest taking soil resistivity readings on a site with strong seasonal swings?",
+    "choices": [
+      "Right after heavy rain, when readings are most stable",
+      "During adverse weather, such as dry conditions, when resistivity is high",
+      "At any time, since season has no effect",
+      "Only in winter, after the ground freezes"
+    ],
+    "answer": 1,
+    "explanation": "Moisture and temperature change resistivity. Measuring under adverse conditions gives conservative values. Taking the soil and grid readings under similar weather also narrows the gap between calculated and measured resistance. Source: IEEE 81-2012, 8.1.2.",
+    "reference": "IEEE 81-2012, 8.1.2",
+    "verified": true,
+    "kb": "grounding.md#soil"
+  },
+  {
+    "id": "gnd-043",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "Using Tagg's slope method with readings at 0.2, 0.4, and 0.6 of the current-probe distance, you get 2.0 \u03a9, 2.4 \u03a9, and 2.9 \u03a9. The slope coefficient \u03bc is:",
+    "choices": [
+      "0.80",
+      "0.50",
+      "2.9",
+      "1.25"
+    ],
+    "answer": 3,
+    "explanation": "\u03bc = (R3 \u2212 R2) / (R2 \u2212 R1) = (2.9 \u2212 2.4) / (2.4 \u2212 2.0) = 0.5 / 0.4 = 1.25. You then look up the true potential-probe position for that \u03bc in the IEEE 81 table and take the reading there. Source: IEEE 81-2012, 8.2.2.4 (slope method).",
+    "reference": "IEEE 81-2012, 8.2.2.4 (slope method)",
+    "verified": true,
+    "kb": "grounding.md#fop-field"
+  },
+  {
+    "id": "gnd-044",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "In dry soil the fall-of-potential test probes themselves have far more resistance than the electrode under test. How badly does that hurt the result?",
+    "choices": [
+      "Not much; a key advantage of the method is that high probe resistance has little effect on accuracy",
+      "The result is invalid unless probes are under 5 \u03a9",
+      "The reading will equal the probe resistance",
+      "It doubles the measured electrode resistance"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 81 points out that the current and potential probes can have substantially higher resistance than the ground under test without significantly affecting accuracy. The tester may still flag low current, which you fix by improving probe contact. Source: IEEE 81-2012, 8.2.2.4.",
+    "reference": "IEEE 81-2012, 8.2.2.4",
+    "verified": true,
+    "kb": "grounding.md#fop-field"
+  },
+  {
+    "id": "gnd-045",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A clamp-on (stakeless) ground tester on a pole ground gives a usable electrode reading only because it assumes:",
+    "choices": [
+      "The electrode is isolated from all other grounds",
+      "The soil is perfectly uniform",
+      "The rest of the multigrounded neutral is so low in impedance it can be treated as zero",
+      "The neutral carries no load current"
+    ],
+    "answer": 2,
+    "explanation": "The clamp induces a test voltage and measures the loop current. The loop is the electrode under test in series with everything else in parallel. The method works only when that parallel return is close to zero ohms. Source: IEEE 81-2012, 8.2.2.5 and Annex E.2.",
+    "reference": "IEEE 81-2012, 8.2.2.5 and Annex E.2",
+    "verified": true,
+    "kb": "grounding.md#clamp-on"
+  },
+  {
+    "id": "gnd-046",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "theory",
+    "question": "A clamp-on ground tester reads high on an electrode tied to a long overhead neutral. A likely error source per IEEE 81 is:",
+    "choices": [
+      "The test frequency is too low to pass through soil",
+      "Clamp-on meters only work on dc systems",
+      "The 1\u20133.4 kHz test frequency makes the neutral's inductive reactance significant compared with the resistance",
+      "The tester measures only the neutral's resistance"
+    ],
+    "answer": 2,
+    "explanation": "Compact clamp-on testers inject roughly 1 kHz to 3.4 kHz. At those frequencies the inductance of a long neutral or shield return adds reactance, and the reading can be badly distorted if that isn't accounted for. Source: IEEE 81-2012, 8.1.2 e) and 8.2.2.5 b).",
+    "reference": "IEEE 81-2012, 8.1.2 e) and 8.2.2.5 b)",
+    "verified": true,
+    "kb": "grounding.md#clamp-on"
+  },
+  {
+    "id": "gnd-047",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "On a clamp-on ground test, which of these can throw the reading off even when the setup looks right?",
+    "choices": [
+      "Corroded splices on the neutral, or jaws that don't mate and align properly",
+      "The color of the down lead's insulation",
+      "Taking the reading on the bottom third of the pole",
+      "A digital display instead of an analog needle"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 81 lists corroded neutral or shield connections as an influence on the reading. Accuracy also depends on the jaws closing and aligning properly, and these meters need frequent calibration. Source: IEEE 81-2012, 8.2.2.5.",
+    "reference": "IEEE 81-2012, 8.2.2.5",
+    "verified": true,
+    "kb": "grounding.md#clamp-on"
+  },
+  {
+    "id": "gnd-048",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "ATS 7.13 has you measure resistance from the main grounding system to major equipment frames and derived neutrals. What does it call for, and what result is investigated?",
+    "choices": [
+      "Fall-of-potential to each frame; investigate above 5 \u03a9",
+      "Megohmmeter tests; investigate below 100 M\u03a9",
+      "Clamp-on readings; investigate above 25 \u03a9",
+      "Point-to-point tests; investigate any value above 0.5 \u03a9"
+    ],
+    "answer": 3,
+    "explanation": "ATS 7.13.B.3 calls for point-to-point resistance between the main grounding system and frames, the system neutral, and derived neutrals. D.3 says investigate values over 0.5 \u03a9. The 5 \u03a9 figure is the electrode-to-earth screen in D.2. Source: ANSI/NETA ATS-2025 7.13.B.3 and 7.13.D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.3 and 7.13.D.3",
+    "verified": true,
+    "kb": "grounding.md#fop-field"
   }
 ]

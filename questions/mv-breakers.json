@@ -556,5 +556,149 @@
     "reference": "ANSI/NETA ATS-2025 Table 100.2; ANSI/NETA MTS-2023 Table 100.2",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-032",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "On a medium-voltage vacuum breaker, ATS 7.6.3 says critical distances such as contact gap are measured and judged against:",
+    "choices": [
+      "Table 100.12",
+      "IEEE C37.04 default gaps",
+      "The manufacturer's published data",
+      "The adjacent breaker in the lineup"
+    ],
+    "answer": 2,
+    "explanation": "A.7 measures critical distances such as contact gap as the manufacturer recommends, and C.1 judges them against the manufacturer's data. ATS doesn't publish a generic gap. Source: ANSI/NETA ATS-2025 7.6.3.A.7 and C.1.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.A.7 and C.1",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-033",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Which of these is a required (not optional) item on the ATS 7.6.3 vacuum breaker visual and mechanical list?",
+    "choices": [
+      "Contact-timing test",
+      "Trip/close coil current signature analysis",
+      "Mechanism motion analysis",
+      "Thermographic survey"
+    ],
+    "answer": 0,
+    "explanation": "A.12, contact timing, carries no asterisk. Coil current signature (A.13), motion analysis (A.14), and the thermographic survey (A.16) are marked optional. Source: ANSI/NETA ATS-2025 7.6.3.A.12\u2013A.16.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.A.12\u2013A.16",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-034",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "How does ATS 7.6.3 have you prove the vacuum interrupters themselves?",
+    "choices": [
+      "Insulation resistance phase-to-ground with the breaker closed only",
+      "Contact resistance across each closed pole",
+      "A visual check for discoloration of the bottle",
+      "A dielectric withstand across each open bottle, done strictly per the manufacturer's published data"
+    ],
+    "answer": 3,
+    "explanation": "B.10 is the vacuum bottle integrity test: a withstand across each interrupter with the breaker open, in strict accordance with the manufacturer. The magnetron atmospheric-condition test (B.9) is an optional extra. Source: ANSI/NETA ATS-2025 7.6.3.B.9 and B.10.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.B.9 and B.10",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-035",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A vacuum breaker with 125 V dc controls has no manufacturer coil data. Its trip coil operates reliably at 75 V. Using ATS Table 100.20, that is:",
+    "choices": [
+      "A failure, since it must operate at 100 V or above",
+      "Acceptable, since the opening-function range for 125 V dc is 70\u2013140 V",
+      "A failure, since trip coils must pick up at exactly 125 V",
+      "Acceptable only if the close coil also works at 75 V"
+    ],
+    "answer": 1,
+    "explanation": "B.4 tests minimum pickup on trip and close coils, using Table 100.20 when the manual is silent. For 125 V dc, the opening functions range is 70\u2013140 V, while indoor closing and auxiliary functions run 100\u2013140 V. Source: ANSI/NETA ATS-2025 7.6.3.B.4 and D.4; Table 100.20.1.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.B.4 and D.4; Table 100.20.1",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-036",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A 15 kV-class vacuum breaker has no manufacturer insulation-test values. Under ATS 7.6.3 and Table 100.1, the test is:",
+    "choices": [
+      "1000 V dc with 100 M\u03a9 minimum",
+      "2500 V dc, with 5,000 M\u03a9 as the recommended minimum at 20 \u00b0C",
+      "5000 V dc with 100,000 M\u03a9 minimum",
+      "15,000 V dc with 1,000 M\u03a9 minimum"
+    ],
+    "answer": 1,
+    "explanation": "B.1 tests each pole closed (phase-to-phase and phase-to-ground) and across each open pole for one minute. Table 100.1's 15,000 V row is 2,500 V dc and 5,000 M\u03a9. Source: ANSI/NETA ATS-2025 7.6.3.B.1; Table 100.1.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.B.1; Table 100.1",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-037",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A 15 kV-class vacuum breaker's overall dielectric withstand has no manufacturer value. The maximum field-applied ac test from ATS Table 100.19 is:",
+    "choices": [
+      "11.4 kV",
+      "20.4 kV",
+      "28.8 kV",
+      "34 kV"
+    ],
+    "answer": 1,
+    "explanation": "B.11 sends you to Table 100.19 when the manufacturer is silent. The 15 kV insulation-class row gives 34 kV factory, 20.4 kV maximum field ac, and 28.8 kV maximum field dc. Source: ANSI/NETA ATS-2025 7.6.3.B.11; Table 100.19.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.B.11; Table 100.19",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-038",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "systems",
+    "question": "Before a vacuum breaker goes back in service, ATS 7.6.3 has you trip it by operating each protective device. What does that prove?",
+    "choices": [
+      "That the breaker's contact resistance is acceptable",
+      "That the vacuum bottles hold their withstand",
+      "That the coordination study is correct",
+      "That each relay or device actually trips this breaker through the real control wiring, per the system design"
+    ],
+    "answer": 3,
+    "explanation": "B.6 trips the breaker from each protective device and then resets logs and indicators. D.6 says protective devices shall operate the breaker per the system design. It's the end-to-end check that test-set injection alone can't give. Source: ANSI/NETA ATS-2025 7.6.3.B.6 and D.6.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.B.6 and D.6",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-039",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "The optional mechanism motion analysis on a vacuum breaker produces travel and velocity curves. ATS 7.6.3 judges them against:",
+    "choices": [
+      "The manufacturer's published data",
+      "Table 100.20",
+      "The adjacent poles within 50%",
+      "IEEE C37.09 default velocities"
+    ],
+    "answer": 0,
+    "explanation": "C.6 holds travel and velocity to the manufacturer's data, and timing (C.4) and coil current (C.5) are judged the same way. Without that data the trace is a baseline for trending, not a pass/fail. Source: ANSI/NETA ATS-2025 7.6.3.A.14, C.4\u2013C.6.",
+    "reference": "ANSI/NETA ATS-2025 7.6.3.A.14, C.4\u2013C.6",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum-field"
   }
 ]

@@ -55,3 +55,35 @@ Table 100.20.1, rated control voltages for circuit breakers (from IEEE C37.06 as
 - Torque from the wrong SAE column.
 - Forgetting to restore the trip plugs before the breaker is racked in.
 - Applying Table 100.7 at a current other than 300% and still quoting its seconds.
+
+## Field sequence for a power breaker {#field-sequence}
+
+ATS 7.6.1.2 is a list, not a mandated order, but a sensible order keeps you from testing something you'll have to redo:
+
+1. **Nameplate against drawings** (A.1). Wrong frame, sensor, or plug stops everything.
+2. **Mechanical**: condition, arc chutes, contacts and wipe, mechanism and alignment per the manual, torque (Table 100.12 if the manual is silent), cell fit, racking, lubrication (A.2–A.13).
+3. **Counter**: record as-found. It should advance one count per close-open cycle (A.15, C.4).
+4. **Insulation resistance**: one minute, each pole closed (phase-to-phase and phase-to-ground) and across each open pole (B.1). For 600 V gear with no manufacturer value, Table 100.1 gives 1000 V dc and 100 MΩ. Pull anything the trip-unit manual says can't take it.
+5. **Contact resistance** (B.2). Investigate deviations over 50% of the lowest similar pole when there's no manufacturer band (D.2).
+6. **Primary injection**: long-time, short-time, ground-fault, and instantaneous pickup and delay against the manufacturer's curves (B.3–B.6).
+7. **Auxiliaries**: trip and pickup indicators, zone interlocking, electrical close and trip, trip-free, antipump, trip-unit battery. Then reset trip logs and indicators (B.8).
+8. **Charging mechanism** per the manufacturer (B.9, D.10).
+9. **Final settings** per the coordination study (A.14, C.3), recorded as-left with the counter.
+
+## Maintenance mode (energy-reducing maintenance switching) {#maintenance-mode}
+
+Many trip units have a maintenance or arc-reduction mode, sold under names such as ERMS, ARMS, or RELT. NFPA 70E-2024 Informative Annex O.2.3(3) describes the idea: the trip unit is set to operate faster while someone works inside the arc flash boundary, then set back to normal when the work is done, with a local indicator showing its state.
+
+Why it works: IEEE 1584-2018 found that incident energy grows roughly in proportion to arc duration (Annex G.3). Cut the clearing time and you cut the energy. Available fault current and working distance don't change.
+
+What it costs: while it's on, the breaker trips with no intentional delay above its maintenance pickup. A fault on a downstream feeder can take out the whole bus, because the time separation the coordination study relied on is gone. Turn it off and confirm the indicator when the work ends.
+
+Product example, Eaton PXR 20/25 (manual MN013003EN, 3.5 and 4.6):
+
+- A front switch labeled MAINT. MODE turns it on locally, and a blue ring lights while it's active. It can also be enabled by a remote contact or over communications.
+- Enabled over communications means disabled over communications. Cycling the front switch won't turn it off.
+- The maintenance pickup is adjustable. Picking it is a study decision, partly so motor inrush on the same feeder doesn't trip it.
+
+Testing: relay-based arc-energy reduction schemes are checked under ATS-2025 7.9.2.B.6: element pickup and timing, zone interlocking, normal versus maintenance mode logic, communication-failure alarms, and light-sensor pickup against ambient. ATS-2025 7.27 is reserved, so there is no separate section yet. For trip units, prove the mode per the manufacturer.
+
+Labels: NFPA 70E-2024 130.5(G) requires the incident energy analysis to account for the device's clearing time, including its condition of maintenance. A breaker that hasn't been exercised and trips slowly can make the label understate the hazard.

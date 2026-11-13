@@ -1836,5 +1836,671 @@
     "reference": "IEEE C37.1-2007, 3.1.1 note",
     "verified": true,
     "kb": "math.md#not-on-sheet"
+  },
+  {
+    "id": "math-125",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "An insulation tester shows 2,500 M\u03a9. The same value written in gigohms is:",
+    "choices": [
+      "25 G\u03a9",
+      "0.25 G\u03a9",
+      "2.5 G\u03a9",
+      "2,500 G\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Each prefix step is a factor of 1000. 1 G\u03a9 = 1,000 M\u03a9, so 2,500 M\u03a9 = 2.5 G\u03a9. Prefixes are not printed on the formula sheet. Source: EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten); NETA Level 2 Detailed Content Outline (Dec 2022), II.B.3 (unit conversions).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten); NETA Level 2 Detailed Content Outline (Dec 2022), II.B.3 (unit conversions)",
+    "verified": true,
+    "kb": "math.md#prefixes"
+  },
+  {
+    "id": "math-126",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A capacitor is marked 0.047 \u00b5F. In nanofarads that is:",
+    "choices": [
+      "47 nF",
+      "4.7 nF",
+      "470 nF",
+      "0.47 nF"
+    ],
+    "answer": 0,
+    "explanation": "1 \u00b5F = 1,000 nF. 0.047 \u00d7 1,000 = 47 nF. Moving one prefix step down multiplies the number by 1000. Source: EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten); NETA Level 2 Detailed Content Outline (Dec 2022), II.B.3 (unit conversions).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten); NETA Level 2 Detailed Content Outline (Dec 2022), II.B.3 (unit conversions)",
+    "verified": true,
+    "kb": "math.md#prefixes"
+  },
+  {
+    "id": "math-127",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A bus joint reads 1,500 \u00b5\u03a9 on a micro-ohmmeter. Written in milliohms, the reading is:",
+    "choices": [
+      "15 m\u03a9",
+      "0.15 m\u03a9",
+      "150 m\u03a9",
+      "1.5 m\u03a9"
+    ],
+    "answer": 3,
+    "explanation": "1 m\u03a9 = 1,000 \u00b5\u03a9, so 1,500 \u00b5\u03a9 = 1.5 m\u03a9. A capital M would be megohms. Lowercase m is milli. Source: EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten); NETA Level 2 Detailed Content Outline (Dec 2022), II.B.3 (unit conversions).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten); NETA Level 2 Detailed Content Outline (Dec 2022), II.B.3 (unit conversions)",
+    "verified": true,
+    "kb": "math.md#prefixes"
+  },
+  {
+    "id": "math-128",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A series circuit on 120 V, 60 Hz has R = 30 \u03a9, L = 0.20 H, and C = 50 \u00b5F. The circuit current is about:",
+    "choices": [
+      "1.60 A",
+      "2.26 A",
+      "3.21 A",
+      "4.00 A"
+    ],
+    "answer": 2,
+    "explanation": "XL = 2\u03c0 \u00d7 60 \u00d7 0.20 = 75.4 \u03a9. XC = 1 / (2\u03c0 \u00d7 60 \u00d7 50\u00d710\u207b\u2076) = 53.1 \u03a9. Net X = 22.3 \u03a9. Z = \u221a(30\u00b2 + 22.3\u00b2) = 37.4 \u03a9. I = V/Z = 120 / 37.4 = 3.21 A. 4.00 A is V/R with the reactances ignored. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL, XC, Z, V = IZ).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL, XC, Z, V = IZ)",
+    "verified": true,
+    "kb": "math.md#rlc"
+  },
+  {
+    "id": "math-129",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Same circuit: R = 30 \u03a9 and Z = 37.4 \u03a9, with XL larger than XC. The power factor is about:",
+    "choices": [
+      "0.80 leading",
+      "0.80 lagging",
+      "0.60 lagging",
+      "1.25 lagging"
+    ],
+    "answer": 1,
+    "explanation": "cos \u03b8 = R/Z = 30 / 37.4 = 0.80. Net reactance is inductive (XL > XC), so current lags voltage and the power factor is lagging. A power factor above 1 is impossible because R can never exceed Z. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (cos \u03b8 = R/Z); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (impedance triangles).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (cos \u03b8 = R/Z); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (impedance triangles)",
+    "verified": true,
+    "kb": "math.md#rlc"
+  },
+  {
+    "id": "math-130",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Same circuit (R = 30 \u03a9, Z = 37.4 \u03a9, inductive). The phase angle between voltage and current is about:",
+    "choices": [
+      "53.3\u00b0, current lagging",
+      "36.7\u00b0, current lagging",
+      "36.7\u00b0, current leading",
+      "0.64\u00b0, current lagging"
+    ],
+    "answer": 1,
+    "explanation": "\u03b8 = cos\u207b\u00b9(30 / 37.4) = 36.7\u00b0. Inductive net reactance means current lags. 53.3\u00b0 is the complement, which comes from using sine where cosine belongs. 0.64 is the answer in radians, a calculator left in RAD mode. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (cos \u03b8 = R/Z); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (impedance triangles).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (cos \u03b8 = R/Z); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (impedance triangles)",
+    "verified": true,
+    "kb": "math.md#rlc"
+  },
+  {
+    "id": "math-131",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A series circuit on 240 V, 60 Hz has R = 40 \u03a9, L = 50 mH, and C = 40 \u00b5F. Which describes the circuit?",
+    "choices": [
+      "Inductive, I \u2248 3.87 A, current lags voltage",
+      "Capacitive, I \u2248 6.00 A, current leads voltage",
+      "Resistive, I \u2248 6.00 A, in phase",
+      "Capacitive, I \u2248 3.87 A, current leads voltage"
+    ],
+    "answer": 3,
+    "explanation": "XL = 2\u03c0 \u00d7 60 \u00d7 0.050 = 18.8 \u03a9. XC = 1 / (2\u03c0 \u00d7 60 \u00d7 40\u00d710\u207b\u2076) = 66.3 \u03a9. XC is larger, so the circuit is capacitive and current leads (ICE). Z = \u221a(40\u00b2 + 47.5\u00b2) = 62.1 \u03a9, I = 240 / 62.1 = 3.87 A. 6.00 A is 240/40, which ignores the reactance. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL, XC, Z, V = IZ); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (leading power factor when XC exceeds XL).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL, XC, Z, V = IZ); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (leading power factor when XC exceeds XL)",
+    "verified": true,
+    "kb": "math.md#rlc"
+  },
+  {
+    "id": "math-132",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 10 \u00b5F capacitor and a 15 \u00b5F capacitor are connected in series. The total capacitance is:",
+    "choices": [
+      "6 \u00b5F",
+      "12.5 \u00b5F",
+      "25 \u00b5F",
+      "150 \u00b5F"
+    ],
+    "answer": 0,
+    "explanation": "Capacitors in series combine the way resistors do in parallel: 1/C = 1/10 + 1/15, so C = 6 \u00b5F. Series total is always less than the smallest unit. 25 \u00b5F would be the parallel total. Source: EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (capacitance, series and parallel).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (capacitance, series and parallel)",
+    "verified": true,
+    "kb": "math.md#cap-combos"
+  },
+  {
+    "id": "math-133",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Capacitors of 10 \u00b5F, 15 \u00b5F, and 25 \u00b5F are connected in parallel. The total capacitance is:",
+    "choices": [
+      "4.84 \u00b5F",
+      "16.7 \u00b5F",
+      "50 \u00b5F",
+      "3,750 \u00b5F"
+    ],
+    "answer": 2,
+    "explanation": "Parallel capacitors simply add: 10 + 15 + 25 = 50 \u00b5F. That is the opposite of resistors, where parallel units shrink the total. Source: EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (capacitance, series and parallel).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (capacitance, series and parallel)",
+    "verified": true,
+    "kb": "math.md#cap-combos"
+  },
+  {
+    "id": "math-134",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Resistors of 60 \u03a9, 30 \u03a9, and 20 \u03a9 are connected in parallel. The total resistance is:",
+    "choices": [
+      "10 \u03a9",
+      "20 \u03a9",
+      "36.7 \u03a9",
+      "110 \u03a9"
+    ],
+    "answer": 0,
+    "explanation": "1/R = 1/60 + 1/30 + 1/20 = 6/60, so R = 10 \u03a9. A parallel total is always below the smallest branch, so 20 \u03a9 and up can be ruled out on sight. Product-over-sum only works two at a time. Source: EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (resistances connected in parallel).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (resistances connected in parallel)",
+    "verified": true,
+    "kb": "math.md#cap-combos"
+  },
+  {
+    "id": "math-135",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A temperature transmitter is ranged 0 to 150 \u00b0C on a 4\u201320 mA loop. The loop reads 8 mA. The temperature is:",
+    "choices": [
+      "37.5 \u00b0C",
+      "53.3 \u00b0C",
+      "60.0 \u00b0C",
+      "75.0 \u00b0C"
+    ],
+    "answer": 0,
+    "explanation": "The live span is 16 mA (20 \u2212 4). The signal is 8 \u2212 4 = 4 mA above zero, a quarter of span. 0.25 \u00d7 150 = 37.5 \u00b0C. 60 \u00b0C comes from 8/20 \u00d7 150, which forgets the 4 mA offset. Source: IEEE C37.1-2007, Table 7 (4\u201320 mA dc analog inputs); linear scaling.",
+    "reference": "IEEE C37.1-2007, Table 7 (4\u201320 mA dc analog inputs); linear scaling",
+    "verified": true,
+    "kb": "math.md#loop-scaling"
+  },
+  {
+    "id": "math-136",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A current transducer scales 0\u20132000 A to 4\u201320 mA. The feeder carries 1200 A. The output should be:",
+    "choices": [
+      "9.6 mA",
+      "12.0 mA",
+      "13.6 mA",
+      "16.0 mA"
+    ],
+    "answer": 2,
+    "explanation": "mA = 4 + 16 \u00d7 (1200 / 2000) = 4 + 9.6 = 13.6 mA. 12.0 mA is 60% of 20 mA, which treats the loop as 0\u201320 mA. Source: IEEE C37.1-2007, Table 13 (4\u201320 mA dc analog outputs); linear scaling.",
+    "reference": "IEEE C37.1-2007, Table 13 (4\u201320 mA dc analog outputs); linear scaling",
+    "verified": true,
+    "kb": "math.md#loop-scaling"
+  },
+  {
+    "id": "math-137",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 480 V rms line-to-line sine wave reaches a peak line-to-line voltage of about:",
+    "choices": [
+      "339 V",
+      "554 V",
+      "679 V",
+      "831 V"
+    ],
+    "answer": 2,
+    "explanation": "Vpeak = \u221a2 \u00d7 Vrms = 1.414 \u00d7 480 = 679 V. Meters normally read rms. Insulation sees the peak, which is one reason test voltages and ratings are not the rms number. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Vpeak = \u221a2 Vrms).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Vpeak = \u221a2 Vrms)",
+    "verified": true,
+    "kb": "math.md#rms-peak"
+  },
+  {
+    "id": "math-138",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "An oscilloscope shows a clean sine wave of 340 V peak-to-peak. The rms value is about:",
+    "choices": [
+      "120 V",
+      "170 V",
+      "240 V",
+      "481 V"
+    ],
+    "answer": 0,
+    "explanation": "Peak is half of peak-to-peak: 170 V. Then Vrms = Vpeak / \u221a2 = 170 / 1.414 = 120 V. The sheet prints the peak-rms line. The peak-to-peak step is yours to remember. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Vpeak = \u221a2 Vrms); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (peak is half of peak-to-peak).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Vpeak = \u221a2 Vrms); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (peak is half of peak-to-peak)",
+    "verified": true,
+    "kb": "math.md#rms-peak"
+  },
+  {
+    "id": "math-139",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A balanced delta-connected load draws 52 A in each line. The current in each phase winding is about:",
+    "choices": [
+      "17 A",
+      "30 A",
+      "52 A",
+      "90 A"
+    ],
+    "answer": 1,
+    "explanation": "In a balanced delta, line current = 1.732 \u00d7 phase current. Phase current = 52 / 1.732 = 30 A. 90 A multiplies when it should divide. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (balanced delta).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (balanced delta)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-140",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 4160 V wye-connected generator is balanced. Each phase winding (line to neutral) has about:",
+    "choices": [
+      "1387 V",
+      "2400 V",
+      "4160 V",
+      "7205 V"
+    ],
+    "answer": 1,
+    "explanation": "Balanced wye: line voltage = 1.732 \u00d7 phase voltage. 4160 / 1.732 = 2402 V. In a delta, phase and line voltage would be the same 4160 V. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (balanced wye).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (balanced wye)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-141",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 100 kvar capacitor bank is rated 480 V. It is connected to a 440 V bus. The bank delivers about:",
+    "choices": [
+      "84 kvar",
+      "92 kvar",
+      "100 kvar",
+      "109 kvar"
+    ],
+    "answer": 0,
+    "explanation": "kVAR1 = kVAR2 \u00d7 (kV1 / kV2)\u00b2 = 100 \u00d7 (440 / 480)\u00b2 = 84.0 kvar. Output goes with the square of voltage, so an 8% low voltage costs about 16%. 92 kvar is the linear ratio, which skips the square. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (capacitor VAR conversion).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (capacitor VAR conversion)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-142",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 300 kvar capacitor rated 13.8 kV is installed on a 12.47 kV feeder. Its output is about:",
+    "choices": [
+      "245 kvar",
+      "271 kvar",
+      "300 kvar",
+      "367 kvar"
+    ],
+    "answer": 0,
+    "explanation": "kVAR1 = 300 \u00d7 (12.47 / 13.8)\u00b2 = 300 \u00d7 0.8165 = 245 kvar. Using the plain ratio gives 271 kvar. Inverting the ratio gives 367 kvar, more than nameplate, which should look wrong at once. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (capacitor VAR conversion).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (capacitor VAR conversion)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-143",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 480 V capacitor has a capacitive reactance of 4.608 \u03a9. Using the sheet's kvar line, its rating is:",
+    "choices": [
+      "50 kvar",
+      "0.05 kvar",
+      "104 kvar",
+      "50,000 kvar"
+    ],
+    "answer": 0,
+    "explanation": "kVAR = kV\u00b2 \u00d7 1000 / XC = 0.48\u00b2 \u00d7 1000 / 4.608 = 230.4 / 4.608 = 50 kvar. Entering 480 instead of 0.48 inflates the answer by a million. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (kVAR = kV\u00b2 \u00d7 1000 / XC).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (kVAR = kV\u00b2 \u00d7 1000 / XC)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-144",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A single-phase capacitor is rated 50,000 var at 480 V, 60 Hz. Using C = VAR / (2\u03c0fV\u00b2), its capacitance is about:",
+    "choices": [
+      "0.576 \u00b5F",
+      "57.6 \u00b5F",
+      "576 \u00b5F",
+      "1,740 \u00b5F"
+    ],
+    "answer": 2,
+    "explanation": "C = 50,000 / (2\u03c0 \u00d7 60 \u00d7 480\u00b2) = 50,000 / 86,859,000 = 5.76\u00d710\u207b\u2074 F = 576 \u00b5F. The formula returns farads, so convert to microfarads at the end. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (C = VAR / 2\u03c0fV\u00b2).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (C = VAR / 2\u03c0fV\u00b2)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-145",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "L = 10 mH and C = 100 \u00b5F are in series. The resonant frequency is about:",
+    "choices": [
+      "5.03 Hz",
+      "50.3 Hz",
+      "159 Hz",
+      "1,592 Hz"
+    ],
+    "answer": 2,
+    "explanation": "f = 1 / (2\u03c0 \u221a(LC)) with henries and farads: LC = 0.010 \u00d7 100\u00d710\u207b\u2076 = 1\u00d710\u207b\u2076, \u221a = 0.001, f = 1 / (2\u03c0 \u00d7 0.001) = 159 Hz. Leaving the prefixes off moves the answer by powers of ten. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (resonance).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (resonance)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-146",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A series RLC circuit with R = 8 \u03a9 is driven at exactly its resonant frequency from 120 V. The current is:",
+    "choices": [
+      "0 A",
+      "7.5 A",
+      "15 A",
+      "Limited only by the capacitor"
+    ],
+    "answer": 2,
+    "explanation": "At resonance XL = XC, so the sheet's Z = \u221a(R\u00b2 + (XL \u2212 XC)\u00b2) collapses to Z = R. I = 120 / 8 = 15 A, and the power factor is unity. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Z, resonance); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (series resonance limited only by resistance).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Z, resonance); EEI Handbook for Electricity Metering, 11th ed., Ch. 4 (series resonance limited only by resistance)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-147",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 6-pole induction motor runs on a 60 Hz supply. Its synchronous speed is:",
+    "choices": [
+      "900 rpm",
+      "1200 rpm",
+      "1800 rpm",
+      "3600 rpm"
+    ],
+    "answer": 1,
+    "explanation": "Rearrange f = P \u00d7 ns / 120 to ns = 120 \u00d7 f / P = 120 \u00d7 60 / 6 = 1200 rpm. The rotor of an induction motor runs a little below this because of slip. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (f = P \u00d7 ns / 120); NEMA MG 1-2016 (Rev 2018), Part 12 (synchronous speeds).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (f = P \u00d7 ns / 120); NEMA MG 1-2016 (Rev 2018), Part 12 (synchronous speeds)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-148",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 4-pole motor built for export runs on a 50 Hz system. Its synchronous speed is:",
+    "choices": [
+      "1200 rpm",
+      "1500 rpm",
+      "1800 rpm",
+      "3000 rpm"
+    ],
+    "answer": 1,
+    "explanation": "ns = 120 \u00d7 50 / 4 = 1500 rpm. The same motor on 60 Hz would be 1800 rpm. 3000 rpm is the 2-pole value at 50 Hz. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (f = P \u00d7 ns / 120).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (f = P \u00d7 ns / 120)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-149",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A self-contained meter has Kh = 7.2. The disk makes 10 revolutions in 36 seconds. The load is about:",
+    "choices": [
+      "0.72 kW",
+      "2.0 kW",
+      "7.2 kW",
+      "72 kW"
+    ],
+    "answer": 2,
+    "explanation": "10 rev \u00d7 7.2 Wh/rev = 72 Wh in 36 s. 72 Wh \u00d7 (3600 s / 36 s) = 7,200 W = 7.2 kW. The shortcut is kW = 3.6 \u00d7 rev \u00d7 Kh / seconds. 72 kW forgets that Kh is in watthours, not kilowatthours. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (watthour constant Kh); EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (register formulas).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (watthour constant Kh); EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (register formulas)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-150",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A transformer-rated meter has a secondary Kh of 1.8 Wh/rev. It is fed by 400:5 CTs and 240:120 VTs. The primary Kh is:",
+    "choices": [
+      "1.8 Wh/rev",
+      "3.6 Wh/rev",
+      "144 Wh/rev",
+      "288 Wh/rev"
+    ],
+    "answer": 3,
+    "explanation": "Primary Kh = Kh \u00d7 CT ratio \u00d7 VT ratio = 1.8 \u00d7 80 \u00d7 2 = 288 Wh per revolution. The sheet says the primary constant represents energy in the primary circuit. 144 uses the CT ratio only. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (primary watthour constant); EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (PKh = Kh \u00d7 TR).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (primary watthour constant); EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (PKh = Kh \u00d7 TR)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-151",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A cable data sheet gives 0.20 \u03a9 per 1000 ft. A 2,500 ft run of that conductor should measure about:",
+    "choices": [
+      "0.08 \u03a9",
+      "0.20 \u03a9",
+      "0.50 \u03a9",
+      "5.0 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Resistance scales with length: 0.20 \u00d7 (2,500 / 1000) = 0.50 \u03a9. A longer run must read more, not less. 0.08 \u03a9 divides by the length factor and runs the scale backward. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (resistance and length of run line).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (resistance and length of run line)",
+    "verified": true,
+    "kb": "math.md#run-length"
+  },
+  {
+    "id": "math-152",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 50 hp motor runs at 1750 rpm. Using the sheet's torque line, full-load torque is about:",
+    "choices": [
+      "4.5 lb-ft",
+      "94 lb-ft",
+      "150 lb-ft",
+      "943 lb-ft"
+    ],
+    "answer": 2,
+    "explanation": "Torque = 33,000 \u00d7 hp / (6.28 \u00d7 rpm) = 1,650,000 / 10,990 = 150 lb-ft. Forgetting the 6.28 (2\u03c0) gives about 943 lb-ft. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (torque).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (torque)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-153",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 300 kVA, 208Y/120 V transformer has 4.5% impedance. Assuming an infinite source and no cable, the secondary bolted fault current is about:",
+    "choices": [
+      "0.83 kA",
+      "3.7 kA",
+      "18.5 kA",
+      "37.5 kA"
+    ],
+    "answer": 2,
+    "explanation": "Full-load current from the sheet's three-phase VA line: 300,000 / (1.732 \u00d7 208) = 833 A. Divide by per-unit impedance (memorize this step): 833 / 0.045 = 18.5 kA. Multiplying by 4.5 gives 3.7 kA, the usual miss. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (VA = \u221a3 VI); IEEE 141-1993, 4.5 (per-unit impedance method).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (VA = \u221a3 VI); IEEE 141-1993, 4.5 (per-unit impedance method)",
+    "verified": true,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-154",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 25 hp, 480 V three-phase motor runs at full load with 90% efficiency and 0.85 power factor. Line current is about:",
+    "choices": [
+      "22.4 A",
+      "26.4 A",
+      "29.3 A",
+      "50.8 A"
+    ],
+    "answer": 2,
+    "explanation": "Output = 25 \u00d7 746 = 18,650 W. Input = 18,650 / 0.90 = 20,722 W. kVA = kW / PF = 24.38 kVA. I = 24,380 / (1.732 \u00d7 480) = 29.3 A. 22.4 A skips both efficiency and power factor. 50.8 A leaves out \u221a3. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (1 HP = 746 W, VA = \u221a3 VI, kW = kVA \u00d7 PF).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (1 HP = 746 W, VA = \u221a3 VI, kW = kVA \u00d7 PF)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-155",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A relay time-delay element is specified at 0.500 s and times at 0.475 s. Percent accuracy by the sheet's formula is:",
+    "choices": [
+      "\u22125.3%",
+      "+5.0%",
+      "\u22125.0%",
+      "+5.3%"
+    ],
+    "answer": 2,
+    "explanation": "% accuracy = (actual \u2212 specified) / specified \u00d7 100 = (0.475 \u2212 0.500) / 0.500 \u00d7 100 = \u22125.0%. Dividing by the actual value gives \u22125.3%. The sign says the element is fast. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (% accuracy).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (% accuracy)",
+    "verified": true,
+    "kb": "math.md#sheet-drills"
+  },
+  {
+    "id": "math-156",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "On the TI-30XS you compute 2\u03c0 \u00d7 60 \u00d7 (25 \u00d7 10\u207b\u2076) and get 0.009425. To finish XC = 1/(2\u03c0fC), the quickest key is:",
+    "choices": [
+      "x\u207b\u00b9 (1/x), giving about 106 \u03a9",
+      "x\u00b2, giving about 0.0000888 \u03a9",
+      "\u221a, giving about 0.097 \u03a9",
+      "\u00d7 1000, giving about 9.4 \u03a9"
+    ],
+    "answer": 0,
+    "explanation": "XC is the reciprocal of 2\u03c0fC. Taking the reciprocal of 0.009425 gives 106.1 \u03a9. Using the reciprocal key on the answer you already have avoids retyping and avoids a parenthesis slip. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XC = 1/2\u03c0fC); NETA exam preparation page, TI-30XS MultiView on-screen calculator.",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XC = 1/2\u03c0fC); NETA exam preparation page, TI-30XS MultiView on-screen calculator",
+    "verified": true,
+    "kb": "test-day.md#calculator"
+  },
+  {
+    "id": "math-157",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "NETA's exam-prep material shows the TI-30XS set to CLASSIC rather than MathPrint. What does CLASSIC change, and what still has to be checked separately?",
+    "choices": [
+      "It switches the angle unit to degrees, so nothing else needs checking",
+      "It turns on scientific notation for every answer",
+      "It locks the calculator to four decimal places",
+      "It changes how entries and results display; DEG vs RAD is a separate setting you still check"
+    ],
+    "answer": 3,
+    "explanation": "CLASSIC is the display style: one-line entry like a basic scientific calculator. The angle unit is its own mode line. Set DEG before any cosine, sine, or inverse-cosine work. Source: NETA exam preparation page (TI-30XS mode graphic, CLASSIC); Texas Instruments TI-30XS MultiView mode menu.",
+    "reference": "NETA exam preparation page (TI-30XS mode graphic, CLASSIC); Texas Instruments TI-30XS MultiView mode menu",
+    "verified": true,
+    "kb": "test-day.md#calculator"
+  },
+  {
+    "id": "math-158",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "You want XL for a 40 mH reactor at 60 Hz but type L as 40 instead of 0.040. The calculator shows about:",
+    "choices": [
+      "15.1 \u03a9, because the prefix doesn't matter",
+      "15,080 \u03a9 instead of about 15.1 \u03a9",
+      "1.51 \u03a9 instead of about 15.1 \u03a9",
+      "150.8 \u03a9 instead of about 15.1 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "XL = 2\u03c0 \u00d7 60 \u00d7 0.040 = 15.1 \u03a9. Entering 40 treats millihenries as henries and inflates the result by 1000, to 15,080 \u03a9. If a reactor's reactance comes out in kilohms, check the prefix. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL = 2\u03c0fL); EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL = 2\u03c0fL); EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (scientific notation, powers of ten)",
+    "verified": true,
+    "kb": "test-day.md#calculator"
+  },
+  {
+    "id": "math-159",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "You work a power-factor problem and the calculator returns PF = 1.25. What does that tell you?",
+    "choices": [
+      "The load is leading",
+      "Something was entered wrong, since R/Z (and W/VA) can never exceed 1",
+      "The load is a generator",
+      "It's a valid result for a capacitive circuit"
+    ],
+    "answer": 1,
+    "explanation": "The sheet defines PF as cos \u03b8 = R/Z = watts/VA. Z is never smaller than R, and real power never exceeds apparent power, so PF stays between 0 and 1. A ratio above 1 usually means the fraction was inverted. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (cos \u03b8 = R/Z = watts/VA).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (cos \u03b8 = R/Z = watts/VA)",
+    "verified": true,
+    "kb": "test-day.md#sanity"
+  },
+  {
+    "id": "math-160",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Before the first angle problem, a quick way to confirm the on-screen calculator is in degree mode is:",
+    "choices": [
+      "sin(30) should return \u22120.988",
+      "cos(0) should return 0",
+      "tan(45) should return 0.785",
+      "sin(30) should return 0.5"
+    ],
+    "answer": 3,
+    "explanation": "sin(30\u00b0) = 0.5. In radian mode sin(30) returns about \u22120.988. cos(0) is 1 in either mode, so it proves nothing. 0.785 is 45\u00b0 written in radians. Source: NETA exam preparation page (TI-30XS mode graphic); trigonometric identities, EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (trigonometric functions).",
+    "reference": "NETA exam preparation page (TI-30XS mode graphic); trigonometric identities, EEI Handbook for Electricity Metering, 11th ed., Ch. 3 (trigonometric functions)",
+    "verified": true,
+    "kb": "test-day.md#calculator"
+  },
+  {
+    "id": "math-161",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Which of these will you NOT find on the official one-page NETA formula sheet shown during the exam?",
+    "choices": [
+      "Series and parallel capacitor combination rules",
+      "Capacitor VAR conversion, kVAR1 = kVAR2 \u00d7 (kV1/kV2)\u00b2",
+      "Balanced wye: line voltage = 1.732 \u00d7 phase voltage",
+      "Resonance, f = 1 / (2\u03c0\u221a(LC))"
+    ],
+    "answer": 0,
+    "explanation": "The June 29, 2017 sheet prints the capacitor VAR conversion, the balanced delta and wye relations, and resonance. It does not print how capacitors combine in series or parallel. That rule has to be memorized, and it runs opposite to resistors. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017)",
+    "verified": true,
+    "kb": "test-day.md#screen"
   }
 ]
