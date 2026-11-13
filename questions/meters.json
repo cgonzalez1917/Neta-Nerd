@@ -398,42 +398,6 @@
     "kb": "cables.md#tan-delta"
   },
   {
-    "id": "math-023",
-    "level": "I",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "A 16 A load on a 480 V single-phase test source has resistance:",
-    "choices": [
-      "7.7 \u03a9",
-      "30 \u03a9",
-      "16 \u03a9",
-      "480 \u03a9"
-    ],
-    "answer": 1,
-    "explanation": "R = V/I = 480/16 = 30 \u03a9. This is the V = IR identity the formula sheet does contain; Level I is only the direct form.",
-    "reference": "Engineering fundamentals (Ohm's law)",
-    "verified": true,
-    "kb": "math.md#power"
-  },
-  {
-    "id": "math-024",
-    "level": "ETT",
-    "topic": "meters-math",
-    "domain": "theory",
-    "question": "ANSI/NETA ATS and ANSI/NETA MTS are different books. Which pairing is right?",
-    "choices": [
-      "ATS is maintenance, MTS is acceptance",
-      "ATS is acceptance testing, MTS is maintenance testing",
-      "They are the same document reprinted every year",
-      "ATS applies only to utilities and MTS only to buildings"
-    ],
-    "answer": 1,
-    "explanation": "The titles say it: ATS is Acceptance Testing Specifications, MTS is Maintenance Testing Specifications. Several numerical limits differ. Do not swap the books because the paragraph numbers look familiar.",
-    "reference": "ANSI/NETA ATS-2025 and ANSI/NETA MTS-2023, document titles and scope",
-    "verified": true,
-    "kb": "level-2.md#expectations"
-  },
-  {
     "id": "math-025",
     "level": "II",
     "topic": "meters-math",

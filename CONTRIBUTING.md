@@ -78,7 +78,7 @@ Each topic file is a JSON array. One object is one question. Fields the validato
 | Field | Required | Rule |
 | --- | --- | --- |
 | `id` | yes | `{prefix}-{number}` using the prefix in the table above. At least three digits (`batt-006`). Unique across the whole bank. Never reuse or renumber an id. Take the current highest number for that prefix and add 1. Do not fill gaps. |
-| `level` | yes | Exactly one of `ETT`, `I`, `II`, `III`, `IV`. A missing or blank level fails validation. The site shows this as a badge such as `NETA Level II`. |
+| `level` | yes | Exactly one of `II`, `III`, `IV`. `ETT` and `I` fail validation. A missing or blank level fails validation. The site shows this as a badge such as `NETA Level II`. |
 | `topic` | yes | The topic id for that file, from the table. It must match the file. |
 | `domain` | yes | `safety`, `theory`, `component`, or `systems`. This is the NETA exam bucket, not the equipment name. |
 | `question` | yes | Plain text. No HTML. |

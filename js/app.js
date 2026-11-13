@@ -1,7 +1,7 @@
 /* Neta Nerd — static drill runner. No build step. */
 (function () {
   "use strict";
-  var LEVELS = ["ETT", "I", "II", "III", "IV"];
+  var LEVELS = ["II", "III", "IV"];
   var DOMAINS = [
     { id: "safety", label: "Safety" },
     { id: "theory", label: "Theory" },
@@ -90,7 +90,6 @@
 
   function levelLabel(level) {
     if (!level) return "NETA level missing";
-    if (level === "ETT") return "NETA ETT";
     return "NETA Level " + level;
   }
 
@@ -639,7 +638,7 @@
         h("p", { class: "meta" }, onlyII
           ? "Level II bank by domain (study-guide targets " + dco.safety + " / " + dco.theory + " / " + dco.component + " / " + dco.systems + "): Safety " + iiCounts.safety + ", Theory " + iiCounts.theory + ", Component " + iiCounts.component + ", Systems " + iiCounts.systems + "."
           : match.length + " questions match the filters."),
-        chipRow("Level", LEVELS.map(function (id) { return { id: id, label: id === "ETT" ? "ETT" : "Level " + id }; }), state.filters.levels, function (id) { toggle(state.filters.levels, id); }),
+        chipRow("Level", LEVELS.map(function (id) { return { id: id, label: "Level " + id }; }), state.filters.levels, function (id) { toggle(state.filters.levels, id); }),
         chipRow("Domain", DOMAINS, state.filters.domains, function (id) { toggle(state.filters.domains, id); }),
         chipRow("Length", [{ id: "10", label: "10" }, { id: "25", label: "25" }, { id: "50", label: "50" }, { id: "all", label: "All matching" }], [state.practiceCount], function (id) { state.practiceCount = id; }),
         h("p", { class: "meta" }, match.length + " questions available with these filters. Practice lengths (10, 25, 50, or all) are untimed and show the explanation after each answer. Timed quiz always takes up to 25 and allows 72 seconds each (30:00 at 25)."),
@@ -1125,8 +1124,7 @@
         h("p", {}, "NETA’s published description of the administered certification exams: closed book, proctored at Pearson VUE, with an on-screen calculator and a formula sheet. You do not bring your own. The pass mark is a scaled 410 or higher on a 200 to 500 scale."),
         h("ul", {},
           h("li", {}, "Level II and Level III: 100 questions, 2 hours."),
-          h("li", {}, "Level IV: 65 questions, 2 hours."),
-          h("li", {}, "Level I is an employer assessment, not one of these Pearson VUE exams.")
+          h("li", {}, "Level IV: 65 questions, 2 hours.")
         ),
         h("p", {}, "Confirm the current rules on NETA’s own pages before test day."),
         h("p", {},
