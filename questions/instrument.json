@@ -808,5 +808,221 @@
     "reference": "IEEE C57.13-2016, 6.4.1.3 and Table 13",
     "verified": true,
     "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-046",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A technician treats a CT's knee-point voltage and its saturation voltage as the same number when checking a relaying application. What does IEEE C37.110-2023 say about those two points?",
+    "choices": [
+      "They are defined as the same point, so either name can be used interchangeably in application checks",
+      "Saturation voltage is always 70% of the knee-point on every C-class CT",
+      "They are not the same. Saturation voltage is found where the straight portions of the log-log excitation curve meet, and the knee-point used in the guide is the 45-degree tangent point on a square-decade plot (definition A)",
+      "The knee-point is only used for metering CTs; relaying CTs are judged from saturation voltage alone"
+    ],
+    "answer": 2,
+    "explanation": "The guide defines both quantities and warns that they are not the same. Saturation voltage is the symmetrical secondary voltage at which peak induction just exceeds saturation flux density, found graphically at the intersection of the straight portions of the log-log excitation curve. The knee-point used throughout the guide, unless noted otherwise, is definition (A): the 45-degree tangent on a square-decade plot. Source: IEEE C37.110-2023, Clause 3 (knee-point voltage and saturation voltage) and 4.3.",
+    "reference": "IEEE C37.110-2023, Clause 3 (knee-point voltage and saturation voltage) and 4.3",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-047",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A setting sheet quotes a CT knee-point from the 10% voltage / 50% current definition (definition B). A second sheet uses the IEEE C57.13 45-degree definition (definition A) for the same CT. How should you treat those two voltages?",
+    "choices": [
+      "The two definitions are written to give the same voltage, so either sheet can be used without adjustment",
+      "Definition B always reads about 70% of definition A",
+      "They are not the same value. Definition B falls higher on the curve, about 20% to 25% above definition A, and the guide uses definition A unless it says otherwise",
+      "Definition A is only for T-class CTs, so a relaying C-class unit must use definition B"
+    ],
+    "answer": 2,
+    "explanation": "Clause 3 lists both knee-point definitions and states they do not give the same value. On a square log-log plot, definition B corresponds to a tangent of about 13 degrees, and the voltage there is about 20% to 25% higher than definition A. The guide uses definition A unless otherwise specified, and it warns the reader to confirm which definition a manufacturer is using. Source: IEEE C37.110-2023, 4.3.2 and Clause 3.",
+    "reference": "IEEE C37.110-2023, 4.3.2 and Clause 3",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-048",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "You have an excitation curve for a relaying CT and want to calculate ratio error from it. The CT is marked T200, not C200. What is the right call?",
+    "choices": [
+      "Do not treat the excitation curve as sufficient by itself. A T-class unit has enough leakage flux that ratio error has to be determined by test, typically from the manufacturer's overcurrent ratio curves",
+      "C and T classes are interchangeable for this purpose, so the excitation curve can be used the same way as on a C-class CT",
+      "T-class CTs have negligible leakage, so the excitation curve is the preferred way to calculate ratio error",
+      "A T200 marking means the CT may be judged from the C200 excitation method at any burden"
+    ],
+    "answer": 0,
+    "explanation": "C-class performance can be calculated from the excitation characteristic because leakage flux is negligible. T-class CTs have appreciable core leakage, so IEEE C57.13 requires overcurrent ratio curves, and the ratio error must be determined by test rather than from the excitation curve alone. Source: IEEE C37.110-2023, 4.4.",
+    "reference": "IEEE C37.110-2023, 4.4",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-049",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A close-in fault will be fully offset on a system with a high X/R ratio. Why can a CT that looks adequate on symmetrical current still saturate during the first cycles?",
+    "choices": [
+      "Offset current reduces core flux, so a CT that is adequate on symmetrical current is automatically conservative during the offset",
+      "X/R affects only the relay burden power factor, not the flux in the CT",
+      "Saturation from offset current is instantaneous and is already included in the ANSI C-class voltage rating",
+      "The dc offset can raise the core flux to as much as 1 plus X/R times the flux from the sinusoidal component, so a CT sized only for symmetrical current can still be driven into saturation"
+    ],
+    "answer": 3,
+    "explanation": "An asymmetrical current's dc offset greatly increases CT flux. At maximum offset, flux can rise to as much as 1 + X/R times the steady ac flux, using the primary-system reactance and resistance seen by the CT. That is why a CT that is adequate for symmetrical current can still saturate on an offset fault. Source: IEEE C37.110-2023, 4.5.1.",
+    "reference": "IEEE C37.110-2023, 4.5.1",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-050",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "You are checking whether a relaying CT will avoid saturation on a fully offset fault into a largely resistive burden. Which saturation-voltage requirement does IEEE C37.110-2023 give for that dc-offset case?",
+    "choices": [
+      "The ac-only rule Vx greater than Is times Zs already covers maximum dc offset, so no further margin is required",
+      "The required saturation voltage is greater than Is times Zs times (1 + X/R), which is a harder demand than the ac-only requirement of Vx greater than Is times Zs",
+      "Offset current allows a smaller CT, because the required saturation voltage drops to Is times Zs divided by (1 + X/R)",
+      "Remanence is the only term that matters; X/R does not appear in the saturation-voltage inequalities"
+    ],
+    "answer": 1,
+    "explanation": "Avoiding ac saturation requires Vx greater than Is times Zs. Avoiding saturation with a fully offset dc component is harder: Vx must also exceed Is times Zs times (1 + X/R). The second inequality is the more severe of the two whenever X/R is significant, and it often implies an impractically large CT, so the protection plan may have to compensate. Source: IEEE C37.110-2023, 4.5.2.3.",
+    "reference": "IEEE C37.110-2023, 4.5.2.3",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-051",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Two CT secondary burdens have the same ohmic magnitude. One is almost purely resistive; the other is more inductive (lower power factor). Other factors equal, what happens to time-to-saturation?",
+    "choices": [
+      "Ohmic magnitude is all that matters, so the two burdens produce the same time-to-saturation",
+      "The more inductive burden gives a longer time-to-saturation, because it looks like a small impedance to the dc offset and reduces the burden voltage that has to be supported as flux",
+      "The more inductive burden always saturates the CT sooner, because inductance adds to flux",
+      "Time-to-saturation depends only on remanence and is independent of burden power factor"
+    ],
+    "answer": 1,
+    "explanation": "A larger total secondary burden, at unchanged power factor, shortens time-to-saturation. For two impedances of equal magnitude, the more inductive one (lower power factor) lengthens time-to-saturation because the inductance is a low impedance to the dc offset, which reduces the burden voltage drop and the associated flux. Source: IEEE C37.110-2023, 4.5.3.",
+    "reference": "IEEE C37.110-2023, 4.5.3",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-052",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A relaying CT was ratio-tested with a dc battery method earlier in the week and was not demagnetized. A close-in fault is expected on this circuit. What remanence issue should you raise?",
+    "choices": [
+      "Any remanence from a dc test decays to a negligible value within a few minutes of load current, so no further action is needed",
+      "Remanence can be cleared by applying 10% of the knee-point voltage for a few cycles",
+      "DC testing cannot produce remanence; only an interrupted fault current can",
+      "Direct current in the winding can leave remanence, and remanence dissipates very little in normal service. Reducing it to less than 10% of saturation flux density takes a voltage of about 60% of the knee-point, so the core should be demagnetized before the CT is returned to service"
+    ],
+    "answer": 3,
+    "explanation": "Maximum remanence occurs when primary current is interrupted while the CT is saturated, and testing that forces direct current through the winding will also cause remanence. Once it is established, remanence dissipates very little under service conditions. A voltage of about 60% of the knee-point voltage must be applied to reduce remanence to less than 10% of saturation flux density. The guide points to IEEE C57.13.1 for demagnetizing practice. Source: IEEE C37.110-2023, 4.6.",
+    "reference": "IEEE C37.110-2023, 4.6",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-053",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "In the guide's example of a C800, 1200:5 CT on a 24 kA fully offset fault, time-to-saturation is 25 ms with no remanence, 8.3 ms at 50% remanence, and 5 ms at 75% remanence, all at the same burden. What is the application lesson?",
+    "choices": [
+      "Remanence of the same polarity as the fault's transient flux can cut time-to-saturation sharply, and remanence as high as 80% of saturation flux has been measured in service, so a CT that looks acceptable with a clean core may still saturate early",
+      "Remanence lengthens time-to-saturation, so a residual core flux is conservative for high-speed relaying",
+      "Time-to-saturation is unchanged by remanence once the C-class voltage is adequate",
+      "Remanence above 20% of saturation flux cannot occur in modern C-class CTs"
+    ],
+    "answer": 0,
+    "explanation": "When remanence has the same polarity as the transient-fault flux, the secondary waveform distorts sooner. The worked traces show time-to-saturation falling from 25 ms to 8.3 ms to 5 ms as remanence goes from 0% to 50% to 75%. Remanence as high as 80% of saturation flux has been measured (Annex C). Opposite-polarity remanence can actually help keep the secondary undistorted. Source: IEEE C37.110-2023, 4.6.1 and Annex C.",
+    "reference": "IEEE C37.110-2023, 4.6.1 and Annex C",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-054",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A specification calls for gapped-core relaying CTs to limit remanence. A reviewer worries that even a small gap will ruin the accuracy class. What does the guide say?",
+    "choices": [
+      "Any gap automatically drops the CT from C class to T class, so gapped cores cannot be used for relaying",
+      "Gapped cores increase remanence and are used only for metering",
+      "A small gap can cut remanence down to almost nothing without changing the relaying accuracy rating. Large-gap, sometimes called linearized, cores have little or no remanence",
+      "A small gap has no effect on remanence; only a change of core steel grade will reduce it"
+    ],
+    "answer": 2,
+    "explanation": "A gapped core increases magnetizing current and reduces the chance of remanence. The guide states that the increase in magnetizing current from a small gap will not affect the relaying accuracy rating, while remanence falls to almost nothing. Cores with large gaps, sometimes called linearized cores, have little or no remanence. Cold-rolled grain-oriented silicon steel, by contrast, can retain remanence as high as 80% of saturation flux density. Source: IEEE C37.110-2023, 4.6.2.",
+    "reference": "IEEE C37.110-2023, 4.6.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-055",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A designer wants to apply a C400 CT right at its class voltage as the normal operating point for close-in faults. What does IEEE C37.110-2023 say about using the accuracy-class voltage that way?",
+    "choices": [
+      "Operating at the class voltage is the recommended design point and already includes offset and remanence",
+      "The class voltage is a continuous thermal limit, so it may be used as a normal burden-voltage target",
+      "The accuracy-class voltage is a convenient way to specify steady-state capability, not a recommended operating point. Performance still has to be checked for the actual current, burden, offset, and remanence",
+      "If the class voltage is not exceeded, ratio error is guaranteed to stay under 10% during the dc-offset period"
+    ],
+    "answer": 2,
+    "explanation": "Under ideal conditions the secondary would copy the primary, but burden, current, asymmetry, and remanence can distort the waveform. The accuracy rating used to classify CTs is not a recommended operating point; it is only a handy way to state the steady-state voltage the CT must produce. The guide sends the reader to 4.5.2 for methods of assessing performance under those real conditions. Source: IEEE C37.110-2023, Clause 5 introduction and 4.5.2.",
+    "reference": "IEEE C37.110-2023, Clause 5 introduction and 4.5.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-056",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Someone proposes a 1:2 auxiliary CT to step secondary current up into a low-set electromechanical relay, with a 1.0 ohm burden on the auxiliary secondary. What burden does that 1.0 ohm present to the main CT, and is the step-up a good idea?",
+    "choices": [
+      "The 1.0 ohm appears as 4.0 ohms to the main CT. Current step-up applications are not preferred when they can be avoided, because the connected burden increases as the square of the auxiliary ratio",
+      "The 1.0 ohm appears as 0.25 ohm to the main CT, so a 1:2 step-up is the preferred way to cut main-CT burden",
+      "Auxiliary CTs do not change the burden seen by the main CT",
+      "A 1:2 step-up reflects 1.0 ohm as 1.0 ohm, because turns-ratio corrections cancel in a matching auxiliary CT"
+    ],
+    "answer": 0,
+    "explanation": "Impedance on the secondary of an auxiliary CT is reflected to the main CT multiplied by the square of the auxiliary ratio. The guide's example is exact: 1.0 ohm looks like 0.25 ohm through a 2:1 step-down and like 4.0 ohms through a 1:2 step-up. For that reason, stepping current up through an auxiliary CT is generally poor practice when it can be avoided. The auxiliary CT also has to be checked for its own knee-point against its own connected burden. Source: IEEE C37.110-2023, 5.1 and 5.7.",
+    "reference": "IEEE C37.110-2023, 5.1 and 5.7",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
+  },
+  {
+    "id": "ct-057",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "An existing breaker has two identical bushing CTs of the same ratio connected in series to raise voltage capability. What limits and benefits does IEEE C37.110-2023 assign to that connection?",
+    "choices": [
+      "Series CTs of any ratio may be mixed, and a fault between them is no different from a fault outside the pair",
+      "Connecting CTs in series halves the voltage capability and doubles the burden on each CT",
+      "Series connection is the preferred arrangement for new work because it removes the need for a higher accuracy class",
+      "The CTs must be identical and should sit next to each other on the same bushing so a fault cannot occur between them. The pair splits the burden, doubles voltage capability, and halves the impedance seen by each CT, but a fault between the two CTs can overvoltage both secondaries"
+    ],
+    "answer": 3,
+    "explanation": "The series connection is not ideal for new work; one adequately rated CT, or a lower burden, is preferred. If two CTs are placed in series they must be identical and should sit side by side, for example both on the same bushing, so a fault cannot occur between them. A fault between the two CTs drives their secondary currents in opposite directions and can produce excessive overvoltage, so secondary overvoltage protection may be required. When the two CTs are similar, each sees half the external burden impedance and the pair's burden-voltage capability is doubled. Source: IEEE C37.110-2023, 5.5.",
+    "reference": "IEEE C37.110-2023, 5.5",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-field"
   }
 ]

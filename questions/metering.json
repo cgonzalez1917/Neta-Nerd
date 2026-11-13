@@ -358,5 +358,131 @@
     "reference": "ANSI/NETA ATS-2025, 7.9.2.B.8, 7.9.2.B.9, and 7.9.2.B.10",
     "verified": true,
     "kb": "apparatus.md#automation"
+  },
+  {
+    "id": "mtr-021",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "An IEC 61850 project has four SCL files on the server: SSD, ICD, SCD, and CID. The owner asks which file describes the configured substation automation system as a whole. What are those files, and which one answers the question?",
+    "choices": [
+      "The four file types use unrelated formats, and the ICD file is the one that describes the entire substation system",
+      "SSD, ICD, SCD, and CID are interchangeable names for the same file, so any one of them describes the system",
+      "All four use the same XML format but have different scopes. The substation configuration description (SCD) describes the configured system. SSD is the system specification, ICD is the IED's capability, and CID is one IED as configured to be loaded",
+      "Only the CID file can describe the substation as a whole, because it is the only file written after the IEDs are purchased"
+    ],
+    "answer": 2,
+    "explanation": "Part 6 defines an XML substation configuration language and a family of files that share methods and format but have different scopes: the system specification description (SSD), the IED capability description (ICD), the substation configuration description (SCD), and the configured IED description (CID). Those four roles should not be treated as interchangeable filenames. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 7.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 7",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-022",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A protection GOOSE and a sampled-value stream will share a station Ethernet network with ordinary MMS reports. What does the Adamiak overview say about how those three are mapped on the stack?",
+    "choices": [
+      "GOOSE and sampled values are mapped directly into the Ethernet frame, skipping the middle layers. MMS uses a connection-oriented profile that can run over TCP/IP or ISO. GSSE, the older UCA-style event, runs over connectionless ISO services",
+      "GOOSE, sampled values, and MMS all travel as ordinary TCP/IP application traffic, with no special Ethernet mapping",
+      "Sampled values require MMS, and GOOSE requires TCP, so neither can run if the station bus has no IP routing",
+      "GSSE is the same Ethernet Ethertype mapping as GOOSE and never uses ISO connectionless services"
+    ],
+    "answer": 0,
+    "explanation": "Part 8.1 sets the lower-layer profiles, and those profiles depend on the service. GOOSE, and sampled values, are mapped straight into the Ethernet data frame. MMS client/server traffic can run over TCP/IP or ISO transport. That is a change from the older UCA GOOSE, which used connectionless ISO services. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 5 and Figure 4.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 5 and Figure 4",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-023",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A process-bus design will digitize currents and voltages out at the yard. What device does the Adamiak overview place at that process layer, and how do IEC 61850-9-1 and 9-2 differ?",
+    "choices": [
+      "A station HMI digitizes the yard quantities, and 9.1 and 9.2 are two names for the same MMS report",
+      "Part 9.2 is only a point-to-point link with a fixed dataset, while 9.1 is the multicast process bus",
+      "Merging units are used only for MMS file transfer, not for sampled values",
+      "A merging unit collects the sensor and status inputs and publishes sampled values. Part 9.1 is a unidirectional point-to-point link with a fixed dataset; part 9.2 is a configurable dataset that can be multicast from one publisher to many subscribers and is the more general process-bus implementation"
+    ],
+    "answer": 3,
+    "explanation": "The process layer gathers voltage, current, and status from the primary equipment. A merging unit takes those signals, samples them at an agreed, synchronized rate, and publishes sampled measured values so any IED can align data from more than one unit. Part 9.1 defines a unidirectional multidrop point-to-point link carrying a fixed dataset (as in IEC 60044-8). Part 9.2 defines a user-configurable dataset, described in SCL, that can be transmitted on a multicast basis from one publisher to multiple subscribers, and is the more generalized process-bus implementation. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 6.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 6",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-024",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A merging-unit specification must state a synchronized sample rate. What two rates does the implementation agreement in the Adamiak overview record?",
+    "choices": [
+      "A single rate of 16 samples per cycle is used for both protection and oscillography",
+      "80 samples in each power-system cycle for ordinary protection and monitoring, and 256 samples in each cycle when high-frequency work such as power-quality or high-resolution oscillography is required",
+      "Protection uses 256 samples per cycle, and metering uses 80 samples per cycle",
+      "The standard forbids agreeing on a sample rate; each IED may sample independently"
+    ],
+    "answer": 1,
+    "explanation": "Merging units in a station sample at an agreed, synchronized rate so an IED can align data from more than one unit. At the time of the paper, an implementation agreement set a base rate of 80 samples in each power-system cycle for ordinary protection and monitoring, and 256 samples in each cycle when high-frequency work such as power-quality or high-resolution oscillography is required. Those streams go straight to Ethernet. VLAN filtering lets a switch deliver datasets only to subscribed ports and IEDs, and clock redundancy has to be planned so a second clock can take over if the first fails. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 6.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 6",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-025",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "During a design review, someone asks why IEC 61850-8-1 maps the abstract models to MMS rather than to a simple register-based protocol. What reason does the overview give?",
+    "choices": [
+      "MMS is required because it is the only protocol that can carry raw sampled values in a process bus",
+      "MMS is a public ISO protocol with a proven record that can support the complex named objects and rich services of the IEC 61850 model, so the mapping stays straightforward. Mapping the same model onto a protocol that only offers simple read and write of register numbers would be cumbersome",
+      "IEC 61850 forbids the use of MMS; the overview recommends mapping only to Modbus registers",
+      "MMS is used only for file transfer; all operational data must use DNP3"
+    ],
+    "answer": 1,
+    "explanation": "The abstract object and service models have to run over a real, practical protocol. Part 8.1 maps them to the Manufacturing Message Specification (MMS, ISO 9506). MMS was kept from the earlier UCA work because it is the only public ISO protocol with a proven implementation record that can readily support the complex naming and service models. The same models could, in theory, be mapped to other protocols, but the mapping becomes complex when the target only provides simple read, write, and report services for variables addressed by register or index numbers. Logical devices map to MMS domains, and many other IEC 61850 classes map to named MMS variables. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 5 and Tables 2 and 3.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 5 and Tables 2 and 3",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-026",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "You are walking a new IED's logical-node list and need to know, from the name alone, whether a node is switchgear, a measurement unit, or a protection function. Which prefix rules does the overview give?",
+    "choices": [
+      "Every protection function is named XCBR, and every breaker is named MMXU",
+      "Logical-node names are vendor-specific and have no standard first-letter assignment",
+      "The first letter is only an instance number; the function is carried only in a comment field",
+      "Protection logical nodes begin with P, switchgear with X (XCBR is a circuit breaker), instrument transformers with T, power transformers with Y, and metering and measurement with M (MMXU is a three-phase measurement unit)"
+    ],
+    "answer": 3,
+    "explanation": "IEC 61850-7-4 groups logical nodes by a standard first letter: A for automatic control, M for metering and measurement, C for supervisory control, G for generic functions, I for interfacing and archiving, L for system logical nodes, P for protection, R for protection-related, S for sensors, T for instrument transformers, X for switchgear, Y for power transformers, and Z for other equipment. XCBR is the circuit-breaker example developed in the paper, and MMXU is the three-phase measurement unit, with instance suffixes such as MMXU1 and MMXU2 when a device measures more than one feeder. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 4.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 4",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-027",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A station still has legacy DNP and Modbus IEDs that must appear in the new IEC 61850 system. What modeling approach does the overview say the standard already supports for that gateway role?",
+    "choices": [
+      "A single physical device can contain multiple logical devices, so a data concentrator or multi-device gateway can present each legacy IED as its own logical device without leaving the standard",
+      "IEC 61850 cannot represent legacy devices at all; they must be replaced before the station bus is commissioned",
+      "Each physical device may contain only one logical device, so a gateway is outside the model",
+      "Legacy protocols can be used only if they are first converted to GSSE"
+    ],
+    "answer": 0,
+    "explanation": "The logical-device model is well suited to legacy protocols. Support for more than one logical device inside a single physical device lets IEC 61850 model a data concentrator or a multi-device gateway directly, without techniques outside the standard. The paper also notes that OPC can be used to build a simple gateway into a substation SCADA system, so data from older devices can be reached as IEC 61850 data. Source: Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 9.1.",
+    "reference": "Adamiak, Baigent, and Mackiewicz, IEC 61850 Communication Networks and Systems in Substations: An Overview for Users, section 9.1",
+    "verified": true,
+    "kb": "relays.md#iec61850"
   }
 ]
