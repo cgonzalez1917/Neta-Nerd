@@ -86,7 +86,7 @@
     "answer": 1,
     "explanation": "Compare similar parts under similar load, or compare with ambient. Record the temperature difference and what it was compared to. A cover that does not have to come off stays on. These chapters do not give a degrees-of-rise limit, so the bank does not invent one.",
     "reference": "NFPA 70B-2026, 7.4",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -104,7 +104,7 @@
     "answer": 1,
     "explanation": "Thermography stays on 12, 12, and 6 months. The plain standard row, used for many assemblies when the manufacturer is silent, is 60, 36, and 12 months. Do not put the infrared camera on that longer row.",
     "reference": "NFPA 70B-2026, Table 9.3.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   }
 ]

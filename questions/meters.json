@@ -1158,7 +1158,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "IEEE C57.104-2019 clause 6.2.1 says acetylene becomes an important product:",
+    "question": "In the text that opens IEEE C57.104-2019 clause 4, acetylene becomes an important product:",
     "choices": [
       "At ordinary service temperature",
       "Only as the fault temperature nears 1000 \u00b0C",
@@ -1166,8 +1166,8 @@
       "Only in the nitrogen blanket"
     ],
     "answer": 1,
-    "explanation": "Acetylene is the very-high-temperature gas, from arcing in oil or paper. Methane, ethane, and ethylene show up at lower heating. A trace story that never reaches that temperature is not an acetylene story.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "explanation": "Acetylene shows up in a meaningful amount only as the fault temperature gets up near 1000 \u00b0C. That point is in the text that opens clause 4. Methane, ethane, and ethylene show up with lower heating. A story that never reaches that temperature is not an acetylene story.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, opening of clause 4",
     "verified": true,
     "kb": "field-methods.md#dga"
   },

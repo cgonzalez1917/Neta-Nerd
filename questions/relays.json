@@ -952,7 +952,7 @@
     ],
     "answer": 0,
     "explanation": "Restraint, or blocking, recognizes inrush and lets the operating pickup stay low for real faults. ATS 7.9.1 says to determine that harmonic restraint. It does not tell you to turn it off to make the relay trip faster on energizing.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2.1",
     "verified": true,
     "kb": "relays.md#testing"
   },
@@ -1025,7 +1025,7 @@
     "answer": 1,
     "explanation": "Comments and recommendations belong in that record too. A bare pass or fail with no as-found value cannot support the next interval. These chapters do not give a polarization-index or dielectric-absorption number to invent.",
     "reference": "NFPA 70B-2026, 8.5.1 and 8.5.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1043,7 +1043,7 @@
     "answer": 1,
     "explanation": "The table plus the condition score is used for at least two intervals unless something fails early. After more than two intervals with no extra repairs, the original interval can resume. After more than two intervals with no problems, a longer interval is permitted, and the reason is documented. Manufacturer instructions still come first.",
     "reference": "NFPA 70B-2026, 9.1.2 and 9.3.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1078,7 +1078,7 @@
     ],
     "answer": 1,
     "explanation": "49 is thermal. 51 is time overcurrent. 32 looks at power direction and is the element you meet on a generator or a network, not the ordinary motor overload. ATS 7.15 points the motor starter at section 7.16, not at a 32 test.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, devices 32 and 49",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 (device 32, directional power; devices 49T and 49R, thermal)",
     "verified": true,
     "kb": "relays.md#numbers"
   },
@@ -1096,7 +1096,7 @@
     ],
     "answer": 1,
     "explanation": "3.8 on a tap of 3 is far enough away that you do not call it good without the manufacturer\u2019s tolerance. ATS tells you to determine pickup. It does not say the fix is always the spring or always the next tap. Those adjustments are in the relay manual.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 item 15 (device 51: minimum pickup and two timing points)",
     "verified": true,
     "kb": "relays.md#testing"
   },
@@ -1149,8 +1149,8 @@
       "The close coil"
     ],
     "answer": 2,
-    "explanation": "The 51 must pick up before it can energize the 86. The 86 then seals and closes a contact that energizes the 52 trip coil. Resetting the breaker does not reset the 86. An a contact is open when its device is dropped out; a b contact is closed when its device is dropped out.",
-    "reference": "IEEE C37.2 device numbers as listed in ATS-2025 7.9.1; control sequence",
+    "explanation": "The 51 must pick up before it can energize the 86. The 86 then latches and closes a contact that energizes the 52 trip coil. Resetting the breaker does not reset the 86. An a contact is open when its device is dropped out; a b contact is closed when its device is dropped out.",
+    "reference": "Engineering fundamentals (trip sequence); ANSI/NETA ATS-2025 7.9.1",
     "verified": true,
     "kb": "relays.md#schemes"
   },
@@ -1159,7 +1159,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "On a scheme drawn with the device numbers in ATS 7.9.1, an a contact is:",
+    "question": "An a contact on a protective-relay scheme is:",
     "choices": [
       "Closed while its device is de-energized",
       "Open while its device is de-energized, and closed when that device is picked up",
@@ -1167,8 +1167,8 @@
       "The guard lead of a megohmmeter"
     ],
     "answer": 1,
-    "explanation": "The a contact follows the device: open when dropped out, closed when picked up. A b contact is the opposite, closed when dropped out, which is why it is used as a close permissive. The letter names Form A, Form B, and Form C were not in the IEEE text read for this bank, so those labels are not the graded terms. Resetting a breaker does not by itself reset an 86 that sealed in ahead of it.",
-    "reference": "Control-contact convention used with the device numbers in ANSI/NETA ATS-2025 7.9.1",
+    "explanation": "An a contact is open when its device is dropped out and closed when the device is picked up. Catalogs also call that a Form A contact. A b contact, also called Form B, is the opposite: closed when dropped out, which is why it is used as a close permissive. Resetting a breaker does not by itself reset an 86 that latched ahead of it.",
+    "reference": "Engineering fundamentals (a and b contacts); ANSI/NETA ATS-2025 7.9.1",
     "verified": true,
     "kb": "relays.md#schemes"
   },
@@ -1204,7 +1204,7 @@
     ],
     "answer": 1,
     "explanation": "A b contact is closed only while its device is dropped out. An 86 that is still latched has opened its b contact and blocks the close. Resetting only one of two lockouts leaves the other contact open. The 51 operates first in a trip path; it is not the close permissive.",
-    "reference": "Control sequence using IEEE C37.2 device 86 as listed in ATS-2025 7.9 practice",
+    "reference": "Engineering fundamentals (b-contact close permissive); ANSI/NETA ATS-2025 7.9.1",
     "verified": true,
     "kb": "relays.md#schemes"
   },
@@ -1223,7 +1223,7 @@
     "answer": 0,
     "explanation": "Electromechanical relays are on the shorter row. Solid-state and microprocessor relays use 60, 36, and 12 months. The electrical table calls for pickup, three-point timing, and restraint or directional checks, and it does not print a percent tolerance.",
     "reference": "NFPA 70B-2026, chapter 35",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1241,7 +1241,7 @@
     "answer": 0,
     "explanation": "Electromechanical relays get the branch-to-frame insulation test and the zero check. Microprocessor relays get status and arc-reduction checks, and the arc-reduction test follows the manufacturer. Pickup and timing are on the table for the relays that have those elements. No timing tolerance is printed.",
     "reference": "NFPA 70B-2026, Table 35.3.5",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1249,17 +1249,17 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "NFPA 70B-2026 Table 35.3.5 lists pickup and three-point timing for protective relays. What it does not list is:",
+    "question": "The timing tolerance for the pickup and three-point timing in NFPA 70B-2026 Table 35.3.5 comes from:",
     "choices": [
-      "A numeric timing tolerance you may invent",
+      "The relay manufacturer, not a percent made up for the test",
       "Restraint or directional checks where the relay has them",
       "Input and output checks",
       "An electromechanical zero check"
     ],
     "answer": 0,
-    "explanation": "The table tells you to test pickup, timing at three points, restraint or directional action, and the inputs and outputs. Electromechanical relays add insulation to the frame and a zero check. It never prints plus or minus a percent. That band is the manufacturer\u2019s.",
+    "explanation": "The table calls for pickup, timing at three points, restraint or directional action when the relay has it, and the inputs and outputs. Electromechanical relays add a frame insulation check and a zero check. It does not print a plus-or-minus percent. Use the manufacturer's band.",
     "reference": "NFPA 70B-2026, Table 35.3.5",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1277,7 +1277,7 @@
     "answer": 0,
     "explanation": "Cases, displays, wiring, and settings are compared with the coordination study. Electromechanical relays also get a clearance check. Microprocessor events are documented. The electrical tests are pickup, three-point timing, and restraint or directional checks, still without a percent band.",
     "reference": "NFPA 70B-2026, Table 35.3.1",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   }
 ]

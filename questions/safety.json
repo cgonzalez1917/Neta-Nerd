@@ -250,7 +250,7 @@
     ],
     "answer": 1,
     "explanation": "OSHA 3120 describes lockout devices as positive restraints and tagout devices as prominent warnings that are easier to remove and provide less protection on their own. The electrical sequence you still follow in the field is NFPA 70E-2024 120.6.",
-    "reference": "OSHA 3120 (2002 revised), lockout/tagout booklet",
+    "reference": "OSHA 3120 (2002 rev.), lockout and tagout device descriptions",
     "verified": true,
     "kb": "safety.md#loto"
   },
@@ -268,7 +268,7 @@
     ],
     "answer": 1,
     "explanation": "The 50\u2013150 V row lists a limited approach of 3 ft 6 in for fixed parts and a restricted approach of avoid contact. Not specified is the under-50 V row. 1 ft 0 in is the restricted boundary starting at 151 V.",
-    "reference": "NFPA 70E-2024 Table 130.4(E)(a)",
+    "reference": "NFPA 70E-2024 Table 130.4(E)(a), 50-150 V row",
     "verified": true,
     "kb": "safety.md#boundaries"
   },
@@ -286,7 +286,7 @@
     ],
     "answer": 0,
     "explanation": "The note under 130.7 says the PPE requirements address arc flash and shock. Because some arcs explode, physical trauma can still occur, and those requirements do not address trauma other than the thermal exposure. Hazard elimination in 110.2(A) is still first.",
-    "reference": "NFPA 70E-2024 130.7 informational note",
+    "reference": "NFPA 70E-2024 130.7(A) informational note",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -376,7 +376,7 @@
     ],
     "answer": 1,
     "explanation": "120.5(B)(2) says capacitors are discharged and high-capacitance elements are also short-circuited and grounded. A tag does not bleed the charge.",
-    "reference": "NFPA 70E-2024 120.5(B)(2)",
+    "reference": "NFPA 70E-2024 120.5(B)(2) (stored energy)",
     "verified": true,
     "kb": "safety.md#loto"
   },
@@ -1115,7 +1115,7 @@
     "answer": 1,
     "explanation": "The 90 percent cap is for hardware that was torqued before. Going back to the full original value on a joint that has already been tightened can damage the bolt or the lug. If the manufacturer published no number, the applicable fastener table is the fallback, and metric hardware stays with the manufacturer.",
     "reference": "NFPA 70B-2026, 7.2.1.4",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1133,7 +1133,7 @@
     "answer": 1,
     "explanation": "The 90 percent limit is the retorque rule for hardware that is already in service. A new joint gets the full specified torque. Do not mix the two.",
     "reference": "NFPA 70B-2026, 7.2.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1151,7 +1151,7 @@
     "answer": 0,
     "explanation": "Through 1000 V the method is DC insulation resistance, with a calibrated instrument, and the voltage stays at or below the manufacturer\u2019s test voltage. If the manufacturer is silent, an industry standard is the next stop. These chapters do not publish a polarization-index or dielectric-absorption limit.",
     "reference": "NFPA 70B-2026, 7.3.1",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1169,7 +1169,7 @@
     "answer": 1,
     "explanation": "The list includes overpotential sources, stored or mass energy, gas byproducts and electrolytes, asbestos, insulating gas, PCBs, and tetrachloroethylene. The test does not start until those are accounted for.",
     "reference": "NFPA 70B-2026, 8.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1187,7 +1187,7 @@
     "answer": 1,
     "explanation": "Calibration information has to be easy to find, and the interval has to fit how accurate the instrument must be and how it is used. A meter that is not rated for the voltage is not made acceptable by a fresh sticker.",
     "reference": "NFPA 70B-2026, 8.4",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1205,7 +1205,7 @@
     "answer": 1,
     "explanation": "Visual inspection and cleaning are before each use. Electrical testing of those tools is on a 3-month interval in every condition column. That is tighter than the ordinary equipment row.",
     "reference": "NFPA 70B-2026, Table 9.3.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1223,7 +1223,7 @@
     "answer": 0,
     "explanation": "Online means the equipment is connected to its supply. Offline means it is disconnected or fed from a test source. Enhanced means the test gathers extra diagnostic information. It is not a different kind of equipment.",
     "reference": "NFPA 70B-2026, 8.3",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1241,7 +1241,7 @@
     "answer": 2,
     "explanation": "A harsh environment or a high criticality raises the overall score even when the gear still looks clean. The interval follows that higher score. Averaging would hide the worst factor.",
     "reference": "NFPA 70B-2026, 9.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1259,7 +1259,7 @@
     "answer": 1,
     "explanation": "Manufacturer instructions come first. The table is a set of maxima used when the manufacturer does not say. A longer interval than the table has to be justified in the electrical maintenance program.",
     "reference": "NFPA 70B-2026, 9.3.1 and 9.3.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1277,7 +1277,7 @@
     "answer": 1,
     "explanation": "Any one of those methods can be the assessment, and more than one is allowed. Contact-resistance readings above the manufacturer\u2019s maximum are investigated. A retorque, if you use one, still stops at 90 percent of the original torque.",
     "reference": "NFPA 70B-2026, 7.2.1",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1295,7 +1295,7 @@
     "answer": 1,
     "explanation": "Above 1000 V the program selects among DC insulation resistance, AC or DC withstand, DC overpotential, power factor or dissipation factor, very low frequency, damped AC, acoustic ultrasonic, and partial discharge. Through 1000 V, the specified method is DC insulation resistance. These chapters still do not publish a polarization-index limit.",
     "reference": "NFPA 70B-2026, 7.3.2",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1313,7 +1313,7 @@
     "answer": 1,
     "explanation": "The exception is the case where shutting it down creates a greater hazard or cannot be done. Until it is corrected, barricades and alerts stay up. Limited-service is not the designation for a failure that is about to hurt someone.",
     "reference": "NFPA 70B-2026, 9.2.1.4",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1331,7 +1331,7 @@
     "answer": 1,
     "explanation": "The joint is assessed by infrared, a permanent sensor, contact resistance, or torque, alone or together. A resistance above the manufacturer\u2019s maximum is not left as a number on the sheet. A retorque of that existing hardware still does not exceed 90 percent of the original torque.",
     "reference": "NFPA 70B-2026, 7.2.1",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1349,7 +1349,7 @@
     "answer": 0,
     "explanation": "Condition 1 is the clean case. Condition 2 still meets that picture but has at least one concern, such as a changed result or an open recommendation. Condition 3 is the step where operation has changed, cycles were missed, or an alarm is still unaddressed.",
     "reference": "NFPA 70B-2026, 9.2.1.1",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1367,7 +1367,7 @@
     "answer": 1,
     "explanation": "Other triggers are an operating change, an unaddressed monitoring notification, or an urgent action. Two missed cycles are enough by themselves. Condition 2 is the milder step, where the basics are still met and only one concern has shown up.",
     "reference": "NFPA 70B-2026, 9.2.1.3",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1456,7 +1456,7 @@
     ],
     "answer": 1,
     "explanation": "A confined space is big enough to enter, has limited entry or exit, and is not meant for continuous occupancy. It is permit-required if any one of the four characteristics is present: hazardous atmosphere (or the potential for one), a material that can engulf a person, walls or a floor that can trap or asphyxiate, or any other recognized serious safety or health hazard. Entry begins when any part of the body breaks the plane of the opening.",
-    "reference": "29 CFR 1910.146, definitions of confined space and permit-required confined space",
+    "reference": "29 CFR 1910.146(b), definitions of confined space and permit-required confined space",
     "verified": true,
     "kb": "safety.md#confined"
   },
@@ -1493,7 +1493,7 @@
     "answer": 0,
     "explanation": "Online means the equipment is still connected to its supply. Offline means it is disconnected or energized from test equipment. The A suffix, 1A and 2A, means an enhanced test that gathers extra diagnostic information. Thermography under load is an online inspection. A breaker overpotential test is offline.",
     "reference": "NFPA 70B-2026, 8.3",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1511,7 +1511,7 @@
     "answer": 0,
     "explanation": "Enhanced tests are the extra diagnostic steps: overpotential on medium-voltage breakers, dielectric withstand and online partial discharge on switchgear above 1000 V, and control-wiring insulation resistance on panelboards. They are not a pass/fail kilovolt. Control wiring tied to solid-state parts is still left out of the breaker overpotential test.",
     "reference": "NFPA 70B-2026, Tables 15.4.5, 12.3.5, and 13.3.5",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1529,7 +1529,7 @@
     "answer": 0,
     "explanation": "Those two are the extra choices once the gear is above 1000 V. Online partial discharge is an online test. The withstand test is not performed while the gear is in service. The chapter does not print the withstand kilovolt.",
     "reference": "NFPA 70B-2026, Table 12.3.5",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1547,7 +1547,7 @@
     "answer": 0,
     "explanation": "Panelboards and switchboards in this chapter are 1000 V and below. The electrical list is main-bus insulation resistance, enhanced control-wiring insulation resistance, protective devices, an operational test, and metering. Vacuum integrity and dissolved gas are other chapters.",
     "reference": "NFPA 70B-2026, Table 13.3.5",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1565,7 +1565,7 @@
     "answer": 0,
     "explanation": "The visual row is 12, 12, and 6 months. The other switchgear tasks use 60, 36, and 12 months when the manufacturer is silent. Above 1000 V the electrical list can add enhanced dielectric withstand and online partial discharge. Those additions do not change the visual interval.",
     "reference": "NFPA 70B-2026, chapter 12",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1583,7 +1583,7 @@
     "answer": 0,
     "explanation": "Online means the equipment stays connected to the supply. Partial discharge in that switchgear table is the online option. Dielectric withstand is not done on a live bus. Panelboards at 1000 V and below are a different chapter and do not pick up this option just because they are in the same room.",
     "reference": "NFPA 70B-2026, Table 12.3.5 and 8.3",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1601,7 +1601,7 @@
     "answer": 0,
     "explanation": "That is the standard row for this 1000 V and below equipment. The electrical list is main-bus insulation resistance, an enhanced control-wiring insulation test, protective devices, an operational test, and metering. It is not vacuum integrity and it is not a fluid sample.",
     "reference": "NFPA 70B-2026, chapter 13",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   }
 ]

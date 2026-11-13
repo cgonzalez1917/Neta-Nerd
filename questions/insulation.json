@@ -67,7 +67,7 @@
       "Double the test voltage and ignore temperature"
     ],
     "answer": 1,
-    "explanation": "Table 100.1 minimums are at 20 \u00b0C and the notes send you to Table 100.14. Table 100.14.2 is the 40 \u00b0C table used with rotating-machine Table 100.11. Comparing a hot raw reading with the 20 \u00b0C floor fails good insulation or passes bad insulation.",
+    "explanation": "Table 100.1 minimums are at 20 \u00b0C, and the notes send you to Table 100.14. Correct the reading to 20 \u00b0C with Table 100.14.1 before you compare. Table 100.14.2 is the 40 \u00b0C multiplier table that sits with the machine limits in Table 100.11. Its own column labels name other apparatus, so calling it the machine table is the way the two tables are used together, not a label printed on 100.14.2. Comparing a hot raw reading with the 20 \u00b0C floor fails good insulation or passes bad insulation.",
     "reference": "ANSI/NETA ATS-2025 Table 100.1 note 2; Table 100.14.1",
     "verified": true,
     "kb": "insulation.md#temp-correction"
@@ -158,7 +158,7 @@
       "The copper 234.5 formula, because it is a winding"
     ],
     "answer": 1,
-    "explanation": "Table 100.11 is 'for one minute at 40 \u00b0C' and points at Table 100.14. Table 100.14.2 is the 40 \u00b0C multiplier table. Table 100.14.1 corrects to 20 \u00b0C for the apparatus tables. The copper formula corrects conductor resistance, not megohms.",
+    "explanation": "Table 100.11 is the one-minute machine table at 40 \u00b0C and points at Table 100.14. Use Table 100.14.2 for that 40 \u00b0C correction. Table 100.14.1 corrects to 20 \u00b0C for the apparatus tables. The column headings on 100.14.2 name other apparatus, so the machine use follows the 40 \u00b0C pointer in Table 100.11. The copper formula corrects conductor resistance, not megohms.",
     "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2",
     "verified": true,
     "kb": "insulation.md#temp-correction"

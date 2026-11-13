@@ -76,15 +76,15 @@
     "level": "II",
     "topic": "ev-charging",
     "domain": "component",
-    "question": "A recalled \u2018Level 2 charger is 80 A\u2019 item is handled in this bank as:",
+    "question": "The test current for an installed EV charger is set by:",
     "choices": [
-      "The ATS pass/fail current",
-      "Not an ATS value; the installed charger is tested to its nameplate and manual",
+      "One ATS pass/fail ampere value for every Level 2 unit",
+      "The charger nameplate and its manual",
       "The Table 100.2 withstand",
       "The glove class"
     ],
     "answer": 1,
-    "explanation": "7.26 never prints 20, 40, 60, or 80 A. It also does not name a class that plugs into a 120 V receptacle. Those labels belong to other documents that are not the acceptance procedure.",
+    "explanation": "ATS 7.26 does not publish one test current for every charger. Test the unit that is installed, using the current on its nameplate and in its manual.",
     "reference": "ANSI/NETA ATS-2025 7.26",
     "verified": true,
     "kb": "apparatus.md#evse"

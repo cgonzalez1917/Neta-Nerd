@@ -70,7 +70,7 @@
     ],
     "answer": 2,
     "explanation": "Minimum megohms = 100 / length in feet = 100/200 = 0.5 M\u03a9. A shorter run has a higher minimum. Do not apply a withstand until the reading is above that floor.",
-    "reference": "ANSI/NETA ATS-2025 7.4.D.2.a",
+    "reference": "ANSI/NETA ATS-2025 7.4.D.2.a (minimum megohms = 100 / length in feet)",
     "verified": true,
     "kb": "resistance.md#busway"
   },

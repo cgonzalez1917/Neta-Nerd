@@ -480,7 +480,7 @@
       "A 10 A microhmmeter"
     ],
     "answer": 1,
-    "explanation": "ATS 7.10.1 starts by comparing the nameplate with the drawings. That is where the ratings, including temperature rise, are read. This bank does not have a clause that freezes one rise, such as 55 \u00b0C, for every CT.",
+    "explanation": "ATS 7.10.1 starts by comparing the nameplate with the drawings. That is where the ratings, including temperature rise, are read. Table 100.18, the relay tap, and a microhmmeter do not set that rating.",
     "reference": "ANSI/NETA ATS-2025 7.10.1.A.1",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
