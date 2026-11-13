@@ -76,3 +76,16 @@ Lookups used for later questions, cited by title only. The files themselves are 
 ## Adding a source later
 
 Append a link and one sentence on what it is allowed to support. If you use it for a number, either verify that number in ATS, MTS, or 70E and set `verified` true with the clause, or leave `verified` false and say “verify in ATS” in the reference when you are not sure.
+
+Lookups used for the Level IV field notes on the study pages, cited by short name and edition only. The files themselves are not in this repo.
+
+- IEEE C37.110-2023 (relaying current-transformer application).
+- Blackburn, J. L., and Domin, T. J., Protective Relaying, 4th ed.
+- Lautenschlager, J., NETA World, Fall 2008 (paralleling electrical systems).
+- IEEE C57.147-2018 (natural ester insulating liquid).
+- ASTM D923-07 (sampling insulating liquids). The official exam list names D923-15; these notes flag the 2007 edition where it is used.
+- Adamiak, M., Baigent, D., and Mackiewicz, R., IEC 61850 user overview.
+- Littelfuse, Fuse Fundamentals, 2025. Coordination ratios in that paper apply only to the listed Littelfuse series.
+- Locarno, M., Tully, L., and Wilson, A., SFRA for mechanical transformer damage, NETA Transformer Handbook, Vol. 1.
+- IEEE C57.12.00-2021; IEEE C37.09-2018; IEEE 450-2020; IEEE C37.2-2022; IEEE 242-2001; IEEE 399-1997; IEEE 519-2022; IEEE 141-1993.
+- ANSI/NETA ECS-2024, used with ATS-2025 Section 8 for system function tests and commissioning-plan practice.

@@ -10,6 +10,8 @@ Nothing in the question bank is a work permit. NFPA 70E-2024 Article 110 is the 
 
 Conductors are not in that condition until the applicable requirements of 120.2 through 120.6 are done (110.2(C)). Until then, use practices that match the voltage and the energy.
 
+Before each job starts, a job safety plan and a job briefing are required (110.3(I) and 110.3(H)). The plan has to describe the job and the individual tasks, include a shock risk assessment that follows 130.4 when there is a shock hazard, and include an arc-flash risk assessment that follows 130.5.
+
 **Normal operation** of equipment is allowed without establishing that condition only when all of the exception’s conditions are true (110.2(B) Exception No. 1): installed properly, maintained properly, rated for the available fault current, used as labeled and as the manufacturer instructs, doors closed and secured, covers on and secured, and no evidence of impending failure (arcing, overheating, loose or bound parts, visible damage, deterioration, water). One miss, and it is not “normal operation.”
 
 Operating a disconnect to create the safe condition, or to return equipment to service, is its own exception (110.2(B) Exception No. 2), after a risk assessment.
@@ -28,6 +30,14 @@ Operating a disconnect to create the safe condition, or to return equipment to s
 8. If induced voltage or stored energy is a real possibility, ground the conductors before you touch them. Temporary grounds have to be placed so no one is left across a dangerous difference of potential, and they have to carry the fault current long enough for the protective device to clear (120.6(8)).
 
 120.5 is the lockout/tagout procedure itself (planning, who is exposed, simple versus complex, stored energy, verification that controls cannot restart, grounding needs, shift change). A lock holds the isolating device so it takes force to defeat. A tag is a warning in the same spot and, by itself, is weaker. OSHA 3120 makes that distinction in plain language; the electrical order you memorize is 120.6.
+
+Simple and complex lockout are two forms of the same hazardous-energy control (120.3(H) and 120.5). On a simple lockout the qualified person is in charge. On a complex lockout — more than one source, more than one crew, or a job that spans a shift — the person in charge has overall responsibility, and the procedure requires a written plan of execution that names that person.
+
+Locks and tags go on the circuit disconnecting means, not on control devices such as pushbuttons or selector switches (120.3(A) and 120.3(E)). A stop button with a tag, leaving the disconnect shut, is not a lockout. Every person who could be exposed, directly or indirectly, is involved in the procedure.
+
+The lockout/tagout program and the procedures in 120.2 through 120.6 are audited by a qualified person at intervals not exceeding one year (110.3(L)(3) and 120.2(B)). The audit has to cover at least one lockout in progress, and it is meant to catch problems in the program, the training, and how workers actually carry out the procedure. The employer is responsible for those audits.
+
+When a testing company comes onto a plant as a contractor, the host and the contract employer share information (110.5). The host tells the contractor about known hazards related to the work that the contractor might not recognize, and about information the contractor needs for its assessments. The contractor briefs its people on those hazards and on the host's safety-related work rules, and tells the host about unique hazards the contractor's work creates. Where the host knows of hazards related to the contractor's work, the meeting is documented.
 
 ## Test instruments {#instruments}
 
@@ -60,6 +70,10 @@ Article 100 defines the arc-flash boundary as the distance at which the incident
 
 130.5(F): select arc-flash PPE by an incident-energy analysis (130.5(G)) or by the PPE category method (130.7(C)(15)). Either method may be used on a piece of equipment. Not both. Do not take an incident-energy number and then force it into a category in Table 130.7(C)(15)(c).
 
+The risk-assessment procedure applies preventive and protective controls in the hierarchy of risk control (110.3(H)(3)). Start at the top: elimination, then substitution, then engineering controls. Administrative controls and PPE come later and do not replace a decision about whether the hazard can be reduced or removed. Buying higher-rated clothing and leaving the equipment and the work methods unchanged is starting at the bottom of that list.
+
+If incident energy is calculated rather than taken from a PPE-category table, 130.5(G) requires the calculation to account for the overcurrent device's operating characteristics, how long it takes to clear, and whether the device is in proper condition of maintenance. A sticky trip unit, or a breaker whose maintenance is years overdue, cannot be assumed to clear in the published time.
+
 130.5(H): the data behind an equipment label is reviewed at least every 5 years, and the label is updated when the data shows it is wrong. The owner of the equipment owns the label.
 
 130.7’s informational note is easy to over-read: the PPE rules target arc-flash and shock. They do not claim to stop blunt trauma from the pressure wave. A high arc rating is not a reason to skip 110.2.
@@ -68,7 +82,7 @@ Article 100 defines the arc-flash boundary as the distance at which the incident
 
 Table 130.7(C)(7)(a), maximum use voltage (AC rms): class 00 is 500 V, class 0 is 1000 V, class 1 is 7500 V, class 2 is 17000 V, class 3 is 26500 V, class 4 is 36000 V. DC limits are higher and are in the same table. The protector cuff sits shorter than the rolled rubber cuff by the distance in that table.
 
-130.7(C)(7)(c): inspect insulating equipment before each day’s use and after any incident that may have damaged it. Air-test gloves with that inspection. Table 130.7(C)(7)(b): gloves are electrically retested before first issue and every 6 months after. Blankets and sleeves are every 12 months. Protectors are worn over rubber gloves used for shock protection, with the narrow exception in 130.7(C)(7)(a) that requires a retest before reuse and a reduced voltage class.
+130.7(C)(7)(c): inspect insulating equipment before each day’s use and after any incident that may have damaged it. Air-test gloves with that inspection. Table 130.7(C)(7)(b): gloves are electrically retested before first issue and every 6 months after. Blankets and sleeves are every 12 months. New insulating equipment stays out of service if its last electrical test is more than a year old. Protectors are worn over rubber gloves used for shock protection, with the narrow exception in 130.7(C)(7)(a) that requires a retest before reuse and a reduced voltage class.
 
 ## Energized work permit {#permit}
 

@@ -30,7 +30,13 @@ Low-voltage ground-fault protection is ATS 7.14, and the visual checks are where
 
 Pickup and delay are set to the owner’s study. The section points at NEC 230.95 for the performance-test record on service equipment. A ground landed on the load side of the sensor can blind the relay or make it see normal current as a fault, depending on which conductor you stuffed through the window.
 
-Neutral-to-ground insulation is measured with the neutral disconnect link removed, then the link goes back (7.14.B.2).
+Neutral-to-ground insulation is measured with the neutral disconnect link temporarily removed, then the link goes back (7.14.B.2 and D.2). The result must be at least one megohm. Leaving the link in place shorts the measurement to the grounding system and hides a neutral-to-ground bond on the load side of the sensor.
+
+Pickup is proved by primary current injection (7.14.B.4 and D.4). The measured pickup must be greater than 90 percent of the device setting and less than the smaller of 125 percent of the setting and 1200 A. For a 400 A setting that window is 360 A to 500 A. A 350 A result is below the lower bound and is not accepted just because it is "conservative."
+
+Time delay is measured at 150 percent of pickup or higher (7.14.B.6 and D.6). The recorded time must agree with the manufacturer's data and, at 3000 A, must stay at or under one second, the value ATS cites from the National Electrical Code rule on equipment ground-fault protection.
+
+A reduced-control-voltage trip check is also required (7.14.B.7 and D.7): 55 percent of nominal on ac control and 80 percent of nominal on dc control. A trip at full control voltage does not prove the device will still operate when the control source is depressed during a fault or a battery dip.
 
 ## Common mistakes
 

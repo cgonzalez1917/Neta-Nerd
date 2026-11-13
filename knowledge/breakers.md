@@ -31,6 +31,10 @@ Instantaneous field tolerances, Table 100.8:
 
 Using the acceptance adjustable band on a maintenance test, or hanging the adjustable band on an electronic unit, is a wrong table. Both tables cite NEMA AB 4.
 
+Medium-voltage air breakers are judged the same way against the manufacturer, not against "it felt normal." ATS 7.6.1.3 includes a contact-timing test and requires the timing values to agree with the times the manufacturer publishes (A.15, C.4, and C.5). Travel and velocity, when recorded, are judged the same way.
+
+IEEE C37.09-2018 5.12, written for high-voltage breaker design tests, also records opening time on every circuit breaker, and travel-versus-time traces on S2-class units whose interrupting time is three cycles or shorter. Once a breaker is already in service, those same records may be used to judge whether operation is still correct.
+
 ## Contact resistance and control wire {#contact}
 
 7.6.1.2.D.2: contact resistance shall not exceed the manufacturer’s high end. With no data, investigate a pole that deviates from adjacent poles or similar breakers by more than 50 percent of the lowest value. Same screen as bolted connections.
@@ -69,6 +73,8 @@ ATS 7.6.1.2 is a list, not a mandated order, but a sensible order keeps you from
 7. **Auxiliaries**: trip and pickup indicators, zone interlocking, electrical close and trip, trip-free, antipump, trip-unit battery. Then reset trip logs and indicators (B.8).
 8. **Charging mechanism** per the manufacturer (B.9, D.10).
 9. **Final settings** per the coordination study (A.14, C.3), recorded as-left with the counter.
+
+Medium-voltage air breakers (ATS 7.6.1.3.B.4 and D.4) add a test-position sequence that is easy to short-cut: close and trip from the control switch, a trip initiated from every protective relay assigned to the breaker, and checks that charging, trip-free, and antipump behavior all work as designed. A control-switch close and trip alone does not finish that list.
 
 ## Maintenance mode (energy-reducing maintenance switching) {#maintenance-mode}
 
