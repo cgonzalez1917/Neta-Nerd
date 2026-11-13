@@ -14,6 +14,8 @@
   };
   var PROGRESS_KEY = "netanerd-progress-v1";
   var SESSION_KEY = "netanerd-session-v1";
+  var LIVE_KEY = "netanerd-live-v1";
+  var ACTIVE_KEY = "netanerd-live-active-v1";
   var app = document.getElementById("app");
   var state = {
     bank: null,
@@ -165,16 +167,188 @@
     return pickedOriginal(item) === q.answer;
   }
 
+  function liveMap() {
+    var map = storageGet(LIVE_KEY);
+    if (!map || typeof map !== "object" || Array.isArray(map)) return {};
+    return map;
+  }
+  function itemFits(item) {
+    if (!item || !state.bank) return false;
+    var q = state.bank.byId[item.id];
+    if (!q || !Array.isArray(item.order) || item.order.length !== q.choices.length) return false;
+    for (var i = 0; i < item.order.length; i++) {
+      if (!Number.isInteger(item.order[i]) || item.order[i] < 0 || item.order[i] >= q.choices.length) return false;
+    }
+    return true;
+  }
+  function sessionUsable(session) {
+    if (!session || !session.mode || !Array.isArray(session.items) || !session.items.length) return false;
+    if (!Number.isInteger(session.index) || session.index < 0 || session.index >= session.items.length) return false;
+    if (!state.bank) return true;
+    for (var i = 0; i < session.items.length; i++) {
+      if (!itemFits(session.items[i])) return false;
+    }
+    return true;
+  }
+  function saveLive(session) {
+    if (!session || !session.mode) return;
+    var map = liveMap();
+    map[session.mode] = session;
+    storageSet(LIVE_KEY, map);
+  }
+  function clearLive(mode) {
+    if (!mode) return;
+    var map = liveMap();
+    if (map[mode]) {
+      delete map[mode];
+      storageSet(LIVE_KEY, map);
+    }
+    if (storageGet(ACTIVE_KEY) === mode) {
+      try { localStorage.removeItem(ACTIVE_KEY); } catch (e) {}
+    }
+  }
+  function loadLive(mode) {
+    var session = liveMap()[mode];
+    if (!session) return null;
+    if (session.mode !== mode || !sessionUsable(session)) {
+      clearLive(mode);
+      return null;
+    }
+    return session;
+  }
+  function rememberActive(mode) {
+    if (mode && mode !== "mock") storageSet(ACTIVE_KEY, mode);
+  }
   function saveSession(session) {
-    try { sessionStorage.setItem(SESSION_KEY, JSON.stringify(session)); }
-    catch (e) {}
+    saveLive(session);
+    if (session && session.mode) rememberActive(session.mode);
+    try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
   }
   function loadSession() {
-    try { return JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null"); }
-    catch (e) { return null; }
+    var mode = storageGet(ACTIVE_KEY);
+    if (!mode || mode === "mock") return null;
+    return loadLive(mode);
   }
-  function clearSession() {
+  function clearSession(session) {
+    var mode = session && session.mode;
+    if (!mode) mode = storageGet(ACTIVE_KEY);
+    clearLive(mode);
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+  }
+  function clockText(ms) {
+    var s = Math.ceil(Math.max(0, ms) / 1000);
+    var h = Math.floor(s / 3600);
+    var m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
+    var sec = String(s % 60).padStart(2, "0");
+    return h + ":" + m + ":" + sec;
+  }
+  function answeredCount(session) {
+    return session.items.filter(function (item) { return item.picked != null; }).length;
+  }
+  function resumeTitle(mode) {
+    if (mode === "timed") return "Timed exam";
+    if (mode === "mock") return "Mock exam";
+    if (mode === "missed") return "Missed review";
+    return "Practice";
+  }
+  function resumeButton(mode) {
+    if (mode === "timed" || mode === "mock") return "Resume exam";
+    if (mode === "missed") return "Resume review";
+    return "Resume practice";
+  }
+  function resumeSession(mode) {
+    if (mode === "mock") {
+      location.hash = "#/mock/run";
+      return;
+    }
+    rememberActive(mode);
+    if ((location.hash || "#/") === "#/run") render();
+    else location.hash = "#/run";
+  }
+  function resumeBanner(session) {
+    var title = resumeTitle(session.mode);
+    var low = session.mode === "mock" ? "300" : "60";
+    return h("div", { class: "resume-banner panel" },
+      h("p", { class: "resume-copy" },
+        h("b", {}, title + " in progress"),
+        " · " + answeredCount(session) + " of " + session.items.length + " answered",
+        session.endsAt ? " · " : null,
+        session.endsAt ? h("span", {
+          class: "timer",
+          "data-ends": String(session.endsAt),
+          "data-mode": session.mode,
+          "data-low": low
+        }, clockText(session.endsAt - Date.now())) : null,
+        session.endsAt ? " left" : null
+      ),
+      h("div", { class: "actions" },
+        h("button", {
+          type: "button",
+          class: "btn ghost small",
+          onclick: function () { clearLive(session.mode); render(); }
+        }, "Discard"),
+        h("button", {
+          type: "button",
+          class: "btn primary small",
+          onclick: function () { resumeSession(session.mode); }
+        }, resumeButton(session.mode))
+      )
+    );
+  }
+  function appendResumeBanners(modes) {
+    modes.forEach(function (mode) {
+      var session = loadLive(mode);
+      if (!session || (session.endsAt && session.endsAt <= Date.now())) return;
+      app.append(resumeBanner(session));
+    });
+  }
+  function armBannerClocks() {
+    var nodes = [].slice.call(app.querySelectorAll("[data-ends]"));
+    if (!nodes.length) return;
+    var tick = function () {
+      var expired = null;
+      nodes.forEach(function (el) {
+        if (expired) return;
+        var left = Number(el.getAttribute("data-ends")) - Date.now();
+        var lowAt = Number(el.getAttribute("data-low")) || 60;
+        if (left <= 0) {
+          el.textContent = "0:00:00";
+          el.className = "timer low";
+          expired = el.getAttribute("data-mode");
+          return;
+        }
+        el.textContent = clockText(left);
+        el.className = "timer" + (Math.ceil(left / 1000) < lowAt ? " low" : "");
+      });
+      if (!expired) return;
+      if (state._timer) { clearInterval(state._timer); state._timer = null; }
+      var session = loadLive(expired);
+      if (!session) return;
+      if (expired === "mock") finishMock(session, "time");
+      else finish(session, "time");
+    };
+    tick();
+    state._timer = setInterval(tick, 250);
+  }
+  function claimExpired(mode) {
+    var session = loadLive(mode);
+    if (!session || !session.endsAt || session.endsAt > Date.now()) return false;
+    if (mode === "mock") finishMock(session, "time");
+    else finish(session, "time");
+    return !loadLive(mode);
+  }
+  function migrateSessions() {
+    var old = null;
+    var oldMock = null;
+    try { old = JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null"); } catch (e) {}
+    try { oldMock = JSON.parse(sessionStorage.getItem(MOCK_SESSION) || "null"); } catch (e) {}
+    if (old && old.mode && old.mode !== "mock" && !liveMap()[old.mode] && sessionUsable(old)) {
+      saveLive(old);
+      if (!storageGet(ACTIVE_KEY)) rememberActive(old.mode);
+    }
+    if (oldMock && oldMock.mode === "mock" && !liveMap().mock && sessionUsable(oldMock)) saveLive(oldMock);
+    try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+    try { sessionStorage.removeItem(MOCK_SESSION); } catch (e) {}
   }
 
   var MOCK_FRACTIONS = {
@@ -235,14 +409,13 @@
     return shuffle(picked);
   }
 
-  function loadMockSession() {
-    try { return JSON.parse(sessionStorage.getItem(MOCK_SESSION) || "null"); }
-    catch (e) { return null; }
-  }
+  function loadMockSession() { return loadLive("mock"); }
   function saveMockSession(session) {
-    try { sessionStorage.setItem(MOCK_SESSION, JSON.stringify(session)); } catch (e) {}
+    saveLive(session);
+    try { sessionStorage.removeItem(MOCK_SESSION); } catch (e) {}
   }
   function clearMockSession() {
+    clearLive("mock");
     try { sessionStorage.removeItem(MOCK_SESSION); } catch (e) {}
   }
   function mockHistory() {
@@ -260,6 +433,13 @@
       level: level,
       format: format.id,
       minutes: format.minutes,
+      settings: {
+        level: level,
+        domains: DOMAINS.map(function (d) { return d.id; }),
+        topics: state.bank.topics.map(function (t) { return t.id; }),
+        length: format.count,
+        format: format.id
+      },
       items: list.map(function (q) {
         var item = present(q);
         item.flagged = false;
@@ -286,8 +466,15 @@
   }
 
   function finishMock(session, reason) {
-    if (!session || session._done) return;
+    if (!session || session._done || state._finishing) return;
+    state._finishing = true;
     session._done = true;
+    if (!sessionUsable(session)) {
+      clearMockSession();
+      location.hash = "#/mock";
+      state._finishing = false;
+      return;
+    }
     var rows = session.items.map(function (item) {
       var q = sourceQuestion(item);
       var choice = pickedOriginal(item);
@@ -317,6 +504,7 @@
     try { sessionStorage.setItem(MOCK_RESULT, JSON.stringify(result)); } catch (e) {}
     clearMockSession();
     location.hash = "#/mock/results";
+    state._finishing = false;
   }
 
   function startDrill(mode, questions) {
@@ -337,17 +525,37 @@
     var seconds = count * 72;
     var session = {
       mode: mode,
-      items: list.map(present),
+      items: list.map(function (q) {
+        var item = present(q);
+        item.flagged = false;
+        return item;
+      }),
       index: 0,
       startedAt: Date.now(),
       endsAt: mode === "timed" ? Date.now() + seconds * 1000 : null,
-      filters: JSON.parse(JSON.stringify(state.filters))
+      filters: JSON.parse(JSON.stringify(state.filters)),
+      settings: {
+        levels: state.filters.levels.slice(),
+        domains: state.filters.domains.slice(),
+        topics: state.filters.topics.slice(),
+        length: mode === "practice" ? state.practiceCount : (mode === "timed" ? String(count) : "missed")
+      }
     };
     saveSession(session);
-    location.hash = "#/run";
+    if ((location.hash || "#/") === "#/run") render();
+    else location.hash = "#/run";
   }
 
   function finish(session, reason) {
+    if (!session || session._done || state._finishing) return;
+    state._finishing = true;
+    session._done = true;
+    if (!sessionUsable(session)) {
+      clearSession(session);
+      location.hash = "#/";
+      state._finishing = false;
+      return;
+    }
     var rows = session.items.map(function (item) {
       var q = sourceQuestion(item);
       var choice = pickedOriginal(item);
@@ -357,21 +565,27 @@
       return { id: q.id, choice: choice, correct: ok && answered, answered: answered };
     });
     var correct = rows.filter(function (r) { return r.correct; }).length;
+    var elapsed = Math.max(0, Math.round((Date.now() - session.startedAt) / 1000));
+    if (session.endsAt) {
+      var allotted = Math.max(0, Math.round((session.endsAt - session.startedAt) / 1000));
+      elapsed = Math.min(elapsed, allotted);
+    }
     var result = {
       mode: session.mode,
       reason: reason || "submitted",
       rows: rows,
       correct: correct,
       total: rows.length,
-      seconds: Math.round((Date.now() - session.startedAt) / 1000),
+      seconds: elapsed,
       at: Date.now()
     };
     var p = progress();
     p.sessions = [{ mode: result.mode, correct: correct, total: result.total, at: result.at, seconds: result.seconds }].concat(p.sessions || []).slice(0, 8);
     saveProgress(p);
     try { sessionStorage.setItem("netanerd-result-v1", JSON.stringify(result)); } catch (e) {}
-    clearSession();
+    clearSession(session);
     location.hash = "#/results";
+    state._finishing = false;
   }
 
   function parseHash() {
@@ -415,6 +629,7 @@
     var iiCounts = { safety: 0, theory: 0, component: 0, systems: 0 };
     b.questions.forEach(function (q) { if (q.level === "II") iiCounts[q.domain] = (iiCounts[q.domain] || 0) + 1; });
 
+    appendResumeBanners(["timed", "mock", "practice", "missed"]);
     app.append(
       h("p", { class: "kicker" }, "Field drills · Level II first"),
       h("h1", {}, "Practice the test, not a leaked paper."),
@@ -491,6 +706,7 @@
     if (current && state.mockFormat === "half" && !current.half) state.mockFormat = "full";
     var history = mockHistory();
     var quotas = current ? mockQuotas(current.id, state.mockFormat === "half" ? 50 : 100) : null;
+    appendResumeBanners(["mock"]);
     app.append(
       h("p", { class: "kicker" }, "Separate from practice"),
       h("h1", {}, "Mock exam"),
@@ -648,7 +864,10 @@
         timerEl.textContent = (hh ? hh + ":" : "") + mm + ":" + ss;
         timerEl.className = "timer mock" + (s < 300 ? " low" : "");
       }
-      if (left <= 0) finishMock(loadMockSession() || session, "time");
+      if (left <= 0) {
+        if (state._timer) { clearInterval(state._timer); state._timer = null; }
+        finishMock(loadMockSession() || session, "time");
+      }
     };
     tick();
     state._timer = setInterval(tick, 250);
@@ -712,7 +931,7 @@
     if (!session) { location.hash = "#/"; return; }
     var item = session.items[session.index];
     var q = sourceQuestion(item);
-    if (!q) { clearSession(); location.hash = "#/"; return; }
+    if (!q) { clearSession(session); location.hash = "#/"; return; }
     var choices = shownChoices(item);
     var revealed = session.mode !== "timed" && item.revealed;
     var total = session.items.length;
@@ -825,7 +1044,10 @@
           timerEl.textContent = mm + ":" + ss;
           timerEl.className = "timer" + (s < 60 ? " low" : "");
         }
-        if (left <= 0) finish(loadSession() || session, "time");
+        if (left <= 0) {
+          if (state._timer) { clearInterval(state._timer); state._timer = null; }
+          finish(loadSession() || session, "time");
+        }
       };
       tick();
       state._timer = setInterval(tick, 250);
@@ -963,6 +1185,13 @@
       return;
     }
     var path = parseHash();
+    if (path === "/" || path === "") {
+      if (claimExpired("timed") || claimExpired("mock")) return;
+    } else if (path === "/run" && storageGet(ACTIVE_KEY) === "timed") {
+      if (claimExpired("timed")) return;
+    } else if (path === "/mock" || path === "/mock/run") {
+      if (claimExpired("mock")) return;
+    }
     var study = /^\/study\/(.+\.md)(?:\/([a-z0-9-]+))?$/.exec(path);
     document.title = "Neta Nerd";
     if (path === "/" || path === "") renderHome();
@@ -975,6 +1204,7 @@
     else if (path === "/study") renderStudyIndex();
     else if (study) renderStudyDoc(study[1], study[2]);
     else renderHome();
+    armBannerClocks();
   }
 
   window.addEventListener("hashchange", render);
@@ -995,6 +1225,7 @@
       questions.forEach(function (q) { byId[q.id] = q; });
       state.bank = { topics: index.topics, questions: questions, byId: byId, issuesUrl: index.issuesUrl };
       if (!state.filters.topics.length) state.filters.topics = index.topics.map(function (t) { return t.id; });
+      migrateSessions();
       render();
     });
   }).catch(function (err) {
