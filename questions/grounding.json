@@ -863,5 +863,293 @@
     "reference": "ANSI/NETA ATS-2025 7.13.B.3 and 7.13.D.3",
     "verified": true,
     "kb": "grounding.md#fop-field"
+  },
+  {
+    "id": "gnd-049",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Which checks does NFPA 99 require on each hospital receptacle?",
+    "choices": [
+      "Only a plug-in tester light check",
+      "Insulation resistance at 1000 V dc",
+      "Physical integrity, ground continuity, correct polarity, and a grounding-blade hold of at least 4 oz (115 g) on non-locking types",
+      "A ground resistance test with a fall-of-potential tester"
+    ],
+    "answer": 2,
+    "explanation": "Each receptacle is looked over for damage, its grounding path is proved continuous, hot and neutral are checked for polarity, and the grounding blade must be held with at least 115 g (4 oz). Locking receptacles skip the retention check. Source: NFPA 99-2027, 6.3.3.2.1 to 6.3.3.2.4.",
+    "reference": "NFPA 99-2027, 6.3.3.2.1 to 6.3.3.2.4",
+    "verified": true,
+    "kb": "life-safety.md#patient-care-grounding"
+  },
+  {
+    "id": "gnd-050",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Non-hospital-grade receptacles are installed in the patient-care locations NFPA 99 names. How often must they be tested?",
+    "choices": [
+      "Every 5 years",
+      "Only at installation",
+      "At intervals no longer than 12 months",
+      "Every month"
+    ],
+    "answer": 2,
+    "explanation": "Hospital-grade receptacles at beds and anesthesia locations are tested after installation, replacement or service, and the later intervals are set from documented performance. In those locations, receptacles that aren't hospital grade get a fixed cap of 12 months. Source: NFPA 99-2027, 6.3.3.2.5 to 6.3.3.2.7.",
+    "reference": "NFPA 99-2027, 6.3.3.2.5 to 6.3.3.2.7",
+    "verified": true,
+    "kb": "life-safety.md#patient-care-grounding"
+  },
+  {
+    "id": "gnd-051",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "In new construction, a patient-care system with isolated-ground receptacles reads 0.15 ohm from a receptacle ground to the reference point. Result under NFPA 99?",
+    "choices": [
+      "It passes. The limit is 0.2 ohm with isolated-ground receptacles (0.1 ohm otherwise)",
+      "It fails. The limit is always 0.1 ohm",
+      "It fails. The limit is 0.01 ohm",
+      "It passes. Any reading under 1 ohm is fine"
+    ],
+    "answer": 0,
+    "explanation": "The impedance limit depends on the system. With isolated-ground receptacles it is 0.2 ohm, and for other systems it is 0.1 ohm. 0.15 ohm is within the 0.2 limit but would fail on a standard system. Source: NFPA 99-2027, 6.3.3.1.6.2.",
+    "reference": "NFPA 99-2027, 6.3.3.1.6.2",
+    "verified": true,
+    "kb": "life-safety.md#patient-care-grounding"
+  },
+  {
+    "id": "gnd-052",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "In new construction, what share of the receptacle grounding contacts in a patient care vicinity does NFPA 99 have you test for impedance?",
+    "choices": [
+      "100%",
+      "1%",
+      "50%",
+      "10%"
+    ],
+    "answer": 3,
+    "explanation": "Impedance from a reference point is measured at 10% of the receptacle grounding contacts in the patient care vicinity. Voltage and impedance measurements must be accurate to \u00b15%. Source: NFPA 99-2027, 6.3.3.1.2 to 6.3.3.1.4.1.",
+    "reference": "NFPA 99-2027, 6.3.3.1.2 to 6.3.3.1.4.1",
+    "verified": true,
+    "kb": "life-safety.md#patient-care-grounding"
+  },
+  {
+    "id": "gnd-053",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "A line isolation monitor (LIM) watches an isolated power system in an operating room. At what total hazard current must it give the red light and alarm?",
+    "choices": [
+      "0.5 mA",
+      "5.0 mA",
+      "3.7 mA",
+      "30 mA"
+    ],
+    "answer": 1,
+    "explanation": "Green means isolation is good. The red light and the audible alarm come on at 5.0 mA total hazard current at normal line voltage. Below 3.7 mA of fault hazard current it should stay silent. Source: NFPA 99-2027, 6.3.2.9.3.1 to 6.3.2.9.3.2.",
+    "reference": "NFPA 99-2027, 6.3.2.9.3.1 to 6.3.2.9.3.2",
+    "verified": true,
+    "kb": "life-safety.md#isolated-power"
+  },
+  {
+    "id": "gnd-054",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "You test a LIM before service on a 120 V isolated system. What resistor does NFPA 99 call for between each line and ground?",
+    "choices": [
+      "120 ohms",
+      "24,000 ohms (200 \u00d7 the measured line voltage)",
+      "2,400 ohms",
+      "240,000 ohms"
+    ],
+    "answer": 1,
+    "explanation": "Each energized line is grounded in turn through a resistor of 200 ohms per volt of measured line voltage: 200 \u00d7 120 = 24,000 ohms. Both the light and the audible alarm must work. Repeat this after repairs or renovation of the distribution system. Source: NFPA 99-2027, 6.3.3.3.2 and 6.3.3.3.4.",
+    "reference": "NFPA 99-2027, 6.3.3.3.2 and 6.3.3.3.4",
+    "verified": true,
+    "kb": "life-safety.md#isolated-power"
+  },
+  {
+    "id": "gnd-055",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "How often must the LIM test switch be operated?",
+    "choices": [
+      "Once at installation only",
+      "Every 5 years",
+      "Daily, by the surgeon",
+      "At least monthly, or up to every 12 months if the LIM has automatic self-test and self-calibration"
+    ],
+    "answer": 3,
+    "explanation": "Pressing the test switch must bring up both the visual and audible alarms. The interval is one month at most, stretched to 12 months for LIMs that test and calibrate themselves. Source: NFPA 99-2027, 6.3.3.3.3.",
+    "reference": "NFPA 99-2027, 6.3.3.3.3",
+    "verified": true,
+    "kb": "life-safety.md#isolated-power"
+  },
+  {
+    "id": "gnd-056",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "At installation of an isolated power system, what is the NFPA 99 minimum impedance to ground for each isolated conductor, receptacles included?",
+    "choices": [
+      "More than 200,000 ohms",
+      "More than 1,000 ohms",
+      "More than 20 megohms",
+      "Exactly 0 ohms"
+    ],
+    "answer": 0,
+    "explanation": "Each conductor's impedance to ground, capacitive and resistive together, has to be above 200,000 ohms, measured with the method the code describes. Restore the LIM ground connection afterward and record its unloaded reading for future comparison. Source: NFPA 99-2027, 6.3.2.9.2.1.",
+    "reference": "NFPA 99-2027, 6.3.2.9.2.1",
+    "verified": true,
+    "kb": "life-safety.md#isolated-power"
+  },
+  {
+    "id": "gnd-057",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Where a hospital has ground-fault protection on its equipment, what does NFPA 99 require when it is first installed?",
+    "choices": [
+      "A visual check only",
+      "A test of the main level only",
+      "A performance test of each level of ground-fault protection",
+      "No test until the first trip"
+    ],
+    "answer": 2,
+    "explanation": "Every level of equipment ground-fault protection gets a performance test when it is first installed, not just the main. Source: NFPA 99-2027, 6.3.3.4.",
+    "reference": "NFPA 99-2027, 6.3.3.4",
+    "verified": true,
+    "kb": "life-safety.md#patient-care-grounding"
+  },
+  {
+    "id": "gnd-058",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "What is the minimum size of a lightning protection ground rod under NFPA 780?",
+    "choices": [
+      "3/8 in. diameter and 5 ft long",
+      "5/8 in. diameter and 10 ft long",
+      "8 ft (2.4 m) long and 1/2 in. (12.7 mm) across",
+      "Any rod listed for NEC grounding"
+    ],
+    "answer": 2,
+    "explanation": "Rods are at least 1/2 inch across and 8 feet long, in stainless, solid copper or copper-clad steel, with no nonconductive coating. Pipes or rods from other systems can't stand in for lightning electrodes. Source: NFPA 780-2026, 4.12.1.3 and 4.12.2.1 to 4.12.2.4.1.",
+    "reference": "NFPA 780-2026, 4.12.1.3 and 4.12.2.1 to 4.12.2.4.1",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-059",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Two lightning protection ground rods, each driven 10 ft, are bonded together. When practical, how far apart should they be under NFPA 780?",
+    "choices": [
+      "At least 20 ft, the sum of their driven depths",
+      "At least 6 ft",
+      "At least 10 ft, one driven depth",
+      "As close as possible"
+    ],
+    "answer": 0,
+    "explanation": "When it can be done, connected rods sit no closer than their driven depths added together: 10 + 10 = 20 ft. Closer rods share the same soil and add little. Source: NFPA 780-2026, 4.12.2.5.",
+    "reference": "NFPA 780-2026, 4.12.2.5",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-060",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "What is the status of the inspection intervals in NFPA 780 Annex D?",
+    "choices": [
+      "They are mandatory for every structure",
+      "They apply only to explosives facilities",
+      "They replace the manufacturer's instructions",
+      "They are recommended guidance in an informational annex, not mandatory code requirements"
+    ],
+    "answer": 3,
+    "explanation": "Annex D is informational. Its intervals are good practice, and a spec or AHJ can make them binding, but the annex itself doesn't. Say \"Annex D recommends\" rather than \"780 requires.\" Source: NFPA 780-2026, Annex D, D.1.1.",
+    "reference": "NFPA 780-2026, Annex D, D.1.1",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-061",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "How often does NFPA 780 Annex D recommend a visual inspection of a lightning protection system?",
+    "choices": [
+      "Every 10 years",
+      "At least once a year, and more often in severe climates",
+      "Only after a known strike",
+      "Every month"
+    ],
+    "answer": 1,
+    "explanation": "The annex recommends at least an annual visual inspection, possibly every six months where the climate is harsh. It also recommends a complete in-depth inspection every 3 to 5 years, or every 1 to 3 years for critical systems. These are recommendations, not requirements. Source: NFPA 780-2026, Annex D, D.1.1.2.",
+    "reference": "NFPA 780-2026, Annex D, D.1.1.2",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-062",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "During a complete lightning protection inspection, you measure the grounding termination resistance. What does Annex D give as the pass/fail value?",
+    "choices": [
+      "25 ohms",
+      "No universal number. Compare with original or earlier results, or accepted values for that soil, and investigate big changes",
+      "5 ohms",
+      "1 ohm"
+    ],
+    "answer": 1,
+    "explanation": "Annex D has you measure the grounding system and the individual electrodes, where they can be separated, then compare with past results using the same method. A large change is investigated. It does not set a single ohm limit, so don't quote one as 780. Source: NFPA 780-2026, Annex D, D.1.3.",
+    "reference": "NFPA 780-2026, Annex D, D.1.3",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-063",
+    "level": "II",
+    "topic": "grounding",
+    "domain": "component",
+    "question": "Besides the normal schedule, when does NFPA 780 Annex D recommend an extra inspection?",
+    "choices": [
+      "Only when the building changes owners",
+      "Every time it rains",
+      "Never; the schedule covers everything",
+      "After the structure is altered or repaired, or after a known lightning strike"
+    ],
+    "answer": 3,
+    "explanation": "Work on the structure can break conductors or bonds, and a strike can damage parts. Annex D recommends inspecting after either one. Source: NFPA 780-2026, Annex D, D.1.1.1.",
+    "reference": "NFPA 780-2026, Annex D, D.1.1.1",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "gnd-064",
+    "level": "III",
+    "topic": "grounding",
+    "domain": "systems",
+    "question": "A structure is 75 ft tall. How does NFPA 780 want its grounded systems (electrical, communications, antenna, lightning) interconnected at the base?",
+    "choices": [
+      "Bonded together within 12 ft vertically of the base, using a ground loop because the structure is over 60 ft",
+      "Kept separate so lightning current stays off the electrical system",
+      "Bonded only at the service entrance, with no ground loop",
+      "Bonded at the roof only"
+    ],
+    "answer": 0,
+    "explanation": "Grounded media and buried metal that can carry lightning current are tied together within 12 ft of the base. Over 60 ft tall, a ground loop does the tying, and there is also a roof-level interconnection within 12 ft of the main roof. Source: NFPA 780-2026, 4.13.1 to 4.13.3 and 4.14.2.",
+    "reference": "NFPA 780-2026, 4.13.1 to 4.13.3 and 4.14.2",
+    "verified": true,
+    "kb": "life-safety.md#lightning"
   }
 ]

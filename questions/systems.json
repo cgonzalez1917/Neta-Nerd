@@ -466,5 +466,131 @@
     "reference": "ANSI/NETA MTS-2023 Appendix B",
     "verified": true,
     "kb": "apparatus.md#studies"
+  },
+  {
+    "id": "sys-027",
+    "level": "II",
+    "topic": "systems",
+    "domain": "component",
+    "question": "On industrial machinery, the protective bonding circuit is checked with an impedance instrument. What is the NFPA 79 maximum?",
+    "choices": [
+      "1 ohm",
+      "0.1 ohm, allowing for the test lead impedance",
+      "25 ohms",
+      "0.5 megohm"
+    ],
+    "answer": 1,
+    "explanation": "With the impedance-meter method, the effective ground-fault current path must measure 0.1 ohm or less once the test circuit's own impedance is taken out. Source: NFPA 79-2024, 18.2(1).",
+    "reference": "NFPA 79-2024, 18.2(1)",
+    "verified": true,
+    "kb": "life-safety.md#machine-wiring"
+  },
+  {
+    "id": "sys-028",
+    "level": "II",
+    "topic": "systems",
+    "domain": "component",
+    "question": "Using the NFPA 79 10 A method on a 14 AWG protective conductor, what is the largest voltage drop allowed?",
+    "choices": [
+      "3.3 V",
+      "1.0 V",
+      "10 V",
+      "1.9 V"
+    ],
+    "answer": 3,
+    "explanation": "The alternative continuity method drives at least 10 A at 50 or 60 Hz from a SELV source and measures the drop. Table 18.2 sets the limit by wire size, and for 14 AWG it is 1.9 V. Thinner wire is allowed more. Source: NFPA 79-2024, 18.2(2) and Table 18.2.",
+    "reference": "NFPA 79-2024, 18.2(2) and Table 18.2",
+    "verified": true,
+    "kb": "life-safety.md#machine-wiring"
+  },
+  {
+    "id": "sys-029",
+    "level": "II",
+    "topic": "systems",
+    "domain": "component",
+    "question": "When NFPA 79 insulation resistance testing applies, what test voltage and minimum value are used?",
+    "choices": [
+      "500 V dc, at least 1 megohm between power conductors and the protective bonding circuit",
+      "1000 V dc, at least 100 megohms",
+      "250 V dc, at least 0.5 megohm",
+      "2500 V dc, at least 25 megohms"
+    ],
+    "answer": 0,
+    "explanation": "Apply 500 V dc between the power circuit conductors and the ground-fault path. The reading must be at least 1 megohm. Sections of a large machine may be tested one at a time. Source: NFPA 79-2024, 18.3.",
+    "reference": "NFPA 79-2024, 18.3",
+    "verified": true,
+    "kb": "life-safety.md#machine-wiring"
+  },
+  {
+    "id": "sys-030",
+    "level": "III",
+    "topic": "systems",
+    "domain": "component",
+    "question": "An NFPA 79 voltage test is applied to a machine's primary circuits. Which setup matches the standard?",
+    "choices": [
+      "Apply 2121 V ac for 1 minute",
+      "Apply 1000 V dc instantly for 10 minutes",
+      "Raise gradually to 1500 V ac, or its 2121 V dc peak equivalent, and hold at least 1 s, from a supply of at least 500 VA",
+      "Apply 500 V ac for 1 s from any source"
+    ],
+    "answer": 2,
+    "explanation": "Bring the voltage up from zero to 1500 V ac, or the 2121 V dc equivalent, from the primary conductors to the ground-fault path, and hold at least one second without breakdown. 1500 \u00d7 \u221a2 \u2248 2121, which is why those numbers pair. Disconnect parts that can't take the voltage. Source: NFPA 79-2024, 18.4.",
+    "reference": "NFPA 79-2024, 18.4",
+    "verified": true,
+    "kb": "life-safety.md#machine-wiring"
+  },
+  {
+    "id": "sys-031",
+    "level": "III",
+    "topic": "systems",
+    "domain": "safety",
+    "question": "A machine's wiring was modified in the field. Which NFPA 79 verification is always required, and what about the rest?",
+    "choices": [
+      "All five tests are mandatory on every machine every time",
+      "Only the voltage test is required",
+      "Ground-fault path continuity is always verified and documented; the other tests are done where they apply, and changed parts are retested",
+      "Nothing, if the machine was listed"
+    ],
+    "answer": 2,
+    "explanation": "The ground-fault return path is always proved continuous and written up. Insulation, voltage, residual-voltage and function tests happen when judged necessary. After a change, the affected portion is re-verified. Source: NFPA 79-2024, 18.1 and 18.7.",
+    "reference": "NFPA 79-2024, 18.1 and 18.7",
+    "verified": true,
+    "kb": "life-safety.md#machine-wiring"
+  },
+  {
+    "id": "sys-032",
+    "level": "II",
+    "topic": "systems",
+    "domain": "safety",
+    "question": "A stationary fuel cell room has combustible gas detection. Under NFPA 853, at what levels does it alarm and shut off the fuel?",
+    "choices": [
+      "Alarm at 25% of the LFL; shut off fuel at 60% of the LFL",
+      "Alarm at 10% LFL; shut off at 25% LFL",
+      "Alarm at 50% LFL; shut off at 100% LFL",
+      "Alarm only; no fuel shutoff"
+    ],
+    "answer": 0,
+    "explanation": "The detector alarms at a quarter of the lowest lower flammable limit for the gas and closes the fuel supply at 60%. Put the detectors where leaks are likely for the fuel used. Source: NFPA 853-2025, 8.1.5.4 to 8.1.5.7.",
+    "reference": "NFPA 853-2025, 8.1.5.4 to 8.1.5.7",
+    "verified": true,
+    "kb": "life-safety.md#other-nfpa"
+  },
+  {
+    "id": "sys-033",
+    "level": "II",
+    "topic": "systems",
+    "domain": "systems",
+    "question": "At a generating plant, two outdoor oil-filled transformers sit near each other. Under NFPA 850, how is the separation decided?",
+    "choices": [
+      "No separation is ever needed outdoors",
+      "Only by the transformer maker's catalog",
+      "By NFPA 70B maintenance intervals",
+      "By the documented fire protection design basis, with fire barriers, distance or another approved method (Table 6.1.4.3)"
+    ],
+    "answer": 3,
+    "explanation": "Outdoor oil-insulated transformers are kept apart from each other and from buildings by fire barriers, distance or another approved method. The analysis is recorded in the fire protection design basis document, and the table gives the 2-hour firewall or spacing options. Source: NFPA 850-2026, 6.1.4.1 to 6.1.4.3 and Table 6.1.4.3.",
+    "reference": "NFPA 850-2026, 6.1.4.1 to 6.1.4.3 and Table 6.1.4.3",
+    "verified": true,
+    "kb": "life-safety.md#other-nfpa"
   }
 ]
