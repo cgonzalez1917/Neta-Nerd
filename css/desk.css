@@ -48,6 +48,12 @@ body.is-study #phase-bg {
   bottom: auto;
   height: 100%;
 }
+/* The rule above already moves this canvas down 40px. A further 21px
+   would stack. 40 - 21 = 19, so shift back 19px and the crests still
+   land on the amber line. The circle moves with the waves. */
+body.is-study #phase-bg {
+  transform: translateY(-19px);
+}
 
 .q-top { top: 112px; }
 .math-sec,
