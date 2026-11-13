@@ -178,5 +178,41 @@
     "reference": "ANSI/NETA ATS-2025 7.19.2.B.3 and D.3",
     "verified": true,
     "kb": "grounding.md#fop"
+  },
+  {
+    "id": "arr-011",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "On a metal-oxide arrester nameplate, MCOV means:",
+    "choices": [
+      "The highest rms voltage it may see continuously",
+      "The crest voltage across the arrester during a lightning discharge",
+      "The voltage at which the arrester first conducts 1 mA",
+      "The rms voltage the arrester can withstand for a 10-second overvoltage"
+    ],
+    "answer": 0,
+    "explanation": "C62.11 defines maximum continuous operating voltage as the highest rms power-frequency voltage designated for continuous application between the terminals. Discharge voltage is what appears during surge current. Source: IEEE C62.11-2020, 3.1 (maximum continuous operating voltage).",
+    "reference": "IEEE C62.11-2020, 3.1 (maximum continuous operating voltage)",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-012",
+    "level": "III",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "An older arrester spec lists a duty-cycle voltage rating. What does IEEE C62.11-2020 say about that rating?",
+    "choices": [
+      "It is the same thing as MCOV",
+      "It is historical and being phased out",
+      "It is the minimum discharge voltage",
+      "It has replaced MCOV as the main rating used for selection"
+    ],
+    "answer": 1,
+    "explanation": "C62.11-2020 describes the duty-cycle rating as historical, suited to the previous generation of arresters, and being removed. MCOV is the continuous rating used with modern metal-oxide arresters. Source: IEEE C62.11-2020, 3.1 (duty-cycle voltage rating).",
+    "reference": "IEEE C62.11-2020, 3.1 (duty-cycle voltage rating)",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
   }
 ]

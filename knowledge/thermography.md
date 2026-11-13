@@ -22,3 +22,7 @@ Section 9 is referenced from equipment chapters (“perform thermographic survey
 - Quoting an absolute temperature with emissivity left at 0.95 on a bare copper bus.
 - Comparing a loaded phase with an unloaded phase and calling it ΔT.
 - Treating the table’s “repair immediately” row as permission to open energized gear with no shock or arc-flash plan. Thermography that does not cross the restricted approach boundary is one of the energized-work-permit exemptions in 130.2(C), and it is still energized work.
+
+## Emissivity and reflections {#emissivity}
+
+The imager can't separate emitted from reflected energy. Shiny metal emits poorly and mirrors its surroundings. Painted, dirty, or oxidized surfaces are usually around 0.7 to 0.9. Visible color doesn't set emissivity. To check for a reflection, change your viewing angle: a reflection moves and real heat stays put. Sun on a surface can be a reflection or real solar heating, and those are different problems. Scan under as much load as you can, and record it, because heating goes roughly with current squared.

@@ -110,3 +110,7 @@ The equipment chapters say which tests to run. They do not print numeric pass li
 - Treating 1.2 cal/cm² as a PPE category instead of the arc-flash boundary definition.
 - Using a class 00 glove on a 480 V test because “it’s low voltage.”
 - Applying temporary grounds before the absence-of-voltage test.
+
+## Temporary protective grounds {#grounds}
+
+Under 29 CFR 1926.962, a line is worked de-energized without grounds only if it is de-energized, can't contact another source, and has no induced-voltage hazard. Grounds form an equipotential zone, are at least No. 2 AWG copper, carry the available fault current for the clearing time, and are installed ground end first with a live-line tool on the line end. Removal is the reverse. Test for absence of nominal voltage first unless a ground is already installed. Grounds may come off for a test only with insulating equipment and isolation. ASTM F855 grades assemblies. A withstand rating can be reused, and an ultimate rating can't. Table 1 covers low X/R, and Table 2 (H grades) covers high X/R. An assembly takes the grade of its weakest component.

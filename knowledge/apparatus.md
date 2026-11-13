@@ -40,8 +40,44 @@ ATS 7.25 treats fiber as an optical test, not a megger test. An optical time-dom
 
 ## Capacitors {#capacitors}
 
-ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. It does not print a discharge time in minutes. The terminals stay charged until that resistor and a discharge path have done their work. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
+ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. D.4 cites NFPA 70 Article 460: residual voltage must fall to 50 V within 1 minute at 600 V and below, and within 5 minutes above 600 V. Still verify absence of voltage before contact. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
 
 ## EV charging {#evse}
 
 ATS 7.26 is the charging equipment. The electrical list includes the equipment ground, protective-conductor resistance, touch voltage, personal-protection trip, nuisance trip, proximity pilot, and control pilot. Investigate a protective-conductor resistance above 0.5 Ω. Interlocks are part of the visual and mechanical inspection. The trip thresholds themselves come from the charger manual.
+
+## Switches {#switches}
+
+Low-voltage air switches are ATS 7.5.1.1. The inspection covers blade alignment, penetration, travel stops, interlock sequencing, and fuse size and type against the drawings and studies. The electrical list covers contact resistance across blades and fuseholders, insulation resistance closed and across each open pole, fuse resistance, and the ground-fault test when one is fitted. Fuse resistances that differ by more than 15% are investigated. Medium-voltage metal-enclosed switches (7.5.1.2) add arc-interrupter operation, expulsion-limiting devices on expulsion fuses, and a withstand per Table 100.2. Open outdoor switches (7.5.1.3) add motor-operator limit switches, the operation counter, and Table 100.19. Gill sorts low-voltage switches into isolating, safety (load-break), and interrupter switches. Bolted-pressure mains carry very high continuous current, rely on integral current-limiting fuses for fault interruption, and power their ground-fault trip from a small source-side control transformer.
+
+## Fuses {#fuses}
+
+A current-limiting fuse clears in the first half-cycle, so the fault never reaches its prospective peak. A non-current-limiting fuse can't do that. Class L covers 601-6000 A at 600 V. J, T, RK1, RK5, CC, and G are current-limiting branch fuses up to 600 A or less. Fuses open one phase at a time, so a three-phase fused circuit can single-phase a motor. Fused gear often adds an anti-single-phase trip. Cutouts (ATS 7.5.5) get a check of the latching mechanism along with alignment and penetration.
+
+## Busways and outdoor bus {#bus}
+
+Metal-enclosed busway is ATS 7.4. Withstand is each phase to ground with the others grounded, per the manufacturer or Table 100.17. Where that table shows no dc value, use ac. Tie sections fed from separate sources are phased from their permanent sources. For low-voltage busway with no manufacturer minimum, the megohm minimum is 100 divided by the run length in feet, and the withstand waits until insulation resistance is above that. Outdoor bus is ATS 7.21. Support insulators are inspected, insulation resistance is phase to ground with others grounded for equipment below 46 kV, and the one-minute withstand uses Table 100.19.
+
+## Reactors and regulators {#regulators}
+
+Step-voltage regulators are ATS 7.12.1.1. Read the impact recorder before unloading. Check the motor cutoffs at maximum raise and lower and the voltage range limiter. The control is checked for bandwidth, time delay, voltage level, and line-drop compensation. Turns ratio on each step is held to 0.5% of calculated, winding resistance to 2% of factory or adjacent, and PI to at least 1.0 without factory data. Dry reactors (7.20.3.1) hold winding resistance to 1% of factory, and the field ac withstand is limited to 75% of the factory value. Liquid-filled reactors (7.20.3.2) keep a positive nitrogen blanket that is tested for oxygen.
+
+## Drives, starters, and MCCs {#drives}
+
+Adjustable-speed drives are ATS 7.17. The drive's motor overcurrent settings are checked against motor full-load current, with individual overloads for multi-motor drives. Overload elements are proved by primary injection at 300% against the curve. The protective functions are exercised: phase loss, overvoltage, rotation, overtemperature, dc overvoltage, overfrequency, overload, and alarms. The speed range is swept slowly while you listen for resonance. NEMA ICS 7.2 adds bypass practice (check rotation both ways, and allow time for the motor's residual voltage to decay) and bearing-current mitigations. NEMA MG 1 advises against power-factor capacitors on a drive's output. Low-voltage MCCs have no single ATS list: the assembly goes to 7.1, switches to 7.5, breakers to 7.6, and starters to 7.16.1.1, where contactor gap, wipe, alignment, and pressure are checked.
+
+## Metering {#metering}
+
+ATS 7.11 checks meter accuracy, the instrument multiplier (CT ratio times VT ratio), and intact CT and VT secondaries. Digital meters also get their firmware recorded and owner settings loaded, and readings are compared with real load after energization. By Blondel's theorem, N wires need N - 1 elements. With a disk meter, kW = 3.6 x revolutions x Kh x multiplier / seconds. Percent registration is registered energy divided by true energy, times 100. Percent error is the difference from 100.
+
+## Automation and SCADA {#automation}
+
+ATS 7.23 covers firmware, backup batteries, date and time, HMI and remote metering, communication failover, tagging and local/remote control, deadband and zero deadband, and clearing events after testing. IEEE C37.1 defines the terms: deadband suppresses analog changes smaller than a set count, a chatter filter disables a status point that changes too often, and select-before-operate arms one point before an operate command can execute. IEEE C37.2 names the RTU as the main SCADA interface and a remote I/O module as having no SCADA master connection. Accuracy stated as a percent of full scale becomes a much larger percent of a small reading.
+
+## Studies and maintenance intervals {#studies}
+
+MTS Appendix C ties study updates to events. New work, an annual data check, or a source change marks all five (one-line, short-circuit, coordination, incident energy, load flow). A change in impedance, configuration, or loading marks the one-line, short-circuit, and incident energy. A settings change marks the one-line, coordination, incident energy, and load flow. Five years with no update marks the one-line, short-circuit, and incident energy. MTS Appendix B gives base months for visual, mechanical, and electrical work and a multiplier by reliability requirement and condition (from 0.25 for high reliability in poor condition up to 2.5 for low reliability in good condition). IEEE 399 uses first-cycle currents for low-voltage interrupting duty and medium-voltage close-and-latch duty, and time-delayed currents with motors left out for relay sensitivity.
+
+## Commissioning (ECS) {#commissioning}
+
+ANSI/NETA ECS-2024 starts where ATS stops. Components are proved by factory and field acceptance tests. Commissioning then proves the system against the Owner's Project Requirements (what the owner needs and how success is measured) and the Basis of Design (how the designer met them). The commissioning authority drafts the commissioning plan during design and keeps it current through construction, acceptance, and occupancy. The work runs in three phases: pre-energization (document reviews, settings, CT circuits, interlocks, energization plan), energization (restricted access, grounds removed, phasing and rotation, differential operate and restraint at medium voltage), and post-energization (fluid and gas samples, infrared under load, loading checks, report). The commissioning organization is an independent third party. The report includes an issues log of open and closed items. Turnover replaces commissioning locks and tags with the operator's.

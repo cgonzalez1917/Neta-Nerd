@@ -1945,5 +1945,275 @@
     "reference": "IEEE 1584-2018, 4.2",
     "verified": true,
     "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-111",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Before entering a cable vault that is a permit-required confined space, in what order does OSHA require the atmosphere to be tested?",
+    "choices": [
+      "Toxic gases, then oxygen, then combustibles",
+      "Combustibles, then toxic gases, then oxygen",
+      "Any order, as long as all three are read before entry",
+      "Oxygen, then combustibles, then toxics"
+    ],
+    "answer": 3,
+    "explanation": "OSHA fixes the order: oxygen first, then combustibles, then toxics. Many combustible sensors need enough oxygen to read correctly, so oxygen is checked first. Source: 29 CFR 1910.146(d)(5)(iii).",
+    "reference": "29 CFR 1910.146(d)(5)(iii)",
+    "verified": true,
+    "kb": "safety.md#confined"
+  },
+  {
+    "id": "safety-112",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A pre-entry reading in a manhole shows 19.0% oxygen. Under 29 CFR 1910.146 that atmosphere is:",
+    "choices": [
+      "Acceptable, because the low limit is 18%",
+      "Hazardous, because it is oxygen deficient",
+      "Oxygen enriched and a fire hazard",
+      "Acceptable unless combustibles also exceed 10% LFL"
+    ],
+    "answer": 1,
+    "explanation": "Oxygen below 19.5% (or above 23.5%) is a hazardous atmosphere on its own. You don't need a second bad reading for it to count. Source: 29 CFR 1910.146(b), hazardous atmosphere and oxygen deficient atmosphere.",
+    "reference": "29 CFR 1910.146(b), hazardous atmosphere and oxygen deficient atmosphere",
+    "verified": true,
+    "kb": "safety.md#confined"
+  },
+  {
+    "id": "safety-113",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under OSHA's permit-space rule, entry has happened when:",
+    "choices": [
+      "Both feet are below the opening",
+      "Any part of your body breaks the plane of the opening",
+      "You begin the assigned work inside",
+      "You have been inside the space for more than 15 minutes"
+    ],
+    "answer": 1,
+    "explanation": "Entry starts as soon as any part of the body passes through the plane of the opening, such as reaching in with an arm or leaning in with your head. Source: 29 CFR 1910.146(b), entry.",
+    "reference": "29 CFR 1910.146(b), entry",
+    "verified": true,
+    "kb": "safety.md#confined"
+  },
+  {
+    "id": "safety-114",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Your crew is pulling new cable through a vault as part of a construction project. Under its own scope statement, 29 CFR 1910.146:",
+    "choices": [
+      "Applies in full, because all utility vaults count as general industry",
+      "Applies only when a hot work permit is issued",
+      "Applies only to spaces deeper than 4 feet",
+      "Doesn't apply; construction falls under part 1926"
+    ],
+    "answer": 3,
+    "explanation": "The scope of 1910.146 excludes construction, agriculture, and shipyard work. Construction confined spaces fall under part 1926. Source: 29 CFR 1910.146(a).",
+    "reference": "29 CFR 1910.146(a)",
+    "verified": true,
+    "kb": "safety.md#confined"
+  },
+  {
+    "id": "safety-115",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under 29 CFR 1926.962, protective grounding equipment must have an ampacity at least equal to:",
+    "choices": [
+      "No. 2 AWG copper",
+      "No. 6 AWG copper",
+      "4/0 AWG copper",
+      "The phase conductor it is clamped to"
+    ],
+    "answer": 0,
+    "explanation": "No. 2 AWG copper is the floor. The grounds must also carry the maximum available fault current for the time it takes protection to clear the fault, so a real job often needs larger cable. Source: 29 CFR 1926.962(d)(1)(ii).",
+    "reference": "29 CFR 1926.962(d)(1)(ii)",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-116",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "When installing a temporary protective ground on a de-energized line, OSHA 1926.962 requires you to connect:",
+    "choices": [
+      "The line end first with a live-line tool, then the ground end by hand",
+      "Both ends at the same time with two workers",
+      "The ground end first, then the line end with a live-line tool",
+      "Either end first, as long as gloves are worn"
+    ],
+    "answer": 2,
+    "explanation": "Connect the ground end first so the cable is already at ground potential when it touches the line, and use a live-line tool for the line end. Removal is the reverse: line end off first, ground end last. Source: 29 CFR 1926.962(f).",
+    "reference": "29 CFR 1926.962(f)",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-117",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "ASTM F855 gives temporary grounding equipment two short-circuit ratings. Which one describes a current the equipment can carry and still be reused?",
+    "choices": [
+      "The ultimate capacity",
+      "The continuous current rating",
+      "The withstand rating",
+      "The melting rating of the cable"
+    ],
+    "answer": 2,
+    "explanation": "Under F855, the withstand rating is a current the equipment carries without damage that prevents reuse, and it must pass a second test after cooling. At ultimate capacity, damage is expected and the component should not be reused. Source: ASTM F855-23, 3.1.5 and 3.1.6.",
+    "reference": "ASTM F855-23, 3.1.5 and 3.1.6",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-118",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An entrant in a permit vault calls for a hand tool that is just out of reach inside. Under 1910.146, the attendant should:",
+    "choices": [
+      "Step in briefly to pass the tool, since it takes only seconds",
+      "Enter if the gas monitor shows normal readings",
+      "Swap places with the entrant without telling the supervisor",
+      "Stay outside until relieved by another attendant"
+    ],
+    "answer": 3,
+    "explanation": "The attendant stays outside the space during entry operations until another attendant relieves them. The attendant's job is to monitor and summon rescue, not to become a second entrant. Source: 29 CFR 1910.146(i)(4).",
+    "reference": "29 CFR 1910.146(i)(4)",
+    "verified": true,
+    "kb": "safety.md#confined"
+  },
+  {
+    "id": "safety-119",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A vault splicing job finishes early. What happens to the entry permit under 1910.146?",
+    "choices": [
+      "It stays active until its original end time in case the crew returns",
+      "Canceled, then kept at least 1 year",
+      "It is discarded once the space is closed",
+      "It is extended automatically to the next shift"
+    ],
+    "answer": 1,
+    "explanation": "A permit lasts no longer than the task needs. Canceled permits are kept for at least a year and used to review the permit-space program within a year after each entry. Problems found during entry are noted on the permit. Source: 29 CFR 1910.146(e)(4), (e)(6), (d)(14).",
+    "reference": "29 CFR 1910.146(e)(4), (e)(6), (d)(14)",
+    "verified": true,
+    "kb": "safety.md#confined"
+  },
+  {
+    "id": "safety-120",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A de-energized line runs in parallel with an energized circuit for a long distance. A crew lead suggests working it without grounds because it's open at both ends. Under 1926.962, grounds may be omitted only if:",
+    "choices": [
+      "It is open at both ends and tagged",
+      "De-energized, no contact possible, no induced voltage",
+      "A voltage detector shows less than 50 V at both ends of the line",
+      "The work lasts less than one hour"
+    ],
+    "answer": 1,
+    "explanation": "All three conditions must be met. A long parallel to an energized circuit is a classic source of induced voltage, so this line needs protective grounds. Source: 29 CFR 1926.962(b).",
+    "reference": "29 CFR 1926.962(b)",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-121",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "During a test on a grounded line section, the grounds have to come off temporarily. OSHA 1926.962 allows this if:",
+    "choices": [
+      "The grounds go back on within 10 minutes",
+      "Only one worker is within the work area",
+      "The test voltage stays below the line's nominal operating voltage",
+      "Workers use insulating equipment and are isolated"
+    ],
+    "answer": 3,
+    "explanation": "Grounds may be removed for tests. During the test, workers must use insulating equipment, be isolated from the hazards involved, and the employer adds whatever other measures are needed. Source: 29 CFR 1926.962(h).",
+    "reference": "29 CFR 1926.962(h)",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-122",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A crew arrives at a line section that a previous crew already grounded. The new crew wants to add its own grounds. Under OSHA 1926.962, what should they do?",
+    "choices": [
+      "Install grounds; no voltage test needed with a ground already on",
+      "Remove the existing grounds first, then test for absence of voltage",
+      "Test only with a high-voltage tick tracer",
+      "Wait for the utility to re-test the whole line"
+    ],
+    "answer": 0,
+    "explanation": "Normally you test for absence of nominal voltage before installing any ground. The rule makes an exception where a previously installed ground is already present. Source: 29 CFR 1926.962(e).",
+    "reference": "29 CFR 1926.962(e)",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-123",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Available fault current is 25 kA with a 15-cycle clearing time and low X/R. If you size grounds by ASTM F855 Table 1 withstand ratings, so the set can be reused, the smallest grade that covers it is:",
+    "choices": [
+      "Grade 1",
+      "Grade 2",
+      "Grade 3",
+      "Grade 5"
+    ],
+    "answer": 2,
+    "explanation": "Table 1 withstand ratings for 15 cycles are 14 kA (Grade 1), 21 kA (Grade 2), and 27 kA (Grade 3). Grade 3, with 2/0 copper, is the first one at or above 25 kA. Table 1 applies where asymmetry is 20% or less (X/R up to about 1.8). Source: ASTM F855-23, 1.6 and Table 1.",
+    "reference": "ASTM F855-23, 1.6 and Table 1",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-124",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A grounding set has Grade 5 clamps and ferrules but is built with 2/0 copper, the Grade 3 cable size. Under ASTM F855, the assembly is rated:",
+    "choices": [
+      "As Grade 5, since the clamps carry the fault",
+      "As Grade 4, an average of the parts",
+      "As the lowest-graded component, Grade 3",
+      "It can't be rated without a destructive test"
+    ],
+    "answer": 2,
+    "explanation": "F855 notes that assembly ratings assume the grade of the lowest-graded component. The cable sets the limit here. Source: ASTM F855-23, Table 1 note 1 and 43.1.6.",
+    "reference": "ASTM F855-23, Table 1 note 1 and 43.1.6",
+    "verified": true,
+    "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-125",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "At a substation bus, X/R is about 15, so the fault is highly asymmetrical. Which ASTM F855 ratings apply?",
+    "choices": [
+      "Table 1 withstand ratings, unchanged",
+      "Table 1 withstand ratings, derated by 20% for asymmetry",
+      "Table 2 H-grade ratings; don't reuse after a fault",
+      "The continuous current rating only"
+    ],
+    "answer": 2,
+    "explanation": "Table 1 ratings are for asymmetry up to 20% (X/R up to about 1.8). Above that, F855 points to Table 2: ultimate assembly ratings for high X/R, tested at X/R 30. Assemblies subjected to those currents are not to be reused. Source: ASTM F855-23, 1.6.1 and Table 2.",
+    "reference": "ASTM F855-23, 1.6.1 and Table 2",
+    "verified": true,
+    "kb": "safety.md#grounds"
   }
 ]

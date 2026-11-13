@@ -106,5 +106,167 @@
     "reference": "NFPA 70B-2026, Table 9.3.2",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "thermo-007",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "You scan a clean, shiny copper bus joint and a painted steel bracket that are at the same real temperature. Which reading is more likely to mislead you?",
+    "choices": [
+      "The bracket, because paint color raises emissivity",
+      "Neither, because imagers correct for material automatically",
+      "The copper; shiny metal has low emissivity",
+      "The bracket, because steel conducts heat poorly"
+    ],
+    "answer": 2,
+    "explanation": "Shiny metals emit poorly and reflect a lot, so the camera sees part of the surroundings. Painted or oxidized surfaces are usually around 0.7 to 0.9. The camera cannot tell emitted energy from reflected energy on its own. Source: IEEE C57.152-2025, Annex C.2.",
+    "reference": "IEEE C57.152-2025, Annex C.2",
+    "verified": true,
+    "kb": "thermography.md#emissivity"
+  },
+  {
+    "id": "thermo-008",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "Two painted covers have the same finish texture, one black and one white. For infrared emissivity:",
+    "choices": [
+      "Color matters little; finish and condition do",
+      "Black always has much higher emissivity than white",
+      "White has higher emissivity because it reflects light",
+      "Only the darker cover can be scanned"
+    ],
+    "answer": 0,
+    "explanation": "Visible color does not set infrared emissivity. Surface condition (gloss, oxidation, dirt) does. Two covers with the same paint finish behave about the same. Source: IEEE C57.152-2025, Annex C.2.",
+    "reference": "IEEE C57.152-2025, Annex C.2",
+    "verified": true,
+    "kb": "thermography.md#emissivity"
+  },
+  {
+    "id": "thermo-009",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "Outdoors on a sunny day, a hot spot shows up on a shiny connector. A quick way to tell a reflection from real heating is to:",
+    "choices": [
+      "Raise the emissivity setting to 1.0",
+      "Zoom in until the spot fills the screen",
+      "Wait for the reading to stabilize",
+      "View it from another angle"
+    ],
+    "answer": 3,
+    "explanation": "Changing the viewing angle (C57.152 suggests moving about 90 degrees) moves a reflection but not a real hot spot. Solar heating of the surface is a separate effect from solar reflection. Source: IEEE C57.152-2025, Annex C.2.",
+    "reference": "IEEE C57.152-2025, Annex C.2",
+    "verified": true,
+    "kb": "thermography.md#emissivity"
+  },
+  {
+    "id": "thermo-010",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "An ATS Section 9 thermographic report must state:",
+    "choices": [
+      "The emissivity setting used for every image",
+      "The load conditions at the time",
+      "The imager's serial number and lens",
+      "The ambient humidity"
+    ],
+    "answer": 1,
+    "explanation": "The report lists the equipment, discrepancies, the temperature difference, the probable cause, areas inspected (including inaccessible ones), load conditions, photos and thermograms, and recommended action. Without load conditions, a delta-T means little. Source: ANSI/NETA ATS-2025 Section 9.",
+    "reference": "ANSI/NETA ATS-2025 Section 9",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-011",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "What minimum sensitivity does ATS Section 9 require of an infrared imager used for a survey?",
+    "choices": [
+      "Able to detect a 1 \u00b0C difference at 30 \u00b0C",
+      "Able to detect a 0.1 \u00b0C difference at 100 \u00b0C",
+      "Able to detect a 5 \u00b0C difference at 20 \u00b0C",
+      "Any imager with a radiometric output"
+    ],
+    "answer": 0,
+    "explanation": "ATS asks for an imager that can resolve 1 \u00b0C of difference when the target is at 30 \u00b0C. ECS-2024 Section 9 sets the same figure. Source: ANSI/NETA ATS-2025 Section 9; ANSI/NETA ECS-2024 9.3.",
+    "reference": "ANSI/NETA ATS-2025 Section 9; ANSI/NETA ECS-2024 9.3",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-012",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "A 100 A breaker terminal has a rated total temperature of 95 \u00b0C at a 40 \u00b0C rated ambient. It carries 50 A in 25 \u00b0C air and measures 45 \u00b0C. Using Gill's standards-based method with n = 2, the result is:",
+    "choices": [
+      "Limit about 38.8 \u00b0C, so it is over spec",
+      "Corrected limit 95 \u00b0C, so the terminal is fine",
+      "Corrected limit about 52.5 \u00b0C, so the terminal is fine",
+      "Corrected limit about 65 \u00b0C, so it needs monitoring only"
+    ],
+    "answer": 0,
+    "explanation": "Ttc = (Trt - Tra) x (Im/Ir)^n + Tma = (95 - 40) x (0.5)^2 + 25 = 13.75 + 25 = 38.75 \u00b0C. The measured 45 \u00b0C exceeds that. Using n = 1 instead gives the wrong 52.5 \u00b0C. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.10.2.2; ANSI/NETA ATS-2025 Table 100.18 note 2.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.10.2.2; ANSI/NETA ATS-2025 Table 100.18 note 2",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-013",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "A lug runs 6 \u00b0C above an identical lug on the next phase while the feeder is at 50% load. If heating goes with current squared, what delta-T would you expect at full load, and how does Table 100.18 rate it?",
+    "choices": [
+      "About 12 \u00b0C, repair as time permits",
+      "About 6 \u00b0C, a possible deficiency",
+      "About 24 \u00b0C, a major discrepancy",
+      "About 9 \u00b0C, repair as time permits"
+    ],
+    "answer": 2,
+    "explanation": "Twice the current means four times the heating: 6 x 4 = 24 \u00b0C. Between similar components, over 15 \u00b0C is a major discrepancy. That is why load conditions must be in the report. Source: ANSI/NETA ATS-2025 Table 100.18 and note 1.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.18 and note 1",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-014",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "A heavily corroded connection shows a high emissivity and a modest temperature rise. Why can this still be misleading?",
+    "choices": [
+      "Corroded surfaces always read 50 \u00b0C too hot",
+      "High emissivity means the camera sees only reflections",
+      "The rise depends on load; light load can hide it",
+      "Corrosion makes the surface transparent to infrared"
+    ],
+    "answer": 2,
+    "explanation": "Dull or corroded surfaces emit well, so the temperature reading is trustworthy. The rise itself depends on current. Gill notes heavier loading is better for finding problems, and ATS requires load conditions in the report. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.10.2; IEEE C57.152-2025, Annex C.2; ANSI/NETA ATS-2025 Section 9.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.10.2; IEEE C57.152-2025, Annex C.2; ANSI/NETA ATS-2025 Section 9",
+    "verified": true,
+    "kb": "thermography.md#emissivity"
+  },
+  {
+    "id": "thermo-015",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "systems",
+    "question": "A new lineup passed its acceptance infrared survey. Which follow-up do ATS and ECS offer as an optional test?",
+    "choices": [
+      "A second survey within 12 months of acceptance",
+      "A repeat survey every week for the first month",
+      "A survey at no load within 30 days",
+      "No follow-up; acceptance surveys are final"
+    ],
+    "answer": 0,
+    "explanation": "Both ATS Section 9 and ECS 9.1 list an optional follow-up survey within 12 months of final acceptance, once the system has run under real loading. Source: ANSI/NETA ATS-2025 Section 9; ANSI/NETA ECS-2024 9.1.2.",
+    "reference": "ANSI/NETA ATS-2025 Section 9; ANSI/NETA ECS-2024 9.1.2",
+    "verified": true,
+    "kb": "thermography.md#delta-t"
   }
 ]

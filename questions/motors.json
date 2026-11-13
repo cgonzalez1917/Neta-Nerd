@@ -430,5 +430,77 @@
     "reference": "NEMA MG 1-2016 (Rev 2018) Part 30, 30.1.2 and Figure 30-1",
     "verified": true,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-025",
+    "level": "II",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "Line voltages at a motor read 474, 480, and 486 V. Using the maximum deviation from the average, the voltage unbalance is:",
+    "choices": [
+      "0.6%",
+      "1.25%",
+      "2.50%",
+      "6%"
+    ],
+    "answer": 1,
+    "explanation": "Average = 480 V. The largest deviation is 6 V, and 6 / 480 x 100 = 1.25%. That is above the 1% at which MG 1 says a motor will run successfully at rated load. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9; NEMA MG 1-2016 (Rev 2018), 12.45.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9; NEMA MG 1-2016 (Rev 2018), 12.45",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-026",
+    "level": "II",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "Gill gives a rule of thumb for how voltage unbalance shows up as current unbalance in an induction motor. About 1% voltage unbalance can cause roughly:",
+    "choices": [
+      "1% current unbalance",
+      "2% current unbalance",
+      "8% current unbalance",
+      "25% current unbalance"
+    ],
+    "answer": 2,
+    "explanation": "The effect is about 8:1, which is why voltage unbalance is held to 1 to 2%. The extra current flows as negative sequence and heats the motor. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-027",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.2 includes an optional step on a running synchronous motor: reduce the excitation on purpose. Why?",
+    "choices": [
+      "To measure the stator polarization index",
+      "To check the space heater circuit",
+      "To set the overload relay pickup",
+      "To prove the power-factor relay trips"
+    ],
+    "answer": 3,
+    "explanation": "Where the exciter range and machine loading permit, ATS has you lower excitation until power factor falls below the PF relay trip value and confirm the relay operates. Required steps also check the field application timer and the PF-relay enable timer. Source: ANSI/NETA ATS-2025 7.15.2.B.20 through B.23.",
+    "reference": "ANSI/NETA ATS-2025 7.15.2.B.20 through B.23",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-028",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "ATS 7.15.2 lists an optional V-curve on a synchronous motor. At what load is it plotted?",
+    "choices": [
+      "About 50% load",
+      "No load, uncoupled",
+      "Locked rotor",
+      "125% load"
+    ],
+    "answer": 0,
+    "explanation": "The V-curve plots stator current against excitation current at approximately 50% load, to check that the exciter works correctly. Source: ANSI/NETA ATS-2025 7.15.2.B.22.",
+    "reference": "ANSI/NETA ATS-2025 7.15.2.B.22",
+    "verified": true,
+    "kb": "apparatus.md#motors"
   }
 ]

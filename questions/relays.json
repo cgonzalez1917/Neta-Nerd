@@ -1837,5 +1837,77 @@
     "reference": "IEEE 242-2001, 15.5 and Table 15-1",
     "verified": true,
     "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-103",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A 59 overvoltage element is set to pick up at 132 V. ATS 7.9.1 times it with a sudden application of 120% of pickup. The test voltage is:",
+    "choices": [
+      "132 V",
+      "145.2 V",
+      "158.4 V",
+      "264 V"
+    ],
+    "answer": 2,
+    "explanation": "1.2 x 132 = 158.4 V. Applying the voltage suddenly at that level gives a repeatable operating time to compare with the setting. Source: ANSI/NETA ATS-2025 7.9.1 (device 59).",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 (device 59)",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-104",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Testing a reclosing relay (79) per ATS 7.9.1, which result shows the scheme works after the last unsuccessful shot?",
+    "choices": [
+      "The relay goes to lockout and stops reclosing",
+      "The relay keeps reclosing until the fault clears",
+      "The relay resets to the first shot right away",
+      "The relay trips the upstream breaker"
+    ],
+    "answer": 0,
+    "explanation": "ATS has you check each reclose interval, the reset time, the close pulse, instantaneous-overcurrent lockout, and lockout after unsuccessful reclosing. Endless reclosing into a fault is exactly what lockout prevents. Source: ANSI/NETA ATS-2025 7.9.1 (device 79).",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 (device 79)",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-105",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Beyond pickup and slope, which characteristic is on the ATS 7.9.1 test list for a transformer differential (87) element?",
+    "choices": [
+      "Maximum torque angle",
+      "Reclose interval",
+      "Harmonic restraint",
+      "Volts-per-hertz pickup"
+    ],
+    "answer": 2,
+    "explanation": "The 87 list covers operating pickup, restraint units, slope, and harmonic restraint. Maximum torque angle belongs to directional elements such as the 32. Source: ANSI/NETA ATS-2025 7.9.1 (device 87).",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 (device 87)",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-106",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A generator anti-motoring element (32) is tested per ATS 7.9.1. Which test is specific to it and not part of a 51 test?",
+    "choices": [
+      "Timing at several multiples of tap setting",
+      "Instantaneous pickup",
+      "Finding the maximum torque angle",
+      "Time-dial verification"
+    ],
+    "answer": 2,
+    "explanation": "Directional power elements are checked for their operating characteristic and maximum torque angle. Timing at multiples of tap and time dial belong to inverse-time overcurrent. Source: ANSI/NETA ATS-2025 7.9.1 (device 32).",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 (device 32)",
+    "verified": true,
+    "kb": "relays.md#testing"
   }
 ]

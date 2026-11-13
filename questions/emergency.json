@@ -268,5 +268,113 @@
     "reference": "NFPA 70B-2026, Tables 39.3.4 and 39.3.5",
     "verified": true,
     "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-016",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "Which engine shutdowns does ATS 7.22.1 have you functionally test on a generator set?",
+    "choices": [
+      "Low fuel tank level, ambient temperature, and humidity",
+      "Low oil pressure, overtemperature, and overspeed",
+      "Battery charger ripple and dc ground",
+      "Exhaust stack height and muffler noise"
+    ],
+    "answer": 1,
+    "explanation": "The safety shutdowns that protect the engine are proved by actually operating them: low oil pressure, overtemperature, and overspeed. Source: ANSI/NETA ATS-2025 7.22.1.B.4.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.4",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-017",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "During inspection of an automatic transfer switch, ATS 7.22.3 has you check manual transfer and also:",
+    "choices": [
+      "That both sources can be closed together briefly to share load",
+      "That the neutral is bonded at the switch",
+      "That the generator is synchronized before each transfer",
+      "Positive mechanical interlocking between sources"
+    ],
+    "answer": 3,
+    "explanation": "The mechanical interlock must keep the two sources from being connected together. Manual transfer is checked along with it. Source: ANSI/NETA ATS-2025 7.22.3.A.9 and A.10.",
+    "reference": "ANSI/NETA ATS-2025 7.22.3.A.9 and A.10",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-018",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "On a UPS acceptance test, ATS 7.22.2 checks the dc undervoltage setting. When the dc falls to that level it should:",
+    "choices": [
+      "Start the standby generator",
+      "Transfer the load to the maintenance bypass manually",
+      "Raise the charger to equalize voltage",
+      "Trip the inverter input breaker"
+    ],
+    "answer": 3,
+    "explanation": "The dc undervoltage trip protects the battery and inverter by opening the inverter input breaker. The level is set to the manufacturer's value. Source: ANSI/NETA ATS-2025 7.22.2.B.4 and D.4.",
+    "reference": "ANSI/NETA ATS-2025 7.22.2.B.4 and D.4",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-019",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "The normal source to an automatic transfer switch fails. In what order should the ATS operate? (ATS 7.22.3 has you verify each of these functions.)",
+    "choices": [
+      "Transfer, engine start, alternate source sensed, delay on transfer",
+      "Normal sensing drops, engine starts, alternate sensed, delay, transfer",
+      "Engine start, transfer, normal-source sensing drops out, delay on transfer",
+      "Delay on retransfer, engine start, transfer, alternate sensed"
+    ],
+    "answer": 1,
+    "explanation": "ATS lists normal-source voltage and frequency sensing, engine start, time delay on transfer, alternate-source sensing, transfer, and then delay with retransfer and engine cooldown and shutdown when normal returns. That is a checklist, not the running order. In operation the transfer delay only finishes and the switch only moves once the alternate source is up and sensed good. Source: ANSI/NETA ATS-2025 7.22.3.B.8.",
+    "reference": "ANSI/NETA ATS-2025 7.22.3.B.8",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-020",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "Utility power returns after an outage. In the ATS 7.22.3 timing list, what follows the retransfer?",
+    "choices": [
+      "An immediate engine stop at the instant of retransfer",
+      "Engine cooldown, then shutdown",
+      "A second transfer back to the generator",
+      "A battery equalize charge"
+    ],
+    "answer": 1,
+    "explanation": "After the retransfer delay and the retransfer, the engine runs unloaded for its cooldown period and then shuts down. Both times are verified. Source: ANSI/NETA ATS-2025 7.22.3.B.8.",
+    "reference": "ANSI/NETA ATS-2025 7.22.3.B.8",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-021",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "A 125 kW standby generator stator gives a 1-minute insulation test with a dielectric absorption ratio of 1.2. Under ATS 7.22.1:",
+    "choices": [
+      "It fails, because the DAR must be at least 1.4",
+      "It needs a 10-minute PI test because of its size",
+      "It fails, because every generator must show a PI of 2.0 from a 1-minute test",
+      "It meets the DAR limit (above 1.0); check Table 100.11 too"
+    ],
+    "answer": 3,
+    "explanation": "Machines of 200 hp (150 kW) and below get a 1-minute test and a DAR, which must be greater than 1.0. Larger machines get a 10-minute test and a PI of at least 2.0. The 1.4 DAR figure is for induction motors under 7.15.1. Source: ANSI/NETA ATS-2025 7.22.1.B.1 and D.1.",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.1 and D.1",
+    "verified": true,
+    "kb": "apparatus.md#emergency"
   }
 ]

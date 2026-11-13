@@ -701,5 +701,167 @@
     "reference": "IEEE 386-2016, Clause 3 (definitions)",
     "verified": true,
     "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-040",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "What does a time-domain reflectometer (TDR) on a medium-voltage cable mainly show you?",
+    "choices": [
+      "Whether the insulation will pass a later withstand test",
+      "Where impedance changes along the cable",
+      "The cable's dissipation factor",
+      "Partial-discharge inception voltage"
+    ],
+    "answer": 1,
+    "explanation": "A TDR sends a low-voltage pulse between conductor and shield and times the reflections from impedance changes. It finds length, splices, opens, shorts, and corroded neutrals. IEEE 400 notes that it usually will not reveal even serious insulation defects. Source: ANSI/NETA ATS-2025 7.3.3.B.3; IEEE 400-2023, 6.5 and Table 12.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.3; IEEE 400-2023, 6.5 and Table 12",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-041",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "On a medium-voltage cable system, the NEC 100 percent insulation level may be used when ground faults are cleared:",
+    "choices": [
+      "Within 1 hour",
+      "Within 1 second",
+      "Only by a fuse, never by a relay",
+      "Within 1 minute"
+    ],
+    "answer": 3,
+    "explanation": "100 percent level requires relaying that clears ground faults within 1 minute. When that can't be met but the faulted section is de-energized within 1 hour, the 133 percent level is used. Source: NFPA 70-2023 315.10(C)(1) and (C)(2).",
+    "reference": "NFPA 70-2023 315.10(C)(1) and (C)(2)",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-042",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "On a 200 A loadbreak elbow, the test point is:",
+    "choices": [
+      "A capacitive tap for voltage sensing",
+      "A bonding point for the concentric neutral wires",
+      "The place to clamp a temporary ground",
+      "A port for injecting TDR pulses"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 386 defines the test point as capacitively coupled to the conductor so a fault indicator or voltage sensor can read through it. It is not a grounding or test-lead connection. Source: IEEE 386-2016, clause 3 (test point).",
+    "reference": "IEEE 386-2016, clause 3 (test point)",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-043",
+    "level": "II",
+    "topic": "cables",
+    "domain": "component",
+    "question": "You need to take an elbow-terminated cable off a transformer bushing and keep the cable end insulated on the parking stand. Which accessory do you use?",
+    "choices": [
+      "A bushing well plug",
+      "A reducing tap well with an insulated cap",
+      "An insulated parking bushing",
+      "A feed-thru insert"
+    ],
+    "answer": 2,
+    "explanation": "An insulated parking bushing mounts on the parking stand and gives the elbow an insulated, shielded place to sit. A bushing well plug and an insulated cap cover an unused bushing or well instead. Source: IEEE 386-2016, clause 3 (insulated parking bushing).",
+    "reference": "IEEE 386-2016, clause 3 (insulated parking bushing)",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-044",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "A cable has a 30-ohm characteristic impedance. A TDR pulse meets a section of 10 ohms. The reflection coefficient and what the trace shows are:",
+    "choices": [
+      "-0.5: inverted, half amplitude",
+      "+0.5: an upright reflection, half amplitude",
+      "-1.0: a full inverted reflection, like a dead short",
+      "+0.33: a small upright bump"
+    ],
+    "answer": 0,
+    "explanation": "rho = (Zd - Zo)/(Zd + Zo) = (10 - 30)/(10 + 30) = -0.5. A lower impedance gives a negative reflection, toward the -1 of a dead short. An open is +1. Source: IEEE 400-2023, 6.5.",
+    "reference": "IEEE 400-2023, 6.5",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-045",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "TDR traces on phases A and C show a clean far end at 2,400 ft. Phase B shows the same end plus a strong reflection at 1,150 ft. ATS 7.3.3 says:",
+    "choices": [
+      "Accept it, because the far end shows at the correct length",
+      "Accept it if phase B passes insulation resistance",
+      "Investigate phase B at 1,150 ft; traces must match",
+      "Repeat with a dc hipot to confirm the TDR"
+    ],
+    "answer": 2,
+    "explanation": "The TDR pass condition is that the trace clearly shows the cable length and matches the other phases. An extra reflection on one phase only points to a joint, damage, or neutral problem there. Source: ANSI/NETA ATS-2025 7.3.3.B.3 and D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.3 and D.3",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-046",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "A 2,500 ft MV run measures 31 ohms end to end on its shield. Under ATS 7.3.3, this shield is:",
+    "choices": [
+      "Acceptable, because 31 ohms is a normal value for a long shield",
+      "Acceptable, because the limit is 10 ohms total",
+      "Investigated; about 12.4 ohms per 1000 ft",
+      "Investigated, because shields must read under 1 ohm"
+    ],
+    "answer": 2,
+    "explanation": "31 / 2.5 = 12.4 ohms per 1000 ft, which is above the 10 ohms per 1000 ft investigate level. Always normalize to length before judging. Source: ANSI/NETA ATS-2025 7.3.3.B.2 and D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.3.3.B.2 and D.2",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-047",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "A shielded cable fails its VLF withstand, and the crew wants to locate the fault with a thumper. IEEE 400 cautions that:",
+    "choices": [
+      "It can harm sound insulation; use minimum voltage and time",
+      "Thumping is harmless to XLPE and can run at full set voltage",
+      "Thumping must be done before any withstand test",
+      "Thumping is allowed only on paper-insulated cable"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 400-2023 notes that thumping at high voltage can affect the dielectric properties of the cable system. It recommends minimizing voltage and time and repeating field tests after repair. Fault location itself is covered by IEEE 1234. Source: IEEE 400-2023, 5.5.",
+    "reference": "IEEE 400-2023, 5.5",
+    "verified": true,
+    "kb": "cables.md#tdr"
+  },
+  {
+    "id": "cable-048",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "A splice 15 ft from the termination doesn't show on a TDR trace taken at that termination. The likely reason is:",
+    "choices": [
+      "TDR can't see splices at all",
+      "The cable must be energized for TDR",
+      "The far-end reflection masks every feature near the test end",
+      "It's in the blind spot set by the pulse width"
+    ],
+    "answer": 3,
+    "explanation": "IEEE 400 notes a blind spot at the injection point whose length depends on pulse width. A narrower pulse shortens it. TDR also needs the cable discharged and will not reveal most insulation defects. Source: IEEE 400-2023, Table 12.",
+    "reference": "IEEE 400-2023, Table 12",
+    "verified": true,
+    "kb": "cables.md#tdr"
   }
 ]

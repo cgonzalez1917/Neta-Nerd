@@ -1,0 +1,218 @@
+[
+  {
+    "id": "sw-001",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "You are doing visual and mechanical checks on a new 600 V fused safety switch. Which item comes from the ATS 7.5.1.1 inspection list rather than its electrical tests?",
+    "choices": [
+      "Contact resistance across each blade and fuseholder",
+      "Insulation resistance across each open pole",
+      "Blade alignment, penetration, and travel stops",
+      "Resistance of each installed fuse"
+    ],
+    "answer": 2,
+    "explanation": "ATS keeps the mechanical checks (alignment, penetration, stops, operation) in the inspection list. Blade contact resistance, insulation resistance across open poles, and fuse resistance are all electrical tests in part B. Source: ANSI/NETA ATS-2025 7.5.1.1.A.5.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.1.A.5",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-002",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "During inspection of a fused switch, ATS 7.5.1.1 says the fuse sizes and types must agree with:",
+    "choices": [
+      "The drawings and the fault and coordination studies",
+      "Whatever spare fuses are stocked in the cabinet",
+      "The largest fuse the clips will physically accept",
+      "The ampere rating printed on the switch door, and nothing else"
+    ],
+    "answer": 0,
+    "explanation": "The check is against the design: the drawings plus the short-circuit and coordination studies. A fuse that fits the clips can still be the wrong class or rating for the available fault current. Source: ANSI/NETA ATS-2025 7.5.1.1.A.6.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.1.A.6",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-003",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "On a low-voltage air switch, the insulation-resistance test in ATS 7.5.1.1 covers each phase to the others and to ground with the blades closed. What else does it cover?",
+    "choices": [
+      "Only from the line lugs to the enclosure",
+      "From each fuse clip to the neutral bar only",
+      "Across the operating handle to ground",
+      "Across each open pole"
+    ],
+    "answer": 3,
+    "explanation": "The open-pole reading proves the switch actually isolates when it is open. Test voltage and minimum value come from the manufacturer or Table 100.1, one minute. Source: ANSI/NETA ATS-2025 7.5.1.1.B.3.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.1.B.3",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-004",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "What makes a fuse current-limiting?",
+    "choices": [
+      "It contains a time-delay element that rides through motor inrush",
+      "It clears within a half-cycle, before the peak",
+      "It is built only in ratings above 600 A",
+      "It opens all three phases when any one element melts"
+    ],
+    "answer": 1,
+    "explanation": "A current-limiting fuse extinguishes the arc within the first half-cycle, so the fault current never reaches its prospective peak. A non-current-limiting fuse may melt fast but cannot clear the arc that quickly. Opening all three phases is the job of an anti-single-phase feature on fused switchgear, not of the fuse. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4",
+    "verified": true,
+    "kb": "apparatus.md#fuses"
+  },
+  {
+    "id": "sw-005",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A 480 V main bolted-pressure switch carries 3000 A fuses in a single large cartridge size. Which UL class covers 600 V current-limiting fuses rated 601 A through 6000 A?",
+    "choices": [
+      "Class H",
+      "Class L",
+      "Class CC",
+      "Class J"
+    ],
+    "answer": 1,
+    "explanation": "Gill's fuse table lists Class L at 600 V ac, 601 to 6000 A, 200 kA interrupting. Classes J and CC stop at 600 A and 30 A; Class H is a non-current-limiting fuse up to 600 A. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1, Table 8.1.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1, Table 8.1",
+    "verified": true,
+    "kb": "apparatus.md#fuses"
+  },
+  {
+    "id": "sw-006",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "Fuses on a three-phase circuit act as single-pole interrupters. When one fuse clears and the others do not, the hazard to a running motor is:",
+    "choices": [
+      "Loss of the equipment ground on that circuit",
+      "An overvoltage on the neutral that trips the GFCI",
+      "Nothing, because the other two fuses will follow within one cycle",
+      "Single phasing, with negative-sequence current heating the rotor"
+    ],
+    "answer": 3,
+    "explanation": "One open phase leaves the motor single-phased. The negative-sequence current that follows overheats the rotor and shortens motor life. Fused switchgear often adds an anti-single-phase device that opens all three poles when one fuse blows. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.4.1",
+    "verified": true,
+    "kb": "apparatus.md#fuses"
+  },
+  {
+    "id": "sw-007",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "Which low-voltage switch is meant only for isolation and should be opened only after another device has interrupted the load?",
+    "choices": [
+      "An isolating switch",
+      "A fused safety switch",
+      "An interrupter switch",
+      "A bolted-pressure switch"
+    ],
+    "answer": 0,
+    "explanation": "Gill describes three groups. An isolating switch has no interrupting or load-carrying duty. A safety switch is a quick-make, quick-break load-break switch. An interrupter switch is rated to interrupt well above its continuous current and carries a horsepower rating. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.5.1.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.5.1",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-008",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "On a 4000 A bolted-pressure service switch, short-circuit interruption is normally handled by:",
+    "choices": [
+      "The switch contacts, rated like a power circuit breaker",
+      "A self-powered electronic trip unit on the main",
+      "Current-limiting fuses that are part of the switch",
+      "The upstream utility transformer fuse alone"
+    ],
+    "answer": 2,
+    "explanation": "These switches carry very high continuous current under high contact pressure, but their own interrupting rating is closer to an interrupter switch than a power breaker. Integral current-limiting fuses do the fault interrupting. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.5.1.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.5.1",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-009",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A bolted-pressure switch has a ground-fault trip accessory. Where does that trip get its operating power?",
+    "choices": [
+      "The fault current itself, like a self-powered breaker trip unit",
+      "A capacitor trip device charged by the load current",
+      "A small source-side control power transformer",
+      "The station battery that serves the medium-voltage gear"
+    ],
+    "answer": 2,
+    "explanation": "Unlike breaker trip units, these accessories are not self-powered. They run from a small CPT on the line side. That is why the ground-fault test required by ATS 7.5.1.1 (per Section 7.14) should prove the whole trip path, control power included. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.5.1; ANSI/NETA ATS-2025 7.5.1.1.B.6.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 8.5.1; ANSI/NETA ATS-2025 7.5.1.1.B.6",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-010",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A 15 kV metal-enclosed load-interrupter switch uses fuses that have expulsion elements. Which visual and mechanical check does ATS 7.5.1.2 add for those fuses?",
+    "choices": [
+      "Expulsion-limiting devices are installed",
+      "SF6 pressure is within the gauge band",
+      "The oil level in the interrupter tank is correct",
+      "Each vacuum bottle passes a magnetron test"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.5.1.2 calls for expulsion-limiting devices on every holder that has an expulsion-type element. It also checks arc-interrupter operation on the switch itself. Source: ANSI/NETA ATS-2025 7.5.1.2.A.7.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.2.A.7",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-011",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A 15 kV metal-enclosed interrupter switch lineup has stress-cone terminations, and the manufacturer gives no field withstand value. The maximum ac test voltage in ATS Table 100.2 is:",
+    "choices": [
+      "14 kV",
+      "25 kV",
+      "27 kV",
+      "37 kV"
+    ],
+    "answer": 2,
+    "explanation": "For metal-enclosed interrupter switchgear at 15.0 kV, Table 100.2 gives 27 kV ac with stress-cone terminations and 25 kV with IEEE 386 separable terminations. The 37 shown in that row is the dc reference value. Source: ANSI/NETA ATS-2025 7.5.1.2.B.4 and Table 100.2.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.2.B.4 and Table 100.2",
+    "verified": true,
+    "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "sw-012",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "ATS 7.5.5 covers distribution fuse cutouts. Besides alignment and penetration, which mechanical check does it list?",
+    "choices": [
+      "The vacuum interrupter wear gap",
+      "The latching mechanism",
+      "The SF6 density switch",
+      "The arc chute baffles"
+    ],
+    "answer": 1,
+    "explanation": "A cutout has to latch closed reliably and drop open when the fuse link operates. ATS lists checking the latching mechanism along with alignment, penetration, and travel stops. Source: ANSI/NETA ATS-2025 7.5.5.A.5.",
+    "reference": "ANSI/NETA ATS-2025 7.5.5.A.5",
+    "verified": true,
+    "kb": "apparatus.md#fuses"
+  }
+]

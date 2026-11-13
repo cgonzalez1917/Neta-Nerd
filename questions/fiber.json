@@ -124,5 +124,23 @@
     "reference": "ANSI/NETA ATS-2025 7.25.D.2",
     "verified": true,
     "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-008",
+    "level": "III",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "A 3.2 km fiber link shows 1.6 dB of total attenuation. Expressed the way ATS 7.25 reports it, that's:",
+    "choices": [
+      "0.2 dB/km",
+      "0.5 dB/km",
+      "2.0 dB/km",
+      "5.1 dB/km"
+    ],
+    "answer": 1,
+    "explanation": "1.6 dB / 3.2 km = 0.5 dB/km. That figure is then compared with the project spec or the manufacturer's recommendation. Source: ANSI/NETA ATS-2025 7.25.B.3 and D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.25.B.3 and D.3",
+    "verified": true,
+    "kb": "apparatus.md#fiber"
   }
 ]

@@ -376,5 +376,185 @@
     "reference": "ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17, note 1; ref. IEEE C37.23-2015, 6.4.3",
     "verified": true,
     "kb": "apparatus.md#switchgear"
+  },
+  {
+    "id": "mvbr-022",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "An SF6 breaker has a gas sampling port. Under ATS 7.6.4 you sample the gas and judge it against Table 100.13. What do you not do?",
+    "choices": [
+      "Test the sample against Table 100.13",
+      "Check alarm and pressure-limit switch settings",
+      "Break a sealed-for-life interrupter's seal",
+      "Leak-test the gas system using the manufacturer's method"
+    ],
+    "answer": 2,
+    "explanation": "Sampling is done only where a provision exists. ATS says not to break or distort sealed-for-life interrupters. Leak testing and alarm/pressure-switch checks are on the list. Source: ANSI/NETA ATS-2025 7.6.4.A.6, A.8, A.9.",
+    "reference": "ANSI/NETA ATS-2025 7.6.4.A.6, A.8, A.9",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-023",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "After an SF6 leak test on a new breaker, ATS 7.6.4 accepts the result when:",
+    "choices": [
+      "The leak rate is below 10% per year",
+      "Pressure loss is under 5 psig in a day",
+      "No SF6 leak is found",
+      "The density alarm hasn't operated yet"
+    ],
+    "answer": 2,
+    "explanation": "The acceptance criterion is simply no leak. Gas pressure and alarm settings follow the manufacturer's data. Source: ANSI/NETA ATS-2025 7.6.4.C.2.",
+    "reference": "ANSI/NETA ATS-2025 7.6.4.C.2",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-024",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "SF6 purity is measured on a new breaker and again years later in service. Which pair of minimums applies under ATS and MTS Table 100.13?",
+    "choices": [
+      "ATS above 98.5%; MTS at least 97.0%",
+      "Both at least 99.9%",
+      "ATS at least 97.0%; MTS above 98.5%",
+      "Both at least 95%"
+    ],
+    "answer": 0,
+    "explanation": "Acceptance gas has to be cleaner. ATS requires purity above 98.5%, and the MTS maintenance limit is 97.0% or more. Source: ANSI/NETA ATS-2025 Table 100.13; ANSI/NETA MTS-2023 Table 100.13.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13; ANSI/NETA MTS-2023 Table 100.13",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-025",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A gas sample from a breaker in service shows 9 ppm SO2. How do ATS and MTS treat it?",
+    "choices": [
+      "It fails both, since any SO2 is a failure",
+      "It passes both, since the limit is 50 ppm",
+      "It passes acceptance (under 10 ppmv) but fails maintenance (under 5 ppm)",
+      "Fails acceptance (under 5 ppmv) but meets MTS (12 ppm)"
+    ],
+    "answer": 3,
+    "explanation": "ATS Table 100.13 allows less than 5 ppmv SO2 in new gas, and MTS allows up to 12 ppm in service. Total decomposition products are similarly tighter at acceptance (7 ppmv) than in maintenance (50 ppm). Source: ANSI/NETA ATS-2025 Table 100.13; ANSI/NETA MTS-2023 Table 100.13.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13; ANSI/NETA MTS-2023 Table 100.13",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-026",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A GIS bus compartment with no switching operates below 30 psig. During maintenance, its SF6 moisture limit under MTS Table 100.13 is a dew point of:",
+    "choices": [
+      "-36 \u00b0C (about 200 ppmv)",
+      "-23 \u00b0C (about 720 ppmv)",
+      "-10 \u00b0C (about 2500 ppmv)",
+      "-50 \u00b0C (about 40 ppmv)"
+    ],
+    "answer": 1,
+    "explanation": "MTS splits moisture by pressure. Below 30 psig (non-switching GIS) the limit is -23 \u00b0C (720 ppmv). At 30 psig and above it is -36 \u00b0C (200 ppmv), which also matches ATS. Source: ANSI/NETA MTS-2023 Table 100.13.",
+    "reference": "ANSI/NETA MTS-2023 Table 100.13",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-027",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A new SF6 breaker's gas measures a dew point of -30 \u00b0C. Against the ATS Table 100.13 limit of -36 \u00b0C, the gas is:",
+    "choices": [
+      "Acceptable, because -30 is greater than -36",
+      "Too wet; a warmer dew point means more water",
+      "Acceptable, since dew point limits apply only in maintenance",
+      "Too dry, so it should be humidified"
+    ],
+    "answer": 1,
+    "explanation": "Dew point rises as moisture increases. -30 \u00b0C is warmer than the -36 \u00b0C limit, so the gas holds more water than allowed. Source: ANSI/NETA ATS-2025 Table 100.13; 7.6.4.C.1.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13; 7.6.4.C.1",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-028",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "The gas handling cart used to fill a new breaker is oil-free. Under ATS Table 100.13, the oil-content test on the gas:",
+    "choices": [
+      "Must be run at twice the normal limit",
+      "Replaces the moisture test",
+      "Is required only on breakers above 69 kV and on all GIS",
+      "Isn't required when handling gear is oil-free"
+    ],
+    "answer": 3,
+    "explanation": "Note 1 to Table 100.13 says oil content testing is not required when the gas handling equipment is oil-free. Mixed-gas breakers (note 3) go to the manufacturer's limits. Source: ANSI/NETA ATS-2025 Table 100.13 notes 1 and 3.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13 notes 1 and 3",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-029",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A new breaker uses an SF6/N2 gas mixture, and the purity reading is well below 98.5%. Under ATS, the right step is:",
+    "choices": [
+      "Use the manufacturer's values for mixed gas",
+      "Reject it, because purity must exceed 98.5%",
+      "Accept it if the dew point passes",
+      "Top it up with pure SF6 until purity reads above 98.5%"
+    ],
+    "answer": 0,
+    "explanation": "Table 100.13 is written for SF6. Its note sends mixed gases to the manufacturer's data. Adding SF6 to a designed mixture would change its ratio. Source: ANSI/NETA ATS-2025 Table 100.13 note 3.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.13 note 3",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-030",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "IEEE C37.016 describes a circuit switcher with an integral isolating disconnect. In a coordinated disconnect operation:",
+    "choices": [
+      "The disconnect and interrupter operate independently of each other",
+      "The disconnect interrupts the fault current first",
+      "The disconnect opens automatically after the interrupter opens",
+      "The interrupter can't open unless the disconnect is closed by hand"
+    ],
+    "answer": 2,
+    "explanation": "With coordinated operation, the disconnect follows the interrupter open to give a visible gap. With independent operation, disconnect position and interrupter position don't depend on each other. Source: IEEE C37.016-2018, clause 3.",
+    "reference": "IEEE C37.016-2018, clause 3",
+    "verified": true,
+    "kb": "apparatus.md#mv-vacuum"
+  },
+  {
+    "id": "mvbr-031",
+    "level": "III",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A tech assumes the maintenance withstand for 15 kV metal-clad switchgear must be lower than the acceptance value. Comparing ATS and MTS Table 100.2:",
+    "choices": [
+      "MTS lists 20 kV ac, three-quarters of the ATS value",
+      "ATS lists 36 kV ac, the factory value",
+      "MTS lists no ac value, only dc",
+      "Both list 27 kV ac; no further reduction"
+    ],
+    "answer": 3,
+    "explanation": "Both tables already include the 0.75 factor on the factory value and list the same 27 kV ac for 15 kV metal-clad gear. Unlike the recloser and sectionalizer tables, there is no second reduction. Source: ANSI/NETA ATS-2025 Table 100.2; ANSI/NETA MTS-2023 Table 100.2.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.2; ANSI/NETA MTS-2023 Table 100.2",
+    "verified": true,
+    "kb": "apparatus.md#switchgear"
   }
 ]

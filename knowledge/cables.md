@@ -28,3 +28,7 @@ EPR has its own table (100.6.7.2) and depends on the fill. Do not grade an EPR c
 - Starting a withstand with a miserable megger reading and hoping the hipot “cleans it up.”
 - Forgetting the shield ground, or leaving a surge arrester connected so the arrester becomes the test.
 - Treating a tan-delta tip-up in “percent” when the table is in thousandths.
+
+## TDR and accessories {#tdr}
+
+A time-domain reflectometer sends a low-voltage pulse between conductor and shield and times the echoes. The reflection coefficient is (Zd - Zo)/(Zd + Zo): +1 for an open, -1 for a short. TDR finds length, joints, opens, and corroded neutrals, not insulation quality. There is a blind spot near the injection point that depends on pulse width. ATS wants each phase's trace to match the others. Thumping to locate a fault should use the least voltage and time that works. On separable connectors, the test point is a capacitively coupled voltage-sensing tap, and a parked elbow sits on an insulated parking bushing. NEC 315.10 uses 100% insulation level where ground faults clear within a minute and 133% where they clear within an hour.

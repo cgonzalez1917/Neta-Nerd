@@ -1620,5 +1620,221 @@
     "reference": "IEEE 141-1993, 8.10.1",
     "verified": true,
     "kb": "apparatus.md#capacitors"
+  },
+  {
+    "id": "math-113",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A series circuit has R = 6 ohms and XL = 8 ohms on 120 V. The voltage across the resistor is:",
+    "choices": [
+      "48 V",
+      "72 V",
+      "96 V",
+      "120 V"
+    ],
+    "answer": 1,
+    "explanation": "Z = sqrt(6^2 + 8^2) = 10 ohms, I = 120 / 10 = 12 A, and VR = 12 x 6 = 72 V. The 96 V across the reactance is 90 degrees out of phase, so the two don't add arithmetically to 120 V. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (Z = sqrt(R^2 + (XL - XC)^2), V = IZ).",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Z = sqrt(R^2 + (XL - XC)^2), V = IZ)",
+    "verified": true,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-114",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A load draws 90 kvar at 0.80 lagging power factor. Its real power is:",
+    "choices": [
+      "72 kW",
+      "112.5 kW",
+      "120 kW",
+      "150 kW"
+    ],
+    "answer": 2,
+    "explanation": "At PF 0.8, sin(theta) = 0.6, so kVA = 90 / 0.6 = 150 and kW = 150 x 0.8 = 120. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle).",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle)",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-115",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 277 V rms sine wave has a peak value of about:",
+    "choices": [
+      "196 V",
+      "392 V",
+      "480 V",
+      "554 V"
+    ],
+    "answer": 1,
+    "explanation": "Vpeak = 1.414 x Vrms = 1.414 x 277 = 392 V. 480 V is the line-to-line rms of a 277 V wye system, not a peak. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (Vpeak = sqrt(2) x Vrms).",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Vpeak = sqrt(2) x Vrms)",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-116",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 1000 kVA, 480 V transformer has 5.75% impedance. The utility can deliver 250 MVA of fault power at the primary. Including the source impedance, the secondary three-phase bolted fault current is about:",
+    "choices": [
+      "19.6 kA",
+      "20.9 kA",
+      "22.5 kA",
+      "300 kA"
+    ],
+    "answer": 0,
+    "explanation": "On a 1 MVA base the source is 1/250 = 0.004 pu, so the total is 0.0575 + 0.004 = 0.0615 pu. FLA = 1000/(1.732 x 0.48) = 1203 A, and 1203 / 0.0615 = 19.6 kA. 20.9 kA ignores the source (infinite bus). 22.5 kA comes from subtracting the source instead of adding it. Source: IEEE C57.12.00-2021, 7.1.4.3; Engineering fundamentals (per-unit impedance).",
+    "reference": "IEEE C57.12.00-2021, 7.1.4.3; Engineering fundamentals (per-unit impedance)",
+    "verified": true,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-117",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "In an impedance test, the 13.8 kV winding needs 690 V applied to circulate rated current with the low-voltage winding shorted. The percent impedance is:",
+    "choices": [
+      "0.5%",
+      "2.0%",
+      "5.0%",
+      "20%"
+    ],
+    "answer": 2,
+    "explanation": "Impedance voltage as a percent of rated voltage: 690 / 13,800 x 100 = 5.0%. Source: IEEE C57.12.90-2021, 9.1.",
+    "reference": "IEEE C57.12.90-2021, 9.1",
+    "verified": true,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-118",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A single-phase 50 kVA, 240 V transformer has 2.5% impedance. Assuming an infinite source, the secondary bolted fault current is about:",
+    "choices": [
+      "4.8 kA",
+      "5.2 kA",
+      "8.3 kA",
+      "20.8 kA"
+    ],
+    "answer": 2,
+    "explanation": "FLA = 50,000 / 240 = 208 A, and 208 / 0.025 = 8,333 A. Using the three-phase sqrt(3) on a single-phase unit gives the wrong 4.8 kA. Source: Engineering fundamentals (per-unit impedance); IEEE C57.12.90-2021, 9.1.",
+    "reference": "Engineering fundamentals (per-unit impedance); IEEE C57.12.90-2021, 9.1",
+    "verified": true,
+    "kb": "math.md#per-unit"
+  },
+  {
+    "id": "math-119",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A series circuit with R = 12 ohms and XL = 16 ohms is on 240 V. Its real power and power factor are:",
+    "choices": [
+      "2880 W at 0.60 PF",
+      "1728 W at 0.80 PF",
+      "2304 W at 0.75 PF",
+      "1728 W at 0.60 PF"
+    ],
+    "answer": 3,
+    "explanation": "Z = sqrt(12^2 + 16^2) = 20 ohms, I = 12 A, PF = R/Z = 0.60, and P = I^2 x R = 144 x 12 = 1728 W. 2880 is the volt-amperes. Source: NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z, P = I^2 R).",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z, P = I^2 R)",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-120",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Two uncoupled inductors, 10 mH and 15 mH, are connected in series on a 60 Hz circuit. Their combined reactance is about:",
+    "choices": [
+      "2.3 ohms",
+      "3.8 ohms",
+      "5.7 ohms",
+      "9.4 ohms"
+    ],
+    "answer": 3,
+    "explanation": "Series inductance adds: 25 mH. XL = 2 x pi x 60 x 0.025 = 9.42 ohms. 2.3 ohms would be the parallel combination (6 mH). Source: NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2 pi f L); Engineering fundamentals (series inductance).",
+    "reference": "NETA Certification Exam Formulae Sheet (Mar 2020) (XL = 2 pi f L); Engineering fundamentals (series inductance)",
+    "verified": true,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-121",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Two impedances, 4 + j3 ohms and 2 - j11 ohms, are in series. The total impedance and the circuit's character are:",
+    "choices": [
+      "10 ohms, capacitive, PF 0.6 leading",
+      "10 ohms, inductive, PF 0.6 lagging",
+      "20 ohms, capacitive, PF 0.3 leading",
+      "6 ohms, resistive, PF 1.0"
+    ],
+    "answer": 0,
+    "explanation": "Add in rectangular form: (4 + 2) + j(3 - 11) = 6 - j8. Magnitude = 10 ohms. The negative j means net capacitive, and PF = 6 / 10 = 0.6 leading. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers); NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers); NETA Certification Exam Formulae Sheet (Mar 2020) (Z, PF = R/Z)",
+    "verified": true,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-122",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "120 V at 0 degrees is applied to an impedance of 5 ohms at 53.13 degrees. The current is:",
+    "choices": [
+      "24 A at +53.13 degrees",
+      "600 A at 53.13 degrees",
+      "24 A at -53.13 degrees",
+      "14.4 A at -36.87 degrees"
+    ],
+    "answer": 2,
+    "explanation": "Divide in polar form: magnitudes divide (120 / 5 = 24) and angles subtract (0 - 53.13). The current lags, as expected for an inductive load. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers, polar form for multiply and divide).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 3 (complex numbers, polar form for multiply and divide)",
+    "verified": true,
+    "kb": "math.md#xl"
+  },
+  {
+    "id": "math-123",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A plant load is 400 kW at 0.80 lagging. How much capacitor kvar raises it to 0.95 lagging?",
+    "choices": [
+      "About 131 kvar",
+      "About 300 kvar",
+      "About 169 kvar",
+      "About 100 kvar"
+    ],
+    "answer": 2,
+    "explanation": "Present kvar = 400 x tan(acos 0.80) = 300. Target kvar = 400 x tan(acos 0.95) = 131.5. Needed = 300 - 131.5 = 168.5 kvar. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle); NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA).",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 7.2.2 (Figure 7.11, power triangle); NETA Certification Exam Formulae Sheet (Mar 2020) (PF = kW/kVA)",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-124",
+    "level": "III",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A SCADA current transducer is accurate to 0.5% of its 2000 A full scale. When it reads a 200 A feeder load, the possible error as a percent of that reading is:",
+    "choices": [
+      "\u00b10.5%",
+      "\u00b11%",
+      "\u00b15%",
+      "\u00b110%"
+    ],
+    "answer": 2,
+    "explanation": "0.5% of full scale = \u00b110 A. On a 200 A reading that is 10 / 200 = \u00b15%. IEEE C37.1 notes that accuracy is usually stated against full scale, so low readings carry much larger percent errors. Source: IEEE C37.1-2007, 3.1.1 note.",
+    "reference": "IEEE C37.1-2007, 3.1.1 note",
+    "verified": true,
+    "kb": "math.md#not-on-sheet"
   }
 ]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": "asd-001",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "During inspection of an adjustable-speed drive, ATS 7.17 compares the drive's motor overcurrent setpoints with:",
+    "choices": [
+      "The input breaker's interrupting rating",
+      "The motor full-load current rating",
+      "The drive's carrier frequency",
+      "The upstream transformer kVA"
+    ],
+    "answer": 1,
+    "explanation": "Motor running protection in the drive is checked against motor full-load current. If one drive runs several motors, each motor's own overload is checked against that motor's full-load current. Source: ANSI/NETA ATS-2025 7.17.A.7.",
+    "reference": "ANSI/NETA ATS-2025 7.17.A.7",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-002",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "One drive feeds three conveyor motors. Per ATS 7.17, what else must be checked beyond the drive's own overcurrent setting?",
+    "choices": [
+      "The drive's dc bus capacitors, against nameplate",
+      "The insulation of the drive's control wiring",
+      "The motors' bearing temperatures after an hour at full speed",
+      "Each motor's own overload, against its full-load current"
+    ],
+    "answer": 3,
+    "explanation": "The drive's setting can't protect three motors individually. ATS calls for individual overloads when there are multiple motors, each checked against that motor's full-load current. Source: ANSI/NETA ATS-2025 7.17.A.7.",
+    "reference": "ANSI/NETA ATS-2025 7.17.A.7",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-003",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Overload elements in an ASD package are tested by primary current injection. With no manufacturer criterion, ATS 7.17 judges the trip time at:",
+    "choices": [
+      "300% of the setting, against the time-current curve",
+      "600% of the setting, against a flat 10-second limit",
+      "100% of the setting, which must never trip",
+      "150% of the setting, within 5% of nameplate"
+    ],
+    "answer": 0,
+    "explanation": "The overload test uses primary injection at 300% of setting and compares the trip time with the manufacturer's time-current curve. Source: ANSI/NETA ATS-2025 7.17.B.2 and D.2.",
+    "reference": "ANSI/NETA ATS-2025 7.17.B.2 and D.2",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-004",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "A drive has a bypass contactor that runs the motor directly across the line. NEMA ICS 7.2 says to confirm during installation that:",
+    "choices": [
+      "The drive's carrier frequency is set to match the line frequency",
+      "The motor's nameplate is marked definite-purpose",
+      "The shaft turns the same direction on the drive and on bypass",
+      "The bypass is tested only at minimum speed"
+    ],
+    "answer": 2,
+    "explanation": "The drive can fix rotation in software, but the bypass is hard-wired. ICS 7.2 says to check rotation on both paths at installation. It also warns that a motor on bypass may run faster than the drive allowed. Source: NEMA ICS 7.2-2021, 5.2.8.",
+    "reference": "NEMA ICS 7.2-2021, 5.2.8",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-005",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Someone wants to add power-factor capacitors on the output (motor) side of a VFD. NEMA MG 1 says:",
+    "choices": [
+      "It is standard practice for drives above 50 hp",
+      "It is required to filter the carrier frequency",
+      "This is not recommended without careful analysis",
+      "It is fine as long as each capacitor is individually fused"
+    ],
+    "answer": 2,
+    "explanation": "MG 1 warns against putting power-factor or surge capacitors between a drive's output and its motor. They can overexcite the motor, set up harmonic resonance, and overvoltage the capacitor. Small coupling capacitors used for PD detection are a separate case. Source: NEMA MG 1-2016 (Rev 2018), 30.2.2.9.",
+    "reference": "NEMA MG 1-2016 (Rev 2018), 30.2.2.9",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-006",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "ATS does not have one standalone test list for a low-voltage motor control center. For the MCC's bus and structure, it points you to:",
+    "choices": [
+      "Section 7.1, switchgear and switchboard assemblies",
+      "Section 7.4, metal-enclosed busways, for the horizontal bus",
+      "Section 7.21, outdoor bus structures",
+      "Section 7.17, adjustable-speed drives"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.16.2.1 sends each part of the MCC to its own section. The assembly goes to 7.1, switches to 7.5.1.1, breakers to 7.6, and starters to 7.16.1.1. Source: ANSI/NETA ATS-2025 7.16.2.1.",
+    "reference": "ANSI/NETA ATS-2025 7.16.2.1",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-007",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "On a low-voltage combination starter, the contactor gets a mechanical check under ATS 7.16.1.1. What is checked?",
+    "choices": [
+      "Vacuum integrity with a magnetron set",
+      "SF6 moisture content",
+      "Arc-chute insulation with a 5 kV hipot for one minute",
+      "Contact gap, wipe, alignment, and pressure"
+    ],
+    "answer": 3,
+    "explanation": "ATS has you check the contactor's contact gap, wipe, alignment, and pressure against the manufacturer's data. Magnetron vacuum checks are for medium-voltage vacuum contactors. Source: ANSI/NETA ATS-2025 7.16.1.1.A.5.",
+    "reference": "ANSI/NETA ATS-2025 7.16.1.1.A.5",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-008",
+    "level": "III",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Which protective function is on the ATS 7.17 list of drive tests to perform?",
+    "choices": [
+      "DC bus overvoltage",
+      "Motor winding polarization index",
+      "Bearing insulation resistance",
+      "Shaft voltage measurement"
+    ],
+    "answer": 0,
+    "explanation": "ATS lists input phase loss, input overvoltage, output phase rotation, overtemperature, dc overvoltage, overfrequency, drive overload, and fault alarm outputs. Motor and bearing tests fall under the rotating machine sections. Source: ANSI/NETA ATS-2025 7.17.B.5.",
+    "reference": "ANSI/NETA ATS-2025 7.17.B.5",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-009",
+    "level": "III",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Ramping a new fan drive from minimum to maximum speed, the structure shakes noticeably at about 38 Hz and is smooth elsewhere. What's the right response?",
+    "choices": [
+      "Accept it; vibration on drives is normal",
+      "Raise the carrier frequency until the shaking stops",
+      "Replace the motor with a definite-purpose motor",
+      "Treat it as resonance and avoid that speed"
+    ],
+    "answer": 3,
+    "explanation": "ATS has you vary speed slowly across the range and watch for noise and vibration. MG 1 warns that some speeds can match natural frequencies of the load or structure and shouldn't be held except momentarily. Source: ANSI/NETA ATS-2025 7.17.B.8; NEMA MG 1-2016 (Rev 2018), 30.2.2.7.",
+    "reference": "ANSI/NETA ATS-2025 7.17.B.8; NEMA MG 1-2016 (Rev 2018), 30.2.2.7",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-010",
+    "level": "III",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "A VFD-fed motor shows bearing fluting. Which mitigations does NEMA ICS 7.2 list?",
+    "choices": [
+      "Raise the carrier frequency and add power-factor capacitors on the output",
+      "Lower carrier frequency, shaft grounding, insulated bearings",
+      "Remove the motor ground to break the current path",
+      "Run the motor across the line at all times"
+    ],
+    "answer": 1,
+    "explanation": "ICS 7.2 lists a lower supply voltage where practical, the lowest carrier frequency that meets noise and temperature needs, a shaft-grounding brush, insulated bearings, non-conductive couplings, and proper grounding. Removing grounds is never a fix. Source: NEMA ICS 7.2-2021, 5.2.10.1.",
+    "reference": "NEMA ICS 7.2-2021, 5.2.10.1",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-011",
+    "level": "III",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Why does NEMA ICS 7.2 call for a delay when switching a running motor from the drive to the line through the bypass?",
+    "choices": [
+      "So the drive's dc bus can recharge",
+      "So residual motor voltage decays first",
+      "So the overload relay can reset",
+      "So the line voltage can stabilize after the drive output stops"
+    ],
+    "answer": 1,
+    "explanation": "A coasting motor still generates voltage. ICS 7.2 suggests about 1.5 open-circuit time constants so residual voltage falls below 25% before line closure, and at least 3 time constants before going back to the drive, unless the drive can catch a spinning motor. Source: NEMA ICS 7.2-2021, 5.2.8 e) through g).",
+    "reference": "NEMA ICS 7.2-2021, 5.2.8 e) through g)",
+    "verified": true,
+    "kb": "apparatus.md#drives"
+  }
+]
