@@ -232,5 +232,113 @@
     "reference": "ANSI/NETA ECS-2024 7.2.A.24; ANSI/NETA ATS-2025 7.23.A.10 and C.4",
     "verified": true,
     "kb": "apparatus.md#automation"
+  },
+  {
+    "id": "mtr-014",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "What is IEC 61850 GOOSE messaging used for in a substation?",
+    "choices": [
+      "Billing-grade interval energy data sent to the utility once a day",
+      "Firmware upgrades over a serial port",
+      "Client/server retrieval of event files only",
+      "Fast, repeated peer-to-peer status and trip messages between IEDs"
+    ],
+    "answer": 3,
+    "explanation": "GOOSE carries status, controls, and measured values between peers on the Ethernet network. Each message is sent several times. File and report retrieval use MMS client/server services instead. Source: SEL-751 Instruction Manual (date code 20240329), Appendix G (GOOSE); IEEE C37.2-2022, Annex B.",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), Appendix G (GOOSE); IEEE C37.2-2022, Annex B",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-015",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A relay's GOOSE message uses the default minimum time of 8 ms and a maximum time of 1000 ms. When a change triggers it, the repeats follow the min, min, twice-min, then max pattern. When is the fourth transmission sent, measured from the trigger?",
+    "choices": [
+      "16 ms",
+      "24 ms",
+      "32 ms",
+      "1,000 ms"
+    ],
+    "answer": 2,
+    "explanation": "First send at 0, second 8 ms later (8), third 8 ms after that (16), fourth twice the minimum later (32 ms). After that the message repeats at the 1000 ms maximum until another change. Source: SEL-751 Instruction Manual (date code 20240329), Appendix G (GOOSE Processing).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), Appendix G (GOOSE Processing)",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-016",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "Which IEC 61850 SCL file describes one configured IED as it will be loaded into that device?",
+    "choices": [
+      "ICD (IED capability description)",
+      "CID (configured IED description)",
+      "SSD (system specification description)",
+      "SCD (substation configuration description)"
+    ],
+    "answer": 1,
+    "explanation": "ICD lists what an IED can do. SSD describes the single-line and needed logical nodes. SCD covers the whole substation. CID is the instantiated configuration for one device. Source: SEL-751 Instruction Manual (date code 20240329), Appendix G (SCL Files).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), Appendix G (SCL Files)",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-017",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "In IEC 61850 logical-node names, a 51 time-overcurrent element and a 52 circuit breaker map to:",
+    "choices": [
+      "PIOC and CSWI",
+      "PTOC and XCBR",
+      "PDIF and XSWI",
+      "PTOC and PIOC"
+    ],
+    "answer": 1,
+    "explanation": "C37.2 Annex D relates device numbers to logical nodes: 50 is PIOC, 51 is PTOC, 52 is XCBR, and 87 is PDIF. Source: IEEE C37.2-2022, Annex D, Table D.1.",
+    "reference": "IEEE C37.2-2022, Annex D, Table D.1",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-018",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "component",
+    "question": "During commissioning, a subscribing SEL-751 ignores a GOOSE trip from another IED. Which publisher setting is a likely cause?",
+    "choices": [
+      "The publisher's minimum retransmit time is set at 8 ms",
+      "The message uses a multicast address",
+      "The subscriber's front-panel display is off",
+      "The message is flagged Test or Needs Commissioning"
+    ],
+    "answer": 3,
+    "explanation": "The SEL-751 rejects the data in an incoming GOOSE when Test Mode or Needs Commissioning is true, the configuration number changes, or it can't decode the message. Check those flags before blaming the wiring or logic. Source: SEL-751 Instruction Manual (date code 20240329), Appendix G (incoming GOOSE processing).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), Appendix G (incoming GOOSE processing)",
+    "verified": true,
+    "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-019",
+    "level": "III",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "IEEE C37.2 notes that managed Ethernet switches in a GOOSE-based protection scheme are, in effect:",
+    "choices": [
+      "The auxiliary relays of the scheme",
+      "Passive cable connectors with no settings",
+      "Metering devices only, with no role in protection",
+      "Backup power supplies for the relays"
+    ],
+    "answer": 0,
+    "explanation": "In an Ethernet protection scheme the switch is a message-processing computer whose settings route trips and interlocks. C37.2 gives it device number 16 with the suffix ES. Source: IEEE C37.2-2022, Annex B and 3.1.16.",
+    "reference": "IEEE C37.2-2022, Annex B and 3.1.16",
+    "verified": true,
+    "kb": "relays.md#iec61850"
   }
 ]

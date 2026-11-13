@@ -35,3 +35,7 @@ Confirm the current sheet on NETA’s exam-preparation page before test day: htt
 The on-screen formula sheet is the official one-page NETA Electrical Formulae Sheet updated June 29, 2017, linked from that page. An older PDF from the previous exam-preparation address is an incomplete excerpt, not the sheet the exam shows. What the official sheet prints, and what you still have to memorize, is on the math page. The on-screen calculator is commonly a TI-30XS style. Confirm degree mode before any cosine or angle.
 
 Do not treat forum posts that recall specific items as the exam. This bank writes original questions about the same skills.
+
+## Who leads the crew {#crew-leader}
+
+On ATS and MTS jobs, each on-site crew leader must hold a current Level 3 or higher certification (ATS-2025 and MTS-2023, 3.2 item 2). As a Level II technician, you work on a crew led by a Level III or IV. See the [Level III page](#/study/level-3.md/crew-leader) for how ECS differs.

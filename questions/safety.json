@@ -2215,5 +2215,365 @@
     "reference": "ASTM F855-23, 1.6.1 and Table 2",
     "verified": true,
     "kb": "safety.md#grounds"
+  },
+  {
+    "id": "safety-126",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under 1910.146, which oxygen reading makes a space's atmosphere hazardous?",
+    "choices": [
+      "Below 21% only, with no upper limit",
+      "Below 16% or above 25%",
+      "Below 19.5% or above 23.5% oxygen",
+      "Any reading other than 20.9%"
+    ],
+    "answer": 2,
+    "explanation": "Oxygen-deficient is under 19.5% and oxygen-enriched is over 23.5%. Either one is a hazardous atmosphere under the rule's definition. Source: 29 CFR 1910.146 (eCFR text), (b) definitions.",
+    "reference": "29 CFR 1910.146 (eCFR text), (b) definitions",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-127",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A flammable-gas reading counts as a hazardous atmosphere under 1910.146 when it exceeds:",
+    "choices": [
+      "50% of the LFL (lower flammable limit)",
+      "100% of the LFL",
+      "10% of the lower flammable limit (LFL)",
+      "1% of the upper flammable limit"
+    ],
+    "answer": 2,
+    "explanation": "The definition sets the trigger at more than 10% of LFL. Meters often read in %LEL, so 10% on that scale is the line. Source: 29 CFR 1910.146 (eCFR text), (b) definition of hazardous atmosphere.",
+    "reference": "29 CFR 1910.146 (eCFR text), (b) definition of hazardous atmosphere",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-128",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Which statement about the attendant on a permit-space entry is correct?",
+    "choices": [
+      "The attendant keeps a count, orders evacuation, and calls rescue",
+      "The attendant enters to help a collapsed entrant",
+      "The attendant may step away if entrants are experienced",
+      "The attendant is also the rescue team member inside"
+    ],
+    "answer": 0,
+    "explanation": "1910.146(i) lists the duties: count, stay outside, evacuate, summon rescue, warn off unauthorized people, and no interfering work. Source: 29 CFR 1910.146 (eCFR text), (i)(3), (i)(4), (i)(6), (i)(7), (i)(8) and (i)(10).",
+    "reference": "29 CFR 1910.146 (eCFR text), (i)(3), (i)(4), (i)(6), (i)(7), (i)(8) and (i)(10)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-129",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "When must an entrant leave a permit space?",
+    "choices": [
+      "Only when the job is done or the shift ends",
+      "Only when the gas meter alarms, and no other trigger applies",
+      "Only when the entry supervisor arrives on site",
+      "On an evacuation order, symptoms, a prohibited condition, or an alarm"
+    ],
+    "answer": 3,
+    "explanation": "1910.146(h)(5) lists all four triggers. Any one is enough. Source: 29 CFR 1910.146 (eCFR text), (h)(5).",
+    "reference": "29 CFR 1910.146 (eCFR text), (h)(5)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-130",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "How long may an entry permit stay in force, and what happens to it after the job?",
+    "choices": [
+      "One full shift no matter the task, then discarded",
+      "No longer than the task; canceled permits are kept at least a year",
+      "Seven days, then the attendant renews it",
+      "Until the next annual audit of the permit program"
+    ],
+    "answer": 1,
+    "explanation": "The permit lasts no longer than the job on it. The supervisor ends the entry and cancels the permit when work is done or a new condition appears. Canceled permits are kept for at least a year and used in the program review. Source: 29 CFR 1910.146 (eCFR text), (e)(4), (e)(5), (e)(6) and (d)(14).",
+    "reference": "29 CFR 1910.146 (eCFR text), (e)(4), (e)(5), (e)(6) and (d)(14)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-131",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An entrant goes into a vertical permit space deeper than 5 ft using a retrieval line. What else does 1910.146 call for?",
+    "choices": [
+      "Nothing more; a hand-held rope is enough at any depth",
+      "A mechanical device to retrieve the entrant",
+      "A second entrant tied to the same line",
+      "A ladder only, with no line"
+    ],
+    "answer": 1,
+    "explanation": "For vertical spaces over 5 ft deep, the retrieval system needs a mechanical device so a person can be lifted out without anyone entering. Source: 29 CFR 1910.146 (eCFR text), (k)(3)(ii).",
+    "reference": "29 CFR 1910.146 (eCFR text), (k)(3)(ii)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-132",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A space's only hazard is atmospheric, and continuous forced-air ventilation alone keeps it safe. Under the alternate procedures of 1910.146(c)(5), what still has to happen?",
+    "choices": [
+      "Nothing: the ventilation removes the need for testing",
+      "Test only after the first entrant reports symptoms",
+      "Turn off the ventilation once entrants are inside so readings settle",
+      "Test first, keep clean forced air running, and leave if a hazard appears"
+    ],
+    "answer": 3,
+    "explanation": "The alternate procedures apply only when the atmosphere is the only hazard and forced air alone controls it. Testing, continuous clean ventilation, periodic testing, and evacuation on detection all still apply. Source: 29 CFR 1910.146 (eCFR text), (c)(5)(i) and (c)(5)(ii)(C), (E), (F) and (G).",
+    "reference": "29 CFR 1910.146 (eCFR text), (c)(5)(i) and (c)(5)(ii)(C), (E), (F) and (G)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-133",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Your crew uses an outside rescue service for permit entries. How often must that team practice a permit-space rescue?",
+    "choices": [
+      "At least once every 12 months",
+      "Every 5 years",
+      "Only when the space configuration changes",
+      "Every 3 years"
+    ],
+    "answer": 0,
+    "explanation": "Rescue teams practice at least every 12 months on simulated or real permit spaces representative of the ones they would serve. Source: 29 CFR 1910.146 (eCFR text), (k)(2)(iv).",
+    "reference": "29 CFR 1910.146 (eCFR text), (k)(2)(iv)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-134",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A crew enters an underground utility vault under 1910.269 rules. Which pre-entry practice matches 1910.269(e)?",
+    "choices": [
+      "Test flammables first, then oxygen, then toxics",
+      "Skip testing if the cover was off for an hour",
+      "Test oxygen, then flammables, with a calibrated \u00b110% instrument",
+      "Use a meter calibrated within the last five years"
+    ],
+    "answer": 2,
+    "explanation": "1910.269(e) wants calibrated test instruments accurate to \u00b110%, oxygen tested before entry (unless continuous forced air is in place), flammables tested after oxygen, and an attendant with first-aid training. Source: 29 CFR 1910.269(e)(7), (e)(8), (e)(9) and (e)(10).",
+    "reference": "29 CFR 1910.269(e)(7), (e)(8), (e)(9) and (e)(10)",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-135",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Can a permit space be reclassified as non-permit just because forced ventilation makes its atmosphere safe?",
+    "choices": [
+      "Yes, if the ventilation runs for at least 10 minutes",
+      "Yes, if the attendant and the supervisor agree",
+      "No. Ventilation controls the hazard but doesn't eliminate it",
+      "Yes, for spaces less than 5 ft deep"
+    ],
+    "answer": 2,
+    "explanation": "1910.146(c)(7) allows reclassification only when hazards are eliminated. A note says controlling an atmospheric hazard through forced ventilation is not elimination. Source: 29 CFR 1910.146 (eCFR text), (c)(7) and its note.",
+    "reference": "29 CFR 1910.146 (eCFR text), (c)(7) and its note",
+    "verified": true,
+    "kb": "safety.md#confined-entry"
+  },
+  {
+    "id": "safety-136",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A 480Y/277 V panelboard has exposed live parts during servicing, and it faces a concrete block wall. What minimum working depth does NEC Table 110.26(A)(1) require?",
+    "choices": [
+      "1.0 m (3 ft 6 in.)",
+      "1.2 m (4 ft)",
+      "1.5 m (5 ft)",
+      "900 mm (3 ft)"
+    ],
+    "answer": 0,
+    "explanation": "Voltage to ground is 277 V, so use the 151\u2013600 V row. A concrete, brick, or tile wall counts as grounded, which makes it Condition 2: 3 ft 6 in. Source: NFPA 70-2023 (NEC), 110.26(A)(1) and Table 110.26(A)(1).",
+    "reference": "NFPA 70-2023 (NEC), 110.26(A)(1) and Table 110.26(A)(1)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-137",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Same 480Y/277 V gear, but now there is another live switchboard directly across the aisle. The minimum depth becomes:",
+    "choices": [
+      "1.0 m (3 ft 6 in.)",
+      "1.2 m (4 ft)",
+      "1.5 m (5 ft)",
+      "900 mm (3 ft)"
+    ],
+    "answer": 1,
+    "explanation": "Exposed live parts on both sides is Condition 3. In the 151\u2013600 V row that is 4 ft. Source: NFPA 70-2023 (NEC), Table 110.26(A)(1).",
+    "reference": "NFPA 70-2023 (NEC), Table 110.26(A)(1)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-138",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A 120/208 V panelboard faces a grounded steel column. Its minimum working depth under Table 110.26(A)(1) is:",
+    "choices": [
+      "1.0 m (3 ft 6 in.)",
+      "1.2 m (4 ft)",
+      "600 mm (2 ft)",
+      "900 mm (3 ft)"
+    ],
+    "answer": 3,
+    "explanation": "120 V to ground is in the 0\u2013150 V row, which is 3 ft for all three conditions. Source: NFPA 70-2023 (NEC), Table 110.26(A)(1).",
+    "reference": "NFPA 70-2023 (NEC), Table 110.26(A)(1)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-139",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A panelboard is 20 in. wide. How wide must the working space in front of it be?",
+    "choices": [
+      "30 in., or wider for a 90\u00b0 door opening",
+      "20 in., the width of the panel",
+      "24 in., the minimum entrance width",
+      "36 in. in every case"
+    ],
+    "answer": 0,
+    "explanation": "Working space width is the equipment width or 30 in., whichever is greater, and it must always allow at least a 90\u00b0 door or hinged-panel opening. Source: NFPA 70-2023 (NEC), 110.26(A)(2).",
+    "reference": "NFPA 70-2023 (NEC), 110.26(A)(2)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-140",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "How high must the clear working space in front of service equipment extend?",
+    "choices": [
+      "To the top of the equipment only, never above it",
+      "1.8 m (6 ft) for all equipment",
+      "2.5 m (8 ft) in all cases",
+      "6\u00bd ft or the equipment height, whichever is greater"
+    ],
+    "answer": 3,
+    "explanation": "110.26(A)(3) sets 6\u00bd ft or the equipment height, whichever is greater. Related equipment above or below may stick out no more than 6 in. past the front. Source: NFPA 70-2023 (NEC), 110.26(A)(3).",
+    "reference": "NFPA 70-2023 (NEC), 110.26(A)(3)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-141",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A crew stacks spare cable reels in front of a switchboard because the room is tight. What does NEC 110.26(B) say?",
+    "choices": [
+      "Storage is fine if it can be moved within 5 minutes",
+      "Working space may not be used for storage",
+      "Storage is allowed below 3 ft high",
+      "Storage is allowed if the gear is dead-front"
+    ],
+    "answer": 1,
+    "explanation": "Required working space is kept clear and is not used for storage. Clear it before you open the gear. A cluttered space slows escape and hides trip hazards. Source: NFPA 70-2023 (NEC), 110.26(B).",
+    "reference": "NFPA 70-2023 (NEC), 110.26(B)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-142",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A 2000 A switchboard is 10 ft wide. What does NEC 110.26(C)(2) require for access to its working space?",
+    "choices": [
+      "One entrance anywhere along the space, at least 18 in. wide",
+      "A 24 in. by 6\u00bd ft entrance at each end, with listed exceptions",
+      "No entrance requirement for dead-front gear",
+      "A personnel door with a vision window at one end"
+    ],
+    "answer": 1,
+    "explanation": "Equipment rated 1200 A or more and over 6 ft wide needs an entrance at each end. A single entrance is allowed with a continuous unobstructed egress path or a working space twice the required depth. Source: NFPA 70-2023 (NEC), 110.26(C)(2).",
+    "reference": "NFPA 70-2023 (NEC), 110.26(C)(2)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-143",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An electrical room holds an 800 A switchboard, and its personnel door is 15 ft from the edge of the working space. What does that door need?",
+    "choices": [
+      "Nothing special, because the door is closer than 25 ft",
+      "A lock that can only be opened from outside",
+      "A sliding door so it can't block the aisle",
+      "It opens 90\u00b0 in the egress direction, with listed panic hardware"
+    ],
+    "answer": 3,
+    "explanation": "110.26(C)(3) covers equipment rated 800 A or more with overcurrent, switching, or control devices when a personnel door is less than 25 ft from the working space. Source: NFPA 70-2023 (NEC), 110.26(C)(3).",
+    "reference": "NFPA 70-2023 (NEC), 110.26(C)(3)",
+    "verified": true,
+    "kb": "safety.md#working-space"
+  },
+  {
+    "id": "safety-144",
+    "level": "II",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "MTS-2023 has the same personnel clause as ATS-2025. Under MTS, what must each on-site crew leader on a maintenance test job hold?",
+    "choices": [
+      "A current Level 2 certification",
+      "An OSHA 30 card with no NETA level",
+      "A current Level 3 or higher certification",
+      "Only manufacturer training on the test sets"
+    ],
+    "answer": 2,
+    "explanation": "MTS 3.2 item 2 matches ATS: technicians are certified under ANSI/NETA ETT, and each on-site crew leader holds a current Level 3 or higher certification. Source: ANSI/NETA MTS-2023, 3.2 item 2; ANSI/NETA ATS-2025, 3.2 item 2.",
+    "reference": "ANSI/NETA MTS-2023, 3.2 item 2; ANSI/NETA ATS-2025, 3.2 item 2",
+    "verified": true,
+    "kb": "level-2.md#crew-leader"
+  },
+  {
+    "id": "safety-145",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "You are leading a commissioning job written to ANSI/NETA ECS-2024. What does ECS 3.2 say about certification level for commissioning personnel?",
+    "choices": [
+      "Level 4 for every person on site",
+      "Level 3 for every person on the site",
+      "No certification level; trained and experienced personnel",
+      "Level 2 minimum for the crew leader, Level 1 for helpers"
+    ],
+    "answer": 2,
+    "explanation": "ECS 3.2 sets the trained-and-experienced requirement but does not name a level. The Level 3 crew-leader rule comes from ATS and MTS 3.2 item 2, so check which standard the job specifies. Source: ANSI/NETA ECS-2024, 3.2; ANSI/NETA ATS-2025, 3.2 item 2.",
+    "reference": "ANSI/NETA ECS-2024, 3.2; ANSI/NETA ATS-2025, 3.2 item 2",
+    "verified": true,
+    "kb": "level-3.md#crew-leader"
   }
 ]

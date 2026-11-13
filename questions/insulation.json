@@ -629,5 +629,149 @@
     "reference": "IEEE 43-2013, 6.4",
     "verified": true,
     "kb": "insulation.md#ir-field"
+  },
+  {
+    "id": "ir-038",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "What is the idea behind a step-voltage insulation test?",
+    "choices": [
+      "Resistance should double each time the voltage doubles",
+      "It measures winding resistance at several test currents to find loose joints",
+      "Good insulation reads about the same at each step; a falling reading flags weakness",
+      "It replaces the PI test on all equipment"
+    ],
+    "answer": 2,
+    "explanation": "An ideal insulator reads the same at all voltages. Cracks, contamination, or moisture start to conduct more at higher stress, so the resistance drops at higher steps. IEEE 95 reads the same thing as current versus voltage, where a curve that departs from smooth is a warning. Source: Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test); IEEE 95-2002, 3.23 and 7.8.1.",
+    "reference": "Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test); IEEE 95-2002, 3.23 and 7.8.1",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-039",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "What should you do before a step-voltage test on a motor winding?",
+    "choices": [
+      "Nothing; start at full voltage to save time on the outage",
+      "Apply the highest step first, then work down",
+      "Run an IR or PI test first, then fully discharge the winding",
+      "Remove the winding ground so the test set can float"
+    ],
+    "answer": 2,
+    "explanation": "The first step, or a prior PI, shows the winding is fit for an overvoltage test. IEEE 43 warns against high-voltage tests on a winding that fails the basic IR minimum. Discharge fully between tests, because leftover charge distorts the next readings. Source: IEEE 95-2002, 7.6.1; Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test); IEEE 43-2013, 12.1.",
+    "reference": "IEEE 95-2002, 7.6.1; Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test); IEEE 43-2013, 12.1",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-040",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "A step-voltage test uses five equal steps. Readings are 2,000, 1,980, 1,990, 2,010 and 1,995 M\u03a9. How should they be read?",
+    "choices": [
+      "Flat response: no sign of voltage-dependent weakness at these steps",
+      "Failed: healthy insulation must show rising resistance at each step",
+      "Failed: the readings vary by more than 10 M\u03a9",
+      "Inconclusive: step tests need ten steps"
+    ],
+    "answer": 0,
+    "explanation": "A near-constant resistance across the steps is the good case. Small scatter is normal. The warning is a clear, repeatable drop as the voltage climbs. Source: Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test); IEEE 95-2002, 7.8.1(a).",
+    "reference": "Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test); IEEE 95-2002, 7.8.1(a)",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-041",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "On a uniform-time step test, what does IEEE 95 say about adjusting the voltage once each step is set?",
+    "choices": [
+      "Keep trimming it every few seconds to hold it exact",
+      "Reduce it near the end of each step",
+      "Turn it off between steps to let the winding rest",
+      "Set it in the first few seconds, then leave it alone"
+    ],
+    "answer": 3,
+    "explanation": "The guide has you make adjustments within the first 10 s, take the reading at the end of the interval, and not touch the setting again. Changing voltage mid-step injects charging current. Source: IEEE 95-2002, 7.6.1.",
+    "reference": "IEEE 95-2002, 7.6.1",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-042",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "Midway through a step test the current starts climbing faster than the voltage (the plot bends upward). What does IEEE 95 advise?",
+    "choices": [
+      "Raise the voltage quickly to finish before it fails",
+      "Treat it as a breakdown warning; confirm with one step, then stop",
+      "Ignore it: current always rises with voltage",
+      "Restart from zero at double the step size to finish faster"
+    ],
+    "answer": 1,
+    "explanation": "An accelerating rise in current versus voltage is the usual sign that breakdown is near. Confirm the trend with another step and stop if you want to avoid failing the winding. Also rule out corona at the test leads. Source: IEEE 95-2002, 7.8.1(b), (c) and (g).",
+    "reference": "IEEE 95-2002, 7.8.1(b), (c) and (g)",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-043",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "Why do some step-voltage methods hold each step long enough for absorption current to decay?",
+    "choices": [
+      "Absorption current is the defect current being measured",
+      "Absorption current can mask the conduction current being looked for",
+      "It lets the test set cool between steps",
+      "Short steps overstate the winding's capacitance reading"
+    ],
+    "answer": 1,
+    "explanation": "Conduction current is what reveals weakness. If absorption current is still large, it masks small changes. IEEE 95 allows longer steps, and suggests about 3 minutes for older asphalt-mica windings. Source: IEEE 95-2002, 7.6.1.",
+    "reference": "IEEE 95-2002, 7.6.1",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-044",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "IEEE 95 also describes a ramped test. What advantage does a smooth ramp have over discrete steps?",
+    "choices": [
+      "It needs no discharge at the end of the test",
+      "It always reaches a lower final voltage than an equal-step test does",
+      "It measures turns ratio at the same time",
+      "Steady charging current makes a bend in the current curve easier to see"
+    ],
+    "answer": 3,
+    "explanation": "With a fixed ramp rate the charging current is constant, and any bend in the current curve stands out. Any change in ramp rate itself causes a nonlinear current change, so the rate must be held steady. Source: IEEE 95-2002, 7.6.3 and 7.8.2; Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test).",
+    "reference": "IEEE 95-2002, 7.6.3 and 7.8.2; Megger S1-568/2 insulation tester user guide, 8.6 (step voltage test)",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
+  },
+  {
+    "id": "ir-045",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "After a step-voltage test, the set's output is turned to zero. Is the winding safe to touch?",
+    "choices": [
+      "No. Discharge it through a resistor and ground it first",
+      "Yes, once the display reads zero volts",
+      "Yes, after 10 seconds with the leads still connected",
+      "Only if the test lasted less than 5 minutes"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 95 treats the winding as dangerous until it is discharged and solidly grounded. It lets the voltage decay through the set first, then grounds through a discharge resistor. Source: IEEE 95-2002, 6.4.",
+    "reference": "IEEE 95-2002, 6.4",
+    "verified": true,
+    "kb": "insulation.md#step-voltage"
   }
 ]

@@ -916,5 +916,203 @@
     "reference": "ANSI/NETA ATS-2025 7.18.2",
     "verified": true,
     "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-052",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "A flooded cell's hydrometer reads 1.210 with the electrolyte at 86 \u00b0F. Corrected to the 77 \u00b0F reference, the specific gravity is:",
+    "choices": [
+      "1.207",
+      "1.210",
+      "1.213",
+      "1.219"
+    ],
+    "answer": 2,
+    "explanation": "Add 0.001 for each 3 \u00b0F above 77 \u00b0F. 86 \u2212 77 = 9 \u00b0F, which is 3 steps, so 1.210 + 0.003 = 1.213. Warm electrolyte is less dense, so the raw reading is low. Source: IEEE 450-2020, Annex B.2.",
+    "reference": "IEEE 450-2020, Annex B.2",
+    "verified": true,
+    "kb": "batteries.md#specific-gravity"
+  },
+  {
+    "id": "batt-053",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "A cell reads 1.220 at 71 \u00b0F. The temperature-corrected specific gravity is:",
+    "choices": [
+      "1.214",
+      "1.218",
+      "1.220",
+      "1.222"
+    ],
+    "answer": 1,
+    "explanation": "Subtract 0.001 for each 3 \u00b0F below 77 \u00b0F. 77 \u2212 71 = 6 \u00b0F, which is 2 steps, so 1.220 \u2212 0.002 = 1.218. Source: IEEE 450-2020, Annex B.2.",
+    "reference": "IEEE 450-2020, Annex B.2",
+    "verified": true,
+    "kb": "batteries.md#specific-gravity"
+  },
+  {
+    "id": "batt-054",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "IEEE 450 relates open-circuit voltage to specific gravity as OCV = SG + 0.845. A fully charged cell with SG 1.215 should rest at about:",
+    "choices": [
+      "1.22 V",
+      "2.06 V",
+      "2.15 V",
+      "2.33 V"
+    ],
+    "answer": 1,
+    "explanation": "1.215 + 0.845 = 2.060 V. That falls inside the 2.05 to 2.15 V range IEEE 450 gives for a fully charged lead-acid cell at rest. Source: IEEE 450-2020, Annex A (OCV and specific gravity).",
+    "reference": "IEEE 450-2020, Annex A (OCV and specific gravity)",
+    "verified": true,
+    "kb": "batteries.md#specific-gravity"
+  },
+  {
+    "id": "batt-055",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Water was added to a flooded string yesterday. Why are today's specific-gravity readings a poor guide?",
+    "choices": [
+      "Fresh water floats on top and mixes slowly, so top readings run low",
+      "Added water raises specific gravity for a few hours",
+      "The hydrometer must first be recalibrated with pure water",
+      "Specific gravity only changes during discharge"
+    ],
+    "answer": 0,
+    "explanation": "Water is 1.000 and sits on top of the electrolyte. On float there is little gassing to mix it, and full mixing can take weeks. IEEE 450 says to read specific gravity before adding water. Readings right after a recharge are also low at the top for the same reason. Source: IEEE 450-2020, 5.4.3, Annex B.1 and B.4.",
+    "reference": "IEEE 450-2020, 5.4.3, Annex B.1 and B.4",
+    "verified": true,
+    "kb": "batteries.md#specific-gravity"
+  },
+  {
+    "id": "batt-056",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Which condition does IEEE 450 list as a reason to give a vented lead-acid battery an equalizing charge?",
+    "choices": [
+      "Float current is steady and inside the normal range for the string",
+      "Every cell is at the same float voltage",
+      "The battery room is cooler than the 77 \u00b0F reference",
+      "A cell's corrected specific gravity is below the maker's lower limit"
+    ],
+    "answer": 3,
+    "explanation": "5.3.3 lists cell float voltages straying from the average by more than the manufacturer allows, corrected specific gravity below the manufacturer's lower limit, and a cell below the minimum cell voltage. An equalize normally runs 24 hours or more. Source: IEEE 450-2020, 5.3.3.",
+    "reference": "IEEE 450-2020, 5.3.3",
+    "verified": true,
+    "kb": "batteries.md#specific-gravity"
+  },
+  {
+    "id": "batt-057",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "After a recharge, how can you tell from the charger current that a vented lead-acid battery is near full charge?",
+    "choices": [
+      "The charging current has dropped all the way to zero amperes",
+      "Current stops falling and holds steady for three hourly readings in a row",
+      "The charging current is still rising from one hourly reading to the next",
+      "The top-of-cell specific gravity reached nominal in the first hour"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 450 calls the charging-current pattern the most accurate way to judge state of charge. Once current stops falling for three hourly readings, the battery is near full charge. Specific gravity at the top of the cell lags behind. Source: IEEE 450-2020, 5.5 and Annex A.3.",
+    "reference": "IEEE 450-2020, 5.5 and Annex A.3",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
+  },
+  {
+    "id": "batt-058",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Before a battery capacity test, which temperatures does IEEE 450 have you record?",
+    "choices": [
+      "Room ambient only, at the start and the end of the test",
+      "Electrolyte temperature on at least 10% of the cells, repeated every 8 h on long tests",
+      "The pilot-cell temperature only, taken once after the test ends",
+      "No temperatures; capacity is not temperature-dependent"
+    ],
+    "answer": 1,
+    "explanation": "The average starting temperature sets the correction used in the capacity calculation. Long tests get repeat readings every 8 hours. The other initial conditions include recording float current, cell float voltages, and terminal voltage. Source: IEEE 450-2020, 7.2 c), d) and e).",
+    "reference": "IEEE 450-2020, 7.2 c), d) and e)",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
+  },
+  {
+    "id": "batt-059",
+    "level": "II",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "During acceptance of a flooded lead-acid battery, what does ATS say about the charger's float and equalize voltages?",
+    "choices": [
+      "Leave them at the charger's factory setting",
+      "Set float and equalize to the same voltage so the cells never gas",
+      "Set equalize below float to save water",
+      "Measure them and set them to the battery maker's values"
+    ],
+    "answer": 3,
+    "explanation": "ATS 7.18.1.1 has you measure charger float and equalize voltage and set them to the battery maker's values. The battery, not the charger, decides the right voltage. Source: ANSI/NETA ATS-2025, 7.18.1.1.B.1.",
+    "reference": "ANSI/NETA ATS-2025, 7.18.1.1.B.1",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
+  },
+  {
+    "id": "batt-060",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A planned capacity test will run 30 minutes. Which IEEE 450 method must you use?",
+    "choices": [
+      "The rate-adjusted method",
+      "The time-adjusted method",
+      "Either method; switch between tests as convenient",
+      "A specific-gravity survey instead of a discharge"
+    ],
+    "answer": 0,
+    "explanation": "Rate-adjusted works for any length and is required under one hour. Time-adjusted may be used above one hour. Once a method is chosen, later tests should use the same one so the results trend. Source: IEEE 450-2020, 7.4.1.",
+    "reference": "IEEE 450-2020, 7.4.1",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
+  },
+  {
+    "id": "batt-061",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Every cell in a string has a specific gravity inside the manufacturer's range. What does that prove about load capability?",
+    "choices": [
+      "That the battery will meet its duty cycle",
+      "That the string's tested capacity is at least 100% of rating",
+      "Only that the cells are charged, not that they can carry the load",
+      "That the intercell connections are all within limits"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 450 says adequate specific gravity shows a charged cell but not necessarily one that can support the load. Capacity comes from acceptance, performance, or modified performance tests. Source: IEEE 450-2020, Annex A; 7.3.",
+    "reference": "IEEE 450-2020, Annex A; 7.3",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
+  },
+  {
+    "id": "batt-062",
+    "level": "III",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Which IEEE 450 test checks both the battery's capacity and its ability to meet the duty cycle, in the as-found condition?",
+    "choices": [
+      "Service test, run on the as-found battery",
+      "Acceptance test",
+      "Modified performance test",
+      "Performance test"
+    ],
+    "answer": 2,
+    "explanation": "A service test checks the duty cycle only. Performance and acceptance tests check capacity. The modified performance test does both, with a recommended length of the duty cycle times the sizing aging factor. Source: IEEE 450-2020, Clause 3 definitions and 7.3.",
+    "reference": "IEEE 450-2020, Clause 3 definitions and 7.3",
+    "verified": true,
+    "kb": "batteries.md#capacity-test"
   }
 ]

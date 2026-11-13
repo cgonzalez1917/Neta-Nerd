@@ -85,3 +85,44 @@ The discharge current has two parts: a fast capacitive part and a slow absorptio
 6. Run the timed test (one minute, or ten for the PI machines) and record the readings the section asks for.
 7. Discharge and keep grounded per the section above.
 8. Correct to the table's base temperature, then compare. Compare with earlier results only after correction.
+
+## Field guide: step-voltage insulation test {#step-voltage}
+
+A step-voltage test applies dc in equal steps and checks whether insulation resistance holds as the stress goes up. It is a controlled overvoltage test. Sources: IEEE 95-2002 3.23, 6.4, 7.6 and 7.8; IEEE 43-2013 12.1; Megger S1-568 user guide 8.6. No test voltages are given here. Pick them from the manufacturer, the ATS section for the equipment, or the test specification.
+
+### Setup
+
+- Equipment in an electrically safe work condition. Isolate surge capacitors, arresters, VFDs, and electronics.
+- Run an insulation-resistance or PI test first. A winding below the IEEE 43 minimum isn't a candidate for any overvoltage test.
+- Discharge fully after the PI test. Leftover charge distorts the first steps.
+- Ground everything not under test. Use the guard if surface leakage is a concern.
+
+### Connections
+
+Same as a normal insulation test: line lead to the winding (all phases tied together, or one phase with the others grounded), earth lead to the frame, guard where needed. Keep the high-voltage lead off the floor and away from sharp edges. Corona at the leads can look like a failing winding.
+
+### Procedure
+
+1. Choose the final voltage and divide it into equal steps. A common tester routine uses five steps of equal voltage and time. IEEE 95 also allows graded steps and a smooth ramp.
+2. Set each step quickly at the start, then leave the setting alone. IEEE 95 says adjust within the first 10 s and don't readjust, because changing voltage mid-step injects charging current.
+3. Read at the end of each step. Hold steps longer if absorption current is still large. IEEE 95 suggests about 3 minutes for older asphalt-mica windings.
+4. Plot resistance (or current) against voltage as you go.
+5. At the end, turn the output to zero, let the voltage decay, discharge through a resistor, and ground the winding.
+
+### What the readings mean
+
+- **Flat or slightly rising resistance:** no sign of voltage-dependent weakness.
+- **Resistance falling at higher steps,** or current curving upward faster than voltage: cracks, contamination, or moisture are starting to conduct. Confirm with one more step and stop if the trend repeats.
+- **Current rising with time at a constant step:** a warning of approaching breakdown.
+- A smooth ramp keeps charging current constant, so a bend in the curve is easier to see.
+
+### Common mistakes
+
+- Skipping the PI test and starting the steps on a wet winding.
+- Comparing step readings taken at different temperatures or on different plotting scales.
+- Chasing the voltage up and down during each step.
+- Blaming the winding for corona at a test clip.
+
+### Safety
+
+Stored charge is the main hazard. The winding stays dangerous until it is discharged and solidly grounded, and a big machine can recover voltage after a short ground. Barricade the far end of the circuit and anything connected to it.

@@ -114,3 +114,79 @@ The equipment chapters say which tests to run. They do not print numeric pass li
 ## Temporary protective grounds {#grounds}
 
 Under 29 CFR 1926.962, a line is worked de-energized without grounds only if it is de-energized, can't contact another source, and has no induced-voltage hazard. Grounds form an equipotential zone, are at least No. 2 AWG copper, carry the available fault current for the clearing time, and are installed ground end first with a live-line tool on the line end. Removal is the reverse. Test for absence of nominal voltage first unless a ground is already installed. Grounds may come off for a test only with insulating equipment and isolation. ASTM F855 grades assemblies. A withstand rating can be reused, and an ultimate rating can't. Table 1 covers low X/R, and Table 2 (H grades) covers high X/R. An assembly takes the grade of its weakest component.
+
+## Field guide: confined space entry {#confined-entry}
+
+Vaults, manholes, and transformer pits are part of the job. This guide adds the entry procedure to the definitions in [Confined spaces](#/study/safety.md/confined). Sources: 29 CFR 1910.146, read on eCFR because the held OSHA set lacks it; 29 CFR 1910.269(e) and (t) for utility enclosed spaces.
+
+### Before entry
+
+- **Evaluate the space.** Is it permit-required? Are there atmospheric, engulfment, or entrapment hazards? Are there electrical hazards? Lock out what feeds the space.
+- **Permit.** The entry supervisor signs it. It lists the space, purpose, date and duration, entrants, attendant, hazards, controls, test results, rescue arrangements, and communications. It lasts no longer than the task. The supervisor cancels it at the end, and canceled permits are kept at least a year for the annual review (1910.146(e) and (d)(14)).
+- **Isolate and ventilate.** Lock out the energy. Bring forced air from a clean source.
+
+### Testing the atmosphere
+
+1. Use a calibrated, bump-tested meter. 1910.269(e) wants instruments accurate to ±10%.
+2. Test before entry, in order: oxygen, then flammables, then toxics (1910.146(d)(5)(iii)). Test at different levels, because gases stratify.
+3. Hazardous atmosphere limits: oxygen below 19.5% or above 23.5%, or flammable gas above 10% of LFL (1910.146(b)).
+4. Keep monitoring during the entry.
+
+### Roles
+
+- **Entrant.** Knows the hazards and stays in contact. Leaves when told, when they notice symptoms, when a prohibited condition shows up, or when an alarm sounds (1910.146(h)(5)).
+- **Attendant.** Stays outside the whole time, keeps an accurate count, orders evacuation, calls rescue, and warns off unauthorized people. Takes on no duty that gets in the way of monitoring (1910.146(i)).
+- **Entry supervisor.** Verifies the permit, tests, and rescue arrangements. Ends the entry and cancels the permit (1910.146(j)).
+
+### Rescue
+
+- Retrieval systems are the default for non-entry rescue. Vertical spaces deeper than 5 ft need a mechanical retrieval device (1910.146(k)(3)).
+- Rescue teams practice at least every 12 months on representative spaces (1910.146(k)(2)(iv)).
+- The attendant summons rescue and does not go in (1910.146(i)(4) and (i)(7)).
+
+### Alternate procedures and reclassification
+
+- When the atmosphere is the only hazard and continuous forced air alone keeps it safe, 1910.146(c)(5) allows simpler entry. You still test first (oxygen, flammables, toxics), keep the air running from a clean source, retest periodically, and get out if the meter alarms.
+- Ventilation controls a hazard but doesn't eliminate it, so it is not grounds for calling a space non-permit (1910.146(c)(7) note).
+
+### Utility vaults (1910.269)
+
+Check for pressure and temperature hazards before removing a cover, and guard the opening. An attendant trained in first aid stays nearby. Test oxygen before entry unless continuous forced air is running, then test flammables (1910.269(e)).
+
+### Common mistakes
+
+- Testing only at the top of a manhole.
+- Turning off the blower once people are in.
+- Letting the attendant step away to fetch a tool.
+
+## NEC working space (110.26) {#working-space}
+
+Working space keeps you from being pinned between live parts and a wall, and keeps a way out. These numbers come from NFPA 70-2023 110.26, which applies to equipment likely to be examined, adjusted, serviced, or maintained while energized. The AHJ and the edition adopted locally govern a real installation.
+
+### Depth, Table 110.26(A)(1)
+
+Pick the row by nominal voltage to ground and the column by what faces the live parts. Measure from the live parts themselves, or from the enclosure or opening when they're enclosed.
+
+- **Condition 1:** live parts on one side, and nothing live or grounded on the other. Or live parts on both sides, guarded by insulation.
+- **Condition 2:** live parts on one side, grounded parts on the other. Concrete, brick, and tile walls count as grounded.
+- **Condition 3:** live parts exposed on both sides of the space.
+- **0–150 V:** 3 ft for all three conditions.
+- **151–600 V:** 3 ft, 3 ft 6 in., 4 ft.
+- **601–1000 V:** 3 ft, 4 ft, 5 ft.
+
+Worked: 480Y/277 V gear facing a block wall is 277 V to ground, Condition 2, so 3 ft 6 in.
+
+### Width, height, and the rest
+
+- Width is the equipment width or 30 in., whichever is greater, and always enough for a 90° door opening.
+- Height is 6½ ft or the equipment height, whichever is greater.
+- Rear working space isn't required on dead-front assemblies serviced from the front. Rear access for nonelectrical parts gets 30 in.
+- No storage in the working space (110.26(B)).
+- Equipment rated 1200 A or more and over 6 ft wide needs an entrance at least 24 in. wide and 6½ ft high at each end. A single entrance is allowed with unobstructed egress or double the required depth (110.26(C)(2)).
+- Equipment rated 800 A or more with a personnel door within 25 ft of the working space: the door opens at least 90° in the egress direction and has listed panic or fire exit hardware (110.26(C)(3)).
+- Lighting is required, and it can't all be on automatic control (110.26(D)).
+- Dedicated equipment space runs from the floor to 6 ft above the equipment or to the structural ceiling, whichever is lower (110.26(E)(1)(a)).
+
+### In the field
+
+Check the space before you open a door. A cart, a ladder, or a stack of reels in front of the gear is a working-space violation and a tripping hazard on the way out.

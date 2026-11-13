@@ -2035,5 +2035,185 @@
     "reference": "ANSI/NETA ATS-2025 7.6.1.2.A.1, 7.10.1.A.1, 7.6.3.A.1",
     "verified": true,
     "kb": "relays.md#drawings"
+  },
+  {
+    "id": "relay-114",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "On an elementary diagram drawn to IEEE C37.2, how are a and b contacts shown?",
+    "choices": [
+      "a contacts closed and b contacts open",
+      "Both as they are at the moment of the drawing's revision",
+      "b contacts closed and a contacts open (device at rest)",
+      "Both open, with a note"
+    ],
+    "answer": 2,
+    "explanation": "C37.2 has diagrams show b contacts closed and a contacts open. Read the drawing as the device at rest, then work out what changes when it operates. Source: IEEE C37.2-2022, 4.5.1.",
+    "reference": "IEEE C37.2-2022, 4.5.1",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-115",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A breaker auxiliary contact marked aa is:",
+    "choices": [
+      "A contact that is closed whenever control power is on",
+      "A late b contact that opens after the main contacts",
+      "An early a contact: open at rest, closing as the mechanism operates",
+      "A latch-check switch that confirms the mechanism is latched"
+    ],
+    "answer": 2,
+    "explanation": "C37.2 4.2.1 defines aa as open in the non-operated position and closing when the mechanism moves, sometimes called an early a. bb is the early b. LC is the latch-check switch. Source: IEEE C37.2-2022, 4.2.1.",
+    "reference": "IEEE C37.2-2022, 4.2.1",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-116",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "OUT101 := NOT(RB01 OR SV02). With RB01 = 0 and SV02 = 0, OUT101 is:",
+    "choices": [
+      "1 (asserted)",
+      "0 (deasserted)",
+      "It toggles each processing interval",
+      "Undefined until RB01 changes"
+    ],
+    "answer": 0,
+    "explanation": "The OR inside the parentheses is 0, and NOT 0 is 1. The output asserts only when neither input is asserted, which makes this a NOR gate. Source: SEL-751 Instruction Manual (date code 20240329), 4.195 (Boolean NOT operator).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), 4.195 (Boolean NOT operator)",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-117",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "In SELOGIC, which operator has the lowest precedence, so it is evaluated last unless parentheses say otherwise?",
+    "choices": [
+      "AND",
+      "NOT",
+      "R_TRIG",
+      "OR"
+    ],
+    "answer": 3,
+    "explanation": "The precedence list runs from parentheses down through NOT, the edge triggers, math, comparisons, AND, and finally OR. So A OR B AND C means A OR (B AND C). Source: SEL-751 Instruction Manual (date code 20240329), Table 4.72.",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), Table 4.72",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-118",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "SV05 := (SV05 OR IN101) AND (IN103 OR RB02). Once IN101 pulses on while the second group is true, what keeps SV05 asserted after IN101 drops?",
+    "choices": [
+      "IN101 latching internally",
+      "SV05 feeding back into its own OR term (a seal-in)",
+      "A timer pickup delay that holds the output after the input drops",
+      "Nothing; SV05 drops when IN101 drops"
+    ],
+    "answer": 1,
+    "explanation": "This is a seal-in: the output feeds its own OR term, like a relay contact in parallel with the start button. It stays in until the AND term goes false. Source: SEL-751 Instruction Manual (date code 20240329), 4.194 (parentheses operator example).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), 4.194 (parentheses operator example)",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-119",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "How long is the output of R_TRIG IN101 asserted when IN101 goes from 0 to 1?",
+    "choices": [
+      "As long as IN101 stays at 1",
+      "One processing interval",
+      "Until it is reset by a latch",
+      "One second"
+    ],
+    "answer": 1,
+    "explanation": "R_TRIG produces a one-interval pulse on a rising edge, which is why it's used to start event reports and counters without retriggering while the input stays on. Source: SEL-751 Instruction Manual (date code 20240329), 4.195 (rising-edge operator).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), 4.195 (rising-edge operator)",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-120",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A latch bit has SET and RST both asserted in the same processing interval. What state is the latch bit in?",
+    "choices": [
+      "Asserted (1): set has priority",
+      "It toggles each interval",
+      "It holds whatever state it had before",
+      "Deasserted (0): reset has priority"
+    ],
+    "answer": 3,
+    "explanation": "For the SEL-751 latch switch, RST wins when both are true. Check this when a latch you expect to hold is being cleared by a reset term that stays on. Source: SEL-751 Instruction Manual (date code 20240329), 4.191 (latch bits).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), 4.191 (latch bits)",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-121",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A latch bit drives an output contact, and the relay loses control power. What happens to the latch and to the contact?",
+    "choices": [
+      "The latch is kept, but the contact drops until the relay restarts",
+      "Both the latch state and the output contact state are lost",
+      "The contact stays held closed through the outage",
+      "The latch resets to 0 every time power is lost"
+    ],
+    "answer": 0,
+    "explanation": "Unlike a mechanical latching relay, the output contact drops with control power. After initialization it returns to the latch state. The manual also warns that frequent latch writes wear the nonvolatile memory. Source: SEL-751 Instruction Manual (date code 20240329), 4.190 to 4.192 (latch bits, nonvolatile state).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), 4.190 to 4.192 (latch bits, nonvolatile state)",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-122",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "The math expression MV01 := 12 * IN101 + (MV01 + 1) * NOT IN101 runs each processing interval. With IN101 deasserted, MV01:",
+    "choices": [
+      "Is held at 12 until reset",
+      "Resets to 0",
+      "Increases by 1 each execution",
+      "Doubles each interval"
+    ],
+    "answer": 2,
+    "explanation": "With IN101 = 0, the first term is 0 and NOT IN101 = 1, so MV01 becomes MV01 + 1. When IN101 asserts, MV01 is set to 12. This is an if/else built from NOT. Source: SEL-751 Instruction Manual (date code 20240329), 4.195 (NOT in math equations).",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), 4.195 (NOT in math equations)",
+    "verified": true,
+    "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-123",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "Two relays need a contact that closes only when both a 27 undervoltage and a 62 timer have operated. In logic terms, the contacts are wired:",
+    "choices": [
+      "In parallel, which is an OR",
+      "In series, which is an OR",
+      "In series, which is an AND",
+      "In parallel, which is a NOT"
+    ],
+    "answer": 2,
+    "explanation": "Series contacts pass current only when every contact is closed, which is AND. Parallel contacts pass current if any one closes, which is OR. The SELOGIC seal-in example shows the same OR/AND pattern. Source: SEL-751 Instruction Manual (date code 20240329), Table 4.72 and 4.194; IEEE C37.2-2022, 4.5.1.",
+    "reference": "SEL-751 Instruction Manual (date code 20240329), Table 4.72 and 4.194; IEEE C37.2-2022, 4.5.1",
+    "verified": true,
+    "kb": "relays.md#logic"
   }
 ]

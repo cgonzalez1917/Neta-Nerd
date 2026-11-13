@@ -78,3 +78,28 @@ Different drawings answer different questions. Grab the right one.
 - **As-built.** The drawing corrected to match what was installed. ECS-2024 5.4 wants all drawing packages as-built, a full set left on site, and a duplicate to the owner. Its pre-energization lists have test data, as-built drawings, and relay as-left files submitted before energizing.
 
 Almost every ATS section starts with "compare equipment nameplate data with drawings." Settings and test values come from the drawings and studies, so a mismatch caught there saves everything after it.
+
+## IEC 61850 basics {#iec61850}
+
+No IEC 61850 standard is in the held set. This section uses the SEL-751 instruction manual (Appendix G), IEEE C37.2-2022 Annexes B and D, and the EEI Handbook 11th ed. Ch. 10.
+
+- **Model.** An IED is split into logical devices, which hold logical nodes, which hold data. Logical-node names follow function. C37.2 Table D.1 maps 50 to PIOC, 51 to PTOC, 52 to XCBR, 87 to PDIF, 27 to PTUV, 59 to PTOV, and 79 to RREC. MMXU is polyphase measurement.
+- **MMS (IEC 61850-8-1).** Client/server. SCADA and engineering tools use it to browse data, receive reports, and move settings and event files.
+- **GOOSE.** Fast peer-to-peer multicast for status, controls, trips, and interlocks. After a change, the message repeats at the minimum time, again at the minimum time, then at twice the minimum, then at the maximum interval until the next change. With the SEL default of 8 ms that is 0, 8, 16, and 32 ms. Subscribers filter by control-block reference and multicast address.
+- **Testing flags.** An SEL-751 rejects incoming GOOSE data when the message is flagged Test or Needs Commissioning, the configuration revision changes, or it can't be decoded. Check those flags first when a subscribed trip doesn't act.
+- **SCL files.** ICD lists what an IED can do. SSD describes the single-line. SCD covers the whole substation. CID is one IED's configuration as loaded.
+- **Sampled values (IEC 61850-9-2).** Digitized currents and voltages on the network. The EEI handbook describes optical current sensors with a 9-2 output at 80 samples per cycle.
+- **The network is the wiring.** C37.2 calls managed Ethernet switches the auxiliary relays of a GOOSE scheme, device 16 with suffix ES. Their settings decide whether a trip arrives, so record and back them up like relay settings. ATS 7.23 covers firmware, settings, time sync, and failover.
+
+## Logic for relay and control work {#logic}
+
+Sources: IEEE C37.2-2022 4.2.1 and 4.5.1; SEL-751 instruction manual Section 4 (SELOGIC operators and latch bits).
+
+- **Contacts are gates.** Contacts in series make an AND. Contacts in parallel make an OR. A b contact is a NOT of its device.
+- **Drawn at rest.** Diagrams show b contacts closed and a contacts open, with the device non-operated. aa is an early a, bb is an early b, and LC is the breaker's latch-check switch.
+- **Seal-in.** SV05 := (SV05 OR IN101) AND (IN103 OR RB02). The output feeds its own OR, like a relay contact across a start button, and holds until the AND term goes false.
+- **Precedence in SELOGIC,** high to low: parentheses, NOT, R_TRIG and F_TRIG, math, comparisons, AND, OR. So A OR B AND C means A OR (B AND C). Use parentheses rather than relying on memory.
+- **NOT of a group.** NOT(RB01 OR SV02) is a NOR: it is 1 only when both inputs are 0.
+- **Edges.** R_TRIG and F_TRIG pulse for one processing interval. They're used for event triggers and counters.
+- **Latches.** SET makes the latch bit 1, and RST makes it 0. If both are true, reset wins. The state is kept through a power loss, but an output contact driven by it drops until the relay restarts.
+- **Math with NOT.** MV01 := 12 * IN101 + (MV01 + 1) * NOT IN101 is an if/else: 12 when the input is on, otherwise count up.

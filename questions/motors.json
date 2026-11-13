@@ -502,5 +502,77 @@
     "reference": "ANSI/NETA ATS-2025 7.15.2.B.22",
     "verified": true,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-029",
+    "level": "III",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "Motor terminal voltages read 460, 467 and 450 V. Using maximum deviation from the average, the voltage unbalance is about:",
+    "choices": [
+      "0.65%",
+      "1.25%",
+      "1.96%",
+      "3.70%"
+    ],
+    "answer": 2,
+    "explanation": "Average = 459 V. The largest deviation is 459 \u2212 450 = 9 V. 9 \u00f7 459 \u00d7 100 \u2248 1.96%. That is already at the top of the 1\u20132% range Gill recommends. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9",
+    "verified": true,
+    "kb": "apparatus.md#unbalance"
+  },
+  {
+    "id": "mot-030",
+    "level": "III",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "Phase currents on a running motor are 100, 108 and 94 A. The current unbalance is about:",
+    "choices": [
+      "5.3%",
+      "7.3%",
+      "8.0%",
+      "14.0%"
+    ],
+    "answer": 1,
+    "explanation": "Average = 100.67 A. The largest deviation is 108 \u2212 100.67 = 7.33 A. 7.33 \u00f7 100.67 \u00d7 100 \u2248 7.3%. Gill's guide is that current unbalance generally shouldn't exceed 10%, but it can be tolerated if the high leg stays within FLA \u00d7 SF. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9",
+    "verified": true,
+    "kb": "apparatus.md#unbalance"
+  },
+  {
+    "id": "mot-031",
+    "level": "III",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "Gill gives two rules of thumb for voltage unbalance heating. Which pair is right?",
+    "choices": [
+      "1% unbalance doubles motor life by cooling the rotor",
+      "Unbalance only affects motor speed, not heat",
+      "Up to 10% voltage unbalance is harmless",
+      "3% raises winding temperature about 25%; derate at 4%"
+    ],
+    "answer": 3,
+    "explanation": "Unbalanced voltage drives negative-sequence current, which makes heat. Gill cites a 25% winding-temperature rise at 3%, heating like a 10% overload at 2\u20133%, and derating once unbalance reaches 4%. Source: Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9 and 10.4.4.",
+    "reference": "Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., 12.6.3.9 and 10.4.4",
+    "verified": true,
+    "kb": "apparatus.md#unbalance"
+  },
+  {
+    "id": "mot-032",
+    "level": "III",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Under NEMA MG 1, supply voltage unbalance above what level is an unusual service condition that the purchaser should flag?",
+    "choices": [
+      "1 percent",
+      "5 percent",
+      "10 percent",
+      "0.1 percent"
+    ],
+    "answer": 0,
+    "explanation": "MG 1 lists an ac supply unbalanced by more than 1% as an unusual service condition and points to 12.45 and 14.36. The 14.36 derating curve itself isn't in the held excerpt. Source: NEMA MG 1-2016 (Rev 2018), summary of changes, 14.3.",
+    "reference": "NEMA MG 1-2016 (Rev 2018), summary of changes, 14.3",
+    "verified": true,
+    "kb": "apparatus.md#unbalance"
   }
 ]
