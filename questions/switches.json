@@ -376,5 +376,113 @@
     "reference": "NFPA 70-2023 (NEC), 240.67(C)",
     "verified": true,
     "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-022",
+    "level": "IV",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A feeder is running well above its intended load because too many motors were added, but the insulation has not broken down. A second event is a phase-to-phase fault on the same feeder. How does the Littelfuse fundamentals paper distinguish those two overcurrents?",
+    "choices": [
+      "Both events are short circuits, because any current above nameplate is defined as a short circuit",
+      "An overload is current outside the normal path, and a short circuit is a modest overcurrent confined to the conductors",
+      "The first is an overload: an overcurrent that stays in the normal current paths with no insulation breakdown. The second is a short circuit: current that has left the normal path. A properly applied fuse can provide both overload and short-circuit protection, though in some uses, such as backing up a breaker or providing motor-branch short-circuit protection, the fuse may be applied for short-circuit duty only",
+      "Fuses can be applied only for short circuits and are never used for overload protection"
+    ],
+    "answer": 2,
+    "explanation": "An overload is overcurrent that stays in the normal current paths and does not involve an insulation breakdown. Typical causes include too much connected equipment, overloaded machinery, or a mechanical breakdown such as a failed bearing. If it is not interrupted in time, a sustained overload overheats components and damages insulation. A short circuit is current that flows outside its normal path and must be interrupted quickly because of heating, magnetic stress, and arcing. When they are properly rated, fuses provide both overload and short-circuit protection. In some applications, such as backing up a breaker or providing motor-branch short-circuit and ground-fault protection, the fuses supply short-circuit protection only. Source: Littelfuse, Fuse Fundamentals, 2025, Overcurrent Types: Overloads Versus Short Circuits, and the following page on fuse opening.",
+    "reference": "Littelfuse, Fuse Fundamentals, 2025, Overcurrent Types: Overloads Versus Short Circuits, and the following page on fuse opening",
+    "verified": true,
+    "kb": "apparatus.md#fuses"
+  },
+  {
+    "id": "sw-023",
+    "level": "IV",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A current-limiting fuse is being applied to cut let-through energy on a high available-fault bus. How quickly does the Littelfuse paper say a current-limiting fuse opens and clears a short circuit, and what energy measure is being reduced?",
+    "choices": [
+      "It opens and clears in less than 180 electrical degrees, that is, in the first half cycle, and it greatly reduces the destructive heat energy expressed as I-squared-t",
+      "It is allowed three to five cycles to clear, which is still called current-limiting in the paper",
+      "Current-limiting means only that the fuse rating is less than the load current, not that clearing time or I-squared-t is reduced",
+      "A current-limiting fuse waits for the first current zero after two full cycles, then reduces voltage, not current"
+    ],
+    "answer": 0,
+    "explanation": "Current-limiting fuses cut the I-squared-t energy that reaches the circuit. They clear a short circuit in under 180 electrical degrees, meaning within the first half-cycle. Supplemental and Class K fuses are the usual exceptions; most other everyday classes used in modern systems are treated as current-limiting under that description. Peak let-through curves show how far a given fuse limits current. Because I-squared-t scales with the square of current, a tenfold current rise is a hundredfold energy rise, which is why reducing let-through current pays such a large energy dividend. Source: Littelfuse, Fuse Fundamentals, 2025, Current Limitation, and the earlier I-squared-t discussion.",
+    "reference": "Littelfuse, Fuse Fundamentals, 2025, Current Limitation, and the earlier I-squared-t discussion",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-024",
+    "level": "IV",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A 480 V ac bus also has a 250 V dc control circuit, and a crew wants to use the same ac-rated fuses in the dc circuit because the ac voltage rating is higher. What does the Littelfuse paper require?",
+    "choices": [
+      "Any ac voltage rating higher than the dc circuit voltage is automatically acceptable on dc",
+      "Voltage rating may be ignored if the interrupting rating is 200 kA",
+      "Dc circuits may use ac-only fuses if the current rating is derated by half",
+      "A fuse's voltage rating has to be at least the highest voltage on the circuit where it is installed, and a fuse in a dc circuit must be specifically rated for dc. Using an ac-only fuse on dc, or exceeding the voltage rating, can lead to serious fuse failure"
+    ],
+    "answer": 3,
+    "explanation": "Voltage rating is the highest ac or dc voltage at which the fuse is designed to carry load and to clear overcurrent. Apply a fuse whose voltage rating is at least the highest voltage on that circuit. A fuse may be listed ac only, dc only, or both; a dc circuit needs a fuse specifically listed for dc. A lower-rated fuse, or an ac-only fuse placed on dc, can fail violently. Source: Littelfuse, Fuse Fundamentals, 2025, Voltage Rating.",
+    "reference": "Littelfuse, Fuse Fundamentals, 2025, Voltage Rating",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-025",
+    "level": "IV",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A new main switchboard has 125 kA available at the line terminals. The next standard fuse interrupting ratings above that value are 200 kA, and some UL listed fuses go higher still. What interrupting-rating rule does the paper apply, including the NEC 110.9 point it quotes?",
+    "choices": [
+      "A fuse whose interrupting rating is 100 kA may be used on a 125 kA bus if it is current-limiting",
+      "The fuse interrupting rating at the nominal circuit voltage must be at least as high as the available short-circuit current at the equipment line terminals. A 200 kA fuse meets that 125 kA duty and leaves margin if the available current rises later. Standard UL fuses are available with interrupting ratings up to 300 kA",
+      "Interrupting rating needs only to exceed the fuse's current rating, not the available fault current",
+      "NEC 110.9 applies only to circuit breakers, so fuse interrupting rating is optional"
+    ],
+    "answer": 1,
+    "explanation": "Interrupting rating is the largest short-circuit current a fuse is listed to clear, at its rated voltage, in the laboratory tests that define the listing. A UL-listed fuse must clear every overcurrent between its ampere rating and that interrupting rating. Standard UL listings go as high as 300 kA. NEC 110.9 requires any device meant to open fault current to be listed for at least the available short-circuit current at its line-side terminals. A 200 kA interrupting rating is a common way to keep that rating adequate and to leave reserve if available current later increases. In the paper's example, a board with 125 kA available is fitted with 200 kA fuses. Source: Littelfuse, Fuse Fundamentals, 2025, Interrupting Rating, including the NEC 110.9 quotation and Figure 1.",
+    "reference": "Littelfuse, Fuse Fundamentals, 2025, Interrupting Rating, including the NEC 110.9 quotation and Figure 1",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-026",
+    "level": "IV",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A motor branch will use a time-delay Class R fuse. What current and time test does the Littelfuse paper say a time-delay Class R fuse must meet, and how do Class RK1 and RK5 differ in current limitation?",
+    "choices": [
+      "Time-delay Class R fuses must open at 200% of rating in less than 1 second, and RK1 and RK5 have the same let-through",
+      "Time-delay fuses in this class must hold 500% of their current rating for a minimum of 10 seconds. Class R covers 0 to 600 A with a 200 kA interrupting rating. RK1 provides a high degree of current limitation; RK5 provides a moderate degree that is adequate for most applications",
+      "Class R is only a 10 kA one-time fuse and has no time-delay option",
+      "RK5 is more current-limiting than RK1 and is preferred whenever Type 2 no-damage protection of a starter is required"
+    ],
+    "answer": 1,
+    "explanation": "UL Class R is covered by UL 248-12, with voltage ratings of 250 V and 600 V ac (and listed dc ratings), current ratings from 0 to 600 A, and a 200 kA rms symmetrical interrupting rating. The class splits into RK1 and RK5. Time delay is optional for Class R; when a fuse is a time-delay type it must hold 500% of its current rating for a minimum of 10 seconds. RK1 offers a high degree of current limitation and can provide IEC Type 2 (no-damage) protection for motor starters and controls. RK5 offers a moderate degree of current limitation that is adequate for most applications. Class R fuses fit rejection holders that will not accept a non-Class R fuse. Source: Littelfuse, Fuse Fundamentals, 2025, UL and CSA Fuse Classes, Class R.",
+    "reference": "Littelfuse, Fuse Fundamentals, 2025, UL and CSA Fuse Classes, Class R",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-027",
+    "level": "IV",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "A selectively coordinated fused service uses Littelfuse POWR-PRO and POWR-GARD fuses. A 400 A time-delay RK1 feeder will supply a 50 A time-delay RK5 branch. Using only the paper's coordination table for those series, is that pair coordinated, and what I-squared-t rule is the table built on?",
+    "choices": [
+      "Any 2:1 ratio is enough for every fuse pair, including RK1 over RK5, regardless of class or manufacturer",
+      "RK1 and RK5 cannot be coordinated with each other at any ratio",
+      "Selective coordination is determined only by current rating, and I-squared-t is not used",
+      "The table lists an 8:1 line-to-load ratio for a time-delay RK1 supplying a time-delay RK5, so 400 A to 50 A (8:1) meets that row. The underlying rule is that the smaller fuse's total-clearing I-squared-t must be less than the larger fuse's melting I-squared-t. This table is for the listed Littelfuse series, not a universal ratio for every manufacturer's fuses"
+    ],
+    "answer": 3,
+    "explanation": "For a system to be coordinated, the smaller fuse's total-clearing I-squared-t must be less than the larger fuse's melting I-squared-t, so the downstream fuse opens before the upstream element is damaged. Melting and total-clearing curves can be compared, but the simplest method in the paper is its fuse coordination table, which applies only to the listed Littelfuse POWR-PRO and POWR-GARD series. That table gives an 8:1 line-to-load ratio for time-delay RK1 (LLNRK / LLSRK_ID) over time-delay RK5 (FLNR_ID / FLSR_ID / IDSR). A 400 A RK1 over a 50 A RK5 is exactly 8:1. By contrast, Class L to Class L, and Class L to RK1 or Class J, are shown at 2:1 for those same series. Do not treat those ratios as a generic rule for every brand. Source: Littelfuse, Fuse Fundamentals, 2025, Fuse Selectivity and Table 2.",
+    "reference": "Littelfuse, Fuse Fundamentals, 2025, Fuse Selectivity and Table 2",
+    "verified": true,
+    "kb": "apparatus.md#fuse-ratings"
   }
 ]

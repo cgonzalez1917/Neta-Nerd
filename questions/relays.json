@@ -2287,5 +2287,203 @@
     "reference": "IEEE C37.2-2022, Clause 3 and device 86; ANSI/NETA ATS-2025, 7.9.2; ANSI/NETA ETT-2026, 8.4.2.B.2",
     "verified": true,
     "kb": "relays.md#logic"
+  },
+  {
+    "id": "relay-128",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A synchronous generator's field breaker opens while the unit is still tied to the system. On the generator P-Q diagram, where does operation move, and what may the machine do if the system can still supply enough vars?",
+    "choices": [
+      "Operation moves into the first quadrant, which is the overexcited motoring region, and the unit always stays in synchronism",
+      "Loss of field drives the unit into the second quadrant as a synchronous condenser, which is a stable, intended operating mode",
+      "The change is instantaneous and always trips the unit on overcurrent before any reactive interchange can develop",
+      "Operation moves into the fourth quadrant, with the system supplying the missing reactive power. If the system can feed those vars without a steep voltage decline, the unit may keep running as an induction generator; otherwise it can fall out of step"
+    ],
+    "answer": 3,
+    "explanation": "Normal generation is slightly lagging power in the first quadrant. When excitation is reduced or lost, current moves into the fourth quadrant and the system has to supply the missing reactive power. Synchronous machines have reduced stability there. If the system can feed enough inductive vars without a steep voltage decline, the unit may keep running as an induction generator; otherwise it can fall out of step. The change is not instantaneous. An early alarm may let the operator restore the field before a shutdown is required. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-129",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "You are reviewing a single-zone loss-of-field (40) distance setting intended only to detect complete loss of excitation. Which characteristic does Blackburn describe for that complete-loss setting?",
+    "choices": [
+      "A first-quadrant mho set to 120% of the machine capability curve, with no intentional time delay",
+      "A circle in the fourth quadrant with a diameter on the order of Xd, and with the top of the circle 50% to 75% of Xd' below the origin, typically tripping in about 0.2 to 0.3 s to shut the unit down",
+      "A circle centered at the origin with radius Xs, used only to alarm, never to trip",
+      "A var-type relay set at 45 degrees into the overexcited region, tripping in 10 s to 1 min"
+    ],
+    "answer": 1,
+    "explanation": "For a total field collapse, the distance element is a smaller fourth-quadrant circle. Its diameter is on the order of the synchronous reactance Xd, and the top of that circle sits 50% to 75% of the transient reactance Xd' below the origin. A trip in about 0.2 to 0.3 s is used when the unit is to be shut down completely. A larger circle, with a directional unit and often undervoltage supervision, is the setting used when partial as well as complete loss must be detected. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1, setting mode 1.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1, setting mode 1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-130",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A two-zone loss-of-field scheme uses a wide 40 characteristic, a directional element, and an undervoltage element that drops out in the 87% to 80% band of rated voltage. The impedance is inside the circle, but terminal voltage is still healthy. What trip logic does Blackburn describe?",
+    "choices": [
+      "Trip instantaneously whenever the impedance is inside the large circle, regardless of voltage",
+      "If the system can supply vars without a significant voltage drop, start an alarm and a delayed trip, typically 10 s to 1 min. If voltage falls below the undervoltage setting, trip in about 0.2 to 0.3 s",
+      "Block the 40 function entirely while voltage remains above 80%, and rely only on the small complete-loss circle",
+      "The undervoltage unit is used only to supervise motoring (32), not loss of field"
+    ],
+    "answer": 1,
+    "explanation": "The wider 40 characteristic is intended to see low, partial, or complete field loss, and a directional element keeps nearby faults and stable swings from operating it. Where used, an undervoltage element drops out in the 87% to 80% band and supervises the scheme. If the system can still feed vars without a large voltage decline, the scheme alarms so the operator can try to restore field; typical delays are 10 s to 1 min. If voltage falls below the undervoltage dropout, a trip is started in about 0.2 to 0.3 s. Large, important units often run both the small and the wide 40 settings. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1, setting mode 2.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1, setting mode 2",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-131",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A steam-turbine generator (condensing type) is still closed onto the system after its stop valves have shut. What motoring power, as a percent of nameplate kW, does Blackburn quote as typical to keep that machine spinning at synchronous speed with no prime-mover input, and what relay is recommended as a supplement to the machine's own detection?",
+    "choices": [
+      "About 50% or more of nameplate kW, the same figure quoted for a gas turbine, so a coarse 32 pickup is adequate",
+      "About 25% of nameplate kW, the diesel-engine figure, with no need for a supplementary 32",
+      "Steam units do not motor; only hydro units need reverse-power protection because of cavitation",
+      "About 1% to 3% of nameplate kW into the machine. Add a backup 32 reverse-power element; typical microprocessor sensitivities can be as low as 1 mA, with an operating time of about 2 s"
+    ],
+    "answer": 3,
+    "explanation": "If the prime mover is removed while the generator stays online with the field excited, the system will motor the unit at synchronous speed. That overheats steam turbines and can cavitate hydro runners. Blackburn lists typical reverse-power values to spin the machine at synchronous speed with no input: condensing steam 1% to 3%, noncondensing steam 3% or more, hydro 0.2% to 2% or more, diesel about 25%, and gas turbine 50% or more. A supplementary 32 is recommended even though the machine control has its own detection. Microprocessor relays can be as sensitive as 1 mA, and the operating time can be about 2 s. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.12.1.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.12.1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-132",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A generator is off the system and its speed is being changed during a start or shutdown. Voltage is still near rated. Why is a volts-per-hertz (24) function, rather than a plain overvoltage element, the right overexcitation protection, and what two-level settings does Blackburn suggest as a supplement to the machine controls?",
+    "choices": [
+      "Generator voltage is proportional to frequency and flux, so pickup should stay constant on a V/Hz basis. A typical supplement is about 110% of rated to alarm and then trip in about 1 min, and about 120% of rated to trip in about 6 s, preferably from a separate VT",
+      "A plain 59 overvoltage element is preferred because flux is independent of frequency during start-up",
+      "A single 24 set at 150% of rated voltage with no time delay is the suggested supplement",
+      "Volts-per-hertz protection is only required after the unit is synchronized, so it should be blocked until the breaker is closed"
+    ],
+    "answer": 0,
+    "explanation": "Machines and transformers already run near the knee of the saturation curve, so a modest overvoltage produces large exciting current and damaging flux. A particularly dangerous window is while the unit is off the system and speed is changing. Voltage tracks frequency and flux, so overvoltage protection should hold a constant pickup versus V/Hz. Blackburn suggests two-level 24 units as a supplement to the generator controls: about 110% of rated voltage to alarm, then trip after about 1 min, and about 120% of rated to trip after about 6 s. A dedicated VT supply is preferable so a blown metering-VT fuse cannot operate the 24. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.12.2.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.12.2",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-133",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A unit is on turning gear when its generator breaker is closed into an energized bus. Why may the usual stator protection not be enough, and what additional scheme does Blackburn describe?",
+    "choices": [
+      "The generator differential (87) always covers inadvertent energization, so no added function is required",
+      "A 32 motoring element set at 50% of nameplate is the preferred replacement for any directional overcurrent in this case",
+      "Some protection is impaired or unavailable at low frequency. Additional protection is a 67 directional inverse-time overcurrent element in each phase, looking into the generator, typically picked up at about 0.5 pu current and operating in about 0.25 s at 2.0 pu, with prompt opening of adjacent breakers by breaker-failure or remote trip",
+      "The correct response is to rely only on the 25 sync-check and leave adjacent breakers closed"
+    ],
+    "answer": 2,
+    "explanation": "Accidentally energizing a generator can happen on turning gear, while coasting, at standstill, or after a bad synchronize. Ordinary machine protection will catch some of these events, but not every case, especially when performance falls off at low frequency. Because the unit breaker itself may be the problem, adjacent breakers need to be opened at once by local breaker-failure or remote tripping. Blackburn describes three directional inverse-time overcurrent (67) elements, one per phase, looking into the machine, typically picked up at about 0.5 pu and timed near 0.25 s at 2.0 pu. That application can stand in for motoring protection (32) and is faster on these conditions. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.12.3 and 8.10.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.12.3 and 8.10",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-134",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A steam unit will be brought up through reduced frequency for several hours before it is synchronized. What does Blackburn require you to check about the protection during that period?",
+    "choices": [
+      "All protection may be taken out of service until the unit reaches rated speed and voltage",
+      "Only the 87 differential needs to be in service below rated frequency; other functions can wait",
+      "Check whether the protection will still function once frequency is up to about one-quarter to one-half of rated, and above. If a relay or instrument transformer cannot perform at those frequencies, add temporary supplemental protection",
+      "Frequency-dependent protection is not an issue until the unit is below 10% of rated speed"
+    ],
+    "answer": 2,
+    "explanation": "Review the entire protection package to see whether it can still operate while the unit is being brought up to rated speed and voltage. For some machines, such as steam turbines, that process can last several hours at reduced frequency. Protection needs to remain in service once frequency reaches about one-quarter to one-half of rated, and above. When a relay or instrument transformer cannot perform at those low frequencies, add temporary supplemental protection. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.10.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.10",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-135",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A short-circuit study will be used to set instantaneous elements and to check interrupting duty at a generator bus. Which generator reactance does Blackburn say should be used when the goal is the maximum initial fault current?",
+    "choices": [
+      "The saturated subtransient reactance, because it is lower than the unsaturated value and a synchronous machine normally operates in a saturated state",
+      "The unsaturated synchronous reactance, because it is larger and therefore conservative for maximum current",
+      "The transient reactance only, because subtransient values do not appear in protection studies",
+      "Negative-sequence reactance only, even for a close-in three-phase fault"
+    ],
+    "answer": 0,
+    "explanation": "A synchronous machine usually runs saturated. The saturated subtransient reactance already accounts for that, is lower than the unsaturated figure, and therefore yields the largest initial current the generator will feed into a fault. Use that value in short-circuit studies whose goal is the highest initial current. After the right reactance is chosen, it still has to be converted to the study MVA base. Source: Blackburn and Domin, Protective Relaying, 4th ed., 2.8.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 2.8",
+    "verified": true,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-136",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "A high-speed instantaneous overcurrent element is applied on a circuit where the CT may later saturate on a fully offset fault. Why might that element still be acceptable according to IEEE C37.110-2023?",
+    "choices": [
+      "Instantaneous elements cannot operate until after the CT has saturated, so the application is always unacceptable",
+      "The ANSI C-class rating already guarantees that a high-speed element will never see a distorted waveform",
+      "Time-to-saturation is always longer than 1 s, so any instantaneous element is too fast to use",
+      "Saturation is not instantaneous. Some high-speed instantaneous relays can operate in the time-to-saturation window, before the core has entered the saturated region"
+    ],
+    "answer": 3,
+    "explanation": "The increase in flux from an offset current is not instantaneous; the delay is the time-to-saturation. The inequalities that fully avoid dc-offset saturation often imply an impractically large CT, so compensating steps may be needed in the protection plan. The guide notes that some high-speed instantaneous relays can operate before saturation has time to occur. Source: IEEE C37.110-2023, 4.5.1 and 4.5.2.3.",
+    "reference": "IEEE C37.110-2023, 4.5.1 and 4.5.2.3",
+    "verified": true,
+    "kb": "relays.md#schemes"
+  },
+  {
+    "id": "relay-137",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A large generator will use the larger 40 loss-of-field circle that reaches toward the capability and steady-state stability limits. Besides the circle itself, what supervising element does Blackburn say is required, and why?",
+    "choices": [
+      "A second-harmonic restraint is required, because loss of field looks like transformer inrush",
+      "A directional unit is required so the large circle will not operate for nearby faults or for stable transient swings. Operation is below the directional line and inside the circle",
+      "A 50 element in series with the 40 is required, because the large circle has no security of its own",
+      "No extra unit is required; the large circle may be applied as a simple non-directional mho at the terminals"
+    ],
+    "answer": 1,
+    "explanation": "The wider 40 characteristic is used to see low, partial, or complete field loss, and is preferably placed inside the minimum-excitation limiter but outside the capability and steady-state stability curves. Placing that setting is not always easy, and judgment may be required. A directional element is required so nearby faults and stable swings do not operate it. Relay 40 then operates below the directional line and within the larger circle. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1, setting mode 2.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.11.1, setting mode 2",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-138",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Field-ground detection (64) on a brushed unit is in alarm only. An operator asks whether that point should trip the machine automatically. What does Blackburn say is typical, and what option remains?",
+    "choices": [
+      "A 64 function is required to trip the unit instantaneously whenever a field ground is detected",
+      "These field-insulation checks usually alarm so the operator can decide what to do, but they may be wired to trip when the owner prefers that",
+      "Field-ground detection is never applied by the user and cannot be connected to a trip",
+      "Only brushless machines may alarm; brushed units must always trip on the first field ground"
+    ],
+    "answer": 1,
+    "explanation": "Detection of a ground on the exciter and field is often furnished with that equipment. For units with brushes, a 64 voltage-divider scheme can be added if needed. Brushless machines typically drop pilot brushes periodically to measure field insulation and check the exciter field continuously. Both of those systems usually alarm so the operator can decide what to do, but they may be wired to trip when the owner prefers that. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.9.",
+    "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.9",
+    "verified": true,
+    "kb": "relays.md#numbers"
   }
 ]
