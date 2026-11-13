@@ -680,6 +680,7 @@
         h("p", {}, "The knowledge base is the source for these drills: procedures, the checked ATS-2025 / MTS-2023 / 70E-2024 numbers, and the math that is not on the NETA formula sheet."),
         h("div", { class: "actions" },
           h("a", { class: "btn primary", href: "#/study" }, "Open study pages"),
+          h("a", { class: "btn ghost", href: "#/math" }, "Math Cheat Sheet"),
           h("a", { class: "btn ghost", href: "#/study/level-2.md/exam-format" }, "Level II exam format"),
           h("a", { class: "btn ghost", href: "#/study/level-3.md/exam-format" }, "Level III exam format"),
           h("a", { class: "btn", href: "#/mock" }, "Mock exam")
@@ -1144,6 +1145,7 @@
       h("p", { class: "kicker" }, "Knowledge base"),
       h("h1", {}, "Study"),
       h("p", { class: "lede" }, "Written for the people adding questions. Procedures, checked numbers, and worked math. Standards text is not copied here."),
+      h("p", {}, h("a", { href: "#/math" }, "Math Cheat Sheet")),
       h("div", { class: "topics" }, state.docs.map(function (d) {
         return h("a", { class: "topic-card", href: "#/study/" + d.file },
           h("strong", {}, d.title),
@@ -1169,6 +1171,19 @@
     }).catch(function () {
       app.append(h("p", {}, "That study page is not in the knowledge folder."));
     });
+  }
+
+  function renderMath() {
+    document.title = "Math Cheat Sheet · Neta Nerd";
+    window.scrollTo(0, 0);
+    if (window.NetaMath && typeof window.NetaMath.mount === "function") {
+      window.NetaMath.mount(app, h);
+      return;
+    }
+    app.append(
+      h("h1", {}, "Math cheat sheet"),
+      h("p", {}, "The cheat sheet script did not load.")
+    );
   }
 
   function render() {
@@ -1201,6 +1216,7 @@
     else if (path === "/mock/run") renderMockRun();
     else if (path === "/mock/results") renderMockResults();
     else if (path === "/about") renderAbout();
+    else if (path === "/math") renderMath();
     else if (path === "/study") renderStudyIndex();
     else if (study) renderStudyDoc(study[1], study[2]);
     else renderHome();
