@@ -782,16 +782,16 @@
     "level": "IV",
     "topic": "transformers",
     "domain": "component",
-    "question": "Partial discharge in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.1, shows up mainly as:",
+    "question": "A soybean-ester transformer has three DGA samples over six months. Hydrogen rises on each one. Ethane is elevated but flat, acetylene isn\u2019t detected, and CO, CO2, methane, and ethylene are steady. What is the best read and next step?",
     "choices": [
-      "Acetylene with no hydrogen",
-      "Hydrogen",
-      "Ethane from a fault only",
-      "A drop in turns ratio"
+      "Stray gassing from the ester; no action needed",
+      "Possible partial discharge; confirm it, sample sooner, and plan a test",
+      "Arcing; de-energize now",
+      "Paper overheating; review the loading history and take no further action"
     ],
     "answer": 1,
-    "explanation": "Hydrogen is the gas that clause names for corona-type partial discharge in ester liquid. That matches the mineral-oil pattern in C57.104, but the ester guide still warns that the rates are different. ATS 7.2.2.D.15 is the mineral-oil evaluation line. Use C57.155 when the liquid is ester.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 5.3.1",
+    "explanation": "In an ester, hydrogen is the main partial-discharge gas. Stray gassing in soybean and rapeseed esters shows up as ethane, and ethane here is flat, so it doesn\u2019t explain the hydrogen. No acetylene argues against arcing, and steady carbon oxides argue against hot paper. C57.155 also says a natural ester makes roughly a tenth of the discharge gas mineral oil would for the same fault, so a modest rise matters. A rising gas means an active source: confirm it, sample more often, and consider electrical tests.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15 and D.15; ref. IEEE C57.155-2014, clauses 4.1.1, 4.1.2, 5.3.1, 6.3, and 6.3.3",
     "verified": true,
     "kb": "field-methods.md#dga"
   },
@@ -800,16 +800,16 @@
     "level": "IV",
     "topic": "transformers",
     "domain": "component",
-    "question": "Ethane in a soybean or rapeseed natural ester, with no other fault gases, is treated by IEEE C57.155-2014 clause 4.1.1 as:",
+    "question": "A new soybean-ester transformer\u2019s first-year DGA shows ethane climbing to a few hundred ppm and then leveling off. Other combustible gases stay low and flat, and there is no acetylene. The owner asks if the unit should come out of service. What do you recommend?",
     "choices": [
-      "Proof of arcing",
-      "Stray gassing from linolenic acid under normal temperature, not by itself a fault",
-      "A failed oil power-factor test",
-      "Acetylene"
+      "Remove it; ethane this high means a thermal fault",
+      "Judge it against the mineral-oil C57.104 limits and act on that reading",
+      "Drain and replace the fluid to get rid of the ethane",
+      "Keep it in service; the ethane fits stray gassing, so trend from here"
     ],
-    "answer": 1,
-    "explanation": "Those esters contain linolenic acid, and oxidation of that acid makes ethane at ordinary temperature. The lab screen is run hot, but the field point is that ethane alone is not an arc. Oxygen, light, and heat change how much you see, so the sample still has to be handled as a sealed sample.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.155-2014, clause 4.1.1",
+    "answer": 3,
+    "explanation": "Esters with linolenic acid, such as soybean and rapeseed, make ethane by oxidation in normal service. C57.155 notes it can reach several hundred ppm and then level off without the other combustibles rising. A real fault would bring other gases with it. Keep monitoring until ethane stabilizes, then use that as the baseline. Light, oxygen, and heat change the ethane reading, so handle samples carefully. ATS 7.2.2.D.15 names C57.104, which is written for mineral oil.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15 and D.15; ref. IEEE C57.155-2014, clauses 4.1 and 4.1.1",
     "verified": true,
     "kb": "field-methods.md#dga"
   },
@@ -818,16 +818,16 @@
     "level": "IV",
     "topic": "transformers",
     "domain": "component",
-    "question": "Arcing in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.2, produces:",
+    "question": "After a through-fault, an ester-filled transformer\u2019s DGA shows new acetylene, along with jumps in hydrogen, methane, ethylene, CO, and CO2. A tech wants to call it paper overheating from the CO2/CO ratio, using mineral-oil rules. What is the better call?",
     "choices": [
-      "Only ethane from linolenic acid",
-      "Hydrogen, the hydrocarbon gases, and the carbon oxides, in proportions that need not match mineral oil",
-      "No acetylene",
-      "Only carbon dioxide"
+      "Agree; carbon oxides read the same in ester as in mineral oil, so use that ratio",
+      "Treat it as possible arcing; confirm soon and weigh testing or inspection",
+      "Ignore it; through-faults always leave some acetylene",
+      "Call it stray gassing and keep the normal sampling interval"
     ],
     "answer": 1,
-    "explanation": "Hydrogen and the hydrocarbons show up in similar proportions to mineral oil but at different rates. The carbon oxides differ in both proportion and rate. Clause 4.1 already said not to reuse an unmodified mineral-oil diagnosis. ATS 7.2.2.D.15 remains the mineral-oil line.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1 and 5.3.2",
+    "explanation": "New acetylene with hydrogen and hydrocarbons is the arcing pattern in an ester, much as in mineral oil. Carbon oxides come out of an ester in different proportions and rates, and overheated ester makes them on its own, so a mineral-oil ratio can mislead you about the paper. C57.155 warns that arcing can harm the insulation right away. Confirm the result, then choose testing, inspection, or a shorter interval based on how critical the unit is.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1.3.2, 5.3.2, 6.3, and 6.3.3.1",
     "verified": true,
     "kb": "field-methods.md#dga"
   },
@@ -836,16 +836,16 @@
     "level": "IV",
     "topic": "transformers",
     "domain": "component",
-    "question": "Overheating an ester liquid, IEEE C57.155-2014 clause 4.1, compared with mineral oil, tends to:",
+    "question": "An ester-filled unit shows CO and CO2 rising fast, along with methane, ethane, and ethylene, and its acid number is up. The lab comment says \u201ccellulose overheating.\u201d What should you check before accepting that?",
     "choices": [
-      "Make less methane, ethane, and ethylene, and only at higher temperature",
-      "Make more methane, ethane, and ethylene, and at lower temperature",
-      "Make no carbon oxides",
-      "Stop all gas production below 1000 \u00b0C"
+      "Whether the ester is overheating; these gases form cooler than mineral oil, and the acid number fits",
+      "Nothing; carbon oxides always mean paper",
+      "Whether a partial-discharge source is making the hydrocarbons",
+      "Whether the sample sat in sunlight, since sunlight is the only source of the carbon oxides in this sample"
     ],
-    "answer": 1,
-    "explanation": "The guide lists that shift as one of the important differences. Carbon oxides are also produced readily when the ester itself is overheated, not only when paper is involved. Do not wait for a mineral-oil temperature story before you take the sample seriously.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1, 4.1.3.3, and 4.1.3.4",
+    "answer": 0,
+    "explanation": "Paper alone makes CO and CO2 but few hydrocarbons. Overheated ester makes a lot of carbon oxides, often more than the paper would, plus methane, ethane, and ethylene starting 50 \u00b0C to 100 \u00b0C below where mineral oil does. Ester pyrolysis also raises acid number, so acid number and ethylene help sort out the source. Either way, review the loading, temperature, and cooling history.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1.3.1 to 4.1.3.4, 5.1, and 6.3.2",
     "verified": true,
     "kb": "field-methods.md#dga"
   },
@@ -1538,16 +1538,16 @@
     "level": "IV",
     "topic": "transformers",
     "domain": "theory",
-    "question": "IEEE C57.155-2014 clause 4.1, compared with mineral-oil dissolved-gas guides, says ester liquids:",
+    "question": "The first-ever DGA on a natural-ester transformer with no sample history comes back. The lab applied mineral-oil C57.104 limits and a standard Duval triangle, and both flag a fault. What should you do next?",
     "choices": [
-      "Make entirely different gases, so hydrogen no longer means anything",
-      "Make the same fault gases, but in different ratios and at different rates, so an unmodified mineral-oil interpretation is not reliable",
-      "Can be judged with IEEE C57.104 ratios unchanged",
-      "Do not produce acetylene"
+      "Accept the flag; the gases are the same as mineral oil, so the mineral-oil method is the right one",
+      "Ignore DGA on ester units, since it doesn\u2019t apply",
+      "Re-screen on C57.155 Table 1 for this ester or local thresholds; if still over, confirm and trend",
+      "Retrofill with mineral oil so C57.104 applies"
     ],
-    "answer": 1,
-    "explanation": "The gases are the same family. The proportions and the rates are not. ATS 7.2.2.D.15 points a mineral-oil sample at IEEE C57.104. An ester-filled transformer is this other guide. Do not paste a mineral-oil Duval call onto ester oil.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1. Mineral-oil DGA remains IEEE C57.104-2019.",
+    "answer": 2,
+    "explanation": "Esters make the same fault gases as mineral oil, but in different ratios and amounts, so an unmodified mineral-oil method isn\u2019t reliable. With no history, C57.155 compares a first sample with its Table 1 percentile values for that fluid, or with local thresholds, and calls for a confirmation sample when they\u2019re exceeded. Then trend it. Ratio and triangle methods only help once gases are above minimum levels, and Annex G uses triangle regions drawn for ester liquids. ATS names C57.104 because it assumes mineral oil.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1, 6.1 and Table 1, 6.3, and Annex G. Mineral-oil DGA remains IEEE C57.104-2019.",
     "verified": true,
     "kb": "field-methods.md#dga"
   },

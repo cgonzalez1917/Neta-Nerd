@@ -4,16 +4,16 @@
     "level": "IV",
     "topic": "air-switches",
     "domain": "component",
-    "question": "A station-class disconnecting switch, with no interrupter or arcing attachment, is to be opened. C37.30.1 says to first:",
+    "question": "Acceptance testing an outdoor disconnect with no interrupter attachment, you find the key interlock lets it open while the feeding breaker is still closed. The contractor says that\u2019s fine if the switch is opened briskly. What is your call?",
     "choices": [
-      "Open it slowly to stretch the arc",
-      "Open it under load, since the blades can break full current",
-      "Close the grounding switch first",
-      "Make sure the switch is not carrying load, because disconnecting switches have no interrupting rating"
+      "Accept it; opening the blade fast lets it break load current, so leave it as is",
+      "Write it up and fix the interlock before energizing; no interrupting rating",
+      "Accept it as long as the switch has a grounding blade",
+      "Accept it, but tell operators to stop the blade partway if it arcs"
     ],
-    "answer": 3,
-    "explanation": "Disconnecting, grounding, and horn-gap switches are not given interrupting ratings. Only small currents can be broken, following the annex guidance, and even those make an open arc. Confirm no load first, then operate the switch briskly.",
-    "reference": "IEEE C37.30.1-2022, D.3.2.1 and D.3.2.2 item a)",
+    "answer": 1,
+    "explanation": "A disconnect without an interrupter has no interrupting rating. It may break only small currents such as line charging or magnetizing current, and even that draws an open arc. The interlock is what keeps load off the switch when someone operates it, so ATS has you prove its sequencing. Fast operation cuts arcing time in normal switching but doesn\u2019t make it a load-break device. If a switch is still arcing at about two-thirds of blade travel, C37.30.1 says reclose it if practical, not stop it.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.3.A.8; MTS-2023 7.5.1.3.A.9; ref. IEEE C37.30.1-2022, D.3.1, D.3.2.1, and D.3.2.2 items a) and c)",
     "verified": true,
     "kb": "apparatus.md#switchgear"
   },
@@ -22,34 +22,16 @@
     "level": "IV",
     "topic": "air-switches",
     "domain": "component",
-    "question": "After operating a gang-operated air switch, C37.30.1 says you should:",
+    "question": "On a three-pole gang-operated open air switch, the handle and indicator show closed. Contact resistance across the A and C blades is similar, but B reads more than double the lowest, and there is no manufacturer data. What is the right next step?",
     "choices": [
-      "Trust the handle position indicator",
-      "Check only the center phase",
-      "Measure voltage on the source side only",
-      "Look at each blade to confirm it is fully closed and latched, or fully open"
+      "Accept it; the position indicator proves all three blades closed",
+      "Re-torque the terminal pads and retest; blade contact cannot be what caused this high reading",
+      "Check B for full closure, penetration, alignment, and latching; adjust the linkage and retest",
+      "Run a dielectric withstand test on B to check the insulators"
     ],
-    "answer": 3,
-    "explanation": "Linkage can bend or slip, so one phase can hang partway. The guide wants a visual check of every blade after operation, and a check that each phase actually interrupted when the switch was opened.",
-    "reference": "IEEE C37.30.1-2022, D.3.1 and D.3.2.1 item b)",
-    "verified": true,
-    "kb": "apparatus.md#switchgear"
-  },
-  {
-    "id": "airsw-003",
-    "level": "IV",
-    "topic": "air-switches",
-    "domain": "safety",
-    "question": "While a switch is opening, the arc has not gone out by the time the blade is about two-thirds of the way open. C37.30.1 says to:",
-    "choices": [
-      "Keep opening as fast as possible",
-      "Reclose the switch if practical",
-      "Stop the blade where it is and wait",
-      "Close the grounding switch"
-    ],
-    "answer": 1,
-    "explanation": "If the current has not interrupted by roughly two-thirds of travel, conditions are likely too severe for that switch. Reclosing, where practical, limits equipment damage and danger to people. Then use a device that is rated to interrupt.",
-    "reference": "IEEE C37.30.1-2022, D.3.1",
+    "answer": 2,
+    "explanation": "Without manufacturer data, ATS has you investigate a blade reading more than 50 percent above the lowest similar pole, and B is well past that. On a gang-operated switch, a bent pipe or slipped linkage can leave one blade short of full travel while the handle reads closed. C37.30.1 wants each blade looked at after operation and all blades checked for closing together and seating. Fix the mechanical cause, then retest contact resistance.",
+    "reference": "ANSI/NETA ATS-2025 7.5.1.3.A.7, B.2, and D.2; MTS-2023 7.5.1.3.A.5 and D.2; ref. IEEE C37.30.1-2022, D.3.2.1 item b) and D.4 item g)",
     "verified": true,
     "kb": "apparatus.md#switchgear"
   },
@@ -58,34 +40,16 @@
     "level": "IV",
     "topic": "air-switches",
     "domain": "component",
-    "question": "Maintaining a de-energized air switch, you find light pitting on the contacts. C37.30.1 suggests:",
+    "question": "Maintaining a de-energized, grounded open air switch, you find light pitting on the main contacts, an arcing horn with heavy burn damage, and a blade latch that doesn\u2019t hold firmly. Which plan fits?",
     "choices": [
-      "Filing the contacts flat with a coarse file",
-      "Smoothing it with clean, fine sandpaper, not emery, or as the manufacturer recommends, with grounds on both sides of the switch",
-      "Grinding with an emery wheel",
-      "Leaving it, since pitting does not affect contact resistance"
+      "Dress the light pitting on an emery wheel, leave the horn with the heavy burn damage where it is, and grease the latch that does not hold firmly",
+      "Replace the whole switch, since any pitting means end of life",
+      "Leave it all; pitting and horn damage don\u2019t matter on a disconnect",
+      "Dress light pitting with fine sandpaper (not emery) or as the maker says; replace the horn; set latch, alignment, and pressure; retest"
     ],
-    "answer": 1,
-    "explanation": "Minor pitting can be dressed with clean, fine sandpaper, and the guide says specifically not to use emery. Before any work, the switch is disconnected from all sources and grounded on both sides. Badly eroded parts are replaced.",
-    "reference": "IEEE C37.30.1-2022, D.4 items b) and d)",
-    "verified": true,
-    "kb": "apparatus.md#switchgear"
-  },
-  {
-    "id": "airsw-005",
-    "level": "IV",
-    "topic": "air-switches",
-    "domain": "component",
-    "question": "An outdoor air switch is installed at 2,000 m elevation. Under C37.30.1, this matters because:",
-    "choices": [
-      "Altitude has no effect on air-insulated switches",
-      "It is above the 1000 m (3300 ft) usual service limit, so altitude correction factors apply to its ratings",
-      "Only the operating handle needs to be changed",
-      "The switch must be filled with SF6"
-    ],
-    "answer": 1,
-    "explanation": "Thinner air cools less and insulates less, so temperature rise goes up and dielectric strength goes down. The usual service conditions stop at 1000 m, and above that the guide applies correction factors to the ratings.",
-    "reference": "IEEE C37.30.1-2022, 4.1.1 and 4.2",
+    "answer": 3,
+    "explanation": "Light pitting can be dressed, but heavily eroded parts and arc-damaged horns get replaced, and emery is off the table. The latch adjustment, alignment, and contact pressure are all on the maintenance checklist before the switch goes back. Finish with a contact-resistance test across each blade and compare the poles.",
+    "reference": "ANSI/NETA MTS-2023 7.5.1.3.A.5 and B.2; ref. IEEE C37.30.1-2022, D.4 items b), d), and e)",
     "verified": true,
     "kb": "apparatus.md#switchgear"
   }
