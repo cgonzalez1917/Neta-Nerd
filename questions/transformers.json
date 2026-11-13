@@ -2018,5 +2018,59 @@
     "reference": "IEEE C57.12.00-2021, 5.7.2",
     "verified": true,
     "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-113",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A mill needs to serve a two-phase furnace from a three-phase 13.8 kV supply. Which transformer arrangement does IEEE C57.12.00 describe for that conversion?",
+    "choices": [
+      "A Scott-connected or T-connected transformer, which is the arrangement given for converting a three-phase supply to two-phase, or the reverse",
+      "A standard delta-wye distribution transformer, which inherently produces a two-phase output",
+      "An autotransformer with a midtap, which is the only arrangement C57.12.00 allows for this service",
+      "A zig-zag grounding transformer, which converts three-phase power to two-phase power"
+    ],
+    "answer": 0,
+    "explanation": "IEEE C57.12.00 describes Scott-connected or T-connected transformers as the way to convert a three-phase supply to two-phase, or the reverse, and it also describes arrangements that can be used for three-phase to three-phase service. A ordinary delta-wye unit does not produce a two-phase output, and a zig-zag grounding transformer is not the arrangement the standard gives for this conversion. Source: IEEE C57.12.00-2021, 5.3.2 and 5.3.2.1.",
+    "reference": "IEEE C57.12.00-2021, 5.3.2 and 5.3.2.1",
+    "verified": true,
+    "kb": "transformers.md#nameplate"
+  },
+  {
+    "id": "xfmr-114",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A Category III power transformer will be applied on a system that can hold a through-fault for several seconds. The purchase specification is silent on short-circuit duration. What duration does IEEE C57.12.00 use as the limit unless the user specifies otherwise?",
+    "choices": [
+      "Thirty cycles for every category, with no option for the user to specify a longer time",
+      "Ten seconds for Category III and IV, and two seconds only for Category I",
+      "There is no duration limit in C57.12.00; only impedance is specified",
+      "Two seconds for Category II, III, and IV units, unless the user specifies a different duration"
+    ],
+    "answer": 3,
+    "explanation": "For Category II, III, and IV transformers, IEEE C57.12.00 limits the duration of the defined short-circuit current to two seconds unless the user specifies otherwise. Category I uses a separate duration equation. If a longer fault time is expected in service, that needs to be specified rather than assumed. Source: IEEE C57.12.00-2021, 7.1.3.1.",
+    "reference": "IEEE C57.12.00-2021, 7.1.3.1",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-115",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A Category II transformer will sit on a feeder with automatic reclosing, so it can see more than one through-fault before it cools back to normal operating temperature. What capability does IEEE C57.12.00 require?",
+    "choices": [
+      "Reclosing duty is never allowed; the transformer must cool to ambient between every fault",
+      "The transformer must ride through those repeated faults without first cooling back to normal temperature, as long as the total time does not exceed the single-event limit",
+      "Any number of recloses is allowed so long as each individual fault is shorter than 30 seconds",
+      "Only Category I units have a reclosing requirement; Category II and above are exempt"
+    ],
+    "answer": 1,
+    "explanation": "When a transformer is used on a circuit that can reclose, IEEE C57.12.00 requires units in all categories to ride through those repeated faults without first cooling back to normal temperature between events, as long as the total time does not exceed the single-event limit. That single-event limit is the one defined in 7.1.3.1. Source: IEEE C57.12.00-2021, 7.1.3.1.",
+    "reference": "IEEE C57.12.00-2021, 7.1.3.1",
+    "verified": true,
+    "kb": "transformers.md#oil"
   }
 ]

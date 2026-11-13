@@ -2502,5 +2502,59 @@
     "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017)",
     "verified": true,
     "kb": "test-day.md#screen"
+  },
+  {
+    "id": "math-162",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A feeder study lists 240 kW at 0.80 lagging power factor. What is the reactive power?",
+    "choices": [
+      "240 kvar lagging",
+      "192 kvar lagging",
+      "80 kvar lagging",
+      "180 kvar lagging"
+    ],
+    "answer": 3,
+    "explanation": "Real power is P = S times power factor and reactive power is Q = S times the sine of the angle, or Q = P times the tangent of the angle. With a 0.80 power factor, S is 240 / 0.80 = 300 kVA, and the sine is 0.60, so Q is 300 times 0.60 = 180 kvar. The official formulae sheet is the exam source for this relationship. Source: NETA Official Electrical Formulae Sheet (29 June 2017); IEEE 141-1993, Chapter 8.",
+    "reference": "NETA Official Electrical Formulae Sheet (29 June 2017); IEEE 141-1993, Chapter 8",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-163",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Two loads share one feeder: 100 kW at 0.80 lagging and 60 kVA at 0.50 lagging. What is the combined apparent power?",
+    "choices": [
+      "160 kVA, found by adding 100 kW to 60 kVA",
+      "About 182 kVA",
+      "125 kVA, the first load only",
+      "200 kVA, found by adding 100/0.80 to 60"
+    ],
+    "answer": 1,
+    "explanation": "Convert each load to real and reactive power, add those parts, then recombine. The 100 kW load at 0.80 PF is 125 kVA and 75 kvar. The 60 kVA load at 0.50 PF is 30 kW and about 52 kvar. Combined P is 130 kW and combined Q is about 127 kvar, so S is the square root of 130 squared plus 127 squared, about 182 kVA. You cannot add a kW figure to a kVA figure. Source: NETA Official Electrical Formulae Sheet (29 June 2017); IEEE 141-1993, Chapter 8.",
+    "reference": "NETA Official Electrical Formulae Sheet (29 June 2017); IEEE 141-1993, Chapter 8",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "math-164",
+    "level": "IV",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A plant capacitor bank is overheating and the transformers are running hotter than the kVA would suggest, while a nearby rectifier is in service. What is the most likely system-level cause to investigate first?",
+    "choices": [
+      "A slow CT, which cannot cause heating in a capacitor bank",
+      "A slightly low system frequency, which always cools capacitors",
+      "Harmonic currents and voltages from the nonlinear load, which can overheat capacitors and transformers",
+      "Ambient humidity, which is the usual cause of capacitor heating"
+    ],
+    "answer": 2,
+    "explanation": "Level IV theory includes recognizing causes and effects of power-system harmonics. Nonlinear loads inject harmonic current. Capacitors have decreasing impedance with frequency, so they can absorb a large share of those currents and overheat. Transformers see additional heating from harmonic current as well. Source: IEEE 519-2022; IEEE 141-1993, Chapter 8; ANSI/NETA ETT-2026, 8.4.2.H.7.",
+    "reference": "IEEE 519-2022; IEEE 141-1993, Chapter 8; ANSI/NETA ETT-2026, 8.4.2.H.7",
+    "verified": true,
+    "kb": "math.md#harmonics"
   }
 ]

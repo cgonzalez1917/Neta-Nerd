@@ -340,5 +340,23 @@
     "reference": "IEEE C37.2-2022, Annex B and 3.1.16",
     "verified": true,
     "kb": "relays.md#iec61850"
+  },
+  {
+    "id": "mtr-020",
+    "level": "IV",
+    "topic": "metering-automation",
+    "domain": "systems",
+    "question": "A microprocessor relay's setting-change alarm and protection-operate, protection-fail, and communications-fail indications are mapped to the plant SCADA system, but those points have never been tested. Component relay tests passed. What should you require?",
+    "choices": [
+      "Verify the mapped SCADA points and, where the project calls for it, the setting-change alarm, and confirm that the communication paths used for those points actually work before you accept the scheme",
+      "Bench element tests prove every SCADA indication, so no further check is needed",
+      "SCADA points are the plant IT department's responsibility and are outside acceptance testing",
+      "Only a communications-fail alarm is ever tested; the other indications are cosmetic"
+    ],
+    "answer": 0,
+    "explanation": "ATS includes optional and required checks on microprocessor relays for SCADA points such as protection-operate, protection-fail, communications-fail, and fault-recorder trigger, a setting-change alarm to SCADA, and a confirmation that the communication paths actually work. Isolated element tests do not prove those points. Official IEC 61850 commissioning practice is not used here because that source is not in the held set. Source: ANSI/NETA ATS-2025, 7.9.2.B.8, 7.9.2.B.9, and 7.9.2.B.10.",
+    "reference": "ANSI/NETA ATS-2025, 7.9.2.B.8, 7.9.2.B.9, and 7.9.2.B.10",
+    "verified": true,
+    "kb": "apparatus.md#automation"
   }
 ]

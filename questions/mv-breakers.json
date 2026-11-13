@@ -700,5 +700,95 @@
     "reference": "ANSI/NETA ATS-2025 7.6.3.A.14, C.4\u2013C.6",
     "verified": true,
     "kb": "apparatus.md#mv-vacuum-field"
+  },
+  {
+    "id": "mvbr-040",
+    "level": "IV",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A medium-voltage air breaker is in the test position. Close and trip from the control switch both work. No one has tripped it from each protective relay, and the charge, trip-free, and antipump checks have not been done. What should you do?",
+    "choices": [
+      "The control-switch trip is enough; relay trip paths can wait until first fault",
+      "Stay in the test position and complete a trip initiated from every protective relay assigned to the breaker, plus the charging, trip-free, and antipump checks, before you accept the breaker",
+      "Rack the breaker in and prove those functions live at full voltage",
+      "Skip trip-free and antipump checks on air breakers; they apply only to oil breakers"
+    ],
+    "answer": 1,
+    "explanation": "ATS requires, with the breaker in the test position, a close and trip from the control switch, a trip initiated from every protective relay assigned to the breaker, and checks that charging, trip-free, and antipump behavior all work. Those features must work as designed. Leaving them unproved is not an acceptable shortcut. Source: ANSI/NETA ATS-2025, 7.6.1.3.B.4 and 7.6.1.3.D.4.",
+    "reference": "ANSI/NETA ATS-2025, 7.6.1.3.B.4 and 7.6.1.3.D.4",
+    "verified": true,
+    "kb": "breakers.md#field-sequence"
+  },
+  {
+    "id": "mvbr-041",
+    "level": "IV",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Contact-timing results on a medium-voltage air breaker do not match the manufacturer's published times, but the crew wants to accept the breaker because the open-close cycle felt normal. What is the right evaluation?",
+    "choices": [
+      "Any timing within one second of the nameplate interrupting time is automatically acceptable",
+      "Timing tests are optional and may be omitted when the breaker opens by hand",
+      "Only close-coil current has to match the manufacturer; contact timing is informational",
+      "Do not accept the breaker on feel. Contact-timing values must agree with the times the manufacturer publishes"
+    ],
+    "answer": 3,
+    "explanation": "ATS includes a contact-timing test on medium-voltage air breakers and requires the timing values to agree with the times the manufacturer publishes. A subjective sense that the breaker opened is not a substitute for that comparison. Travel and velocity, when recorded, are judged the same way. Source: ANSI/NETA ATS-2025, 7.6.1.3.A.15, 7.6.1.3.C.4, and 7.6.1.3.C.5.",
+    "reference": "ANSI/NETA ATS-2025, 7.6.1.3.A.15, 7.6.1.3.C.4, and 7.6.1.3.C.5",
+    "verified": true,
+    "kb": "breakers.md#tolerances"
+  },
+  {
+    "id": "mvbr-042",
+    "level": "IV",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Pole-resistance tests on a medium-voltage air breaker, with no manufacturer microhm limit in hand, read 28 microhms, 30 microhms, and 43 microhms on the three poles. What should you do?",
+    "choices": [
+      "Investigate the 43 microhm pole. Without manufacturer data, ATS has you look into a pole that stands more than half again above the lowest of the adjacent or similar poles, and 43 is above that 42 microhm threshold",
+      "Accept all three; any reading under 50 microhms is automatically good",
+      "Reject the 30 microhm pole because it is not identical to 28",
+      "Average the three readings and compare only the average to 28 microhms"
+    ],
+    "answer": 0,
+    "explanation": "When the manufacturer does not publish a high-limit for contact resistance, ATS has you look into a reading that stands more than half again above the lowest of the adjacent or similar poles. Half of 28 microhms is 14, so 42 microhms is the investigate threshold. 43 exceeds that and needs investigation; 30 does not. Source: ANSI/NETA ATS-2025, 7.6.1.3.D.2.",
+    "reference": "ANSI/NETA ATS-2025, 7.6.1.3.D.2",
+    "verified": true,
+    "kb": "resistance.md#fifty-percent"
+  },
+  {
+    "id": "mvbr-043",
+    "level": "IV",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "A field timing package is being run on a high-voltage circuit breaker after years in service. Which records does IEEE C37.09 call for, and what are they used for in this context?",
+    "choices": [
+      "Travel-time curves are required on every breaker, including slow indoor units, and opening times are optional",
+      "These timing tests are only a factory development tool and have no after-service use",
+      "Record opening time on every circuit breaker, and record travel-versus-time traces on S2-class units whose interrupting time is three cycles or shorter. Once a breaker is already in service, those same records may be used to judge whether operation is still correct",
+      "Only a 60 Hz withstand test is used to judge whether an in-service breaker still operates correctly"
+    ],
+    "answer": 2,
+    "explanation": "IEEE C37.09 timing tests record the time to open, close, close-open, and reclose. Opening time is taken on every circuit breaker. Travel-versus-time traces are taken on S2-class units whose interrupting time is three cycles or shorter. The same clause notes that, once a breaker is already in service, those records may be used to judge whether operation is still correct. Source: IEEE C37.09-2018, 5.12.",
+    "reference": "IEEE C37.09-2018, 5.12",
+    "verified": true,
+    "kb": "breakers.md#tolerances"
+  },
+  {
+    "id": "mvbr-044",
+    "level": "IV",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "You are measuring the closed-position primary-path resistance of a high-voltage breaker pole, terminal to terminal. What test current and what acceptance rule does IEEE C37.09 specify?",
+    "choices": [
+      "Any convenient current below 10 A dc is specified, and a 50 percent pole-to-pole spread is the only limit",
+      "Use at least 1000 A ac, and accept any value under one ohm",
+      "Use 100 A dc or more and compare the result with the limit the manufacturer set for that rating; the measured resistance must stay within that limit",
+      "Path resistance is not a C37.09 test; only opening time is recorded"
+    ],
+    "answer": 2,
+    "explanation": "IEEE C37.09 requires the dc resistance of the primary circuit, terminal to terminal of each pole in the closed position, to be taken with a dc test current of 100 A or more, and the result must stay within the limit the manufacturer set for that rating. Source: IEEE C37.09-2018, 5.14.",
+    "reference": "IEEE C37.09-2018, 5.14",
+    "verified": true,
+    "kb": "field-methods.md#microohm"
   }
 ]

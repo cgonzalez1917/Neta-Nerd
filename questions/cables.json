@@ -1043,5 +1043,23 @@
     "reference": "IEEE 400.3-2022, 8.4.3",
     "verified": true,
     "kb": "cables.md#cable-pd"
+  },
+  {
+    "id": "cable-059",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Optional TDR traces were recorded on each conductor of a new medium-voltage shielded cable, but the plots are noisy and do not show a clear length or a recognizable signature for the cable. The hipot passed. What should you do?",
+    "choices": [
+      "A passing dielectric test makes the TDR optional and automatically acceptable in any form",
+      "Accept any TDR file that was saved, even if length cannot be read from it",
+      "TDR is only used after a failure, so traces on a new cable may be discarded",
+      "Do not treat the TDR as complete. ATS requires the traces to clearly identify the cable length and its characteristic signature; rerun or redo the measurements until they do, or document why the optional test cannot be used"
+    ],
+    "answer": 3,
+    "explanation": "ATS includes TDR measurements on shielded medium- and high-voltage cables and requires the graphical records to clearly identify the cable length and the characteristic signature of the cable. A passed withstand test does not replace that record. If you take the optional TDR, the traces have to be usable. Source: ANSI/NETA ATS-2025, 7.3.3.B.3 and 7.3.3.D.3.",
+    "reference": "ANSI/NETA ATS-2025, 7.3.3.B.3 and 7.3.3.D.3",
+    "verified": true,
+    "kb": "cables.md#tdr"
   }
 ]

@@ -196,5 +196,23 @@
     "reference": "NEMA ICS 7.2-2021, 5.2.8 e) through g)",
     "verified": true,
     "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-012",
+    "level": "IV",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "A new low-voltage motor-control center is being accepted. The crew tested only the incoming main breaker and wants to close the report. What else does ATS require for the lineup?",
+    "choices": [
+      "The main breaker test covers the entire MCC, including starters and bus",
+      "Only the starters are tested; the bus is proven by a visual inspection",
+      "Test the MCC bus per the switchgear and switchboard section, the MCC switches and circuit breakers per their sections, and the starters per the low-voltage starter section",
+      "MCC acceptance is limited to nameplate comparison and tightness checks"
+    ],
+    "answer": 2,
+    "explanation": "ATS points MCC acceptance at the related sections: the bus is inspected and tested as switchgear or switchboard assemblies, the MCC switches and circuit breakers follow their own sections, and the starters follow the low-voltage starter section. A main-breaker test alone is not a complete MCC acceptance. Source: ANSI/NETA ATS-2025, 7.16.2.1.",
+    "reference": "ANSI/NETA ATS-2025, 7.16.2.1",
+    "verified": true,
+    "kb": "apparatus.md#drives"
   }
 ]

@@ -574,5 +574,41 @@
     "reference": "NEMA MG 1-2016 (Rev 2018), summary of changes, 14.3",
     "verified": true,
     "kb": "apparatus.md#unbalance"
+  },
+  {
+    "id": "mot-033",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "component",
+    "question": "A new 500 horsepower, 4160 V motor is being accepted. The crew ran a one-minute insulation-resistance test and recorded only the one-minute value. What does ATS require for a machine of this size?",
+    "choices": [
+      "Run a ten-minute insulation-resistance test in accordance with IEEE 43 and calculate the polarization index. ATS also requires the one-minute IR to meet Table 100.11 and the polarization index to be at least 2.0",
+      "A one-minute test is all ATS requires on any motor, and the polarization index may be skipped above 200 horsepower",
+      "Use a 60/30-second dielectric-absorption ratio only; the ten-minute test is reserved for machines 200 horsepower and below",
+      "IEEE 43 tests are not used at acceptance; only a surge comparison test is required"
+    ],
+    "answer": 0,
+    "explanation": "ATS has insulation-resistance tests performed in accordance with IEEE 43. Machines larger than 200 horsepower (150 kW) are tested for ten minutes and a polarization index is calculated. Machines 200 horsepower and below use a one-minute test and a 60/30-second dielectric-absorption ratio. ATS then requires the one-minute IR to meet Table 100.11, a polarization index of at least 2.0, and a dielectric-absorption ratio of at least 1.4. Source: ANSI/NETA ATS-2025, 7.15.1.B.2 and 7.15.1.D.2.",
+    "reference": "ANSI/NETA ATS-2025, 7.15.1.B.2 and 7.15.1.D.2",
+    "verified": true,
+    "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-034",
+    "level": "IV",
+    "topic": "motors",
+    "domain": "component",
+    "question": "Stator RTD leads on a new medium-voltage motor were landed, but no one has compared the circuits to the drawings or measured RTD resistance. What should you require before you accept the machine protection?",
+    "choices": [
+      "RTDs can be checked after first start; they are not an acceptance item",
+      "If the relay is powered, the RTD circuits are automatically correct",
+      "Verify that the RTD circuits match the drawings, measure their resistance, and confirm the circuits agree with the design and with the protection-device manufacturer's data",
+      "Only bearing RTDs are checked; winding RTDs are optional"
+    ],
+    "answer": 2,
+    "explanation": "ATS requires a check that RTD circuits conform to the drawings, a resistance test on those circuits, and an evaluation that the circuits conform to the design intent and to the machine-protection manufacturer's published data. Bearing RTDs are a separate check that they indicate the correct temperature. Leaving the wiring unverified is not acceptable on a senior-level acceptance. Source: ANSI/NETA ATS-2025, 7.15.1.A.10, 7.15.1.B.11, and 7.15.1.D.11.",
+    "reference": "ANSI/NETA ATS-2025, 7.15.1.A.10, 7.15.1.B.11, and 7.15.1.D.11",
+    "verified": true,
+    "kb": "apparatus.md#motors"
   }
 ]
