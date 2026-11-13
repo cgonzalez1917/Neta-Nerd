@@ -1,10 +1,10 @@
 # Review queue
 
-Level II and Level III questions for a human pass. The bank flag `verified: true` means the deciding fact was checked in the owner's ATS-2025, MTS-2023, NFPA 70E-2024, NFPA 70B-2026, or OSHA 3120 text. `verified: false` means the item is original teaching (math, scheme logic, or field practice) and still needs a reviewer eye.
+Level II, Level III, and Level IV questions for a human pass. The bank flag `verified: true` means the deciding fact was checked in the owner's ATS-2025, MTS-2023, NFPA 70E-2024, NFPA 70B-2026, or OSHA 3120 text. `verified: false` means the item is original teaching (math, scheme logic, or field practice) and still needs a reviewer eye.
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 460 (Level II 301, Level III 159).
+Count: 460 (Level II 300, Level III 151, Level IV 9).
 
 A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK.
 
@@ -5564,37 +5564,37 @@ IEEE C37.113-2015 clause 4.6 describes main 1 and main 2 as:
 
 Reviewer: VERIFIED or FIX
 
-## relay-045 (III / systems) {#relay-045}
+## relay-045 (IV / systems) {#relay-045}
 
 <!-- q:relay-045 -->
 
 **Bank verified flag:** true
 
-Direct underreaching transfer trip, as IEEE C37.113-2015 uses the term, is built on elements that are:
+A line is protected by a DUTT scheme only. With the remote breaker open for maintenance, you simulate a fault near the remote end, past the local zone 1 reach. What should the test show?
 
-- 0. Set short of the remote terminal **← answer**
-- 1. Set past the next two lines
-- 2. Nondirectional and delayed
-- 3. Differential only
+- 0. A high-speed trip from a received transfer-trip signal
+- 1. No pilot trip; only time-delayed backup clears it **← answer**
+- 2. An instantaneous trip from a local overreaching element
+- 3. A block signal that stops every trip, including backup
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clauses 4.8.7 and 6.3.5.2
+**Citation:** ANSI/NETA ATS-2025 7.9.1.B.3, item 2 (device 21) and 7.9.2.B.5.4; ref. IEEE C37.113-2015, clauses 4.8.7 and 6.3.5.2
 
 Reviewer: VERIFIED or FIX
 
-## relay-046 (III / systems) {#relay-046}
+## relay-046 (IV / systems) {#relay-046}
 
 <!-- q:relay-046 -->
 
 **Bank verified flag:** true
 
-Permissive overreaching transfer trip differs from direct underreaching transfer trip because POTT:
+End-to-end testing a POTT line: with both breakers closed, a simulated internal fault trips both ends at high speed. With the remote breaker open, the local end trips only on its time-delayed zone. What is the most likely gap?
 
-- 0. Trips from an underreaching element with no communication
-- 1. Uses an overreaching element and needs a permissive from the other end **← answer**
-- 2. Is a dissolved-gas method
-- 3. Has no communication channel
+- 0. The local overreaching element is set short of the remote bus
+- 1. POTT cannot trip with one breaker open, so nothing can be done
+- 2. No remote 52b keying or echo, so no permissive is sent **← answer**
+- 3. The local zone 1 timer is set too long
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 6.3.5.4
+**Citation:** ANSI/NETA ATS-2025 7.9.2.B.5.3 and B.5.4; ref. IEEE C37.113-2015, clauses 6.3.5.4 and 6.3.5.8
 
 Reviewer: VERIFIED or FIX
 
@@ -6261,20 +6261,20 @@ IEEE C37.113-2015 clause 4.6 distinguishes local backup from remote backup as:
 
 Reviewer: VERIFIED or FIX
 
-## relay-052 (III / systems) {#relay-052}
+## relay-052 (IV / systems) {#relay-052}
 
 <!-- q:relay-052 -->
 
 **Bank verified flag:** true
 
-For a line terminated in a transformer, IEEE C37.113-2015 clause 5.5.2 prefers the distance relay’s voltages and currents from:
+A line ends in a wye-delta transformer. The distance relay uses the line-side VTs but the transformer low-side CTs, and the setting sheet turns on zero-sequence-compensated ground distance for line ground faults. What do you flag in the settings review?
 
-- 0. The line side of the transformer **← answer**
-- 1. The low-voltage bus, with no further correction
-- 2. The station battery
-- 3. A single current transformer on the neutral only
+- 0. Low-side CTs miss line zero-sequence, so ground elements are not reliable **← answer**
+- 1. Nothing; reach is measured from the CTs, so the low-side CTs are correct
+- 2. Only the 30° shift; once that is corrected, ground distance works normally
+- 3. Ground distance should overreach the remote bus to make up for it
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2
+**Citation:** ANSI/NETA ATS-2025 7.9.2.A.8 and 7.9.1.B.3, item 2 (device 21); ref. IEEE C37.113-2015, clauses 5.5.2 and 5.5.4
 
 Reviewer: VERIFIED or FIX
 
@@ -6369,14 +6369,14 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-IEEE C57.155-2014 clause 4.1, compared with mineral-oil dissolved-gas guides, says ester liquids:
+The first-ever DGA on a natural-ester transformer with no sample history comes back. The lab applied mineral-oil C57.104 limits and a standard Duval triangle, and both flag a fault. What should you do next?
 
-- 0. Make entirely different gases, so hydrogen no longer means anything
-- 1. Make the same fault gases, but in different ratios and at different rates, so an unmodified mineral-oil interpretation is not reliable **← answer**
-- 2. Can be judged with IEEE C57.104 ratios unchanged
-- 3. Do not produce acetylene
+- 0. Accept the flag; the gases are the same as mineral oil, so the mineral-oil method is the right one
+- 1. Ignore DGA on ester units, since it doesn’t apply
+- 2. Re-screen on C57.155 Table 1 for this ester or local thresholds; if still over, confirm and trend **← answer**
+- 3. Retrofill with mineral oil so C57.104 applies
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1. Mineral-oil DGA remains IEEE C57.104-2019.
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1, 6.1 and Table 1, 6.3, and Annex G. Mineral-oil DGA remains IEEE C57.104-2019.
 
 Reviewer: VERIFIED or FIX
 
@@ -6448,37 +6448,37 @@ On the DC polarity check in IEEE C57.13.1-2017 clause 9.1, correct marks give a 
 
 Reviewer: VERIFIED or FIX
 
-## xfmr-044 (II / component) {#xfmr-044}
+## xfmr-044 (IV / component) {#xfmr-044}
 
 <!-- q:xfmr-044 -->
 
 **Bank verified flag:** true
 
-Partial discharge in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.1, shows up mainly as:
+A soybean-ester transformer has three DGA samples over six months. Hydrogen rises on each one. Ethane is elevated but flat, acetylene isn’t detected, and CO, CO2, methane, and ethylene are steady. What is the best read and next step?
 
-- 0. Acetylene with no hydrogen
-- 1. Hydrogen **← answer**
-- 2. Ethane from a fault only
-- 3. A drop in turns ratio
+- 0. Stray gassing from the ester; no action needed
+- 1. Possible partial discharge; confirm it, sample sooner, and plan a test **← answer**
+- 2. Arcing; de-energize now
+- 3. Paper overheating; review the loading history and take no further action
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 5.3.1
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15 and D.15; ref. IEEE C57.155-2014, clauses 4.1.1, 4.1.2, 5.3.1, 6.3, and 6.3.3
 
 Reviewer: VERIFIED or FIX
 
-## xfmr-045 (II / component) {#xfmr-045}
+## xfmr-045 (IV / component) {#xfmr-045}
 
 <!-- q:xfmr-045 -->
 
 **Bank verified flag:** true
 
-Ethane in a soybean or rapeseed natural ester, with no other fault gases, is treated by IEEE C57.155-2014 clause 4.1.1 as:
+A new soybean-ester transformer’s first-year DGA shows ethane climbing to a few hundred ppm and then leveling off. Other combustible gases stay low and flat, and there is no acetylene. The owner asks if the unit should come out of service. What do you recommend?
 
-- 0. Proof of arcing
-- 1. Stray gassing from linolenic acid under normal temperature, not by itself a fault **← answer**
-- 2. A failed oil power-factor test
-- 3. Acetylene
+- 0. Remove it; ethane this high means a thermal fault
+- 1. Judge it against the mineral-oil C57.104 limits and act on that reading
+- 2. Drain and replace the fluid to get rid of the ethane
+- 3. Keep it in service; the ethane fits stray gassing, so trend from here **← answer**
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.155-2014, clause 4.1.1
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.15 and D.15; ref. IEEE C57.155-2014, clauses 4.1 and 4.1.1
 
 Reviewer: VERIFIED or FIX
 
@@ -6584,39 +6584,39 @@ IEEE 43-2013 clause 12.3 says the insulation resistance of one phase, with the o
 
 Reviewer: VERIFIED or FIX
 
-## xfmr-046 (III / component) {#xfmr-046}
+## xfmr-046 (IV / component) {#xfmr-046}
 
 <!-- q:xfmr-046 -->
 
 **Bank verified flag:** true
 
-Arcing in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.2, produces:
+After a through-fault, an ester-filled transformer’s DGA shows new acetylene, along with jumps in hydrogen, methane, ethylene, CO, and CO2. A tech wants to call it paper overheating from the CO2/CO ratio, using mineral-oil rules. What is the better call?
 
-- 0. Only ethane from linolenic acid
-- 1. Hydrogen, the hydrocarbon gases, and the carbon oxides, in proportions that need not match mineral oil **← answer**
-- 2. No acetylene
-- 3. Only carbon dioxide
+- 0. Agree; carbon oxides read the same in ester as in mineral oil, so use that ratio
+- 1. Treat it as possible arcing; confirm soon and weigh testing or inspection **← answer**
+- 2. Ignore it; through-faults always leave some acetylene
+- 3. Call it stray gassing and keep the normal sampling interval
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1 and 5.3.2
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1.3.2, 5.3.2, 6.3, and 6.3.3.1
 
 Reviewer: VERIFIED or FIX
 
-## xfmr-047 (III / component) {#xfmr-047}
+## xfmr-047 (IV / component) {#xfmr-047}
 
 <!-- q:xfmr-047 -->
 
 **Bank verified flag:** true
 
-Overheating an ester liquid, IEEE C57.155-2014 clause 4.1, compared with mineral oil, tends to:
+An ester-filled unit shows CO and CO2 rising fast, along with methane, ethane, and ethylene, and its acid number is up. The lab comment says “cellulose overheating.” What should you check before accepting that?
 
-- 0. Make less methane, ethane, and ethylene, and only at higher temperature
-- 1. Make more methane, ethane, and ethylene, and at lower temperature **← answer**
-- 2. Make no carbon oxides
-- 3. Stop all gas production below 1000 °C
+- 0. Whether the ester is overheating; these gases form cooler than mineral oil, and the acid number fits **← answer**
+- 1. Nothing; carbon oxides always mean paper
+- 2. Whether a partial-discharge source is making the hydrocarbons
+- 3. Whether the sample sat in sunlight, since sunlight is the only source of the carbon oxides in this sample
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1, 4.1.3.3, and 4.1.3.4
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1.3.1 to 4.1.3.4, 5.1, and 6.3.2
 
-Reviewer: neta field ref, Nov 12 2026 — VERIFIED
+Reviewer: VERIFIED or FIX
 
 ## ct-023 (III / component) {#ct-023}
 
@@ -6669,20 +6669,20 @@ IEEE C57.13.1-2017 clause 6.4 uses a DC resistance measurement on a CT secondary
 
 Reviewer: VERIFIED or FIX
 
-## relay-055 (III / systems) {#relay-055}
+## relay-055 (IV / systems) {#relay-055}
 
 <!-- q:relay-055 -->
 
 **Bank verified flag:** true
 
-When one transformer is already energized and a parallel unit is switched in, IEEE C37.91-2021 clause 6.5.3 says the net inrush can:
+Two parallel transformers share one 87 zone. T1 is in service, and the 87 trips when T2 is energized. The event shows little second harmonic. T2 passes its tests and energizes fine with T1 off, and the 87’s harmonic restraint tests good. Most likely cause and fix?
 
-- 0. Look almost sinusoidal, with little second harmonic, so one differential around both units may not restrain **← answer**
-- 1. Always contain more second harmonic than a single transformer
-- 2. Be ignored if the tap changer is on neutral
-- 3. Trip only the lockout, never the 87
+- 0. Sympathetic inrush; give each transformer its own 87 **← answer**
+- 1. An internal fault in T2; keep it out of service
+- 2. CT polarity on T2 is reversed; swap the leads
+- 3. The slope is too low; raise it until energizing rides through
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3
+**Citation:** ANSI/NETA ATS-2025 7.9.1.B.3, item 25 (device 87); ref. IEEE C37.91-2021, clauses 6.5.3 and 7.3.8
 
 Reviewer: VERIFIED or FIX
 

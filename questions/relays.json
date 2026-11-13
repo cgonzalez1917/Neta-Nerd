@@ -799,16 +799,16 @@
     "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "Direct underreaching transfer trip, as IEEE C37.113-2015 uses the term, is built on elements that are:",
+    "question": "A line is protected by a DUTT scheme only. With the remote breaker open for maintenance, you simulate a fault near the remote end, past the local zone 1 reach. What should the test show?",
     "choices": [
-      "Set short of the remote terminal",
-      "Set past the next two lines",
-      "Nondirectional and delayed",
-      "Differential only"
+      "A high-speed trip from a received transfer-trip signal",
+      "No pilot trip; only time-delayed backup clears it",
+      "An instantaneous trip from a local overreaching element",
+      "A block signal that stops every trip, including backup"
     ],
-    "answer": 0,
-    "explanation": "DUTT keys a trip from an underreaching element, the same family as zone 1, so it does not see a fault beyond the remote bus by itself. The transfer trip is what covers the far end quickly. POTT is the overreaching permissive scheme, not this one.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clauses 4.8.7 and 6.3.5.2",
+    "answer": 1,
+    "explanation": "DUTT only trips fast from underreaching elements, either the local one or the far-end one keying a transfer trip. With the remote breaker open, nothing at the far end sees the fault, and the local zone 1 stops short of it. Only the time-delayed backup clears it. The same gap opens if the channel fails, which is why C37.113 treats DUTT mostly as a supplement to another pilot scheme. Test the channel and the backup timers in the same pass.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1.B.3, item 2 (device 21) and 7.9.2.B.5.4; ref. IEEE C37.113-2015, clauses 4.8.7 and 6.3.5.2",
     "verified": true,
     "kb": "relays.md#zones"
   },
@@ -817,16 +817,16 @@
     "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "Permissive overreaching transfer trip differs from direct underreaching transfer trip because POTT:",
+    "question": "End-to-end testing a POTT line: with both breakers closed, a simulated internal fault trips both ends at high speed. With the remote breaker open, the local end trips only on its time-delayed zone. What is the most likely gap?",
     "choices": [
-      "Trips from an underreaching element with no communication",
-      "Uses an overreaching element and needs a permissive from the other end",
-      "Is a dissolved-gas method",
-      "Has no communication channel"
+      "The local overreaching element is set short of the remote bus",
+      "POTT cannot trip with one breaker open, so nothing can be done",
+      "No remote 52b keying or echo, so no permissive is sent",
+      "The local zone 1 timer is set too long"
     ],
-    "answer": 1,
-    "explanation": "The overreaching element can see past the remote bus, so it is not allowed to trip direct. The far end has to permit the trip. DUTT can trip direct because its element is set short of that bus. Both acronyms are in IEEE C37.113-2015 clause 3.3.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 6.3.5.4",
+    "answer": 2,
+    "explanation": "POTT trips only when the local overreaching element picks up and a permissive comes back from the far end. An open remote breaker carries no fault current, so its element never keys the channel unless 52b keying or open-breaker echo does it for it. C37.113 calls for one of those. The both-closed test already proved the reach and the channel. ATS 7.9.2.B.5.3 has you check that logic against the owner\u2019s narrative.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.B.5.3 and B.5.4; ref. IEEE C37.113-2015, clauses 6.3.5.4 and 6.3.5.8",
     "verified": true,
     "kb": "relays.md#zones"
   },
@@ -925,16 +925,16 @@
     "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "For a line terminated in a transformer, IEEE C37.113-2015 clause 5.5.2 prefers the distance relay\u2019s voltages and currents from:",
+    "question": "A line ends in a wye-delta transformer. The distance relay uses the line-side VTs but the transformer low-side CTs, and the setting sheet turns on zero-sequence-compensated ground distance for line ground faults. What do you flag in the settings review?",
     "choices": [
-      "The line side of the transformer",
-      "The low-voltage bus, with no further correction",
-      "The station battery",
-      "A single current transformer on the neutral only"
+      "Low-side CTs miss line zero-sequence, so ground elements are not reliable",
+      "Nothing; reach is measured from the CTs, so the low-side CTs are correct",
+      "Only the 30\u00b0 shift; once that is corrected, ground distance works normally",
+      "Ground distance should overreach the remote bus to make up for it"
     ],
     "answer": 0,
-    "explanation": "Line-side VTs and CTs see the line. Low-side instruments fold in transformer impedance, the wye-delta phase shift, and tap-changer error, and ground distance can underreach because zero-sequence current may not be available. The reach is still measured from wherever the VT actually is.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2",
+    "explanation": "With current taken from the delta side, the line\u2019s zero-sequence current for a line-side ground fault isn\u2019t measured. Compensated ground distance, zero-sequence directional, and ground overcurrent elements on those CTs aren\u2019t dependable. The 30\u00b0 wye-delta shift does need correcting, but that fixes angle, not the missing zero sequence. Reach is measured from the VTs, and zone 1 still must not reach the remote bus. This is why C37.113 prefers line-side CTs and VTs.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.A.8 and 7.9.1.B.3, item 2 (device 21); ref. IEEE C37.113-2015, clauses 5.5.2 and 5.5.4",
     "verified": true,
     "kb": "relays.md#zones"
   },
@@ -979,16 +979,16 @@
     "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "When one transformer is already energized and a parallel unit is switched in, IEEE C37.91-2021 clause 6.5.3 says the net inrush can:",
+    "question": "Two parallel transformers share one 87 zone. T1 is in service, and the 87 trips when T2 is energized. The event shows little second harmonic. T2 passes its tests and energizes fine with T1 off, and the 87\u2019s harmonic restraint tests good. Most likely cause and fix?",
     "choices": [
-      "Look almost sinusoidal, with little second harmonic, so one differential around both units may not restrain",
-      "Always contain more second harmonic than a single transformer",
-      "Be ignored if the tap changer is on neutral",
-      "Trip only the lockout, never the 87"
+      "Sympathetic inrush; give each transformer its own 87",
+      "An internal fault in T2; keep it out of service",
+      "CT polarity on T2 is reversed; swap the leads",
+      "The slope is too low; raise it until energizing rides through"
     ],
     "answer": 0,
-    "explanation": "The two inrushes are on opposite half-cycles, so together they can look like fundamental current. The guide\u2019s remedy is a separate differential for each transformer. ATS 7.9.1 still has you prove the harmonic restraint on each 87 you set.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3",
+    "explanation": "When a unit is switched in beside one already energized, inrush flows in both on opposite half-cycles. The net current into a zone around both can be close to fundamental, so harmonic restraint doesn\u2019t block it, and the event can run long. C37.91 recommends a separate differential for each parallel unit, which also recovers the sensitivity lost by sizing the CTs for both. Reversed polarity would trip on load, and T2\u2019s clean tests argue against a fault.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1.B.3, item 25 (device 87); ref. IEEE C37.91-2021, clauses 6.5.3 and 7.3.8",
     "verified": true,
     "kb": "relays.md#schemes"
   },
