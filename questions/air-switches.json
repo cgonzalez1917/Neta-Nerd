@@ -1,7 +1,7 @@
 [
   {
     "id": "airsw-001",
-    "level": "II",
+    "level": "IV",
     "topic": "air-switches",
     "domain": "component",
     "question": "A station-class disconnecting switch, with no interrupter or arcing attachment, is to be opened. C37.30.1 says to first:",
@@ -19,7 +19,7 @@
   },
   {
     "id": "airsw-002",
-    "level": "II",
+    "level": "IV",
     "topic": "air-switches",
     "domain": "component",
     "question": "After operating a gang-operated air switch, C37.30.1 says you should:",
@@ -37,7 +37,7 @@
   },
   {
     "id": "airsw-003",
-    "level": "III",
+    "level": "IV",
     "topic": "air-switches",
     "domain": "safety",
     "question": "While a switch is opening, the arc has not gone out by the time the blade is about two-thirds of the way open. C37.30.1 says to:",
@@ -55,7 +55,7 @@
   },
   {
     "id": "airsw-004",
-    "level": "II",
+    "level": "IV",
     "topic": "air-switches",
     "domain": "component",
     "question": "Maintaining a de-energized air switch, you find light pitting on the contacts. C37.30.1 suggests:",
@@ -73,7 +73,7 @@
   },
   {
     "id": "airsw-005",
-    "level": "II",
+    "level": "IV",
     "topic": "air-switches",
     "domain": "component",
     "question": "An outdoor air switch is installed at 2,000 m elevation. Under C37.30.1, this matters because:",

@@ -418,10 +418,10 @@
   },
   {
     "id": "relay-024",
-    "level": "II",
+    "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.113-2015 clause 5.5.2 says a non-piloted zone 1 distance element must be set so that it:",
+    "question": "Setting up a test plan for a non-piloted zone 1 distance element, you expect its reach to be set so that it:",
     "choices": [
       "Reaches past the next line",
       "Does not overreach the remote terminal",
@@ -436,7 +436,7 @@
   },
   {
     "id": "relay-025",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 40 is:",
@@ -454,7 +454,7 @@
   },
   {
     "id": "relay-026",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 79 is:",
@@ -472,7 +472,7 @@
   },
   {
     "id": "relay-027",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 81 is:",
@@ -493,7 +493,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.113-2015 clause 4.6 describes zone 2 on a step-distance line relay as:",
+    "question": "On a step-distance line relay you're testing, zone 2 is:",
     "choices": [
       "The instantaneous element that must reach the next bus",
       "Time-delayed protection from the end of zone 1 to the end of the line, and backup if zone 1 fails",
@@ -511,7 +511,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.113-2015 clause 5.5.2 measures distance-relay reach from:",
+    "question": "When you test distance-relay reach, the reach is measured from:",
     "choices": [
       "The current-transformer location only",
       "The voltage-transformer location, with direction set by the current transformers",
@@ -519,7 +519,7 @@
       "The station battery"
     ],
     "answer": 1,
-    "explanation": "The ohms start at the VT. The CT decides which way is forward. Line-side VTs and CTs see the line directly. Low-side instruments add the transformer impedance and the wye-delta shift, which the setting has to include.",
+    "explanation": "The ohms start at the VT. The CT decides which way is forward. Line-side VTs and CTs see the line directly. Low-side instruments add the transformer impedance and the wye-delta shift, which the setting has to include. Source: ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2.",
     "reference": "ANSI/NETA ATS-2025 7.9.1, device 21; ref. IEEE C37.113-2015, clause 5.5.2",
     "verified": true,
     "kb": "relays.md#zones"
@@ -670,10 +670,10 @@
   },
   {
     "id": "relay-038",
-    "level": "II",
+    "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.113-2015 clause 4.4 says the boundary of a protection zone is set by:",
+    "question": "On a protection one-line, the boundary of a relay's protection zone is set by:",
     "choices": [
       "The voltage-transformer nameplate alone",
       "Where the current transformers are, because those currents define the zone",
@@ -688,7 +688,7 @@
   },
   {
     "id": "relay-039",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 24 is:",
@@ -706,7 +706,7 @@
   },
   {
     "id": "relay-040",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 49T is:",
@@ -724,7 +724,7 @@
   },
   {
     "id": "relay-041",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 60 is:",
@@ -742,7 +742,7 @@
   },
   {
     "id": "relay-042",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 64 is:",
@@ -760,7 +760,7 @@
   },
   {
     "id": "relay-043",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 85 is:",
@@ -781,7 +781,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.113-2015 clause 4.6 describes main 1 and main 2 as:",
+    "question": "A line panel has main 1 and main 2 relays. What are they?",
     "choices": [
       "Two names for the same relay",
       "Redundant schemes so one failed component does not remove all protection for that circuit",
@@ -796,7 +796,7 @@
   },
   {
     "id": "relay-045",
-    "level": "III",
+    "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
     "question": "Direct underreaching transfer trip, as IEEE C37.113-2015 uses the term, is built on elements that are:",
@@ -814,7 +814,7 @@
   },
   {
     "id": "relay-046",
-    "level": "III",
+    "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
     "question": "Permissive overreaching transfer trip differs from direct underreaching transfer trip because POTT:",
@@ -832,7 +832,7 @@
   },
   {
     "id": "relay-047",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 50BF is:",
@@ -850,7 +850,7 @@
   },
   {
     "id": "relay-048",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "In the ATS 7.9.1 list, device 46N is:",
@@ -868,7 +868,7 @@
   },
   {
     "id": "relay-049",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "ATS 7.22.1.B.2 tests protective relays on an engine generator:",
@@ -907,7 +907,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.113-2015 clause 4.6 distinguishes local backup from remote backup as:",
+    "question": "On a transmission line scheme, what is the difference between local backup and remote backup?",
     "choices": [
       "Local backup is at the line\u2019s own substations; remote backup is at other substations",
       "Local backup is always zone 3 and remote backup is zone 1",
@@ -915,14 +915,14 @@
       "Remote backup is faster and more selective"
     ],
     "answer": 0,
-    "explanation": "Local backup, including a second scheme at the same terminal, avoids the delay and the loss of selectivity that come with clearing a fault from another station. Remote backup is that other station. Neither one deletes the need to test the settings.",
+    "explanation": "Local backup, including a second scheme at the same terminal, avoids the delay and the loss of selectivity that come with clearing a fault from another station. Remote backup is that other station. Neither one deletes the need to test the settings. Source: ANSI/NETA ATS-2025 7.9.2; ref. IEEE C37.113-2015, clause 4.6.",
     "reference": "ANSI/NETA ATS-2025 7.9.2; ref. IEEE C37.113-2015, clause 4.6",
     "verified": true,
     "kb": "relays.md#zones"
   },
   {
     "id": "relay-052",
-    "level": "III",
+    "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
     "question": "For a line terminated in a transformer, IEEE C37.113-2015 clause 5.5.2 prefers the distance relay\u2019s voltages and currents from:",
@@ -940,10 +940,10 @@
   },
   {
     "id": "relay-053",
-    "level": "II",
+    "level": "III",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "IEEE C37.91-2021 clause 7.3.4.2 uses harmonic restraint on a transformer differential so that:",
+    "question": "Why does a transformer differential relay use harmonic restraint?",
     "choices": [
       "The relay can be set more sensitively without tripping on inrush",
       "Inrush is ignored by deleting the slope",
@@ -958,10 +958,10 @@
   },
   {
     "id": "relay-054",
-    "level": "II",
+    "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "IEEE C37.91-2021 clause 6.5.2 says false differential current gets worse when:",
+    "question": "When does false differential current on a transformer differential get worse?",
     "choices": [
       "The CT ratios match exactly and the tap changer never moves",
       "CT ratios cannot be matched, and an on-load tap changer moves the ratio further",
@@ -976,7 +976,7 @@
   },
   {
     "id": "relay-055",
-    "level": "III",
+    "level": "IV",
     "topic": "protective-relays",
     "domain": "systems",
     "question": "When one transformer is already energized and a parallel unit is switched in, IEEE C37.91-2021 clause 6.5.3 says the net inrush can:",
@@ -997,7 +997,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "For a delta-wye transformer, IEEE C37.91-2021 clause 6.4.3 uses delta-connected CTs on the wye side to:",
+    "question": "On an electromechanical differential for a delta-wye transformer, the wye-side CTs are connected in delta to:",
     "choices": [
       "Increase the CT burden to three times on purpose, with no other reason",
       "Keep zero-sequence current out of the differential when a ground fault is on the wye circuit",
@@ -1030,7 +1030,7 @@
   },
   {
     "id": "relay-058",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "systems",
     "question": "NFPA 70B-2026 adjusts a maintenance interval by:",
@@ -1228,7 +1228,7 @@
   },
   {
     "id": "relay-069",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "Which check does NFPA 70B-2026 Table 35.3.5 aim at a microprocessor relay rather than at an electromechanical relay?",
@@ -1246,7 +1246,7 @@
   },
   {
     "id": "relay-070",
-    "level": "III",
+    "level": "II",
     "topic": "protective-relays",
     "domain": "component",
     "question": "NFPA 70B-2026 Table 35.3.5, on protective-relay tests, tells you to:",
@@ -1285,7 +1285,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "In IEEE C37.2-2022, device number 52 is:",
+    "question": "On a one-line diagram, device number 52 is:",
     "choices": [
       "An ac circuit breaker",
       "A dc circuit breaker",
@@ -1293,7 +1293,7 @@
       "A lockout relay"
     ],
     "answer": 0,
-    "explanation": "52 is an ac breaker, which closes and interrupts an ac power circuit in normal service and interrupts it under fault. A dc breaker is 72, a line switch is 89, and a lockout relay is 86.",
+    "explanation": "52 is an ac breaker, which closes and interrupts an ac power circuit in normal service and interrupts it under fault. A dc breaker is 72, a line switch is 89, and a lockout relay is 86. Source: IEEE C37.2-2022, 3.1.52.",
     "reference": "IEEE C37.2-2022, 3.1.52",
     "verified": true,
     "kb": "relays.md#numbers"
@@ -1303,7 +1303,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "IEEE C37.2-2022 describes device 86 as a device that:",
+    "question": "On a relay schematic, device 86 is a device that:",
     "choices": [
       "Trips and holds the equipment out of service until an operator resets it, locally or remotely",
       "Resets itself as soon as the fault clears",
@@ -1311,7 +1311,7 @@
       "Recloses the breaker after a time delay"
     ],
     "answer": 0,
-    "explanation": "The lockout relay's job is to keep the equipment off until a person resets it. A self-resetting trip relay is device 94, and reclosing is device 79.",
+    "explanation": "The lockout relay's job is to keep the equipment off until a person resets it. A self-resetting trip relay is device 94, and reclosing is device 79. Source: IEEE C37.2-2022, 3.1.86.",
     "reference": "IEEE C37.2-2022, 3.1.86",
     "verified": true,
     "kb": "relays.md#numbers"
@@ -1321,7 +1321,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "On a one-line diagram, device 89 under IEEE C37.2-2022 is:",
+    "question": "On a one-line diagram, device 89 is:",
     "choices": [
       "A line switch, such as a disconnect, load-interrupter, or isolating switch, usually numbered only when it is motor operated or has electrical accessories",
       "A frequency relay",
@@ -1339,7 +1339,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "What separates device 94 from device 86 in IEEE C37.2-2022?",
+    "question": "On a breaker trip schematic, what separates device 94 from device 86?",
     "choices": [
       "94 is a self-resetting tripping or trip-free relay. 86 holds the equipment locked out until an operator resets it",
       "94 is hand-reset, and 86 is self-resetting",
@@ -1347,7 +1347,7 @@
       "94 is a dc breaker, and 86 is an ac breaker"
     ],
     "answer": 0,
-    "explanation": "94 trips a breaker or contactor, lets other devices trip it immediately, or blocks immediate reclosing, and then resets on its own. 86 latches and requires a reset. Mixing them up changes how the scheme behaves after a trip.",
+    "explanation": "94 trips a breaker or contactor, lets other devices trip it immediately, or blocks immediate reclosing, and then resets on its own. 86 latches and requires a reset. Mixing them up changes how the scheme behaves after a trip. Source: IEEE C37.2-2022, 3.1.86 and 3.1.94.",
     "reference": "IEEE C37.2-2022, 3.1.86 and 3.1.94",
     "verified": true,
     "kb": "relays.md#numbers"
@@ -1357,7 +1357,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "Device 62 in IEEE C37.2-2022 is a time-delay stopping or opening relay. Its own example of 62 with a suffix, 62BF, is:",
+    "question": "Device 62 is a time-delay stopping or opening relay. On a relay drawing, 62BF is:",
     "choices": [
       "A battery-float alarm",
       "A bus-fault differential",
@@ -1375,7 +1375,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "Under IEEE C37.2-2022, a 52a auxiliary contact on a power circuit breaker is:",
+    "question": "On a power circuit breaker schematic, a 52a auxiliary contact is:",
     "choices": [
       "Open when the breaker is open (its reference position) and closed when the breaker is closed",
       "Closed when the breaker is open",
@@ -1383,7 +1383,7 @@
       "A contact that opens only on a trip"
     ],
     "answer": 0,
-    "explanation": "An 'a' contact is open in the device's standard reference position and closes when the device changes state. A 'b' contact does the opposite. For a power circuit breaker, the reference position is main contacts open, so 52a follows the main contacts and 52b is the inverse.",
+    "explanation": "An 'a' contact is open in the device's standard reference position and closes when the device changes state. A 'b' contact does the opposite. For a power circuit breaker, the reference position is main contacts open, so 52a follows the main contacts and 52b is the inverse. Source: IEEE C37.2-2022, 4.1 and Table 1.",
     "reference": "IEEE C37.2-2022, 4.1 and Table 1",
     "verified": true,
     "kb": "relays.md#numbers"
@@ -1393,7 +1393,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "On a drawout breaker schematic, IEEE C37.2-2022 uses the suffixes TOC and MOC to mean:",
+    "question": "On a drawout breaker schematic, the suffixes TOC and MOC mean:",
     "choices": [
       "Truck-operated contact (on the housing, changes with rack position) and mechanism-operated contact (driven by the breaker mechanism)",
       "Time overcurrent and maximum overcurrent",
@@ -1401,7 +1401,7 @@
       "Top of cubicle and middle of cubicle"
     ],
     "answer": 0,
-    "explanation": "Both are auxiliary switches mounted on the stationary housing. TOC switches change with the breaker truck's position. MOC switches are moved by the breaker's operating mechanism. Neither is the breaker's own a/b auxiliary switch, which is a common troubleshooting mix-up.",
+    "explanation": "Both are auxiliary switches mounted on the stationary housing. TOC switches change with the breaker truck's position. MOC switches are moved by the breaker's operating mechanism. Neither is the breaker's own a/b auxiliary switch, which is a common troubleshooting mix-up. Source: IEEE C37.2-2022, 3.5.4 (TOC and MOC notes).",
     "reference": "IEEE C37.2-2022, 3.5.4 (TOC and MOC notes)",
     "verified": true,
     "kb": "relays.md#numbers"
@@ -1411,7 +1411,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "In IEEE 315, the surge (lightning) arrester symbol sits in the same item group as:",
+    "question": "On a one-line drawing, the surge (lightning) arrester symbol belongs to the same family as:",
     "choices": [
       "Fuse symbols",
       "Current transformer symbols",
@@ -1429,7 +1429,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "On an IEEE 315 battery symbol with no polarity marks, the positive terminal is:",
+    "question": "On a schematic battery symbol with no polarity marks, the positive terminal is:",
     "choices": [
       "The short line",
       "Whichever side is drawn on top",
@@ -1447,7 +1447,7 @@
     "level": "II",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "An IEEE 315 drawing shows a chassis or frame connection symbol rather than the general ground symbol. That tells you:",
+    "question": "A schematic shows a chassis or frame connection symbol rather than the general ground symbol. That tells you:",
     "choices": [
       "The conductor ties to a frame or chassis that may be at substantial potential relative to earth",
       "The point is bonded directly to earth",
@@ -1459,5 +1459,383 @@
     "reference": "IEEE 315-1975 (R1993), 3.9.1, 3.9.1.2 and 3.9.2",
     "verified": true,
     "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-082",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "theory",
+    "question": "During energization tests on a transformer differential, the magnetizing inrush current is best described as:",
+    "choices": [
+      "A sine wave with no harmonics",
+      "Rich in harmonics, particularly the second, and not necessarily rich in every phase",
+      "Only a fifth-harmonic overexcitation problem",
+      "A differential current that restraint cannot see"
+    ],
+    "answer": 1,
+    "explanation": "Inrush violates the idea that current in equals current out, and it is full of harmonics, especially the second. Those harmonics are not always large in every phase. ATS 7.9.1 tells you to determine harmonic restraint on an 87. This clause is why that restraint exists. A scheme that only blocks during the instant of energizing is not enough, because inrush also follows faults and out-of-step closing.",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.5.3",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-083",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A generator one-line shows a relay tagged 38 wired to RTDs on the shaft. That device is watching:",
+    "choices": [
+      "Stator winding temperature",
+      "Bearing temperature or other bearing trouble",
+      "Field current",
+      "Phase sequence"
+    ],
+    "answer": 1,
+    "explanation": "Device 38 is the bearing protective device. It acts on high bearing temperature or other bearing problems such as wear. Winding temperature is device 49, field trouble is 40, and phase sequence is 47. Source: IEEE C37.2-2022, 3.1.38.",
+    "reference": "IEEE C37.2-2022, 3.1.38",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-084",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a transformer control drawing, one thermal device is numbered 49 and another is numbered 26. What is the difference?",
+    "choices": [
+      "49 is for the load-carrying winding; 26 is for the apparatus or a liquid or other medium, such as top oil",
+      "49 is for the liquid; 26 is for the winding",
+      "They mean the same thing; the number depends on the manufacturer",
+      "49 is an alarm only and 26 always trips"
+    ],
+    "answer": 0,
+    "explanation": "49 is the machine or transformer thermal relay, tied to the temperature of a load-carrying winding. 26 is the apparatus thermal device for the equipment itself or a liquid or other medium, which is why a top-oil gauge is a 26. Source: IEEE C37.2-2022, 3.1.26 and 3.1.49.",
+    "reference": "IEEE C37.2-2022, 3.1.26 and 3.1.49",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-085",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A substation panel has a horn-and-light relay numbered 74 and a window-type alarm panel numbered 30. Device 30 is:",
+    "choices": [
+      "A self-resetting alarm relay",
+      "A bearing alarm",
+      "An annunciator: a manually reset device that gives separate visual indications when protective devices operate",
+      "A trip-circuit monitor"
+    ],
+    "answer": 2,
+    "explanation": "30 is the annunciator relay. It is not reset automatically and shows separate indications for each protective device, and it can be set up to lock out. 74 is an alarm relay other than an annunciator. Source: IEEE C37.2-2022, 3.1.30 and 3.1.74.",
+    "reference": "IEEE C37.2-2022, 3.1.30 and 3.1.74",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-086",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A pump motor relay has an element numbered 37 enabled. It trips when:",
+    "choices": [
+      "Current or power drops below its set value, for example a pump running dry",
+      "Current rises above its set value with no delay",
+      "Voltage drops below its set value",
+      "Frequency drops below its set value"
+    ],
+    "answer": 0,
+    "explanation": "37 is undercurrent or underpower. It acts when current or power falls below a set value, which is how loss-of-load on a pump is caught. Undervoltage is 27, instantaneous overcurrent is 50, and underfrequency is 81. Source: IEEE C37.2-2022, 3.1.37.",
+    "reference": "IEEE C37.2-2022, 3.1.37",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-087",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "The station battery feeds the dc panel through a breaker tagged 72 on the drawings. Device 72 is:",
+    "choices": [
+      "An ac circuit breaker",
+      "A dc circuit breaker",
+      "A dc overcurrent relay",
+      "A load-resistor contactor"
+    ],
+    "answer": 1,
+    "explanation": "72 is the dc circuit breaker, used to close and interrupt a dc power circuit and to clear dc faults. The ac breaker is 52, and a dc overcurrent relay is 76. Source: IEEE C37.2-2022, 3.1.72.",
+    "reference": "IEEE C37.2-2022, 3.1.72 and 3.1.76",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-088",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A local/remote selector switch on a breaker control panel, which changes which control circuit is in charge, would be numbered:",
+    "choices": [
+      "43",
+      "52",
+      "86",
+      "94"
+    ],
+    "answer": 0,
+    "explanation": "43 is the manual transfer or selector device. It is operated by hand and moves control or potential circuits to change how the equipment is operated, such as local versus remote or auto versus manual. Source: IEEE C37.2-2022, 3.1.43.",
+    "reference": "IEEE C37.2-2022, 3.1.43",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-089",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A two-position switch on the panel allows closing the breaker in one position and blocks it in the other. Its device number is:",
+    "choices": [
+      "3",
+      "25",
+      "69",
+      "79"
+    ],
+    "answer": 2,
+    "explanation": "69 is the permissive control device: one position allows the breaker or equipment to be closed or started, the other prevents it. 3 is a checking or interlocking relay, 25 is synchronism check, and 79 is reclosing. Source: IEEE C37.2-2022, 3.1.69.",
+    "reference": "IEEE C37.2-2022, 3.1.69",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-090",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A generator relay has a 78 element enabled. It is meant to act on:",
+    "choices": [
+      "Loss of field",
+      "An unstable power swing (out of step), or a set phase-angle difference",
+      "Reverse power",
+      "Overfrequency"
+    ],
+    "answer": 1,
+    "explanation": "78 is the phase-angle measuring relay. It trips for an unstable power swing or works at a set angle between two voltages, two currents, or a voltage and a current. Loss of field is 40, reverse power is 32, and frequency is 81. Source: IEEE C37.2-2022, 3.1.78.",
+    "reference": "IEEE C37.2-2022, 3.1.78",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-091",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A ground overcurrent relay is fed from a CT on the transformer neutral-to-ground connection. Another is fed from the residual of the three phase CTs. Which suffixes fit?",
+    "choices": [
+      "Neutral CT: 51G. Residual: 51N",
+      "Neutral CT: 51N. Residual: 51G",
+      "Both are 51G",
+      "Both are 51N"
+    ],
+    "answer": 0,
+    "explanation": "The suffix G is preferred when the measured quantity is in the path to ground, like a CT on the neutral-to-ground lead. N is preferred when the element is in the residual of the phase CTs, across a broken delta, or derived inside the relay from the phase quantities. Source: IEEE C37.2-2022, 3.5, footnote to suffixes G and N.",
+    "reference": "IEEE C37.2-2022, 3.5 (suffixes G and N, footnote)",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-092",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a voltage regulator control drawing, the regulating device that holds voltage between close limits carries the number:",
+    "choices": [
+      "59",
+      "27",
+      "90",
+      "60"
+    ],
+    "answer": 2,
+    "explanation": "90 is the regulating device. It holds a quantity such as voltage, current, power, speed, frequency, or temperature at a value or between close limits. 59 and 27 are over- and undervoltage, and 60 is voltage or current balance. Source: IEEE C37.2-2022, 3.1.90.",
+    "reference": "IEEE C37.2-2022, 3.1.90",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-093",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A feeder relay label reads 50/51. That means:",
+    "choices": [
+      "One device doing two jobs: instantaneous and time overcurrent",
+      "The pickup is 50 A instantaneous and 51 A time delay",
+      "Relay 50 is backed up by relay 51 in a separate case",
+      "The 51 element is half the 50 setting"
+    ],
+    "answer": 0,
+    "explanation": "When one device does two important jobs, both numbers can be shown with a slash. 50/51 is a single device with an instantaneous element and an inverse-time element. The numbers are functions, not settings. Source: IEEE C37.2-2022, 3.7.",
+    "reference": "IEEE C37.2-2022, 3.7",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-094",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "You are checking a schematic during a functional test. Unless a note says otherwise, the relay and switch contacts are drawn:",
+    "choices": [
+      "In the state they take when the actuating device is de-energized or not operated",
+      "In their normal running state with the breaker closed",
+      "In whatever state the drafter chose",
+      "In the energized state"
+    ],
+    "answer": 0,
+    "explanation": "Standard practice draws each contact in the condition it has when its actuating device is de-energized or not operated. If a drawing shows contacts in the operated state, it is supposed to carry a clarifying note. Source: IEEE 315-1975 (R1993), 4.3.",
+    "reference": "IEEE 315-1975 (R1993), 4.3",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-095",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "Checking CT polarity on a drawing, you notice a tapped CT secondary. How many polarity marks should that secondary winding carry?",
+    "choices": [
+      "One per tap",
+      "One for the whole winding, near one end",
+      "Two: one at each end",
+      "None, because taps make polarity meaningless"
+    ],
+    "answer": 1,
+    "explanation": "Polarity marks go near one end of each coil or winding, and only one mark per winding is allowed, even when it is tapped. Extra marks on taps are a drawing error. Source: IEEE 315-1975 (R1993), 1.6.3 note B.",
+    "reference": "IEEE 315-1975 (R1993), 1.6.3",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "relay-096",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a fuse symbol where one end is drawn with a thicker line, the thick end shows:",
+    "choices": [
+      "The load side",
+      "The supply side",
+      "A current-limiting fuse",
+      "A fuse with an alarm contact"
+    ],
+    "answer": 1,
+    "explanation": "The fuse symbol can mark the supply side with a thick line. A fuse with an alarm contact is a separate symbol. Source: IEEE 315-1975 (R1993), 9.1.1.1 and 9.1.2.",
+    "reference": "IEEE 315-1975 (R1993), 9.1.1.1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-097",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "A meter circle on a generator synchronizing panel drawing is labeled SY. That instrument is a:",
+    "choices": [
+      "Synchroscope",
+      "System voltmeter",
+      "Sync-check relay",
+      "Sequence-of-events recorder"
+    ],
+    "answer": 0,
+    "explanation": "Meter circles carry letters that name the instrument. SY is the synchroscope. A sync-check relay is device 25, which is a relay function, not a meter. Source: IEEE 315-1975 (R1993), 12.1, note A.",
+    "reference": "IEEE 315-1975 (R1993), 12.1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-098",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "On a one-line diagram, a protective relay is drawn as a circle with a number inside, such as 87. The number is:",
+    "choices": [
+      "The relay's catalog number",
+      "The device function number, which the symbol rules allow inside or next to the circle",
+      "The CT ratio",
+      "The setting in amps"
+    ],
+    "answer": 1,
+    "explanation": "Relay protective-function symbols can show the function with the device function number placed in the circle or next to it. That is why 50, 51, 87, and so on appear in circles on one-lines. Source: IEEE 315-1975 (R1993), 9.5.1.",
+    "reference": "IEEE 315-1975 (R1993), 9.5.1",
+    "verified": true,
+    "kb": "relays.md#numbers"
+  },
+  {
+    "id": "relay-099",
+    "level": "II",
+    "topic": "protective-relays",
+    "domain": "component",
+    "question": "In the symbol standard used for one-lines, the network protector:",
+    "choices": [
+      "Has its own symbol, listed with the circuit breaker symbols",
+      "Uses the fuse symbol",
+      "Uses the disconnect switch symbol",
+      "Has no symbol and is shown as a box with text"
+    ],
+    "answer": 0,
+    "explanation": "The circuit breaker item group includes a separate network protector symbol, alongside the general breaker and the low-voltage air breaker symbols. Source: IEEE 315-1975 (R1993), 9.4.3.",
+    "reference": "IEEE 315-1975 (R1993), 9.4.3",
+    "verified": true,
+    "kb": "apparatus.md#network"
+  },
+  {
+    "id": "relay-100",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "During acceptance of a substation automation system with redundant communication paths, what does ATS require for the links?",
+    "choices": [
+      "Only that the primary link is up",
+      "That links are operational and error free, and that failover to the redundant link is function tested, with failover time per the manufacturer",
+      "A hipot of the fiber",
+      "Only a visual check of the cabling"
+    ],
+    "answer": 1,
+    "explanation": "ATS has you verify every communication link is working and error free and function-test the failover of redundant links. Failover times are judged against the manufacturer's published data. Source: ANSI/NETA ATS-2025 7.23.B.4 and D.4.",
+    "reference": "ANSI/NETA ATS-2025 7.23.B.4 and D.4",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-101",
+    "level": "III",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "How does ATS have you prove the digital outputs of an RTU or automation controller?",
+    "choices": [
+      "By reading the output status bit on the HMI",
+      "By operating the controlled device with each output",
+      "By measuring output contact resistance",
+      "By checking the settings file"
+    ],
+    "answer": 1,
+    "explanation": "Seeing a status bit change is not enough. ATS has you verify each digital output by operating the device it controls, and outputs must work as designed. Source: ANSI/NETA ATS-2025 7.23.B.3 and D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.23.B.3 and D.3",
+    "verified": true,
+    "kb": "relays.md#testing"
+  },
+  {
+    "id": "relay-102",
+    "level": "IV",
+    "topic": "protective-relays",
+    "domain": "systems",
+    "question": "Two static (solid-state) overcurrent relays are coordinated in series without field calibration. Per IEEE 242-2001, what coordinating time interval range is reasonable, and why is it smaller than for electromechanical relays?",
+    "choices": [
+      "0.10 s to 0.15 s; breaker time is ignored",
+      "0.20 s to 0.30 s; there is no disk overtravel",
+      "0.35 s to 0.50 s; static relays are less accurate",
+      "1.0 s; static relays need extra margin"
+    ],
+    "answer": 1,
+    "explanation": "Table 15-1 builds the CTI from breaker opening time, relay overtravel, and tolerance: 0.35 s for electromechanical relays and 0.25 s for static relays, which have no overtravel. The guide says static relays allow 0.20 s to 0.30 s, and 0.30 s is a widely used average for field-tested electromechanical systems. Source: IEEE 242-2001, 15.5 and Table 15-1.",
+    "reference": "IEEE 242-2001, 15.5 and Table 15-1",
+    "verified": true,
+    "kb": "relays.md#testing"
   }
 ]

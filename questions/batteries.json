@@ -163,7 +163,7 @@
   },
   {
     "id": "batt-010",
-    "level": "III",
+    "level": "II",
     "topic": "batteries",
     "domain": "systems",
     "question": "In NFPA 70B-2026 Table 36.2, vented lead-acid individual float voltage and connection resistance are on a shorter interval than performance. Those two intervals, conditions 1, 2, and 3, are:",
@@ -181,7 +181,7 @@
   },
   {
     "id": "batt-011",
-    "level": "III",
+    "level": "II",
     "topic": "batteries",
     "domain": "component",
     "question": "In NFPA 70B-2026 Table 36.3.5, which test is only for valve-regulated lead-acid cells?",
@@ -199,7 +199,7 @@
   },
   {
     "id": "batt-012",
-    "level": "III",
+    "level": "II",
     "topic": "batteries",
     "domain": "systems",
     "question": "Valve-regulated lead-acid performance in NFPA 70B-2026 Table 36.2, conditions 1, 2, and 3, is:",
@@ -220,7 +220,7 @@
     "level": "II",
     "topic": "batteries",
     "domain": "component",
-    "question": "Which check belongs on the monthly IEEE 450 inspection of a vented lead-acid battery, not only on the yearly one?",
+    "question": "Which check belongs on the monthly inspection of a vented lead-acid battery, not only on the yearly one?",
     "choices": [
       "Float voltage at the battery terminals and charger output current and voltage",
       "Cell-to-cell and terminal connection resistance",
@@ -228,7 +228,7 @@
       "Structural integrity of the rack"
     ],
     "answer": 0,
-    "explanation": "The monthly list covers terminal float voltage, charger output, electrolyte level, cracks or leaks, corrosion, ambient temperature, ventilation, pilot cells, and unintentional grounds. Connection resistance, rack integrity, and the detailed cell-condition check are added in the yearly inspection.",
+    "explanation": "The monthly list covers terminal float voltage, charger output, electrolyte level, cracks or leaks, corrosion, ambient temperature, ventilation, pilot cells, and unintentional grounds. Connection resistance, rack integrity, and the detailed cell-condition check are added in the yearly inspection. Source: IEEE 450-2020, 5.2.2 and 5.2.4.",
     "reference": "IEEE 450-2020, 5.2.2 and 5.2.4",
     "verified": true,
     "kb": "batteries.md#flooded"
@@ -238,7 +238,7 @@
     "level": "II",
     "topic": "batteries",
     "domain": "component",
-    "question": "Quarterly, IEEE 450 has you record electrolyte temperature on a representative sample of cells. On a 120-cell string, that is about:",
+    "question": "Quarterly, you record electrolyte temperature on a representative sample of cells. On a 120-cell string, that is about:",
     "choices": [
       "6 cells",
       "60 cells",
@@ -246,7 +246,7 @@
       "Every cell"
     ],
     "answer": 2,
-    "explanation": "The quarterly sample is 10% of the cells, such as every tenth cell. 10% of 120 is 12. Use the same cells each time so the readings trend.",
+    "explanation": "The quarterly sample is 10% of the cells, such as every tenth cell. 10% of 120 is 12. Use the same cells each time so the readings trend. Source: IEEE 450-2020, 5.2.3 item b).",
     "reference": "IEEE 450-2020, 5.2.3 item b)",
     "verified": true,
     "kb": "batteries.md#flooded"
@@ -256,16 +256,16 @@
     "level": "II",
     "topic": "batteries",
     "domain": "component",
-    "question": "An intercell connection read 20 µΩ at installation and reads 25 µΩ now. IEEE 450 says:",
+    "question": "An intercell connection read 20 \u00b5\u03a9 at installation and reads 25 \u00b5\u03a9 now. What should you do?",
     "choices": [
-      "No action, because anything under 50 µΩ is fine",
+      "No action, because anything under 50 \u00b5\u03a9 is fine",
       "Replace the cell",
       "Equalize the battery and recheck in a year",
       "Retorque and retest, because it is more than 20% above the installation value"
     ],
     "answer": 3,
-    "explanation": "25 µΩ is 25% above the 20 µΩ baseline, which is over the 20% trigger (or over any ceiling the manufacturer set). Retorque and retest. If it stays high, take the joint apart, clean it, reassemble it, and test again.",
-    "reference": "IEEE 450-2020, 5.3.2 item c)",
+    "explanation": "25 \u00b5\u03a9 is 25% above the 20 \u00b5\u03a9 baseline, which is over the 20% trigger (or over any ceiling the manufacturer set). Retorque and retest. If it stays high, take the joint apart, clean it, reassemble it, and test again. Source: ANSI/NETA ATS-2025 7.18.1.1.B.4; ref. IEEE 450-2020, 5.3.2 item c).",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.B.4; ref. IEEE 450-2020, 5.3.2 item c)",
     "verified": true,
     "kb": "batteries.md#flooded"
   },
@@ -274,7 +274,7 @@
     "level": "III",
     "topic": "batteries",
     "domain": "component",
-    "question": "There is no installation baseline and no manufacturer value. Connections average 50 µΩ, and one reads 56 µΩ. IEEE 450 says:",
+    "question": "There's no installation baseline and no manufacturer value. Connections average 50 \u00b5\u03a9, and one reads 56 \u00b5\u03a9. What should you do?",
     "choices": [
       "Leave it, because it is within 20% of the average",
       "Replace the connector immediately",
@@ -282,8 +282,8 @@
       "Retorque and retest it, because it is more than 10% above the average"
     ],
     "answer": 3,
-    "explanation": "With no baseline and no manufacturer number, the screen is 10% above the average of the string's connections. 56 is 12% above 50, so it gets retorqued and retested. The 20% figure applies only when you have an installation value to compare against.",
-    "reference": "IEEE 450-2020, 5.3.2 item c)",
+    "explanation": "With no baseline and no manufacturer number, the screen is 10% above the average of the string's connections. 56 is 12% above 50, so it gets retorqued and retested. The 20% figure applies only when you have an installation value to compare against. Source: ANSI/NETA ATS-2025 7.18.1.1.B.4; ref. IEEE 450-2020, 5.3.2 item c).",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.B.4; ref. IEEE 450-2020, 5.3.2 item c)",
     "verified": true,
     "kb": "batteries.md#flooded"
   },
@@ -292,7 +292,7 @@
     "level": "II",
     "topic": "batteries",
     "domain": "component",
-    "question": "IEEE 450 recommends replacing a vented lead-acid battery when its tested capacity drops below:",
+    "question": "A vented lead-acid battery should be replaced when its tested capacity drops below:",
     "choices": [
       "90% of the manufacturer's rating",
       "80% of the manufacturer's rating",
@@ -301,7 +301,7 @@
     ],
     "answer": 1,
     "explanation": "Below 80% capacity, deterioration is speeding up, so the guide recommends replacement. It suggests doing so within a year at most, and sooner if the rate-adjusted method was used. Ninety percent is the floor for a new cell at acceptance, not the replacement trigger.",
-    "reference": "IEEE 450-2020, Clause 8",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.B.6; ref. IEEE 450-2020, Clause 8",
     "verified": true,
     "kb": "batteries.md#flooded"
   },
@@ -310,7 +310,7 @@
     "level": "III",
     "topic": "batteries",
     "domain": "component",
-    "question": "A battery has a 20-year expected service life and shows no degradation. IEEE 450 recommends the interval between performance tests be no more than:",
+    "question": "A battery has a 20-year expected service life and shows no degradation. The interval between performance tests should be no more than:",
     "choices": [
       "2 years",
       "5 years",
@@ -318,7 +318,7 @@
       "1 year"
     ],
     "answer": 1,
-    "explanation": "The recommended performance-test interval is no more than 25% of expected service life, and 25% of 20 years is 5 years. Testing goes to annual once the battery shows degradation or reaches 85% of its expected life (with a two-year allowance if capacity is still at or above 100% of rating).",
+    "explanation": "The recommended performance-test interval is no more than 25% of expected service life, and 25% of 20 years is 5 years. Testing goes to annual once the battery shows degradation or reaches 85% of its expected life (with a two-year allowance if capacity is still at or above 100% of rating). Source: IEEE 450-2020, 6.3 item c).",
     "reference": "IEEE 450-2020, 6.3 item c)",
     "verified": true,
     "kb": "batteries.md#flooded"
@@ -328,7 +328,7 @@
     "level": "III",
     "topic": "batteries",
     "domain": "component",
-    "question": "Under IEEE 450, a battery is treated as showing signs of degradation, and goes to annual performance testing, when:",
+    "question": "A battery is treated as showing signs of degradation, and goes to annual performance testing, when:",
     "choices": [
       "Capacity has dropped more than 10% from the previous performance test, or is below 90% of the manufacturer's rating",
       "Any single cell float voltage is 0.01 V low",
@@ -346,7 +346,7 @@
     "level": "II",
     "topic": "batteries",
     "domain": "theory",
-    "question": "A time-adjusted performance test starts at 25 °C, where the temperature factor is 1.000. The rated time to end voltage is 3.0 h, and the battery reaches end voltage at 2.7 h. Capacity is:",
+    "question": "A time-adjusted performance test starts at 25 \u00b0C, where the temperature factor is 1.000. The rated time to end voltage is 3.0 h, and the battery reaches end voltage at 2.7 h. Capacity is:",
     "choices": [
       "111%",
       "70%",
@@ -354,8 +354,8 @@
       "90%"
     ],
     "answer": 3,
-    "explanation": "Time-adjusted capacity is actual time divided by rated time (times the temperature factor, which is 1 at 25 °C), × 100. 2.7 / 3.0 = 0.90, or 90%. Flipping the ratio gives 111%.",
-    "reference": "IEEE 450-2020, 7.4.2.2 Equation (1) and Table 1",
+    "explanation": "Time-adjusted capacity is actual time divided by rated time (times the temperature factor, which is 1 at 25 \u00b0C), \u00d7 100. 2.7 / 3.0 = 0.90, or 90%. Flipping the ratio gives 111%.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.B.6; ref. IEEE 450-2020, 7.4.2.2 Equation (1) and Table 1",
     "verified": true,
     "kb": "batteries.md#flooded"
   },
@@ -372,8 +372,8 @@
       "264 V"
     ],
     "answer": 0,
-    "explanation": "The test ends when terminal voltage reaches the minimum average volts per cell times the number of cells: 120 × 1.75 = 210 V. A 2.0 V nominal cell gives 240 V, which is not the end point.",
-    "reference": "IEEE 450-2020, 7.5 item d)",
+    "explanation": "The test ends when terminal voltage reaches the minimum average volts per cell times the number of cells: 120 \u00d7 1.75 = 210 V. A 2.0 V nominal cell gives 240 V, which is not the end point.",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.B.6; ref. IEEE 450-2020, 7.5 item d)",
     "verified": true,
     "kb": "batteries.md#flooded"
   },
@@ -382,7 +382,7 @@
     "level": "II",
     "topic": "batteries",
     "domain": "component",
-    "question": "Before a capacity test, the battery was given an equalizing charge. IEEE 450 says it should then be on float for at least how long before the discharge starts?",
+    "question": "Before a capacity test, the battery was given an equalizing charge. How long should it then float before the discharge starts?",
     "choices": [
       "1 h",
       "72 h",
@@ -390,8 +390,8 @@
       "No wait is needed after an equalize"
     ],
     "answer": 1,
-    "explanation": "The initial conditions are: equalize if the manufacturer recommends it, then float for at least 72 hours. After that, check connections, record float current, cell voltages, and temperature on 10% or more of the cells, and isolate the battery from critical loads.",
-    "reference": "IEEE 450-2020, 7.2 item a)",
+    "explanation": "The initial conditions are: equalize if the manufacturer recommends it, then float for at least 72 hours. After that, check connections, record float current, cell voltages, and temperature on 10% or more of the cells, and isolate the battery from critical loads. Source: ANSI/NETA ATS-2025 7.18.1.1.B.6; ref. IEEE 450-2020, 7.2 item a).",
+    "reference": "ANSI/NETA ATS-2025 7.18.1.1.B.6; ref. IEEE 450-2020, 7.2 item a)",
     "verified": true,
     "kb": "batteries.md#flooded"
   },
@@ -400,7 +400,7 @@
     "level": "II",
     "topic": "batteries",
     "domain": "component",
-    "question": "Float current on a vented lead-acid string is steady and in the normal range. IEEE 450 says float current does NOT confirm:",
+    "question": "Float current on a vented lead-acid string is steady and in the normal range. What does float current NOT confirm?",
     "choices": [
       "That the intercell connections are sound",
       "That the charger is working",
@@ -408,7 +408,7 @@
       "That the battery has returned to full charge after a discharge"
     ],
     "answer": 0,
-    "explanation": "Stabilized float current indicates full charge, charger operation, and an unbroken string. It cannot show whether individual connections are in good shape, which is why connection resistance is measured separately. A float current of zero can mean a charger failure or an open string.",
+    "explanation": "Stabilized float current indicates full charge, charger operation, and an unbroken string. It cannot show whether individual connections are in good shape, which is why connection resistance is measured separately. A float current of zero can mean a charger failure or an open string. Source: IEEE 450-2020, 5.5.",
     "reference": "IEEE 450-2020, 5.5",
     "verified": true,
     "kb": "batteries.md#flooded"
@@ -428,6 +428,438 @@
     "answer": 1,
     "explanation": "The modified performance test has to prove the battery as found can carry the duty cycle, so cells cannot be jumpered out during that part. Once the duty cycle is satisfied, bypassing a weak cell for the rest of the capacity portion is allowed.",
     "reference": "IEEE 450-2020, 6.5",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-025",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Installing a vented lead-acid string, interunit connections average 40 \u00b5\u03a9. By IEEE 484-2019, which reading flags a connection to be remade?",
+    "choices": [
+      "Anything over 40 \u00b5\u03a9",
+      "Anything over 44 \u00b5\u03a9",
+      "Anything over 45 \u00b5\u03a9",
+      "Anything over 60 \u00b5\u03a9"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 484 flags a connection whose resistance is the greater of 1.1 \u00d7 the type average or the type average + 5 \u00b5\u03a9. Here 1.1 \u00d7 40 = 44 \u00b5\u03a9 and 40 + 5 = 45 \u00b5\u03a9, so the threshold is 45 \u00b5\u03a9. Averages are kept separately for interunit, inter-tier, inter-rack, and terminal connections. Source: IEEE 484-2019, 6.3.2 l).",
+    "reference": "IEEE 484-2019, 6.3.2 item l)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-026",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Per IEEE 484-2019, how should connection-resistance readings on a new vented battery be averaged before flagging high ones?",
+    "choices": [
+      "One average for every connection in the battery",
+      "A separate average for each connection type: interunit, inter-tier, inter-rack, and terminal",
+      "Compare each reading to the manufacturer's maximum only",
+      "Average the two lowest readings per tier"
+    ],
+    "answer": 1,
+    "explanation": "Different connection types have different normal resistances, so IEEE 484 has you compute a separate average for each type. For a type with only one member, use typical material values to estimate the average. Source: IEEE 484-2019, 6.3.2 l).",
+    "reference": "IEEE 484-2019, 6.3.2 item l)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-027",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Before the freshening charge on a new vented lead-acid battery, which unit does IEEE 484-2019 have you pick as the pilot unit?",
+    "choices": [
+      "The unit at the positive end",
+      "The unit with the lowest specific gravity among those measured",
+      "The unit with the highest voltage",
+      "Any unit near the middle of the rack"
+    ],
+    "answer": 1,
+    "explanation": "Before charging, record each unit's open-circuit voltage and the temperature and specific gravity of every tenth unit. The unit with the lowest specific gravity becomes the pilot unit for the freshening charge. Source: IEEE 484-2019, 6.4.1 b).",
+    "reference": "IEEE 484-2019, 6.4.1 item b)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-028",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "After a vented lead-acid battery's freshening charge, when does IEEE 484-2019 have you record float current, unit voltages, specific gravities, and levels?",
+    "choices": [
+      "Immediately when the charger returns to float",
+      "After 24 h on float",
+      "At the end of 72 h on float charge",
+      "After the first discharge test"
+    ],
+    "answer": 2,
+    "explanation": "IEEE 484 calls for the post-freshening data set at the end of 72 h on float charge. Units outside the manufacturer's limits then need corrective action. Source: IEEE 484-2019, 6.4.2 a).",
+    "reference": "IEEE 484-2019, 6.4.2 item a)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-029",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "systems",
+    "question": "Two vented battery strings will be paralleled onto one dc bus with separate cables. What does IEEE 484-2019 say about those cables?",
+    "choices": [
+      "The longer string should get the larger cable",
+      "Each string's cables to the bus should have the same ampacity and length",
+      "Only the positive cables need to match",
+      "Cable size does not matter if the strings match"
+    ],
+    "answer": 1,
+    "explanation": "Matching ampacity and length keeps the strings sharing current evenly. IEEE 484 also notes parallel strings should only be paralleled at each end of a string, and has you measure float current and ac ripple when the battery is connected. Source: IEEE 484-2019, 6.3.2 g) note and 6.5.",
+    "reference": "IEEE 484-2019, 6.3.2 item g) note and 6.5",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-030",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Per IEEE 484-2019, how are vented battery units numbered for future identification?",
+    "choices": [
+      "Starting with 1 at the negative end",
+      "Starting with 1 at the positive end",
+      "By rack, then tier",
+      "Any order, as long as the drawing shows it"
+    ],
+    "answer": 1,
+    "explanation": "Units are numbered in sequence starting with number one at the positive end of the battery, using the numbers the manufacturer supplies. Source: IEEE 484-2019, 6.3.2 k).",
+    "reference": "IEEE 484-2019, 6.3.2 item k)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-031",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "A lead-acid battery is sized per IEEE 485-2020. Why does the standard recommend a 1.25 aging factor?",
+    "choices": [
+      "To cover temperature below 25 \u00b0C",
+      "Because replacement is recommended at 80% capacity, so rated capacity should be at least 125% of the end-of-life load",
+      "To allow for future load growth",
+      "To cover initial capacity below rated on delivery only"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 450 and IEEE 1188 recommend replacing a battery at 80% of rated capacity, near the knee of the life curve. Sizing at 125% (1 \u00f7 0.8) keeps the battery able to carry the design load until then. Load growth is the separate 10% to 15% design margin. Source: IEEE 485-2020, 6.3.4 and 6.3.3.",
+    "reference": "IEEE 485-2020, 6.3.4",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-032",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "Per IEEE 485-2020, equalize needs 2.33 V/cell and the maximum system voltage is 140 V. The minimum battery voltage is 105 V. What are the cell count and minimum cell voltage?",
+    "choices": [
+      "58 cells, 1.81 V/cell",
+      "60 cells, 1.75 V/cell",
+      "60 cells, 1.81 V/cell",
+      "62 cells, 1.69 V/cell"
+    ],
+    "answer": 1,
+    "explanation": "Cells = 140 V \u00f7 2.33 V = 60.09, so use 60. Minimum cell voltage = 105 V \u00f7 60 = 1.75 V/cell, which is then used in the sizing calculation. Source: IEEE 485-2020, 6.2.2.",
+    "reference": "IEEE 485-2020, 6.2.2",
+    "verified": true,
+    "kb": "math.md#power"
+  },
+  {
+    "id": "batt-033",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "IEEE 485-2020 suggests adding a design margin to the calculated cell size. What typical range does it give?",
+    "choices": [
+      "5% to 10%",
+      "10% to 15%",
+      "20% to 25%",
+      "25%, the same as aging"
+    ],
+    "answer": 1,
+    "explanation": "A design margin of 10% to 15% covers unforeseen load additions and less-than-ideal conditions such as poor maintenance, a recent discharge, or lower temperatures. Rounding up to the next commercial cell size can count as part of it. Source: IEEE 485-2020, 6.3.3.",
+    "reference": "IEEE 485-2020, 6.3.3",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-034",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A new lead-acid battery sized with a 1.25 aging factor tests at 92% capacity at acceptance. Per IEEE 485-2020, is that a concern for meeting the duty cycle?",
+    "choices": [
+      "Yes, it must be 100% at delivery",
+      "Not usually; batteries may be delivered as low as 90% and rise in service, and the 1.25 aging factor covers it",
+      "Yes, anything under 95% is rejected",
+      "Only if it's a VRLA battery"
+    ],
+    "answer": 1,
+    "explanation": "Unless 100% at delivery is specified, batteries may arrive with as little as 90% of rated capacity and should reach rating after cycling or years on float. With a 1.25 aging factor, full capacity on delivery isn't needed to meet the duty cycle. With a 1.00 aging factor, the designer should verify initial capacity or margin. Source: IEEE 485-2020, 6.3.5.",
+    "reference": "IEEE 485-2020, 6.3.5",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-035",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Per IEEE 1188-2005, which VRLA readings belong to the quarterly inspection (on top of the monthly items)?",
+    "choices": [
+      "Specific gravity of each cell",
+      "Internal ohmic value, negative-terminal temperature, and voltage of each cell/unit",
+      "Connection resistance of the whole battery and ac ripple",
+      "A capacity test"
+    ],
+    "answer": 1,
+    "explanation": "Quarterly adds each cell or unit's internal ohmic value, negative-terminal temperature, and voltage. Connection resistance and ac ripple are yearly and initial items. VRLA cells are sealed, so specific gravity isn't read. Source: IEEE 1188-2005, 5.2.2 and 5.2.3.",
+    "reference": "IEEE 1188-2005, 5.2.2 and 5.2.3",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-036",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A VRLA intercell connection measured 50 \u00b5\u03a9 at installation and reads 62 \u00b5\u03a9 at the yearly inspection. What does IEEE 1188-2005 call for?",
+    "choices": [
+      "Nothing until it doubles",
+      "Retorque and retest, because it is more than 20% above the installation value",
+      "Replace the cell",
+      "Only note it for trending"
+    ],
+    "answer": 1,
+    "explanation": "If connection resistance is more than 20% above the installation value, or above a manufacturer ceiling, retorque and retest. If it stays high, take it apart, clean, reassemble, and retest. 62 \u00f7 50 = 1.24, a 24% rise. Source: IEEE 1188-2005, 5.3.1 a).",
+    "reference": "IEEE 1188-2005, 5.3.1 item a)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-037",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "During a VRLA inspection, cell temperatures span 24 \u00b0C to 28.5 \u00b0C. Per IEEE 1188-2005, what should happen?",
+    "choices": [
+      "Nothing; it's within 5 \u00b0C",
+      "Find and correct the cause, since cells differ by more than 3 \u00b0C",
+      "Raise the float voltage",
+      "Replace the hottest cell"
+    ],
+    "answer": 1,
+    "explanation": "When cell temperatures differ by more than 3 \u00b0C during one inspection, determine the cause and correct it. If that isn't possible, ask the manufacturer what allowances to make. Source: IEEE 1188-2005, 5.3.2 b).",
+    "reference": "IEEE 1188-2005, 5.3.2 item b)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-038",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "A VRLA battery tests at 76% of rating well before its expected service life ends. What did IEEE 1188a-2014 add for this case?",
+    "choices": [
+      "Replace it with no further action",
+      "Contact the manufacturer about possible corrective action, since premature capacity loss in AGM cells may be recoverable",
+      "Equalize it monthly",
+      "Derate the battery and keep it"
+    ],
+    "answer": 1,
+    "explanation": "The base rule is to replace below 80% of rating. The 2014 amendment adds that if a battery drops below 80% during its expected service life, you contact the manufacturer about corrective action. Premature capacity loss in structurally intact AGM cells may respond to a special recovery process. Source: IEEE 1188-2005, Clause 8, as amended by IEEE 1188a-2014, Clause 8 and 5.3.2.",
+    "reference": "IEEE 1188-2005 (with 1188a-2014 where applicable), Clause 8; IEEE 1188a-2014, Clause 8 and 5.3.2",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-039",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Per IEEE 1188a-2014, what is the most practical field indicator of negative-plate self-discharge in VRLA cells?",
+    "choices": [
+      "Specific gravity",
+      "A rising trend in string float current even with correct float voltage",
+      "Cell open-circuit voltage dropping",
+      "Jar temperature only"
+    ],
+    "answer": 1,
+    "explanation": "VRLA cells are sealed, so you can't insert a reference electrode in the field. The amendment calls higher float current at the correct float voltage the most direct practical indicator, read as a trend over multiple readings. Source: IEEE 1188a-2014, Annex C.8.1.",
+    "reference": "IEEE 1188a-2014, Annex C.8.1",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-040",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "IEEE 1188a-2014 changed the time-adjusted capacity test method for VRLA batteries. What changed?",
+    "choices": [
+      "Testing must now be at 25 \u00b0C exactly",
+      "Temperature correction is now applied to the capacity calculation after the test instead of adjusting the discharge rate before it",
+      "The test must now run 8 h",
+      "Temperature correction was removed"
+    ],
+    "answer": 1,
+    "explanation": "The earlier method adjusted the discharge rate for cell temperature before testing. The amendment applies the correction to the capacity result after the test. The old method is still acceptable, and users can switch at a good time, such as at battery replacement. Source: IEEE 1188a-2014, 7.3.2 and 7.4.2.1.",
+    "reference": "IEEE 1188a-2014, 7.3.2 and 7.4.2.1",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-041",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "Per IEEE 1184-2022, VRLA batteries at elevated temperature typically lose about 50% of life for each how many degrees above 25 \u00b0C?",
+    "choices": [
+      "5 \u00b0C",
+      "8 \u00b0C",
+      "10 \u00b0C",
+      "15 \u00b0C"
+    ],
+    "answer": 1,
+    "explanation": "For VRLA, life drops about 50% for every 8 \u00b0C rise above 25 \u00b0C. For vented lead-acid it's about 50% per 10 \u00b0C. The difference comes from heat from the exothermic recombination reaction in VRLA cells. Source: IEEE 1184-2022, 4.4.1.2 and 4.4.1.3.",
+    "reference": "IEEE 1184-2022, 4.4.1.3",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-042",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "For a UPS battery room, IEEE 1184-2022 says cell layout should keep the temperature difference between cells to no more than:",
+    "choices": [
+      "1 \u00b0C",
+      "3 \u00b0C",
+      "5 \u00b0C",
+      "10 \u00b0C"
+    ],
+    "answer": 1,
+    "explanation": "Location and arrangement should give no more than a 3 \u00b0C difference between cells at any time. Spot heating or cooling unbalances the battery electrically. Source: IEEE 1184-2022, 4.4.1.2 and 4.4.1.3.",
+    "reference": "IEEE 1184-2022, 4.4.1.2 and 4.4.1.3",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-043",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "IEEE 1184-2022 gives typical UPS service lives by battery type. Which is right?",
+    "choices": [
+      "Ni-Cd 20 to 25 years; 2 V VRLA cells about 8 to 12 years",
+      "Ni-Cd 5 to 8 years; VRLA 20 years",
+      "All lead-acid types 20 years",
+      "12 V VRLA blocs 15 to 20 years"
+    ],
+    "answer": 0,
+    "explanation": "Typical UPS lives are 20 to 25 years for Ni-Cd, 10 to 15 years for high-rate vented lead-acid, about 8 to 12 years for 2 V VRLA cells, and 2 to 8 years for smaller VRLA multi-cell blocs. Source: IEEE 1184-2022, 4.4.2.2 to 4.4.2.4.",
+    "reference": "IEEE 1184-2022, 4.4.2.2 to 4.4.2.4",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-044",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "theory",
+    "question": "Why does IEEE 1184-2022 say a cycle counter on a UPS battery is only useful if it counts coulombs?",
+    "choices": [
+      "Because counts of shallow and deep discharges aren't equal in wear; a battery gives many more shallow cycles than deep ones",
+      "Because cycle counters drift",
+      "Because UPS batteries never cycle",
+      "Because coulomb counting measures temperature too"
+    ],
+    "answer": 0,
+    "explanation": "The relationship between depth of discharge and cycle count is exponential, not linear. A battery may give three to four times as many cycles at 40% DOD as at 80% DOD, so a simple count of events says little. Source: IEEE 1184-2022, 4.4.2.1.",
+    "reference": "IEEE 1184-2022, 4.4.2.1",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-045",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Why is specific gravity not part of routine maintenance on a vented nickel-cadmium battery, per IEEE 1106-2015?",
+    "choices": [
+      "The electrolyte is sealed",
+      "The KOH electrolyte acts only as an ionic conductor, so its gravity barely changes with state of charge",
+      "Ni-Cd electrolyte is acid",
+      "It's measured only at acceptance"
+    ],
+    "answer": 1,
+    "explanation": "Ni-Cd electrolyte is potassium hydroxide, sometimes with lithium hydroxide. It doesn't take part in the charge and discharge reactions, so specific gravity doesn't track state of charge and isn't a routine reading. Source: IEEE 1106-2015, Annex A.2.",
+    "reference": "IEEE 1106-2015, Annex A.2",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-046",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "On a vented Ni-Cd battery, how often does IEEE 1106-2015 call for reading every cell voltage?",
+    "choices": [
+      "Monthly",
+      "Quarterly",
+      "At least every six months",
+      "Yearly only"
+    ],
+    "answer": 2,
+    "explanation": "The quarterly inspection covers string-level items such as float voltage, float current, levels, and pilot-cell temperature. The semiannual inspection adds each cell's voltage. Yearly adds rack integrity, intercell torque, and cable connections. Source: IEEE 1106-2015, 7.2.1 to 7.2.3.",
+    "reference": "IEEE 1106-2015, 7.2.2",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-047",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Gray-white deposits are found on top of vented Ni-Cd cells. Per IEEE 1106-2015, they are most likely:",
+    "choices": [
+      "Lead sulfate",
+      "Potassium carbonate",
+      "Lithium salts from overcharge",
+      "Copper corrosion"
+    ],
+    "answer": 1,
+    "explanation": "Gray-white deposits on Ni-Cd cells are potassium carbonate. Wipe with a wet cloth, dry, and coat metal parts with the manufacturer's corrosion inhibitor. Avoid hydrocarbon cleaners. Source: IEEE 1106-2015, 7.3.1 d).",
+    "reference": "IEEE 1106-2015, 7.3.1 item d)",
+    "verified": true,
+    "kb": "batteries.md#flooded"
+  },
+  {
+    "id": "batt-048",
+    "level": "IV",
+    "topic": "batteries",
+    "domain": "component",
+    "question": "Checking torque on a vented Ni-Cd battery, a connection turns more than half a turn before reaching full torque. Per IEEE 1106-2015:",
+    "choices": [
+      "Just bring it to torque",
+      "Disassemble, clean, reassemble with corrosion inhibitor, and retorque",
+      "Replace the cell",
+      "Check it again next year"
+    ],
+    "answer": 1,
+    "explanation": "A connection that is loose by more than half a turn should be taken apart, cleaned, reassembled with corrosion inhibitor, and retorqued per the manufacturer. Source: IEEE 1106-2015, 7.3.1 e).",
+    "reference": "IEEE 1106-2015, 7.3.1 item e)",
     "verified": true,
     "kb": "batteries.md#flooded"
   }

@@ -3323,9 +3323,9 @@ A megohmmeter manual defines DAR as the 1-minute insulation resistance divided b
 
 Reviewer: VERIFIED or FIX
 
-## math-050 (II / theory) {#math-050}
+## ir-019 (II / theory) {#ir-019}
 
-<!-- q:math-050 -->
+<!-- q:ir-019 -->
 
 **Bank verified flag:** true
 
@@ -3866,9 +3866,9 @@ Work on circuit parts that have not been de-energized under 29 CFR 1910.333(b) m
 
 Reviewer: VERIFIED or FIX
 
-## math-058 (III / theory) {#math-058}
+## xfmr-077 (II / theory) {#xfmr-077}
 
-<!-- q:math-058 -->
+<!-- q:xfmr-077 -->
 
 **Bank verified flag:** true
 
@@ -3883,9 +3883,9 @@ IEEE C57.104 is used to interpret:
 
 Reviewer: VERIFIED or FIX
 
-## math-059 (III / theory) {#math-059}
+## xfmr-078 (III / theory) {#xfmr-078}
 
-<!-- q:math-059 -->
+<!-- q:xfmr-078 -->
 
 **Bank verified flag:** true
 
@@ -3950,9 +3950,9 @@ A long-time dial defined at 6×Ir is 10 s, with a published +0/−30% band. At 6
 
 Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
-## math-063 (III / theory) {#math-063}
+## cable-025 (II / theory) {#cable-025}
 
-<!-- q:math-063 -->
+<!-- q:cable-025 -->
 
 **Bank verified flag:** true
 
@@ -4306,9 +4306,9 @@ Before switchgear is treated as ready for service, ATS 7.1.1 says to confirm tha
 
 Reviewer: VERIFIED or FIX
 
-## math-064 (II / theory) {#math-064}
+## xfmr-079 (III / theory) {#xfmr-079}
 
-<!-- q:math-064 -->
+<!-- q:xfmr-079 -->
 
 **Bank verified flag:** true
 
@@ -4323,9 +4323,9 @@ Duval Triangle 1 in IEEE C57.104-2019 clause 6.2.3 is plotted from:
 
 Reviewer: VERIFIED or FIX
 
-## math-065 (II / theory) {#math-065}
+## xfmr-080 (III / theory) {#xfmr-080}
 
-<!-- q:math-065 -->
+<!-- q:xfmr-080 -->
 
 **Bank verified flag:** true
 
@@ -4340,9 +4340,9 @@ In the text that opens IEEE C57.104-2019 clause 4, acetylene becomes an importan
 
 Reviewer: neta field ref, Nov 12 2026 — FIX
 
-## math-066 (II / theory) {#math-066}
+## xfmr-081 (II / theory) {#xfmr-081}
 
-<!-- q:math-066 -->
+<!-- q:xfmr-081 -->
 
 **Bank verified flag:** true
 
@@ -4680,9 +4680,9 @@ ATS 7.1.1.D.2 says a dielectric withstand on switchgear bus:
 
 Reviewer: VERIFIED or FIX
 
-## math-070 (III / theory) {#math-070}
+## xfmr-082 (III / theory) {#xfmr-082}
 
-<!-- q:math-070 -->
+<!-- q:xfmr-082 -->
 
 **Bank verified flag:** true
 
@@ -4697,9 +4697,9 @@ A dissolved-gas sample matches none of the Rogers-ratio cases, even though combu
 
 Reviewer: VERIFIED or FIX
 
-## math-071 (III / theory) {#math-071}
+## xfmr-083 (III / theory) {#xfmr-083}
 
-<!-- q:math-071 -->
+<!-- q:xfmr-083 -->
 
 **Bank verified flag:** true
 
@@ -5360,9 +5360,9 @@ During the VLF withstand in ATS 7.3.3.B.5.2, shields and conductors not under te
 
 Reviewer: VERIFIED or FIX
 
-## math-080 (III / theory) {#math-080}
+## xfmr-084 (III / theory) {#xfmr-084}
 
-<!-- q:math-080 -->
+<!-- q:xfmr-084 -->
 
 **Bank verified flag:** true
 
@@ -5377,9 +5377,9 @@ IEEE C57.104-2019 clause 6 says a yearly rate taken from only two dissolved-gas 
 
 Reviewer: VERIFIED or FIX
 
-## math-081 (III / theory) {#math-081}
+## xfmr-085 (III / theory) {#xfmr-085}
 
-<!-- q:math-081 -->
+<!-- q:xfmr-085 -->
 
 **Bank verified flag:** true
 
@@ -6040,9 +6040,9 @@ On panelboards, ATS 7.1.2 says a dielectric withstand:
 
 Reviewer: VERIFIED or FIX
 
-## math-090 (III / theory) {#math-090}
+## ir-020 (II / theory) {#ir-020}
 
-<!-- q:math-090 -->
+<!-- q:ir-020 -->
 
 **Bank verified flag:** true
 
@@ -6057,9 +6057,9 @@ For rotating-machine windings built before 1970, ATS Table 100.11’s recommende
 
 Reviewer: VERIFIED or FIX
 
-## math-091 (III / theory) {#math-091}
+## ir-021 (II / theory) {#ir-021}
 
-<!-- q:math-091 -->
+<!-- q:ir-021 -->
 
 **Bank verified flag:** true
 
@@ -6074,9 +6074,9 @@ ATS Table 100.11 lists the DC test voltage for machine windings rated under 1000
 
 Reviewer: VERIFIED or FIX
 
-## math-092 (III / theory) {#math-092}
+## ir-022 (II / theory) {#ir-022}
 
-<!-- q:math-092 -->
+<!-- q:ir-022 -->
 
 **Bank verified flag:** true
 
@@ -6312,9 +6312,9 @@ IEEE C57.13.1-2017 clause 12.1 says a current transformer must not be left energ
 
 Reviewer: VERIFIED or FIX
 
-## math-094 (II / theory) {#math-094}
+## ir-023 (II / theory) {#ir-023}
 
-<!-- q:math-094 -->
+<!-- q:ir-023 -->
 
 **Bank verified flag:** true
 
@@ -6329,9 +6329,9 @@ Unless another pair of times is stated, IEEE 43-2013 clause 5.4 defines the pola
 
 Reviewer: VERIFIED or FIX
 
-## math-095 (II / theory) {#math-095}
+## ir-024 (II / theory) {#ir-024}
 
-<!-- q:math-095 -->
+<!-- q:ir-024 -->
 
 **Bank verified flag:** true
 
@@ -6346,9 +6346,9 @@ For a machine winding rated under 1000 V, IEEE 43-2013 Table 1 guides the insula
 
 Reviewer: VERIFIED or FIX
 
-## math-096 (II / theory) {#math-096}
+## relay-082 (III / theory) {#relay-082}
 
-<!-- q:math-096 -->
+<!-- q:relay-082 -->
 
 **Bank verified flag:** true
 
@@ -6363,9 +6363,9 @@ IEEE C37.91-2021 clause 6.5.3 describes magnetizing inrush as:
 
 Reviewer: VERIFIED or FIX
 
-## math-097 (II / theory) {#math-097}
+## xfmr-086 (IV / theory) {#xfmr-086}
 
-<!-- q:math-097 -->
+<!-- q:xfmr-086 -->
 
 **Bank verified flag:** true
 
@@ -6550,9 +6550,9 @@ IEEE 43-2013 clause 5.3 warns that an insulation-resistance test voltage that is
 
 Reviewer: VERIFIED or FIX
 
-## math-098 (III / theory) {#math-098}
+## ir-025 (III / theory) {#ir-025}
 
-<!-- q:math-098 -->
+<!-- q:ir-025 -->
 
 **Bank verified flag:** true
 
@@ -6567,9 +6567,9 @@ IEEE 43-2013 Table 3 sets the minimum polarization index for thermal class 105 (
 
 Reviewer: VERIFIED or FIX
 
-## math-099 (III / theory) {#math-099}
+## ir-026 (III / theory) {#ir-026}
 
-<!-- q:math-099 -->
+<!-- q:ir-026 -->
 
 **Bank verified flag:** true
 

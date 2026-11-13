@@ -31,7 +31,7 @@
     ],
     "answer": 1,
     "explanation": "The secondary circuit is grounded, and it has only one grounding point, located where the engineer showed it, consistent with IEEE C57.13.3. A second ground circulates current. No ground lets the circuit float.",
-    "reference": "ANSI/NETA ATS-2025 7.10.1.B.9 and D.9",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.9 and D.9; ref. IEEE C57.13.3-2014, 5.3 (ground at only one point)",
     "verified": true,
     "kb": "instrument-transformers.md#ground"
   },
@@ -328,7 +328,7 @@
     "level": "II",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "IEEE C57.13.1-2017 clause 6.5 says an excitation test is used to confirm that a relaying CT:",
+    "question": "ATS 7.10.1 has you run an excitation test on relaying CTs. What does it confirm?",
     "choices": [
       "Has the right ratio only",
       "Matches its accuracy class and has no shorted turns, against the manufacturer\u2019s curve",
@@ -346,7 +346,7 @@
     "level": "II",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "The voltage method in IEEE C57.13.1-2017 clause 12.2.1 is run by:",
+    "question": "How is the voltage method for a CT excitation test run?",
     "choices": [
       "Applying AC to the secondary with the primary open, after demagnetizing",
       "Applying DC to the primary while the secondary is shorted",
@@ -364,7 +364,7 @@
     "level": "II",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "IEEE C57.13.1-2017 clause 6.7 allows a CT burden test only when:",
+    "question": "When can you run an in-service burden test on a CT circuit?",
     "choices": [
       "The secondary is open",
       "Secondary current is flowing, preferably near rated current",
@@ -382,7 +382,7 @@
     "level": "II",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "On the DC polarity check in IEEE C57.13.1-2017 clause 9.1, correct marks give a meter that:",
+    "question": "On a dc (battery) polarity check of a CT with correct marks, the meter:",
     "choices": [
       "Does not move",
       "Kicks upscale when the battery is connected and downscale when it is opened",
@@ -400,7 +400,7 @@
     "level": "III",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "For an excitation test, IEEE C57.13.1-2017 clause 12.2 wants the ammeter to be rms and the voltmeter to be:",
+    "question": "For a CT excitation test, the ammeter should read rms. The voltmeter should be:",
     "choices": [
       "Peak-reading only",
       "Average-responding, scaled to match an rms meter on a sine wave",
@@ -418,7 +418,7 @@
     "level": "III",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "IEEE C57.13.1-2017 clause 12.2.1 says the points that matter most when you plot an excitation curve are:",
+    "question": "Plotting a CT excitation curve, which readings matter most?",
     "choices": [
       "Only the origin",
       "The readings near the knee",
@@ -436,7 +436,7 @@
     "level": "III",
     "topic": "instrument-transformers",
     "domain": "component",
-    "question": "IEEE C57.13.1-2017 clause 6.4 uses a DC resistance measurement on a CT secondary to find:",
+    "question": "What does a dc resistance measurement on a CT secondary help you find?",
     "choices": [
       "The insulation power factor",
       "A high-resistance joint in the winding or the connected wiring",
@@ -502,5 +502,131 @@
     "reference": "Engineering fundamentals (split-core CT); ANSI/NETA ATS-2025 7.10.1.B.6 and B.7",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-029",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A bar-type CT on a 15 kV, 95 kV BIL system gets the optional acceptance dielectric withstand on its primary. With no other data, the ac test voltage is:",
+    "choices": [
+      "34 kV",
+      "25.5 kV",
+      "19.5 kV",
+      "36 kV"
+    ],
+    "answer": 1,
+    "explanation": "ATS has the bar-type CT primary withstand run at the Table 100.9 value, which for 15 kV nominal, 95 kV BIL is 25.5 kV ac. That table comes from the instrument-transformer standard's field-test guidance. Source: ANSI/NETA ATS-2025 7.10.1.B.7 and Table 100.9; IEEE C57.13-2016, 8.5.2.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.B.7 and Table 100.9; ref. IEEE C57.13-2016, 8.5.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-030",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "Why are instrument-transformer field withstand voltages set well below the factory test values, and lower again for periodic tests?",
+    "choices": [
+      "Field sets cannot reach factory voltage",
+      "Repeated dielectric tests stress the insulation; initial field tests are kept to about 75% of the factory value and periodic tests to about 65%",
+      "Field tests are dc, so they read higher",
+      "Factory values include a 2:1 safety margin that is removed in the field"
+    ],
+    "answer": 1,
+    "explanation": "The instrument-transformer standard warns that dielectric tests are severe and can hasten breakdown. It recommends initial user tests no higher than 75% of factory test voltage, and periodic tests no higher than 65%. ATS Table 100.9 notes that its field values come from this clause. Source: IEEE C57.13-2016, 8.5.2.",
+    "reference": "IEEE C57.13-2016, 8.5.2; ANSI/NETA ATS-2025 Table 100.9",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-031",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS has you compare the measured CT circuit burden to the CT rating. A relaying CT is rated C200, and the measured secondary circuit burden is 1.4 \u03a9. That burden is:",
+    "choices": [
+      "Within the rating, since a C200 CT is rated for the 2.0 \u03a9 standard burden",
+      "Too high, since C200 means a 0.2 \u03a9 limit",
+      "Too high, since 1.4 \u03a9 exceeds 1.0 \u03a9",
+      "Not comparable to a C rating"
+    ],
+    "answer": 0,
+    "explanation": "A C200 rating means the CT will deliver 200 V at 20 times rated current (100 A) into the standard burden that matches it, B-2.0, which is 2.0 \u03a9, with no more than 10% ratio error. A 1.4 \u03a9 circuit is below that. Source: ANSI/NETA ATS-2025 7.10.1.B.5 and D.5; IEEE C57.13-2016, 6.4.1.3 and Table 13.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.5; ref. IEEE C57.13-2016, 6.4.1.3 and Table 13",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-032",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "ATS says CT ratio errors must meet the instrument-transformer standard. For a C- or T-class relaying CT at rated current, the ratio error limit is:",
+    "choices": [
+      "0.3%",
+      "1%",
+      "3%",
+      "10%"
+    ],
+    "answer": 2,
+    "explanation": "Relaying CTs in C and T classes are held to 3% ratio error at rated current and 10% at 20 times rated current. (Small window CTs with few turns may exceed 3% at rated current.) The 0.3% figure is a metering class. Source: ANSI/NETA ATS-2025 7.10.1.D.3; IEEE C57.13-2016, Table 12.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.3; ref. IEEE C57.13-2016, 6.4 and Table 12",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-033",
+    "level": "III",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A 0.3-class metering CT is ratio tested at 100% of rated current. The ratio correction factor must fall within:",
+    "choices": [
+      "0.9970 to 1.0030",
+      "0.9940 to 1.0060",
+      "0.9900 to 1.0100",
+      "0.9997 to 1.0003"
+    ],
+    "answer": 0,
+    "explanation": "For accuracy class 0.3 at 100% rated current, the correction factor limits are 0.9970 to 1.0030, which is \u00b10.3%. At 10% current the band doubles to 0.9940 to 1.0060. Source: ANSI/NETA ATS-2025 7.10.1.D.3; IEEE C57.13-2016, 5.3 and Table 8.",
+    "reference": "ANSI/NETA ATS-2025 7.10.1.D.3; ref. IEEE C57.13-2016, 5.3 and Table 8",
+    "verified": true,
+    "kb": "instrument-transformers.md#ratio"
+  },
+  {
+    "id": "ct-034",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "A multi-ratio relaying CT is nameplated C400 at 2000:5. You connect it at the 1000:5 tap. Per IEEE C57.13-2016:",
+    "choices": [
+      "C400 still applies at every tap",
+      "The relay accuracy class applies only to the full winding unless stated otherwise, so the tap's capability is lower",
+      "The tap doubles the class to C800",
+      "Taps are not allowed on C-class CTs"
+    ],
+    "answer": 1,
+    "explanation": "The relay class applies to the full winding unless otherwise specified. On a C-class CT, tapped sections must be arranged so the ratio can be calculated. So don't assume C400 at a tap; check the manufacturer's tap data or the excitation curve for that tap. Source: IEEE C57.13-2016, 6.4.2.",
+    "reference": "IEEE C57.13-2016, 6.4.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
+  },
+  {
+    "id": "ct-035",
+    "level": "IV",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A CT has a 1 A secondary and a C100 rating. Per IEEE C57.13-2016, what burden matches that rating?",
+    "choices": [
+      "1 \u03a9",
+      "5 \u03a9",
+      "0.2 \u03a9",
+      "20 \u03a9"
+    ],
+    "answer": 1,
+    "explanation": "For secondaries other than 5 A, the equivalent burden is the terminal voltage \u00f7 (IS \u00d7 20). 100 V \u00f7 (1 A \u00d7 20) = 5 \u03a9. Source: IEEE C57.13-2016, Table 13 note a.",
+    "reference": "IEEE C57.13-2016, Table 13 note a",
+    "verified": true,
+    "kb": "instrument-transformers.md#excitation"
   }
 ]

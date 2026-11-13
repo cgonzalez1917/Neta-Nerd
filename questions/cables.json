@@ -221,7 +221,7 @@
     "level": "III",
     "topic": "cables",
     "domain": "component",
-    "question": "IEEE 400.2 prefers VLF for many shielded extruded cables in the field because:",
+    "question": "Why is VLF often used instead of dc for field withstand testing of shielded extruded cable?",
     "choices": [
       "DC hipot is gentler on aged XLPE",
       "Charging current falls with frequency, so a portable set can energize a long cable",
@@ -293,7 +293,7 @@
     "level": "III",
     "topic": "cables",
     "domain": "component",
-    "question": "In IEEE 400.3-2022 clause 3.1, partial-discharge inception voltage is:",
+    "question": "On an offline PD test of shielded cable per ATS 7.3.3, partial-discharge inception voltage is:",
     "choices": [
       "The voltage where repetitive discharges first appear as the voltage is raised",
       "The voltage where discharges stop as the voltage is lowered",
@@ -398,7 +398,7 @@
   },
   {
     "id": "cable-023",
-    "level": "III",
+    "level": "II",
     "topic": "cables",
     "domain": "component",
     "question": "Which test does NFPA 70B-2026 Table 18.3.5 assign to cable rated 1000 V and below, rather than to the over-1000 V menu?",
@@ -431,5 +431,275 @@
     "reference": "NFPA 70B-2026, Table 18.3.5 and 7.3.2",
     "verified": true,
     "kb": "safety.md#nfpa70b"
+  },
+  {
+    "id": "cable-025",
+    "level": "II",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "ATS points to a cable-testing guide for VLF withstand and diagnostics. That guide covers:",
+    "choices": [
+      "Dissolved gas",
+      "Field testing shielded cable with very low frequency",
+      "CT polarity",
+      "Device numbers"
+    ],
+    "answer": 1,
+    "explanation": "ATS Table 100.6.3 is the acceptance VLF table, adapted from IEEE 400.2-2024, and 7.3.3.B.5.2 is the VLF withstand test. Dissolved gas is IEEE C57.104. Device numbers used on a relay test are the ATS 7.9.1 list, which follows the C37.2 numbering system.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.6.3 and 7.3.3.B.5.2; ref. IEEE 400.2-2024",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-026",
+    "level": "III",
+    "topic": "cables",
+    "domain": "safety",
+    "question": "You just finished a 15-minute dc withstand on a paper-insulated lead-covered feeder and grounded it. The crew wants to rerun the test right away. How long should the cable stay grounded first?",
+    "choices": [
+      "At least 15 minutes",
+      "At least 60 minutes, four times the previous test",
+      "5 minutes is enough once the meter reads zero",
+      "No wait is needed if a discharge stick was used"
+    ],
+    "answer": 1,
+    "explanation": "A dc-tested cable stores charge that keeps coming back out of the insulation after the first discharge. The guidance is to leave it grounded for at least four times the length of the previous test before retesting, so 4 \u00d7 15 min = 60 min. Source: IEEE 400.1-2018, 4.3.",
+    "reference": "IEEE 400.1-2018, 4.3",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-027",
+    "level": "III",
+    "topic": "cables",
+    "domain": "safety",
+    "question": "Your dc test set will take a laminated cable to 56 kV. What is the minimum resistance of the discharge resistor you should use?",
+    "choices": [
+      "5.6 M\u03a9",
+      "56 k\u03a9",
+      "280 M\u03a9",
+      "280 k\u03a9"
+    ],
+    "answer": 3,
+    "explanation": "The recommended discharge resistor is at least 5000 \u03a9 per kV of test voltage. 5000 \u03a9/kV \u00d7 56 kV = 280,000 \u03a9, or 280 k\u03a9. It must also withstand the full test voltage and the stored energy (\u00bdCV\u00b2). Source: IEEE 400.1-2018, 3.2.3.",
+    "reference": "IEEE 400.1-2018, 3.2.3",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-028",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "During the voltage hold of a dc test on a paper-insulated (laminated) cable, the leakage current starts to climb slowly and then faster, with no change in voltage. This most likely means:",
+    "choices": [
+      "Normal dielectric absorption",
+      "The cable is drying out and will pass",
+      "Insulation failure may be developing, so reduce the voltage quickly",
+      "The test set needs recalibrating"
+    ],
+    "answer": 2,
+    "explanation": "A steady or falling current at constant voltage is the practical pass sign. Current that rises at a growing rate without any voltage change points to an insulation failure in progress, and the voltage should come down fast. Source: IEEE 400.1-2018, 5.1.",
+    "reference": "IEEE 400.1-2018, 5.1",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-029",
+    "level": "III",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "On a 1.5 km paper-insulated three-phase feeder, the dc test gives insulation resistances (V \u00f7 I) of 9000, 8000, and 2500 M\u03a9. What does that suggest?",
+    "choices": [
+      "All phases are fine since each is above 1000 M\u03a9",
+      "The ratio between the best and worst phase is above 3:1, so the low phase is suspect",
+      "The test voltage was too low",
+      "Long cables always show this spread"
+    ],
+    "answer": 1,
+    "explanation": "Comparing the three conductors is useful. On cables longer than about 1000 m, a ratio above about 3:1 between phases suggests a problem in the low one. 9000 \u00f7 2500 = 3.6. Source: IEEE 400.1-2018, 5.2.",
+    "reference": "IEEE 400.1-2018, 5.2",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-030",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "A damped ac (DAC) set is used for an offline PD test on a short run of shielded cable. The test frequency comes out above the set's range. Why, and what is the usual fix?",
+    "choices": [
+      "The frequency is set by the cable capacitance with the set's inductor, so a short cable needs added capacitance",
+      "The set's oscillator is faulty",
+      "The cable is too long, so test a shorter section",
+      "Raise the test voltage to lower the frequency"
+    ],
+    "answer": 0,
+    "explanation": "A DAC set charges the cable and then rings it through an inductor, so the frequency is the natural frequency of that LC circuit. Less capacitance means a higher frequency. To stay in the 20 to 500 Hz range on a short cable, extra capacitive load is added. Source: IEEE 400.4-2015, 5.1 and 6.1.",
+    "reference": "IEEE 400.4-2015, 5.1 and 6.1; ANSI/NETA ATS-2025 Table 100.6.4",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-031",
+    "level": "III",
+    "topic": "cables",
+    "domain": "component",
+    "question": "How is the length of a damped ac (DAC) withstand test on cable defined?",
+    "choices": [
+      "In minutes, like a VLF test",
+      "By a set number of DAC excitations at the chosen test voltage",
+      "By the time until leakage current stabilizes",
+      "By one excitation only"
+    ],
+    "answer": 1,
+    "explanation": "A DAC withstand applies a predetermined number of damped excitations, and the test voltage is the peak of the first cycle. That is different from a VLF or dc test, which run for a set number of minutes. Source: IEEE 400.4-2015, 5.1.",
+    "reference": "IEEE 400.4-2015, 5.1",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-032",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Per IEEE 48-2020, what separates a Class 1 termination from Class 2 and Class 3?",
+    "choices": [
+      "Class 1 adds a seal against the environment (and holds system pressure, if any) on top of stress control and external insulation",
+      "Class 1 is for indoor use only",
+      "Class 1 has no stress control",
+      "Class 1 is only for laminated cable"
+    ],
+    "answer": 0,
+    "explanation": "Class 3 provides only stress control. Class 2 adds external insulation from conductor to ground. Class 1 adds a seal to the cable end and maintains design pressure, if any. Class 1A is for extruded cable, 1B for laminated, and 1C for pressurized systems. Source: IEEE 48-2020, Clause 3 definitions.",
+    "reference": "IEEE 48-2020, Clause 3 (Class 1, 2, 3 termination)",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-033",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "component",
+    "question": "What does IEEE 48-2020 say about dc voltage tests on terminations after installation?",
+    "choices": [
+      "They are required at 80% of factory dc",
+      "They are not recommended and no longer required; old values are kept for reference only in an annex",
+      "They are required only on Class 1C",
+      "They replace the ac routine test"
+    ],
+    "answer": 1,
+    "explanation": "Field tests on the installed system are allowed as acceptance or proof tests for all classes, but direct voltage testing is not recommended and is no longer required. Prior dc values are shown in Annex C for reference. Source: IEEE 48-2020, 8.6.",
+    "reference": "IEEE 48-2020, 8.6",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-034",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "theory",
+    "question": "For termination voltage tests, IEEE 48-2020 sets the rate of rise. After quickly reaching 75% of test value, how long should it take to reach full test voltage?",
+    "choices": [
+      "1 to 5 s",
+      "15 to 30 s",
+      "60 s",
+      "5 min"
+    ],
+    "answer": 1,
+    "explanation": "Unless specified otherwise, start at no more than 20% of the test voltage, raise quickly to 75%, then reach the full value in 15 to 30 s. The voltage is held for the time in the tables. Source: IEEE 48-2020, 8.2.3 and 8.2.4.",
+    "reference": "IEEE 48-2020, 8.2.3",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-035",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Per IEEE 404-2012, a joint that connects an extruded dielectric cable to a laminated (paper) cable is called:",
+    "choices": [
+      "A transition joint",
+      "A filled joint",
+      "A premolded joint",
+      "A sectionalizing joint"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 404 sorts joints as extruded (both cables extruded), laminated (both paper or laminated), and transition (extruded to laminated). Source: IEEE 404-2012, 3.1.",
+    "reference": "IEEE 404-2012, 3.1",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-036",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "component",
+    "question": "Which joint type does IEEE 404-2012 say can receive production electrical testing at the factory?",
+    "choices": [
+      "Heat-shrink",
+      "Multi-component cold-shrink",
+      "Premolded",
+      "Taped"
+    ],
+    "answer": 2,
+    "explanation": "Premolded and single-component cold-shrink joints integrate stress control, insulation, and shield during molding, so they can be production tested. Heat-shrink, multi-component cold-shrink, and taped joints are built up in the field and can't be. Source: IEEE 404-2012, 3.2.",
+    "reference": "IEEE 404-2012, 3.2",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-037",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "component",
+    "question": "IEEE 400.1-2018 says the dc test voltage should stay stable within what band during the test?",
+    "choices": [
+      "1%",
+      "3%",
+      "5%",
+      "10%"
+    ],
+    "answer": 1,
+    "explanation": "Supply variations can cause big swings in the current reading, so the test voltage should stay within 3% during the test time. Source: IEEE 400.1-2018, 3.2.2.",
+    "reference": "IEEE 400.1-2018, 3.2.2",
+    "verified": true,
+    "kb": "cables.md#ir"
+  },
+  {
+    "id": "cable-038",
+    "level": "III",
+    "topic": "cables",
+    "domain": "systems",
+    "question": "A new 15 kV feeder has been pulled, but the splices and terminations aren't made yet. The owner wants a field test now. In cable-testing terms, that is:",
+    "choices": [
+      "An acceptance test",
+      "An installation test",
+      "A maintenance test",
+      "A factory test"
+    ],
+    "answer": 1,
+    "explanation": "An installation test is run after the cable is installed but before joints or terminations go on. An acceptance test comes after the full cable system, accessories included, is installed but before it goes into service. A maintenance test is done during the operating life. Source: IEEE 400-2023, 3.1.",
+    "reference": "IEEE 400-2023, 3.1 (definitions)",
+    "verified": true,
+    "kb": "cables.md#vlf"
+  },
+  {
+    "id": "cable-039",
+    "level": "IV",
+    "topic": "cables",
+    "domain": "safety",
+    "question": "On a 200 A underground system, a lineman plans to pull an elbow under load. Per IEEE 386-2016, which connector type is designed for that?",
+    "choices": [
+      "Deadbreak connector",
+      "Loadbreak connector",
+      "Any separable connector with a test point",
+      "A bushing well with no insert"
+    ],
+    "answer": 1,
+    "explanation": "A loadbreak connector is designed to close and interrupt rated load current or less on energized circuits, and it also has a fault-close rating. A deadbreak connector may be separated and engaged only on de-energized circuits. Source: IEEE 386-2016, Clause 3.",
+    "reference": "IEEE 386-2016, Clause 3 (definitions)",
+    "verified": true,
+    "kb": "cables.md#ir"
   }
 ]

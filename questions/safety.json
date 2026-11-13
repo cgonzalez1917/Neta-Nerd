@@ -238,7 +238,7 @@
   },
   {
     "id": "safety-016",
-    "level": "IV",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "A coworker says a 40 cal/cm\u00b2 suit means the pressure wave is covered because the PPE category was selected correctly. What does the 130.7 informational note actually limit?",
@@ -418,7 +418,7 @@
   },
   {
     "id": "safety-026",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "Rubber gloves used without leather protectors, under the narrow exception, have their AC class:",
@@ -490,7 +490,7 @@
   },
   {
     "id": "safety-030",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "Table 130.4(E)(b) for DC, 301 V to 1 kV, restricted approach boundary is:",
@@ -976,7 +976,7 @@
   },
   {
     "id": "safety-057",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "ATS 7.22.1.B.4 says to functionally test engine shutdown for:",
@@ -1015,7 +1015,7 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "After a machine insulation-resistance test, IEEE 43-2013 clause 5.5 requires:",
+    "question": "You finish an insulation-resistance test on a motor winding and remove the test voltage. What has to happen next?",
     "choices": [
       "Leave the winding charged so the next reading is faster",
       "A discharge path once the test voltage is removed",
@@ -1033,7 +1033,7 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "IEEE C57.13.1-2017 clause 12.1 says a current transformer must not be left energized above the knee:",
+    "question": "During a CT excitation test you take the voltage above the knee. How long should the CT stay energized up there?",
     "choices": [
       "For the whole lunch break, so the curve can settle",
       "Any longer than it takes to record the points",
@@ -1051,7 +1051,7 @@
     "level": "III",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "IEEE 43-2013 clause 5.3 warns that an insulation-resistance test voltage that is too high:",
+    "question": "A helper wants to megger a small, damp 460 V motor at the highest range on the set \"to be sure.\" What's the risk?",
     "choices": [
       "Always gives a better PI",
       "Can overstress the insulation and fail it, especially on a small, low-voltage, or wet winding",
@@ -1246,7 +1246,7 @@
   },
   {
     "id": "safety-072",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "For equipment rated above 1000 V, NFPA 70B-2026 says the insulation test method is:",
@@ -1264,7 +1264,7 @@
   },
   {
     "id": "safety-073",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "NFPA 70B-2026 says equipment with an impending failure that threatens people, health, or the environment is:",
@@ -1282,7 +1282,7 @@
   },
   {
     "id": "safety-074",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "A contact-resistance reading on an undisturbed bolted joint that is above the manufacturer\u2019s maximum is, under NFPA 70B-2026:",
@@ -1300,7 +1300,7 @@
   },
   {
     "id": "safety-075",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "systems",
     "question": "NFPA 70B-2026 condition 1 means the equipment is:",
@@ -1318,7 +1318,7 @@
   },
   {
     "id": "safety-076",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "systems",
     "question": "NFPA 70B-2026 puts equipment in condition 3 when, among other triggers:",
@@ -1462,7 +1462,7 @@
   },
   {
     "id": "safety-084",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "component",
     "question": "NFPA 70B-2026 marks which of these as an enhanced test rather than the basic insulation-resistance test?",
@@ -1498,7 +1498,7 @@
   },
   {
     "id": "safety-086",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "component",
     "question": "Which test is listed for a panelboard in NFPA 70B-2026 Table 13.3.5?",
@@ -1534,7 +1534,7 @@
   },
   {
     "id": "safety-088",
-    "level": "III",
+    "level": "II",
     "topic": "electrical-safety",
     "domain": "component",
     "question": "Online partial discharge on switchgear above 1000 V, in NFPA 70B-2026, is:",
@@ -1570,10 +1570,10 @@
   },
   {
     "id": "safety-090",
-    "level": "II",
+    "level": "III",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "You need incident energy for a 24.9 kV overhead line. Does the IEEE 1584-2018 empirical model apply directly?",
+    "question": "You're asked for an incident-energy number on a 24.9 kV overhead line using the same empirical method you use for 480 V gear. Does that model apply directly?",
     "choices": [
       "Yes. It applies to any ac voltage",
       "Yes, if the working distance is at least 36 in",
@@ -1582,19 +1582,19 @@
     ],
     "answer": 3,
     "explanation": "The 2018 model's range is 208 V to 15,000 V three-phase, with limits on bolted-fault current, gap, and working distance. Outside that range, the guide says alternative methods exist and that you should research them, but it does not endorse one.",
-    "reference": "IEEE 1584-2018, 4.2",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 5; ref. IEEE 1584-2018, 4.2",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
   {
     "id": "safety-091",
-    "level": "II",
+    "level": "IV",
     "topic": "electrical-safety",
     "domain": "safety",
     "question": "A 240 V single-phase panel needs an incident energy estimate. IEEE 1584-2018 says:",
     "choices": [
       "Single-phase systems never need an arc-flash calculation",
-      "Divide the three-phase result by √3",
+      "Divide the three-phase result by \u221a3",
       "Use the dc method instead",
       "The model does not cover single phase. Using the three-phase equations with the single-phase bolted current gives a result expected to be conservative"
     ],
@@ -1609,7 +1609,7 @@
     "level": "III",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "An upstream relay will not clear an arcing fault for 4 s. When can IEEE 1584-2018's 2 s arc-duration assumption be used?",
+    "question": "An upstream relay won't clear an arcing fault for 4 s. When is it reasonable to use a 2 s arc duration in the incident-energy calculation?",
     "choices": [
       "When the worker can reasonably move away from the arc. It is not appropriate when egress is blocked, such as in a bucket or inside an enclosure",
       "Always. Arc duration is capped at 2 s by the standard",
@@ -1618,7 +1618,7 @@
     ],
     "answer": 0,
     "explanation": "The guide treats 2 s as a usually reasonable time for a person to get clear when clearing takes longer. It also says to use engineering judgment, because a worker in a bucket truck or inside equipment may not be able to escape that quickly.",
-    "reference": "IEEE 1584-2018, 6.9.1",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 6; ref. IEEE 1584-2018, 6.9.1",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1627,7 +1627,7 @@
     "level": "III",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "The manufacturer's time-current curve for the upstream device is a band, not a single line. For arc duration, IEEE 1584-2018 says to read:",
+    "question": "The upstream device's time-current curve is a band, not a single line. For arc duration in an arc-flash study, which time do you read?",
     "choices": [
       "The shortest time in the band",
       "The longest time in the band at the calculated arcing current",
@@ -1635,8 +1635,8 @@
       "The time at the bolted fault current instead of the arcing current"
     ],
     "answer": 1,
-    "explanation": "Use the slow edge of the band at the arcing current. Taking the fast edge understates exposure. Remember to check both the average arcing current and the reduced minimum arcing current.",
-    "reference": "IEEE 1584-2018, 6.9.1",
+    "explanation": "Use the slow edge of the band at the arcing current. Taking the fast edge understates exposure. Remember to check both the average arcing current and the reduced minimum arcing current. Source: ANSI/NETA ATS-2025 6.3 item 6; ref. IEEE 1584-2018, 6.9.1.",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 6; ref. IEEE 1584-2018, 6.9.1",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1645,7 +1645,7 @@
     "level": "III",
     "topic": "electrical-safety",
     "domain": "theory",
-    "question": "A fuse curve gives only the average melting time, 0.050 s at the arcing current. Using IEEE 1584-2018, total clearing time is about:",
+    "question": "In an arc-flash study, a fuse curve gives only the average melting time, 0.050 s at the arcing current. Total clearing time is about:",
     "choices": [
       "0.050 s",
       "0.055 s",
@@ -1653,8 +1653,8 @@
       "0.100 s"
     ],
     "answer": 2,
-    "explanation": "When only the average melt curve is available, add 10% of the time plus 0.004 s: 0.050 × 1.10 + 0.004 = 0.059 s. If a total-clearing curve exists, use that curve instead.",
-    "reference": "IEEE 1584-2018, 6.9.2",
+    "explanation": "When only the average melt curve is available, add 10% of the time plus 0.004 s: 0.050 \u00d7 1.10 + 0.004 = 0.059 s. If a total-clearing curve exists, use that curve instead. Source: ANSI/NETA ATS-2025 6.3 item 6; ref. IEEE 1584-2018, 6.9.2.",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 6; ref. IEEE 1584-2018, 6.9.2",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1663,7 +1663,7 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "A low-voltage power breaker has a retrofit trip unit, and its curve shows only the trip unit's sensing time. For arc duration, IEEE 1584-2018 says to:",
+    "question": "A low-voltage power breaker has a retrofit trip unit, and its curve shows only the sensing time. For arc duration in the study, you should:",
     "choices": [
       "Use the trip-unit time as is",
       "Double the trip-unit time",
@@ -1672,7 +1672,7 @@
     ],
     "answer": 3,
     "explanation": "Curves that ship with integral trip units usually already include the breaker's opening and clearing. Retrofit trip-unit curves may not. If they don't, add the mechanism time, which the guide gives as typically 0.05 s, or three cycles.",
-    "reference": "IEEE 1584-2018, 6.9.3",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 6; ref. IEEE 1584-2018, 6.9.3",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1681,7 +1681,7 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "IEEE 1584-2018 lists a typical working distance for low-voltage switchgear of:",
+    "question": "An arc-flash study uses a typical working distance for low-voltage switchgear. What is that distance?",
     "choices": [
       "18 in (457.2 mm)",
       "36 in (914.4 mm)",
@@ -1690,7 +1690,7 @@
     ],
     "answer": 2,
     "explanation": "The guide's typical value for low-voltage switchgear is 24 in. Low-voltage MCCs, panelboards, and cable junction boxes are typically 18 in, and 5 kV and 15 kV gear is typically 36 in. Twelve inches is the model's lower limit, not a typical value. Use a different distance when the task puts the worker closer or farther.",
-    "reference": "IEEE 1584-2018, 6.7 (Table 10)",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 7; ref. IEEE 1584-2018, 6.7 (Table 10)",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1699,7 +1699,7 @@
     "level": "III",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "Why does IEEE 1584-2018 have you run a second arc-duration calculation at a reduced arcing current?",
+    "question": "Why does an arc-flash study run a second arc-duration calculation at a reduced arcing current?",
     "choices": [
       "The reduced current always gives the lower, less conservative answer, so it can be discarded",
       "It is required only above 600 V",
@@ -1708,7 +1708,7 @@
     ],
     "answer": 2,
     "explanation": "Arcing current varies. The variation factor gives a lower bound, Iarc_min, and that lower current may trip the device later. Check both and keep the worse result. The guide says the effect is largest from 208 V to 600 V.",
-    "reference": "IEEE 1584-2018, 4.5",
+    "reference": "ANSI/NETA ATS-2025 6.3 items 5 and 6; ref. IEEE 1584-2018, 4.5",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1717,7 +1717,7 @@
     "level": "III",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "A plant can run with its secondary tie open or closed, and with generators on or off. IEEE 1584-2018 says the incident energy at each bus should be:",
+    "question": "A plant can run with its secondary tie open or closed, and with generators on or off. In the arc-flash study, incident energy at each bus should be:",
     "choices": [
       "Calculated only at maximum available fault current",
       "Calculated only for the normal mode",
@@ -1726,7 +1726,7 @@
     ],
     "answer": 2,
     "explanation": "Maximum fault current is not always the worst case, because lower current can mean longer clearing. The guide has you study the modes that give both maximum and minimum available fault current and take the highest incident energy and arc-flash boundary at each point.",
-    "reference": "IEEE 1584-2018, 6.3",
+    "reference": "ANSI/NETA ATS-2025 6.3 item 4; ref. IEEE 1584-2018, 6.3",
     "verified": true,
     "kb": "safety.md#arc-flash"
   },
@@ -1735,7 +1735,7 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "IEEE 1584-2018 incident energy results account for which hazard?",
+    "question": "The incident-energy number on an arc-flash label accounts for which hazard?",
     "choices": [
       "Thermal, blast pressure, and noise combined",
       "Thermal burn from the arc only. Blast pressure, shrapnel, molten metal, light, sound, and toxic by-products are not included",
@@ -1753,7 +1753,7 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "safety",
-    "question": "During a ground-grid test, the remote current probe is out of sight of the test operator in an area the public can reach. IEEE 81 says:",
+    "question": "During a ground-grid fall-of-potential test, the remote current probe is out of sight in an area the public can reach. What should you do?",
     "choices": [
       "Leave it unattended, since the test current is small",
       "Flag it with tape and keep testing",
@@ -1762,8 +1762,188 @@
     ],
     "answer": 3,
     "explanation": "Test leads that run out to remote earth can carry hazardous voltage, from the test set or from a fault that occurs during the test. The guide calls for continuous watch by a spotter in radio contact when probes are out of sight or publicly accessible, and while leads remain connected to the grid.",
-    "reference": "IEEE 81-2012, 5.1 item d)",
+    "reference": "ANSI/NETA ATS-2025 7.13.B.2; ref. IEEE 81-2012, 5.1 item d)",
     "verified": true,
     "kb": "safety.md#before-you-test"
+  },
+  {
+    "id": "safety-101",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Which of these is NOT within the scope of IEEE 1584.1-2022 for an arc-flash study?",
+    "choices": [
+      "Specifying the bolted fault current per location",
+      "Recommending PPE and label content",
+      "Defining working distances",
+      "Listing arcing duration per location"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 1584.1 lists items outside the scope of IEEE 1584 and the guide: PPE recommendations, label content, and incident-energy reduction recommendations. Source: IEEE 1584.1-2022, 1.4.",
+    "reference": "IEEE 1584.1-2022, 1.4",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-102",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "IEEE 1584.1-2022 lists minimum deliverables for each piece of equipment in an arc-flash study. Which set is it?",
+    "choices": [
+      "Equipment ID, bolted fault current, arcing current, arcing duration, arc-flash boundary, incident energy, working distance",
+      "Equipment ID, PPE category, glove class, label text",
+      "Bolted fault current and incident energy only",
+      "Single-line diagram and coordination curves only"
+    ],
+    "answer": 0,
+    "explanation": "The minimum per-equipment tabulation includes equipment ID, three-phase rms symmetrical bolted fault current, arcing fault current, arcing duration, arc-flash boundary, incident energy, and working distance. Source: IEEE 1584.1-2022, 4.5.",
+    "reference": "IEEE 1584.1-2022, 4.5",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-103",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "In an arc-flash study, a relay's time-current curve does not include breaker opening time. With no other data, what opening time does IEEE 1584.1-2022 give for a 1 kV to 15 kV breaker at 60 Hz?",
+    "choices": [
+      "1.5 cycles (0.025 s)",
+      "3.0 cycles (0.050 s)",
+      "5.0 cycles (0.080 s)",
+      "8.0 cycles (0.133 s)"
+    ],
+    "answer": 2,
+    "explanation": "When opening time is not in the curve, add it to get arc duration. Typical values are 1.5 cycles for molded-case breakers under 1 kV with integral trip, 3.0 cycles for insulated-case or power breakers under 1 kV, and 5.0 cycles (0.080 s) for 1 kV to 15 kV breakers. Source: IEEE 1584.1-2022, Annex C, C.1 and Table C.1.",
+    "reference": "IEEE 1584.1-2022, Annex C.1, Table C.1",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-104",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "The incident energy at a low-voltage switchboard's main bus is calculated using the clearing time of the main breaker inside the same section. When does IEEE 1584.1-2022 say that's valid?",
+    "choices": [
+      "Always; the main protects everything in the board",
+      "Only if the main is isolated from the compartment where the arc happens, so a line-side arc can't involve it",
+      "Only if the main has instantaneous trip",
+      "Only below 240 V"
+    ],
+    "answer": 1,
+    "explanation": "An OCPD only limits incident energy on its load side, in a compartment sufficiently separated or isolated from the device itself. Otherwise an arc can be on the line side of the main, or escalate to it, and the upstream device must be used. Consult the manufacturer about isolation. Source: IEEE 1584.1-2022, Annex C, C.3.",
+    "reference": "IEEE 1584.1-2022, Annex C.3",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-105",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "IEEE 1584.1-2022 Table 1 gives typical bus gaps by equipment class. Which pair is correct?",
+    "choices": [
+      "LV switchgear 32 mm; 15 kV switchgear 152 mm",
+      "LV switchgear 25 mm; 15 kV switchgear 104 mm",
+      "LV switchgear 13 mm; 5 kV switchgear 152 mm",
+      "LV panelboards 32 mm; 5 kV MCC 152 mm"
+    ],
+    "answer": 0,
+    "explanation": "Typical gaps are 152 mm for 15 kV switchgear and MCCs, 104 mm for 5 kV switchgear and MCCs, 32 mm for LV switchgear, 25 mm for LV MCCs and panelboards, and 13 mm for cable junction boxes. Actual gaps are preferred, and the report should say where defaults were used. Source: IEEE 1584.1-2022, 4.3 and Table 1.",
+    "reference": "IEEE 1584.1-2022, 4.3 and Table 1",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-106",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "systems",
+    "question": "A plant can run with the tie breaker closed or open and has a standby generator. How does IEEE 1584.1-2022 say modes of operation should be handled in the arc-flash study?",
+    "choices": [
+      "Use only the normal utility mode",
+      "Consider operating conditions that change fault current paths or levels, with input from owners or operators, since results vary by mode",
+      "Always use the highest fault current mode only",
+      "Modes only matter above 15 kV"
+    ],
+    "answer": 1,
+    "explanation": "Different modes can give different available fault currents and relay behavior, so results vary by mode. The guide says to pick scenarios that affect fault paths or levels and consult the people who know how the system is run. Source: IEEE 1584.1-2022, Clause 5.",
+    "reference": "IEEE 1584.1-2022, Clause 5",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-107",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "A 480 V study point has a 120 kA bolted fault current. Is it inside the IEEE 1584-2018 model range?",
+    "choices": [
+      "Yes, up to 150 kA is covered",
+      "No; for 208 V to 600 V the model covers 500 A to 106 kA bolted fault current",
+      "Yes, current has no limit",
+      "No; LV is limited to 65 kA"
+    ],
+    "answer": 1,
+    "explanation": "The model range for 208 V to 600 V is 500 A to 106,000 A bolted fault current, with gaps of 6.35 mm to 76.2 mm. For 601 V to 15 kV it is 200 A to 65,000 A with gaps of 19.05 mm to 254 mm. Outside that, the guide makes no specific recommendation. Source: IEEE 1584-2018, 4.2.",
+    "reference": "IEEE 1584-2018, 4.2",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-108",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "What is the minimum working distance covered by the IEEE 1584-2018 model?",
+    "choices": [
+      "152 mm (6 in)",
+      "305 mm (12 in)",
+      "457 mm (18 in)",
+      "610 mm (24 in)"
+    ],
+    "answer": 1,
+    "explanation": "The model applies to working distances of 305 mm (12 in) or more. Fault clearing time has no model limit. Source: IEEE 1584-2018, 4.2 (and G.7.6 for the lower limit).",
+    "reference": "IEEE 1584-2018, 4.2",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-109",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "In IEEE 1584-2018, how is the reduced arcing current found, and which incident energy is reported?",
+    "choices": [
+      "Iarc_min = Iarc \u00d7 (1 \u2212 0.5 \u00d7 VarCf); report the higher of the two results",
+      "Iarc_min = 0.85 \u00d7 Iarc; report the average",
+      "Iarc_min = Iarc \u00d7 VarCf; report the lower result",
+      "It is only used above 600 V"
+    ],
+    "answer": 0,
+    "explanation": "Iarc_min = Iarc \u00d7 (1 \u2212 0.5 \u00d7 VarCf), with the correction factor from Table 2. Repeat the arc-duration, energy, and boundary steps at Iarc_min and use the higher result. The effect is largest from 208 V to 600 V. Source: IEEE 1584-2018, 4.3 and 4.5, Equation (2).",
+    "reference": "IEEE 1584-2018, 4.5, Equation (2); 4.3",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-110",
+    "level": "IV",
+    "topic": "electrical-safety",
+    "domain": "theory",
+    "question": "Which enclosure was the 600 V test box used to develop the IEEE 1584-2018 model?",
+    "choices": [
+      "508 \u00d7 508 \u00d7 508 mm (20 in cube)",
+      "660.4 mm (26 in) cube",
+      "914.4 mm (36 in) cube",
+      "1143 \u00d7 762 \u00d7 762 mm"
+    ],
+    "answer": 0,
+    "explanation": "Tested enclosures were a 20 in cube at 600 V, a 26 in cube at 2700 V, and a 36 in cube at 14,300 V. Limits include a maximum height or width of 49 in and a width more than four times the gap. Source: IEEE 1584-2018, 4.2.",
+    "reference": "IEEE 1584-2018, 4.2",
+    "verified": true,
+    "kb": "safety.md#arc-flash"
   }
 ]

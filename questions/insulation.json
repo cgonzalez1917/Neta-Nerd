@@ -239,25 +239,25 @@
     "level": "II",
     "topic": "insulation-resistance",
     "domain": "component",
-    "question": "A transformer winding's insulation resistance to ground reads close to zero. C57.152 says this points to a grounded winding, a winding-to-winding short, or heavy carbon tracking, and that you should:",
+    "question": "A transformer winding's insulation resistance to ground reads close to zero. That points to a grounded winding, a winding-to-winding short, or heavy carbon tracking. What should you do next?",
     "choices": [
       "Accept it if the oil is new",
       "Retest at a higher voltage until it reads higher",
-      "Correct it to 20 °C, and it will pass",
+      "Correct it to 20 \u00b0C, and it will pass",
       "Confirm with other tests, such as polarization index, insulation power factor, or moisture in the insulating liquid"
     ],
     "answer": 3,
-    "explanation": "A very low reading is a symptom, not a diagnosis. Back it up with PI, power factor, and liquid moisture before deciding. For normal readings, comparison with factory or earlier results means more than the absolute number of megohms.",
-    "reference": "IEEE C57.152-2025, 7.2.13.4",
+    "explanation": "A very low reading is a symptom, not a diagnosis. Back it up with PI, power factor, and liquid moisture before deciding. For normal readings, comparison with factory or earlier results means more than the absolute number of megohms. Source: ANSI/NETA ATS-2025 7.2.2.B.2 and D.2; ref. IEEE C57.152-2025, 7.2.13.4.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.2 and D.2; ref. IEEE C57.152-2025, 7.2.13.4",
     "verified": true,
     "kb": "insulation.md#spot"
   },
   {
     "id": "ir-017",
-    "level": "II",
+    "level": "III",
     "topic": "insulation-resistance",
     "domain": "component",
-    "question": "A natural-ester-filled transformer reads lower insulation resistance than a similar mineral-oil unit. C57.152 says:",
+    "question": "A natural-ester-filled transformer reads lower insulation resistance than a similar mineral-oil unit. How should you read that?",
     "choices": [
       "Ester units must meet the same absolute megohm value as mineral oil",
       "Low insulation resistance in an ester unit always means water in the paper",
@@ -266,7 +266,7 @@
     ],
     "answer": 2,
     "explanation": "The guide notes that ester-filled transformers generally have lower insulation resistance than mineral-oil units, and that higher temperature lowers readings too. The most useful comparison is with factory and earlier results.",
-    "reference": "IEEE C57.152-2025, 7.2.13.4",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.2 and D.2; ref. IEEE C57.152-2025, 7.2.13.4",
     "verified": true,
     "kb": "insulation.md#spot"
   },
@@ -285,6 +285,150 @@
     "answer": 3,
     "explanation": "Current that keeps rising at constant voltage points to insulation heading toward breakdown. The test codes say to stop at once. Afterward, ground the terminals long enough for trapped charge to bleed off.",
     "reference": "IEEE C57.12.90-2021, 10.11.4 item c); IEEE C57.152-2025, 7.2.13.3",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-019",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "Above what 1-minute insulation-resistance reading should the polarization index stop being used to judge a machine winding?",
+    "choices": [
+      "5 M\u03a9",
+      "100 M\u03a9",
+      "5000 M\u03a9",
+      "1 \u03a9"
+    ],
+    "answer": 2,
+    "explanation": "Clause 12.2.2 says that once the 1-minute value is higher than 5000 megohms, the current is so small that humidity, voltage drift, and the leads can move the 10-minute ratio. The index may or may not describe the insulation, so it is not used as the assessment. Clause 11.2 says the same thing: the index can be disregarded. ATS 7.15.1.B.2 still runs the test in accordance with IEEE 43, and 7.15.1.D.2.1 still prints a PI floor of 2.0 when the index is used.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2 and D.2.1; ref. IEEE 43-2013, clauses 11.2 and 12.2.2",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-020",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "For rotating-machine windings built before 1970, ATS Table 100.11\u2019s recommended minimum insulation resistance is:",
+    "choices": [
+      "kV + 1 megohms, not the flat 100 megohm column used for later form-wound windings",
+      "Always 100 megohms",
+      "Always 5 ohms",
+      "The control-wiring floor of 2 megohms"
+    ],
+    "answer": 0,
+    "explanation": "The older-winding column, and field windings, use kV + 1. A 4 kV machine in that column is about 5 megohms, not 100. Form-wound windings built after 1970 use the 100 megohm column. The whole table is a one-minute value at 40 \u00b0C.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-021",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "ATS Table 100.11 lists the DC test voltage for machine windings rated under 1000 V as:",
+    "choices": [
+      "500 V",
+      "5000 V",
+      "10 kV",
+      "100 V"
+    ],
+    "answer": 0,
+    "explanation": "Under 1000 V, the table\u2019s DC test voltage is 500 V. The minimum resistance still depends on which column the winding belongs in, and the value is for one minute at 40 \u00b0C. Do not grab the 5 kV or 10 kV megohmmeter range because it is on the dial.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11; test method ref. IEEE 43 per 7.15.1.B.2",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-022",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "In ATS Table 100.11, random-wound stator coils and form-wound coils below 1 kV have a recommended minimum of:",
+    "choices": [
+      "5 megohms",
+      "100 megohms",
+      "kV + 1, with no other column",
+      "2 megohms, the control-wire floor"
+    ],
+    "answer": 0,
+    "explanation": "That column is 5 megohms. The 100 megohm column is the later form-wound winding above that description. Control wiring at 2 megohms is a switchgear rule, not this machine cell. Correct the reading to 40 \u00b0C first.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-023",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "Unless another pair of times is stated, the polarization index on a machine winding is:",
+    "choices": [
+      "The 1-minute resistance divided by the 10-minute resistance",
+      "The 10-minute resistance divided by the 1-minute resistance",
+      "The 30-second resistance divided by the 1-minute resistance",
+      "A spot reading at 1 minute only"
+    ],
+    "answer": 1,
+    "explanation": "The index is the 10-minute value over the 1-minute value. Inverting it makes a healthy winding look bad. ATS 7.15.1.B.2 uses that 10-minute test on machines larger than 200 horsepower. Smaller machines in that section use the 60/30 ratio instead.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.B.2; ref. IEEE 43-2013, clause 5.4",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-024",
+    "level": "II",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "ATS sends you to Table 100.11 for a machine winding rated under 1000 V. The dc insulation-resistance test voltage is:",
+    "choices": [
+      "500 V dc",
+      "2500 V dc",
+      "10 kV dc",
+      "The highest range on the megohmmeter"
+    ],
+    "answer": 0,
+    "explanation": "Clause 5.3 and Table 1 put windings at or under 1000 V on a 500 V direct test. ATS Table 100.11 uses that same 500 V step. A higher range can overstress a small or wet winding. The reading is still corrected to 40 \u00b0C before it is compared.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and 7.15.1.B.2; ref. IEEE 43-2013, clause 5.3 and Table 1",
+    "verified": true,
+    "kb": "insulation.md#spot"
+  },
+  {
+    "id": "ir-025",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "Evaluating a motor PI under ATS 7.15.1, what minimum polarization index applies to thermal class 105 (class A) insulation?",
+    "choices": [
+      "1.0",
+      "1.5",
+      "2.0, the same number it uses for class 130 and above",
+      "4.0"
+    ],
+    "answer": 1,
+    "explanation": "Class 105 is 1.5. Class 130 and above is 2.0. ATS 7.15.1.D.2.1 prints a single floor of 2.0 for the AC machines in that section, which is the higher of those two IEEE floors. Do not use 1.5 to pass a machine that ATS holds to 2.0, and do not quote 2.0 as the IEEE floor for class A.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1.D.2.1; ref. IEEE 43-2013, clause 12.2 and Table 3",
+    "verified": true,
+    "kb": "insulation.md#pi-dar"
+  },
+  {
+    "id": "ir-026",
+    "level": "III",
+    "topic": "insulation-resistance",
+    "domain": "theory",
+    "question": "On a motor, you test one phase with the other two grounded instead of all three together. Compared with the whole-winding reading, the one-phase reading can be:",
+    "choices": [
+      "Exactly three times the whole-winding value, always",
+      "Lower than three times the whole-winding value, because of phase-to-phase current",
+      "Higher than the Table 4 minimum with no correction",
+      "Independent of temperature"
+    ],
+    "answer": 1,
+    "explanation": "Current between phases adds to the reading, so one phase can look worse than a simple three-times rule. The value you compare is still the observed resistance corrected to 40 \u00b0C. ATS Table 100.11 is that 40 \u00b0C table.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11; ref. IEEE 43-2013, clause 12.3",
     "verified": true,
     "kb": "insulation.md#spot"
   }

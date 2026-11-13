@@ -124,5 +124,59 @@
     "reference": "ANSI/NETA ATS-2025 7.19.2.D.4",
     "verified": true,
     "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-008",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "A new station-class arrester has a surge counter. During acceptance inspection, you:",
+    "choices": [
+      "Reset the counter to zero",
+      "Make sure it is correctly mounted and connected, and record its reading",
+      "Remove it, since it adds impedance to the ground lead",
+      "Bypass it during the insulation test only"
+    ],
+    "answer": 1,
+    "explanation": "The ATS visual list includes verifying the stroke counter is correctly mounted and electrically connected, and recording its reading. Source: ANSI/NETA ATS-2025 7.19.2.A.7 and A.8.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.A.7 and A.8",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-009",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Which arrester acceptance test is called for on substation-class arresters specifically?",
+    "choices": [
+      "Watts-loss",
+      "Dc hipot at twice rating",
+      "Turns ratio",
+      "Contact resistance across the arrester"
+    ],
+    "answer": 0,
+    "explanation": "ATS lists a watts-loss test for substation-class arresters, judged by comparison with similar units and the test-set maker's data. The insulation-resistance and ground-connection tests apply to every medium- and high-voltage arrester. Source: ANSI/NETA ATS-2025 7.19.2.B.4 and D.4.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.B.4",
+    "verified": true,
+    "kb": "apparatus.md#arresters"
+  },
+  {
+    "id": "arr-010",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Besides the ground-terminal-to-ground-system resistance, how is the arrester's grounding connection tested at acceptance?",
+    "choices": [
+      "It is not; only visual inspection applies",
+      "In accordance with the grounding-system section of ATS",
+      "With a 5 kV insulation test",
+      "With a clamp-on meter only"
+    ],
+    "answer": 1,
+    "explanation": "The arrester section sends you to the grounding-systems section for the ground connection test, and the ground terminal to ground system must read under 0.5 \u03a9. Source: ANSI/NETA ATS-2025 7.19.2.B.3 and D.3; 7.13.",
+    "reference": "ANSI/NETA ATS-2025 7.19.2.B.3 and D.3",
+    "verified": true,
+    "kb": "grounding.md#fop"
   }
 ]

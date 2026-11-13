@@ -75,7 +75,7 @@
   },
   {
     "id": "xfmr-005",
-    "level": "IV",
+    "level": "II",
     "topic": "transformers",
     "domain": "component",
     "question": "Manufacturer published insulation-resistance values exist and they disagree with Table 100.5. What does the ATS pattern require?",
@@ -111,7 +111,7 @@
   },
   {
     "id": "xfmr-007",
-    "level": "III",
+    "level": "II",
     "topic": "transformers",
     "domain": "component",
     "question": "Bushing capacitance has moved 7% from the nameplate. ATS 7.2.2.D.5 says:",
@@ -147,7 +147,7 @@
   },
   {
     "id": "xfmr-009",
-    "level": "III",
+    "level": "II",
     "topic": "transformers",
     "domain": "component",
     "question": "Core insulation resistance, ATS 7.2.2.D.11, shall be comparable to factory but not less than:",
@@ -166,7 +166,7 @@
   },
   {
     "id": "xfmr-010",
-    "level": "III",
+    "level": "II",
     "topic": "transformers",
     "domain": "component",
     "question": "New mineral oil in new equipment, 69 kV and below, ATS Table 100.4.1. Which set matches the table?",
@@ -185,7 +185,7 @@
   },
   {
     "id": "xfmr-011",
-    "level": "IV",
+    "level": "II",
     "topic": "transformers",
     "domain": "component",
     "question": "Three-phase equivalent leakage reactance differs from nameplate by 4%. ATS 7.2.2.D.10 says:",
@@ -386,7 +386,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "Hydrogen dominant in a DGA, with little acetylene, is the IEEE C57.104 pattern associated with:",
+    "question": "A DGA shows hydrogen dominant with little acetylene. That pattern is usually associated with:",
     "choices": [
       "Partial discharge or corona more than a hard arc",
       "A welded core ground only",
@@ -422,7 +422,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "Hydrogen in mineral oil, with no acetylene, is read by IEEE C57.104-2019 clause 6.2.1 as:",
+    "question": "A mineral-oil DGA shows hydrogen with no acetylene. How is that read?",
     "choices": [
       "Proof of an arc",
       "Primarily corona partial discharge or stray gassing, not by itself an arc",
@@ -440,7 +440,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "Methane, ethane, and ethylene in IEEE C57.104-2019 clause 6.2.1 come from:",
+    "question": "A mineral-oil DGA shows methane, ethane, and ethylene. Those gases come from:",
     "choices": [
       "Heating of oil or paper",
       "A CT polarity error",
@@ -473,10 +473,10 @@
   },
   {
     "id": "xfmr-027",
-    "level": "II",
+    "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.104-2019 clause 5.1.3 warns that a dissolved-gas sample can be useless because:",
+    "question": "A dissolved-gas result looks odd, and you wonder whether the sample itself is the problem. What makes a DGA sample useless?",
     "choices": [
       "The syringe was too clean",
       "The sample was tied to the wrong equipment, or a main-tank sample was swapped with a tap-changer sample",
@@ -484,17 +484,17 @@
       "The test was run at 60 Hz"
     ],
     "answer": 1,
-    "explanation": "A bad serial number or a swapped bottle assigns the gases to the wrong tank. A load-tap-changer compartment is not the main tank. Fix the identity before anyone diagnoses a fault.",
+    "explanation": "A bad serial number or a swapped bottle assigns the gases to the wrong tank. A load-tap-changer compartment is not the main tank. Fix the identity before anyone diagnoses a fault. Source: ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 5.1.3.",
     "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 5.1.3",
     "verified": true,
     "kb": "field-methods.md#dga"
   },
   {
     "id": "xfmr-028",
-    "level": "II",
+    "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.104-2019 clause 6.1.4 treats gas results as:",
+    "question": "Comparing this year's DGA with earlier ones, which situation is the bigger concern?",
     "choices": [
       "A single ppm that outranks the rate of change",
       "More concerning when the levels are rising than when you only have the level itself",
@@ -512,7 +512,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.106-2006 clause 5.2.1 prefers ASTM D1816 over D877 when you are watching oil from a transformer because:",
+    "question": "ATS Table 100.4 lists both D877 and D1816 dielectric breakdown. Why is D1816 preferred for oil from an in-service transformer?",
     "choices": [
       "D877 uses round electrodes that ignore water",
       "D1816 responds more to particles and dissolved water",
@@ -530,7 +530,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.106-2006 clause 4.2 lists these as especially sensitive to contamination:",
+    "question": "Which oil test results are especially sensitive to contamination when you sample a transformer for ATS 7.2.2?",
     "choices": [
       "Turns ratio, excitation current, and winding resistance",
       "Interfacial tension, dissipation factor, dielectric breakdown, color, water, and neutralization number",
@@ -566,7 +566,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.106-2006 clause 5.2.1 recommends ASTM D877 for:",
+    "question": "The D877 dielectric breakdown test (disk electrodes) is recommended for:",
     "choices": [
       "Routine acceptance of new, unprocessed oil for circuit breakers",
       "Dissolved-gas analysis",
@@ -584,7 +584,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.106-2006 clause 5.3.4 describes neutralization number as:",
+    "question": "On the ATS insulating-oil list, neutralization number measures:",
     "choices": [
       "A measure of acidic components, and of oxidation products in service-aged oil",
       "The water content in ppm",
@@ -620,7 +620,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "IEEE C57.106-2006 clause 5.1.8 uses ASTM D1524 to look at:",
+    "question": "On an oil sample, the ASTM D1524 visual check looks at:",
     "choices": [
       "Color and turbidity, which can show free water or solid contamination",
       "Turns ratio",
@@ -779,7 +779,7 @@
   },
   {
     "id": "xfmr-044",
-    "level": "II",
+    "level": "IV",
     "topic": "transformers",
     "domain": "component",
     "question": "Partial discharge in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.1, shows up mainly as:",
@@ -797,7 +797,7 @@
   },
   {
     "id": "xfmr-045",
-    "level": "II",
+    "level": "IV",
     "topic": "transformers",
     "domain": "component",
     "question": "Ethane in a soybean or rapeseed natural ester, with no other fault gases, is treated by IEEE C57.155-2014 clause 4.1.1 as:",
@@ -815,7 +815,7 @@
   },
   {
     "id": "xfmr-046",
-    "level": "III",
+    "level": "IV",
     "topic": "transformers",
     "domain": "component",
     "question": "Arcing in an ester-filled transformer, IEEE C57.155-2014 clause 5.3.2, produces:",
@@ -833,7 +833,7 @@
   },
   {
     "id": "xfmr-047",
-    "level": "III",
+    "level": "IV",
     "topic": "transformers",
     "domain": "component",
     "question": "Overheating an ester liquid, IEEE C57.155-2014 clause 4.1, compared with mineral oil, tends to:",
@@ -1049,7 +1049,7 @@
   },
   {
     "id": "xfmr-059",
-    "level": "III",
+    "level": "II",
     "topic": "transformers",
     "domain": "component",
     "question": "Which test does NFPA 70B-2026 Table 11.3.5 add for a liquid-filled transformer and not for a dry type?",
@@ -1085,7 +1085,7 @@
   },
   {
     "id": "xfmr-061",
-    "level": "III",
+    "level": "II",
     "topic": "transformers",
     "domain": "systems",
     "question": "When the manufacturer is silent, NFPA 70B-2026 puts transformer electrical testing, other than the fluid sample, on:",
@@ -1142,16 +1142,16 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "Ratio-testing a delta-wye transformer whose wye neutral is not brought out, using a single-phase ratio set. The C57.12.90 approach is to:",
+    "question": "You're ratio-testing a delta-wye transformer whose wye neutral isn't brought out, using a single-phase ratio set. How do you do it?",
     "choices": [
       "Skip ratio. It cannot be done without the neutral",
       "Short out one phase of the delta winding to create a virtual neutral, and measure phase by phase",
-      "Test line-to-line on both sides and divide by √3 on both",
+      "Test line-to-line on both sides and divide by \u221a3 on both",
       "Ground one LV terminal and read to the tank"
     ],
     "answer": 1,
-    "explanation": "With no X0, you short one delta phase so the applied voltage appears across a single winding pair with no neutral shift, then move the short for each phase. The test code shows this connection for a delta HV with a wye LV whose neutral is inaccessible.",
-    "reference": "IEEE C57.12.90-2021, 7.1.4",
+    "explanation": "With no X0, you short one delta phase so the applied voltage appears across a single winding pair with no neutral shift, then move the short for each phase. The test code shows this connection for a delta HV with a wye LV whose neutral is inaccessible. Source: ANSI/NETA ATS-2025 7.2.2.B.3; ref. IEEE C57.12.90-2021, 7.1.4.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.3; ref. IEEE C57.12.90-2021, 7.1.4",
     "verified": true,
     "kb": "transformers.md#ttr"
   },
@@ -1160,7 +1160,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "Before an insulation power-factor test on a liquid-filled transformer, C57.12.90 has the windings:",
+    "question": "Before the ATS 7.2.2 insulation power-factor test on a liquid-filled transformer, how are the windings set up?",
     "choices": [
       "Left open so the test set can read each terminal separately",
       "Short-circuited on themselves (each winding's terminals jumpered together), with bushings in place and windings under liquid",
@@ -1168,8 +1168,8 @@
       "Energized at rated voltage"
     ],
     "answer": 1,
-    "explanation": "Shorting each winding keeps winding inductance out of the measurement, so you read the insulation alone. The test code also wants bushings installed, windings immersed, and a temperature between 10 °C and 40 °C, as close to 20 °C as practical.",
-    "reference": "IEEE C57.12.90-2021, 10.10.1",
+    "explanation": "Shorting each winding keeps winding inductance out of the measurement, so you read the insulation alone. The test code also wants bushings installed, windings immersed, and a temperature between 10 \u00b0C and 40 \u00b0C, as close to 20 \u00b0C as practical. Source: ANSI/NETA ATS-2025 7.2.2.B.4; ref. IEEE C57.12.90-2021, 10.10.1.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.4; ref. IEEE C57.12.90-2021, 10.10.1",
     "verified": true,
     "kb": "transformers.md#power-factor"
   },
@@ -1178,7 +1178,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "Per C57.12.90, the voltage for an insulation power-factor test on a liquid-filled transformer winding shall not exceed:",
+    "question": "Running an insulation power-factor test on a liquid-filled transformer winding, the test voltage should not exceed:",
     "choices": [
       "Rated line-to-line voltage",
       "Half the winding's low-frequency test voltage, or 10 kV, whichever is lower",
@@ -1186,17 +1186,17 @@
       "1000 V for every winding"
     ],
     "answer": 1,
-    "explanation": "The cap is half the applied (low-frequency) test level for that winding or 10 kV, whichever is lower. So a low-voltage winding gets a lower test voltage than the HV winding. The 1000 V cap is the dry-type rule, not this one.",
-    "reference": "IEEE C57.12.90-2021, 10.10.3",
+    "explanation": "The cap is half the applied (low-frequency) test level for that winding or 10 kV, whichever is lower. So a low-voltage winding gets a lower test voltage than the HV winding. The 1000 V cap is the dry-type rule, not this one. Source: ANSI/NETA ATS-2025 7.2.2.B.4; ref. IEEE C57.12.90-2021, 10.10.3.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.4; ref. IEEE C57.12.90-2021, 10.10.3",
     "verified": true,
     "kb": "transformers.md#power-factor"
   },
   {
     "id": "xfmr-067",
-    "level": "II",
+    "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "A dry-type transformer with a 13.8 kV primary gets an insulation power-factor test. C57.12.91 limits the applied voltage to:",
+    "question": "A dry-type transformer with a 13.8 kV primary gets an insulation power-factor test. The applied voltage should be limited to:",
     "choices": [
       "10 kV, the same as a liquid-filled unit",
       "The winding's operating voltage to ground or 1000 V, whichever is lower, which here is 1000 V",
@@ -1204,7 +1204,7 @@
       "13.8 kV"
     ],
     "answer": 1,
-    "explanation": "Dry-type units get a much lower ceiling than liquid-filled units: operating voltage to ground or 1000 V, whichever is lower. Using the liquid-filled 10 kV practice on a dry-type unit is the classic mistake.",
+    "explanation": "Dry-type units get a much lower ceiling than liquid-filled units: operating voltage to ground or 1000 V, whichever is lower. Using the liquid-filled 10 kV practice on a dry-type unit is the classic mistake. Source: IEEE C57.12.91-2020, 10.9.4.",
     "reference": "IEEE C57.12.91-2020, 10.9.4",
     "verified": true,
     "kb": "transformers.md#power-factor"
@@ -1214,7 +1214,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "C57.12.91 on dry-type insulation power factor says the most useful way to judge a result is:",
+    "question": "You power-factor test a dry-type transformer. What's the most useful way to judge the result?",
     "choices": [
       "Comparison with the factory value and with earlier field tests, since no standard pass/fail values have been set for dry types",
       "The same 0.5% limit used for mineral-oil transformers",
@@ -1222,7 +1222,7 @@
       "A single reading is decisive, so trending is unnecessary"
     ],
     "answer": 0,
-    "explanation": "The test code says standard dry-type power-factor values have not been established, because power factor has shown little relation to dielectric withstand. Trend against the factory baseline and earlier results rather than a fixed number.",
+    "explanation": "The test code says standard dry-type power-factor values have not been established, because power factor has shown little relation to dielectric withstand. Trend against the factory baseline and earlier results rather than a fixed number. Source: IEEE C57.12.91-2020, 10.9.5 (note).",
     "reference": "IEEE C57.12.91-2020, 10.9.5 (note)",
     "verified": true,
     "kb": "transformers.md#power-factor"
@@ -1240,7 +1240,7 @@
       "45.0"
     ],
     "answer": 3,
-    "explanation": "On a wye winding, the ratio is judged against phase-to-neutral voltage, which is line-to-line divided by √3. 12,470 / 277 ≈ 45.0. Dividing by 480 (26.0) is the common error for delta-wye units.",
+    "explanation": "On a wye winding, the ratio is judged against phase-to-neutral voltage, which is line-to-line divided by \u221a3. 12,470 / 277 \u2248 45.0. Dividing by 480 (26.0) is the common error for delta-wye units.",
     "reference": "IEEE C57.152-2025, 7.2.10.4",
     "verified": true,
     "kb": "transformers.md#ttr"
@@ -1250,7 +1250,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "theory",
-    "question": "The calculated ratio is 45.02, and one phase measures 45.40. Against the C57.152 tolerance, that phase is:",
+    "question": "On a TTR test, the calculated ratio is 45.02, and one phase measures 45.40. That phase is:",
     "choices": [
       "About 0.84% off, outside the 0.5% tolerance, so investigate",
       "About 0.08% off, acceptable",
@@ -1258,8 +1258,8 @@
       "About 8.4% off, a shorted turn for certain"
     ],
     "answer": 0,
-    "explanation": "(45.40 − 45.02) / 45.02 × 100 ≈ 0.84%. The guide's voltage-ratio tolerance is 0.5% of the nameplate value, so this phase needs investigation.",
-    "reference": "IEEE C57.152-2025, 7.2.10.4",
+    "explanation": "(45.40 \u2212 45.02) / 45.02 \u00d7 100 \u2248 0.84%. The guide's voltage-ratio tolerance is 0.5% of the nameplate value, so this phase needs investigation.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.3; ref. IEEE C57.152-2025, 7.2.10.4",
     "verified": true,
     "kb": "transformers.md#ttr"
   },
@@ -1268,7 +1268,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "A three-legged core-form transformer gives a low-high-low excitation-current pattern instead of the expected high-low-high. Before suspecting a winding fault, C57.152 says to check:",
+    "question": "A three-legged core-form transformer gives a low-high-low excitation-current pattern instead of the expected high-low-high. Before suspecting a winding fault, check:",
     "choices": [
       "Only the oil dielectric strength",
       "Whether the tank was grounded to the station grid",
@@ -1277,7 +1277,7 @@
     ],
     "answer": 2,
     "explanation": "On a three-legged core, the outer phases normally read high and the center phase low. The guide lists an inverted pattern as a result of not following the usual test connections, an inaccessible high-side wye neutral, or an ungrounded third delta terminal. It is also normal for a four-legged core.",
-    "reference": "IEEE C57.152-2025, 7.2.11.2.5",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.6; ref. IEEE C57.152-2025, 7.2.11.2.5",
     "verified": true,
     "kb": "transformers.md#excitation"
   },
@@ -1286,7 +1286,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "You plan to run winding resistance, excitation current, SFRA, and TTR on the same transformer, with no demagnetizing step. C57.152 suggests:",
+    "question": "You plan to run winding resistance, excitation current, SFRA, and TTR on the same transformer, with no demagnetizing step. What order works best?",
     "choices": [
       "Run excitation, FRA, and TTR first and winding resistance last, because the dc test magnetizes the core",
       "Run winding resistance first so the core is saturated for the other tests",
@@ -1294,7 +1294,7 @@
       "Run winding resistance between each of the other tests"
     ],
     "answer": 0,
-    "explanation": "Dc winding-resistance current leaves residual magnetism that distorts excitation current and frequency response. Either demagnetize after the resistance test or put it at the end of the sequence.",
+    "explanation": "Dc winding-resistance current leaves residual magnetism that distorts excitation current and frequency response. Either demagnetize after the resistance test or put it at the end of the sequence. Source: IEEE C57.152-2025, 7.2.7.1 (note).",
     "reference": "IEEE C57.152-2025, 7.2.7.1 (note)",
     "verified": true,
     "kb": "transformers.md#excitation"
@@ -1304,7 +1304,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "theory",
-    "question": "Per-phase leakage reactance results on a three-phase transformer are 10.0%, 10.1%, and 10.6%. Using the C57.152 per-phase criterion, the 10.6% phase is:",
+    "question": "Per-phase leakage reactance results on a three-phase transformer are 10.0%, 10.1%, and 10.6%. The 10.6% phase is:",
     "choices": [
       "Within 3% of the average, acceptable",
       "Judged only against nameplate, not the average",
@@ -1312,8 +1312,8 @@
       "About 3.6% above the three-phase average, outside the 3% band, so investigate"
     ],
     "answer": 3,
-    "explanation": "The average is (10.0 + 10.1 + 10.6) / 3 ≈ 10.23%. 10.6 / 10.23 ≈ 1.036, which is 3.6% high. Per-phase results should sit within 3% of the three-phase average. A deviation that size can point to winding movement.",
-    "reference": "IEEE C57.152-2025, 7.2.12.1.5",
+    "explanation": "The average is (10.0 + 10.1 + 10.6) / 3 \u2248 10.23%. 10.6 / 10.23 \u2248 1.036, which is 3.6% high. Per-phase results should sit within 3% of the three-phase average. A deviation that size can point to winding movement. Source: ANSI/NETA ATS-2025 7.2.2.D.10; ref. IEEE C57.152-2025, 7.2.12.1.5.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.10; ref. IEEE C57.152-2025, 7.2.12.1.5",
     "verified": true,
     "kb": "transformers.md#core"
   },
@@ -1322,7 +1322,7 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "A 138 kV mineral-oil power transformer tests 0.7% insulation power factor, corrected to 20 °C. C57.152 reads this as:",
+    "question": "A 138 kV mineral-oil power transformer tests 0.7% insulation power factor, corrected to 20 \u00b0C. How do you read that?",
     "choices": [
       "Normal for a new unit",
       "Over the serviceability limit, so remove it from service now",
@@ -1330,8 +1330,8 @@
       "Above the new or normal limit but under the 1.0% serviceability limit, so do more testing and investigation, and trend it"
     ],
     "answer": 3,
-    "explanation": "For mineral-oil units below 230 kV, the guide gives 0.5% as the new or normal limit and 1.0% as the serviceability limit, both at 20 °C. Results between those two call for added testing to make sure the condition is not getting worse.",
-    "reference": "IEEE C57.152-2025, 7.2.14.8",
+    "explanation": "For mineral-oil units below 230 kV, the guide gives 0.5% as the new or normal limit and 1.0% as the serviceability limit, both at 20 \u00b0C. Results between those two call for added testing to make sure the condition is not getting worse.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.4 and Table 100.3; ref. IEEE C57.152-2025, 7.2.14.8",
     "verified": true,
     "kb": "transformers.md#power-factor"
   },
@@ -1340,16 +1340,16 @@
     "level": "III",
     "topic": "transformers",
     "domain": "component",
-    "question": "A condenser bushing's C1 power factor has doubled since its initial test. C57.152, summarizing C57.19.100, says to:",
+    "question": "A condenser bushing's C1 power factor has doubled since its initial test. What should happen?",
     "choices": [
       "Test it more often or remove it from service. Removal is called for if it reaches three times the initial value",
       "Ignore it, since only capacitance matters on condenser bushings",
       "Remove it only if it reaches ten times initial",
-      "Correct the reading to 20 °C and stop trending"
+      "Correct the reading to 20 \u00b0C and stop trending"
     ],
     "answer": 0,
-    "explanation": "A rise to 1.5 to 2 times the initial power factor means either more frequent testing or removal. Tripling means removal. Any bushing whose power factor keeps climbing should be scheduled out of service and the manufacturer consulted.",
-    "reference": "IEEE C57.152-2025, 7.3.4.1",
+    "explanation": "A rise to 1.5 to 2 times the initial power factor means either more frequent testing or removal. Tripling means removal. Any bushing whose power factor keeps climbing should be scheduled out of service and the manufacturer consulted. Source: ANSI/NETA ATS-2025 7.2.2.D.5; ref. IEEE C57.152-2025, 7.3.4.1.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.5; ref. IEEE C57.152-2025, 7.3.4.1",
     "verified": true,
     "kb": "transformers.md#power-factor"
   },
@@ -1358,7 +1358,7 @@
     "level": "II",
     "topic": "transformers",
     "domain": "component",
-    "question": "A solid (bulk) bushing with no test or voltage tap is mounted on the transformer. C57.152 suggests assessing it with:",
+    "question": "A solid (bulk) bushing with no test or voltage tap is mounted on the transformer. How do you assess it?",
     "choices": [
       "A C1/C2 power-factor test through the tap",
       "A hot collar test, judged on watt loss, with about 0.1 W as the generally accepted limit",
@@ -1366,9 +1366,369 @@
       "Insulation resistance at 15 kV"
     ],
     "answer": 1,
-    "explanation": "With no tap there is no C1/C2 measurement. A hot collar energizes a band around the porcelain with the conductor grounded, and you compare watt loss (about 0.1 W is the common limit) and current between similar bushings. It can also find cracks or a low oil level.",
-    "reference": "IEEE C57.152-2025, 7.3.4.1 and 7.3.4.4",
+    "explanation": "With no tap there is no C1/C2 measurement. A hot collar energizes a band around the porcelain with the conductor grounded, and you compare watt loss (about 0.1 W is the common limit) and current between similar bushings. It can also find cracks or a low oil level. Source: ANSI/NETA ATS-2025 7.2.2.D.5; ref. IEEE C57.152-2025, 7.3.4.1 and 7.3.4.4.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.5; ref. IEEE C57.152-2025, 7.3.4.1 and 7.3.4.4",
     "verified": true,
     "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-077",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "ATS has you evaluate dissolved-gas results against the guide for mineral oil. That guide is used to interpret:",
+    "choices": [
+      "Dissolved gases in transformer oil",
+      "CT knee-point markers",
+      "VLF withstand voltage",
+      "Breaker instantaneous tolerance"
+    ],
+    "answer": 0,
+    "explanation": "ATS 7.2.2.D.15 says to evaluate dissolved-gas results in accordance with IEEE C57.104. The guide is about gases in mineral oil. It is not the CT excitation guide, the VLF cable guide, or the breaker instantaneous table.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15 and 7.2.2.D.15; ref. IEEE C57.104-2019",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-078",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A mineral-oil dissolved-gas result shows acetylene, with ethylene also up. Acetylene is the marker for:",
+    "choices": [
+      "Cold cellulose drying",
+      "Arcing, or a very hot fault, rather than a calm thermal aging story",
+      "A normal new-oil baseline with no follow-up",
+      "A CT polarity error"
+    ],
+    "answer": 1,
+    "explanation": "Acetylene is produced by arcing in oil or paper at very high temperature. Ethylene tracks hotter heating of the oil or paper. Hydrogen can rise along with acetylene, so a low hydrogen number does not cancel the acetylene. ATS 7.2.2.D.15 says to evaluate the sample under that guide.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-079",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "When you plot a mineral-oil DGA result on Duval Triangle 1, which three gases set the point?",
+    "choices": [
+      "Hydrogen, carbon monoxide, and carbon dioxide",
+      "Methane, ethylene, and acetylene",
+      "Oxygen, nitrogen, and moisture",
+      "Furan, acid number, and color"
+    ],
+    "answer": 1,
+    "explanation": "The triangle uses methane for lower-energy heating, ethylene for hotter faults, and acetylene for arcing. Hydrogen is interpreted with the other gases, but it is not a side of that triangle. ATS 7.2.2.D.15 sends the sample to this guide.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.3",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-080",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "In a mineral-oil transformer, at what fault temperature does acetylene become an important product?",
+    "choices": [
+      "At ordinary service temperature",
+      "Only as the fault temperature nears 1000 \u00b0C",
+      "Whenever the oil is new",
+      "Only in the nitrogen blanket"
+    ],
+    "answer": 1,
+    "explanation": "Acetylene shows up in a meaningful amount only as the fault temperature gets up near 1000 \u00b0C. That point is in the text that opens clause 4. Methane, ethane, and ethylene show up with lower heating. A story that never reaches that temperature is not an acetylene story.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, opening of clause 4",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-081",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "Carbon monoxide and carbon dioxide stand out on a mineral-oil DGA. They point toward:",
+    "choices": [
+      "Heating of cellulose or of the insulating liquid",
+      "A reversed CT",
+      "A low power factor on the bushing tap only",
+      "Partial discharge with no other possibility"
+    ],
+    "answer": 0,
+    "explanation": "The carbon oxides are the cellulose and liquid-heating gases. Hydrogen is the partial-discharge and stray-gassing gas. Do not read a CO rise as a turns-ratio failure. Source: ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-082",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A dissolved-gas result matches none of the Rogers-ratio cases, even though combustible gas is high. What does that tell you?",
+    "choices": [
+      "The transformer is normal because it missed the table",
+      "The Rogers method simply did not identify a fault type",
+      "Acetylene must be ignored",
+      "The oil is ester, so mineral-oil rules do not apply"
+    ],
+    "answer": 1,
+    "explanation": "Rogers ratios miss a substantial share of real results because the ratios fall outside every case. That is a limit of the method, not a clean bill of health. Use another method in the guide, and still treat a rising trend as real.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.2",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-083",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A DGA sample was exposed to air before analysis. What does the result tend to show?",
+    "choices": [
+      "A large gain of acetylene",
+      "Loss of hydrogen, often with oxygen and nitrogen up",
+      "A perfect Duval triangle",
+      "No change, because hydrogen is not soluble"
+    ],
+    "answer": 1,
+    "explanation": "Hydrogen leaves the oil when the sample sees air. Oxygen and nitrogen come in. A sudden drop in hydrogen with a high oxygen-to-nitrogen ratio on a sealed transformer is a sampling problem until proved otherwise. Source: ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.B.15; ref. IEEE C57.104-2019, clause 5.1.4.1",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-084",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "Someone works out a yearly gassing rate from just two DGA samples. How good is that?",
+    "choices": [
+      "The preferred and sufficient method",
+      "A weak way to judge gassing, because normal scatter can dominate two points",
+      "Required before any Duval triangle",
+      "A substitute for the oil power-factor test"
+    ],
+    "answer": 1,
+    "explanation": "The guide wants a rate that survives ordinary sample-to-sample noise, which is why it uses more than one pair of bottles. A single jump still gets attention. It does not, by itself, prove the rate.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-085",
+    "level": "III",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "Combustible gas on a transformer DGA is high but stable. What should you still keep in mind?",
+    "choices": [
+      "The level never matters",
+      "Rising levels are the greater concern, and the fault type matters as well as the level",
+      "Acetylene is required before any action",
+      "The sample can be left open overnight"
+    ],
+    "answer": 1,
+    "explanation": "A high stable number and a number that is climbing are not the same story. The kind of fault matters too. Air exposure, which drops hydrogen, can fake a falling trend, so the sample has to be real before the rate is.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-086",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "IEEE C57.155-2014 clause 4.1, compared with mineral-oil dissolved-gas guides, says ester liquids:",
+    "choices": [
+      "Make entirely different gases, so hydrogen no longer means anything",
+      "Make the same fault gases, but in different ratios and at different rates, so an unmodified mineral-oil interpretation is not reliable",
+      "Can be judged with IEEE C57.104 ratios unchanged",
+      "Do not produce acetylene"
+    ],
+    "answer": 1,
+    "explanation": "The gases are the same family. The proportions and the rates are not. ATS 7.2.2.D.15 points a mineral-oil sample at IEEE C57.104. An ester-filled transformer is this other guide. Do not paste a mineral-oil Duval call onto ester oil.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1. Mineral-oil DGA remains IEEE C57.104-2019.",
+    "verified": true,
+    "kb": "field-methods.md#dga"
+  },
+  {
+    "id": "xfmr-087",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "You are power-factor testing transformer bushings on a cold morning. Ambient is 6 \u00b0C and top oil is 30 \u00b0C. Which approach fits bushing test guidance?",
+    "choices": [
+      "Use 6 \u00b0C for correction",
+      "Estimate bushing temperature as about 18 \u00b0C, the average of ambient and top oil, and correct to 20 \u00b0C",
+      "Use 30 \u00b0C for correction",
+      "Skip correction for bushings"
+    ],
+    "answer": 1,
+    "explanation": "For a bushing mounted in a transformer, its temperature is approximated as the average of ambient air and top-oil temperature: (6 + 30) / 2 = 18 \u00b0C. Results are then corrected to the 20 \u00b0C base. Do not test bushings below freezing, since ice can hide a bad bushing. Source: IEEE C57.19.100-2025, 10.4.1.",
+    "reference": "IEEE C57.19.100-2025, 10.4.1",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-088",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "IEEE C57.91-2025 bases normal insulation life on what hottest-spot temperature and life expectancy for a 65 \u00b0C rise transformer?",
+    "choices": [
+      "95 \u00b0C and 65,000 h",
+      "110 \u00b0C and 180,000 h (about 20.5 years)",
+      "120 \u00b0C and 150,000 h",
+      "105 \u00b0C and 200,000 h"
+    ],
+    "answer": 1,
+    "explanation": "The standard life expectancy is 180,000 h (about 20.5 years) at a 110 \u00b0C hottest spot. That 110 \u00b0C is the 80 \u00b0C hottest-spot rise plus a 30 \u00b0C average ambient. Normal loss of life for 24 h at 110 \u00b0C is 0.0133%. Source: IEEE C57.91-2025, 5.3 and 9.3.1.",
+    "reference": "IEEE C57.91-2025, 5.3 and 9.3.1",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-089",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "For a 65 \u00b0C rise power transformer, IEEE C57.91-2025 Table 10 recommends limits for loading above nameplate. Which set is right?",
+    "choices": [
+      "Top oil 110 \u00b0C, hottest spot 180 \u00b0C, maximum load 200%",
+      "Top oil 105 \u00b0C, hottest spot 140 \u00b0C, maximum load 150%",
+      "Top oil 95 \u00b0C, hottest spot 120 \u00b0C, maximum load 130%",
+      "Top oil 120 \u00b0C, hottest spot 200 \u00b0C, maximum load 250%"
+    ],
+    "answer": 0,
+    "explanation": "Table 10 gives top oil 110 \u00b0C, conductor hottest spot 180 \u00b0C, and 200% maximum loading. Table 11 then gives hottest-spot limits by loading type: 120, 130, 140, and 180 \u00b0C. Source: IEEE C57.91-2025, 9.2.1, Tables 10 and 11.",
+    "reference": "IEEE C57.91-2025, 9.2.1, Tables 10 and 11",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-090",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "A transformer will run hot for about two weeks while a parallel unit is out. In IEEE C57.91-2025 terms, that is which loading type, and what hottest-spot limit does Table 11 use for it?",
+    "choices": [
+      "Planned loading beyond nameplate, 130 \u00b0C",
+      "Long-time emergency loading, 140 \u00b0C",
+      "Short-time emergency loading, 180 \u00b0C",
+      "Normal life loading, 120 \u00b0C"
+    ],
+    "answer": 1,
+    "explanation": "Long-time emergency loading comes from an outage lasting 24 h or more, is rare, and may persist for months. Table 11 uses 140 \u00b0C for it. Short-time emergency is under 24 h with a 180 \u00b0C limit. In both cases top oil should not exceed 110 \u00b0C. Source: IEEE C57.91-2025, 9.5, 9.6, and Table 11.",
+    "reference": "IEEE C57.91-2025, 9.5 and Table 11",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-091",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "IEEE C57.91-2025 Table 2 gives a quick ambient adjustment. For an ONAN transformer with a 35 \u00b0C average daily ambient instead of 30 \u00b0C, the load should be lowered by about:",
+    "choices": [
+      "5%",
+      "7.5%",
+      "3.75%",
+      "10%"
+    ],
+    "answer": 1,
+    "explanation": "For ONAN, Table 2 is 1.5% of rating lower for each \u00b0C above 30 \u00b0C average ambient (and 1.0% higher for each \u00b0C below). 5 \u00b0C \u00d7 1.5% = 7.5%. The table is a quick approximation, not for actual planning limits. Source: IEEE C57.91-2025, 6.4 and Table 2.",
+    "reference": "IEEE C57.91-2025, 6.4 and Table 2",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-092",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Why does IEEE C57.91-2025 warn about top-oil temperatures above 105 \u00b0C on a 65 \u00b0C rise transformer?",
+    "choices": [
+      "Oil turns to sludge instantly",
+      "Oil expansion may exceed the tank's capacity and operate the pressure relief device, expelling oil",
+      "Bushings flash over",
+      "Cooling fans stop"
+    ],
+    "answer": 1,
+    "explanation": "Above 105 \u00b0C top oil (65 \u00b0C rise over 40 \u00b0C ambient), oil expansion may exceed what the tank holds, building pressure that can operate the pressure relief device and expel oil. Lost oil can upset the preservation system or expose parts when it cools. Source: IEEE C57.91-2025, 4.1 i).",
+    "reference": "IEEE C57.91-2025, 4.1 item i)",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-093",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "systems",
+    "question": "An operator wants to load a power transformer using the top-oil gauge alone. What does IEEE C57.91-2025 say?",
+    "choices": [
+      "That's acceptable for normal life loading",
+      "Top oil alone should not be used; subtract the hottest-spot-to-top-oil gradient, corrected for load, from 110 \u00b0C to get the allowed oil temperature",
+      "Use top oil plus 10 \u00b0C",
+      "Use the winding gauge only"
+    ],
+    "answer": 1,
+    "explanation": "Top-oil temperature alone isn't a guide to loading. Use the full-load hottest-spot-to-top-oil gradient from factory tests (or an assumed value), correct it to actual load, and subtract it from 110 \u00b0C. Thermal lag also means temperatures take time to settle after a load change. Source: IEEE C57.91-2025, 9.3.3.",
+    "reference": "IEEE C57.91-2025, 9.3.3",
+    "verified": true,
+    "kb": "transformers.md#oil"
+  },
+  {
+    "id": "xfmr-094",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A bushing's power factor is trending up across several tests. Per IEEE C57.19.100-2025, what increase do some manufacturers consider significant?",
+    "choices": [
+      "10% above initial",
+      "1.5 to 2 times the initial reading",
+      "Any value above 0.5%",
+      "Only a doubling of capacitance"
+    ],
+    "answer": 1,
+    "explanation": "Some manufacturers treat a rise to 1.5 to 2 times the initial reading as significant. A bushing with a continuing rise should be investigated, tested more often, and considered for removal, with the manufacturer consulted. Source: IEEE C57.19.100-2025, 10.4.1.",
+    "reference": "IEEE C57.19.100-2025, 10.4.1",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-095",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "A bushing tests at a questionable power factor at 38 \u00b0C. Per IEEE C57.19.100-2025, what should be done before condemning it?",
+    "choices": [
+      "Condemn it if the corrected value is high",
+      "Let it cool to near 20 \u00b0C and retest, since correction factors are averages with error",
+      "Test it below freezing instead",
+      "Increase test voltage"
+    ],
+    "answer": 1,
+    "explanation": "Temperature correction factors are averages and carry error, which is smaller near 20 \u00b0C. A bushing with a questionable result at high temperature shouldn't be condemned until it cools near 20 \u00b0C and is retested. Source: IEEE C57.19.100-2025, 10.4.1.",
+    "reference": "IEEE C57.19.100-2025, 10.4.1",
+    "verified": true,
+    "kb": "transformers.md#power-factor"
+  },
+  {
+    "id": "xfmr-096",
+    "level": "IV",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "For a standard 65 \u00b0C rise liquid-immersed transformer, IEEE C57.12.00-2021 limits average winding rise and hottest-spot winding rise over ambient at rated kVA to:",
+    "choices": [
+      "55 \u00b0C and 65 \u00b0C",
+      "65 \u00b0C and 80 \u00b0C",
+      "65 \u00b0C and 110 \u00b0C",
+      "80 \u00b0C and 110 \u00b0C"
+    ],
+    "answer": 1,
+    "explanation": "Average winding rise may not exceed 65 \u00b0C and hottest-spot winding rise may not exceed 80 \u00b0C at rated kVA, using the tap connection that gives the highest rise. Top-liquid rise near the top of the main tank is also limited to 65 \u00b0C. Source: IEEE C57.12.00-2021, 5.11.1.1 and 5.11.1.5.",
+    "reference": "IEEE C57.12.00-2021, 5.11.1.1 and 5.11.1.5",
+    "verified": true,
+    "kb": "transformers.md#oil"
   }
 ]
