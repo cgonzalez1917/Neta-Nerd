@@ -100,7 +100,7 @@ ATS-2025 7.6.3, in a workable order:
 
 ## Field guide: transfer switch functional test {#ats-functional}
 
-A transfer switch test proves two things: the switch itself is sound, and the whole emergency sequence works the way the design says. Sources: ATS-2025 7.22.3, NFPA 70-2023 Articles 700 and 701. NFPA 110 isn't in the held set, so this guide doesn't publish timing values from it. Timing comes from the manufacturer and the design (ATS 7.22.3.D.8).
+A transfer switch test proves two things: the switch itself is sound, and the whole emergency sequence works the way the design says. Sources: ATS-2025 7.22.3, NFPA 70-2023 Articles 700 and 701, and NFPA 110-2025 Chapters 4, 6, 7 and 8. NFPA 110 sets the classification, the minimum delay settings, and the test program. The actual settings come from the manufacturer and the design, within those limits (ATS 7.22.3.D.8).
 
 ### Setup
 
@@ -124,7 +124,7 @@ A transfer switch test proves two things: the switch itself is sound, and the wh
 5. Restore normal. The retransfer time delay runs, then the switch retransfers.
 6. Engine runs its cooldown and shuts down.
 
-Record each setting and each measured time. Compare them with the manufacturer's data and the design, not with a number you remember from another job.
+Record each setting and each measured time. Compare them with the manufacturer's data and the design, and check that the delays meet the NFPA 110 minimums below. Don't go by a number you remember from another job.
 
 ### NEC points to know
 
@@ -133,6 +133,56 @@ Record each setting and each measured time. Compare them with the manufacturer's
 - Emergency power within the required time, not to exceed 10 s (700.12). Legally required standby within 60 s (701.12).
 - A time delay keeps the switch from retransferring on a brief return of normal power (700.12(D)(1)).
 - The AHJ witnesses the commissioning test. Periodic tests follow an approved schedule, and a written record of tests and maintenance is kept (700.3).
+
+### NFPA 110 points to know
+
+NFPA 110-2025 covers the whole emergency power supply system (EPSS): the generator, its fuel and the transfer switches. Local adoption and the AHJ decide whether it applies to a given site.
+
+- **Type, Class, Level (4.1 to 4.4, Tables 4.1(a) and (b)).**
+  - Type is the longest permitted loss of power at the transfer-switch load terminals: Type 10 is 10 s, Type 60 is 60 s, Type 120 is 120 s.
+  - Class is the minimum time, in hours, the system carries rated load without refueling or recharging. Class 2 is 2 h, Class 0.25 is 15 min, Class 0.083 is about 5 min, and Class X is some other specified time.
+  - Level 1 is for systems whose failure could kill or badly hurt someone. Level 2 is for systems whose failure matters less to people's safety.
+- **ATS timing features (6.2.5 to 6.2.10).**
+  - A start delay keeps brief dips from starting the engine.
+  - Level 1 systems get an adjustable delay that staggers transfer after the EPS reaches proper voltage and frequency.
+  - An adjustable retransfer delay lets normal power settle. It is bypassed automatically if the EPS fails.
+  - Before shutdown, the engine runs unloaded for at least 5 min to cool down. Small air-cooled engines (15 kW and under) are exempt. No separate timer is needed when the engine control panel provides it or a utility feeder serves as the EPS.
+- **Delay settings for operational tests (8.4.5).**
+  - Start delay: at least 1 s, or 0.5 s for gas turbines.
+  - Transfer to emergency: no minimum.
+  - Return to normal: at least 5 min.
+  - Shutdown: at least 5 min.
+  - Apply these together with the Type limit and the equipment exceptions.
+- **Acceptance test of a generator EPSS (7.13).**
+  - Notify the AHJ ahead of time.
+  - Start with the engine cold and the emergency loads running.
+  - Fail normal power: in a new, empty building, open the normal supply. In an occupied building, use an ATS test function or open the normal supply to the ATSs being commissioned.
+  - Run on building or representative load for at least 1.5 h. This first part has no minimum load percentage.
+  - Record:
+    - start delay, cranking time, and time to rated speed and to stable operation
+    - voltage, frequency and current
+    - oil pressure and water temperature where they apply
+    - each retransfer delay (set at 5 min or more) and the cooldown
+  - Let the unit cool at least 5 min.
+  - Then run a 2 h load test: at least 30% of nameplate kW for 30 min, at least 50% for 30 min, then 100% for 60 min. Site derating applies, and a load bank may add to building load. Coolant temperature must be stable for at least the last 30 min. Take readings every 15 min.
+- **Routine inspection and exercise (8.4.1 to 8.4.4).**
+  - Inspect Level 1 equipment weekly and Level 2 equipment at least monthly.
+  - Exercise both levels under load at least monthly, for at least 30 min.
+  - A diesel needs enough load to reach the manufacturer's minimum exhaust temperature, or at least 30% of its standby kW rating (a load bank may make up the 30%). Spark-ignited units use whatever EPSS load is available.
+  - Start the test with a simulated outage through an ATS, paralleling gear or a remote test, or by opening a normal breaker. Rotate which ATS starts it.
+  - Generator load tests include a full cold start.
+- **Annual supplemental load (8.4.2.4).** A diesel that can't meet the monthly criteria still runs monthly on available load. Once a year it also runs at least 50% of nameplate kW for 30 min, then at least 75% for 60 min, for 1.5 h or more without stopping.
+- **Monthly transfer switch operation (8.4.6).** Operate each ATS electrically from primary to alternate and back every month. The Type time doesn't have to be met on that monthly run, but there must be a way to confirm it once a year.
+- **36-month Level 1 test (8.4.9).**
+  - At least once every 36 months, run a Level 1 EPSS continuously for its Class duration. When the Class is longer than 4 h, you may stop after 4 h.
+  - Start it with ATS test functions, or by opening the normal supply to the ATSs in the test.
+  - A diesel carries at least 30% of nameplate kW, or enough load for the minimum exhaust temperature.
+  - It can be combined with the monthly and annual tests under the combined-loading rules.
+- **Records (8.3.3, 8.5).**
+  - Keep a written maintenance and test schedule.
+  - Keep records of inspections, tests, exercises, repairs and changes, and show them to the AHJ on request.
+  - Each record covers the date, who did the work, deficiencies found, corrective action and parts, and testing after repairs.
+  - Facility management or the AHJ sets how long records are kept.
 
 ### Common mistakes
 

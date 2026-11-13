@@ -121,7 +121,7 @@
     ],
     "answer": 0,
     "explanation": "The performance test follows NFPA 110. The insulation-resistance test and the protective-shutdown tests are separate lines in the same section. Do not replace those with the performance run, or the other way around.",
-    "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; NFPA 110-2025",
     "verified": true,
     "kb": "apparatus.md#emergency"
   },
@@ -531,11 +531,11 @@
       "Against a fixed NETA table of seconds for each delay",
       "Against the previous technician's notes only",
       "Any time under 60 seconds passes for every delay in the sequence",
-      "Against the manufacturer's data and the system design settings"
+      "Against the manufacturer's data and design settings, within NFPA 110 minimums"
     ],
     "answer": 3,
-    "explanation": "ATS 7.22.3.D.8 sends you to the manufacturer and the system design. It has no fixed table of seconds. Record each setting and each measured time so the next test can compare. Source: ANSI/NETA ATS-2025, 7.22.3.D.8.",
-    "reference": "ANSI/NETA ATS-2025, 7.22.3.D.8",
+    "explanation": "ATS 7.22.3.D.8 sends you to the manufacturer and the system design; ATS itself has no table of seconds. NFPA 110 sets floors for operational-test settings: start delay at least 1 s, return to normal at least 5 min, shutdown at least 5 min, and no minimum on transfer to emergency. Record each setting and each measured time so the next test can compare. Source: ANSI/NETA ATS-2025, 7.22.3.D.8; NFPA 110-2025, 8.4.5.",
+    "reference": "ANSI/NETA ATS-2025, 7.22.3.D.8; NFPA 110-2025, 8.4.5",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -554,6 +554,168 @@
     "answer": 0,
     "explanation": "B.6 sends relays and timers to Section 7.9. B.7 checks that both sources have matching rotation and phasing, plus synchronized operation where the application uses it. Source: ANSI/NETA ATS-2025, 7.22.3.B.6 and B.7.",
     "reference": "ANSI/NETA ATS-2025, 7.22.3.B.6 and B.7",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-032",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "An emergency power supply system is designated Type 10, Class 2. What does that mean under NFPA 110?",
+    "choices": [
+      "10 h of fuel at rated load, and transfer within 2 s",
+      "Level 1 service with a 10-minute cooldown and 2 transfer switches",
+      "Power restored at the ATS load terminals within 10 s, and at least 2 h at rated load without refueling",
+      "A 10 kW unit able to carry 2 times its rating briefly"
+    ],
+    "answer": 2,
+    "explanation": "Type is the longest allowed loss of power at the transfer-switch load terminals: Type 10 means 10 seconds. Class is the minimum time, in hours, the system runs at rated load without refueling or recharging, so Class 2 is 2 hours. Source: NFPA 110-2025, 4.1 to 4.3 and Tables 4.1(a) and 4.1(b).",
+    "reference": "NFPA 110-2025, 4.1 to 4.3 and Tables 4.1(a) and 4.1(b)",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-033",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "An EPSS is listed as Class 0.083. About how long must it carry rated load without refueling?",
+    "choices": [
+      "5 minutes",
+      "8.3 minutes",
+      "15 minutes",
+      "83 minutes"
+    ],
+    "answer": 0,
+    "explanation": "Class is in hours. 0.083 h \u00d7 60 \u2248 5 minutes. Class 0.25 is 15 minutes. Source: NFPA 110-2025, 4.2 and Table 4.1(a).",
+    "reference": "NFPA 110-2025, 4.2 and Table 4.1(a)",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-034",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "A 500 kW standby diesel is exercised monthly under NFPA 110 using the nameplate-load criterion. What minimum load and run time apply?",
+    "choices": [
+      "At least 250 kW (50%) for 15 minutes",
+      "At least 500 kW (100%) for 60 minutes",
+      "Any load for at least 10 minutes",
+      "At least 150 kW (30% of nameplate) for at least 30 minutes"
+    ],
+    "answer": 3,
+    "explanation": "Monthly exercise is at least 30 minutes under load. For a diesel, the load either reaches the manufacturer's minimum exhaust temperature or is at least 30% of the standby kW rating: 0.30 \u00d7 500 = 150 kW. A load bank can make up the difference. Source: NFPA 110-2025, 8.4.2 and 8.4.2.1.1 to 8.4.2.1.2.",
+    "reference": "NFPA 110-2025, 8.4.2 and 8.4.2.1.1 to 8.4.2.1.2",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-035",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "How often does NFPA 110 require each automatic transfer switch to be operated, and how?",
+    "choices": [
+      "Annually, by hand with the maintenance handle",
+      "Monthly, electrically transferring from the primary to the alternate source and back",
+      "Every 36 months during the Level 1 test only",
+      "Weekly, by pressing the lamp test button"
+    ],
+    "answer": 1,
+    "explanation": "Each ATS is electrically operated from primary to alternate and back every month. The Type time limit doesn't have to be met on that monthly operation, but there has to be a way to confirm compliance once a year. Source: NFPA 110-2025, 8.4.6 to 8.4.6.2.",
+    "reference": "NFPA 110-2025, 8.4.6 to 8.4.6.2",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-036",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "For an operational test of a generator EPSS, which delay settings match NFPA 110 minimums?",
+    "choices": [
+      "Start delay at least 10 s, retransfer at least 1 min, cooldown not required",
+      "Start delay at least 1 s, retransfer to normal at least 5 min, and shutdown (cooldown) at least 5 min",
+      "Transfer to emergency at least 5 min, with no minimum on retransfer",
+      "All delays set to zero so the test runs fast"
+    ],
+    "answer": 1,
+    "explanation": "NFPA 110 sets floors of 1 s on the start delay (0.5 s for gas turbines), 5 min on restoration to normal, and 5 min on shutdown. Transfer to emergency has no minimum. The 5-minute cooldown is waived for small air-cooled engines, 15 kW and under. Source: NFPA 110-2025, 8.4.5 and 6.2.10 to 6.2.10.2.",
+    "reference": "NFPA 110-2025, 8.4.5 and 6.2.10 to 6.2.10.2",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-037",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "An 800 kW generator is on its acceptance test. After the initial 1.5-hour run, what does the 2-hour load test require?",
+    "choices": [
+      "800 kW for the full 2 hours with no steps",
+      "400 kW for 60 min, then 800 kW for 60 min",
+      "240 kW for 2 hours",
+      "At least 240 kW for 30 min, then at least 400 kW for 30 min, then 800 kW for 60 min"
+    ],
+    "answer": 3,
+    "explanation": "The full-load test runs at 30%, then 50% for 30 minutes each, then full load for 60 minutes, with site derating applied: 0.3 \u00d7 800 = 240 kW, 0.5 \u00d7 800 = 400 kW, then 800 kW. A load bank can supplement building load, and coolant temperature must be stable for at least the last 30 minutes. Source: NFPA 110-2025, 7.13.4.5.1 to 7.13.4.5.4.",
+    "reference": "NFPA 110-2025, 7.13.4.5.1 to 7.13.4.5.4",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-038",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "A 600 kW diesel can't meet the monthly exhaust-temperature or 30% load criteria on building load. What annual test does NFPA 110 add?",
+    "choices": [
+      "At least 300 kW for 30 min, then at least 450 kW for 60 min, continuously (1.5 h total)",
+      "600 kW for 4 hours",
+      "180 kW for 30 min once a year",
+      "No annual test; monthly runs on available load are enough"
+    ],
+    "answer": 0,
+    "explanation": "A diesel that falls short of the monthly criteria keeps its monthly runs on available load and adds a yearly supplemental test: at least 50% of nameplate kW for 30 minutes, then at least 75% for 60 minutes, without stopping. 0.5 \u00d7 600 = 300 kW and 0.75 \u00d7 600 = 450 kW. Source: NFPA 110-2025, 8.4.2.4.",
+    "reference": "NFPA 110-2025, 8.4.2.4",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-039",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "A Level 1 EPSS is rated Class 6. How long must its 36-month test run under NFPA 110?",
+    "choices": [
+      "6 continuous hours, no exceptions",
+      "1.5 hours, the same as acceptance",
+      "4 continuous hours, since termination at 4 h is allowed when the Class exceeds 4 h",
+      "30 minutes, the same as the monthly exercise"
+    ],
+    "answer": 2,
+    "explanation": "At least every 36 months, a Level 1 EPSS is run continuously for its Class duration. When the Class is longer than 4 hours, the test may stop after 4 continuous hours: min(6, 4) = 4 h. A diesel carries at least 30% of nameplate kW or enough load for the manufacturer's minimum exhaust temperature. Source: NFPA 110-2025, 8.4.9 to 8.4.9.7.",
+    "reference": "NFPA 110-2025, 8.4.9 to 8.4.9.7",
+    "verified": true,
+    "kb": "apparatus.md#ats-functional"
+  },
+  {
+    "id": "emg-040",
+    "level": "III",
+    "topic": "emergency-systems",
+    "domain": "systems",
+    "question": "A generator's failure could kill or badly hurt someone at this site. Which NFPA 110 level applies, and how often is it inspected?",
+    "choices": [
+      "Level 2, inspected monthly",
+      "Level 1, inspected monthly",
+      "Level 1, inspected weekly",
+      "Level 2, inspected weekly"
+    ],
+    "answer": 2,
+    "explanation": "Level 1 is for systems whose failure could kill or badly hurt someone, and its equipment is inspected weekly. Level 2 covers less critical loads and gets at least a monthly visual inspection. Both levels are exercised under load at least monthly. Source: NFPA 110-2025, 4.4.1 to 4.4.2 and 8.4.1.1 to 8.4.1.2.",
+    "reference": "NFPA 110-2025, 4.4.1 to 4.4.2 and 8.4.1.1 to 8.4.1.2",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   }

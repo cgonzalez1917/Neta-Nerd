@@ -12,6 +12,7 @@ These were read as text and may be cited.
 
 - ANSI/NETA ATS-2025 and ANSI/NETA MTS-2023.
 - NFPA 70E-2024.
+- NFPA 110-2025. Emergency and standby power systems. Paraphrased notes from the free-access viewer; the notes stay private.
 - 29 CFR 1910.147, 1910.269, and 1910.331 through 1910.335. OSHA 3120 is the booklet, not a substitute for the CFR.
 - IEEE C57.104-2019 (and the 2008 edition, for history). Mineral-oil dissolved gas.
 - IEEE 400.2-2024. VLF cable tests. ATS Table 100.6.3 says it is adapted from this edition. The tan-delta notes on ATS Table 100.6.7 still say they follow IEEE 400.2-2013 tables, and that 2013 edition is not here.
@@ -93,7 +94,7 @@ Free official copy: IEEE sells these. The IEEE GET program sometimes posts a sta
 | NFPA 70B-2026, chapters other than 7–9 | ATS/MTS 2.1; TestGuy | Equipment-specific maintenance outside the fundamental tests, records, and intervals | Chapters 7–9 were read as paraphrased notes from the free-access viewer. The rest of the standard is still a gap. View-only at NFPA |
 | NFPA 99 | ATS/MTS 2.1 | Health-care electrical systems | Same |
 | NFPA 101 | ATS/MTS 2.1 | Life safety | Same |
-| NFPA 110 | ATS 7.22.1 | Emergency-generator performance test | Same. Questions cite only the ATS sentence that names it |
+| NFPA 110-2025 | ATS 7.22.1 | Resolved. The 2025 edition is held, so this is not a gap. Emergency-generator performance and EPSS tests may cite it | View-only at NFPA; the notes stay private |
 | NFPA 111 | ATS/MTS 2.1 | Stored-energy emergency systems | Same |
 | NFPA 780 | ATS/MTS 2.1 | Lightning protection | Same |
 | NFPA 70E-2024 | ATS/MTS 2.1 | We have a text extract, so this is not a gap | View-only at NFPA; the extract stays private |
