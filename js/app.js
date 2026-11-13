@@ -1358,9 +1358,10 @@
     var key = "";
     var study = path === "/study" || path.indexOf("/study/") === 0;
     if (path === "/" || path === "") key = "home";
+    else if (path === "/drills" || path.indexOf("/drills/") === 0) key = "drills";
     else if (study) key = "study";
-    else if (path === "/tools") key = "tools";
     else if (path === "/manuals") key = "manuals";
+    else if (path === "/tools") key = "tools";
     var links = document.querySelectorAll(".site-nav a");
     for (var i = 0; i < links.length; i++) {
       var on = links[i].getAttribute("data-nav") === key;
