@@ -110,7 +110,7 @@ NFPA 70B maintenance chapters name which tests to run. They usually do not give 
 - Never present a real exam question, or a recalled exam item, as if it were the exam. Forum and chat recollections are topic ideas only. Do not copy their wording, and do not use a guessed answer in parentheses unless a standard you checked says the same thing.
 - One idea per stem. Distractors should be mistakes a technician might make, including another equipment’s test list or the other book’s limit (ATS versus MTS).
 - Keep Level II the largest share, then Level III. Targets from the December 2022 outline: Level II safety 15%, theory 25%, component 55%, systems 5%. Level III 13% / 23% / 47% / 17%. The validator prints counts. It does not fail for a one-point drift.
-- Every Level II and Level III question needs a block in `knowledge/review-queue.md` that contains `<!-- q:YOUR-ID -->`, the stem, the choices with the answer marked, and the citation. Copy the shape of the blocks already in that file. Append. Do not reorder the queue.
+- Every Level II and Level III question that is still `verified: false` needs a block in `knowledge/review-queue.md` that contains `<!-- q:YOUR-ID -->`, the stem, the choices with the answer marked, and the citation. Copy the shape of the blocks already in that file. Append. Do not reorder the queue. A question leaves that queue once the deciding fact has been checked and `verified` is `true`.
 - An answer you cannot source still gets added, with `verified: false`, and it still gets the review-queue block. Say in the explanation that the deciding fact was not in a source you checked.
 
 ## 5. Before every commit

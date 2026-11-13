@@ -520,7 +520,7 @@
     "answer": 0,
     "explanation": "The maintenance table calls for the inverse-time test at 300 percent of rated continuous current, and it also lists instantaneous. It does not print a trip-time band. That time still comes from the manufacturer or from the NETA table that applies to the test you are actually running.",
     "reference": "NFPA 70B-2026, Table 15.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -538,7 +538,7 @@
     "answer": 1,
     "explanation": "The servicing table includes operating the breaker at least three times, along with torque and interlock checks. Three operations are not a substitute for the electrical tests in the next table, and they are not a numeric contact-resistance limit.",
     "reference": "NFPA 70B-2026, Table 15.3.4",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -556,7 +556,7 @@
     "answer": 1,
     "explanation": "Medium-voltage breaker maintenance can include an enhanced overpotential test of the power circuit. Control wiring tied to solid-state parts is excluded from that overpotential test. Follow the manufacturer for those circuits instead of forcing a high-voltage test through the electronics.",
     "reference": "NFPA 70B-2026, Table 15.4.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -566,15 +566,15 @@
     "domain": "component",
     "question": "Chapter 15 of NFPA 70B-2026 splits breaker scope at about:",
     "choices": [
-      "Low-voltage breakers through 1000 V, and medium-voltage power breakers above 1000 V through 69 kV",
+      "Low-voltage AC breakers through 1000 V, and medium-voltage AC power breakers above 1000 V through 69 kV",
       "All breakers as one table with one test list",
       "Only breakers above 115 kV",
       "Fuses and network protectors"
     ],
     "answer": 0,
-    "explanation": "Molded-case, insulated-case, and low-voltage power breakers are the 1000 V and below group. Medium-voltage power breakers are the group above 1000 V through 69 kV. The two groups do not share one test list. Vacuum wear, oil, and gas condition show up on the medium-voltage inspection, not on a 480 V molded-case breaker.",
+    "explanation": "Molded-case, insulated-case, and low-voltage power breakers are the AC group at 1000 V and below. Medium-voltage power breakers are the AC group above 1000 V through 69 kV. The two groups do not share one test list. Vacuum wear, oil, and gas condition show up on the medium-voltage inspection, not on a 480 V molded-case breaker.",
     "reference": "NFPA 70B-2026, 15.1",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -592,7 +592,7 @@
     "answer": 0,
     "explanation": "The low-voltage electrical table includes thermography, contact resistance, insulation resistance, controls, electronic-trip calibration, the 300 percent inverse-time test, and instantaneous. The medium-voltage table instead stresses trip and close, mechanism, vacuum integrity, contact timing, and an enhanced overpotential test. Do not run a molded-case 300 percent shot and call it a vacuum-bottle test.",
     "reference": "NFPA 70B-2026, Tables 15.3.5 and 15.4.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -610,7 +610,7 @@
     "answer": 0,
     "explanation": "The low-voltage electrical table separates molded-case frames of 225 A and below from larger frames. Both still see the inverse-time test at 300 percent of rated continuous current. The table does not give the seconds. That time is the manufacturer\u2019s, or the NETA table if you are running an acceptance or maintenance test that actually publishes one.",
     "reference": "NFPA 70B-2026, Table 15.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   }
 ]

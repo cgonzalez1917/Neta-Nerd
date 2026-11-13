@@ -1018,14 +1018,14 @@
     "question": "An NFPA 70B-2026 field-test record has to include:",
     "choices": [
       "Only pass or fail",
-      "Who tested, the equipment identity and nameplate, conditions, date, the test, the criteria, and as-found and as-left values",
-      "The manufacturer\u2019s entire manual",
-      "A polarization index, even though these chapters do not define one"
+      "Who tested, the equipment identity and nameplate, the conditions, the date, and the test, plus criteria, as-found and as-left values, and comments where those apply",
+      "The manufacturer's entire manual",
+      "A polarization index on every record"
     ],
     "answer": 1,
-    "explanation": "Comments and recommendations belong in that record too. A bare pass or fail with no as-found value cannot support the next interval. These chapters do not give a polarization-index or dielectric-absorption number to invent.",
-    "reference": "NFPA 70B-2026, 8.5.1 and 8.5.2",
-    "verified": false,
+    "explanation": "The record names who tested, what was tested, the conditions, the date, and which test was run. Criteria, as-found and as-left values, and comments or recommendations are required where they apply, not as a filled box on every line. A bare pass or fail with none of that cannot support the next interval.",
+    "reference": "NFPA 70B-2026, 8.5.1 through 8.5.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1036,14 +1036,14 @@
     "question": "NFPA 70B-2026 adjusts a maintenance interval by:",
     "choices": [
       "Leaving it fixed no matter what fails",
-      "Shortening it when failures are analyzed, and allowing a longer interval only after more than two intervals without problems, with the extension written in the program",
+      "Letting a failure analysis decide whether a shorter interval is needed, allowing a risk-based change, and documenting a longer interval after more than two problem-free intervals",
       "Doubling it after one clean visit",
       "Using the condition-3 column after every pass"
     ],
     "answer": 1,
-    "explanation": "The table plus the condition score is used for at least two intervals unless something fails early. After more than two intervals with no extra repairs, the original interval can resume. After more than two intervals with no problems, a longer interval is permitted, and the reason is documented. Manufacturer instructions still come first.",
-    "reference": "NFPA 70B-2026, 9.1.2 and 9.3.2",
-    "verified": false,
+    "explanation": "A failure analysis decides whether the interval should be shortened. It does not automatically cut the interval every time a failure is reviewed. A risk-based change is also allowed. A longer interval can follow more than two intervals without problems, and that extension is written into the program. It is not the only way an interval may change. Manufacturer instructions still come first.",
+    "reference": "NFPA 70B-2026, 9.1.2.1.1 through 9.1.2.2 and 9.3.2.2 through 9.3.2.3",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1222,8 +1222,8 @@
     ],
     "answer": 0,
     "explanation": "Electromechanical relays are on the shorter row. Solid-state and microprocessor relays use 60, 36, and 12 months. The electrical table calls for pickup, three-point timing, and restraint or directional checks, and it does not print a percent tolerance.",
-    "reference": "NFPA 70B-2026, chapter 35",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 35.2, Table 9.3.2, and Table 35.3.5",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1241,7 +1241,7 @@
     "answer": 0,
     "explanation": "Electromechanical relays get the branch-to-frame insulation test and the zero check. Microprocessor relays get status and arc-reduction checks, and the arc-reduction test follows the manufacturer. Pickup and timing are on the table for the relays that have those elements. No timing tolerance is printed.",
     "reference": "NFPA 70B-2026, Table 35.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1249,17 +1249,17 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "The timing tolerance for the pickup and three-point timing in NFPA 70B-2026 Table 35.3.5 comes from:",
+    "question": "NFPA 70B-2026 Table 35.3.5, on protective-relay tests, tells you to:",
     "choices": [
-      "The relay manufacturer, not a percent made up for the test",
-      "Restraint or directional checks where the relay has them",
-      "Input and output checks",
-      "An electromechanical zero check"
+      "Perform the tests the table lists, and follow the manufacturer's instructions for the relay",
+      "Apply a timing-tolerance percent printed in that table",
+      "Replace the timing points with a restraint check",
+      "Skip pickup and use only the zero check"
     ],
     "answer": 0,
-    "explanation": "The table calls for pickup, timing at three points, restraint or directional action when the relay has it, and the inputs and outputs. Electromechanical relays add a frame insulation check and a zero check. It does not print a plus-or-minus percent. Use the manufacturer's band.",
-    "reference": "NFPA 70B-2026, Table 35.3.5",
-    "verified": false,
+    "explanation": "The table names the tests. It does not print a manufacturer tolerance band and it does not give a percent of your own. Where the work depends on the relay, follow the manufacturer's instructions. Pickup, timing points, restraint or directional checks, and the inputs and outputs are tests on that list, not a substitute for those instructions.",
+    "reference": "NFPA 70B-2026, Table 35.3.5 and 4.1.1",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1276,8 +1276,8 @@
     ],
     "answer": 0,
     "explanation": "Cases, displays, wiring, and settings are compared with the coordination study. Electromechanical relays also get a clearance check. Microprocessor events are documented. The electrical tests are pickup, three-point timing, and restraint or directional checks, still without a percent band.",
-    "reference": "NFPA 70B-2026, Table 35.3.1",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Tables 35.3.1 and 35.3.5",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   }
 ]

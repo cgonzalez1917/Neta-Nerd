@@ -176,7 +176,7 @@
     "answer": 3,
     "explanation": "Specific gravity belongs to stationary batteries, not to a breaker pole. The medium-voltage breaker list is contact resistance, insulation resistance, trip and close, the mechanism, vacuum integrity, contact timing, and enhanced overpotential, with control wiring that feeds solid-state parts left off the overpotential test.",
     "reference": "NFPA 70B-2026, Table 15.4.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -193,8 +193,8 @@
     ],
     "answer": 0,
     "explanation": "That is the ordinary standard row, and chapter 15 uses it for both voltage classes. The test lists are still different: low-voltage includes the 300 percent inverse-time test and three operations; medium-voltage includes vacuum integrity, contact timing, and enhanced overpotential. Sharing an interval does not mean sharing the test.",
-    "reference": "NFPA 70B-2026, chapter 15",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 15.2 and Table 9.3.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   }
 ]

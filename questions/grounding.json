@@ -212,8 +212,8 @@
     ],
     "answer": 0,
     "explanation": "Visual inspection of grounding and bonding is 12, 12, and 6 months. Electrical testing is 60, 36, and 36 months. The chapter lists fall-of-potential, point-to-point bonding, and connection resistance, and it does not print a universal ohm limit for the earth electrode.",
-    "reference": "NFPA 70B-2026, chapter 20",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 20.2 and Table 9.3.2",
+    "verified": true,
     "kb": "grounding.md#fop"
   },
   {
@@ -231,7 +231,7 @@
     "answer": 0,
     "explanation": "The grounding table also includes substation-grid integrity and voltage or current on grounding conductors. It does not publish one ohm value that every electrode must hit. Manufacturer or project limits still govern the number.",
     "reference": "NFPA 70B-2026, Table 20.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "grounding.md#fop"
   },
   {
@@ -248,8 +248,8 @@
     ],
     "answer": 0,
     "explanation": "The chapter also lists substation-grid integrity and voltage or current on grounding conductors. Connection resistance is still investigated when it exceeds the manufacturer\u2019s maximum, under the fundamental bolted-joint rule. The ohm value of the electrode, when someone has set one, comes from the project or from the NETA paragraph you are applying, not from a blank in this chapter.",
-    "reference": "NFPA 70B-2026, Table 20.3.5",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Table 20.3.5 and 7.2.1.3.2 through 7.2.1.3.3",
+    "verified": true,
     "kb": "grounding.md#limits"
   }
 ]

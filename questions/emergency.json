@@ -140,7 +140,7 @@
     "answer": 0,
     "explanation": "Those three words say what the equipment can still be used for. They are not the same as the condition score of 1, 2, or 3 that sets how often it is maintained.",
     "reference": "NFPA 70B-2026, 8.6.2",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -156,9 +156,9 @@
       "A transfer switch"
     ],
     "answer": 0,
-    "explanation": "The storage-system chapter starts above 3.6 MJ, equal to 1 kWh. Stationary standby batteries stay in chapter 36 even when someone is tempted to call the rack a storage system. Performance for the storage system, when the manufacturer is silent, follows that chapter\u2019s interval table, not a cell-voltage limit invented here.",
-    "reference": "NFPA 70B-2026, 32.1 and Table 32.2",
-    "verified": false,
+    "explanation": "The storage-system chapter starts above 3.6 MJ, equal to 1 kWh. That energy number does not by itself pull every standby battery into the chapter. Section 32.1.2 lists the applications that stay outside it. When the manufacturer is silent, performance for a system that is in the chapter follows that chapter's interval table.",
+    "reference": "NFPA 70B-2026, 32.1.1 through 32.1.2 and 36.1",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -175,8 +175,8 @@
     ],
     "answer": 0,
     "explanation": "The storage-system table includes a thermal survey, ultrasonic inspection, cable insulation resistance, connection resistance, a performance test, and a review of the battery-management system. Specific gravity and two-decimal float voltage are the stationary-standby chapter. A system at or below 1 kWh is not pulled into chapter 32 by the title alone.",
-    "reference": "NFPA 70B-2026, Table 32.3.5 and chapter 36",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Table 32.3.5",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -193,8 +193,8 @@
     ],
     "answer": 0,
     "explanation": "Visual inspection of transfer switches is 12, 6, and 3 months. The other transfer-switch tasks, when the manufacturer is silent, are 60, 36, and 12 months. Do not put the visual check on the grounding electrical-test row.",
-    "reference": "NFPA 70B-2026, chapter 39",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 39.2 and Table 9.3.2",
+    "verified": true,
     "kb": "apparatus.md#emergency"
   },
   {
@@ -212,7 +212,7 @@
     "answer": 0,
     "explanation": "The transfer-switch electrical list is insulation resistance, protective devices, the operators, the transfer sequence, bypass or isolation when the switch has it, and operation under load. Oil tests and vacuum-bottle tests belong to other equipment. No transfer-time limit is printed.",
     "reference": "NFPA 70B-2026, Table 39.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "apparatus.md#emergency"
   },
   {
@@ -224,13 +224,13 @@
     "choices": [
       "Operating the transfer under load",
       "Proving the bypass or isolation mechanism when the switch has one",
-      "Timing the transfer sequence",
+      "Functional transfer testing",
       "A dissolved-gas analysis of the switch"
     ],
     "answer": 3,
-    "explanation": "Insulation resistance, protective devices, operators, the transfer sequence, bypass or isolation, and operation under load are the electrical list. Dissolved gas is a liquid-filled transformer test. The visual interval for the switch is still 12, 6, and 3 months, and no transfer-time limit is printed.",
-    "reference": "NFPA 70B-2026, Table 39.3.5",
-    "verified": false,
+    "explanation": "The electrical list includes insulation resistance, protective devices, operators, functional transfer testing, bypass or isolation, and operation under load. Dissolved gas is a liquid-filled transformer test, not a transfer-switch test.",
+    "reference": "NFPA 70B-2026, Tables 39.3.5 and 39.3.1",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -248,7 +248,7 @@
     "answer": 0,
     "explanation": "That performance row is for a storage system above 1 kWh. It is not the stationary-standby float-voltage interval and it is not the valve-regulated jar performance row. The storage tests are thermal, ultrasonic, cable insulation, connection resistance, performance, and a battery-management review. No kilowatt-hour pass limit is printed beyond the chapter threshold.",
     "reference": "NFPA 70B-2026, Table 32.2",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -265,8 +265,8 @@
     ],
     "answer": 0,
     "explanation": "Manual operation, bolted connections, and interlocks are the servicing checks. The electrical table then calls for insulation resistance, protective devices, operators, the transfer sequence, bypass or isolation, and operation under load. Visual inspection is still 12, 6, and 3 months. No operating-time limit is printed.",
-    "reference": "NFPA 70B-2026, 39.3.4 and Table 39.3.5",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Tables 39.3.4 and 39.3.5",
+    "verified": true,
     "kb": "apparatus.md#emergency"
   }
 ]

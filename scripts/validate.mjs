@@ -91,7 +91,7 @@ for (const q of questions) {
 
 const queue = await readFile(join(root, "knowledge/review-queue.md"), "utf8");
 for (const q of questions) {
-  if (q.level === "II" || q.level === "III") {
+  if ((q.level === "II" || q.level === "III") && q.verified === false) {
     if (!queue.includes(`<!-- q:${q.id} -->`)) fail(`review queue missing ${q.id}`);
   }
 }

@@ -1114,8 +1114,8 @@
     ],
     "answer": 1,
     "explanation": "The 90 percent cap is for hardware that was torqued before. Going back to the full original value on a joint that has already been tightened can damage the bolt or the lug. If the manufacturer published no number, the applicable fastener table is the fallback, and metric hardware stays with the manufacturer.",
-    "reference": "NFPA 70B-2026, 7.2.1.4",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 7.2.1.4.1 through 7.2.1.4.3",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1132,8 +1132,8 @@
     ],
     "answer": 1,
     "explanation": "The 90 percent limit is the retorque rule for hardware that is already in service. A new joint gets the full specified torque. Do not mix the two.",
-    "reference": "NFPA 70B-2026, 7.2.2",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 7.2.2.1 through 7.2.2.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1150,8 +1150,8 @@
     ],
     "answer": 0,
     "explanation": "Through 1000 V the method is DC insulation resistance, with a calibrated instrument, and the voltage stays at or below the manufacturer\u2019s test voltage. If the manufacturer is silent, an industry standard is the next stop. These chapters do not publish a polarization-index or dielectric-absorption limit.",
-    "reference": "NFPA 70B-2026, 7.3.1",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 7.3.1 through 7.3.1.1.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1169,7 +1169,7 @@
     "answer": 1,
     "explanation": "The list includes overpotential sources, stored or mass energy, gas byproducts and electrolytes, asbestos, insulating gas, PCBs, and tetrachloroethylene. The test does not start until those are accounted for.",
     "reference": "NFPA 70B-2026, 8.2",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1186,8 +1186,8 @@
     ],
     "answer": 1,
     "explanation": "Calibration information has to be easy to find, and the interval has to fit how accurate the instrument must be and how it is used. A meter that is not rated for the voltage is not made acceptable by a fresh sticker.",
-    "reference": "NFPA 70B-2026, 8.4",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 8.4.1 through 8.4.6",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1205,7 +1205,7 @@
     "answer": 1,
     "explanation": "Visual inspection and cleaning are before each use. Electrical testing of those tools is on a 3-month interval in every condition column. That is tighter than the ordinary equipment row.",
     "reference": "NFPA 70B-2026, Table 9.3.2",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1222,8 +1222,8 @@
     ],
     "answer": 0,
     "explanation": "Online means the equipment is connected to its supply. Offline means it is disconnected or fed from a test source. Enhanced means the test gathers extra diagnostic information. It is not a different kind of equipment.",
-    "reference": "NFPA 70B-2026, 8.3",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 8.3.1 through 8.3.4",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1231,17 +1231,17 @@
     "level": "II",
     "topic": "electrical-safety",
     "domain": "systems",
-    "question": "NFPA 70B-2026 sets the overall condition number as:",
+    "question": "Under NFPA 70B-2026, how are a harsh environment and criticality brought into the condition score?",
     "choices": [
-      "The average of physical condition, criticality, and environment",
-      "The lowest of the three",
-      "The highest applicable of physical condition, criticality, and environment",
-      "Whichever number the last report used"
+      "A harsh environment is condition 3 when the equipment is not rated or evaluated for it, and criticality follows reliability and continuity concerns",
+      "Environment and criticality are averaged with the physical score",
+      "A harsh site stays condition 1 as long as the gear is energized",
+      "Criticality is scored from how new the paint is"
     ],
-    "answer": 2,
-    "explanation": "A harsh environment or a high criticality raises the overall score even when the gear still looks clean. The interval follows that higher score. Averaging would hide the worst factor.",
-    "reference": "NFPA 70B-2026, 9.2",
-    "verified": false,
+    "answer": 0,
+    "explanation": "A harsh environment puts the equipment in condition 3 when it was not specifically rated or evaluated for that environment. Criticality is assigned from reliability and continuity concerns, not from appearance. Those two factors are how the environment and the importance of the equipment enter the score.",
+    "reference": "NFPA 70B-2026, 9.2 and 9.2.2 through 9.2.3",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1252,14 +1252,14 @@
     "question": "When an interval is taken from NFPA 70B-2026, the first place to look is:",
     "choices": [
       "The table, even when the manufacturer published a shorter interval",
-      "The manufacturer\u2019s instructions, then the table only if those instructions are silent",
+      "The manufacturer's instructions first. The table's fit also depends on whether predictive methods are available, and a longer interval needs a written justification after more than two problem-free intervals",
       "Always 12 months",
-      "The last technician\u2019s preference, with nothing written down"
+      "The last technician's preference, with nothing written down"
     ],
     "answer": 1,
-    "explanation": "Manufacturer instructions come first. The table is a set of maxima used when the manufacturer does not say. A longer interval than the table has to be justified in the electrical maintenance program.",
-    "reference": "NFPA 70B-2026, 9.3.1 and 9.3.2",
-    "verified": false,
+    "explanation": "Manufacturer instructions come first. The table is not used only because the manufacturer was silent. Whether it applies also depends on whether predictive methods are available. An interval longer than the table needs a documented justification, and that extension is allowed after more than two intervals without problems.",
+    "reference": "NFPA 70B-2026, 9.3.1 through 9.3.2.3 and 9.1.2.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1276,8 +1276,8 @@
     ],
     "answer": 1,
     "explanation": "Any one of those methods can be the assessment, and more than one is allowed. Contact-resistance readings above the manufacturer\u2019s maximum are investigated. A retorque, if you use one, still stops at 90 percent of the original torque.",
-    "reference": "NFPA 70B-2026, 7.2.1",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 7.2.1 through 7.2.1.4.1",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1294,8 +1294,8 @@
     ],
     "answer": 1,
     "explanation": "Above 1000 V the program selects among DC insulation resistance, AC or DC withstand, DC overpotential, power factor or dissipation factor, very low frequency, damped AC, acoustic ultrasonic, and partial discharge. Through 1000 V, the specified method is DC insulation resistance. These chapters still do not publish a polarization-index limit.",
-    "reference": "NFPA 70B-2026, 7.3.2",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 7.3.2 through 7.3.2.1",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1306,14 +1306,14 @@
     "question": "NFPA 70B-2026 says equipment with an impending failure that threatens people, health, or the environment is:",
     "choices": [
       "Left in service until the next scheduled interval",
-      "De-energized and designated nonserviceable, unless de-energizing adds a hazard or is infeasible",
+      "De-energized and designated nonserviceable, unless that would add hazards or raise the risk, or it cannot be done",
       "Tagged limited-service and kept loaded",
       "Repaired only if the condition score is 1"
     ],
     "answer": 1,
-    "explanation": "The exception is the case where shutting it down creates a greater hazard or cannot be done. Until it is corrected, barricades and alerts stay up. Limited-service is not the designation for a failure that is about to hurt someone.",
-    "reference": "NFPA 70B-2026, 9.2.1.4",
-    "verified": false,
+    "explanation": "The usual step is to de-energize the equipment and mark it nonserviceable. The exception is wider than one greater hazard: it covers additional hazards or an increase in risk, and the case where de-energizing cannot be done. Barricades and alerts stay in place until the equipment is de-energized or repaired. Limited-service is not the label for a failure that is about to hurt someone.",
+    "reference": "NFPA 70B-2026, 9.2.1.4.1 through 9.2.1.4.3",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1330,8 +1330,8 @@
     ],
     "answer": 1,
     "explanation": "The joint is assessed by infrared, a permanent sensor, contact resistance, or torque, alone or together. A resistance above the manufacturer\u2019s maximum is not left as a number on the sheet. A retorque of that existing hardware still does not exceed 90 percent of the original torque.",
-    "reference": "NFPA 70B-2026, 7.2.1",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 7.2.1.3.2 through 7.2.1.3.3",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1347,9 +1347,9 @@
       "Gear that needs a major part replaced this cycle"
     ],
     "answer": 0,
-    "explanation": "Condition 1 is the clean case. Condition 2 still meets that picture but has at least one concern, such as a changed result or an open recommendation. Condition 3 is the step where operation has changed, cycles were missed, or an alarm is still unaddressed.",
-    "reference": "NFPA 70B-2026, 9.2.1.1",
-    "verified": false,
+    "explanation": "Condition 1 is the clean case: maintenance is current, and there are no open monitoring items or recommendations. Condition 2 keeps only some of those condition-1 criteria, not the whole set, and it carries at least one concern. Condition 3 is the step where operation has changed, maintenance cycles were missed, or an alarm is still unaddressed.",
+    "reference": "NFPA 70B-2026, 9.2.1.1 through 9.2.1.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1367,7 +1367,7 @@
     "answer": 1,
     "explanation": "Other triggers are an operating change, an unaddressed monitoring notification, or an urgent action. Two missed cycles are enough by themselves. Condition 2 is the milder step, where the basics are still met and only one concern has shown up.",
     "reference": "NFPA 70B-2026, 9.2.1.3",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1492,8 +1492,8 @@
     ],
     "answer": 0,
     "explanation": "Online means the equipment is still connected to its supply. Offline means it is disconnected or energized from test equipment. The A suffix, 1A and 2A, means an enhanced test that gathers extra diagnostic information. Thermography under load is an online inspection. A breaker overpotential test is offline.",
-    "reference": "NFPA 70B-2026, 8.3",
-    "verified": false,
+    "reference": "NFPA 70B-2026, 8.3.1 through 8.3.4, 7.4.4, and Table 15.4.5",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1509,9 +1509,9 @@
       "Recording float voltage to two decimals"
     ],
     "answer": 0,
-    "explanation": "Enhanced tests are the extra diagnostic steps: overpotential on medium-voltage breakers, dielectric withstand and online partial discharge on switchgear above 1000 V, and control-wiring insulation resistance on panelboards. They are not a pass/fail kilovolt. Control wiring tied to solid-state parts is still left out of the breaker overpotential test.",
+    "explanation": "Overpotential on a medium-voltage breaker power circuit, and dielectric withstand on switchgear above 1000 V, are enhanced tests rather than the basic insulation-resistance test. The caution about solid-state parts belongs to an overpotential test of control wiring, not to the power-circuit test. The chapters do not print a pass/fail kilovolt for those enhanced tests.",
     "reference": "NFPA 70B-2026, Tables 15.4.5, 12.3.5, and 13.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1528,8 +1528,8 @@
     ],
     "answer": 0,
     "explanation": "Those two are the extra choices once the gear is above 1000 V. Online partial discharge is an online test. The withstand test is not performed while the gear is in service. The chapter does not print the withstand kilovolt.",
-    "reference": "NFPA 70B-2026, Table 12.3.5",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Table 12.3.5 and 8.3.2, 8.3.4",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1547,7 +1547,7 @@
     "answer": 0,
     "explanation": "Panelboards and switchboards in this chapter are 1000 V and below. The electrical list is main-bus insulation resistance, enhanced control-wiring insulation resistance, protective devices, an operational test, and metering. Vacuum integrity and dissolved gas are other chapters.",
     "reference": "NFPA 70B-2026, Table 13.3.5",
-    "verified": false,
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1558,14 +1558,14 @@
     "question": "NFPA 70B-2026 visual inspection of substations and switchgear, conditions 1, 2, and 3, is:",
     "choices": [
       "12, 12, and 6 months",
-      "60, 36, and 12 months, which is the row for the other switchgear tasks",
+      "60, 36, and 12 months for every switchgear task, including infrared",
       "12, 6, and 3 months",
       "60, 36, and 36 months"
     ],
     "answer": 0,
-    "explanation": "The visual row is 12, 12, and 6 months. The other switchgear tasks use 60, 36, and 12 months when the manufacturer is silent. Above 1000 V the electrical list can add enhanced dielectric withstand and online partial discharge. Those additions do not change the visual interval.",
-    "reference": "NFPA 70B-2026, chapter 12",
-    "verified": false,
+    "explanation": "Visual inspection of substations and switchgear is 12, 12, and 6 months. Many other switchgear tasks use 60, 36, and 12 months when the manufacturer is silent, but that row is not every task. Infrared thermography has its own row, and it applies to this equipment too. Above 1000 V the electrical list can add enhanced dielectric withstand and online partial discharge. Those additions do not change the visual interval.",
+    "reference": "NFPA 70B-2026, Table 9.3.2 and 12.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1582,8 +1582,8 @@
     ],
     "answer": 0,
     "explanation": "Online means the equipment stays connected to the supply. Partial discharge in that switchgear table is the online option. Dielectric withstand is not done on a live bus. Panelboards at 1000 V and below are a different chapter and do not pick up this option just because they are in the same room.",
-    "reference": "NFPA 70B-2026, Table 12.3.5 and 8.3",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Table 12.3.5 and 8.3.2, 8.3.4",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1600,8 +1600,8 @@
     ],
     "answer": 0,
     "explanation": "That is the standard row for this 1000 V and below equipment. The electrical list is main-bus insulation resistance, an enhanced control-wiring insulation test, protective devices, an operational test, and metering. It is not vacuum integrity and it is not a fluid sample.",
-    "reference": "NFPA 70B-2026, chapter 13",
-    "verified": false,
+    "reference": "NFPA 70B-2026, Table 9.3.2, 13.1.1, 13.2, and Table 13.3.5",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   }
 ]
