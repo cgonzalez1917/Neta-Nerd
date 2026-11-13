@@ -38,6 +38,17 @@
 }
 .lock-ico { width: 13px; height: 13px; flex: none; }
 
+/* The study column is transparent, so the fixed phase drawing shows
+   through the words. This menu makes the header 40px taller and that
+   slid the drawing up across the study text. On study routes only,
+   move the drawing down by the menu height so the column matches the
+   page from before the menu. Other pages are left alone. */
+body.is-study #phase-bg {
+  top: var(--study-shift, 40px);
+  bottom: auto;
+  height: 100%;
+}
+
 .q-top { top: 112px; }
 .math-sec,
 .study :is(h1, h2, h3) { scroll-margin-top: 120px; }

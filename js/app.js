@@ -1356,8 +1356,9 @@
 
   function markNav(path) {
     var key = "";
+    var study = path === "/study" || path.indexOf("/study/") === 0;
     if (path === "/" || path === "") key = "home";
-    else if (path === "/study" || path.indexOf("/study/") === 0) key = "study";
+    else if (study) key = "study";
     else if (path === "/tools") key = "tools";
     else if (path === "/manuals") key = "manuals";
     var links = document.querySelectorAll(".site-nav a");
@@ -1367,6 +1368,10 @@
       if (on) links[i].setAttribute("aria-current", "page");
       else links[i].removeAttribute("aria-current");
     }
+    document.body.classList.toggle("is-study", study);
+    var nav = document.querySelector(".nav-bar");
+    var shift = study && nav ? nav.offsetHeight : 0;
+    document.documentElement.style.setProperty("--study-shift", shift + "px");
   }
 
   function render() {
@@ -1411,6 +1416,7 @@
   }
 
   window.addEventListener("hashchange", render);
+  window.addEventListener("resize", function () { markNav(parseHash()); });
   markNav(parseHash());
 
   Promise.all([
