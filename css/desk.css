@@ -1,0 +1,221 @@
+/* Field desk, tools, and manuals.
+   Built on the palette, panels, and buttons in styles.css.
+   Amber and cyan stay as they are. The phase background is untouched.
+   --header-h still sizes the logo row. The quiz bar offset is retuned
+   below so it clears the new menu. */
+
+.nav-bar {
+  width: min(820px, calc(100% - 28px));
+  margin: 0 auto;
+}
+.site-nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 8px;
+}
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 40px;
+  padding: 0 2px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.site-nav a:hover { color: var(--white); }
+.site-nav a.is-on,
+.site-nav a.is-on:hover {
+  color: var(--cyan);
+  border-bottom-color: var(--cyan);
+}
+.lock-ico { width: 13px; height: 13px; flex: none; }
+
+.q-top { top: 112px; }
+.math-sec,
+.study :is(h1, h2, h3) { scroll-margin-top: 120px; }
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 18px;
+  flex-wrap: wrap;
+}
+.title-row h1 { margin: 0; }
+
+.ticker {
+  border: 1px solid var(--line);
+  background: rgba(11, 13, 15, 0.88);
+  padding: 6px 8px 7px;
+  max-width: 100%;
+}
+.ticker-lab {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+}
+.ticker-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ticker-px {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+.spark-slot { display: flex; flex: none; }
+.spark { width: 84px; height: 22px; display: block; }
+
+.study-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  color: var(--text);
+  text-decoration: none;
+}
+.study-entry:hover { border-color: var(--cyan); }
+.study-copy { flex: 1 1 16rem; min-width: 0; }
+.study-copy strong { display: block; font-size: 1.15rem; }
+.study-copy span { color: var(--text-dim); font-size: 0.95rem; }
+.study-entry .btn { flex: none; }
+.study-entry .btn.primary {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--cyan-ink);
+}
+.study-entry:hover .btn.primary,
+.study-entry:focus-visible .btn.primary {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--bg);
+}
+
+.desk {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: start;
+}
+.desk > .panel + .panel,
+.tool-grid > .panel + .panel { margin-top: 0; }
+.desk > *,
+.tool-grid > * { min-width: 0; }
+
+.panel-h {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.panel-h h2 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.panel-h .tag { flex: none; }
+
+.news-list { list-style: none; margin: 0; padding: 0; }
+.news-list li { padding: 10px 0; border-top: 1px solid var(--line); }
+.news-list li:first-child { border-top: 0; padding-top: 0; }
+.news-title { margin: 0 0 3px; font-weight: 650; }
+.news-src { font-size: 0.86rem; }
+
+.slide {
+  display: none;
+  margin: 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.slide.is-on { display: block; }
+.art-frame svg,
+.tool-art svg { display: block; width: 100%; height: auto; }
+.slide figcaption {
+  margin: 0;
+  padding: 8px 10px 10px;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 0.78rem;
+}
+.deck-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+.deck-dots { display: flex; align-items: center; gap: 6px; }
+.deck-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 1px solid var(--text-faint);
+  background: transparent;
+  cursor: pointer;
+}
+.deck-dot.is-on { background: var(--cyan); border-color: var(--cyan); }
+.deck-btns { display: flex; gap: 6px; flex: none; }
+
+.lede.accent { color: var(--cyan); }
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+.tool-card { padding: 0; }
+.tool-art { background: var(--bg); border-bottom: 1px solid var(--line); }
+.tool-body { padding: 12px 14px 14px; }
+.tool-body p { margin: 0 0 10px; color: var(--text-dim); font-size: 0.92rem; }
+.tool-body .status {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.soon { max-width: 42rem; }
+.soon-lock svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+  color: var(--cyan);
+  margin-bottom: 8px;
+}
+.soon p { margin: 0; color: var(--text-dim); max-width: 42ch; }
+
+@media (max-width: 640px) {
+  .site-nav a {
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    gap: 4px;
+  }
+  .lock-ico { width: 12px; height: 12px; }
+  .desk,
+  .tool-grid { grid-template-columns: 1fr; }
+  .title-row { align-items: flex-start; }
+  .ticker-px { white-space: normal; }
+}

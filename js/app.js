@@ -551,7 +551,7 @@
     session._done = true;
     if (!sessionUsable(session)) {
       clearSession(session);
-      location.hash = "#/";
+      location.hash = "#/drills";
       state._finishing = false;
       return;
     }
@@ -614,7 +614,177 @@
     );
   }
 
-  function renderHome() {
+  function placeholderData() {
+    return window.NETA_PLACEHOLDERS || null;
+  }
+
+  function exampleTag(on) {
+    return on ? h("span", { class: "tag" }, "EXAMPLE") : null;
+  }
+
+  function safeArt(svg) {
+    return typeof svg === "string" && svg.indexOf("<svg") === 0 ? svg : "";
+  }
+
+  function sparkLine(points) {
+    if (!points || !/^[\d\s.,-]+$/.test(points)) return "";
+    return '<svg class="spark" viewBox="0 0 84 22" aria-hidden="true"><polyline points="' +
+      points + '" fill="none" stroke="#00e5ff" stroke-width="1.2"/></svg>';
+  }
+
+  function renderFieldDesk() {
+    document.title = "Home · Neta Nerd";
+    appendResumeBanners(["timed", "mock", "practice", "missed"]);
+    var data = placeholderData();
+    if (!data || !data.news || !data.deck || !data.ticker) {
+      app.append(h("h1", {}, "Field desk"), h("p", {}, "The placeholder file did not load."));
+      return;
+    }
+    var slides = data.deck.slides || [];
+    var index = 0;
+    var figs = slides.map(function (slide, idx) {
+      return h("figure", {
+        class: "slide" + (idx === 0 ? " is-on" : ""),
+        "aria-hidden": idx === 0 ? "false" : "true"
+      },
+        h("div", { class: "art-frame", html: safeArt(slide.svg) }),
+        h("figcaption", {}, slide.caption || "")
+      );
+    });
+    var dots = slides.map(function (slide, idx) {
+      return h("button", {
+        type: "button",
+        class: "deck-dot" + (idx === 0 ? " is-on" : ""),
+        role: "tab",
+        "aria-label": slide.caption || ("Example image " + (idx + 1)),
+        "aria-selected": idx === 0 ? "true" : "false"
+      });
+    });
+    function show(next) {
+      if (!slides.length) return;
+      index = (next % slides.length + slides.length) % slides.length;
+      figs.forEach(function (fig, idx) {
+        var on = idx === index;
+        fig.classList.toggle("is-on", on);
+        fig.setAttribute("aria-hidden", on ? "false" : "true");
+      });
+      dots.forEach(function (dot, idx) {
+        var on = idx === index;
+        dot.classList.toggle("is-on", on);
+        dot.setAttribute("aria-selected", on ? "true" : "false");
+      });
+    }
+    dots.forEach(function (dot, idx) {
+      dot.addEventListener("click", function () { show(idx); });
+    });
+    var ticker = data.ticker;
+    var deck = h("section", { class: "panel deck", "aria-labelledby": "deck-h" },
+      h("header", { class: "panel-h" },
+        h("h2", { id: "deck-h" }, data.deck.heading || "Electrical construction"),
+        exampleTag(data.deck.example)
+      ),
+      h("div", { class: "slides" }, figs),
+      h("div", { class: "deck-bar" },
+        h("div", { class: "deck-dots", role: "tablist", "aria-label": "Example images" }, dots),
+        h("div", { class: "deck-btns" },
+          h("button", {
+            type: "button", class: "btn ghost small",
+            "aria-label": "Previous example image",
+            onclick: function () { show(index - 1); }
+          }, "Prev"),
+          h("button", {
+            type: "button", class: "btn ghost small",
+            "aria-label": "Next example image",
+            onclick: function () { show(index + 1); }
+          }, "Next")
+        )
+      )
+    );
+    deck.addEventListener("keydown", function (ev) {
+      if (ev.key === "ArrowLeft") { show(index - 1); ev.preventDefault(); }
+      if (ev.key === "ArrowRight") { show(index + 1); ev.preventDefault(); }
+    });
+    app.append(
+      h("p", { class: "kicker" }, "Home"),
+      h("div", { class: "title-row" },
+        h("h1", {}, "Field desk"),
+        h("aside", { class: "ticker", "aria-label": "Example stock ticker. Not a live price." },
+          h("span", { class: "ticker-lab" }, ticker.name || ""),
+          h("span", { class: "ticker-line" },
+            h("span", { class: "ticker-px" }, ticker.price || ""),
+            h("span", { class: "spark-slot", html: sparkLine(ticker.spark) })
+          )
+        )
+      ),
+      h("a", { class: "study-entry panel", href: "#/study" },
+        h("span", { class: "study-copy" },
+          h("strong", {}, "Studying"),
+          h("span", {}, "Open the current study pages and practice drills.")
+        ),
+        h("span", { class: "btn primary" }, "Open Studying")
+      ),
+      h("div", { class: "desk" },
+        h("section", { class: "panel news", "aria-labelledby": "news-h" },
+          h("header", { class: "panel-h" },
+            h("h2", { id: "news-h" }, data.news.heading || "NETA News"),
+            exampleTag(data.news.example)
+          ),
+          h("ul", { class: "news-list" }, (data.news.items || []).map(function (item) {
+            return h("li", {},
+              h("p", { class: "news-title" }, item.title || ""),
+              h("a", { class: "news-src", href: item.href || "#" }, item.source || "")
+            );
+          }))
+        ),
+        deck
+      )
+    );
+  }
+
+  function renderTools() {
+    document.title = "Tools · Neta Nerd";
+    var tools = placeholderData() && placeholderData().tools;
+    if (!tools) {
+      app.append(h("h1", {}, "Field tools"), h("p", {}, "The placeholder file did not load."));
+      return;
+    }
+    app.append(
+      h("p", { class: "kicker" }, "Tools"),
+      h("h1", {}, "Field tools"),
+      h("p", { class: "lede accent" }, tools.intro || ""),
+      h("div", { class: "tool-grid" }, (tools.items || []).map(function (tool) {
+        return h("article", { class: "panel tool-card" },
+          h("div", { class: "tool-art", html: safeArt(tool.svg) }),
+          h("div", { class: "tool-body" },
+            h("header", { class: "panel-h" },
+              h("h2", {}, tool.title || ""),
+              exampleTag(tools.example)
+            ),
+            h("p", {}, tool.text || ""),
+            h("p", { class: "status" }, "Status: " + (tool.status || "Concept"))
+          )
+        );
+      }))
+    );
+  }
+
+  function renderManuals() {
+    document.title = "Manuals · Neta Nerd";
+    app.append(
+      h("p", { class: "kicker" }, "Manuals"),
+      h("h1", {}, "Coming soon"),
+      h("div", { class: "panel soon" },
+        h("div", {
+          class: "soon-lock",
+          html: '<svg class="lock-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
+        }),
+        h("p", {}, "This will be a members-only area filed by job number.")
+      )
+    );
+  }
+
+  function renderDrills() {
+    document.title = "Drills · Neta Nerd";
     var b = state.bank;
     var match = pool();
     var byLevel = {};
@@ -661,7 +831,7 @@
         h("h2", {}, "Topics"),
         h("div", { class: "topics" }, b.topics.map(function (t) {
           var n = b.questions.filter(function (q) { return q.topic === t.id; }).length;
-          return h("a", { class: "topic-card", href: "#/", onclick: function (ev) {
+          return h("a", { class: "topic-card", href: "#/drills", onclick: function (ev) {
             ev.preventDefault();
             state.filters.topics = [t.id];
             render();
@@ -741,7 +911,7 @@
             disabled: current ? null : true,
             onclick: function () { startMock(state.mockLevel, state.mockFormat); }
           }, "Start mock exam"),
-          h("a", { class: "btn", href: "#/" }, "Back to practice")
+          h("a", { class: "btn", href: "#/drills" }, "Back to practice")
         )
       )
     );
@@ -903,7 +1073,7 @@
       })),
       h("div", { class: "actions" },
         h("a", { class: "btn primary", href: "#/mock" }, "New mock exam"),
-        h("a", { class: "btn", href: "#/" }, "Practice")
+        h("a", { class: "btn", href: "#/drills" }, "Practice")
       ),
       h("div", { class: "panel", style: "margin-top:14px" },
         h("h2", {}, "Review"),
@@ -928,10 +1098,10 @@
 
   function renderRun() {
     var session = loadSession();
-    if (!session) { location.hash = "#/"; return; }
+    if (!session) { location.hash = "#/drills"; return; }
     var item = session.items[session.index];
     var q = sourceQuestion(item);
-    if (!q) { clearSession(session); location.hash = "#/"; return; }
+    if (!q) { clearSession(session); location.hash = "#/drills"; return; }
     var choices = shownChoices(item);
     var revealed = session.mode !== "timed" && item.revealed;
     var total = session.items.length;
@@ -1072,7 +1242,7 @@
     try { result = JSON.parse(sessionStorage.getItem("netanerd-result-v1") || "null"); }
     catch (e) {}
     if (!result) {
-      app.append(h("h1", {}, "No score yet"), h("p", {}, "Finish a drill to see a summary."), h("a", { class: "btn primary", href: "#/" }, "Home"));
+      app.append(h("h1", {}, "No score yet"), h("p", {}, "Finish a drill to see a summary."), h("a", { class: "btn primary", href: "#/drills" }, "Drills"));
       return;
     }
     var pct = Math.round(100 * result.correct / result.total);
@@ -1082,7 +1252,7 @@
       h("p", { class: "score-num" }, result.correct + " / " + result.total),
       h("p", {}, pct + "% · " + Math.floor(result.seconds / 60) + "m " + (result.seconds % 60) + "s" + (result.reason === "time" ? " · time expired" : "")),
       h("div", { class: "actions" },
-        h("a", { class: "btn primary", href: "#/" }, "Home"),
+        h("a", { class: "btn primary", href: "#/drills" }, "Drills"),
         h("button", { class: "btn ghost", onclick: function () {
           var ids = result.rows.filter(function (r) { return !r.correct; }).map(function (r) { return r.id; });
           var qs = ids.map(function (id) { return state.bank.byId[id]; }).filter(Boolean);
@@ -1184,9 +1354,26 @@
     );
   }
 
+  function markNav(path) {
+    var key = "";
+    if (path === "/" || path === "") key = "home";
+    else if (path === "/study" || path.indexOf("/study/") === 0) key = "study";
+    else if (path === "/tools") key = "tools";
+    else if (path === "/manuals") key = "manuals";
+    var links = document.querySelectorAll(".site-nav a");
+    for (var i = 0; i < links.length; i++) {
+      var on = links[i].getAttribute("data-nav") === key;
+      links[i].classList.toggle("is-on", on);
+      if (on) links[i].setAttribute("aria-current", "page");
+      else links[i].removeAttribute("aria-current");
+    }
+  }
+
   function render() {
     if (state._timer) { clearInterval(state._timer); state._timer = null; }
     if (state._key) { document.removeEventListener("keydown", state._key); state._key = null; }
+    var path = parseHash();
+    markNav(path);
     app.innerHTML = "";
     if (state.error) {
       app.append(h("h1", {}, "Question bank did not load"), h("p", {}, state.error),
@@ -1197,8 +1384,7 @@
       app.append(h("p", {}, "Loading the question bank…"));
       return;
     }
-    var path = parseHash();
-    if (path === "/" || path === "") {
+    if (path === "/" || path === "" || path === "/drills") {
       if (claimExpired("timed") || claimExpired("mock")) return;
     } else if (path === "/run" && storageGet(ACTIVE_KEY) === "timed") {
       if (claimExpired("timed")) return;
@@ -1207,7 +1393,10 @@
     }
     var study = /^\/study\/(.+\.md)(?:\/([a-z0-9-]+))?$/.exec(path);
     document.title = "Neta Nerd";
-    if (path === "/" || path === "") renderHome();
+    if (path === "/" || path === "") renderFieldDesk();
+    else if (path === "/drills") renderDrills();
+    else if (path === "/tools") renderTools();
+    else if (path === "/manuals") renderManuals();
     else if (path === "/run") renderRun();
     else if (path === "/results") renderResults();
     else if (path === "/mock") renderMockSetup();
@@ -1217,11 +1406,12 @@
     else if (path === "/math") renderMath();
     else if (path === "/study") renderStudyIndex();
     else if (study) renderStudyDoc(study[1], study[2]);
-    else renderHome();
+    else renderFieldDesk();
     armBannerClocks();
   }
 
   window.addEventListener("hashchange", render);
+  markNav(parseHash());
 
   Promise.all([
     loadJSON("questions/index.json"),
