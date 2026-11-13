@@ -6,7 +6,7 @@ Calculated ratio for a 13800 / 480 nameplate is 28.75, line to line. Percent dev
 
 Check the test-set self-test and the lead marks before you condemn a winding. A reversed lead looks like a ratio with the polarity flipped.
 
-Polarity matters when transformers will be paralleled and when CTs or VTs land in a scheme. A polarity error between paralleled units is a short circuit, not a paperwork issue.
+Polarity matters when transformers will be paralleled and when CTs or VTs land in a scheme. A polarity error between paralleled units is a short circuit, not a paperwork issue. Sweep-frequency response after a through-fault or a move is in [SFRA](#/study/transformers.md/sfra).
 
 ## Excitation {#excitation}
 
@@ -36,6 +36,28 @@ ATS 7.2.2.D.14 points insulating-liquid results at Table 100.4. Table 100.4.1, n
 
 Dissolved-gas analysis is evaluated with IEEE C57.104 (7.2.2.D.15), not with a single “bad ppm” invented in the field. Acetylene is the gas associated with arcing; hydrogen with partial discharge; carbon oxides with cellulose. Sample into a sealed syringe or bottle so the gases stay in the oil.
 
+Through-fault duration is not an oil test, but it is a nameplate-and-application check you make on the same visit. IEEE C57.12.00-2021 7.1.3.1 limits the defined short-circuit duration, for Categories II through IV, to two seconds unless the user specifies otherwise. Category I uses a separate duration equation. On a feeder that recloses, units in all categories must ride through those repeated faults without first cooling back to normal temperature, as long as the total time stays inside that single-event limit. If a longer fault time is expected, it has to be specified, not assumed.
+
+### Natural ester fluid (IEEE C57.147-2018)
+
+Do not judge a natural ester with a mineral-oil playbook. The numbers below are from IEEE C57.147-2018.
+
+- **Flash and fire point, as received (4.10 and Table 2).** Unused natural ester is expected to show a minimum flash point of 275 °C and a minimum fire point of 300 °C, both by ASTM D92. Lower values suggest contamination with a lower-flash material such as conventional mineral oil. Those D92 results are laboratory response data, not a complete fire-risk assessment by themselves.
+- **Water.** Absolute milligram-per-kilogram limits written for mineral oil do not transfer (4.16 and Annex B). Natural esters hold far more water in solution at a given temperature, on the order of 15 to 20 times as much at saturation at room temperature. Dielectric strength tracks percent of saturation, and that curve is essentially the same for both liquids, so compare by relative saturation, not by a mineral-oil ppm cap.
+- **Oxidation and tanks (4.15, 4.9).** Natural esters are not as oxidation-resistant as mineral oil. Free-breathing tanks, including a conservator with no bladder, are not recommended. Continuous, long-term exchange of air should be avoided, especially at operating temperature. Oxidation shows up first as a rise in viscosity. Natural esters are already more viscous than mineral oil; a further rise can hurt cooling and, over time, the insulation system's dielectric strength.
+- **Acceptance water and dielectric, Table 3.** After unused natural ester has been processed into new equipment, or after a site fill, and has stood for the required time, dissolved water by ASTM D1533 is limited to 300 mg/kg at 69 kV and below, 150 mg/kg above 69 kV and below 230 kV, and 100 mg/kg at 230 kV and above. The fire point minimum remains 300 °C in every class. Those after-fill water numbers are tighter than the 200 mg/kg as-received shipment limit in Table 2. In-service continued-use water limits in Table 4 are higher (450 / 350 / 200 mg/kg). ASTM D1816, 1 mm gap, minima in Table 3 are 25 kV, 30 kV, and 35 kV for those same three voltage classes; the 2 mm gap minima are 45 kV, 55 kV, and 60 kV. In-service Table 4 1 mm figures are lower (23 / 28 / 30 kV).
+- **Sit time after a fill (Clause 7).** Natural esters generally take longer to impregnate cellulose than mineral oil. If the manufacturer has no better figure, consider at least 8 hours, with 24 hours preferred, for a distribution transformer, and at least 24 hours, or more, for a power transformer, and run any circulating pumps for at least several hours of that time. Do not high-potential or energize on the mineral-oil wait. A cautious alternative is to wait until the unit has returned to ambient temperature.
+- **In-service fire point (Table 4 note d, 6.5 note 1).** A fire point under 300 °C on a unit that must keep a less-flammable or K-class rating is a sign of leftover mineral oil and should be investigated. It is not acceptable for that rating.
+- **Heating and fill (6.4.1, 6.5).** If the liquid must be warmed so it will pump, keep heater surface loading at or below 1.9 W/cm², which is 12 W per square inch, and keep the heater face at 100 °C or less. Scorching shows up as a high dissipation factor, a darkened liquid, a burnt odor, or charred residue on the element. During a fill, ground all accessible bushing terminals, the tank, and the filtering equipment including the hoses: liquid moving through filter paper or ungrounded hoses can charge the windings. Prefer equipment used only on natural ester. Otherwise flush with a volume equal to at least 5% of the ester charge so leftover mineral oil does not pull the fire point down. Do not exceed the tank vacuum limit on the nameplate.
+
+### Sampling insulating liquid (ASTM D923-07)
+
+ATS 7.2.2.B.15 takes the oil sample by ASTM D923. The copy used for these notes is the 2007 edition. The official exam list names D923-15, so treat 2007-only details as 2007 details until a 2015 copy is checked.
+
+- **Where to draw.** For a liquid whose specific gravity is less than 1, such as mineral oil, water and some other impurities settle near the floor, so the sample is taken from the bottom unless a different location is specified (3.1.1.1, 5.4). In drums, cans, and small vessels the device should draw about 3 mm off the floor; in large vessels, tank trucks, and tank cars, within 13 mm of the floor. Liquids with specific gravity greater than 1 are sampled from the surface layer. New liquid in containers should sit undisturbed at least 8 hours before a referee sample is taken.
+- **Energized apparatus (5.1, 7.2).** Do not sample energized instrument transformers such as CTs and PTs, and do not sample any energized apparatus that has only a small volume of oil, especially if oil would have to be added to keep the insulation's electric strength. An energized unit that is sampled must be under positive pressure at the sample valve so air is not drawn in. Do not use a drain plug as the sampling point, because flow is hard to control. Keep the liquid level high enough that the insulation's electric strength is not reduced.
+- **Dissolved gas and water (5.2, 5.4, 6.4 to 6.6).** Prefer a glass syringe or a stainless-steel cylinder. Ordinary bottles and soldered cans let gases escape or let air in, and soldered seams can contaminate the sample. It is undesirable to take atmosphere-exposed samples when relative humidity exceeds 50%, or in rain or snow, and the liquid should be at least as warm as the air so the sample does not pick up condensed moisture. Clear bottles help you see impurities; amber bottles, or storage in the dark, protect samples from light when that matters.
+
 ## Core ground {#core}
 
 ATS 7.2.2.D.11: core insulation resistance should be comparable to the factory value but not less than 500 MΩ at 500 V DC.
@@ -45,6 +67,21 @@ The intentional core ground is supposed to be a single point. If you megger the 
 ## Leakage reactance
 
 ATS 7.2.2.D.10: investigate a three-phase equivalent leakage-reactance result more than 3% off the nameplate. Per-phase results should stay within 3% of the average of the three. This is a mechanical-movement clue (winding shift), not a ratio test.
+
+## Sweep-frequency response (SFRA) {#sfra}
+
+Source: Locarno, Tully, and Wilson, SFRA article, NETA Transformer Handbook, Vol. 1.
+
+SFRA is a condition-assessment tool aimed at mechanical problems: winding movement, radial buckling, or axial deformation from shipping or short-circuit forces, and loss of core grounds. The most severe in-service forces come from close-in faults, from a fault inside an LTC, and from unsynchronized closing of a generator step-up. Inadequate restraints during transport can also move the core and windings.
+
+The article places the test with power factor, exciting current, turns ratio, leakage reactance, and the other diagnostics, and treats it as corroborative evidence before an expensive decision, not as a stand-alone condemnation. A changed SFRA trace with a still-acceptable power factor and ratio is a reason to keep investigating, not to ignore the trace.
+
+When it is particularly useful:
+
+- After a fault or a protection trip, to help judge the nature and extent of any mechanical damage.
+- During a condition assessment, especially if the unit has seen short circuits over time and apparently withstood them, to look for possible damage and remaining short-circuit capability.
+- Before and after a relocation, so any mechanical movement from the move is visible.
+- On new or refurbished units, to obtain fingerprint traces for later comparison. Traces from sister units of similar design can be used as references when a trace from the exact transformer is not on file. Manufacturers also use the method as a quality check on units built to the same design.
 
 ## Field guide: reading a transformer nameplate {#nameplate}
 
@@ -71,6 +108,8 @@ The nameplate is the first test you run on a transformer, and ATS starts every t
 - **Polarity or phasor diagram.** Single-phase units of 200 kVA or less with HV of 8,660 V or less are additive. All other single-phase units are subtractive. On three-phase delta-wye or wye-delta units, the LV side lags the HV side by 30°.
 - **Temperature rise.** 65 °C is the average winding rise over an ambient of no more than 40 °C (30 °C 24-hour average). The matching hottest-spot rise is 80 °C.
 - **Liquid and PCB.** Liquid type and volume. The PCB labeling that ATS 7.2.2 checks.
+- **Scott or T connection.** IEEE C57.12.00-2021 5.3.2 describes a Scott-connected or T-connected transformer as the arrangement used to convert a three-phase supply to two-phase, or the reverse. A plain delta-wye unit does not give a two-phase output, and a zig-zag grounding transformer is not the arrangement given for that conversion.
+
 
 ### What the readings mean
 

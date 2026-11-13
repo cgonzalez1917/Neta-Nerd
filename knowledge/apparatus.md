@@ -4,6 +4,12 @@
 
 ATS 7.1.1 starts with the cubicle, not the breaker. Nameplate, mimic, and fuse or breaker sizes have to match the drawings and the coordination study. Shipping bracing comes out. Interlocks are proved by trying a locked-open device and by walking the key exchange, not by defeating the lock. Shutters and barriers have to be in place. Bus insulation resistance has to be above the minimum before a dielectric withstand. Control wiring is held to a 2 megohm floor, which is not the Table 100.1 floor used for power insulation.
 
+On a double-ended or dual-source lineup, ATS 7.1.1.B.13 and D.13 require phasing checks from each source, so the bus phasing agrees with the design, before the sources can be paralleled or transferred. A clean insulation-resistance test does not prove that.
+
+Current-circuit injection, 7.1.1.B.10 and D.10, drives at least 1.0 A in the secondary wiring and requires the correct magnitude at each device in that circuit, not only at the first relay. Optional primary injection uses the same 1.0 A secondary criterion. Proving one relay does not prove a tap, a shorted winding, or a swapped lead farther down the run.
+
+Control-power transformer tests and control-transfer-relay function are separate checks (7.1.1.B.7.5 and D.8.5). Secondary voltage can be right while a transfer relay fails to switch sources, leaving a dead control bus on loss of one CPT. Operate the transfer relays and show they perform as designed before you accept the lineup.
+
 ## Medium-voltage vacuum breakers {#mv-vacuum}
 
 ATS-2025 7.6.3 is the vacuum medium-voltage breaker. Insulation resistance with no manufacturer voltage uses Table 100.1. Control wiring is not less than 2 MΩ. Contact resistance uses the manufacturer’s band or, if there is none, the 50-percent-of-the-lowest screen against adjacent poles. Close and trip coil pickup uses Table 100.20 when the manual is silent.
@@ -30,9 +36,11 @@ Medium- and high-voltage arresters are ATS 7.19.2. Insulation resistance uses th
 
 AC induction machines are ATS 7.15.1. Above 200 hp (150 kW) the insulation test is ten minutes and you calculate polarization index; at 200 hp and below it is one minute and a 60/30 dielectric absorption ratio. PI not less than 2.0 and DAR not less than 1.4 on that section, and the one-minute megohms still have to meet Table 100.11 after correction to 40 °C. On machines rated 2300 V and above, measure phase-to-phase stator resistance. The overload relay is sized from the nameplate; the conductors are not. See the motor steps in the field-methods note.
 
+ATS 7.15.1 also wants the stator RTD circuits compared with the drawings, a resistance measurement on those circuits, and a check that they agree with the design and with the protection-device manufacturer's data (A.10, B.11, D.11). Bearing RTDs are a separate check that they indicate the correct temperature. Landing the leads is not the same as proving the circuits.
+
 ## Emergency systems {#emergency}
 
-Engine generators (7.22.1) need phase rotation, phasing, and synchronizing proved before they are paralleled. A UPS (7.22.2) is proved by a static transfer to bypass and back, on real load when you can. An automatic transfer switch (7.22.3) is timed: delay on transfer, transfer, delay and retransfer when normal returns. Control wiring on the transfer switch is not less than 2 MΩ, and the power contacts still get a microhm check. These are system tests. A relay that “passes” in the panel does not prove the transfer. For emergency lighting, UPS, hospital, fire alarm and fire pump tests, see [life-safety power](#/study/life-safety.md/life-safety).
+Engine generators (7.22.1) need phase rotation, phasing, and synchronizing proved before they are paralleled. A UPS (7.22.2) is proved by a static transfer from the inverter to bypass and back, using normal load if possible, and the transfer has to work the way the manufacturer specifies (7.22.2.B.2 and D.2). A clean inverter waveform does not prove the transfer path. An automatic transfer switch (7.22.3) is timed: delay on transfer, transfer, delay and retransfer when normal returns. Control wiring on the transfer switch is not less than 2 MΩ, and the power contacts still get a microhm check. These are system tests. A relay that “passes” in the panel does not prove the transfer. For emergency lighting, UPS, hospital, fire alarm and fire pump tests, see [life-safety power](#/study/life-safety.md/life-safety).
 
 ## Fiber {#fiber}
 
@@ -40,7 +48,7 @@ ATS 7.25 treats fiber as an optical test, not a megger test. An optical time-dom
 
 ## Capacitors {#capacitors}
 
-ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. D.4 cites NFPA 70 Article 460: residual voltage must fall to 50 V within 1 minute at 600 V and below, and within 5 minutes above 600 V. Still verify absence of voltage before contact. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
+ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. Capacitance is compared with the manufacturer's published data, and values that differ are investigated (B.3 and D.3). A satisfactory insulation-resistance test does not excuse a capacitance mismatch, which can mean a failed can, an open internal fuse, or a wrong unit. D.4 cites NFPA 70 Article 460: residual voltage must fall to 50 V within 1 minute at 600 V and below, and within 5 minutes above 600 V. Still verify absence of voltage before contact. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
 
 ## EV charging {#evse}
 
@@ -52,7 +60,7 @@ Low-voltage air switches are ATS 7.5.1.1. The inspection covers blade alignment,
 
 ## Fuses {#fuses}
 
-A current-limiting fuse clears in the first half-cycle, so the fault never reaches its prospective peak. A non-current-limiting fuse can't do that. Class L covers 601-6000 A at 600 V. J, T, RK1, RK5, CC, and G are current-limiting branch fuses up to 600 A or less. Fuses open one phase at a time, so a three-phase fused circuit can single-phase a motor. Fused gear often adds an anti-single-phase trip. Cutouts (ATS 7.5.5) get a check of the latching mechanism along with alignment and penetration.
+A current-limiting fuse clears in the first half-cycle, so the fault never reaches its prospective peak. A non-current-limiting fuse can't do that. Class L covers 601-6000 A at 600 V. J, T, RK1, RK5, CC, and G are current-limiting branch fuses up to 600 A or less. Fuses open one phase at a time, so a three-phase fused circuit can single-phase a motor. Fused gear often adds an anti-single-phase trip. Cutouts (ATS 7.5.5) get a check of the latching mechanism along with alignment and penetration. Overload versus short circuit, voltage and interrupting ratings, Class R time delay, and series-specific coordination ratios are in [fuse ratings and let-through](#/study/apparatus.md/fuse-ratings).
 
 ## Busways and outdoor bus {#bus}
 
@@ -60,11 +68,11 @@ Metal-enclosed busway is ATS 7.4. Withstand is each phase to ground with the oth
 
 ## Reactors and regulators {#regulators}
 
-Step-voltage regulators are ATS 7.12.1.1. Read the impact recorder before unloading. Check the motor cutoffs at maximum raise and lower and the voltage range limiter. The control is checked for bandwidth, time delay, voltage level, and line-drop compensation. Turns ratio on each step is held to 0.5% of calculated, winding resistance to 2% of factory or adjacent, and PI to at least 1.0 without factory data. Dry reactors (7.20.3.1) hold winding resistance to 1% of factory, and the field ac withstand is limited to 75% of the factory value. Liquid-filled reactors (7.20.3.2) keep a positive nitrogen blanket that is tested for oxygen.
+Step-voltage regulators are ATS 7.12.1.1. Read the impact recorder before unloading. Check the motor, the drive, and the end-of-travel cutoffs, and confirm that the cutoff stops the drive at both ends of raise and lower travel (ATS 7.12.3.A.9 and C.4). An operation-counter increment does not prove the cutoff. The control is checked for bandwidth, time delay, voltage level, and line-drop compensation. Turns ratio is taken at all tap positions. The results should follow a normal pattern from one voltage step to the next, and no position should differ from the calculated ratio by more than one-half percent (B.7 and D.7). Winding resistance is held to 2% of factory or adjacent, and PI to at least 1.0 without factory data. Dry reactors (7.20.3.1) hold winding resistance to 1% of factory, and the field ac withstand is limited to 75% of the factory value. Liquid-filled reactors (7.20.3.2) keep a positive nitrogen blanket that is tested for oxygen.
 
 ## Drives, starters, and MCCs {#drives}
 
-Adjustable-speed drives are ATS 7.17. The drive's motor overcurrent settings are checked against motor full-load current, with individual overloads for multi-motor drives. Overload elements are proved by primary injection at 300% against the curve. The protective functions are exercised: phase loss, overvoltage, rotation, overtemperature, dc overvoltage, overfrequency, overload, and alarms. The speed range is swept slowly while you listen for resonance. NEMA ICS 7.2 adds bypass practice (check rotation both ways, and allow time for the motor's residual voltage to decay) and bearing-current mitigations. NEMA MG 1 advises against power-factor capacitors on a drive's output. Low-voltage MCCs have no single ATS list: the assembly goes to 7.1, switches to 7.5, breakers to 7.6, and starters to 7.16.1.1, where contactor gap, wipe, alignment, and pressure are checked.
+Adjustable-speed drives are ATS 7.17. The drive's motor overcurrent settings are checked against motor full-load current, with individual overloads for multi-motor drives. Overload elements are proved by primary injection at 300% against the curve. The protective functions are exercised: phase loss, overvoltage, rotation, overtemperature, dc overvoltage, overfrequency, overload, and alarms. The speed range is swept slowly while you listen for resonance. NEMA ICS 7.2 adds bypass practice (check rotation both ways, and allow time for the motor's residual voltage to decay) and bearing-current mitigations. NEMA MG 1 advises against power-factor capacitors on a drive's output. Low-voltage MCCs have no single ATS list (7.16.2.1): the bus is inspected and tested as switchgear or switchboard assemblies (7.1), switches and circuit breakers follow their own sections (7.5 and 7.6), and starters follow the low-voltage starter section (7.16.1.1), where contactor gap, wipe, alignment, and pressure are checked. A main-breaker test alone is not a complete MCC acceptance.
 
 ## Metering {#metering}
 
@@ -72,15 +80,70 @@ ATS 7.11 checks meter accuracy, the instrument multiplier (CT ratio times VT rat
 
 ## Automation and SCADA {#automation}
 
-ATS 7.23 covers firmware, backup batteries, date and time, HMI and remote metering, communication failover, tagging and local/remote control, deadband and zero deadband, and clearing events after testing. IEEE C37.1 defines the terms: deadband suppresses analog changes smaller than a set count, a chatter filter disables a status point that changes too often, and select-before-operate arms one point before an operate command can execute. IEEE C37.2 names the RTU as the main SCADA interface and a remote I/O module as having no SCADA master connection. Accuracy stated as a percent of full scale becomes a much larger percent of a small reading.
+ATS 7.23 covers firmware, backup batteries, date and time, HMI and remote metering, communication failover, tagging and local/remote control, deadband and zero deadband, and clearing events after testing. On microprocessor relays, ATS 7.9.2.B.8 through B.10 also wants the mapped SCADA points proved — protection-operate, protection-fail, communications-fail, and a fault-recorder trigger where used — plus the setting-change alarm, and a confirmation that the communication paths for those points actually work. Isolated element tests do not prove those points. IEC 61850 file types, GOOSE, MMS, and sampled values are in [IEC 61850 basics](#/study/relays.md/iec61850). IEEE C37.1 defines the terms: deadband suppresses analog changes smaller than a set count, a chatter filter disables a status point that changes too often, and select-before-operate arms one point before an operate command can execute. IEEE C37.2 names the RTU as the main SCADA interface and a remote I/O module as having no SCADA master connection. Accuracy stated as a percent of full scale becomes a much larger percent of a small reading.
 
 ## Studies and maintenance intervals {#studies}
 
-MTS Appendix C ties study updates to events. New work, an annual data check, or a source change marks all five (one-line, short-circuit, coordination, incident energy, load flow). A change in impedance, configuration, or loading marks the one-line, short-circuit, and incident energy. A settings change marks the one-line, coordination, incident energy, and load flow. Five years with no update marks the one-line, short-circuit, and incident energy. MTS Appendix B gives base months for visual, mechanical, and electrical work and a multiplier by reliability requirement and condition (from 0.25 for high reliability in poor condition up to 2.5 for low reliability in good condition). IEEE 399 uses first-cycle currents for low-voltage interrupting duty and medium-voltage close-and-latch duty, and time-delayed currents with motors left out for relay sensitivity.
+MTS Appendix C ties study updates to events. New work, an annual data check, or a source change marks all five (one-line, short-circuit, coordination, incident energy, load flow). A change in impedance, configuration, or loading marks the one-line, short-circuit, and incident energy. A settings change marks the one-line, coordination, incident energy, and load flow. Five years with no update marks the one-line, short-circuit, and incident energy. MTS Appendix B gives base months for visual, mechanical, and electrical work and a multiplier by reliability requirement and condition (from 0.25 for high reliability in poor condition up to 2.5 for low reliability in good condition). IEEE 399 uses first-cycle currents for low-voltage interrupting duty and medium-voltage close-and-latch duty, and time-delayed currents with motors left out for relay sensitivity. Interrupting duty for a low-voltage breaker or fuse is checked with that first-cycle or interrupting current, including motor contribution as the study specifies, not with a time-delayed current used for relay sensitivity (IEEE 242-2001 Ch. 2; IEEE 399-1997 Ch. 6).
+
+If the field setting sheet on a main is faster than the coordination study, hold the test and get the setting reconciled with the study before you energize or apply the field setting (IEEE 242-2001 Ch. 15). The coordination on the plot is not the coordination that will be in service if the as-left file does not match.
+
+After a misoperation, review the documentation, the coordination study, and the as-left settings, and analyze the event record, before you recommend a corrective action or change a setting (ECS-2024 Section 6; IEEE 242-2001 Ch. 15). Changing a setting first can make coordination worse.
+
+A Category IV transformer on a reclosing feeder still has to stay within the two-second single-event through-fault limit of IEEE C57.12.00-2021 7.1.3.1, counting the accumulated time of the repeated faults, not only the first shot. See [oil and through-fault notes](#/study/transformers.md/oil).
+
+For paralleling two transformers or two buses, see [paralleling and phasing](#/study/apparatus.md/paralleling).
 
 ## Commissioning (ECS) {#commissioning}
 
-ANSI/NETA ECS-2024 starts where ATS stops. Components are proved by factory and field acceptance tests. Commissioning then proves the system against the Owner's Project Requirements (what the owner needs and how success is measured) and the Basis of Design (how the designer met them). The commissioning authority drafts the commissioning plan during design and keeps it current through construction, acceptance, and occupancy. The work runs in three phases: pre-energization (document reviews, settings, CT circuits, interlocks, energization plan), energization (restricted access, grounds removed, phasing and rotation, differential operate and restraint at medium voltage), and post-energization (fluid and gas samples, infrared under load, loading checks, report). The commissioning organization is an independent third party. The report includes an issues log of open and closed items. Turnover replaces commissioning locks and tags with the operator's.
+ANSI/NETA ECS-2024 starts where ATS stops. Components are proved by factory and field acceptance tests. Commissioning then proves the system against the Owner's Project Requirements and the Basis of Design (6.2 and 6.3, following the ASHRAE Guideline 0 usage ECS cites). The Owner's Project Requirements are the written statement of what the owner needs, how the facility will be used, measurable performance criteria, success measures, and cost limits. The Basis of Design is the record of the concepts, calculations, product selections, and code decisions used to meet those requirements and the applicable rules. Do not mix the two documents up when you review scope.
+
+The commissioning authority writes the plan while the project is still in design, and the team keeps it current through construction, acceptance, and occupancy (6.4). Everyone executing the plan works from the most up-to-date version; a stale draft on a laptop is not good enough. The plan should describe the work that will be done before, during, and after energization.
+
+The work itself runs in three phases: pre-energization (document reviews, settings, CT circuits, interlocks, energization plan), energization (restricted access, grounds removed, phasing and rotation, differential operate and restraint at medium voltage), and post-energization (fluid and gas samples, infrared under load, loading checks, report). Do not energize over open factory or field acceptance deficiencies. ECS includes a review of those records, including open deficiencies, so you can confirm the equipment is in acceptable condition and is ready for first energization and for final acceptance.
+
+System function tests are how you show that sensing, processing, and action devices work together correctly. ATS Section 8 points those tests at ECS. Passing isolated component tests does not prove the system.
+
+The commissioning organization is an independent third party. The report includes an issues log of open and closed items. Turnover replaces commissioning locks and tags with the operator's.
+
+
+## Transformer paralleling and phasing {#paralleling}
+
+Source: Lautenschlager, NETA World, Fall 2008 (paralleling electrical systems). Do the nameplate checks first, then the voltage measurements. Do not close a tie on phase letters or on a rotation meter alone.
+
+### Before any phasing shots
+
+Both transformers should be on the same voltage tap, and each unit's percent impedance should sit between 92.5% and 107.5% of the other. The unit left on a higher secondary voltage, or the stiffer unit (the one with the smaller percent impedance), will take more of the load once the buses are tied.
+
+### What "in phase" means
+
+Phasing is proved only by measuring voltage across each pair of like-named phases on the two buses and getting a reading of zero, or essentially zero, with a voltmeter or phasing sticks rated for the system. A rotation or sequence meter cannot make that call. That instrument is for confirming motor direction after a reconnection. Do not trust phase letters; they often do not line up from one system to the next. A phase-angle meter or a scope can show which side leads, but those tools are optional.
+
+### Standard angular relationships
+
+On a standard wye-delta or delta-wye bank, the high-voltage side is 30 degrees ahead of the low-voltage side. On a standard delta-delta or wye-wye transformer that lead is 0 degrees. A standard delta-wye can therefore be paralleled with a standard wye-delta (aside from the lack of a grounded neutral on a delta secondary), and a wye-wye can be paralleled with a delta-delta. A delta-wye cannot be paralleled with a delta-delta or a wye-wye. Older nonstandard banks can have other shifts, including 150 degrees.
+
+### Reading the voltage between like-named phases (Table 1)
+
+Assume the two buses have the same line-to-line voltage. Lautenschlager's Table 1 converts the voltage between correspondingly named phases into an angle:
+
+- Near zero volts: in phase, 0 degrees
+- About half of line-to-ground voltage: about 30 degrees
+- A line-to-ground reading: about 60 degrees
+- About 1.4 times line-to-ground: about 90 degrees
+- A line-to-line reading: about 120 degrees
+- About 1.9 times line-to-ground: about 150 degrees
+- Twice line-to-ground: 180 degrees
+
+Scattered, inconsistent readings usually mean at least one side is ungrounded. Load can nudge the field numbers a little off the table. Those voltages will not tell you which side leads.
+
+### Common situations and the correction
+
+- **Situation 2.** Phase-to-phase voltage between every pair of correspondingly named phases, same rotation: the buses are 120 degrees apart, typically a transformer or tie-switch lead sequence error. Rotate the leads on one side so A moves to the old B position, B to C, and C to A. If they are still 120 degrees out, repeat that rotation once more.
+- **Situation 3.** Phase-to-phase voltage on two correspondingly named pairs and zero volts on the third, often on wye-delta banks: the two systems have opposing rotation, typically from two leads reversed. Exchange the primary or secondary (or switch) leads on the two phases that showed the phase-to-phase voltage. Do not swap the pair that already reads zero.
+- **Situation 5.** Phase-to-ground voltage (60 degrees) between all three correspondingly named buses on the 480 V side of a double-ended substation: one transformer is incorrectly phased relative to the other, often because a standard unit replaced a mirror-image unit. Exchange two primary leads and the same two secondary leads. If H1 and H2 are swapped, X1 and X2 must be swapped as well. Exchanging only the primary leaves the secondaries wrong.
+- **Situation 7.** Consistent readings of about 0.5, 1.4, or 1.9 times line-to-ground voltage (30, 90, or 150 degrees): the two systems have different phase relationships, typically delta-wye or wye-delta on one side and delta-delta or wye-wye on the other, and they cannot be paralleled. If all three readings are the same and the rotations match, motor loads may still be transferred by dropping one source and picking the loads up on the other. That is a break-before-make transfer, not a parallel.
+- **Situation 8.** Inconsistent voltages, and one or both systems appear ungrounded. Confirm by looking at each bus's line-to-ground voltages; capacitance unbalance on an ungrounded bus can push those readings above twice line-to-line voltage. When both sides are ungrounded, land a fused jumper, rated only for charging current, on the like-named phase of each bus, then take the three shots again. If the buses may be tied, the three readings should be essentially zero, and the pair you jumpered is already at zero. Pull the jumpers before closing the tie. When only one side is already grounded, you can still phase by joining one like-named phase and reading the other two, but a wrong-phase jumper can drive the remaining ungrounded phases to 2.0 times, and 2.75 times, their usual line-to-ground voltage.
 
 ## Vacuum breaker field sequence {#mv-vacuum-field}
 
@@ -207,6 +270,17 @@ Sources: NFPA 70-2023 110.9, 240.60, 240.67 and 240.83(C); Gill 2nd ed. 7.2.2 an
   - Class L: 601 to 6000 A at 600 V.
 - **Current limitation.** A current-limiting fuse clears in less than a half cycle. Total clearing time is melting time plus arcing time. Gill takes the first half-cycle asymmetrical rms as 1.4 times the symmetrical rms and the peak as 1.7 times that, about 2.4 times the symmetrical rms. Let-through is close to a triangle, so its rms is the peak divided by √3. Worked: a 30 kA peak is about 17.3 kA rms.
 - **Arc energy reduction, fuses 1200 A and up (240.67).** Documentation of the fuse locations. A fuse that clears in 0.07 s or less at the arcing current, or a listed means set below the arcing current (differential relaying, an energy-reducing maintenance switch, active arc-flash mitigation, electronically actuated current-limiting fuses). Performance testing by primary injection or another approved method at first installation, with a written record for the AHJ.
+
+
+
+Littelfuse, Fuse Fundamentals, 2025, is a manufacturer paper, not a UL standard. Use it for the application ideas below, and stay inside what that paper actually says. Coordination ratios in its Table 2 apply only to the listed Littelfuse POWR-PRO and POWR-GARD series, not to every brand.
+
+- **Overload versus short circuit.** An overload is overcurrent that stays in the normal current paths, with no insulation breakdown: too much connected load, overloaded machinery, or a mechanical failure such as a failed bearing. If it is not interrupted in time, a sustained overload overheats parts and damages insulation. A short circuit is current that has left the normal path and must be interrupted quickly because of heating, magnetic stress, and arcing. Used as intended, a fuse can cover overloads as well as short circuits. In some uses, such as backing up a breaker or providing motor-branch short-circuit protection, the fuse may be applied for short-circuit duty only.
+- **Current limitation.** The paper describes a current-limiting fuse as one that opens and clears a short circuit in less than 180 electrical degrees, that is, in the first half-cycle, and that greatly reduces the destructive heat energy expressed as I²t. Supplemental and Class K fuses are the usual exceptions; most other everyday classes used in modern systems are treated as current-limiting under that description. Because I²t scales with the square of current, a tenfold current rise is a hundredfold energy rise.
+- **Voltage rating.** Call that rating the highest ac or dc value the fuse is built to carry, and to interrupt, under. It has to be at least the highest voltage on the circuit where the fuse is installed. A fuse may be listed ac only, dc only, or both. A dc circuit needs a fuse specifically listed for dc. Using an ac-only fuse on dc, or exceeding the voltage rating, can lead to a violent fuse failure. A higher ac rating is not a reason to put an ac-only fuse on a 250 V dc control circuit.
+- **Interrupting rating.** That rating is the largest short-circuit current the fuse is listed to clear, at its rated voltage. A UL-listed fuse must clear every overcurrent between its ampere rating and that interrupting rating. Standard UL listings go as high as 300 kA. NEC 110.9 requires any device meant to open fault current to be listed for at least the available short-circuit current at its line-side terminals. In the paper's example, a board with 125 kA available is fitted with 200 kA fuses, which meets the duty and leaves margin if available current later increases.
+- **Class R.** UL 248-12 covers Class R at 250 V and 600 V ac (and listed dc ratings), from 0 to 600 A, with a 200 kA rms symmetrical interrupting rating. The class splits into RK1 and RK5. Class R may or may not be a time-delay type; a time-delay fuse in that class must hold 500% of its current rating for a minimum of 10 seconds. RK1 offers a high degree of current limitation and can provide IEC Type 2 (no-damage) protection for motor starters and controls. RK5 offers a moderate degree that is adequate for most applications. Class R fuses fit rejection holders that will not accept a non-Class R fuse.
+- **Selectivity, Table 2 of that paper.** For a pair to be coordinated, the downstream fuse has to finish clearing with less I²t than it takes to melt the upstream fuse. For the listed Littelfuse series, that table gives an 8:1 line-to-load ratio for a time-delay RK1 supplying a time-delay RK5, so a 400 A RK1 over a 50 A RK5 meets that row. Class L to Class L, and Class L to RK1 or Class J, are shown at 2:1 for those same series. Do not treat those ratios as a generic rule for every manufacturer.
 
 ## Low-voltage switch test values {#switch-values}
 

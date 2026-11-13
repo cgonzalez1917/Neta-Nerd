@@ -70,6 +70,8 @@ In IEEE C57.104-2019 clause 6.2.1, hydrogen comes mainly from corona-type partia
 
 A four-wire instrument, Kelvin style, drives current on one pair and senses voltage on the other, so lead resistance drops out. Clip the current leads outside the potential leads. A stable current and a recorded temperature beat a two-wire multimeter on a bus joint. Compare similar joints. When the manufacturer is silent, ATS still uses the 50-percent-of-the-lowest screen.
 
+On a high-voltage circuit breaker, IEEE C37.09-2018 5.14 takes the dc resistance of the primary path, terminal to terminal of each pole in the closed position, with a dc test current of 100 A or more. The result must stay within the limit the manufacturer set for that rating.
+
 ## What the sheet is for {#records}
 
 A megger sheet records test voltage, temperature, humidity, what was grounded, and the megohms, then the corrected value. Compare with the manufacturer or, if there is none, the ATS table for that equipment after the temperature correction. A ductor sheet records the current and the microhms of similar joints. Investigate a connection more than 50 percent above the lowest similar one when the manufacturer is silent.

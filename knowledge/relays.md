@@ -24,6 +24,26 @@ IEEE device numbers are the short language of a one-line. Learn these until they
 
 50 is no intentional time delay. 51 is the inverse-time element. 87 compares currents into and out of a zone. 86 is a lockout that stays tripped until a person resets it. 52 is the breaker, not the relay.
 
+Generator applications of 32, 40, 24, 64, and 67, including loss-of-field and motoring practice, are in [generator protection](#/study/relays.md/generator).
+
+## Generator protection {#generator}
+
+Sources: Blackburn and Domin, Protective Relaying, 4th ed., Chapters 8.9 through 8.12; IEEE C37.2-2022, 3.1.32 and 3.1.40. These are application notes, not a substitute for the machine's setting study or IEEE C37.102.
+
+- **Loss of field (40).** Normal generation sits slightly lagging, in the first quadrant of the P-Q plane. When the field breaker opens, or excitation is lost, operation moves into the fourth quadrant and the system has to supply the missing vars (8.11.1). If the system can feed those vars without a steep voltage decline, the unit may keep running as an induction generator; otherwise it can fall out of step. The change is not instantaneous, so an early alarm may let an operator restore the field.
+
+  Complete-loss setting (mode 1): a smaller circle in the fourth quadrant, diameter on the order of the synchronous reactance Xd, with the top of the circle 50% to 75% of the transient reactance Xd' below the origin. A trip in about 0.2 to 0.3 s is typical when the unit is to be shut down.
+
+  Partial-plus-complete setting (mode 2): a wider circle, preferably inside the minimum-excitation limiter and outside the capability and steady-state stability curves. A directional unit is required so nearby faults and stable swings do not operate it; the 40 then operates below the directional line and inside the circle. Where used, an undervoltage element that drops out in the 87% to 80% band of rated voltage supervises the scheme. If voltage stays healthy, alarm and a delayed trip, typically 10 s to 1 min, give the operator time to restore field. If voltage falls below that dropout, trip in about 0.2 to 0.3 s. Large, important units often run both the small and the wide 40 settings.
+
+- **Motoring (32).** If the prime mover is removed while the generator stays online with the field excited, the system motors the unit at synchronous speed. That overheats steam turbines and can cavitate hydro runners. Typical reverse-power values to keep the machine spinning with no prime-mover input: condensing steam about 1% to 3% of nameplate kW, noncondensing steam 3% or more, hydro 0.2% to 2% or more, diesel about 25%, and gas turbine 50% or more (8.12.1). A backup 32 is recommended even though the machine control has its own detection. Microprocessor relays can be as sensitive as 1 mA, with an operating time of about 2 s. IEEE C37.2 uses this reverse-power, loss-of-prime-mover case as the example for device 32. Device 40 is the field over/under-excitation relay, not the motoring function.
+
+- **Volts per hertz (24).** Machines and transformers already run close to the saturation knee, so a modest overvoltage produces large exciting current. A dangerous window is while the unit is off the system and speed is changing, because voltage tracks frequency and flux. Pickup should stay constant on a V/Hz basis; a plain 59 does not do that during start or shutdown (8.12.2). A typical two-level supplement to the machine controls is about 110% of rated to alarm and then trip in about 1 min, and about 120% of rated to trip in about 6 s, preferably from a separate VT so a blown metering-VT fuse cannot operate the 24.
+
+- **Inadvertent energization.** Closing the generator breaker into a live bus while the machine is on the turning gear, while it is coasting, at standstill, or after a bad synchronize can find ordinary stator protection impaired or unavailable at low frequency (8.12.3 and 8.10). Because the unit breaker itself may be the problem, adjacent breakers need to be opened at once by local breaker-failure or remote trip. Blackburn describes a 67 directional inverse-time overcurrent element in each phase, looking into the generator, typically picked up at about 0.5 pu and operating in about 0.25 s at 2.0 pu. That application can also stand in for motoring protection and is faster on these events.
+
+- **Field ground (64).** On brushed units a voltage-divider 64 can be added if the exciter equipment does not already provide one. Brushless machines typically drop pilot brushes now and then to measure field insulation, and watch the exciter field continuously (8.9). These checks usually alarm so the operator can decide what to do, but they may be wired to trip when the owner prefers that.
+
 ## What ATS tells you to test {#testing}
 
 Electromechanical and solid-state relays are ATS 7.9.1. Microprocessor relays are 7.9.2. Read the section that matches the relay. Do not hipot a numeric relay because the electromechanical section told you to megger a case.
@@ -43,6 +63,11 @@ Microprocessor relays do not drift the way a dirty induction disk does. You stil
 
 Settings that do not match the coordination study get written down as found. As-left is the engineered file unless the owner directs otherwise. You do not invent a time dial to make a test pretty.
 
+ATS 7.9.2 also wants the internal scheme logic walked against the owner's narrative or logic diagram, and the settings and the logic to match the latest engineered files (7.9.2.B.3 and C.3). Pickup and timing in isolation do not prove the scheme.
+
+When a machine is brought up through reduced frequency, review whether the whole protection package still works once frequency is up to about one-quarter to one-half of rated, and above (Blackburn and Domin, Protective Relaying, 4th ed., 8.10). Some steam units spend hours in that band. If a relay or an instrument transformer cannot perform there, add temporary supplemental protection until the unit is at rated speed and voltage.
+
+
 ## Distance zones {#zones}
 
 ATS 7.9.1 tests a 21 as a distance relay: reach, angle, and timing. IEEE C37.113-2015 is the line-relaying guide that uses those device numbers (clause 3.2 points at IEEE C37.2).
@@ -54,6 +79,11 @@ Clause 5.5.2: an instantaneous, non-piloted zone 1 is set so it does not overrea
 ## Schemes {#schemes}
 
 See the Level III page for the 51–86–52 order, `a` versus `b` contacts, and key interlocks. Short version: the 51 (or 50) decides, the 86 remembers, the 52 opens. An 86 `b` contact in the close circuit is closed only while the lockout is reset.
+
+For a short-circuit study whose goal is the largest initial current at a generator bus, use the saturated subtransient reactance, Xd''. A synchronous machine normally runs saturated, and the saturated value is lower than the unsaturated figure, so it yields the higher current (Blackburn, 2.8). Convert that reactance to the study MVA base before you use it. Time-delayed currents answer other questions, such as relay sensitivity, and are not a substitute for that initial-current check.
+
+Saturation of a CT is not instantaneous. IEEE C37.110-2023 (4.5.1 and 4.5.2.3) notes that some high-speed instantaneous overcurrent elements can still operate in the time-to-saturation window, before the core has entered the saturated region. That is one reason a 50 element can still be acceptable on a circuit whose CT may later saturate on a fully offset fault. See [relaying CT application](#/study/instrument-transformers.md/ct-field).
+
 
 ## CT secondaries
 
@@ -81,14 +111,15 @@ Almost every ATS section starts with "compare equipment nameplate data with draw
 
 ## IEC 61850 basics {#iec61850}
 
-No IEC 61850 standard is in the held set. This section uses the SEL-751 instruction manual (Appendix G), IEEE C37.2-2022 Annexes B and D, and the EEI Handbook 11th ed. Ch. 10.
+Sources for this section: Adamiak, Baigent, and Mackiewicz, IEC 61850 user overview; the SEL-751 instruction manual (Appendix G); IEEE C37.2-2022 Annexes B and D; and the EEI Handbook 11th ed. Ch. 10.
 
-- **Model.** An IED is split into logical devices, which hold logical nodes, which hold data. Logical-node names follow function. C37.2 Table D.1 maps 50 to PIOC, 51 to PTOC, 52 to XCBR, 87 to PDIF, 27 to PTUV, 59 to PTOV, and 79 to RREC. MMXU is polyphase measurement.
-- **MMS (IEC 61850-8-1).** Client/server. SCADA and engineering tools use it to browse data, receive reports, and move settings and event files.
-- **GOOSE.** Fast peer-to-peer multicast for status, controls, trips, and interlocks. After a change, the message repeats at the minimum time, again at the minimum time, then at twice the minimum, then at the maximum interval until the next change. With the SEL default of 8 ms that is 0, 8, 16, and 32 ms. Subscribers filter by control-block reference and multicast address.
+- **Model.** An IED is split into logical devices, which hold logical nodes, which hold data. Logical-node names follow function. IEC 61850-7-4 groups them by a standard first letter: A automatic control, C supervisory control, G generic, I interfacing and archiving, L system, M metering and measurement, P protection, R protection-related, S sensors, T instrument transformers, X switchgear, Y power transformers, and Z other equipment. XCBR is a circuit breaker. MMXU is a three-phase measurement unit; MMXU1 and MMXU2 are typical instance suffixes when one device measures more than one feeder. C37.2 Table D.1 maps 50 to PIOC, 51 to PTOC, 52 to XCBR, 87 to PDIF, 27 to PTUV, 59 to PTOV, and 79 to RREC.
+- **MMS (IEC 61850-8-1).** Client/server. SCADA and engineering tools use it to browse data, receive reports, and move settings and event files. The abstract models are mapped to the Manufacturing Message Specification (MMS, ISO 9506) because it is a public ISO protocol with a proven record that can carry the named objects and rich services of the model. Mapping the same model onto a protocol that only offers simple read and write of register numbers would be clumsy. Logical devices map to MMS domains. MMS traffic can run over TCP/IP or ISO transport.
+- **GOOSE and sampled values on the stack.** GOOSE and sampled values are placed directly in the Ethernet frame, skipping the middle layers. That is a change from the older UCA-style GSSE event, which ran over connectionless ISO services. GOOSE is still the fast peer-to-peer multicast for status, controls, trips, and interlocks. After a change, the message repeats at the minimum time, again at the minimum time, then at twice the minimum, then at the maximum interval until the next change. With the SEL default of 8 ms that is 0, 8, 16, and 32 ms. Subscribers filter by control-block reference and multicast address.
 - **Testing flags.** An SEL-751 rejects incoming GOOSE data when the message is flagged Test or Needs Commissioning, the configuration revision changes, or it can't be decoded. Check those flags first when a subscribed trip doesn't act.
-- **SCL files.** ICD lists what an IED can do. SSD describes the single-line. SCD covers the whole substation. CID is one IED's configuration as loaded.
-- **Sampled values (IEC 61850-9-2).** Digitized currents and voltages on the network. The EEI handbook describes optical current sensors with a 9-2 output at 80 samples per cycle.
+- **SCL files (Part 6).** All four use the same XML methods and format, but they are not interchangeable. SSD is the system specification. ICD is what one IED is capable of. SCD is the configured substation automation system as a whole. CID is one IED as configured, ready to be loaded.
+- **Process bus and sampled values.** A merging unit at the process layer collects currents, voltages, and status, samples them at an agreed, synchronized rate, and publishes sampled measured values so an IED can align data from more than one unit. IEC 61850-9-1 is a unidirectional point-to-point link with a fixed dataset. 9-2 is a configurable dataset, described in SCL, that can be multicast from one publisher to many subscribers, and is the more general process-bus form. As of the Adamiak overview's implementation agreement, a common base rate was 80 samples in each power-system cycle for ordinary protection and monitoring, and 256 samples in each cycle for high-frequency work such as power quality or high-resolution oscillography. Later editions of 9-2 may publish other rates; read the edition in force on the job. The EEI handbook also describes optical current sensors with a 9-2 output at 80 samples per cycle.
+- **Legacy gateways.** A single physical device may contain more than one logical device, so a concentrator, or a gateway that fronts several devices, can present each legacy IED (for example a DNP or Modbus unit) as its own logical device without leaving the model.
 - **The network is the wiring.** C37.2 calls managed Ethernet switches the auxiliary relays of a GOOSE scheme, device 16 with suffix ES. Their settings decide whether a trip arrives, so record and back them up like relay settings. ATS 7.23 covers firmware, settings, time sync, and failover.
 
 ## Logic for relay and control work {#logic}
@@ -103,3 +134,6 @@ Sources: IEEE C37.2-2022 4.2.1 and 4.5.1; SEL-751 instruction manual Section 4 (
 - **Edges.** R_TRIG and F_TRIG pulse for one processing interval. They're used for event triggers and counters.
 - **Latches.** SET makes the latch bit 1, and RST makes it 0. If both are true, reset wins. The state is kept through a power loss, but an output contact driven by it drops until the relay restarts.
 - **Math with NOT.** MV01 := 12 * IN101 + (MV01 + 1) * NOT IN101 is an if/else: 12 when the input is on, otherwise count up.
+
+Proving the scheme, not only the element, is a logic check. A trip programmed as 50 AND 67, with an 86 contact in series, needs every term true, including that 86 contact in the trip path. If the elements assert in the test set and the breaker stays closed because a wiring error held the 86 contact open, the installation is not accepted. Walk the internal logic against the owner's narrative or diagram before you sign the relay off (ATS-2025 7.9.2).
+

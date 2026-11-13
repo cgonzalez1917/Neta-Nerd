@@ -1,23 +1,104 @@
 {
   "docs": [
-    {"file": "level-2.md", "title": "Level II — expectations and exam format", "level": "II"},
-    {"file": "level-3.md", "title": "Level III — expectations and exam format", "level": "III"},
-    {"file": "test-day.md", "title": "Test day, Pearson, and the TI-30XS", "level": "II"},
-    {"file": "safety.md", "title": "Safety, LOTO, and NFPA 70E-2024", "level": "II"},
-    {"file": "math.md", "title": "Math, formula sheet, and worked examples", "level": "II"},
-    {"file": "insulation.md", "title": "Insulation resistance, PI, and DAR", "level": "II"},
-    {"file": "resistance.md", "title": "DLRO, bolted connections, winding resistance", "level": "II"},
-    {"file": "transformers.md", "title": "Transformers: TTR, excitation, PF, oil", "level": "II"},
-    {"file": "breakers.md", "title": "Low-voltage breakers and trip units", "level": "II"},
-    {"file": "relays.md", "title": "Protective relays and control logic", "level": "III"},
-    {"file": "instrument-transformers.md", "title": "CTs and VTs", "level": "II"},
-    {"file": "cables.md", "title": "Cables, VLF, and tan delta", "level": "II"},
-    {"file": "grounding.md", "title": "Grounding and ground-fault protection", "level": "II"},
-    {"file": "batteries.md", "title": "Station batteries", "level": "II"},
-    {"file": "thermography.md", "title": "Infrared thermography", "level": "II"},
-    {"file": "field-methods.md", "title": "Field methods: injection, CTs, PF, motors", "level": "II"},
-    {"file": "apparatus.md", "title": "MV breakers, reclosers, motors, emergency, fiber, EVSE", "level": "II"},
-    {"file": "life-safety.md", "title": "Life-safety power and other NFPA tests", "level": "II"},
-    {"file": "sources.md", "title": "Sources and what not to copy", "level": ""}
+    {
+      "file": "level-2.md",
+      "title": "Level II \u2014 expectations and exam format",
+      "level": "II"
+    },
+    {
+      "file": "level-3.md",
+      "title": "Level III \u2014 expectations and exam format",
+      "level": "III"
+    },
+    {
+      "file": "level-4.md",
+      "title": "Level IV \u2014 expectations and field topics",
+      "level": "IV"
+    },
+    {
+      "file": "test-day.md",
+      "title": "Test day, Pearson, and the TI-30XS",
+      "level": "II"
+    },
+    {
+      "file": "safety.md",
+      "title": "Safety, LOTO, and NFPA 70E-2024",
+      "level": "II"
+    },
+    {
+      "file": "math.md",
+      "title": "Math, formula sheet, and worked examples",
+      "level": "II"
+    },
+    {
+      "file": "insulation.md",
+      "title": "Insulation resistance, PI, and DAR",
+      "level": "II"
+    },
+    {
+      "file": "resistance.md",
+      "title": "DLRO, bolted connections, winding resistance",
+      "level": "II"
+    },
+    {
+      "file": "transformers.md",
+      "title": "Transformers: TTR, excitation, PF, oil",
+      "level": "II"
+    },
+    {
+      "file": "breakers.md",
+      "title": "Low-voltage breakers and trip units",
+      "level": "II"
+    },
+    {
+      "file": "relays.md",
+      "title": "Protective relays and control logic",
+      "level": "III"
+    },
+    {
+      "file": "instrument-transformers.md",
+      "title": "CTs and VTs",
+      "level": "II"
+    },
+    {
+      "file": "cables.md",
+      "title": "Cables, VLF, and tan delta",
+      "level": "II"
+    },
+    {
+      "file": "grounding.md",
+      "title": "Grounding and ground-fault protection",
+      "level": "II"
+    },
+    {
+      "file": "batteries.md",
+      "title": "Station batteries",
+      "level": "II"
+    },
+    {
+      "file": "thermography.md",
+      "title": "Infrared thermography",
+      "level": "II"
+    },
+    {
+      "file": "field-methods.md",
+      "title": "Field methods: injection, CTs, PF, motors",
+      "level": "II"
+    },
+    {
+      "file": "apparatus.md",
+      "title": "MV breakers, reclosers, motors, emergency, fiber, EVSE",
+      "level": "II"
+    },
+    {
+      "file": "life-safety.md",
+      "title": "Life-safety power and other NFPA tests",
+      "level": "II"
+    },
+    {
+      "file": "sources.md",
+      "title": "Sources and what not to copy",
+      "level": ""
+    }
   ]
 }

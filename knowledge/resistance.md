@@ -14,6 +14,8 @@ That is 1.5 times the lowest reading, not 50 percent of the highest, and not a u
 
 Worked: poles at 40, 48, and 70 µΩ. Threshold = 40 × 1.5 = 60 µΩ. Investigate 70. Leave 48 alone under this screen.
 
+Same screen on a medium-voltage air breaker when the manufacturer publishes no microhm limit (ATS 7.6.1.3.D.2). Poles at 28, 30, and 43 µΩ: half of 28 is 14, so the investigate threshold is 42 µΩ. Investigate 43. Leave 30 alone under this screen.
+
 Millivolt drop is the same fact at a known current. `V = IR`. 200 A through 150 µΩ is 0.030 V, 30 mV.
 
 ## Winding resistance {#winding}

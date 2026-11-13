@@ -53,6 +53,10 @@ The sheet prints single-phase `P = VI cos θ`, power factor as `kW/kVA`, three-p
 
 Worked: 200 kW at 0.80 PF. `kVA = 200 / 0.80 = 250`. `kvar = √(250² − 200²) = √22500 = 150`.
 
+Worked: 240 kW at 0.80 lagging PF. `kVA = 240 / 0.80 = 300`. The sine of the angle is 0.60, so `kvar = 300 × 0.60 = 180`. Same answer from `kvar = √(300² − 240²)`.
+
+Worked, two loads on one feeder: 100 kW at 0.80 lagging, and 60 kVA at 0.50 lagging. Convert each load to real and reactive power, add those parts, then recombine. The first load is 125 kVA and 75 kvar. The second is 30 kW and about 52 kvar. Combined P is 130 kW and combined Q is about 127 kvar, so `S = √(130² + 127²) ≈ 182 kVA`. You cannot add a kW figure to a kVA figure.
+
 Worked: 480 V, 100 A, unity PF. `P = 1.732 × 480 × 100 = 83.1 kW`. Drop the √3 and you report the single-phase product, 48 kW.
 
 ## Also on the official sheet {#official-rest}
@@ -152,6 +156,8 @@ Table 100.18 talks about a difference, ΔT. A difference in Celsius converts by 
 ## Harmonics at the point of common coupling {#harmonics}
 
 ATS section 6.6 is the harmonic study. The report compares calculated voltage and current distortion with IEEE 519 and calls out anything over those limits. It also wants the impedance-versus-frequency plot, so resonances are visible, and a check of transformer capability under the nonsinusoidal current using the method in IEEE C57.110.
+
+Level IV field work includes recognizing the effects, not only reading the study (IEEE 519-2022; IEEE 141-1993 Ch. 8). Nonlinear loads, such as a large rectifier, inject harmonic current. Capacitors have falling impedance with frequency, so they can absorb a large share of that current and overheat. Transformers on the same bus see extra heating as well, hotter than the kVA load would suggest, and voltage waveforms can look flat-topped. Temporary monitoring should stay in place long enough to characterize the condition, and a study or mitigation should come before anyone adds more capacitors, which can make a resonance worse.
 
 IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common coupling, not on each drive or each panel. The weekly short-time values use the table; the very-short-time daily values are allowed up to one and a half times those table values. A bus from just over 1 kV through 69 kV is the row whose total voltage distortion limit is 5 percent. Lower voltage buses are allowed more distortion. Higher voltage buses are allowed less. Do not paste the whole table into a report; use the row for the voltage at the point of common coupling.
 
