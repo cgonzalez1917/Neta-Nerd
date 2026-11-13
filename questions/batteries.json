@@ -184,7 +184,7 @@
     "level": "III",
     "topic": "batteries",
     "domain": "component",
-    "question": "Which test belongs to valve-regulated lead-acid batteries in NFPA 70B-2026 and not to a flooded specific-gravity sample?",
+    "question": "In NFPA 70B-2026 Table 36.3.5, which test is only for valve-regulated lead-acid cells?",
     "choices": [
       "An ohmic measurement",
       "A dissolved-gas sample of the jar",
@@ -192,7 +192,7 @@
       "Vacuum-bottle integrity"
     ],
     "answer": 0,
-    "explanation": "Table 36.3.5 lists float voltage and current, temperature, specific gravity, a valve-regulated ohmic test, connection resistance, performance, and a thermal check. Specific gravity is the vented-cell sample. An ohmic reading is the valve-regulated check. You still do not invent a conductance limit; the manufacturer owns that number.",
+    "explanation": "The ohmic measurement is the valve-regulated check. The same table also lists float voltage and current, temperature, specific gravity, connection resistance, performance, and a thermal check. It does not label the specific-gravity sample as a vented-cell-only test, and it does not hand that sample's acceptance number to the manufacturer.",
     "reference": "NFPA 70B-2026, Table 36.3.5",
     "verified": true,
     "kb": "batteries.md#flooded"
@@ -210,8 +210,8 @@
       "36, 36, and 12 months, the storage-system performance row"
     ],
     "answer": 0,
-    "explanation": "Valve-regulated performance is 24, 24, and 12 months. Connection resistance on those cells is still 12, 12, and 1 month. Vented performance is the longer 60, 60, and 12 month row. A battery energy storage system above 1 kWh uses the storage-system chapter, not this cell table, for its performance interval.",
-    "reference": "NFPA 70B-2026, Table 36.2",
+    "explanation": "Valve-regulated performance is 24, 24, and 12 months. Connection resistance on those cells is still 12, 12, and 1 month. Vented performance is the longer 60, 60, and 12 month row. Chapter 32 is the storage-system chapter, and section 32.1.2 keeps specific standby-battery applications out of it. A standby battery is not moved off this cell table just because the rack stores energy.",
+    "reference": "NFPA 70B-2026, Table 36.2 and 32.1.2",
     "verified": true,
     "kb": "batteries.md#flooded"
   }

@@ -31,8 +31,8 @@
     ],
     "answer": 1,
     "explanation": "NEC 430.6(A) sends wire, disconnect, and the branch short-circuit device to the table current. 430.22 is 125% of that table value. The nameplate is what the separate overload uses. Sizing copper from the nameplate is how the wire comes out light.",
-    "reference": "NEC 430.6(A) and 430.22",
-    "verified": false,
+    "reference": "NEC 2023 430.6(A)(1) and 430.22",
+    "verified": true,
     "kb": "field-methods.md#motor-size"
   },
   {
@@ -49,8 +49,8 @@
     ],
     "answer": 1,
     "explanation": "NEC 430.6(A)(2) and 430.32 use the nameplate for the overload. The table current is for wire, disconnect, and the branch short-circuit device. Mixing those two currents is the classic miss.",
-    "reference": "NEC 430.6(A) and 430.32",
-    "verified": false,
+    "reference": "NEC 2023 430.6(A)(2) and 430.32",
+    "verified": true,
     "kb": "field-methods.md#motor-size"
   },
   {
@@ -67,8 +67,8 @@
     ],
     "answer": 1,
     "explanation": "Part III is the overload, from nameplate current. Part IV is the branch short-circuit device, from table current and Table 430.52. A feeder under 430.62 does not get the branch\u2019s next-size-up. Swapping those roles leaves a stalled motor on a breaker that may never see the overload.",
-    "reference": "NEC 430.32 and 430.52",
-    "verified": false,
+    "reference": "NEC 2023 430.31, 430.52, and 430.62(A)",
+    "verified": true,
     "kb": "field-methods.md#motor-size"
   },
   {
@@ -256,17 +256,17 @@
     "level": "II",
     "topic": "motors",
     "domain": "theory",
-    "question": "A recalled advantage of a VFD start over an across-the-line start is:",
+    "question": "Compared with an across-the-line start, a usual advantage of an adjustable-speed drive is:",
     "choices": [
-      "Printed as a pass/fail number in ATS 7.15",
-      "Not stated in the ATS motor section held here; the starter test is still 7.16 and the drive manual",
-      "A 10-minute PI of 1.0",
-      "A vacuum pressure limit"
+      "A higher locked-rotor inrush",
+      "A lower starting inrush current",
+      "A 10-minute polarization index of 1.0 used as a drive pass/fail",
+      "A vacuum-pressure limit on the stator"
     ],
     "answer": 1,
-    "explanation": "Lower inrush is the usual field reason to use a drive. ATS does not print that comparison, and the VFD article on the exam list is not in this repo. Do not treat a recalled phrase as the specification. Test the installed starter to 7.16 and the drive to its manual.",
-    "reference": "ANSI/NETA ATS-2025 7.15 and 7.16; VFD application article not in the lookup set",
-    "verified": false,
+    "explanation": "A drive brings voltage and frequency up together, so the motor does not have to draw across-the-line locked-rotor current. That lower starting inrush is the usual reason to use a drive. ATS-2025 tests motor starters in 7.16 and adjustable-speed drives in 7.17. Section 7.17 does not print a numeric inrush comparison against an across-the-line start. The comparison is engineering fundamentals. Test the starter to 7.16 and the drive to 7.17.",
+    "reference": "Engineering fundamentals (drive starting current); ANSI/NETA ATS-2025 7.17 and 7.16",
+    "verified": true,
     "kb": "apparatus.md#motors"
   },
   {
@@ -282,9 +282,9 @@
       "It is a fiber test"
     ],
     "answer": 1,
-    "explanation": "7.22.1 requires phase rotation and phasing on a generator. The induction-motor section that was read does not say to jog. Until that sentence is found, do not grade a recalled bump-test as an ATS line.",
-    "reference": "ANSI/NETA ATS-2025 7.15.1 and 7.22.1",
-    "verified": false,
+    "explanation": "Section 7.15.1 has no jog or bump-test line. Section 7.22.1.B.3 requires phase rotation and phasing on a generator. ATS 4.1 item 6 leaves the owner to decide who runs the low-voltage motor rotation test, so motor rotation is mentioned in the ATS, though not as a required bump test in 7.15.1. Do not grade a recalled jog as a line of 7.15.1.",
+    "reference": "ANSI/NETA ATS-2025 7.15.1, 7.22.1.B.3, and 4.1 item 6",
+    "verified": true,
     "kb": "apparatus.md#motors"
   },
   {

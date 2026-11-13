@@ -50,8 +50,8 @@
     ],
     "answer": 2,
     "explanation": "I = 2\u03c0fCV, so the ratio of frequencies is 60 / 0.1 = 600. That is why a VLF set can energize a long cable a 60 Hz set cannot. The voltage and the hold time still have to be the table values.",
-    "reference": "Capacitive charging current; IEEE 400.2 / ATS Table 100.6.3 is the voltage table",
-    "verified": false,
+    "reference": "Engineering fundamentals (I = 2\u03c0fCV); ANSI/NETA ATS-2025 Table 100.6.3",
+    "verified": true,
     "kb": "cables.md#vlf"
   },
   {
@@ -329,15 +329,15 @@
     "level": "II",
     "topic": "cables",
     "domain": "component",
-    "question": "ATS judges a dielectric withstand as passed when:",
+    "question": "A cable dielectric withstand is accepted when:",
     "choices": [
-      "Leakage current falls on a published slope that ATS prints for every cable",
+      "Leakage current follows one required slope for every cable",
       "No distress or insulation failure is seen by the end of the voltage application",
       "The set trips and is reset once",
       "The shield reads open"
     ],
     "answer": 1,
-    "explanation": "That is the withstand sentence. ATS does not print a required leakage-current curve. A rising current is a reason to stop and investigate, but you do not fail a cable for missing a slope the specification never gave you. Discharge the cable before you handle it.",
+    "explanation": "The withstand passes when the insulation shows no distress and does not fail by the end of the voltage application. A rising leakage current is a reason to stop and investigate. It is not a slope you must match to call the test good. Discharge the cable before you handle it.",
     "reference": "ANSI/NETA ATS-2025 7.3.3.D.4 and D.5",
     "verified": true,
     "kb": "cables.md#vlf"
@@ -347,15 +347,15 @@
     "level": "II",
     "topic": "cables",
     "domain": "component",
-    "question": "After a VLF or other dielectric withstand, ATS records a pass when:",
+    "question": "After a VLF or other dielectric withstand, the cable passes when:",
     "choices": [
-      "A published discharge time in minutes has elapsed",
+      "A fixed number of minutes has elapsed after the voltage is removed",
       "No distress or failure is observed by the end of the voltage application",
-      "Leakage current matches a slope ATS prints for every insulation",
+      "Leakage current matches one required slope for every insulation",
       "The shield is opened"
     ],
     "answer": 1,
-    "explanation": "That is the withstand acceptance line. ATS does not print how many minutes the cable must then sit before it is safe to touch. Discharge it and keep the shields grounded until the charge is gone. A remembered discharge time is not this table note.",
+    "explanation": "The withstand is accepted when nothing is in distress and the insulation has not failed by the end of the shot. That acceptance line does not set a wait, in minutes, before the cable is safe to touch. Discharge it and keep the shields grounded until the charge is gone.",
     "reference": "ANSI/NETA ATS-2025 7.3.3.D.4 and D.5",
     "verified": true,
     "kb": "cables.md#vlf"
@@ -391,8 +391,8 @@
       "The customer\u2019s revenue meter only"
     ],
     "answer": 1,
-    "explanation": "The chapter covers cable through 69 kV and not the conductors on the load side of the final branch-circuit overcurrent device. A branch-circuit whip past that device is not this table. The tests that are in scope still follow the 1000 V split.",
-    "reference": "NFPA 70B-2026, 18.1",
+    "explanation": "The chapter stops at the load side of the final branch-circuit overcurrent device. Above 1000 V, what it covers is purpose-built multilayer cable through 69 kV, not every conductor up to that voltage. A branch-circuit whip past the final device is outside the chapter.",
+    "reference": "NFPA 70B-2026, 18.1.1 through 18.1.3",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -427,8 +427,8 @@
       "Above 300 Hz"
     ],
     "answer": 0,
-    "explanation": "The over-1000 V menu includes very-low-frequency below 1 Hz, DC overpotential, AC power factor or dissipation factor, partial discharge, and power frequency. You choose at least one. The table does not state the test voltage. That still comes from the manufacturer or from the acceptance or maintenance table that applies.",
-    "reference": "NFPA 70B-2026, Table 18.3.5",
+    "explanation": "The over-1000 V menu includes very-low-frequency below 1 Hz, DC overpotential, AC power factor or dissipation factor, partial discharge, and power frequency. You choose at least one. The table does not print the test voltage. For equipment above 1000 V, the electrical maintenance program is what selects the insulation-test method. The manufacturer and a NETA table are not the only source of that choice.",
+    "reference": "NFPA 70B-2026, Table 18.3.5 and 7.3.2",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   }

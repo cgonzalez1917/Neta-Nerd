@@ -69,8 +69,8 @@
     ],
     "answer": 1,
     "explanation": "An open CT secondary with primary current flowing can rise to a hazardous voltage. Short the secondary or leave it on its burden before the primary is energized. ATS also requires exactly one secondary ground, at the place the drawings show.",
-    "reference": "CT secondary practice; ANSI/NETA ATS-2025 7.10.1.B.9 (one grounding point). Open-circuit voltage is standard CT behavior.",
-    "verified": false,
+    "reference": "Engineering fundamentals (open CT secondary); ANSI/NETA ATS-2025 7.10.1.B.9",
+    "verified": true,
     "kb": "relays.md#testing",
     "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
   },
@@ -88,8 +88,8 @@
     ],
     "answer": 1,
     "explanation": "A one-line shows the power path and the device numbers. The control schematic shows coils, a and b contacts, and how a lockout is inserted into trip and close. Asking a one-line to carry the close-permissive contact is the print trap.",
-    "reference": "Drawing practice; ATS 7.9.1 functional tests still require the contact to perform its scheme job",
-    "verified": false,
+    "reference": "Engineering fundamentals (drawing practice); ANSI/NETA ATS-2025 7.9.1.B.4",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -123,9 +123,9 @@
       "The breaker springs, before any relay"
     ],
     "answer": 2,
-    "explanation": "The 51 has to pick up and close its contact before the 86 coil is energized. The 86 then seals and its contact energizes the trip coil, so the breaker opens third in this particular path. Resetting the breaker does not reset the 86.",
-    "reference": "Control-schematic sequence; ATS 7.9.1 includes 51 pickup and 86 lockout functional tests",
-    "verified": false,
+    "explanation": "The 51 has to pick up and close its contact before the 86 coil is energized. The 86 then latches mechanically, and its contact energizes the trip coil, so the breaker opens third in this path. An 86 is hand-reset. It does not merely seal in electrically, and resetting the breaker does not reset the lockout.",
+    "reference": "Scheme logic; ANSI/NETA ATS-2025 7.9.1.B.4",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -142,8 +142,8 @@
     ],
     "answer": 1,
     "explanation": "A b contact is closed when the device is de-energized and open when the device is picked up. A tripped 86 opens its b contact and removes close permission. An a contact would do the opposite and is the one you would use to energize a trip or an alarm when the lockout operates.",
-    "reference": "Relay contact convention (a/b); scheme logic",
-    "verified": false,
+    "reference": "Engineering fundamentals (a and b contacts); ANSI/NETA ATS-2025 7.9.1.B.4",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -213,9 +213,9 @@
       "Open the trip poles and go home"
     ],
     "answer": 1,
-    "explanation": "The trip circuit is opened first on the way in, so a stray assertion does not trip, and the CT shorting blade shorts before the current circuit opens. On the way out the trip poles close last, after current is restored. Leaving a CT open under load is the hazard.",
-    "reference": "Test-switch practice for CT and trip circuits; never open a loaded CT secondary. ATS 7.10.1 requires the secondary to stay a complete circuit.",
-    "verified": false,
+    "explanation": "On the way in, open the trip circuit first so a stray assertion does not trip the breaker, and let the CT shorting blade make before the relay current circuit opens. On the way out, restore the current circuits and close the trip poles last. That order is the test-switch maker's practice: the trip poles open first, and the CT short is make-before-break. ATS-2025 7.10.1.A.7 is the check that the grounding and shorting connections actually make contact. Leaving a CT secondary open under load is the hazard.",
+    "reference": "ABB FT-1/FT-14 Flexitest product guide 1VAC394641-PG Rev K; engineering fundamentals; ANSI/NETA ATS-2025 7.10.1.A.7",
+    "verified": true,
     "kb": "field-methods.md#relay-elements"
   },
   {
@@ -268,8 +268,8 @@
     ],
     "answer": 1,
     "explanation": "Each b contact is open while its coil is picked up. Series permissives mean both must be reset. Resetting one and closing into the other lockout is how a second trip surprises people.",
-    "reference": "Control-schematic logic for series 86 b contacts",
-    "verified": false,
+    "reference": "Scheme logic; ANSI/NETA ATS-2025 7.9.1.B.4",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -286,8 +286,8 @@
     ],
     "answer": 1,
     "explanation": "25 supervises the close. It does not replace the operator or the 86. ATS 7.22.1 still wants phase rotation, phasing, and synchronizing proved. Bypassing 25 for \u201cthe first time\u201d is how out-of-phase closes happen.",
-    "reference": "Device 25 practice; ANSI/NETA ATS-2025 7.22.1.B.3",
-    "verified": false,
+    "reference": "ANSI/NETA ATS-2025 7.9.1.B and 7.22.1.B.3",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -303,9 +303,9 @@
       "Irrelevant until the 51 times out"
     ],
     "answer": 1,
-    "explanation": "A b contact is closed only while its device is dropped out. A closed breaker has opened its b contact, which is why that contact is the anti-pump or spring-release permissive and not a seal-in of the close. The 86 b contact is closed only while the lockout is reset.",
-    "reference": "a/b contact logic",
-    "verified": false,
+    "explanation": "A b contact is closed only while its device is dropped out. A closed breaker has opened its 52b contact. In series with the close coil, that contact allows a close only while the breaker is open, and it cuts the close coil off once the breaker closes. Anti-pump is a separate function, usually a 52Y relay, that blocks a second close while the close signal is still held. The 86 b contact is closed only while the lockout is reset.",
+    "reference": "Engineering fundamentals (a and b contact logic)",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -340,8 +340,8 @@
     ],
     "answer": 1,
     "explanation": "You inject into the relay, not into a CT that is still connected to a live primary. The test switch shorts the CT before the relay circuit opens. ATS 7.9.2 then judges the element against the manufacturer\u2019s tolerance.",
-    "reference": "Relay test-set practice, per manufacturer instructions; ANSI/NETA ATS-2025 7.9.2",
-    "verified": false,
+    "reference": "ANSI/NETA ATS-2025 7.9.2.D.4; ABB FT Flexitest product guide",
+    "verified": true,
     "kb": "field-methods.md#relay-elements"
   },
   {
@@ -376,8 +376,8 @@
     ],
     "answer": 1,
     "explanation": "25 permits the close when the two systems match. The 86 b contact is closed only while the lockout is reset. Both have to be true. Resetting the breaker handle does not reset the 86.",
-    "reference": "IEEE C37.2 device 25 and 86; control-schematic logic",
-    "verified": false,
+    "reference": "Scheme logic; ANSI/NETA ATS-2025 7.9.1.B and 7.9.1.B.4",
+    "verified": true,
     "kb": "level-3.md#schemes"
   },
   {
@@ -952,7 +952,7 @@
     ],
     "answer": 0,
     "explanation": "Restraint, or blocking, recognizes inrush and lets the operating pickup stay low for real faults. ATS 7.9.1 says to determine that harmonic restraint. It does not tell you to turn it off to make the relay trip faster on energizing.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2",
+    "reference": "ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2.1",
     "verified": true,
     "kb": "relays.md#testing"
   },
@@ -1018,13 +1018,13 @@
     "question": "An NFPA 70B-2026 field-test record has to include:",
     "choices": [
       "Only pass or fail",
-      "Who tested, the equipment identity and nameplate, conditions, date, the test, the criteria, and as-found and as-left values",
-      "The manufacturer\u2019s entire manual",
-      "A polarization index, even though these chapters do not define one"
+      "Who tested, the equipment identity and nameplate, the conditions, the date, and the test, plus criteria, as-found and as-left values, and comments where those apply",
+      "The manufacturer's entire manual",
+      "A polarization index on every record"
     ],
     "answer": 1,
-    "explanation": "Comments and recommendations belong in that record too. A bare pass or fail with no as-found value cannot support the next interval. These chapters do not give a polarization-index or dielectric-absorption number to invent.",
-    "reference": "NFPA 70B-2026, 8.5.1 and 8.5.2",
+    "explanation": "The record names who tested, what was tested, the conditions, the date, and which test was run. Criteria, as-found and as-left values, and comments or recommendations are required where they apply, not as a filled box on every line. A bare pass or fail with none of that cannot support the next interval.",
+    "reference": "NFPA 70B-2026, 8.5.1 through 8.5.2",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -1036,13 +1036,13 @@
     "question": "NFPA 70B-2026 adjusts a maintenance interval by:",
     "choices": [
       "Leaving it fixed no matter what fails",
-      "Shortening it when failures are analyzed, and allowing a longer interval only after more than two intervals without problems, with the extension written in the program",
+      "Letting a failure analysis decide whether a shorter interval is needed, allowing a risk-based change, and documenting a longer interval after more than two problem-free intervals",
       "Doubling it after one clean visit",
       "Using the condition-3 column after every pass"
     ],
     "answer": 1,
-    "explanation": "The table plus the condition score is used for at least two intervals unless something fails early. After more than two intervals with no extra repairs, the original interval can resume. After more than two intervals with no problems, a longer interval is permitted, and the reason is documented. Manufacturer instructions still come first.",
-    "reference": "NFPA 70B-2026, 9.1.2 and 9.3.2",
+    "explanation": "A failure analysis decides whether the interval should be shortened. It does not automatically cut the interval every time a failure is reviewed. A risk-based change is also allowed. A longer interval can follow more than two intervals without problems, and that extension is written into the program. It is not the only way an interval may change. Manufacturer instructions still come first.",
+    "reference": "NFPA 70B-2026, 9.1.2.1.1 through 9.1.2.2 and 9.3.2.2 through 9.3.2.3",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -1078,7 +1078,7 @@
     ],
     "answer": 1,
     "explanation": "49 is thermal. 51 is time overcurrent. 32 looks at power direction and is the element you meet on a generator or a network, not the ordinary motor overload. ATS 7.15 points the motor starter at section 7.16, not at a 32 test.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1, devices 32 and 49",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 (device 32, directional power; devices 49T and 49R, thermal)",
     "verified": true,
     "kb": "relays.md#numbers"
   },
@@ -1096,7 +1096,7 @@
     ],
     "answer": 1,
     "explanation": "3.8 on a tap of 3 is far enough away that you do not call it good without the manufacturer\u2019s tolerance. ATS tells you to determine pickup. It does not say the fix is always the spring or always the next tap. Those adjustments are in the relay manual.",
-    "reference": "ANSI/NETA ATS-2025 7.9.1",
+    "reference": "ANSI/NETA ATS-2025 7.9.1 item 15 (device 51: minimum pickup and two timing points)",
     "verified": true,
     "kb": "relays.md#testing"
   },
@@ -1123,17 +1123,17 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "PLC and SCADA addressing on a Level III print is:",
+    "question": "ANSI/NETA ATS-2025 7.23 covers automation and communications equipment. Which of these belongs to that work?",
     "choices": [
-      "Defined step by step in ATS 7.9",
-      "Not given as a protocol lesson in the standards read here; relay element tests remain ATS 7.9 and settings still have to match the file",
-      "A substitute for the 51-to-86-to-52 path",
-      "A megohmmeter guard connection"
+      "Only the 51-to-86-to-52 trip path, with communications left out of the standard",
+      "Communication links, digital points, alarms, and settings files",
+      "A megohmmeter guard connection used in place of the network",
+      "A dissolved-gas sample drawn from the controller"
     ],
     "answer": 1,
-    "explanation": "IEC 61850 and SCADA recognition show up on the Level IV reference list. Those documents are not in this lookup set, so no tag address or GOOSE map is graded. What is graded is the scheme you can read: which coil picks up, and whether an a or a b contact is closed.",
-    "reference": "ANSI/NETA ATS-2025 7.9; IEC 61850 and SCADA guides not in the lookup set",
-    "verified": false,
+    "explanation": "ATS-2025 7.23 covers automation and communications equipment, including the communication links, the digital points, the alarms, and the settings files. Protective-relay section 7.9.2 adds optional checks of SCADA metering and status. Neither section is a lesson in how to address a PLC. The trip path from a 51 through an 86 to the breaker is still scheme logic, and a guard lead or an oil sample is a different test.",
+    "reference": "ANSI/NETA ATS-2025 7.23 and 7.9.2",
+    "verified": true,
     "kb": "relays.md#schemes"
   },
   {
@@ -1149,8 +1149,8 @@
       "The close coil"
     ],
     "answer": 2,
-    "explanation": "The 51 must pick up before it can energize the 86. The 86 then seals and closes a contact that energizes the 52 trip coil. Resetting the breaker does not reset the 86. An a contact is open when its device is dropped out; a b contact is closed when its device is dropped out.",
-    "reference": "IEEE C37.2 device numbers as listed in ATS-2025 7.9.1; control sequence",
+    "explanation": "The 51 must pick up before it can energize the 86. The 86 then latches and closes a contact that energizes the 52 trip coil. Resetting the breaker does not reset the 86. An a contact is open when its device is dropped out; a b contact is closed when its device is dropped out.",
+    "reference": "Engineering fundamentals (trip sequence); ANSI/NETA ATS-2025 7.9.1",
     "verified": true,
     "kb": "relays.md#schemes"
   },
@@ -1159,7 +1159,7 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "On a scheme drawn with the device numbers in ATS 7.9.1, an a contact is:",
+    "question": "An a contact on a protective-relay scheme is:",
     "choices": [
       "Closed while its device is de-energized",
       "Open while its device is de-energized, and closed when that device is picked up",
@@ -1167,8 +1167,8 @@
       "The guard lead of a megohmmeter"
     ],
     "answer": 1,
-    "explanation": "The a contact follows the device: open when dropped out, closed when picked up. A b contact is the opposite, closed when dropped out, which is why it is used as a close permissive. The letter names Form A, Form B, and Form C were not in the IEEE text read for this bank, so those labels are not the graded terms. Resetting a breaker does not by itself reset an 86 that sealed in ahead of it.",
-    "reference": "Control-contact convention used with the device numbers in ANSI/NETA ATS-2025 7.9.1",
+    "explanation": "An a contact is open when its device is dropped out and closed when the device is picked up. Catalogs also call that a Form A contact. A b contact, also called Form B, is the opposite: closed when dropped out, which is why it is used as a close permissive. Resetting a breaker does not by itself reset an 86 that latched ahead of it.",
+    "reference": "Engineering fundamentals (a and b contacts); ANSI/NETA ATS-2025 7.9.1",
     "verified": true,
     "kb": "relays.md#schemes"
   },
@@ -1177,17 +1177,17 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "systems",
-    "question": "Form A, Form B, and Form C contact names are:",
+    "question": "In the relay-catalog convention, Form A, Form B, and Form C contacts are:",
     "choices": [
-      "Defined with clause numbers in the IEEE files read for this bank",
-      "Not printed in those files, so this bank does not grade the letter names",
-      "The same as devices 50, 51, and 87",
-      "Oil-test methods"
+      "Instantaneous overcurrent, time overcurrent, and differential",
+      "Normally open, normally closed, and transfer",
+      "The same devices as 50, 51, and 87",
+      "Oil dielectric, interfacial tension, and power factor"
     ],
     "answer": 1,
-    "explanation": "Relay catalogs use Form A for a normally open contact, Form B for normally closed, and Form C for a transfer contact. That wording was not in the IEEE text available here, so the letters stay unverified. Grade the a and b behavior instead: a opens when the coil drops out, b closes when the coil drops out.",
-    "reference": "Form A/B/C letter names not in the IEEE text read for this bank; a/b behavior is the convention used with ATS 7.9.1 device numbers",
-    "verified": false,
+    "explanation": "Catalogs call Form A a normally open contact, Form B a normally closed contact, and Form C a transfer contact. Those letter names are a catalog convention, and ATS-2025 does not print them. On a schematic, still read the contact by what it does: an a contact is open when the coil is dropped out, and a b contact is closed when the coil is dropped out.",
+    "reference": "Engineering fundamentals (relay catalog contact forms); not printed in ANSI/NETA ATS-2025",
+    "verified": true,
     "kb": "relays.md#schemes"
   },
   {
@@ -1204,7 +1204,7 @@
     ],
     "answer": 1,
     "explanation": "A b contact is closed only while its device is dropped out. An 86 that is still latched has opened its b contact and blocks the close. Resetting only one of two lockouts leaves the other contact open. The 51 operates first in a trip path; it is not the close permissive.",
-    "reference": "Control sequence using IEEE C37.2 device 86 as listed in ATS-2025 7.9 practice",
+    "reference": "Engineering fundamentals (b-contact close permissive); ANSI/NETA ATS-2025 7.9.1",
     "verified": true,
     "kb": "relays.md#schemes"
   },
@@ -1222,7 +1222,7 @@
     ],
     "answer": 0,
     "explanation": "Electromechanical relays are on the shorter row. Solid-state and microprocessor relays use 60, 36, and 12 months. The electrical table calls for pickup, three-point timing, and restraint or directional checks, and it does not print a percent tolerance.",
-    "reference": "NFPA 70B-2026, chapter 35",
+    "reference": "NFPA 70B-2026, 35.2, Table 9.3.2, and Table 35.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -1249,16 +1249,16 @@
     "level": "III",
     "topic": "protective-relays",
     "domain": "component",
-    "question": "NFPA 70B-2026 Table 35.3.5 lists pickup and three-point timing for protective relays. What it does not list is:",
+    "question": "NFPA 70B-2026 Table 35.3.5, on protective-relay tests, tells you to:",
     "choices": [
-      "A numeric timing tolerance you may invent",
-      "Restraint or directional checks where the relay has them",
-      "Input and output checks",
-      "An electromechanical zero check"
+      "Perform the tests the table lists, and follow the manufacturer's instructions for the relay",
+      "Apply a timing-tolerance percent printed in that table",
+      "Replace the timing points with a restraint check",
+      "Skip pickup and use only the zero check"
     ],
     "answer": 0,
-    "explanation": "The table tells you to test pickup, timing at three points, restraint or directional action, and the inputs and outputs. Electromechanical relays add insulation to the frame and a zero check. It never prints plus or minus a percent. That band is the manufacturer\u2019s.",
-    "reference": "NFPA 70B-2026, Table 35.3.5",
+    "explanation": "The table names the tests. It does not print a manufacturer tolerance band and it does not give a percent of your own. Where the work depends on the relay, follow the manufacturer's instructions. Pickup, timing points, restraint or directional checks, and the inputs and outputs are tests on that list, not a substitute for those instructions.",
+    "reference": "NFPA 70B-2026, Table 35.3.5 and 4.1.1",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -1276,7 +1276,7 @@
     ],
     "answer": 0,
     "explanation": "Cases, displays, wiring, and settings are compared with the coordination study. Electromechanical relays also get a clearance check. Microprocessor events are documented. The electrical tests are pickup, three-point timing, and restraint or directional checks, still without a percent band.",
-    "reference": "NFPA 70B-2026, Table 35.3.1",
+    "reference": "NFPA 70B-2026, Tables 35.3.1 and 35.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   }

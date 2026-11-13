@@ -14,7 +14,7 @@
 - [ ] Citation is a real clause or table I checked, for example `ATS-2025 7.x; ref. IEEE C57.104-2019, clause 6.2.1` or `NFPA 70B-2026, Table 15.3.5`. Equipment numbers I did not read in a manual are `per manufacturer data` or `verified: false`.
 - [ ] Questions are original and paraphrased. No copyrighted standard, PDF, or manual is in the diff. No recalled exam item is presented as the exam.
 - [ ] I did not invent a numeric limit the cited standard does not give.
-- [ ] Unsourced answers are `verified: false` and have a `<!-- q:ID -->` block in `knowledge/review-queue.md`. Every new Level II and Level III question has that block.
+- [ ] Unsourced answers are `verified: false` and have a `<!-- q:ID -->` block in `knowledge/review-queue.md`. Every new Level II and Level III question that is still unverified has that block.
 - [ ] `node scripts/validate.mjs` passed locally.
 - [ ] `css/styles.css` and `js/bg.js` are unchanged.
 

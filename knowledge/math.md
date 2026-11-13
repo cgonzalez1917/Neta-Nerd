@@ -1,22 +1,33 @@
 # Math you do not get for free {#not-on-sheet}
 
-The TestGuy study guide (wiki.testguy.net/t/217) describes the NETA formula sheet supplied at the exam, vintage about 2017. Treat that list as study-guide information, not as a page you will see reproduced here.
+The certification exam shows a one-page formula sheet on screen. The sheet confirmed for this bank is the Formulae Sheet dated March 2020, linked from NETA's Exam Preparation page: https://www.netaworld.org/accreditation/exam-preparation
 
-On the sheet, as that guide describes it: `V = IR`, `P = IV`, percent accuracy, peak and rms, `VLL = √3 VLN`, `V = IZ`, `XL = 2πfL`, `XC = 1/(2πfC)`, `Z = √(R² + (XL − XC)²)`, `P = VI cos θ = I²R`, `PF = R/Z = W/VA`, three-phase `VA = √3 VI`, `kW = kVA × PF`, delta/wye relations, `1 hp = 746 W`, torque, length-corrected resistance, capacitor kvar, resonance, synchronous speed, and watthour-meter Kh.
+Exactly what that page prints:
 
-Not on that sheet, so they have to be memory or table lookup: sine and cosine of ordinary angles, “ELI the ICE man,” micro-to-unit conversion, the parallel-resistor recipe, copper’s 234.5 constant, insulation multipliers, PI and DAR time points, turns-ratio percent error, and kvar once you only know kW and kVA.
+- DC: `V = IR`, `P = IV`
+- AC: `% accuracy = (actual − specified) / specified × 100%`
+- For a sine wave: `Vpeak = √2 × Vrms`
+- `V(L-L) = √3 × V(L-N)`
+- `V = IZ`
+- `XL = 2πfL`
+- `XC = 1/(2πfC)`
+- `Z = √(R² + (XL − XC)²)`
+- `P = VI cos θ = I²R`
+- `cos θ = R/Z = power factor = watts / volt-amperes = kW/kVA`
+
+Not on the sheet, so memorize them: `1 hp = 746 W`, temperature correction, copper's 234.5 constant (aluminum uses 225), polarization index and dielectric absorption, and three-phase power `√3 × V × I`. Also memorize the sine and cosine of ordinary angles, which way current sits on an inductor or a capacitor, unit prefixes, the parallel-resistor recipe, insulation-resistance multipliers, and kvar when you only know kW and kVA.
 
 The on-screen calculator is a TI-30XS. If it is in radians, `cos(60)` is not one half. Switch to degrees before an angle problem.
 
 ## Power {#power}
 
-Balanced three-phase:
+The sheet prints single-phase `P = VI cos θ` and power factor as `kW/kVA`. It does not print three-phase power. Balanced three-phase apparent power is one you memorize:
 
 `S (VA) = √3 × VLL × IL`
 
 `P (W) = S × PF`
 
-`kvar = √(kVA² − kW²)` when you were not given the angle. That square root is the piece the sheet does not spell out. If you were given θ, `kvar = kW × tan θ`, and tan is also not printed for you.
+`kvar = √(kVA² − kW²)` when you were not given the angle. That square root is not on the sheet. If you were given θ, `kvar = kW × tan θ`, and tan is also not printed for you.
 
 Worked: 200 kW at 0.80 PF. `kVA = 200 / 0.80 = 250`. `kvar = √(250² − 200²) = √22500 = 150`.
 
@@ -51,6 +62,8 @@ A 600:5 CT with 240 A primary: ratio 120, secondary `240 / 120 = 2.0 A`.
 Polarity in the field: current into H1 leaves X1. One ground on the secondary circuit, where the drawings put it.
 
 ## Turns-ratio percent {#ttr-pct}
+
+Percent accuracy on the March 2020 sheet is `(actual − specified) / specified × 100`. For a turns-ratio check, the calculated ratio is the specified value and the measured ratio is the actual value:
 
 `% deviation = (measured − calculated) / calculated × 100`
 

@@ -4,7 +4,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "A load draws 200 kW at 0.80 power factor. The formula sheet gives kW = kVA \u00d7 PF. It does not print the kvar identity. What is the reactive power?",
+    "question": "A load draws 200 kW at 0.80 power factor. The formula sheet gives power factor as kW/kVA. It does not print the kvar identity. What is the reactive power?",
     "choices": [
       "50 kvar",
       "160 kvar",
@@ -13,8 +13,8 @@
     ],
     "answer": 2,
     "explanation": "kVA = 200 / 0.80 = 250. kvar = \u221a(kVA\u00b2 \u2212 kW\u00b2) = \u221a(62500 \u2212 40000) = \u221a22500 = 150. That square root is the step you have to remember. 250 kVA is the apparent power, not the kvar.",
-    "reference": "Power triangle; NETA formula sheet does not print kvar = \u221a(kVA\u00b2 \u2212 kW\u00b2). See knowledge/math.md.",
-    "verified": false,
+    "reference": "Engineering fundamentals (power triangle)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -31,8 +31,8 @@
     ],
     "answer": 1,
     "explanation": "ELI: voltage leads current in an inductor, which means current lags. ICE is the capacitor, where current leads. The sheet will give you XL and Z; it will not tell you the direction of the phasor.",
-    "reference": "AC circuit convention (ELI/ICE), not printed on the NETA formula sheet",
-    "verified": false,
+    "reference": "Engineering fundamentals (inductor current lags voltage by 90\u00b0)",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -49,8 +49,8 @@
     ],
     "answer": 0,
     "explanation": "10 mH is 0.010 H. XL = 2\u03c0 \u00d7 60 \u00d7 0.010 \u2248 3.77 \u03a9. Dropping the milli prefix produces about 3770 \u03a9, a common calculator miss the sheet will not catch.",
-    "reference": "XL = 2\u03c0fL with unit conversion; conversion is not on the formula sheet",
-    "verified": false,
+    "reference": "Engineering fundamentals (XL = 2\u03c0fL)",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -67,8 +67,8 @@
     ],
     "answer": 2,
     "explanation": "Equal resistors in parallel are half of one: 6 \u03a9. Series would be 24 \u03a9. (R\u00d7R)/(R+R) = R/2.",
-    "reference": "Parallel resistance; not on the NETA formula sheet",
-    "verified": false,
+    "reference": "Engineering fundamentals (parallel resistance)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -85,8 +85,8 @@
     ],
     "answer": 1,
     "explanation": "Current is 480 / 40 = 12 A. The 10 \u03a9 drop is 120 V and the 30 \u03a9 drop is 360 V. They sum to 480 V. Splitting voltage in proportion to the smaller resistor's label is the miss.",
-    "reference": "Series circuit and KVL",
-    "verified": false,
+    "reference": "Engineering fundamentals (series circuit)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -103,8 +103,8 @@
     ],
     "answer": 1,
     "explanation": "The ratio is 600/5 = 120. Secondary = 240/120 = 2.0 A. 5 A would be full primary current. 24 A is 240/10.",
-    "reference": "CT ratio arithmetic",
-    "verified": false,
+    "reference": "Engineering fundamentals (CT ratio)",
+    "verified": true,
     "kb": "math.md#ct-ratio",
     "link": "https://wiki.testguy.net/t/test-equipment-101-the-basics-of-electrical-testing/57"
   },
@@ -113,7 +113,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Calculated ratio is 28.75. The TTR reads 28.95. Percent deviation from calculated, which the formula sheet does not print, is about:",
+    "question": "Calculated ratio is 28.75. The TTR reads 28.95. Percent accuracy, (actual \u2212 specified) / specified \u00d7 100, is about:",
     "choices": [
       "0.20%",
       "0.70%",
@@ -121,9 +121,9 @@
       "7.0%"
     ],
     "answer": 1,
-    "explanation": "(28.95 \u2212 28.75) / 28.75 \u00d7 100 = 0.70%. Whether 0.70% passes is a separate ATS limit (one-half percent). This item is only the arithmetic.",
-    "reference": "Turns-ratio percent deviation",
-    "verified": false,
+    "explanation": "(28.95 \u2212 28.75) / 28.75 \u00d7 100 = 0.70%. The formula sheet prints that percent-accuracy form. Whether 0.70% passes is a separate ATS limit (one-half percent). This item is that arithmetic.",
+    "reference": "NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3",
+    "verified": true,
     "kb": "math.md#ttr-pct"
   },
   {
@@ -140,8 +140,8 @@
     ],
     "answer": 2,
     "explanation": "Micro is 10\u207b\u2076. 85 \u00b5\u03a9 = 85 \u00d7 10\u207b\u2076 \u03a9 = 0.000085 \u03a9. Milli would be 0.085 \u03a9. Engineering notation is a theory item the sheet does not translate for you.",
-    "reference": "SI prefix conversion",
-    "verified": false,
+    "reference": "Engineering fundamentals (SI prefixes)",
+    "verified": true,
     "kb": "math.md#not-on-sheet"
   },
   {
@@ -158,8 +158,8 @@
     ],
     "answer": 2,
     "explanation": "R75 = 0.420 \u00d7 (234.5+75)/(234.5+25) = 0.420 \u00d7 309.5/259.5 = 0.501 \u03a9. 0.352 \u03a9 is the fraction upside down. 1.26 \u03a9 is 0.420 \u00d7 75/25, temperatures used as a simple ratio.",
-    "reference": "Copper winding temperature correction, constant 234.5",
-    "verified": false,
+    "reference": "Engineering fundamentals (copper temperature correction)",
+    "verified": true,
     "kb": "math.md#copper",
     "link": "https://wiki.testguy.net/t/transformer-winding-resistance-test-methods-and-procedures-explained/81"
   },
@@ -176,9 +176,9 @@
       "Fix 0, so only integers display"
     ],
     "answer": 1,
-    "explanation": "cos(60\u00b0) = 0.5. In radians, cos(60) is the cosine of 60 rad and is not 0.5. The TestGuy study guide flags degree mode on the on-screen TI-30XS. The sheet will not switch the calculator for you.",
-    "reference": "TestGuy study guide exam-format note (TI-30XS); cosine of 60\u00b0",
-    "verified": false,
+    "explanation": "cos(60\u00b0) = 0.5. In radian mode, cos(60) is the cosine of 60 radians, about \u22120.95, not 0.5. Degree mode is the setup that makes the key equal 0.5. Scientific notation and an integer-only display do not change the angle unit.",
+    "reference": "Engineering fundamentals (cosine of 60\u00b0 in degree mode)",
+    "verified": true,
     "kb": "math.md#not-on-sheet"
   },
   {
@@ -195,8 +195,8 @@
     ],
     "answer": 2,
     "explanation": "10 \u00b5F = 10e-6 F. XC = 1/(2\u03c0\u00d760\u00d710e-6) \u2248 265 \u03a9. Using 10 F, or 10e-3 F, moves the answer by orders of magnitude.",
-    "reference": "XC with microfarad conversion",
-    "verified": false,
+    "reference": "Engineering fundamentals (XC = 1/(2\u03c0fC))",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -213,8 +213,8 @@
     ],
     "answer": 0,
     "explanation": "Net reactance is 10 \u2212 4 = 6 \u03a9. Z = \u221a(3\u00b2 + 6\u00b2) = \u221a45 \u2248 6.7 \u03a9. Adding the reactances gives 17 \u03a9 and ignores the sign already printed on the sheet.",
-    "reference": "Z = \u221a(R\u00b2 + (XL \u2212 XC)\u00b2)",
-    "verified": false,
+    "reference": "Engineering fundamentals (impedance)",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -222,17 +222,17 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Which of these is on the NETA formula sheet, as the TestGuy study guide describes that sheet, so you should not re-derive it from memory?",
+    "question": "Which of these identities is printed on the NETA certification exam formula sheet?",
     "choices": [
       "1 hp = 746 W",
-      "Copper constant 234.5",
-      "PI = 10 min / 1 min",
-      "\u00b0C rise \u00d7 1.8 = \u00b0F rise"
+      "XC = 1/(2\u03c0fC)",
+      "The copper temperature constant 234.5",
+      "PI = 10 min / 1 min"
     ],
-    "answer": 0,
-    "explanation": "The study guide lists horsepower at 746 W among the supplied formulas. The copper constant, the PI time points, and the rise-only Celsius conversion are exactly the things that list says you do not get.",
-    "reference": "TestGuy study guide summary of the NETA formula sheet (about 2017)",
-    "verified": false,
+    "answer": 1,
+    "explanation": "The March 2020 formula sheet, shown on screen during the exam, includes XC = 1/(2\u03c0fC). It does not include 1 hp = 746 W, the copper constant 234.5, or the polarization-index time points. Those three have to be memorized.",
+    "reference": "NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020)",
+    "verified": true,
     "kb": "math.md#not-on-sheet"
   },
   {
@@ -266,9 +266,9 @@
       "28.8 kW"
     ],
     "answer": 1,
-    "explanation": "\u221a3 \u00d7 480 \u00d7 100 \u2248 83.1 kW at PF = 1. 48 kW is 480 \u00d7 100 with the \u221a3 left out. Three-phase VA = \u221a3 VI is one of the identities the formula sheet does provide; this item is the 'use it' check.",
-    "reference": "Three-phase power, S = \u221a3 \u00d7 VLL \u00d7 IL",
-    "verified": false,
+    "explanation": "\u221a3 \u00d7 480 \u00d7 100 \u2248 83.1 kW at PF = 1. 48 kW is 480 \u00d7 100 with the \u221a3 left out.",
+    "reference": "Engineering fundamentals (three-phase power, S = \u221a3 \u00d7 V \u00d7 I)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -281,12 +281,12 @@
       "1.80 kA",
       "10.4 kA",
       "31.4 kA",
-      "86 kA"
+      "54.3 kA"
     ],
     "answer": 2,
-    "explanation": "Full-load current is 1,500,000 / (\u221a3 \u00d7 480) \u2248 1804 A. Zpu = 0.0575. Isc \u2248 1804 / 0.0575 \u2248 31.4 kA. Multiplying 1804 by 0.0575, or by 5.75, produces the smaller distractors. This per-unit step is not a finished formula on the exam sheet.",
-    "reference": "Per-unit transformer short-circuit estimate; percent Z is nameplate data",
-    "verified": false,
+    "explanation": "Full-load current is 1,500,000 / (\u221a3 \u00d7 480) \u2248 1804 A, about 1.80 kA. Per-unit impedance is 5.75 / 100 = 0.0575. Symmetrical fault current is 1804 / 0.0575 \u2248 31.4 kA. 10.4 kA is 1804 \u00d7 5.75, which treats the percent figure as if it were per-unit and multiplies instead of dividing. 54.3 kA is what you get if full-load current leaves out \u221a3 (1,500,000 / 480 \u2248 3125 A) and you then divide by 0.0575. Multiplying 1804 by 0.0575 is only about 104 A, which is not one of these answers.",
+    "reference": "Engineering fundamentals (per-unit short-circuit estimate)",
+    "verified": true,
     "kb": "math.md#per-unit"
   },
   {
@@ -303,8 +303,8 @@
     ],
     "answer": 1,
     "explanation": "A difference converts by 1.8 with no +32. 10 \u00d7 1.8 = 18 \u00b0F. 50 \u00b0F is what you get if you add 32 as though 10 \u00b0C were a temperature, not a rise.",
-    "reference": "Temperature-difference conversion; ANSI/NETA ATS-2025 Table 100.18 is in \u00b0C",
-    "verified": false,
+    "reference": "Engineering fundamentals (temperature-difference conversion); ANSI/NETA ATS-2025 Table 100.18",
+    "verified": true,
     "kb": "math.md#delta-t"
   },
   {
@@ -312,7 +312,7 @@
     "level": "III",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "Three equal 100 \u00b5F capacitors are connected in wye. A capacitance measurement from phase A to phase B should read about:",
+    "question": "Three equal 100 \u00b5F capacitors are connected in wye, with the neutral isolated. A capacitance measurement from phase A to phase B should read about:",
     "choices": [
       "100 \u00b5F",
       "50 \u00b5F",
@@ -320,9 +320,9 @@
       "173 \u00b5F"
     ],
     "answer": 1,
-    "explanation": "Line-to-line on a wye of equal capacitors sees two cans in series. Series capacitance is half of one can, 50 \u00b5F. 300 \u00b5F would be three in parallel. Do not fail the bank because A-to-B is not the single-can nameplate.",
-    "reference": "Series capacitance on a wye capacitor bank",
-    "verified": false,
+    "explanation": "Line-to-line on a wye of equal capacitors sees two cans in series. Series capacitance is half of one can, 50 \u00b5F. The third can hangs off the isolated neutral and is not in the measured path. 300 \u00b5F would be three in parallel. Do not fail the bank because A-to-B is not the single-can nameplate.",
+    "reference": "Engineering fundamentals (series capacitance on a wye bank)",
+    "verified": true,
     "kb": "math.md#caps"
   },
   {
@@ -339,8 +339,8 @@
     ],
     "answer": 2,
     "explanation": "kVA = 100 / 0.60 \u2248 166.7. kvar = \u221a(166.7\u00b2 \u2212 100\u00b2) \u2248 133. Equivalently sin(arccos 0.6) = 0.8, and kvar = kW \u00d7 tan \u03b8 = 100 \u00d7 (0.8/0.6). 167 kvar is the kVA. The arccos step is not on the formula sheet.",
-    "reference": "Power triangle from PF when the angle is not given",
-    "verified": false,
+    "reference": "Engineering fundamentals (power triangle)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -357,8 +357,8 @@
     ],
     "answer": 0,
     "explanation": "Inductors that do not share a core combine like resistors: series adds, parallel of two equals halves. 40 mH and 10 mH. Reactance will follow the same pattern because XL is proportional to L.",
-    "reference": "Series and parallel inductance",
-    "verified": false,
+    "reference": "Engineering fundamentals (series and parallel inductance)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -375,8 +375,8 @@
     ],
     "answer": 2,
     "explanation": "Percent divided by 100 is per-unit. 5.75% = 0.0575 pu. Fault current on a stiff bus is about full-load current divided by that per-unit value, not multiplied by 5.75.",
-    "reference": "Percent impedance to per-unit",
-    "verified": false,
+    "reference": "Engineering fundamentals (percent impedance to per-unit)",
+    "verified": true,
     "kb": "math.md#per-unit"
   },
   {
@@ -411,8 +411,8 @@
     ],
     "answer": 1,
     "explanation": "R = V/I = 480/16 = 30 \u03a9. This is the V = IR identity the formula sheet does contain; Level I is only the direct form.",
-    "reference": "Ohm's law",
-    "verified": false,
+    "reference": "Engineering fundamentals (Ohm's law)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -447,8 +447,8 @@
     ],
     "answer": 1,
     "explanation": "There are two conductors. Drop = 2 \u00d7 I \u00d7 R = 2 \u00d7 20 \u00d7 0.25 = 10 V. Using one conductor only cuts the drop in half.",
-    "reference": "DC and single-phase voltage drop, I\u00d7R on both ways. Not on the NETA formula sheet as a finished recipe.",
-    "verified": false,
+    "reference": "Engineering fundamentals (round-trip voltage drop)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -464,9 +464,9 @@
       "0.04 VA"
     ],
     "answer": 1,
-    "explanation": "VA = I\u00b2R = 25 \u00d7 0.20 = 5 VA. Dividing 5 A by 0.20 \u03a9 gives siemens, not volt-amperes.",
-    "reference": "CT burden, S = I\u00b2R",
-    "verified": false,
+    "explanation": "Burden is I\u00b2R. 5\u00b2 \u00d7 0.20 = 5 VA. The 1 VA figure is I \u00d7 R = 1 V, the voltage drop on the leads, not volt-amperes. The 25 comes from dividing the current by the resistance (5 / 0.20). Amperes divided by ohms are not siemens, because siemens is 1/\u03a9, and they are not volt-amperes. The 0.04 figure is the resistance divided by the current.",
+    "reference": "Engineering fundamentals (CT burden, S = I\u00b2R)",
+    "verified": true,
     "kb": "math.md#ct-ratio"
   },
   {
@@ -483,8 +483,8 @@
     ],
     "answer": 1,
     "explanation": "XL = 2\u03c0fL with L in henries. 50 mH is 0.050 H, so 2\u03c0 \u00d7 60 \u00d7 0.050 \u2248 18.8 \u03a9. Leaving the milli prefix on produces about 18 800 \u03a9.",
-    "reference": "XL = 2\u03c0fL",
-    "verified": false,
+    "reference": "Engineering fundamentals (XL = 2\u03c0fL)",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -501,8 +501,8 @@
     ],
     "answer": 1,
     "explanation": "XC = 1/(2\u03c0fC) with C in farads. 2 \u00b5F is 2\u00d710\u207b\u2076 F, so XC \u2248 1326 \u03a9, about 1330 \u03a9. Microfarads left as farads make the capacitor look like a short.",
-    "reference": "XC = 1/(2\u03c0fC)",
-    "verified": false,
+    "reference": "Engineering fundamentals (XC = 1/(2\u03c0fC))",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -518,9 +518,9 @@
       "80 kvar"
     ],
     "answer": 1,
-    "explanation": "kVA = 36 / 0.80 = 45. kvar = \u221a(45\u00b2 \u2212 36\u00b2) = \u221a(2025 \u2212 1296) = \u221a729 = 27. The 45 is apparent power. The square root is not printed on the formula sheet.",
-    "reference": "Power triangle",
-    "verified": false,
+    "explanation": "kVA = 36 / 0.80 = 45. kvar = \u221a(45\u00b2 \u2212 36\u00b2) = \u221a(2025 \u2212 1296) = \u221a729 = 27. The 45 is apparent power. That kvar square root is not printed on the formula sheet.",
+    "reference": "Engineering fundamentals (power triangle)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -573,8 +573,8 @@
     ],
     "answer": 0,
     "explanation": "Percent drop = 12 / 480 \u00d7 100 = 2.5%. Quoting 12% treats the volts as if they were already a percent.",
-    "reference": "Voltage-drop percent",
-    "verified": false,
+    "reference": "Engineering fundamentals (voltage-drop percent)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -591,8 +591,8 @@
     ],
     "answer": 1,
     "explanation": "The ratio is 80. Secondary = 80 / 80 = 1.0 A. Five amperes would mean full 400 A primary.",
-    "reference": "CT ratio",
-    "verified": false,
+    "reference": "Engineering fundamentals (CT ratio)",
+    "verified": true,
     "kb": "math.md#ct-ratio"
   },
   {
@@ -609,8 +609,8 @@
     ],
     "answer": 1,
     "explanation": "(6\u00d73)/(6+3) = 18/9 = 2 \u03a9. Series would be 9 \u03a9. The parallel recipe is not spelled out on the formula sheet.",
-    "reference": "Parallel resistance",
-    "verified": false,
+    "reference": "Engineering fundamentals (parallel resistance)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -626,9 +626,9 @@
       "90"
     ],
     "answer": 0,
-    "explanation": "PF = kW / kVA = 90/100 = 0.90. The formula sheet does give kW = kVA \u00d7 PF, so this one rearranges a line you are handed. 1.11 is the fraction upside down.",
-    "reference": "PF = P/S",
-    "verified": false,
+    "explanation": "PF = kW / kVA = 90/100 = 0.90. The sheet prints power factor as kW/kVA, so this rearranges a line you are handed. 1.11 is the fraction upside down.",
+    "reference": "Engineering fundamentals (power factor)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -645,8 +645,8 @@
     ],
     "answer": 1,
     "explanation": "R75 = 1.00 \u00d7 (225+75)/(225+20) = 300/245 \u2248 1.22 \u03a9. Copper\u2019s 234.5 would give a slightly different number. The constant is not on the exam formula sheet.",
-    "reference": "Aluminum temperature correction, constant 225",
-    "verified": false,
+    "reference": "Engineering fundamentals (aluminum temperature correction)",
+    "verified": true,
     "kb": "math.md#copper"
   },
   {
@@ -662,9 +662,9 @@
       "75 A"
     ],
     "answer": 0,
-    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. The three-phase VA identity is on the sheet; the rearrangement is yours.",
-    "reference": "I = S / (\u221a3 \u00d7 VLL)",
-    "verified": false,
+    "explanation": "I = 75000 / (\u221a3 \u00d7 208) \u2248 208 A. Dropping \u221a3 yields about 361 A. Three-phase power, \u221a3 \u00d7 V \u00d7 I, is not on the formula sheet. You have to remember it.",
+    "reference": "Engineering fundamentals (three-phase current)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -681,8 +681,8 @@
     ],
     "answer": 1,
     "explanation": "A difference converts by 1.8 with no +32. 15 \u00d7 1.8 = 27 \u00b0F. Adding 32 turns a rise into a fake temperature. Table 100.18 is written in Celsius.",
-    "reference": "Temperature-difference conversion",
-    "verified": false,
+    "reference": "Engineering fundamentals (temperature-difference conversion); ANSI/NETA ATS-2025 Table 100.18",
+    "verified": true,
     "kb": "math.md#delta-t"
   },
   {
@@ -699,8 +699,8 @@
     ],
     "answer": 1,
     "explanation": "Series resistance is 20 \u03a9. I = 120/20 = 6 A. Each resistor then drops 60 V. KVL is the check: 60 + 60 = 120.",
-    "reference": "Ohm's law and series resistance",
-    "verified": false,
+    "reference": "Engineering fundamentals (Ohm's law)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -717,8 +717,8 @@
     ],
     "answer": 1,
     "explanation": "The window is 0.7\u00d74 = 2.8 s up to 4.0 s. 3.2 s is inside. 2.1 s is fast, 4.8 s is slower than the dial. This is the band at the multiple where the dial is defined, per that manufacturer, not a time scaled to some other current.",
-    "reference": "Per manufacturer data: long-time delay defined at 6\u00d7Ir, tolerance +0/\u221230%. ATS-2025 7.6.1.2 uses the published tolerance when it exists.",
-    "verified": false,
+    "reference": "Engineering fundamentals; manufacturer published band. ANSI/NETA ATS-2025 7.6.1.2",
+    "verified": true,
     "kb": "field-methods.md#trip-window"
   },
   {
@@ -735,8 +735,8 @@
     ],
     "answer": 2,
     "explanation": "Nominal pickup is 1.10 \u00d7 500 = 550 A. Five percent of 550 is 27.5 A, so the band is about 522 A to 578 A. 600 A is outside. 530 A and 560 A sit inside. Use this only for a unit whose manual actually says 110% \u00b15%.",
-    "reference": "Per manufacturer data (long-time pickup 110% of Ir, \u00b15%). Not a NETA table.",
-    "verified": false,
+    "reference": "Engineering fundamentals; per manufacturer data",
+    "verified": true,
     "kb": "field-methods.md#trip-window"
   },
   {
@@ -753,8 +753,8 @@
     ],
     "answer": 0,
     "explanation": "(241.2 \u2212 240) / 240 \u00d7 100 = +0.5%. The sign matters: measured high is positive. A 0.5% miss is not automatically a failure; the acceptance limit is the one for that CT\u2019s job, not this arithmetic.",
-    "reference": "Ratio error = (measured \u2212 nameplate) / nameplate",
-    "verified": false,
+    "reference": "Engineering fundamentals (ratio error); ANSI/NETA ATS-2025 7.10.1.D.3",
+    "verified": true,
     "kb": "field-methods.md#ct-knee"
   },
   {
@@ -771,8 +771,8 @@
     ],
     "answer": 1,
     "explanation": "0.03 \u00d7 480 = 14.4 V. Three volts would be 3% of 100 V. The percent is of the system voltage, not of the load current.",
-    "reference": "Voltage-drop percent",
-    "verified": false,
+    "reference": "Engineering fundamentals (voltage-drop percent)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -807,8 +807,8 @@
     ],
     "answer": 1,
     "explanation": "I\u00b2t scaling is a way to estimate. It is not a published window unless the curve or the manual gives it at that multiple. Fail the breaker on the band the document actually prints.",
-    "reference": "Per manufacturer data. Calculated times off the defined multiple are not a pass/fail by themselves.",
-    "verified": false,
+    "reference": "Engineering fundamentals; manufacturer's published curve. ANSI/NETA ATS-2025 7.6.1.2",
+    "verified": true,
     "kb": "field-methods.md#trip-window"
   },
   {
@@ -825,8 +825,8 @@
     ],
     "answer": 1,
     "explanation": "I = 500000 / (\u221a3 \u00d7 480) \u2248 601 A. 1042 A drops the \u221a3. Full-load current is the denominator when you later divide by per-unit impedance to estimate fault current.",
-    "reference": "I = S / (\u221a3 \u00d7 V)",
-    "verified": false,
+    "reference": "Engineering fundamentals (three-phase full-load current)",
+    "verified": true,
     "kb": "math.md#per-unit"
   },
   {
@@ -843,8 +843,8 @@
     ],
     "answer": 0,
     "explanation": "UST measures between the high-voltage lead and the return lead. GST with the other winding grounded folds in both the ground insulation and the interwinding insulation. The subtraction check is how you know the leads are telling one story.",
-    "reference": "Power-factor test method (GST versus UST). ATS-2025 7.2.2.D.4 is how you judge the corrected percent.",
-    "verified": false,
+    "reference": "Engineering fundamentals (GST and UST); ANSI/NETA ATS-2025 7.2.2.B.4 and 7.2.2.D.4",
+    "verified": true,
     "kb": "field-methods.md#pf-method"
   },
   {
@@ -861,8 +861,8 @@
     ],
     "answer": 1,
     "explanation": "kVA = 30 / 0.60 = 50. kvar = \u221a(50\u00b2 \u2212 30\u00b2) = \u221a(2500 \u2212 900) = \u221a1600 = 40. It is the 3-4-5 triangle in kilowatts. 50 is the kVA.",
-    "reference": "Power triangle",
-    "verified": false,
+    "reference": "Engineering fundamentals (power triangle)",
+    "verified": true,
     "kb": "math.md#power"
   },
   {
@@ -915,8 +915,8 @@
     ],
     "answer": 1,
     "explanation": "VA = I\u00b2R = 25 \u00d7 0.3 = 7.5 VA. Compare that with the CT\u2019s burden rating. I \u00d7 R is ohms law for voltage drop, not volt-amperes.",
-    "reference": "CT burden S = I\u00b2R",
-    "verified": false,
+    "reference": "Engineering fundamentals (CT burden, S = I\u00b2R)",
+    "verified": true,
     "kb": "math.md#ct-ratio"
   },
   {
@@ -932,9 +932,9 @@
       "40%"
     ],
     "answer": 2,
-    "explanation": "VA = 10000 \u00d7 0.002 = 20. PF = 4 / 20 = 0.20 = 20%. Watts divided by voltage, skipping the current, is not power factor. This is the same W/VI definition used on a power-factor set.",
-    "reference": "Insulation power factor = W / (V \u00d7 I)",
-    "verified": false,
+    "explanation": "VA = 10000 \u00d7 0.002 = 20. PF = 4 / 20 = 0.20 = 20%. Watts divided by voltage, skipping the current, is not power factor. This is the same W/VI definition used on a power-factor set. The item is the arithmetic. A real insulation specimen at 20% power factor would be in very bad shape.",
+    "reference": "Engineering fundamentals (insulation power factor = W / (V \u00d7 I))",
+    "verified": true,
     "kb": "field-methods.md#pf-method"
   },
   {
@@ -951,8 +951,8 @@
     ],
     "answer": 0,
     "explanation": "6 / 240 \u00d7 100 = 2.5%. The volts are not already a percent.",
-    "reference": "Voltage-drop percent",
-    "verified": false,
+    "reference": "Engineering fundamentals (voltage-drop percent)",
+    "verified": true,
     "kb": "math.md#kvl"
   },
   {
@@ -969,8 +969,8 @@
     ],
     "answer": 1,
     "explanation": "Ratio is 400. 500 / 400 = 1.25 A. Five amperes would be 2000 A primary.",
-    "reference": "CT ratio",
-    "verified": false,
+    "reference": "Engineering fundamentals (CT ratio)",
+    "verified": true,
     "kb": "math.md#ct-ratio"
   },
   {
@@ -987,8 +987,8 @@
     ],
     "answer": 1,
     "explanation": "25 mH is 0.025 H. 2\u03c0 \u00d7 60 \u00d7 0.025 \u2248 9.4 \u03a9. The formula is on the sheet; the milli conversion is not.",
-    "reference": "XL = 2\u03c0fL",
-    "verified": false,
+    "reference": "Engineering fundamentals (XL = 2\u03c0fL)",
+    "verified": true,
     "kb": "math.md#xl"
   },
   {
@@ -1113,8 +1113,8 @@
     ],
     "answer": 1,
     "explanation": "0.7 \u00d7 10 = 7 s, and the high end is the dial, 10 s. A time of 6 s is fast; 12 s is slow. This arithmetic is only valid at the multiple where the manufacturer defined the dial.",
-    "reference": "Per manufacturer instructions where long-time time is defined at 6\u00d7Ir with a +0/\u221230% tolerance. ATS-2025 7.6.1.2 uses the published band when it exists.",
-    "verified": false,
+    "reference": "Engineering fundamentals; manufacturer published band. ANSI/NETA ATS-2025 7.6.1.2",
+    "verified": true,
     "kb": "field-methods.md#trip-window"
   },
   {
@@ -1158,7 +1158,7 @@
     "level": "II",
     "topic": "meters-math",
     "domain": "theory",
-    "question": "IEEE C57.104-2019 clause 6.2.1 says acetylene becomes an important product:",
+    "question": "In the text that opens IEEE C57.104-2019 clause 4, acetylene becomes an important product:",
     "choices": [
       "At ordinary service temperature",
       "Only as the fault temperature nears 1000 \u00b0C",
@@ -1166,8 +1166,8 @@
       "Only in the nitrogen blanket"
     ],
     "answer": 1,
-    "explanation": "Acetylene is the very-high-temperature gas, from arcing in oil or paper. Methane, ethane, and ethylene show up at lower heating. A trace story that never reaches that temperature is not an acetylene story.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1",
+    "explanation": "Acetylene shows up in a meaningful amount only as the fault temperature gets up near 1000 \u00b0C. That point is in the text that opens clause 4. Methane, ethane, and ethylene show up with lower heating. A story that never reaches that temperature is not an acetylene story.",
+    "reference": "ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, opening of clause 4",
     "verified": true,
     "kb": "field-methods.md#dga"
   },

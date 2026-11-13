@@ -85,7 +85,7 @@
     ],
     "answer": 1,
     "explanation": "Compare similar parts under similar load, or compare with ambient. Record the temperature difference and what it was compared to. A cover that does not have to come off stays on. These chapters do not give a degrees-of-rise limit, so the bank does not invent one.",
-    "reference": "NFPA 70B-2026, 7.4",
+    "reference": "NFPA 70B-2026, 7.4.1 through 7.4.4",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },

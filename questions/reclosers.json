@@ -76,15 +76,15 @@
     "level": "II",
     "topic": "reclosers",
     "domain": "component",
-    "question": "ATS does not tell you the insulating medium inside a 27 kV recloser. What it does require is:",
+    "question": "The insulating medium inside a 27 kV recloser is determined by:",
     "choices": [
-      "Assume vacuum bottles under oil for every unit at that voltage",
-      "Use the nameplate and the procedure for the recloser you actually have",
-      "Skip insulation tests above 15 kV",
-      "Apply the low-voltage breaker instantaneous table"
+      "Assuming vacuum bottles under oil for every unit at that voltage",
+      "The nameplate, with the test procedure for that construction",
+      "Skipping insulation tests above 15 kV",
+      "The low-voltage breaker instantaneous table"
     ],
     "answer": 1,
-    "explanation": "Oil units are sampled to Table 100.4. Vacuum units follow the vacuum screen when the manufacturer is silent. The construction is whatever the nameplate says. A recalled medium is not a NETA rule.",
+    "explanation": "Oil reclosers are sampled to Table 100.4. Vacuum units follow the vacuum checks when the manufacturer is silent. The construction is whatever the nameplate says. Do not assume one medium for every 27 kV unit.",
     "reference": "ANSI/NETA ATS-2025 7.24.1",
     "verified": true,
     "kb": "apparatus.md#reclosers"

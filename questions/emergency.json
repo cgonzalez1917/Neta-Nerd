@@ -120,7 +120,7 @@
       "In place of the protective-shutdown tests"
     ],
     "answer": 0,
-    "explanation": "The performance test follows NFPA 110. This bank does not have NFPA 110, so no runtime or load step is taken from that standard. The insulation-resistance test and the shutdown tests are separate ATS lines.",
+    "explanation": "The performance test follows NFPA 110. The insulation-resistance test and the protective-shutdown tests are separate lines in the same section. Do not replace those with the performance run, or the other way around.",
     "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110",
     "verified": true,
     "kb": "apparatus.md#emergency"
@@ -156,8 +156,8 @@
       "A transfer switch"
     ],
     "answer": 0,
-    "explanation": "The storage-system chapter starts above 3.6 MJ, equal to 1 kWh. Stationary standby batteries stay in chapter 36 even when someone is tempted to call the rack a storage system. Performance for the storage system, when the manufacturer is silent, follows that chapter\u2019s interval table, not a cell-voltage limit invented here.",
-    "reference": "NFPA 70B-2026, 32.1 and Table 32.2",
+    "explanation": "The storage-system chapter starts above 3.6 MJ, equal to 1 kWh. That energy number does not by itself pull every standby battery into the chapter. Section 32.1.2 lists the applications that stay outside it. When the manufacturer is silent, performance for a system that is in the chapter follows that chapter's interval table.",
+    "reference": "NFPA 70B-2026, 32.1.1 through 32.1.2 and 36.1",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -175,7 +175,7 @@
     ],
     "answer": 0,
     "explanation": "The storage-system table includes a thermal survey, ultrasonic inspection, cable insulation resistance, connection resistance, a performance test, and a review of the battery-management system. Specific gravity and two-decimal float voltage are the stationary-standby chapter. A system at or below 1 kWh is not pulled into chapter 32 by the title alone.",
-    "reference": "NFPA 70B-2026, Table 32.3.5 and chapter 36",
+    "reference": "NFPA 70B-2026, Table 32.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -193,7 +193,7 @@
     ],
     "answer": 0,
     "explanation": "Visual inspection of transfer switches is 12, 6, and 3 months. The other transfer-switch tasks, when the manufacturer is silent, are 60, 36, and 12 months. Do not put the visual check on the grounding electrical-test row.",
-    "reference": "NFPA 70B-2026, chapter 39",
+    "reference": "NFPA 70B-2026, 39.2 and Table 9.3.2",
     "verified": true,
     "kb": "apparatus.md#emergency"
   },
@@ -224,12 +224,12 @@
     "choices": [
       "Operating the transfer under load",
       "Proving the bypass or isolation mechanism when the switch has one",
-      "Timing the transfer sequence",
+      "Functional transfer testing",
       "A dissolved-gas analysis of the switch"
     ],
     "answer": 3,
-    "explanation": "Insulation resistance, protective devices, operators, the transfer sequence, bypass or isolation, and operation under load are the electrical list. Dissolved gas is a liquid-filled transformer test. The visual interval for the switch is still 12, 6, and 3 months, and no transfer-time limit is printed.",
-    "reference": "NFPA 70B-2026, Table 39.3.5",
+    "explanation": "The electrical list includes insulation resistance, protective devices, operators, functional transfer testing, bypass or isolation, and operation under load. Dissolved gas is a liquid-filled transformer test, not a transfer-switch test.",
+    "reference": "NFPA 70B-2026, Tables 39.3.5 and 39.3.1",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -265,7 +265,7 @@
     ],
     "answer": 0,
     "explanation": "Manual operation, bolted connections, and interlocks are the servicing checks. The electrical table then calls for insulation resistance, protective devices, operators, the transfer sequence, bypass or isolation, and operation under load. Visual inspection is still 12, 6, and 3 months. No operating-time limit is printed.",
-    "reference": "NFPA 70B-2026, 39.3.4 and Table 39.3.5",
+    "reference": "NFPA 70B-2026, Tables 39.3.4 and 39.3.5",
     "verified": true,
     "kb": "apparatus.md#emergency"
   }

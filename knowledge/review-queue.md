@@ -1,10 +1,12 @@
 # Review queue
 
-Level II and Level III questions for a human pass. The bank flag `verified: true` means the deciding fact was checked in the owner's ATS-2025, MTS-2023, NFPA 70E-2024 text, or OSHA 3120. `verified: false` means the item is original teaching (math, scheme logic, or field practice) and still needs a reviewer eye.
+Level II and Level III questions for a human pass. The bank flag `verified: true` means the deciding fact was checked in the owner's ATS-2025, MTS-2023, NFPA 70E-2024, NFPA 70B-2026, or OSHA 3120 text. `verified: false` means the item is original teaching (math, scheme logic, or field practice) and still needs a reviewer eye.
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 525 (Level II 339, Level III 186).
+Count: 461 (Level II 302, Level III 159).
+
+A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. Items that still need a source are under [Needs source](#needs-source). The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK. ir-007 (ETT) and math-023 (Level I) were in the first pass and are noted at the end, because this queue is Level II and Level III only.
 
 ## batt-001 (II / component) {#batt-001}
 
@@ -112,7 +114,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:brkr-006 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Trip-free operation means:
 
@@ -121,9 +123,9 @@ Trip-free operation means:
 - 2. The closing spring will recharge while the trip coil is energized
 - 3. Antipump has been defeated on purpose
 
-**Citation:** ANSI/NETA ATS-2025 7.6.1.2.B.8 (verify trip-free and antipump); mechanism behavior
+**Citation:** ANSI/NETA ATS-2025 7.6.1.2.B.8; mechanism behavior
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## cable-001 (II / component) {#cable-001}
 
@@ -163,7 +165,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:cable-003 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Charging current of a cable is proportional to frequency. Moving a withstand from 60 Hz to 0.1 Hz changes that current by about:
 
@@ -172,9 +174,9 @@ Charging current of a cable is proportional to frequency. Moving a withstand fro
 - 2. 600 times **← answer**
 - 3. It does not change
 
-**Citation:** Capacitive charging current; IEEE 400.2 / ATS Table 100.6.3 is the voltage table
+**Citation:** Engineering fundamentals (I = 2πfCV); ANSI/NETA ATS-2025 Table 100.6.3
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ct-001 (II / component) {#ct-001}
 
@@ -231,7 +233,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:dlro-002 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Why does a DLRO use a Kelvin (four-wire) connection?
 
@@ -240,9 +242,9 @@ Why does a DLRO use a Kelvin (four-wire) connection?
 - 2. So the meter reads megohms instead of microhms
 - 3. So all three phases can be tested at once
 
-**Citation:** Kelvin measurement practice; ATS contact-resistance tests assume a low-resistance ohmmeter
+**Citation:** Engineering fundamentals (four-wire Kelvin measurement); ANSI/NETA ATS-2025 7.6.1.2.B.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## dlro-003 (II / component) {#dlro-003}
 
@@ -274,9 +276,9 @@ A 200-foot low-voltage busway has no manufacturer insulation-resistance value. A
 - 2. 0.5 MΩ **← answer**
 - 3. 200 MΩ
 
-**Citation:** ANSI/NETA ATS-2025 7.4.D.2.a
+**Citation:** ANSI/NETA ATS-2025 7.4.D.2.a (minimum megohms = 100 / length in feet)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## gnd-001 (II / component) {#gnd-001}
 
@@ -395,7 +397,7 @@ You want to compare a switchgear insulation reading with Table 100.1. What has t
 
 **Citation:** ANSI/NETA ATS-2025 Table 100.1 note 2; Table 100.14.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ir-005 (II / component) {#ir-005}
 
@@ -469,7 +471,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-004 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A CT primary is carrying load and someone opens the secondary at the terminal block. The hazard is:
 
@@ -478,9 +480,9 @@ A CT primary is carrying load and someone opens the secondary at the terminal bl
 - 2. Only the revenue meter is affected; the leads stay at a few volts
 - 3. The CT automatically shorts itself inside the head
 
-**Citation:** CT secondary practice; ANSI/NETA ATS-2025 7.10.1.B.9 (one grounding point). Open-circuit voltage is standard CT behavior.
+**Citation:** Engineering fundamentals (open CT secondary); ANSI/NETA ATS-2025 7.10.1.B.9
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## thermo-001 (II / component) {#thermo-001}
 
@@ -724,24 +726,24 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:brkr-010 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Main-tie-main, both mains closed, tie open, loads split. An operator closes the tie and then opens main A. What did that sequence do to the bus that had been fed by main A?
 
 - 0. It de-energized that bus
 - 1. It kept that bus energized from main B through the tie, provided the tie closed first and stayed closed **← answer**
-- 2. It paralleled the sources with no further checks
+- 2. It de-energized the main B bus
 - 3. It automatically transfers the ground relay to the other main
 
-**Citation:** Elementary main-tie-main operation; confirm interlocks on the actual schematic before operating
+**Citation:** Engineering fundamentals (main-tie-main operation); ANSI/NETA ATS-2025 Section 8
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## relay-005 (II / systems) {#relay-005}
 
 <!-- q:relay-005 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 You need to see whether an 86 contact is in the breaker close circuit. Which drawing actually shows the coil and the contact?
 
@@ -750,9 +752,9 @@ You need to see whether an 86 contact is in the breaker close circuit. Which dra
 - 2. The site plot plan
 - 3. The oil lab report
 
-**Citation:** Drawing practice; ATS 7.9.1 functional tests still require the contact to perform its scheme job
+**Citation:** Engineering fundamentals (drawing practice); ANSI/NETA ATS-2025 7.9.1.B.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-006 (II / systems) {#relay-006}
 
@@ -775,24 +777,24 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-001 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-A load draws 200 kW at 0.80 power factor. The formula sheet gives kW = kVA × PF. It does not print the kvar identity. What is the reactive power?
+A load draws 200 kW at 0.80 power factor. The formula sheet gives power factor as kW/kVA. It does not print the kvar identity. What is the reactive power?
 
 - 0. 50 kvar
 - 1. 160 kvar
 - 2. 150 kvar **← answer**
 - 3. 250 kvar
 
-**Citation:** Power triangle; NETA formula sheet does not print kvar = √(kVA² − kW²). See knowledge/math.md.
+**Citation:** Engineering fundamentals (power triangle)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-002 (II / theory) {#math-002}
 
 <!-- q:math-002 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 ELI the ICE man is not on the formula sheet. In a pure inductor, the current:
 
@@ -801,15 +803,15 @@ ELI the ICE man is not on the formula sheet. In a pure inductor, the current:
 - 2. Is in phase with the voltage
 - 3. Is zero at 60 Hz
 
-**Citation:** AC circuit convention (ELI/ICE), not printed on the NETA formula sheet
+**Citation:** Engineering fundamentals (inductor current lags voltage by 90°)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-003 (II / theory) {#math-003}
 
 <!-- q:math-003 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 XL = 2πfL is on the formula sheet. L for a 10 mH coil must be entered in henries. At 60 Hz, XL is about:
 
@@ -818,15 +820,15 @@ XL = 2πfL is on the formula sheet. L for a 10 mH coil must be entered in henrie
 - 2. 377 Ω
 - 3. 3770 Ω
 
-**Citation:** XL = 2πfL with unit conversion; conversion is not on the formula sheet
+**Citation:** Engineering fundamentals (XL = 2πfL)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-004 (II / theory) {#math-004}
 
 <!-- q:math-004 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Two 12 Ω resistors are in parallel. The parallel formula is not on the NETA formula sheet. The combination is:
 
@@ -835,15 +837,15 @@ Two 12 Ω resistors are in parallel. The parallel formula is not on the NETA for
 - 2. 6 Ω **← answer**
 - 3. 0 Ω
 
-**Citation:** Parallel resistance; not on the NETA formula sheet
+**Citation:** Engineering fundamentals (parallel resistance)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-005 (II / theory) {#math-005}
 
 <!-- q:math-005 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 480 V source feeds 30 Ω in series with 10 Ω. Kirchhoff's voltage law is not printed as a reminder. Voltage across the 10 Ω resistor is:
 
@@ -852,15 +854,15 @@ A 480 V source feeds 30 Ω in series with 10 Ω. Kirchhoff's voltage law is not 
 - 2. 360 V
 - 3. 480 V
 
-**Citation:** Series circuit and KVL
+**Citation:** Engineering fundamentals (series circuit)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-006 (II / theory) {#math-006}
 
 <!-- q:math-006 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 600:5 CT carries 240 A primary. Secondary current is:
 
@@ -869,32 +871,32 @@ A 600:5 CT carries 240 A primary. Secondary current is:
 - 2. 0.5 A
 - 3. 24 A
 
-**Citation:** CT ratio arithmetic
+**Citation:** Engineering fundamentals (CT ratio)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-007 (II / theory) {#math-007}
 
 <!-- q:math-007 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-Calculated ratio is 28.75. The TTR reads 28.95. Percent deviation from calculated, which the formula sheet does not print, is about:
+Calculated ratio is 28.75. The TTR reads 28.95. Percent accuracy, (actual − specified) / specified × 100, is about:
 
 - 0. 0.20%
 - 1. 0.70% **← answer**
 - 2. 2.0%
 - 3. 7.0%
 
-**Citation:** Turns-ratio percent deviation
+**Citation:** NETA Certification Exam Formulae Sheet (NETA Exam Preparation page, March 2020), percent accuracy; ANSI/NETA ATS-2025 7.2.2.D.3
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-008 (II / theory) {#math-008}
 
 <!-- q:math-008 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A contact reads 85 µΩ. In ohms, for a calculator that was not handed the prefix, that is:
 
@@ -903,15 +905,15 @@ A contact reads 85 µΩ. In ohms, for a calculator that was not handed the prefi
 - 2. 0.000085 Ω **← answer**
 - 3. 8.5 Ω
 
-**Citation:** SI prefix conversion
+**Citation:** Engineering fundamentals (SI prefixes)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-009 (II / theory) {#math-009}
 
 <!-- q:math-009 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A copper winding measures 0.420 Ω at 25 °C. Corrected to 75 °C with the constant 234.5, which is not on the formula sheet, the resistance is about:
 
@@ -920,15 +922,15 @@ A copper winding measures 0.420 Ω at 25 °C. Corrected to 75 °C with the const
 - 2. 0.501 Ω **← answer**
 - 3. 1.26 Ω
 
-**Citation:** Copper winding temperature correction, constant 234.5
+**Citation:** Engineering fundamentals (copper temperature correction)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-010 (II / theory) {#math-010}
 
 <!-- q:math-010 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 The exam calculator is a TI-30XS. You need cos of 60 degrees. Which setup makes cos(60) equal 0.5?
 
@@ -937,15 +939,15 @@ The exam calculator is a TI-30XS. You need cos of 60 degrees. Which setup makes 
 - 2. Scientific notation forced on
 - 3. Fix 0, so only integers display
 
-**Citation:** TestGuy study guide exam-format note (TI-30XS); cosine of 60°
+**Citation:** Engineering fundamentals (cosine of 60° in degree mode)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-011 (II / theory) {#math-011}
 
 <!-- q:math-011 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 XC = 1/(2πfC) is on the formula sheet. C must be in farads. A 10 µF capacitor at 60 Hz has XC about:
 
@@ -954,15 +956,15 @@ XC = 1/(2πfC) is on the formula sheet. C must be in farads. A 10 µF capacitor 
 - 2. 265 Ω **← answer**
 - 3. 2650 Ω
 
-**Citation:** XC with microfarad conversion
+**Citation:** Engineering fundamentals (XC = 1/(2πfC))
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-012 (II / theory) {#math-012}
 
 <!-- q:math-012 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 The sheet writes Z with (XL − XC), not (XL + XC). R = 3 Ω, XL = 10 Ω, XC = 4 Ω. Z is about:
 
@@ -971,26 +973,9 @@ The sheet writes Z with (XL − XC), not (XL + XC). R = 3 Ω, XL = 10 Ω, XC = 4
 - 2. 13 Ω
 - 3. 17 Ω
 
-**Citation:** Z = √(R² + (XL − XC)²)
+**Citation:** Engineering fundamentals (impedance)
 
-Reviewer: VERIFIED or FIX
-
-## math-013 (II / theory) {#math-013}
-
-<!-- q:math-013 -->
-
-**Bank verified flag:** false
-
-Which of these is on the NETA formula sheet, as the TestGuy study guide describes that sheet, so you should not re-derive it from memory?
-
-- 0. 1 hp = 746 W **← answer**
-- 1. Copper constant 234.5
-- 2. PI = 10 min / 1 min
-- 3. °C rise × 1.8 = °F rise
-
-**Citation:** TestGuy study guide summary of the NETA formula sheet (about 2017)
-
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-014 (II / theory) {#math-014}
 
@@ -1013,7 +998,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-015 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A balanced 480 V three-phase load draws 100 A at unity power factor. Using √3 × V × I, power is about:
 
@@ -1022,9 +1007,9 @@ A balanced 480 V three-phase load draws 100 A at unity power factor. Using √3 
 - 2. 144 kW
 - 3. 28.8 kW
 
-**Citation:** Three-phase power, S = √3 × VLL × IL
+**Citation:** Engineering fundamentals (three-phase power, S = √3 × V × I)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-007 (III / component) {#brkr-007}
 
@@ -1177,7 +1162,7 @@ You are correcting a stator insulation reading for comparison with Table 100.11.
 
 **Citation:** ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## xfmr-006 (III / component) {#xfmr-006}
 
@@ -1336,24 +1321,24 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:brkr-011 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-A Kirk-key style interlock traps the key so the grounded switch and the live switch cannot both be open to the bus. Someone cuts a second key to the same code. The scheme:
+A key interlock between a grounding switch and the live switch keeps the two from being closed at the same time, so the grounding switch cannot close onto a live bus. Someone cuts a second key to the same code. The scheme:
 
 - 0. Still enforces the sequence, because the lock manufacturer registered the code
 - 1. Is defeated; a spare identical key lets both locks be operated **← answer**
 - 2. Becomes stronger, because two keys provide redundancy
 - 3. Only fails if the key is made of aluminum
 
-**Citation:** Key-interlock practice
+**Citation:** Engineering fundamentals (key-interlock practice)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## brkr-012 (III / systems) {#brkr-012}
 
 <!-- q:brkr-012 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Zone-selective interlocking is listed in ATS 7.6.1.2.B.8 as something you verify. In the usual scheme, a restraint signal from the downstream breaker causes the upstream breaker to:
 
@@ -1362,9 +1347,9 @@ Zone-selective interlocking is listed in ATS 7.6.1.2.B.8 as something you verify
 - 2. Block all ground-fault protection permanently
 - 3. Raise its sensor rating to the frame size
 
-**Citation:** ANSI/NETA ATS-2025 7.6.1.2.B.8; zone-interlock scheme logic
+**Citation:** ANSI/NETA ATS-2025 7.6.1.2.B.8; Eaton Digitrip 1150+ instruction leaflet IL70C1036H06, zone interlocking
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## gnd-004 (III / systems) {#gnd-004}
 
@@ -1387,7 +1372,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-007 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 51 contact energizes an 86 lockout, and an 86 contact energizes the breaker trip coil. In that path, what operates first?
 
@@ -1396,15 +1381,15 @@ A 51 contact energizes an 86 lockout, and an 86 contact energizes the breaker tr
 - 2. The 51 element **← answer**
 - 3. The breaker springs, before any relay
 
-**Citation:** Control-schematic sequence; ATS 7.9.1 includes 51 pickup and 86 lockout functional tests
+**Citation:** Scheme logic; ANSI/NETA ATS-2025 7.9.1.B.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-008 (III / systems) {#relay-008}
 
 <!-- q:relay-008 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 An 86 b contact is in the close-permissive string. The lockout trips (coil picked up). That b contact:
 
@@ -1413,32 +1398,32 @@ An 86 b contact is in the close-permissive string. The lockout trips (coil picke
 - 2. Does not change, because b contacts are not used in trip circuits
 - 3. Becomes an a contact automatically
 
-**Citation:** Relay contact convention (a/b); scheme logic
+**Citation:** Engineering fundamentals (a and b contacts); ANSI/NETA ATS-2025 7.9.1.B.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-016 (III / theory) {#math-016}
 
 <!-- q:math-016 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 1500 kVA, 480 V transformer has 5.75% impedance. Ignoring cables and assuming a stiff source, symmetrical secondary fault current is about:
 
 - 0. 1.80 kA
 - 1. 10.4 kA
 - 2. 31.4 kA **← answer**
-- 3. 86 kA
+- 3. 54.3 kA
 
-**Citation:** Per-unit transformer short-circuit estimate; percent Z is nameplate data
+**Citation:** Engineering fundamentals (per-unit short-circuit estimate)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## math-017 (III / theory) {#math-017}
 
 <!-- q:math-017 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Table 100.18 is written as a temperature difference. A 10 °C rise between two similar lugs is what rise in Fahrenheit?
 
@@ -1447,32 +1432,32 @@ Table 100.18 is written as a temperature difference. A 10 °C rise between two s
 - 2. 42 °F
 - 3. 50 °F
 
-**Citation:** Temperature-difference conversion; ANSI/NETA ATS-2025 Table 100.18 is in °C
+**Citation:** Engineering fundamentals (temperature-difference conversion); ANSI/NETA ATS-2025 Table 100.18
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-018 (III / theory) {#math-018}
 
 <!-- q:math-018 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-Three equal 100 µF capacitors are connected in wye. A capacitance measurement from phase A to phase B should read about:
+Three equal 100 µF capacitors are connected in wye, with the neutral isolated. A capacitance measurement from phase A to phase B should read about:
 
 - 0. 100 µF
 - 1. 50 µF **← answer**
 - 2. 300 µF
 - 3. 173 µF
 
-**Citation:** Series capacitance on a wye capacitor bank
+**Citation:** Engineering fundamentals (series capacitance on a wye bank)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-019 (III / theory) {#math-019}
 
 <!-- q:math-019 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 100 kW load is at 0.60 lagging power factor. Reactive power is about:
 
@@ -1481,15 +1466,15 @@ A 100 kW load is at 0.60 lagging power factor. Reactive power is about:
 - 2. 133 kvar **← answer**
 - 3. 167 kvar
 
-**Citation:** Power triangle from PF when the angle is not given
+**Citation:** Engineering fundamentals (power triangle)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-020 (III / theory) {#math-020}
 
 <!-- q:math-020 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Two 20 mH coils. Series inductance and parallel inductance are:
 
@@ -1498,15 +1483,15 @@ Two 20 mH coils. Series inductance and parallel inductance are:
 - 2. 20 mH either way
 - 3. 400 mH series, 20 mH parallel
 
-**Citation:** Series and parallel inductance
+**Citation:** Engineering fundamentals (series and parallel inductance)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-021 (III / theory) {#math-021}
 
 <!-- q:math-021 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A nameplate says 5.75% impedance. As a per-unit number that is:
 
@@ -1515,9 +1500,9 @@ A nameplate says 5.75% impedance. As a per-unit number that is:
 - 2. 0.0575 pu **← answer**
 - 3. 57.5 pu
 
-**Citation:** Percent impedance to per-unit
+**Citation:** Engineering fundamentals (percent impedance to per-unit)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-022 (III / theory) {#math-022}
 
@@ -1617,9 +1602,9 @@ High-capacitance elements, before the associated equipment is touched, are to be
 - 2. Only tagged, because a capacitor cannot reclose a breaker
 - 3. Tested with a proximity pen and then ignored
 
-**Citation:** NFPA 70E-2024 120.5(B)(2)
+**Citation:** NFPA 70E-2024 120.5(B)(2) (stored energy)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## safety-022 (II / safety) {#safety-022}
 
@@ -1693,7 +1678,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-025 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 20 A single-phase load has 0.25 Ω of conductor each way. The round-trip voltage drop is:
 
@@ -1702,15 +1687,15 @@ A 20 A single-phase load has 0.25 Ω of conductor each way. The round-trip volta
 - 2. 20 V
 - 3. 0.25 V
 
-**Citation:** DC and single-phase voltage drop, I×R on both ways. Not on the NETA formula sheet as a finished recipe.
+**Citation:** Engineering fundamentals (round-trip voltage drop)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-026 (II / theory) {#math-026}
 
 <!-- q:math-026 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A CT secondary carries 5 A through 0.20 Ω of leads and devices. The burden is:
 
@@ -1719,15 +1704,15 @@ A CT secondary carries 5 A through 0.20 Ω of leads and devices. The burden is:
 - 2. 25 VA
 - 3. 0.04 VA
 
-**Citation:** CT burden, S = I²R
+**Citation:** Engineering fundamentals (CT burden, S = I²R)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## math-027 (II / theory) {#math-027}
 
 <!-- q:math-027 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 XL of a 50 mH coil at 60 Hz is about:
 
@@ -1736,15 +1721,15 @@ XL of a 50 mH coil at 60 Hz is about:
 - 2. 188 Ω
 - 3. 0.19 Ω
 
-**Citation:** XL = 2πfL
+**Citation:** Engineering fundamentals (XL = 2πfL)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-028 (II / theory) {#math-028}
 
 <!-- q:math-028 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 XC of a 2 µF capacitor at 60 Hz is about:
 
@@ -1753,15 +1738,15 @@ XC of a 2 µF capacitor at 60 Hz is about:
 - 2. 13.3 Ω
 - 3. 5310 Ω
 
-**Citation:** XC = 1/(2πfC)
+**Citation:** Engineering fundamentals (XC = 1/(2πfC))
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-029 (II / theory) {#math-029}
 
 <!-- q:math-029 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A load is 36 kW at 0.80 power factor. Reactive power is:
 
@@ -1770,9 +1755,9 @@ A load is 36 kW at 0.80 power factor. Reactive power is:
 - 2. 36 kvar
 - 3. 80 kvar
 
-**Citation:** Power triangle
+**Citation:** Engineering fundamentals (power triangle)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-030 (II / theory) {#math-030}
 
@@ -1812,7 +1797,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-032 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 12 V drop on a 480 V circuit is what percent?
 
@@ -1821,15 +1806,15 @@ A 12 V drop on a 480 V circuit is what percent?
 - 2. 4.0%
 - 3. 0.25%
 
-**Citation:** Voltage-drop percent
+**Citation:** Engineering fundamentals (voltage-drop percent)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-033 (II / theory) {#math-033}
 
 <!-- q:math-033 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 400:5 CT sees 80 A primary. Secondary current is:
 
@@ -1838,15 +1823,15 @@ A 400:5 CT sees 80 A primary. Secondary current is:
 - 2. 16 A
 - 3. 0.2 A
 
-**Citation:** CT ratio
+**Citation:** Engineering fundamentals (CT ratio)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-034 (II / theory) {#math-034}
 
 <!-- q:math-034 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 6 Ω in parallel with 3 Ω is:
 
@@ -1855,15 +1840,15 @@ Reviewer: VERIFIED or FIX
 - 2. 4.5 Ω
 - 3. 18 Ω
 
-**Citation:** Parallel resistance
+**Citation:** Engineering fundamentals (parallel resistance)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-035 (II / theory) {#math-035}
 
 <!-- q:math-035 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 90 kW on a 100 kVA feeder is what power factor?
 
@@ -1872,15 +1857,15 @@ Reviewer: VERIFIED or FIX
 - 2. 0.09
 - 3. 90
 
-**Citation:** PF = P/S
+**Citation:** Engineering fundamentals (power factor)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-036 (II / theory) {#math-036}
 
 <!-- q:math-036 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 An aluminum winding measures 1.00 Ω at 20 °C. Using 225 as the aluminum constant, the resistance at 75 °C is about:
 
@@ -1889,15 +1874,15 @@ An aluminum winding measures 1.00 Ω at 20 °C. Using 225 as the aluminum consta
 - 2. 0.82 Ω
 - 3. 2.25 Ω
 
-**Citation:** Aluminum temperature correction, constant 225
+**Citation:** Engineering fundamentals (aluminum temperature correction)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-037 (II / theory) {#math-037}
 
 <!-- q:math-037 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Three-phase current for a 75 kVA load at 208 V is about:
 
@@ -1906,15 +1891,15 @@ Three-phase current for a 75 kVA load at 208 V is about:
 - 2. 125 A
 - 3. 75 A
 
-**Citation:** I = S / (√3 × VLL)
+**Citation:** Engineering fundamentals (three-phase current)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-038 (II / theory) {#math-038}
 
 <!-- q:math-038 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 15 °C rise is how many Fahrenheit degrees of rise?
 
@@ -1923,15 +1908,15 @@ A 15 °C rise is how many Fahrenheit degrees of rise?
 - 2. 59 °F
 - 3. 47 °F
 
-**Citation:** Temperature-difference conversion
+**Citation:** Engineering fundamentals (temperature-difference conversion); ANSI/NETA ATS-2025 Table 100.18
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-039 (II / theory) {#math-039}
 
 <!-- q:math-039 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Two 10 Ω resistors in series on a 120 V source. Current is:
 
@@ -1940,9 +1925,9 @@ Two 10 Ω resistors in series on a 120 V source. Current is:
 - 2. 10 A
 - 3. 120 A
 
-**Citation:** Ohm's law and series resistance
+**Citation:** Engineering fundamentals (Ohm's law)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## batt-002 (II / component) {#batt-002}
 
@@ -2084,7 +2069,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:gnd-005 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A fall-of-potential test is still sloping at every probe position. The useful next step is:
 
@@ -2093,15 +2078,15 @@ A fall-of-potential test is still sloping at every probe position. The useful ne
 - 2. Switch to a megohmmeter at 1000 V
 - 3. Report 25 Ω because that is the NEC cap
 
-**Citation:** ANSI/NETA ATS-2025 7.13.B.2; IEEE 81 method
+**Citation:** ANSI/NETA ATS-2025 7.13.B.2; engineering fundamentals (fall-of-potential)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## gnd-006 (II / component) {#gnd-006}
 
 <!-- q:gnd-006 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A clamp-on ground tester on a single rod whose bonding has been lifted will:
 
@@ -2110,9 +2095,9 @@ A clamp-on ground tester on a single rod whose bonding has been lifted will:
 - 2. Match a fall-of-potential test within 1%
 - 3. Satisfy ATS 7.13 by itself
 
-**Citation:** Clamp-on ground-tester limitation; ATS 7.13.B.2 names fall-of-potential or an IEEE 81 alternative
+**Citation:** Engineering fundamentals (clamp-on ground tester); ANSI/NETA ATS-2025 7.13.B.2 and 7.13.D.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## cable-007 (II / component) {#cable-007}
 
@@ -2356,7 +2341,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:mot-002 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Motor branch-circuit wires are sized from:
 
@@ -2365,9 +2350,9 @@ Motor branch-circuit wires are sized from:
 - 2. The overload relay setting alone
 - 3. The service factor times 50 ft
 
-**Citation:** NEC 430.6(A) and 430.22
+**Citation:** NEC 2023 430.6(A)(1) and 430.22
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## emg-001 (II / component) {#emg-001}
 
@@ -2526,7 +2511,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-012 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Restoring a relay test switch after injection, the safe order is:
 
@@ -2535,15 +2520,15 @@ Restoring a relay test switch after injection, the safe order is:
 - 2. Leave the CT shorting blade open as a spare
 - 3. Open the trip poles and go home
 
-**Citation:** Test-switch practice for CT and trip circuits; never open a loaded CT secondary. ATS 7.10.1 requires the secondary to stay a complete circuit.
+**Citation:** ABB FT-1/FT-14 Flexitest product guide 1VAC394641-PG Rev K; engineering fundamentals; ANSI/NETA ATS-2025 7.10.1.A.7
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## brkr-013 (II / systems) {#brkr-013}
 
 <!-- q:brkr-013 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A single-pole primary shot on a four-pole breaker with residual ground fault will often:
 
@@ -2552,9 +2537,9 @@ A single-pole primary shot on a four-pole breaker with residual ground fault wil
 - 2. Bypass the sensors
 - 3. Read as a healthy three-phase load
 
-**Citation:** Per manufacturer data for residual ground-fault trip units; ATS 7.6.1.2 still requires the ground function to be tested on purpose
+**Citation:** Eaton Digitrip 1150+ instruction leaflet IL70C1036H06, Section 5; ANSI/NETA ATS-2025 7.6.1.2.B.5
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## safety-026 (III / safety) {#safety-026}
 
@@ -2645,7 +2630,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-040 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A trip unit defines long-time delay at 6×Ir with a published tolerance of +0/−30%. The dial is 4 s. At 6×Ir, which measured time is inside the window?
 
@@ -2654,15 +2639,15 @@ A trip unit defines long-time delay at 6×Ir with a published tolerance of +0/�
 - 2. 4.8 s
 - 3. 8.0 s
 
-**Citation:** Per manufacturer data: long-time delay defined at 6×Ir, tolerance +0/−30%. ATS-2025 7.6.1.2 uses the published tolerance when it exists.
+**Citation:** Engineering fundamentals; manufacturer published band. ANSI/NETA ATS-2025 7.6.1.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-041 (III / theory) {#math-041}
 
 <!-- q:math-041 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A manual says long-time pickup is 110% of Ir, ±5%. Ir is 500 A. Which pickup current fails?
 
@@ -2671,15 +2656,15 @@ A manual says long-time pickup is 110% of Ir, ±5%. Ir is 500 A. Which pickup cu
 - 2. 600 A **← answer**
 - 3. 530 A
 
-**Citation:** Per manufacturer data (long-time pickup 110% of Ir, ±5%). Not a NETA table.
+**Citation:** Engineering fundamentals; per manufacturer data
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-042 (III / theory) {#math-042}
 
 <!-- q:math-042 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Nameplate turns ratio is 240 (1200:5). The set measures 241.2. Percent error is about:
 
@@ -2688,15 +2673,15 @@ Nameplate turns ratio is 240 (1200:5). The set measures 241.2. Percent error is 
 - 2. +1.2 turns
 - 3. +5%
 
-**Citation:** Ratio error = (measured − nameplate) / nameplate
+**Citation:** Engineering fundamentals (ratio error); ANSI/NETA ATS-2025 7.10.1.D.3
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-043 (III / theory) {#math-043}
 
 <!-- q:math-043 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 You want no more than 3% drop on a 480 V circuit. The largest drop you can accept is about:
 
@@ -2705,9 +2690,9 @@ You want no more than 3% drop on a 480 V circuit. The largest drop you can accep
 - 2. 48 V
 - 3. 144 V
 
-**Citation:** Voltage-drop percent
+**Citation:** Engineering fundamentals (voltage-drop percent)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-044 (III / theory) {#math-044}
 
@@ -2730,7 +2715,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-045 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Long-time delay is defined at 6×Ir. Someone scales tr to 12×Ir with (6/12)² and fails the breaker on that number. What is wrong?
 
@@ -2739,15 +2724,15 @@ Long-time delay is defined at 6×Ir. Someone scales tr to 12×Ir with (6/12)² a
 - 2. Table 100.8 already is that scaled time
 - 3. Short-time delay uses the same tr dial
 
-**Citation:** Per manufacturer data. Calculated times off the defined multiple are not a pass/fail by themselves.
+**Citation:** Engineering fundamentals; manufacturer's published curve. ANSI/NETA ATS-2025 7.6.1.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-046 (III / theory) {#math-046}
 
 <!-- q:math-046 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 500 kVA transformer at 480 V has full-load current about:
 
@@ -2756,15 +2741,15 @@ A 500 kVA transformer at 480 V has full-load current about:
 - 2. 1042 A
 - 3. 250 A
 
-**Citation:** I = S / (√3 × V)
+**Citation:** Engineering fundamentals (three-phase full-load current)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-047 (III / theory) {#math-047}
 
 <!-- q:math-047 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 On a power-factor set, an ungrounded-specimen (UST) reading is mainly:
 
@@ -2773,15 +2758,15 @@ On a power-factor set, an ungrounded-specimen (UST) reading is mainly:
 - 2. A DC megohm
 - 3. The excitation current of all three phases at once
 
-**Citation:** Power-factor test method (GST versus UST). ATS-2025 7.2.2.D.4 is how you judge the corrected percent.
+**Citation:** Engineering fundamentals (GST and UST); ANSI/NETA ATS-2025 7.2.2.B.4 and 7.2.2.D.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-048 (III / theory) {#math-048}
 
 <!-- q:math-048 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 30 kW at 0.60 power factor. kvar is:
 
@@ -2790,9 +2775,9 @@ Reviewer: VERIFIED or FIX
 - 2. 50
 - 3. 60
 
-**Citation:** Power triangle
+**Citation:** Engineering fundamentals (power triangle)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## mvbr-004 (III / component) {#mvbr-004}
 
@@ -2883,7 +2868,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:ct-008 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 You finished a CT with a DC resistance reading and skipped excitation. The core is:
 
@@ -2892,15 +2877,15 @@ You finished a CT with a DC resistance reading and skipped excitation. The core 
 - 2. Unaffected by DC
 - 3. Required to be hipot tested next
 
-**Citation:** Per manufacturer data for CT test sets that measure DC resistance before excitation. ATS-2025 7.10.1.B.4 still requires the excitation test on relaying CTs.
+**Citation:** IEEE C57.13.1-2017 5.1 and 12.2.1; ANSI/NETA ATS-2025 7.10.1.B.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ct-009 (III / component) {#ct-009}
 
 <!-- q:ct-009 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 IEEE 30°, IEEE 45°, and the 10/50 knee are:
 
@@ -2909,9 +2894,9 @@ IEEE 30°, IEEE 45°, and the 10/50 knee are:
 - 2. Ratio-error classes
 - 3. Burden ratings in ohms
 
-**Citation:** ATS-2025 7.10.1.D.4; ref. IEEE C57.13.1-2017, clauses 6.5 and 12. The three knee names are test-set practice, not a clause in that guide.
+**Citation:** ANSI/NETA ATS-2025 7.10.1.D.4; IEEE C57.13.1-2017, clauses 6.5 and 12
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## xfmr-014 (III / component) {#xfmr-014}
 
@@ -2934,7 +2919,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:xfmr-015 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A wye winding’s power-factor test voltage should be held to:
 
@@ -2943,9 +2928,9 @@ A wye winding’s power-factor test voltage should be held to:
 - 2. 10 kV even when that exceeds the winding
 - 3. The low-voltage bushing BIL
 
-**Citation:** Power-factor test method. ATS-2025 7.2.2.D.4 is the corrected limit you compare with after the shot.
+**Citation:** ANSI/NETA ATS-2025 7.2.2.B.4 and 7.2.2.D.4; test-equipment practice
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## cable-010 (III / component) {#cable-010}
 
@@ -3053,7 +3038,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:mot-003 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 The separate overload on a motor branch is set from:
 
@@ -3062,9 +3047,9 @@ The separate overload on a motor branch is set from:
 - 2. 125% of the breaker size
 - 3. The feeder’s next-size-up rule
 
-**Citation:** NEC 430.6(A) and 430.32
+**Citation:** NEC 2023 430.6(A)(2) and 430.32
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-014 (III / component) {#brkr-014}
 
@@ -3121,7 +3106,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-015 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Two lockout relays, 86-1 and 86-2, both trip the same breaker and each has a b contact in the close circuit. After a trip, close permissive returns when:
 
@@ -3130,15 +3115,15 @@ Two lockout relays, 86-1 and 86-2, both trip the same breaker and each has a b c
 - 2. The breaker is closed once, which resets both
 - 3. The 51 target is cleared
 
-**Citation:** Control-schematic logic for series 86 b contacts
+**Citation:** Scheme logic; ANSI/NETA ATS-2025 7.9.1.B.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-015 (III / systems) {#brkr-015}
 
 <!-- q:brkr-015 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Short-time timing is short, about a few cycles, and zone-interlock restraint was never jumpered. The likely cause is:
 
@@ -3147,15 +3132,15 @@ Short-time timing is short, about a few cycles, and zone-interlock restraint was
 - 2. Table 100.7
 - 3. A failed contact-resistance test
 
-**Citation:** Per manufacturer data for zone-selective interlocking. ATS-2025 7.6.1.2.B.8 requires the interlock to be verified.
+**Citation:** Eaton Digitrip 1150+ instruction leaflet IL70C1036H06, zone-interlocking restraint jumper; ANSI/NETA ATS-2025 7.6.1.2.B.8
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-016 (III / systems) {#relay-016}
 
 <!-- q:relay-016 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Device 25, synchronism check, in a generator breaker close scheme should:
 
@@ -3164,9 +3149,9 @@ Device 25, synchronism check, in a generator breaker close scheme should:
 - 2. Replace the 86
 - 3. Be defeated for the first parallel
 
-**Citation:** Device 25 practice; ANSI/NETA ATS-2025 7.22.1.B.3
+**Citation:** ANSI/NETA ATS-2025 7.9.1.B and 7.22.1.B.3
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## gnd-007 (III / systems) {#gnd-007}
 
@@ -3206,7 +3191,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:mot-004 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 On a motor branch, the overload and the breaker do different jobs. Which statement matches Article 430?
 
@@ -3215,15 +3200,15 @@ On a motor branch, the overload and the breaker do different jobs. Which stateme
 - 2. They are sized from the same nameplate current and the same table
 - 3. The feeder breaker is allowed the same next-size-up as the branch
 
-**Citation:** NEC 430.32 and 430.52
+**Citation:** NEC 2023 430.31, 430.52, and 430.62(A)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-017 (III / systems) {#relay-017}
 
 <!-- q:relay-017 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A close scheme uses an 86 b contact and a 52 b contact in series. The breaker is closed and the lockout is reset. The 52 b contact is:
 
@@ -3232,9 +3217,9 @@ A close scheme uses an 86 b contact and a 52 b contact in series. The breaker is
 - 2. A trip contact
 - 3. Irrelevant until the 51 times out
 
-**Citation:** a/b contact logic
+**Citation:** Engineering fundamentals (a and b contact logic)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## safety-031 (II / safety) {#safety-031}
 
@@ -3358,7 +3343,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-051 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A CT secondary of 5 A drives 0.3 Ω of leads and relay. Burden in volt-amperes is:
 
@@ -3367,15 +3352,15 @@ A CT secondary of 5 A drives 0.3 Ω of leads and relay. Burden in volt-amperes i
 - 2. 15 VA
 - 3. 0.06 VA
 
-**Citation:** CT burden S = I²R
+**Citation:** Engineering fundamentals (CT burden, S = I²R)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-052 (II / theory) {#math-052}
 
 <!-- q:math-052 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 An insulation specimen at 10 kV draws 2.0 mA and 4.0 W. Power factor is:
 
@@ -3384,15 +3369,15 @@ An insulation specimen at 10 kV draws 2.0 mA and 4.0 W. Power factor is:
 - 2. 20% **← answer**
 - 3. 40%
 
-**Citation:** Insulation power factor = W / (V × I)
+**Citation:** Engineering fundamentals (insulation power factor = W / (V × I))
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-053 (II / theory) {#math-053}
 
 <!-- q:math-053 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 240 V circuit drops 6 V. The percent drop is:
 
@@ -3401,15 +3386,15 @@ A 240 V circuit drops 6 V. The percent drop is:
 - 2. 0.25%
 - 3. 40%
 
-**Citation:** Voltage-drop percent
+**Citation:** Engineering fundamentals (voltage-drop percent)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-054 (II / theory) {#math-054}
 
 <!-- q:math-054 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A 2000:5 CT carries 500 A primary. Secondary current is:
 
@@ -3418,15 +3403,15 @@ A 2000:5 CT carries 500 A primary. Secondary current is:
 - 2. 0.4 A
 - 3. 12.5 A
 
-**Citation:** CT ratio
+**Citation:** Engineering fundamentals (CT ratio)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-055 (II / theory) {#math-055}
 
 <!-- q:math-055 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 XL of a 25 mH reactor at 60 Hz is about:
 
@@ -3435,9 +3420,9 @@ XL of a 25 mH reactor at 60 Hz is about:
 - 2. 94 Ω
 - 3. 0.94 Ω
 
-**Citation:** XL = 2πfL
+**Citation:** Engineering fundamentals (XL = 2πfL)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-056 (II / theory) {#math-056}
 
@@ -3639,9 +3624,9 @@ The preferred end of a job on SF6 equipment is:
 - 2. Burn off the remainder
 - 3. Mix it with air to dilute the greenhouse effect
 
-**Citation:** ABB, Use of SF6 insulating gas in ZX switchgear (HB 605/05), paraphrased; EPA SF6 emissions overview (2018)
+**Citation:** EPA, Overview of SF6 Emissions Sources and Reduction Options in Electric Power Systems (2018)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-018 (II / component) {#relay-018}
 
@@ -3717,16 +3702,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-IEEE 81 is cited by ATS 7.13 for fall-of-potential because:
+The fall-of-potential test named in ATS 7.13 is run by:
 
-- 0. NETA prints the probe spacing in feet
-- 1. The probe method lives in IEEE 81, not in a homemade spacing in the NETA paragraph **← answer**
-- 2. A megohmmeter is the instrument IEEE 81 specifies
-- 3. 25 Ω is the only passing value
+- 0. A probe spacing in feet printed in that NETA paragraph
+- 1. IEEE 81, or another method that section allows **← answer**
+- 2. A megohmmeter
+- 3. Passing any reading at or under 25 ohms
 
-**Citation:** ANSI/NETA ATS-2025 7.13.B.2; IEEE 81
+**Citation:** ANSI/NETA ATS-2025 7.13.B.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ir-012 (II / component) {#ir-012}
 
@@ -3766,7 +3751,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-019 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A relay test set’s current output belongs:
 
@@ -3775,9 +3760,9 @@ A relay test set’s current output belongs:
 - 2. Across the breaker primary poles
 - 3. On the station ground only
 
-**Citation:** Relay test-set practice, per manufacturer instructions; ANSI/NETA ATS-2025 7.9.2
+**Citation:** ANSI/NETA ATS-2025 7.9.2.D.4; ABB FT Flexitest product guide
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-018 (II / component) {#brkr-018}
 
@@ -3952,7 +3937,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:math-062 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A long-time dial defined at 6×Ir is 10 s, with a published +0/−30% band. At 6×Ir, the low end of the window is:
 
@@ -3961,9 +3946,9 @@ A long-time dial defined at 6×Ir is 10 s, with a published +0/−30% band. At 6
 - 2. 10 s
 - 3. 13 s
 
-**Citation:** Per manufacturer instructions where long-time time is defined at 6×Ir with a +0/−30% tolerance. ATS-2025 7.6.1.2 uses the published band when it exists.
+**Citation:** Engineering fundamentals; manufacturer published band. ANSI/NETA ATS-2025 7.6.1.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## math-063 (III / theory) {#math-063}
 
@@ -4189,7 +4174,7 @@ Reviewer: VERIFIED or FIX
 
 <!-- q:relay-021 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A close circuit is supervised by device 25 and by an 86 b contact. The breaker should close only when:
 
@@ -4198,9 +4183,9 @@ A close circuit is supervised by device 25 and by an 86 b contact. The breaker s
 - 2. The 51 is picked up
 - 3. The test set is still connected
 
-**Citation:** IEEE C37.2 device 25 and 86; control-schematic logic
+**Citation:** Scheme logic; ANSI/NETA ATS-2025 7.9.1.B and 7.9.1.B.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-021 (III / systems) {#brkr-021}
 
@@ -4344,16 +4329,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-IEEE C57.104-2019 clause 6.2.1 says acetylene becomes an important product:
+In the text that opens IEEE C57.104-2019 clause 4, acetylene becomes an important product:
 
 - 0. At ordinary service temperature
 - 1. Only as the fault temperature nears 1000 °C **← answer**
 - 2. Whenever the oil is new
 - 3. Only in the nitrogen blanket
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.2.1
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, opening of clause 4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## math-066 (II / theory) {#math-066}
 
@@ -4497,16 +4482,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-IEEE C57.104-2019, in the discussion that opens clause 6, treats gas results as:
+IEEE C57.104-2019 clause 6.1.4 treats gas results as:
 
 - 0. A single ppm that outranks the rate of change
 - 1. More concerning when the levels are rising than when you only have the level itself **← answer**
 - 2. Valid only if acetylene is zero
 - 3. A substitute for a turns-ratio test
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.104-2019, clause 6.1.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## cable-014 (II / component) {#cable-014}
 
@@ -5133,9 +5118,9 @@ IEEE C57.106-2006 clause 5.2.1 recommends ASTM D877 for:
 - 2. Every in-service transformer, in place of D1816
 - 3. Furans in the paper
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 5.2.1
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.14; ref. IEEE C57.106-2006, clause 5.2.1 item a)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## xfmr-033 (II / component) {#xfmr-033}
 
@@ -6189,7 +6174,7 @@ ATS 7.22.1.B.6 calls for the engine-generator performance test to be run:
 
 **Citation:** ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-047 (III / component) {#relay-047}
 
@@ -6527,9 +6512,9 @@ IEEE C37.91-2021 clause 7.3.4.2 uses harmonic restraint on a transformer differe
 - 2. The second harmonic forces a trip
 - 3. Percentage restraint is removed
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2
+**Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 7.3.4.2.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-054 (II / systems) {#relay-054}
 
@@ -6629,9 +6614,9 @@ Overheating an ester liquid, IEEE C57.155-2014 clause 4.1, compared with mineral
 - 2. Make no carbon oxides
 - 3. Stop all gas production below 1000 °C
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clause 4.1
+**Citation:** ANSI/NETA ATS-2025 7.2.2.D.15; ref. IEEE C57.155-2014, clauses 4.1, 4.1.3.3, and 4.1.3.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ct-023 (III / component) {#ct-023}
 
@@ -6715,346 +6700,6 @@ For a delta-wye transformer, IEEE C37.91-2021 clause 6.4.3 uses delta-connected 
 - 3. Replace harmonic restraint
 
 **Citation:** ANSI/NETA ATS-2025 7.9.1, device 87; ref. IEEE C37.91-2021, clause 6.4.3
-
-Reviewer: VERIFIED or FIX
-
-## safety-062 (II / safety) {#safety-062}
-
-<!-- q:safety-062 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 limits a retorque check on threaded hardware that is already installed to:
-
-- 0. 100 percent of the original torque, plus a quarter turn
-- 1. No more than 90 percent of the manufacturer’s original specified torque **← answer**
-- 2. 50 percent, so the bolt cannot yield
-- 3. Whatever a click wrench happens to read
-
-**Citation:** NFPA 70B-2026, 7.2.1.4
-
-Reviewer: VERIFIED or FIX
-
-## safety-063 (II / safety) {#safety-063}
-
-<!-- q:safety-063 -->
-
-**Bank verified flag:** true
-
-A brand-new threaded electrical connection, under NFPA 70B-2026, is tightened to:
-
-- 0. 90 percent of the table, the same as a retorque
-- 1. The manufacturer’s specified torque, or the applicable table if the manufacturer is silent **← answer**
-- 2. Finger tight, because the inspection is infrared
-- 3. Half the bolt diameter in inch-pounds, always
-
-**Citation:** NFPA 70B-2026, 7.2.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-064 (II / safety) {#safety-064}
-
-<!-- q:safety-064 -->
-
-**Bank verified flag:** true
-
-For equipment rated through 1000 V, NFPA 70B-2026 calls for insulation resistance as:
-
-- 0. A DC test that does not exceed the manufacturer’s test voltage **← answer**
-- 1. An AC hipot at twice rated voltage for one minute
-- 2. A very-low-frequency test at a medium-voltage table
-- 3. Whatever the meter’s top range is
-
-**Citation:** NFPA 70B-2026, 7.3.1
-
-Reviewer: VERIFIED or FIX
-
-## safety-065 (II / safety) {#safety-065}
-
-<!-- q:safety-065 -->
-
-**Bank verified flag:** true
-
-Before field tests, NFPA 70B-2026 says to assess special hazards such as:
-
-- 0. Only the paint color
-- 1. Stored energy, insulating gas, PCBs, asbestos, and similar listed hazards **← answer**
-- 2. The brand of the torque wrench only
-- 3. Whether the one-line uses device numbers
-
-**Citation:** NFPA 70B-2026, 8.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-066 (II / safety) {#safety-066}
-
-<!-- q:safety-066 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 requires test instruments to be:
-
-- 0. Any meter that turns on
-- 1. Sound, used as the manufacturer says, calibrated, and rated for the task **← answer**
-- 2. Calibrated once in the life of the company
-- 3. Rated only if the circuit is over 1000 V
-
-**Citation:** NFPA 70B-2026, 8.4
-
-Reviewer: VERIFIED or FIX
-
-## safety-067 (II / safety) {#safety-067}
-
-<!-- q:safety-067 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 Table 9.3.2 treats visual inspection and cleaning of portable tools as:
-
-- 0. Once a year
-- 1. Before each use **← answer**
-- 2. Every 60 months
-- 3. Only after a shock
-
-**Citation:** NFPA 70B-2026, Table 9.3.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-068 (II / systems) {#safety-068}
-
-<!-- q:safety-068 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 classes 1, 1A, 2, and 2A are:
-
-- 0. Online standard, online enhanced, offline standard, and offline enhanced **← answer**
-- 1. Four torque tables
-- 2. Polarization index, dielectric absorption, tip-up, and tan delta
-- 3. Condition numbers 1 through 4
-
-**Citation:** NFPA 70B-2026, 8.3
-
-Reviewer: VERIFIED or FIX
-
-## relay-057 (II / systems) {#relay-057}
-
-<!-- q:relay-057 -->
-
-**Bank verified flag:** true
-
-An NFPA 70B-2026 field-test record has to include:
-
-- 0. Only pass or fail
-- 1. Who tested, the equipment identity and nameplate, conditions, date, the test, the criteria, and as-found and as-left values **← answer**
-- 2. The manufacturer’s entire manual
-- 3. A polarization index, even though these chapters do not define one
-
-**Citation:** NFPA 70B-2026, 8.5.1 and 8.5.2
-
-Reviewer: VERIFIED or FIX
-
-## emg-008 (II / systems) {#emg-008}
-
-<!-- q:emg-008 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 says maintenance information designates equipment as:
-
-- 0. Serviceable, limited-service, or nonserviceable **← answer**
-- 1. Pass, fail, or exempt from records
-- 2. Class 1, 1A, or 2 only
-- 3. Condition A or B
-
-**Citation:** NFPA 70B-2026, 8.6.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-069 (II / systems) {#safety-069}
-
-<!-- q:safety-069 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 sets the overall condition number as:
-
-- 0. The average of physical condition, criticality, and environment
-- 1. The lowest of the three
-- 2. The highest applicable of physical condition, criticality, and environment **← answer**
-- 3. Whichever number the last report used
-
-**Citation:** NFPA 70B-2026, 9.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-070 (II / systems) {#safety-070}
-
-<!-- q:safety-070 -->
-
-**Bank verified flag:** true
-
-When an interval is taken from NFPA 70B-2026, the first place to look is:
-
-- 0. The table, even when the manufacturer published a shorter interval
-- 1. The manufacturer’s instructions, then the table only if those instructions are silent **← answer**
-- 2. Always 12 months
-- 3. The last technician’s preference, with nothing written down
-
-**Citation:** NFPA 70B-2026, 9.3.1 and 9.3.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-071 (II / systems) {#safety-071}
-
-<!-- q:safety-071 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 allows an undisturbed bolted bus joint to be assessed by:
-
-- 0. Torque only, and never by infrared or resistance
-- 1. One or more of infrared, permanently mounted temperature sensors, contact resistance, or torque verification **← answer**
-- 2. A polarization index of the bus
-- 3. A visual look with no instrument
-
-**Citation:** NFPA 70B-2026, 7.2.1
-
-Reviewer: VERIFIED or FIX
-
-## safety-072 (III / safety) {#safety-072}
-
-<!-- q:safety-072 -->
-
-**Bank verified flag:** true
-
-For equipment rated above 1000 V, NFPA 70B-2026 says the insulation test method is:
-
-- 0. Always a DC megohmmeter, same as equipment through 1000 V
-- 1. Chosen by the electrical maintenance program from the methods that section lists **← answer**
-- 2. Always a 60-minute power-frequency withstand
-- 3. Left to whoever is holding the meter
-
-**Citation:** NFPA 70B-2026, 7.3.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-073 (III / safety) {#safety-073}
-
-<!-- q:safety-073 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 says equipment with an impending failure that threatens people, health, or the environment is:
-
-- 0. Left in service until the next scheduled interval
-- 1. De-energized and designated nonserviceable, unless de-energizing adds a hazard or is infeasible **← answer**
-- 2. Tagged limited-service and kept loaded
-- 3. Repaired only if the condition score is 1
-
-**Citation:** NFPA 70B-2026, 9.2.1.4
-
-Reviewer: VERIFIED or FIX
-
-## thermo-005 (III / safety) {#thermo-005}
-
-<!-- q:thermo-005 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 infrared inspections are made:
-
-- 0. On de-energized gear with all covers sealed
-- 1. Online, under operating load, with only the necessary accessible covers removed **← answer**
-- 2. At no load, so the camera is safer
-- 3. Once, with no delta-T written down
-
-**Citation:** NFPA 70B-2026, 7.4
-
-Reviewer: VERIFIED or FIX
-
-## safety-074 (III / safety) {#safety-074}
-
-<!-- q:safety-074 -->
-
-**Bank verified flag:** true
-
-A contact-resistance reading on an undisturbed bolted joint that is above the manufacturer’s maximum is, under NFPA 70B-2026:
-
-- 0. Accepted if it was retorqued to 100 percent
-- 1. Investigated **← answer**
-- 2. Ignored when an infrared camera is on site
-- 3. Converted to a polarization index
-
-**Citation:** NFPA 70B-2026, 7.2.1
-
-Reviewer: VERIFIED or FIX
-
-## safety-075 (III / systems) {#safety-075}
-
-<!-- q:safety-075 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 condition 1 means the equipment is:
-
-- 0. Like new: clean, tight, dry, maintenance current, and no open monitoring items or recommendations **← answer**
-- 1. Any gear that is still energized
-- 2. Gear that missed the last two maintenance cycles
-- 3. Gear that needs a major part replaced this cycle
-
-**Citation:** NFPA 70B-2026, 9.2.1.1
-
-Reviewer: VERIFIED or FIX
-
-## safety-076 (III / systems) {#safety-076}
-
-<!-- q:safety-076 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 puts equipment in condition 3 when, among other triggers:
-
-- 0. The enclosure was wiped down
-- 1. The last two maintenance cycles were missed, or both of the previous cycles needed a major repair or replacement **← answer**
-- 2. One infrared scan was normal
-- 3. The manufacturer interval is longer than the table
-
-**Citation:** NFPA 70B-2026, 9.2.1.3
-
-Reviewer: VERIFIED or FIX
-
-## thermo-006 (III / systems) {#thermo-006}
-
-<!-- q:thermo-006 -->
-
-**Bank verified flag:** true
-
-In NFPA 70B-2026 Table 9.3.2, infrared thermography for conditions 1, 2, and 3 is:
-
-- 0. 60, 36, and 12 months, the row labeled standard
-- 1. 12, 12, and 6 months **← answer**
-- 2. 36, 24, and 12 months
-- 3. Before each use
-
-**Citation:** NFPA 70B-2026, Table 9.3.2
-
-Reviewer: VERIFIED or FIX
-
-## relay-058 (III / systems) {#relay-058}
-
-<!-- q:relay-058 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 adjusts a maintenance interval by:
-
-- 0. Leaving it fixed no matter what fails
-- 1. Shortening it when failures are analyzed, and allowing a longer interval only after more than two intervals without problems, with the extension written in the program **← answer**
-- 2. Doubling it after one clean visit
-- 3. Using the condition-3 column after every pass
-
-**Citation:** NFPA 70B-2026, 9.1.2 and 9.3.2
 
 Reviewer: VERIFIED or FIX
 
@@ -7217,16 +6862,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-ATS does not tell you the insulating medium inside a 27 kV recloser. What it does require is:
+The insulating medium inside a 27 kV recloser is determined by:
 
-- 0. Assume vacuum bottles under oil for every unit at that voltage
-- 1. Use the nameplate and the procedure for the recloser you actually have **← answer**
-- 2. Skip insulation tests above 15 kV
-- 3. Apply the low-voltage breaker instantaneous table
+- 0. Assuming vacuum bottles under oil for every unit at that voltage
+- 1. The nameplate, with the test procedure for that construction **← answer**
+- 2. Skipping insulation tests above 15 kV
+- 3. The low-voltage breaker instantaneous table
 
 **Citation:** ANSI/NETA ATS-2025 7.24.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## xfmr-048 (II / systems) {#xfmr-048}
 
@@ -7428,9 +7073,9 @@ The motor thermal element in the ATS device list is 49. Device 32 is:
 - 2. A recloser count
 - 3. A surge counter
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1, devices 32 and 49
+**Citation:** ANSI/NETA ATS-2025 7.9.1 (device 32, directional power; devices 49T and 49R, thermal)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## mot-014 (II / component) {#mot-014}
 
@@ -7481,7 +7126,7 @@ The temperature-rise rating of a CT is taken from:
 
 **Citation:** ANSI/NETA ATS-2025 7.10.1.A.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-022 (II / component) {#brkr-022}
 
@@ -7515,7 +7160,7 @@ A 0.5 A fuse is going to be checked for continuity. The test current should be:
 
 **Citation:** ANSI/NETA ATS-2025 7.5.1.1; fuse continuous rating
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-024 (II / component) {#brkr-024}
 
@@ -7625,16 +7270,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-A recalled ‘Level 2 charger is 80 A’ item is handled in this bank as:
+The test current for an installed EV charger is set by:
 
-- 0. The ATS pass/fail current
-- 1. Not an ATS value; the installed charger is tested to its nameplate and manual **← answer**
+- 0. One ATS pass/fail ampere value for every Level 2 unit
+- 1. The charger nameplate and its manual **← answer**
 - 2. The Table 100.2 withstand
 - 3. The glove class
 
 **Citation:** ANSI/NETA ATS-2025 7.26
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## xfmr-051 (II / component) {#xfmr-051}
 
@@ -7683,9 +7328,9 @@ A gas-blanketed transformer will not push oil out of the sample valve into a syr
 - 2. The oil is new
 - 3. The fans are running
 
-**Citation:** ANSI/NETA ATS-2025 7.2.2.A.15
+**Citation:** ANSI/NETA ATS-2025 7.2.2.A.15; engineering fundamentals (a tank under vacuum will not push oil out)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## fbr-004 (II / component) {#fbr-004}
 
@@ -7727,16 +7372,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-ATS judges a dielectric withstand as passed when:
+A cable dielectric withstand is accepted when:
 
-- 0. Leakage current falls on a published slope that ATS prints for every cable
+- 0. Leakage current follows one required slope for every cable
 - 1. No distress or insulation failure is seen by the end of the voltage application **← answer**
 - 2. The set trips and is reset once
 - 3. The shield reads open
 
 **Citation:** ANSI/NETA ATS-2025 7.3.3.D.4 and D.5
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## xfmr-054 (II / component) {#xfmr-054}
 
@@ -7747,13 +7392,13 @@ Reviewer: VERIFIED or FIX
 ATS 7.20.1 tells you to deal with stored charge in a power capacitor by:
 
 - 0. Measuring the internal discharge-resistor resistance **← answer**
-- 1. Waiting a recalled number of minutes that ATS does not print
+- 1. Skipping the resistor measurement after a one-minute wait
 - 2. Shorting the terminals with a screwdriver as the procedure
 - 3. Skipping the resistor if the nameplate says 480 V
 
-**Citation:** ANSI/NETA ATS-2025 7.20.1.B.4
+**Citation:** ANSI/NETA ATS-2025 7.20.1.B.4; NEC 2023 460.6(A)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## relay-061 (II / component) {#relay-061}
 
@@ -7768,9 +7413,9 @@ An electromechanical overcurrent relay set on tap 3 picks up at 3.8 A. ATS 7.9.1
 - 2. Always move the tap to 4 and do not retest
 - 3. Always loosen the spring, which ATS names as the only adjustment
 
-**Citation:** ANSI/NETA ATS-2025 7.9.1
+**Citation:** ANSI/NETA ATS-2025 7.9.1 item 15 (device 51: minimum pickup and two timing points)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-062 (II / component) {#relay-062}
 
@@ -7806,23 +7451,6 @@ ATS 7.7 on a circuit switcher includes:
 
 Reviewer: VERIFIED or FIX
 
-## safety-080 (II / safety) {#safety-080}
-
-<!-- q:safety-080 -->
-
-**Bank verified flag:** false
-
-A one-line symbol for a surge arrester is defined in:
-
-- 0. ATS Table 100.1
-- 1. IEEE 315 graphic symbols, which this bank does not have, so no symbol is graded here **← answer**
-- 2. NFPA 70E Table 130.4(E)(a)
-- 3. The glove voltage table
-
-**Citation:** IEEE 315 not in the lookup set; ATS 7.19.2 identifies the arrester by nameplate, not by a symbol quiz
-
-Reviewer: VERIFIED or FIX
-
 ## safety-081 (II / safety) {#safety-081}
 
 <!-- q:safety-081 -->
@@ -7836,31 +7464,32 @@ Under 29 CFR 1910.146, a confined space is permit-required when it has:
 - 2. A door that a forklift can drive through
 - 3. Continuous occupancy by design
 
-**Citation:** 29 CFR 1910.146, definitions of confined space and permit-required confined space
+**Citation:** 29 CFR 1910.146(b), definitions of confined space and permit-required confined space
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
+
 ## mot-015 (II / theory) {#mot-015}
 
 <!-- q:mot-015 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-A recalled advantage of a VFD start over an across-the-line start is:
+Compared with an across-the-line start, a usual advantage of an adjustable-speed drive is:
 
-- 0. Printed as a pass/fail number in ATS 7.15
-- 1. Not stated in the ATS motor section held here; the starter test is still 7.16 and the drive manual **← answer**
-- 2. A 10-minute PI of 1.0
-- 3. A vacuum pressure limit
+- 0. A higher locked-rotor inrush
+- 1. A lower starting inrush current **← answer**
+- 2. A 10-minute polarization index of 1.0 used as a drive pass/fail
+- 3. A vacuum-pressure limit on the stator
 
-**Citation:** ANSI/NETA ATS-2025 7.15 and 7.16; VFD application article not in the lookup set
+**Citation:** Engineering fundamentals (drive starting current); ANSI/NETA ATS-2025 7.17 and 7.16
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## mot-016 (II / component) {#mot-016}
 
 <!-- q:mot-016 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Jogging a motor on first start is recalled as a rotation check. In the texts read for this bank:
 
@@ -7869,32 +7498,32 @@ Jogging a motor on first start is recalled as a rotation check. In the texts rea
 - 2. It replaces the polarization index
 - 3. It is a fiber test
 
-**Citation:** ANSI/NETA ATS-2025 7.15.1 and 7.22.1
+**Citation:** ANSI/NETA ATS-2025 7.15.1, 7.22.1.B.3, and 4.1 item 6
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ct-028 (II / component) {#ct-028}
 
 <!-- q:ct-028 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 A CT that can be opened and placed around a cable that is already terminated is commonly called:
 
 - 0. Bar-type
-- 1. Split-core, a name ATS 7.10.1 does not use in the text that was read **← answer**
+- 1. Split-core **← answer**
 - 2. A network protector
 - 3. A watts-loss arrester
 
-**Citation:** ANSI/NETA ATS-2025 7.10.1
+**Citation:** Engineering fundamentals (split-core CT); ANSI/NETA ATS-2025 7.10.1.B.6 and B.7
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## safety-082 (II / safety) {#safety-082}
 
 <!-- q:safety-082 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Hissing and a sweet smell at switchgear are recalled as corona and ozone. The checked action is:
 
@@ -7903,43 +7532,43 @@ Hissing and a sweet smell at switchgear are recalled as corona and ozone. The ch
 - 2. Raise the VLF voltage
 - 3. Ignore it if the mimic is correct
 
-**Citation:** NFPA 70E-2024 110.2; ozone diagnosis not found in the lookup set
+**Citation:** NFPA 70E-2024 110.2; engineering fundamentals (corona and ozone)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## brkr-027 (II / component) {#brkr-027}
 
 <!-- q:brkr-027 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
 Bolt grade is identified in the field by:
 
-- 0. Head markings, whose chart is not in the ATS or 70B text held here **← answer**
+- 0. Head markings (see the grade row of ATS Table 100.12.1) **← answer**
 - 1. Table 100.1
 - 2. The glove class
 - 3. The PI minimum
 
-**Citation:** ANSI/NETA ATS-2025 Table 100.12; NFPA 70B-2026 7.2.1.4; grade-mark chart not in the lookup set
+**Citation:** ANSI/NETA ATS-2025 Table 100.12.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## relay-063 (III / systems) {#relay-063}
 
 <!-- q:relay-063 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-PLC and SCADA addressing on a Level III print is:
+ANSI/NETA ATS-2025 7.23 covers automation and communications equipment. Which of these belongs to that work?
 
-- 0. Defined step by step in ATS 7.9
-- 1. Not given as a protocol lesson in the standards read here; relay element tests remain ATS 7.9 and settings still have to match the file **← answer**
-- 2. A substitute for the 51-to-86-to-52 path
-- 3. A megohmmeter guard connection
+- 0. Only the 51-to-86-to-52 trip path, with communications left out of the standard
+- 1. Communication links, digital points, alarms, and settings files **← answer**
+- 2. A megohmmeter guard connection used in place of the network
+- 3. A dissolved-gas sample drawn from the controller
 
-**Citation:** ANSI/NETA ATS-2025 7.9; IEC 61850 and SCADA guides not in the lookup set
+**Citation:** ANSI/NETA ATS-2025 7.23 and 7.9.2
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## relay-064 (III / systems) {#relay-064}
 
@@ -7954,9 +7583,9 @@ In a 51-to-86-to-52 trip path, the device that operates first is:
 - 2. The 51 overcurrent element **← answer**
 - 3. The close coil
 
-**Citation:** IEEE C37.2 device numbers as listed in ATS-2025 7.9.1; control sequence
+**Citation:** Engineering fundamentals (trip sequence); ANSI/NETA ATS-2025 7.9.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## ir-015 (II / component) {#ir-015}
 
@@ -8056,9 +7685,9 @@ ATS 7.20.1 electrical tests on a capacitor include:
 - 2. A recloser count
 - 3. A fiber attenuation test
 
-**Citation:** ANSI/NETA ATS-2025 7.20.1.B.3 and B.4
+**Citation:** ANSI/NETA ATS-2025 7.20.1.B.2, B.3, and B.4; NEC 2023 460.6(A)
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — FIX
 
 ## xfmr-057 (II / component) {#xfmr-057}
 
@@ -8117,16 +7746,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-After a VLF or other dielectric withstand, ATS records a pass when:
+After a VLF or other dielectric withstand, the cable passes when:
 
-- 0. A published discharge time in minutes has elapsed
+- 0. A fixed number of minutes has elapsed after the voltage is removed
 - 1. No distress or failure is observed by the end of the voltage application **← answer**
-- 2. Leakage current matches a slope ATS prints for every insulation
+- 2. Leakage current matches one required slope for every insulation
 - 3. The shield is opened
 
 **Citation:** ANSI/NETA ATS-2025 7.3.3.D.4 and D.5
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-065 (III / systems) {#relay-065}
 
@@ -8134,33 +7763,33 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-On a scheme drawn with the device numbers in ATS 7.9.1, an a contact is:
+An a contact on a protective-relay scheme is:
 
 - 0. Closed while its device is de-energized
 - 1. Open while its device is de-energized, and closed when that device is picked up **← answer**
 - 2. A transfer contact with both states at once
 - 3. The guard lead of a megohmmeter
 
-**Citation:** Control-contact convention used with the device numbers in ANSI/NETA ATS-2025 7.9.1
+**Citation:** Engineering fundamentals (a and b contacts); ANSI/NETA ATS-2025 7.9.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-066 (III / systems) {#relay-066}
 
 <!-- q:relay-066 -->
 
-**Bank verified flag:** false
+**Bank verified flag:** true
 
-Form A, Form B, and Form C contact names are:
+In the relay-catalog convention, Form A, Form B, and Form C contacts are:
 
-- 0. Defined with clause numbers in the IEEE files read for this bank
-- 1. Not printed in those files, so this bank does not grade the letter names **← answer**
-- 2. The same as devices 50, 51, and 87
-- 3. Oil-test methods
+- 0. Instantaneous overcurrent, time overcurrent, and differential
+- 1. Normally open, normally closed, and transfer **← answer**
+- 2. The same devices as 50, 51, and 87
+- 3. Oil dielectric, interfacial tension, and power factor
 
-**Citation:** Form A/B/C letter names not in the IEEE text read for this bank; a/b behavior is the convention used with ATS 7.9.1 device numbers
+**Citation:** Engineering fundamentals (relay catalog contact forms); not printed in ANSI/NETA ATS-2025
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## relay-067 (III / systems) {#relay-067}
 
@@ -8175,9 +7804,9 @@ A close circuit supervised by two 86 b contacts will allow a close only when:
 - 2. The 51 is picked up
 - 3. One lockout is reset and the breaker is already closed
 
-**Citation:** Control sequence using IEEE C37.2 device 86 as listed in ATS-2025 7.9 practice
+**Citation:** Engineering fundamentals (b-contact close permissive); ANSI/NETA ATS-2025 7.9.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
 ## mot-018 (II / component) {#mot-018}
 
@@ -8196,734 +7825,32 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 
 Reviewer: VERIFIED or FIX
 
-## brkr-029 (II / component) {#brkr-029}
+## Needs source
 
-<!-- q:brkr-029 -->
+This item stayed `verified: false`. The deciding fact needs a source this review did not have.
 
-**Bank verified flag:** true
+### safety-080 (II / safety) {#safety-080}
 
-NFPA 70B-2026 Table 15.3.5 places the inverse-time trip test of a low-voltage breaker at:
+<!-- q:safety-080 -->
 
-- 0. 300 percent of rated continuous current **← answer**
-- 1. 150 percent of the frame size, regardless of the plug
-- 2. The instantaneous setting only
-- 3. A dissolved-gas sample
+**Bank verified flag:** false
 
-**Citation:** NFPA 70B-2026, Table 15.3.5
+A one-line symbol for a surge arrester is defined in:
 
-Reviewer: VERIFIED or FIX
+- 0. ATS Table 100.1
+- 1. IEEE 315 graphic symbols, which this bank does not have, so no symbol is graded here **← answer**
+- 2. NFPA 70E Table 130.4(E)(a)
+- 3. The glove voltage table
 
-## brkr-030 (II / component) {#brkr-030}
+**Citation:** IEEE 315 not in the lookup set; ATS 7.19.2 identifies the arrester by nameplate, not by a symbol quiz
 
-<!-- q:brkr-030 -->
+**Needs source:** IEEE 315 (graphic symbols). It was not in the lookup set, so this review could not confirm the symbol standard. The item grades no symbol.
 
-**Bank verified flag:** true
+Reviewer: neta field ref, Nov 12 2026 — NEEDS-SOURCE
 
-NFPA 70B-2026 Table 15.3.4 says low-voltage breakers are operated:
+## Reviewed outside this queue
 
-- 0. Once, then left alone for the rest of the cycle
-- 1. At least three times **← answer**
-- 2. Only if the instantaneous test fails
-- 3. By a turns-ratio set
+This file lists Level II and Level III only. The same pass also covered two items that sit outside it.
 
-**Citation:** NFPA 70B-2026, Table 15.3.4
-
-Reviewer: VERIFIED or FIX
-
-## brkr-031 (II / safety) {#brkr-031}
-
-<!-- q:brkr-031 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 Table 15.4.5 says not to run an overpotential test on:
-
-- 0. The power poles of a medium-voltage breaker, ever
-- 1. Control wiring that is connected to solid-state components **← answer**
-- 2. The station ground grid
-- 3. A transfer-switch mechanical interlock
-
-**Citation:** NFPA 70B-2026, Table 15.4.5
-
-Reviewer: VERIFIED or FIX
-
-## brkr-032 (II / component) {#brkr-032}
-
-<!-- q:brkr-032 -->
-
-**Bank verified flag:** true
-
-Chapter 15 of NFPA 70B-2026 splits breaker scope at about:
-
-- 0. Low-voltage breakers through 1000 V, and medium-voltage power breakers above 1000 V through 69 kV **← answer**
-- 1. All breakers as one table with one test list
-- 2. Only breakers above 115 kV
-- 3. Fuses and network protectors
-
-**Citation:** NFPA 70B-2026, 15.1
-
-Reviewer: VERIFIED or FIX
-
-## brkr-033 (III / component) {#brkr-033}
-
-<!-- q:brkr-033 -->
-
-**Bank verified flag:** true
-
-Which test is on the low-voltage breaker list in NFPA 70B-2026 Table 15.3.5 and is not the headline of the medium-voltage list?
-
-- 0. Inverse-time trip at 300 percent of rated continuous current **← answer**
-- 1. Vacuum-interrupter integrity
-- 2. Contact timing of a medium-voltage mechanism
-- 3. Enhanced overpotential of the power circuit
-
-**Citation:** NFPA 70B-2026, Tables 15.3.5 and 15.4.5
-
-Reviewer: VERIFIED or FIX
-
-## mvbr-010 (III / component) {#mvbr-010}
-
-<!-- q:mvbr-010 -->
-
-**Bank verified flag:** true
-
-Which item is NOT on the medium-voltage breaker electrical list in NFPA 70B-2026 Table 15.4.5?
-
-- 0. Contact resistance and insulation resistance
-- 1. Trip, close, and mechanism checks
-- 2. Vacuum integrity and contact timing
-- 3. Specific gravity of a flooded cell **← answer**
-
-**Citation:** NFPA 70B-2026, Table 15.4.5
-
-Reviewer: VERIFIED or FIX
-
-## cable-021 (II / component) {#cable-021}
-
-<!-- q:cable-021 -->
-
-**Bank verified flag:** true
-
-For cable rated above 1000 V, NFPA 70B-2026 Table 18.3.5 says to select at least one of:
-
-- 0. Very-low-frequency below 1 Hz, DC overpotential, AC power factor or dissipation factor, partial discharge, or power frequency **← answer**
-- 1. Only a DC megohmmeter, the same rule as cable through 1000 V
-- 2. A battery ohmic test
-- 3. A transformer turns-ratio test
-
-**Citation:** NFPA 70B-2026, Table 18.3.5
-
-Reviewer: VERIFIED or FIX
-
-## cable-022 (II / systems) {#cable-022}
-
-<!-- q:cable-022 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 chapter 18 stops cable maintenance at:
-
-- 0. The generator terminals only
-- 1. The final branch-circuit overcurrent device; conductors downstream of that device are outside this chapter **← answer**
-- 2. Every lighting whip in the building
-- 3. The customer’s revenue meter only
-
-**Citation:** NFPA 70B-2026, 18.1
-
-Reviewer: VERIFIED or FIX
-
-## cable-023 (III / component) {#cable-023}
-
-<!-- q:cable-023 -->
-
-**Bank verified flag:** true
-
-Which test does NFPA 70B-2026 Table 18.3.5 assign to cable rated 1000 V and below, rather than to the over-1000 V menu?
-
-- 0. Insulation resistance **← answer**
-- 1. A required very-low-frequency withstand at a stated kilovolt
-- 2. Dissolved-gas analysis
-- 3. Vacuum integrity
-
-**Citation:** NFPA 70B-2026, Table 18.3.5
-
-Reviewer: VERIFIED or FIX
-
-## batt-008 (II / component) {#batt-008}
-
-<!-- q:batt-008 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 says specific gravity on stationary standby batteries is measured on:
-
-- 0. At least 10 percent of the units **← answer**
-- 1. Every connection lug only
-- 2. Valve-regulated cells, as a required water test
-- 3. One pilot cell and then never again
-
-**Citation:** NFPA 70B-2026, Table 36.3.5
-
-Reviewer: VERIFIED or FIX
-
-## batt-009 (II / component) {#batt-009}
-
-<!-- q:batt-009 -->
-
-**Bank verified flag:** true
-
-Individual float-voltage readings under NFPA 70B-2026 are recorded:
-
-- 0. To the nearest 10 V
-- 1. To two decimal places **← answer**
-- 2. As pass or fail only, with no number
-- 3. In ampere-hours
-
-**Citation:** NFPA 70B-2026, Table 36.3.5
-
-Reviewer: VERIFIED or FIX
-
-## batt-010 (III / systems) {#batt-010}
-
-<!-- q:batt-010 -->
-
-**Bank verified flag:** true
-
-In NFPA 70B-2026 Table 36.2, vented lead-acid individual float voltage and connection resistance are on a shorter interval than performance. Those two intervals, conditions 1, 2, and 3, are:
-
-- 0. Float and connections 12, 12, and 1 month; performance 60, 60, and 12 months **← answer**
-- 1. Both rows 60, 36, and 12 months
-- 2. Float voltage only before each use
-- 3. Performance every month for condition 1
-
-**Citation:** NFPA 70B-2026, Table 36.2
-
-Reviewer: VERIFIED or FIX
-
-## batt-011 (III / component) {#batt-011}
-
-<!-- q:batt-011 -->
-
-**Bank verified flag:** true
-
-Which test belongs to valve-regulated lead-acid batteries in NFPA 70B-2026 and not to a flooded specific-gravity sample?
-
-- 0. An ohmic measurement **← answer**
-- 1. A dissolved-gas sample of the jar
-- 2. A turns-ratio test
-- 3. Vacuum-bottle integrity
-
-**Citation:** NFPA 70B-2026, Table 36.3.5
-
-Reviewer: VERIFIED or FIX
-
-## emg-009 (II / systems) {#emg-009}
-
-<!-- q:emg-009 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 chapter 32 applies to a battery energy storage system above:
-
-- 0. 3.6 MJ, which is 1 kWh **← answer**
-- 1. 50 kWh only
-- 2. Any single flooded cell
-- 3. A transfer switch
-
-**Citation:** NFPA 70B-2026, 32.1 and Table 32.2
-
-Reviewer: VERIFIED or FIX
-
-## emg-010 (III / component) {#emg-010}
-
-<!-- q:emg-010 -->
-
-**Bank verified flag:** true
-
-Which test is on the battery-energy-storage list in NFPA 70B-2026 Table 32.3.5 and would be the wrong list for a standby battery jar?
-
-- 0. Battery-management-system review, thermal survey, and ultrasonic inspection **← answer**
-- 1. Specific gravity of a flooded cell
-- 2. Individual float voltage to two decimals
-- 3. Connection resistance of a vented cell
-
-**Citation:** NFPA 70B-2026, Table 32.3.5 and chapter 36
-
-Reviewer: VERIFIED or FIX
-
-## xfmr-058 (II / systems) {#xfmr-058}
-
-<!-- q:xfmr-058 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 Table 11.2 schedules insulating-fluid sampling, for conditions 1, 2, and 3, at:
-
-- 0. 12, 12, and 6 months **← answer**
-- 1. 60, 36, and 12 months for the sample itself
-- 2. Before each use
-- 3. Only after a failure
-
-**Citation:** NFPA 70B-2026, Table 11.2
-
-Reviewer: VERIFIED or FIX
-
-## xfmr-059 (III / component) {#xfmr-059}
-
-<!-- q:xfmr-059 -->
-
-**Bank verified flag:** true
-
-Which test does NFPA 70B-2026 Table 11.3.5 add for a liquid-filled transformer and not for a dry type?
-
-- 0. Dissolved-gas analysis, acidity, water, and dielectric tests of the fluid **← answer**
-- 1. A turns-ratio test, which liquid-filled units skip
-- 2. Excitation current, which only dry types receive
-- 3. A battery ohmic test
-
-**Citation:** NFPA 70B-2026, Table 11.3.5
-
-Reviewer: VERIFIED or FIX
-
-## relay-068 (II / systems) {#relay-068}
-
-<!-- q:relay-068 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 intervals for relays, conditions 1, 2, and 3, are:
-
-- 0. Electromechanical 36, 24, and 12 months; solid-state and microprocessor 60, 36, and 12 months **← answer**
-- 1. The same 12, 12, and 6 months for both
-- 2. Electromechanical before each use
-- 3. Microprocessor relays are exempt
-
-**Citation:** NFPA 70B-2026, chapter 35
-
-Reviewer: VERIFIED or FIX
-
-## relay-069 (III / component) {#relay-069}
-
-<!-- q:relay-069 -->
-
-**Bank verified flag:** true
-
-Which check does NFPA 70B-2026 Table 35.3.5 aim at a microprocessor relay rather than at an electromechanical relay?
-
-- 0. Status and arc-reduction checks, with arc reduction per the manufacturer **← answer**
-- 1. Branch-to-frame insulation resistance and a zero check
-- 2. A dissolved-gas sample of the relay case
-- 3. Specific gravity
-
-**Citation:** NFPA 70B-2026, Table 35.3.5
-
-Reviewer: VERIFIED or FIX
-
-## emg-011 (II / systems) {#emg-011}
-
-<!-- q:emg-011 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 visual inspection of a transfer switch, conditions 1, 2, and 3, is:
-
-- 0. 12, 6, and 3 months **← answer**
-- 1. 60, 36, and 12 months, the same as the electrical row
-- 2. 12, 12, and 6 months, the transformer-fluid row
-- 3. Before each use
-
-**Citation:** NFPA 70B-2026, chapter 39
-
-Reviewer: VERIFIED or FIX
-
-## emg-012 (III / component) {#emg-012}
-
-<!-- q:emg-012 -->
-
-**Bank verified flag:** true
-
-Which test is listed for a transfer switch in NFPA 70B-2026 Table 39.3.5?
-
-- 0. Insulation resistance, protective devices, operators, transfer sequence, bypass or isolation, and operation under load **← answer**
-- 1. Dissolved-gas analysis
-- 2. Vacuum-interrupter integrity
-- 3. A turns-ratio test of the switch
-
-**Citation:** NFPA 70B-2026, Table 39.3.5
-
-Reviewer: VERIFIED or FIX
-
-## gnd-012 (II / systems) {#gnd-012}
-
-<!-- q:gnd-012 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 electrical testing of grounding and bonding, conditions 1, 2, and 3, is:
-
-- 0. 60, 36, and 36 months **← answer**
-- 1. 12, 12, and 6 months, which is the visual row
-- 2. 60, 36, and 12 months, the ordinary standard row
-- 3. 3, 3, and 1 month
-
-**Citation:** NFPA 70B-2026, chapter 20
-
-Reviewer: VERIFIED or FIX
-
-## gnd-013 (III / component) {#gnd-013}
-
-<!-- q:gnd-013 -->
-
-**Bank verified flag:** true
-
-Which test is on the NFPA 70B-2026 Table 20.3.5 grounding list?
-
-- 0. Fall-of-potential on a ground rod, point-to-point bonding, and connection resistance **← answer**
-- 1. A transformer turns-ratio test
-- 2. Inverse-time trip at 300 percent
-- 3. Specific gravity of 10 percent of the cells
-
-**Citation:** NFPA 70B-2026, Table 20.3.5
-
-Reviewer: VERIFIED or FIX
-
-## safety-083 (II / systems) {#safety-083}
-
-<!-- q:safety-083 -->
-
-**Bank verified flag:** true
-
-In the NFPA 70B-2026 test classes, class 1 and class 2 differ because:
-
-- 0. Class 1 is online and connected to the supply; class 2 is offline, disconnected or fed by a test source **← answer**
-- 1. Class 1 is always a dissolved-gas test
-- 2. Class 2 is the only class allowed above 1000 V
-- 3. The numbers are torque tables
-
-**Citation:** NFPA 70B-2026, 8.3
-
-Reviewer: VERIFIED or FIX
-
-## safety-084 (III / component) {#safety-084}
-
-<!-- q:safety-084 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 marks which of these as an enhanced test rather than the basic insulation-resistance test?
-
-- 0. Overpotential on a medium-voltage breaker power circuit, and dielectric withstand on switchgear above 1000 V **← answer**
-- 1. Specific gravity of every flooded cell
-- 2. A visual check that the enclosure is clean
-- 3. Recording float voltage to two decimals
-
-**Citation:** NFPA 70B-2026, Tables 15.4.5, 12.3.5, and 13.3.5
-
-Reviewer: VERIFIED or FIX
-
-## safety-085 (II / component) {#safety-085}
-
-<!-- q:safety-085 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 Table 12.3.5 for switchgear includes ground resistance, bonding, insulation resistance, and protective tests. Above 1000 V it also offers:
-
-- 0. Enhanced dielectric withstand and online partial discharge **← answer**
-- 1. A required dissolved-gas sample of the bus
-- 2. Specific gravity of the switchgear
-- 3. A turns-ratio test of the enclosure
-
-**Citation:** NFPA 70B-2026, Table 12.3.5
-
-Reviewer: VERIFIED or FIX
-
-## safety-086 (III / component) {#safety-086}
-
-<!-- q:safety-086 -->
-
-**Bank verified flag:** true
-
-Which test is listed for a panelboard in NFPA 70B-2026 Table 13.3.5?
-
-- 0. Main-bus insulation resistance, and an enhanced insulation-resistance test of control wiring **← answer**
-- 1. Vacuum integrity of a 15 kV bottle
-- 2. Dissolved gas in the panel oil
-- 3. Fall-of-potential of the service ground rod as the only panel test
-
-**Citation:** NFPA 70B-2026, Table 13.3.5
-
-Reviewer: VERIFIED or FIX
-
-## xfmr-060 (II / component) {#xfmr-060}
-
-<!-- q:xfmr-060 -->
-
-**Bank verified flag:** true
-
-A dry-type transformer maintenance electrical list in NFPA 70B-2026 can include insulation resistance, excitation, power factor, and turns ratio. It does not include:
-
-- 0. A dissolved-gas sample of a liquid that is not there **← answer**
-- 1. Winding resistance
-- 2. Connection resistance
-- 3. Partial discharge, which the table allows by construction
-
-**Citation:** NFPA 70B-2026, Table 11.3.5
-
-Reviewer: VERIFIED or FIX
-
-## batt-012 (III / systems) {#batt-012}
-
-<!-- q:batt-012 -->
-
-**Bank verified flag:** true
-
-Valve-regulated lead-acid performance in NFPA 70B-2026 Table 36.2, conditions 1, 2, and 3, is:
-
-- 0. 24, 24, and 12 months **← answer**
-- 1. 60, 60, and 12 months, the vented performance row
-- 2. 12, 12, and 1 month, the vented float-voltage row
-- 3. 36, 36, and 12 months, the storage-system performance row
-
-**Citation:** NFPA 70B-2026, Table 36.2
-
-Reviewer: VERIFIED or FIX
-
-## emg-013 (II / component) {#emg-013}
-
-<!-- q:emg-013 -->
-
-**Bank verified flag:** true
-
-A test that is NOT part of caring for a transfer switch under NFPA 70B-2026 Table 39.3.5 is:
-
-- 0. Operating the transfer under load
-- 1. Proving the bypass or isolation mechanism when the switch has one
-- 2. Timing the transfer sequence
-- 3. A dissolved-gas analysis of the switch **← answer**
-
-**Citation:** NFPA 70B-2026, Table 39.3.5
-
-Reviewer: VERIFIED or FIX
-
-## relay-070 (III / component) {#relay-070}
-
-<!-- q:relay-070 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 Table 35.3.5 lists pickup and three-point timing for protective relays. What it does not list is:
-
-- 0. A numeric timing tolerance you may invent **← answer**
-- 1. Restraint or directional checks where the relay has them
-- 2. Input and output checks
-- 3. An electromechanical zero check
-
-**Citation:** NFPA 70B-2026, Table 35.3.5
-
-Reviewer: VERIFIED or FIX
-
-## cable-024 (II / component) {#cable-024}
-
-<!-- q:cable-024 -->
-
-**Bank verified flag:** true
-
-Very-low-frequency testing, as NFPA 70B-2026 Table 18.3.5 uses the term for cable above 1000 V, means a frequency:
-
-- 0. Below 1 Hz **← answer**
-- 1. 60 Hz, called very low because the voltage is reduced
-- 2. The same as a DC insulation-resistance test
-- 3. Above 300 Hz
-
-**Citation:** NFPA 70B-2026, Table 18.3.5
-
-Reviewer: VERIFIED or FIX
-
-## xfmr-061 (III / systems) {#xfmr-061}
-
-<!-- q:xfmr-061 -->
-
-**Bank verified flag:** true
-
-When the manufacturer is silent, NFPA 70B-2026 puts transformer tests other than the visual inspection and the fluid sample on:
-
-- 0. 60, 36, and 12 months **← answer**
-- 1. 12, 12, and 6 months, the same as the oil sample
-- 2. 12, 6, and 3 months, the transfer-switch visual row
-- 3. Before each use
-
-**Citation:** NFPA 70B-2026, Table 11.2
-
-Reviewer: VERIFIED or FIX
-
-## gnd-014 (II / component) {#gnd-014}
-
-<!-- q:gnd-014 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 chapter 20 does not give one earth-resistance number that every electrode must meet. The tests it does list include:
-
-- 0. Fall-of-potential, point-to-point bonding, and connection resistance **← answer**
-- 1. A required maximum of 1 ohm for every site
-- 2. Inverse-time trip at 300 percent
-- 3. Oil acidity
-
-**Citation:** NFPA 70B-2026, Table 20.3.5
-
-Reviewer: VERIFIED or FIX
-
-## mvbr-011 (III / systems) {#mvbr-011}
-
-<!-- q:mvbr-011 -->
-
-**Bank verified flag:** true
-
-Low-voltage and medium-voltage breakers in NFPA 70B-2026, when the manufacturer gives no interval, both fall on:
-
-- 0. 60, 36, and 12 months **← answer**
-- 1. 12, 6, and 3 months
-- 2. The vented-battery float row of 12, 12, and 1 month
-- 3. Before each use
-
-**Citation:** NFPA 70B-2026, chapter 15
-
-Reviewer: VERIFIED or FIX
-
-## emg-014 (III / systems) {#emg-014}
-
-<!-- q:emg-014 -->
-
-**Bank verified flag:** true
-
-When the manufacturer is silent, NFPA 70B-2026 Table 32.2 puts battery-energy-storage performance, conditions 1, 2, and 3, at:
-
-- 0. 36, 36, and 12 months **← answer**
-- 1. 12, 12, and 1 month, the vented float-voltage row
-- 2. 24, 24, and 12 months, the valve-regulated cell performance row
-- 3. Before each use
-
-**Citation:** NFPA 70B-2026, Table 32.2
-
-Reviewer: VERIFIED or FIX
-
-## safety-087 (II / systems) {#safety-087}
-
-<!-- q:safety-087 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 visual inspection of substations and switchgear, conditions 1, 2, and 3, is:
-
-- 0. 12, 12, and 6 months **← answer**
-- 1. 60, 36, and 12 months, which is the row for the other switchgear tasks
-- 2. 12, 6, and 3 months
-- 3. 60, 36, and 36 months
-
-**Citation:** NFPA 70B-2026, chapter 12
-
-Reviewer: VERIFIED or FIX
-
-## brkr-034 (III / component) {#brkr-034}
-
-<!-- q:brkr-034 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 Table 15.3.5 splits molded-case breaker columns at:
-
-- 0. Frames of 225 A and below versus larger frames, without printing trip-time seconds **← answer**
-- 1. A 1000 V versus 69 kV insulation test
-- 2. Vented versus valve-regulated cells
-- 3. Online versus offline thermography
-
-**Citation:** NFPA 70B-2026, Table 15.3.5
-
-Reviewer: VERIFIED or FIX
-
-## xfmr-062 (II / component) {#xfmr-062}
-
-<!-- q:xfmr-062 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 inspection of a liquid-filled transformer includes level, pressure, and relief devices. A dry type instead emphasizes:
-
-- 0. The same oil sample, because every transformer has fluid
-- 1. Connections, cooling, grounding impedance, and the enclosure, without a fluid sample **← answer**
-- 2. Specific gravity of the windings
-- 3. A transfer-switch bypass test
-
-**Citation:** NFPA 70B-2026, 11.3.1
-
-Reviewer: VERIFIED or FIX
-
-## safety-088 (III / component) {#safety-088}
-
-<!-- q:safety-088 -->
-
-**Bank verified flag:** true
-
-Online partial discharge on switchgear above 1000 V, in NFPA 70B-2026, is:
-
-- 0. An online test, done while the gear is connected to its supply **← answer**
-- 1. An offline overpotential test of control wiring tied to solid-state parts
-- 2. A specific-gravity test
-- 3. Required on every panelboard
-
-**Citation:** NFPA 70B-2026, Table 12.3.5 and 8.3
-
-Reviewer: VERIFIED or FIX
-
-## safety-089 (II / systems) {#safety-089}
-
-<!-- q:safety-089 -->
-
-**Bank verified flag:** true
-
-Panelboards and switchboards in NFPA 70B-2026, when the manufacturer is silent, are maintained on:
-
-- 0. 60, 36, and 12 months **← answer**
-- 1. 12, 6, and 3 months
-- 2. The grounding electrical row of 60, 36, and 36 months
-- 3. 12, 12, and 1 month
-
-**Citation:** NFPA 70B-2026, chapter 13
-
-Reviewer: VERIFIED or FIX
-
-## emg-015 (II / component) {#emg-015}
-
-<!-- q:emg-015 -->
-
-**Bank verified flag:** true
-
-Servicing a transfer switch under NFPA 70B-2026 includes manual operation, bolted connections, and interlocks. Those are not the same item as:
-
-- 0. The electrical list of insulation resistance, operators, sequence, and operation under load **← answer**
-- 1. A job you may skip if the visual interval has not come due
-- 2. Something the chapter assigns to a relay timing test
-- 3. A dissolved-gas sample
-
-**Citation:** NFPA 70B-2026, 39.3.4 and Table 39.3.5
-
-Reviewer: VERIFIED or FIX
-
-## relay-071 (II / component) {#relay-071}
-
-<!-- q:relay-071 -->
-
-**Bank verified flag:** true
-
-NFPA 70B-2026 relay inspection includes settings checked against:
-
-- 0. The coordination study **← answer**
-- 1. The cable very-low-frequency menu
-- 2. A battery specific-gravity sample
-- 3. Table 15.3.5 trip time, which 70B does not print
-
-**Citation:** NFPA 70B-2026, Table 35.3.1
-
-Reviewer: VERIFIED or FIX
-
+- ir-007 (ETT) — VERIFIED. Reviewer: neta field ref, Nov 12 2026. Citation: Engineering fundamentals; ANSI/NETA ATS-2025 7.13.B.2 and 7.2.2
+- math-023 (Level I) — VERIFIED. Reviewer: neta field ref, Nov 12 2026. Citation: Engineering fundamentals (Ohm's law)
