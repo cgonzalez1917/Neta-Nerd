@@ -37,7 +37,7 @@ A merge to `main` republishes the site. Contributors do not push to `main`. Open
 
 The Home page list is headlines only: title, source name, date, and a link. Article text is not stored.
 
-`functions/api/news.js` runs on Cloudflare Pages. It reads public RSS feeds (NETA World Journal, plus EC&M, T&D World, and Safety+Health, kept only when the title is about testing, maintenance, arc flash, or the same kind of work). It keeps the newest six and caches that list for 12 hours, so the panel refreshes at least daily. No API key and no secret.
+`functions/api/news.js` runs on Cloudflare Pages. It reads public RSS feeds (NETA World Journal, plus EC&M, T&D World, and Safety+Health, kept only when the title is about testing, maintenance, arc flash, or the same kind of work). It keeps the newest six and caches that list until the next 2:00 AM Pacific time. No API key and no secret.
 
 `data/news.json` is a saved copy. The page uses it when `/api/news` is missing or empty, and says so. Refresh that file with `node scripts/fetch-news.mjs` and open a pull request. Do not commit it straight to `main`.
 
