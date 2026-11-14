@@ -211,6 +211,8 @@ This bank's safety page is written to 70E-2024. These are 2027 items the notes s
 
 *Level: II*
 
+Background: not on the ETT-2026 reference list.
+
 - **NFPA 75-2024.** The IT room disconnect also separates a room UPS battery from the load (11.5.1). Replacement lithium-ion UPS batteries must match the UPS listing (11.5.4.2).
 - **NFPA 76-2024.** Battery-room fan failure and hydrogen alarms send a supervisory signal, plus local warning if staff are at risk (8.4.2.2.5 to 8.4.2.2.6).
 - **NFPA 850-2026.** Separation of outdoor oil transformers is set in the fire protection design basis document, using firewalls or spacing (6.1.4).

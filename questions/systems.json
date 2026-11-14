@@ -571,7 +571,7 @@
     ],
     "answer": 0,
     "explanation": "The detector alarms at a quarter of the lowest lower flammable limit for the gas and closes the fuel supply at 60%. Put the detectors where leaks are likely for the fuel used. Source: NFPA 853-2025, 8.1.5.4 to 8.1.5.7.",
-    "reference": "NFPA 853-2025, 8.1.5.4 to 8.1.5.7",
+    "reference": "NFPA 853-2025, 8.1.5.4 to 8.1.5.7 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#other-nfpa"
   },
@@ -589,7 +589,7 @@
     ],
     "answer": 3,
     "explanation": "Outdoor oil-insulated transformers are kept apart from each other and from buildings by fire barriers, distance or another approved method. The analysis is recorded in the fire protection design basis document, and the table gives the 2-hour firewall or spacing options. Source: NFPA 850-2026, 6.1.4.1 to 6.1.4.3 and Table 6.1.4.3.",
-    "reference": "NFPA 850-2026, 6.1.4.1 to 6.1.4.3 and Table 6.1.4.3",
+    "reference": "NFPA 850-2026, 6.1.4.1 to 6.1.4.3 and Table 6.1.4.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#other-nfpa"
   },

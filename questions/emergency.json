@@ -1417,7 +1417,7 @@
     ],
     "answer": 0,
     "explanation": "The room disconnect has to kill power to the electronic equipment, including the UPS output fed from batteries. Opening the input alone leaves the load fed from the battery. Small sources, 750 VA or less, have an exception. Source: NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2.",
-    "reference": "NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2",
+    "reference": "NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#other-nfpa"
   },
