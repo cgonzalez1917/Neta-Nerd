@@ -626,11 +626,94 @@
     return typeof svg === "string" && svg.indexOf("<svg") === 0 ? svg : "";
   }
 
+  var newsToken = 0;
+  var NEWS_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  function formatNewsDate(iso) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    return NEWS_MONTHS[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear();
+  }
+
+  function newsItemOk(item) {
+    if (!item) return false;
+    if (typeof item.title !== "string" || !item.title.trim()) return false;
+    if (typeof item.href !== "string" || item.href.indexOf("https://") !== 0 || /\s/.test(item.href)) return false;
+    if (typeof item.source !== "string" || !item.source.trim()) return false;
+    if (typeof item.date !== "string" || isNaN(new Date(item.date).getTime())) return false;
+    return true;
+  }
+
+  function newsList(items) {
+    return h("ul", { class: "news-list" }, items.map(function (item) {
+      var when = formatNewsDate(item.date);
+      var meta = item.source;
+      if (when) meta = meta + " · " + when;
+      return h("li", {},
+        h("p", { class: "news-title" },
+          h("a", { href: item.href, target: "_blank", rel: "noopener noreferrer" }, item.title)
+        ),
+        h("p", { class: "news-src" }, meta)
+      );
+    }));
+  }
+
+  function fillNews(slot, token) {
+    function paint(payload, saved) {
+      if (token !== newsToken) return;
+      var items = ((payload && payload.items) || []).filter(newsItemOk).slice(0, 8);
+      slot.replaceChildren();
+      if (!items.length) {
+        slot.append(h("p", { class: "news-empty" }, "Headlines are not available right now. Check back later."));
+        return;
+      }
+      slot.append(newsList(items));
+      if (saved) slot.append(h("p", { class: "news-empty" }, "Showing saved headlines."));
+    }
+    function saved() {
+      return fetch("data/news.json").then(function (r) {
+        if (!r.ok) throw new Error("saved");
+        return r.json();
+      }).then(function (data) {
+        paint(data, true);
+      }).catch(function () {
+        paint(null, false);
+      });
+    }
+    var ctrl = typeof AbortController === "function" ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 15000);
+    fetch("api/news", ctrl ? { signal: ctrl.signal } : undefined).then(function (r) {
+      if (!r.ok) throw new Error("news");
+      return r.json();
+    }).then(function (data) {
+      if (!((data && data.items) || []).some(newsItemOk)) throw new Error("empty");
+      clearTimeout(timer);
+      paint(data, false);
+    }).catch(function () {
+      clearTimeout(timer);
+      return saved();
+    });
+  }
+
+  function newsPanel() {
+    var token = ++newsToken;
+    var slot = h("div", { "aria-live": "polite" },
+      h("p", { class: "news-empty" }, "Loading headlines…")
+    );
+    fillNews(slot, token);
+    return h("section", { class: "panel news", "aria-labelledby": "news-h" },
+      h("header", { class: "panel-h" },
+        h("h2", { id: "news-h" }, "NETA News")
+      ),
+      slot
+    );
+  }
+
   function renderFieldDesk() {
     document.title = "Home · Neta Nerd";
     appendResumeBanners(["timed", "mock", "practice", "missed"]);
     var data = placeholderData();
-    if (!data || !data.news || !data.deck) {
+    if (!data || !data.deck) {
       app.append(h("h1", {}, "Field desk"), h("p", {}, "The placeholder file did not load."));
       return;
     }
@@ -710,18 +793,7 @@
         h("span", { class: "btn primary" }, "Open Studying")
       ),
       h("div", { class: "desk" },
-        h("section", { class: "panel news", "aria-labelledby": "news-h" },
-          h("header", { class: "panel-h" },
-            h("h2", { id: "news-h" }, data.news.heading || "NETA News"),
-            exampleTag(data.news.example)
-          ),
-          h("ul", { class: "news-list" }, (data.news.items || []).map(function (item) {
-            return h("li", {},
-              h("p", { class: "news-title" }, item.title || ""),
-              h("a", { class: "news-src", href: item.href || "#" }, item.source || "")
-            );
-          }))
-        ),
+        newsPanel(),
         deck
       )
     );

@@ -33,6 +33,16 @@ Connect the GitHub repository `cgonzalez1917/Neta-Nerd`.
 
 A merge to `main` republishes the site. Contributors do not push to `main`. Open a pull request from a `bot/<name>-<topic>` branch and Cristian merges it. See `CONTRIBUTING.md`. There is no Node build and no environment variable.
 
+## Home news
+
+The Home page list is headlines only: title, source name, date, and a link. Article text is not stored.
+
+`functions/api/news.js` runs on Cloudflare Pages. It reads public RSS feeds (NETA World Journal, plus EC&M, T&D World, and Safety+Health, kept only when the title is about testing, maintenance, arc flash, or the same kind of work). It keeps the newest six and caches that list for 12 hours, so the panel refreshes at least daily. No API key and no secret.
+
+`data/news.json` is a saved copy. The page uses it when `/api/news` is missing or empty, and says so. Refresh that file with `node scripts/fetch-news.mjs` and open a pull request. Do not commit it straight to `main`.
+
+Pages serves the function from the `functions` directory with the existing empty build command and output directory `/`. If a preview returns 404 for `/api/news`, Cloudflare’s static-site note is to set the build command to `exit 0` and leave the output directory as `/`. That is not a dependency and not a secret. Until then, the saved file still fills the panel.
+
 ## How a drill works
 
 - **Practice** filters by level, domain (safety, theory, component, systems), and topic. Level II starts selected. Feedback, the reference, and a study link show as soon as you check an answer.

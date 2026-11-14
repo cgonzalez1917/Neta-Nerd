@@ -1,7 +1,6 @@
-/* Placeholder copy for the field desk and the tools page.
-   This is the only file to edit when real headlines, slides, a price,
-   or tool listings replace the examples.
-   Nothing in here is a live feed. News links stay "#" until a real URL exists.
+/* Placeholder copy for the field desk carousel and the tools page.
+   News headlines are not stored here. The home page loads them from
+   api/news, then from data/news.json if that request fails.
    The manuals page is not in this file. It is a coming-soon notice. */
 (function () {
   "use strict";
@@ -12,32 +11,6 @@
   }
 
   window.NETA_PLACEHOLDERS = {
-    news: {
-      example: true,
-      heading: "NETA News",
-      items: [
-        {
-          title: "EXAMPLE: scheduled outage window posted for next week",
-          source: "EXAMPLE · Example source",
-          href: "#"
-        },
-        {
-          title: "EXAMPLE: industry bulletin on test-lead inspection",
-          source: "EXAMPLE · Example source",
-          href: "#"
-        },
-        {
-          title: "EXAMPLE: construction note — bus retrofit at a plant",
-          source: "EXAMPLE · Example source",
-          href: "#"
-        },
-        {
-          title: "EXAMPLE: training date announced for a regional meeting",
-          source: "EXAMPLE · Example source",
-          href: "#"
-        }
-      ]
-    },
     deck: {
       example: true,
       heading: "Electrical construction",
