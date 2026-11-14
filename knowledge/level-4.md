@@ -31,7 +31,7 @@ These study pages were extended for the material added in later question batches
 - [Natural ester fluid](#/study/transformers.md/natural-ester-fluid-ieee-c57-147-2018), [sampling](#/study/transformers.md/sampling-insulating-liquid-astm-d923-07), and [through-fault duration](#/study/transformers.md/through-fault). [SFRA](#/study/transformers.md/sfra) for mechanical condition.
 - [Transformer paralleling and phasing](#/study/apparatus.md/paralleling).
 - [Commissioning](#/study/apparatus.md/commissioning) and [the commissioning plan](#/study/apparatus.md/commissioning-plan), and [studies](#/study/apparatus.md/studies), [applying study data](#/study/apparatus.md/studies-apply), and [study review after a misoperation](#/study/apparatus.md/studies-events).
-- [Fuse application](#/study/apparatus.md/fuse-ratings): overload versus short circuit, current limitation, Class R, and series-specific coordination ratios.
+- Background only: [fuse application](#/study/apparatus.md/fuse-ratings) (overload versus short circuit, current limitation, Class R, and series-specific coordination ratios) sits in the Level III outline (ETT-2026 8.3), not the Level IV one. Review it, but do not count it as a Level IV topic.
 - [Ground-fault protection tests](#/study/grounding.md/gfp): pickup window, timing, reduced control voltage, and sensor routing.
 - [Power and combined loads](#/study/math.md/power), and [harmonics in the field](#/study/math.md/harmonics).
 - [Complex lockout and job planning](#/study/safety.md/loto-complex), with the process order in [process order](#/study/safety.md/loto) and the arc-flash notes in [arc flash](#/study/safety.md/arc-flash).

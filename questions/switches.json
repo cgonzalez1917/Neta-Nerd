@@ -379,7 +379,7 @@
   },
   {
     "id": "sw-022",
-    "level": "IV",
+    "level": "III",
     "topic": "switches-fuses",
     "domain": "component",
     "question": "A feeder is running well above its intended load because too many motors were added, but the insulation has not broken down. A second event is a phase-to-phase fault on the same feeder. How does the Littelfuse fundamentals paper distinguish those two overcurrents?",
@@ -397,7 +397,7 @@
   },
   {
     "id": "sw-023",
-    "level": "IV",
+    "level": "III",
     "topic": "switches-fuses",
     "domain": "component",
     "question": "A current-limiting fuse is being applied to cut let-through energy on a high available-fault bus. How quickly does the Littelfuse paper say a current-limiting fuse opens and clears a short circuit, and what energy measure is being reduced?",
@@ -415,7 +415,7 @@
   },
   {
     "id": "sw-024",
-    "level": "IV",
+    "level": "III",
     "topic": "switches-fuses",
     "domain": "component",
     "question": "A 480 V ac bus also has a 250 V dc control circuit, and a crew wants to use the same ac-rated fuses in the dc circuit because the ac voltage rating is higher. What does the Littelfuse paper require?",
@@ -433,7 +433,7 @@
   },
   {
     "id": "sw-025",
-    "level": "IV",
+    "level": "III",
     "topic": "switches-fuses",
     "domain": "component",
     "question": "A new main switchboard has 125 kA available at the line terminals. The next standard fuse interrupting ratings above that value are 200 kA, and some UL listed fuses go higher still. What interrupting-rating rule does the paper apply, including the NEC 110.9 point it quotes?",
@@ -451,7 +451,7 @@
   },
   {
     "id": "sw-026",
-    "level": "IV",
+    "level": "III",
     "topic": "switches-fuses",
     "domain": "component",
     "question": "A motor branch will use a time-delay Class R fuse. What current and time test does the Littelfuse paper say a time-delay Class R fuse must meet, and how do Class RK1 and RK5 differ in current limitation?",
@@ -469,7 +469,7 @@
   },
   {
     "id": "sw-027",
-    "level": "IV",
+    "level": "III",
     "topic": "switches-fuses",
     "domain": "component",
     "question": "A selectively coordinated fused service uses Littelfuse POWR-PRO and POWR-GARD fuses. A 400 A time-delay RK1 feeder will supply a 50 A time-delay RK5 branch. Using only the paper's coordination table for those series, is that pair coordinated, and what I-squared-t rule is the table built on?",

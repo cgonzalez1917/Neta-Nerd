@@ -121,7 +121,7 @@ Walking the installed scheme, not only the element, is in [walking relay logic](
 
 *Level: III*
 
-ATS 7.9.2 also wants the internal scheme logic walked against the owner's narrative or logic diagram, and the settings and the logic to match the latest engineered files (7.9.2.B.3 and C.3). Pickup and timing in isolation do not prove the scheme.
+ATS 7.9.2 also wants the internal scheme logic walked against the owner's narrative or logic diagram, and the settings and the logic to match the latest engineered files (7.9.2.B.5.3, A.8, and C.3). Pickup and timing in isolation do not prove the scheme.
 
 Proving the scheme, not only the element, is a logic check. A trip programmed as 50 AND 67, with an 86 contact in series, needs every term true, including that 86 contact in the trip path. If the elements assert in the test set and the breaker stays closed because a wiring error held the 86 contact open, the installation is not accepted. Walk the internal logic against the owner's narrative or diagram before you sign the relay off (ATS-2025 7.9.2).
 
@@ -271,7 +271,7 @@ Sources: IEEE C37.230-2020, 5.2, 6.1.1, 6.1.3, 6.2, and 6.2.1; IEEE C37.112-2018
 **Coordinating time interval (CTI).** IEEE 242 gives typical minimum margins between curves.
 
 - Relay to relay, induction disk: 0.30 s when field calibrated, 0.35 s if not. Static relays: 0.20 s calibrated, 0.25 s if not.
-- Relay backing up a fuse: start from the fuse total clearing time and add 0.22 s (induction disk) or 0.12 s (static). There is no breaker time in this margin because the fuse is the device that clears.
+- Relay backing up a fuse: start from the fuse total clearing time and add 0.22 s (induction disk) or 0.12 s (static). There is no breaker time in this margin because the fuse is the device that clears. IEEE 242 Table 15-3 assumes relay settings that were field-tested and calibrated.
 
 Example: two VI relays at the same fault. The downstream relay, factor 0.5 at M = 15, is `0.5 x (19.61 / 224 + 0.491) ≈ 0.289 s`. The upstream relay, factor 0.4 at M = 5, is `0.4 x 1.31 ≈ 0.523 s`. The gap is about 0.23 s, which meets a 0.20 s static margin but not a 0.30 s induction-disk margin.
 

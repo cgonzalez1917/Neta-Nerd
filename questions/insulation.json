@@ -121,8 +121,8 @@
       "The copper 234.5 formula, because it is a winding"
     ],
     "answer": 1,
-    "explanation": "Table 100.11 is the one-minute machine table at 40 \u00b0C and points at Table 100.14. Use Table 100.14.2 for that 40 \u00b0C correction. Table 100.14.1 corrects to 20 \u00b0C for the apparatus tables. The column headings on 100.14.2 name other apparatus, so the machine use follows the 40 \u00b0C pointer in Table 100.11. The copper formula corrects conductor resistance, not megohms.",
-    "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2",
+    "explanation": "Table 100.11 is the one-minute machine table at 40 \u00b0C, and its note points to Table 100.14. Table 100.14.1 corrects to 20 \u00b0C for the apparatus tables, so it is the wrong base here. Table 100.14.2 is the 40 \u00b0C table, although its columns are headed for oil-immersed and solid insulation rather than rotating machines; the machine practice behind the 40 \u00b0C base is the IEEE 43 temperature correction. The copper formula corrects conductor resistance, not megohms.",
+    "reference": "ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2; ref. IEEE 43-2013, 6.3",
     "verified": true,
     "kb": "insulation.md#temp-correction"
   },

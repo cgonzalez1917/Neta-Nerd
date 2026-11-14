@@ -1688,8 +1688,8 @@
       "300 kA"
     ],
     "answer": 0,
-    "explanation": "On a 1 MVA base the source is 1/250 = 0.004 pu, so the total is 0.0575 + 0.004 = 0.0615 pu. FLA = 1000/(1.732 x 0.48) = 1203 A, and 1203 / 0.0615 = 19.6 kA. 20.9 kA ignores the source (infinite bus). 22.5 kA comes from subtracting the source instead of adding it. Source: IEEE C57.12.00-2021, 7.1.4.3; Engineering fundamentals (per-unit impedance).",
-    "reference": "IEEE C57.12.00-2021, 7.1.4.3; Engineering fundamentals (per-unit impedance)",
+    "explanation": "On a 1 MVA base the source is 1/250 = 0.004 pu, so the total is 0.0575 + 0.004 = 0.0615 pu. FLA = 1000/(1.732 x 0.48) = 1203 A, and 1203 / 0.0615 = 19.6 kA. 20.9 kA ignores the source (infinite bus). 22.5 kA comes from subtracting the source instead of adding it. This is a study number: a 1000 kVA three-phase unit is Category II in C57.12.00, and its withstand rating uses the transformer impedance alone. Source: Engineering fundamentals (per-unit impedance).",
+    "reference": "Engineering fundamentals (per-unit impedance); ref. IEEE C57.12.00-2021, Table 11 (category)",
     "verified": true,
     "kb": "math.md#per-unit"
   },

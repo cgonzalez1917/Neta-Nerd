@@ -23,7 +23,7 @@ Printed on that official sheet:
 - Balanced wye: line current = phase current, and line voltage = `1.732 ×` phase voltage
 - `1 hp = 746 W`
 - Torque: `33,000 × hp / (6.28 × rpm)` (pound-feet)
-- Resistance per 1000 ft: measured resistance × (length of the run in feet / 1000)
+- Resistance per 1000 ft: measured resistance × (length of the run in feet / 1000) (label as printed; see [run length](#/study/math.md/run-length) for which way it scales)
 - `C = VAR / (2πf V²)`
 - `kVAR = kV² × 1000 / XC`
 - Capacitor kvar at another voltage: `kVAR1 = kVAR2 × (kV1 / kV2)²`
@@ -79,7 +79,7 @@ Balanced wye: line current equals phase current, and line voltage is 1.732 times
 
 Torque in pound-feet: `33,000 × hp / (6.28 × rpm)`. The 6.28 stands in for 2π. At 10 hp and 1800 rpm, `330,000 / (6.28 × 1800) ≈ 29.2 lb-ft`.
 
-Resistance and length of run, as printed: resistance × (length of the run in feet / 1000). Read it as scaling a per-1000-ft value up or down to a run: 0.20 Ω per 1000 ft over a 500 ft run is `0.20 × (500 / 1000) = 0.10 Ω`. To go the other way, from a measured run to a per-1000-ft value, multiply by 1000 / length. A 500 ft run that measures 0.20 Ω is 0.40 Ω per 1000 ft. See [run length](#/study/math.md/run-length).
+Resistance and length of run: the sheet labels the result resistance per 1000 ft and prints resistance × (length of the run in feet / 1000). Taken literally that label is upside down, so read the right side as scaling a per-1000-ft value up or down to a run: 0.20 Ω per 1000 ft over a 500 ft run is `0.20 × (500 / 1000) = 0.10 Ω`. To go the other way, from a measured run to a per-1000-ft value, multiply by 1000 / length. A 500 ft run that measures 0.20 Ω is 0.40 Ω per 1000 ft. See [run length](#/study/math.md/run-length).
 
 Capacitance from reactive power: `C = VAR / (2πf V²)`, farads. A 10,000 var capacitor at 480 V and 60 Hz is about 115 µF. The companion line is `kVAR = kV² × 1000 / XC`. At 0.48 kV and `XC = 23.04 Ω`, that is `0.2304 × 1000 / 23.04 = 10 kvar`.
 
@@ -261,7 +261,7 @@ Worked: 480 V rms peaks at 679 V. A scope trace of 340 V peak-to-peak is 170 V p
 
 Conductor resistance is proportional to length. Check the units every time you use the resistance-and-length line: a longer run must read more ohms.
 
-- From a per-1000-ft value to a run: `R_run = R_per_1000ft × (length / 1000)`. 0.20 Ω per 1000 ft over 2,500 ft is 0.50 Ω. This is the arrangement the sheet's line prints.
+- From a per-1000-ft value to a run: `R_run = R_per_1000ft × (length / 1000)`. 0.20 Ω per 1000 ft over 2,500 ft is 0.50 Ω. The sheet's right-hand side has this form, even though its label says per 1000 ft.
 - From a measured run to a per-1000-ft value: `R_per_1000ft = R_measured × (1000 / length)`. A 2,000 ft shield that measures 30 Ω is 15 Ω per 1000 ft.
 
 If an answer says a long run reads less than its per-1000-ft value, the fraction is upside down.
@@ -276,7 +276,7 @@ If an answer says a long run reads less than its per-1000-ft value, the fraction
 
 ATS section 6.6 is the harmonic study. The report compares calculated voltage and current distortion with IEEE 519 and calls out anything over those limits. It also wants the impedance-versus-frequency plot, so resonances are visible, and a check of transformer capability under the nonsinusoidal current using the method in IEEE C57.110.
 
-Field work includes recognizing the effects, not only reading the study (IEEE 519-2022; IEEE 141-1993 Ch. 8). Nonlinear loads, such as a large rectifier, inject harmonic current. Capacitors have falling impedance with frequency, so they can absorb a large share of that current and overheat. Transformers on the same bus see extra heating as well, hotter than the kVA load would suggest, and voltage waveforms can look flat-topped. Temporary monitoring should stay in place long enough to characterize the condition, and a study or mitigation should come before anyone adds more capacitors, which can make a resonance worse.
+Field work includes recognizing the effects, not only reading the study (IEEE 519-2022; IEEE 141-1993 Ch. 9 and 8.14). Nonlinear loads, such as a large rectifier, inject harmonic current. Capacitors have falling impedance with frequency, so they can absorb a large share of that current and overheat. Transformers on the same bus see extra heating as well, hotter than the kVA load would suggest, and voltage waveforms can look flat-topped. Temporary monitoring should stay in place long enough to characterize the condition, and a study or mitigation should come before anyone adds more capacitors, which can make a resonance worse.
 
 IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common coupling, not on each drive or each panel. The weekly short-time values use the table; the very-short-time daily values are allowed up to one and a half times those table values. A bus from just over 1 kV through 69 kV is the row whose total voltage distortion limit is 5 percent. Lower voltage buses are allowed more distortion. Higher voltage buses are allowed less. Do not paste the whole table into a report; use the row for the voltage at the point of common coupling.
 

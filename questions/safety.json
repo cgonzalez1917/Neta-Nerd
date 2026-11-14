@@ -1036,7 +1036,7 @@
     "question": "During a CT excitation test you take the voltage above the knee. How long should the CT stay energized up there?",
     "choices": [
       "For the whole lunch break, so the curve can settle",
-      "Any longer than it takes to record the points",
+      "No longer than it takes to record the points",
       "Until the primary is reconnected to the bus",
       "At rated primary current for 30 minutes"
     ],
@@ -1474,7 +1474,7 @@
     ],
     "answer": 0,
     "explanation": "Overpotential on a medium-voltage breaker power circuit, and dielectric withstand on switchgear above 1000 V, are enhanced tests rather than the basic insulation-resistance test. The caution about solid-state parts belongs to an overpotential test of control wiring, not to the power-circuit test. The chapters do not print a pass/fail kilovolt for those enhanced tests.",
-    "reference": "NFPA 70B-2026, Tables 15.4.5, 12.3.5, and 13.3.5",
+    "reference": "NFPA 70B-2026, Tables 15.4.5 and 12.3.5",
     "verified": true,
     "kb": "safety.md#nfpa70b"
   },
@@ -2877,8 +2877,8 @@
       "Leave the transfer relays to the owner to try after energization"
     ],
     "answer": 1,
-    "explanation": "ATS treats control-power transformer tests and control-transfer-relay function as separate checks. Secondary voltage can be right while a transfer relay fails to switch sources, leaving a dead control bus on loss of one CPT. The transfer relays must perform as designed before acceptance. Source: ANSI/NETA ATS-2025, 7.1.1.B.7.5 and 7.1.1.D.8.5.",
-    "reference": "ANSI/NETA ATS-2025, 7.1.1.B.7.5 and 7.1.1.D.8.5",
+    "explanation": "ATS treats control-power transformer tests and control-transfer-relay function as separate checks. Secondary voltage can be right while a transfer relay fails to switch sources, leaving a dead control bus on loss of one CPT. The transfer relays must perform as designed before acceptance. Source: ANSI/NETA ATS-2025, 7.1.1.B.8.5 and 7.1.1.D.8.5.",
+    "reference": "ANSI/NETA ATS-2025, 7.1.1.B.8.5 and 7.1.1.D.8.5",
     "verified": true,
     "kb": "apparatus.md#switchgear"
   },

@@ -18,7 +18,7 @@ Nothing in the question bank is a work permit. NFPA 70E-2024 Article 110 is the 
 
 Conductors are not in that condition until the applicable requirements of 120.2 through 120.6 are done (110.2(C)). Until then, use practices that match the voltage and the energy.
 
-Before each job starts, a job safety plan and a job briefing are required (110.3(I) and 110.3(H)). The plan has to describe the job and the individual tasks, include a shock risk assessment that follows 130.4 when there is a shock hazard, and include an arc-flash risk assessment that follows 130.5.
+Before each job starts, a job safety plan and a job briefing are required (110.3(I)(1) and 110.3(I)(2)). The plan has to describe the job and the individual tasks, include a shock risk assessment that follows 130.4 when there is a shock hazard, and include an arc-flash risk assessment that follows 130.5.
 
 **Normal operation** of equipment is allowed without establishing that condition only when all of the exception’s conditions are true (110.2(B) Exception No. 1): installed properly, maintained properly, rated for the available fault current, used as labeled and as the manufacturer instructs, doors closed and secured, covers on and secured, and no evidence of impending failure (arcing, overheating, loose or bound parts, visible damage, deterioration, water). One miss, and it is not “normal operation.”
 

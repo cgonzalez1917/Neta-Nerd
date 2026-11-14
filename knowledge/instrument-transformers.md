@@ -123,7 +123,7 @@ Example: 600:5 C200 CT with 0.30 ohm winding, 150 m one way of #10 copper (taken
 3. A 12 kA fault is `12,000 / 120 = 100 A` secondary.
 4. Required voltage: `100 x 1.35 = 135 V`.
 
-**Step 2: compare to the class voltage.** The ratio of required to class voltage tells you how close to saturation you are. Here `135 / 200 ≈ 0.68`. A ratio of about one half or less is a comfortable target in the guide. Above that, expect some distortion on the worst faults.
+**Step 2: compare to the class voltage.** The ratio of required to class voltage tells you how close to saturation you are. Here `135 / 200 ≈ 0.68`. C37.110-2023 (4.5.2.2) notes that the knee point may sit anywhere from about 50 to 75 percent of the class voltage, and the aim is to keep the required voltage below the knee. A ratio near one half or less stays under the knee even on a low-knee CT. At 0.68 you may be past it, so expect some distortion on the worst faults.
 
 **Step 3: dc offset.** A fully offset fault needs more volts. With a resistive burden, the guide multiplies the ac requirement by `(1 + X/R)`.
 

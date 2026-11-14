@@ -228,8 +228,8 @@
       "Excitation knee at rated voltage"
     ],
     "answer": 1,
-    "explanation": "A handheld TTR applies a small voltage. It will catch a wrong tap or a reversed winding. It will not reproduce the factory accuracy test at 90, 100, and 110 percent voltage. ATS 7.10.2 still requires the ratio and the polarity check.",
-    "reference": "Valence, Potential transformer testing; ANSI/NETA ATS-2025 7.10.2",
+    "explanation": "A handheld TTR applies a small voltage. It will catch a wrong tap or a reversed winding. It will not prove the accuracy class, which C57.13 states over 90 to 110 percent of rated voltage at rated burden. ATS 7.10.2 still requires the ratio and the polarity check.",
+    "reference": "ANSI/NETA ATS-2025 7.10.2.B.2 and B.3; ref. IEEE C57.13-2016, 5.1 b)",
     "verified": true,
     "kb": "instrument-transformers.md#ratio"
   },
