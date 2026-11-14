@@ -1,6 +1,6 @@
 # Ratio and polarity {#ratio}
 
-*Levels: II, III*
+*Level: II*
 
 Current transformers, ATS 7.10.1. Voltage transformers, ATS 7.10.2. Insulation resistance of instrument transformers is held to Table 100.5, not to a guess.
 
@@ -17,25 +17,21 @@ A low-voltage TTR (tens of volts) does not fully excite a 15 kV VT core. The Rit
 
 Ratio verification is not an accuracy class test. For bushing CTs on a power transformer, secondary voltage injection is the practical field method: keep the voltage below the knee (a working band often quoted is about half to three-quarters of the knee), offset the frequency slightly from 60 Hz so station voltage does not add, and short the opposite winding so magnetizing impedance does not dominate. Open-circuit setups have been reported to miss by several percent. Short every CT secondary you are not testing. CTs inside a delta need the 1/3 or 2/3 compensation, or a short of only the matching low-voltage phase. That procedure is field practice from instrument-transformer work, not a sentence in ATS 7.10.1.
 
+## Level II {#instrument-transformers-level-ii}
+
+*Level: II*
+
 ## Excitation {#excitation}
 
-*Levels: II, III, IV*
+*Level: II*
 
 CT excitation (saturation) is compared with the manufacturer curve or IEEE C57.13.1 (ATS 7.10.1.D.4). You are looking for the knee, not for a turns ratio. A CT that saturates early under a fault delivers less secondary current than the relay was set for, so an overcurrent relay can be slow or blind, and a differential scheme can false-trip if the two CTs saturate differently on a through-fault. That is why percentage restraint exists.
 
-Measure burden and compare it with the CT rating (7.10.1.D.5). Extra cable and extra devices push the CT toward the knee.
-
-
-
-Knee point and saturation voltage are not the same number (IEEE C37.110-2023, Clause 3 and 4.3). Saturation voltage is read on a log-log excitation plot where the two straight stretches of the curve meet. The knee the guide uses, unless it says otherwise, is definition A: the 45-degree tangent on a square-decade plot. Definition B is the 10-percent voltage / 50-percent current marker. Those two knees are not interchangeable. On a square log-log plot, definition B sits higher, about 20% to 25% above definition A, and corresponds to a shallower tangent of about 13 degrees. Always confirm which definition a manufacturer or a setting sheet is using.
-
-C-class and T-class are not interchangeable when you try to compute ratio error from an excitation curve (4.4). Leakage flux is small enough on a C-class unit that the excitation characteristic can be used for that calculation. A T-class unit has enough leakage that IEEE C57.13 wants overcurrent ratio curves, and the ratio error has to come from a test, not from the excitation plot alone.
-
-Remanence shortens the time a CT stays unsaturated when the leftover flux has the same polarity as the fault transient (4.6.1 and Annex C). In the guide's C800, 1200:5 example on a 24 kA fully offset fault, time-to-saturation falls from 25 ms with a clean core, to 8.3 ms at 50% remanence, to 5 ms at 75% remanence, all at the same burden. Service measurements have found remanence approaching 80% of saturation flux. Opposite-polarity remanence can actually help. A small air gap can cut remanence to almost nothing without changing the relaying accuracy class (4.6.2). Large-gap, sometimes called linearized, cores have little or no remanence. Cold-rolled grain-oriented silicon steel, by contrast, can hold remanence up to that 80% figure.
+Measure burden and compare it with the CT rating (7.10.1.D.5). Extra cable and extra devices push the CT toward the knee. Knee definitions, C-class versus T-class, and remanence are in [excitation analysis](#/study/instrument-transformers.md/excitation-analysis).
 
 ## One ground {#ground}
 
-*Levels: II*
+*Level: II*
 
 ATS 7.10.1.B.9 and D.9, and the VT companion: the secondary circuit is grounded at one point, where the engineer showed it, consistent with IEEE C57.13.3. Two grounds circulate current and can move a differential off balance. Zero grounds let the secondary float.
 
@@ -43,7 +39,7 @@ Dielectric withstand, when the optional or required test applies, uses Table 100
 
 ## Common mistakes
 
-*Levels: II, III, IV*
+*Level: II*
 
 - Calling a 0.3% metering class “failed” because a handheld TTR at 8 V missed by 1%.
 - Leaving a second ground on a long CT run because both ends “should be safe.”
@@ -51,7 +47,7 @@ Dielectric withstand, when the optional or required test applies, uses Table 100
 
 ## CT field tests, what each one proves {#ct-field}
 
-*Levels: II, III, IV*
+*Level: II*
 
 ATS 7.10.1.B points to IEEE C57.13.1-2017 for the methods.
 
@@ -64,11 +60,57 @@ ATS 7.10.1.B points to IEEE C57.13.1-2017 for the methods.
 
 Demagnetize after any dc test, including a dc polarity kick or an ohmmeter check through a test switch. The voltage method drives the core into saturation with ac on the secondary and ramps the voltage smoothly to zero (5.1).
 
-Burden and the knee: a C-class rating is the secondary voltage the CT delivers to a standard burden at 20 times rated current within 10% error (IEEE C57.13-2016 6.4.1.3). A C100 CT with 1.5 Ω of total loop burden would need 100 A × 1.5 Ω = 150 V at 20 times rated, which is past its rating, so expect saturation on a big fault.
+Burden versus the C-class rating, and whether a given loop will saturate on a fault, is in [excitation analysis](#/study/instrument-transformers.md/excitation-analysis).
+
+## CT hazards {#ct-hazards}
+
+*Level: II*
+
+- **Open secondary.** IEEE C57.13-2016 6.7.1: never operate a CT with the secondary open, because hazardous peak voltages can develop. Conforming CTs only have to survive one minute open-circuited, and only where the open-circuit voltage stays at or below 3500 V peak. Above that, the user should consider a varistor or spark gap. Short at the shorting block before lifting a wire.
+- **Lifting the ground while the primary is energized.** C57.13.1 Annex A.1: dangerous voltage can appear on the secondary through electrostatic coupling even with no primary current.
+- **Breaking a dc polarity circuit.** C57.13.1 9.1: interrupting the battery can kick a dangerous voltage. Put a resistor near the winding's dc resistance across it first, or make and break with a hot stick or rubber gloves.
+- **Tapped windings.** Voltage on one tap section appears, scaled up, across the full winding (12.1). Don't hold voltage above the knee longer than the readings need.
+- **Demagnetizing.** The terminal voltage can approach the secondary limit while you do it (5.1).
+
+Relaying application, offset faults, auxiliary CTs, and series CTs are in [relaying CT application](#/study/instrument-transformers.md/ct-application).
+
+## Level IV {#instrument-transformers-level-iv}
+
+*Level: IV*
+
+## Excitation analysis {#excitation-analysis}
+
+*Level: IV*
+
+Knee point and saturation voltage are not the same number (IEEE C37.110-2023, Clause 3 and 4.3). Saturation voltage is read on a log-log excitation plot where the two straight stretches of the curve meet. The knee the guide uses, unless it says otherwise, is definition A: the 45-degree tangent on a square-decade plot. Definition B is the 10-percent voltage / 50-percent current marker. Those two knees are not interchangeable. On a square log-log plot, definition B sits higher, about 20% to 25% above definition A, and corresponds to a shallower tangent of about 13 degrees. Always confirm which definition a manufacturer or a setting sheet is using.
+
+C-class and T-class are not interchangeable when you try to compute ratio error from an excitation curve (4.4). Leakage flux is small enough on a C-class unit that the excitation characteristic can be used for that calculation. A T-class unit has enough leakage that IEEE C57.13 wants overcurrent ratio curves, and the ratio error has to come from a test, not from the excitation plot alone.
+
+Remanence shortens the time a CT stays unsaturated when the leftover flux has the same polarity as the fault transient (4.6.1 and Annex C). In the guide's C800, 1200:5 example on a 24 kA fully offset fault, time-to-saturation falls from 25 ms with a clean core, to 8.3 ms at 50% remanence, to 5 ms at 75% remanence, all at the same burden. Service measurements have found remanence approaching 80% of saturation flux. Opposite-polarity remanence can actually help. A small air gap can cut remanence to almost nothing without changing the relaying accuracy class (4.6.2). Large-gap, sometimes called linearized, cores have little or no remanence. Cold-rolled grain-oriented silicon steel, by contrast, can hold remanence up to that 80% figure.
+
+A C-class rating is the secondary voltage the CT delivers to a standard burden at 20 times rated current within 10% error (IEEE C57.13-2016 6.4.1.3). A C100 CT with 1.5 Ω of total loop burden would need 100 A × 1.5 Ω = 150 V at 20 times rated, which is past its rating, so expect saturation on a big fault.
+
+## Relaying CT application {#ct-application}
+
+*Level: IV*
+
+Relaying application, IEEE C37.110-2023, starts from the fact that a CT sized only for symmetrical current can still saturate on a fully offset fault. At maximum offset, core flux can rise to as much as 1 + X/R times the steady ac flux, using the primary-system reactance and resistance seen by the CT (4.5.1). Avoiding ac saturation needs a saturation voltage Vx greater than Is times Zs. Avoiding saturation with a fully offset dc component is harder: Vx has to exceed Is times Zs times (1 + X/R) (4.5.2.3). That second demand is often impractical, so the protection plan may have to live with a short time-to-saturation window. The flux does not jump instantly; some high-speed instantaneous (50) elements can still operate in that window, before the core is saturated.
+
+Burden magnitude and burden power factor both move time-to-saturation (4.5.3). A larger total secondary burden, at the same power factor, shortens it. For two impedances of equal size, the more inductive one (lower power factor) lengthens it, because that inductance looks like a small impedance to the dc offset and cuts the burden voltage the core has to support as flux.
+
+Direct current forced through the winding, including a battery ratio or polarity shot that is not followed by a demagnetizing run, leaves remanence, and remanence barely fades in normal service (4.6). Reducing it to less than 10% of saturation flux density takes a voltage of about 60% of the knee-point. IEEE C57.13.1 is the demagnetizing practice the guide points to.
+
+The accuracy-class voltage (C400, C800, and so on) is a convenient way to state steady-state capability. It is not a recommended operating point for close-in faults (Clause 5 introduction and 4.5.2). Performance still has to be checked for the actual current, burden, offset, and remanence.
+
+An auxiliary CT reflects its secondary burden to the main CT by the square of the auxiliary ratio (5.1 and 5.7). A 1.0 ohm burden looks like 0.25 ohm through a 2:1 step-down, and like 4.0 ohms through a 1:2 step-up. Stepping current up that way is poor practice when it can be avoided, and the auxiliary CT still needs its own knee checked against its own burden.
+
+Two identical CTs in series can split the burden, double the voltage capability, and halve the impedance each CT sees (5.5). They must be identical and should sit next to each other, for example both on the same bushing, so a fault cannot occur between them. A fault between the two drives their secondaries in opposite directions and can overvoltage both windings. For new work, one adequately rated CT, or a lower burden, is preferred over a series pair.
+
+Worked voltage, offset, remanence, and time-constant examples are in [CT saturation math](#/study/instrument-transformers.md/ct-saturation-math).
 
 ## CT saturation math {#ct-saturation-math}
 
-*Levels: IV*
+*Level: IV*
 
 Sources: IEEE C37.110-2023, 4.4.2, 4.5.2, 4.5.3, 4.6, 5.1, 5.2, and 6.2.3; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G. The numbers are worked examples.
 
@@ -102,26 +144,3 @@ If the angle of the system is given instead of X/R, X/R is the tangent of that a
 **Relay burden in ohms.** Burden in VA at 5 A converts to ohms by dividing by 25. A 14 VA electromechanical relay is about 0.56 ohm; a 0.3 VA microprocessor relay is about 0.012 ohm.
 
 **Ratio choice.** Pick a ratio so the maximum fault is no more than about 20 times rated secondary current. A 30 kA fault then calls for at least 1500:5.
-
-## CT hazards {#ct-hazards}
-
-*Levels: II, III*
-
-- **Open secondary.** IEEE C57.13-2016 6.7.1: never operate a CT with the secondary open, because hazardous peak voltages can develop. Conforming CTs only have to survive one minute open-circuited, and only where the open-circuit voltage stays at or below 3500 V peak. Above that, the user should consider a varistor or spark gap. Short at the shorting block before lifting a wire.
-- **Lifting the ground while the primary is energized.** C57.13.1 Annex A.1: dangerous voltage can appear on the secondary through electrostatic coupling even with no primary current.
-- **Breaking a dc polarity circuit.** C57.13.1 9.1: interrupting the battery can kick a dangerous voltage. Put a resistor near the winding's dc resistance across it first, or make and break with a hot stick or rubber gloves.
-- **Tapped windings.** Voltage on one tap section appears, scaled up, across the full winding (12.1). Don't hold voltage above the knee longer than the readings need.
-- **Demagnetizing.** The terminal voltage can approach the secondary limit while you do it (5.1).
-
-
-Relaying application, IEEE C37.110-2023, starts from the fact that a CT sized only for symmetrical current can still saturate on a fully offset fault. At maximum offset, core flux can rise to as much as 1 + X/R times the steady ac flux, using the primary-system reactance and resistance seen by the CT (4.5.1). Avoiding ac saturation needs a saturation voltage Vx greater than Is times Zs. Avoiding saturation with a fully offset dc component is harder: Vx has to exceed Is times Zs times (1 + X/R) (4.5.2.3). That second demand is often impractical, so the protection plan may have to live with a short time-to-saturation window. The flux does not jump instantly; some high-speed instantaneous (50) elements can still operate in that window, before the core is saturated.
-
-Burden magnitude and burden power factor both move time-to-saturation (4.5.3). A larger total secondary burden, at the same power factor, shortens it. For two impedances of equal size, the more inductive one (lower power factor) lengthens it, because that inductance looks like a small impedance to the dc offset and cuts the burden voltage the core has to support as flux.
-
-Direct current forced through the winding, including a battery ratio or polarity shot that is not followed by a demagnetizing run, leaves remanence, and remanence barely fades in normal service (4.6). Reducing it to less than 10% of saturation flux density takes a voltage of about 60% of the knee-point. IEEE C57.13.1 is the demagnetizing practice the guide points to.
-
-The accuracy-class voltage (C400, C800, and so on) is a convenient way to state steady-state capability. It is not a recommended operating point for close-in faults (Clause 5 introduction and 4.5.2). Performance still has to be checked for the actual current, burden, offset, and remanence.
-
-An auxiliary CT reflects its secondary burden to the main CT by the square of the auxiliary ratio (5.1 and 5.7). A 1.0 ohm burden looks like 0.25 ohm through a 2:1 step-down, and like 4.0 ohms through a 1:2 step-up. Stepping current up that way is poor practice when it can be avoided, and the auxiliary CT still needs its own knee checked against its own burden.
-
-Two identical CTs in series can split the burden, double the voltage capability, and halve the impedance each CT sees (5.5). They must be identical and should sit next to each other, for example both on the same bushing, so a fault cannot occur between them. A fault between the two drives their secondaries in opposite directions and can overvoltage both windings. For new work, one adequately rated CT, or a lower burden, is preferred over a series pair.

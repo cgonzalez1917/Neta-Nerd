@@ -1,6 +1,6 @@
 # What is visual, and what is electrical {#inspections}
 
-*Levels: II*
+*Level: II*
 
 ATS low-voltage power breakers are 7.6.1.2. Molded-case breakers are 7.6.1.1.1. The note in the molded-case section: MCCBs typically have a spring, over-center handle; insulated-case breakers have a two-step stored-energy mechanism. Do not use those names as synonyms.
 
@@ -12,7 +12,7 @@ Table 100.12.1, heat-treated steel, cadmium or zinc plated, national coarse: a 1
 
 ## Primary and secondary injection {#primary}
 
-*Levels: II, IV*
+*Level: II*
 
 Primary injection pushes high current through the poles, so it exercises the sensors or CTs, the trip unit, and the mechanical trip. That is how ATS writes the long-time, short-time, ground-fault, and instantaneous tests (7.6.1.2.B.3 through B.6, and the same pattern on molded-case breakers).
 
@@ -24,7 +24,7 @@ On a typical electronic trip unit the rating plug sets In. A long-time pickup of
 
 ## Tolerances {#tolerances}
 
-*Levels: II, III, IV*
+*Level: II*
 
 If the manufacturer’s curve exists, trip times have to land in that band. If it does not, molded-case inverse-time testing at 300% of rated continuous current uses Table 100.7.
 
@@ -43,7 +43,7 @@ IEEE C37.09-2018 5.12, written for high-voltage breaker design tests, also recor
 
 ## Contact resistance and control wire {#contact}
 
-*Levels: II*
+*Level: II*
 
 7.6.1.2.D.2: contact resistance shall not exceed the manufacturer’s high end. With no data, investigate a pole that deviates from adjacent poles or similar breakers by more than 50 percent of the lowest value. Same screen as bolted connections.
 
@@ -53,7 +53,7 @@ Insulation resistance on the poles themselves, with no manufacturer voltage, use
 
 ## Auxiliaries {#aux}
 
-*Levels: II*
+*Level: II*
 
 7.6.1.2.B.8: verify auxiliary features, including trip and pickup indicators, zone interlocking, electrical close and trip, trip-free, antipump, and the trip-unit battery. Then reset trip logs.
 
@@ -65,7 +65,7 @@ Table 100.20.1, rated control voltages for circuit breakers (from IEEE C37.06 as
 
 ## Common mistakes
 
-*Levels: II, III, IV*
+*Level: II*
 
 - Calling secondary injection “good enough” on a new breaker.
 - Torque from the wrong SAE column.
@@ -74,7 +74,7 @@ Table 100.20.1, rated control voltages for circuit breakers (from IEEE C37.06 as
 
 ## Field sequence for a power breaker {#field-sequence}
 
-*Levels: II, IV*
+*Level: II*
 
 ATS 7.6.1.2 is a list, not a mandated order, but a sensible order keeps you from testing something you'll have to redo:
 
@@ -92,7 +92,7 @@ Medium-voltage air breakers (ATS 7.6.1.3.B.4 and D.4) add a test-position sequen
 
 ## Maintenance mode (energy-reducing maintenance switching) {#maintenance-mode}
 
-*Levels: II, III*
+*Level: II*
 
 Many trip units have a maintenance or arc-reduction mode, sold under names such as ERMS, ARMS, or RELT. NFPA 70E-2024 Informative Annex O.2.3(3) describes the idea: the trip unit is set to operate faster while someone works inside the arc flash boundary, then set back to normal when the work is done, with a local indicator showing its state.
 

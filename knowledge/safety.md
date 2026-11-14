@@ -1,12 +1,16 @@
 # Safety before any test {#before-you-test}
 
-*Levels: II, III, IV*
+*Level: II*
 
 Nothing in the question bank is a work permit. NFPA 70E-2024 Article 110 is the general electrical-safety practice article. Article 120 is how an electrically safe work condition is established. Article 130 is the work that is still exposed to a hazard.
 
+## Level II {#safety-level-ii}
+
+*Level: II*
+
 ## Electrically safe work condition {#eswc}
 
-*Levels: II, III*
+*Level: II*
 
 70E-2024 110.2(A) says the employer’s electrically safe work condition policy has to put hazard elimination first.
 
@@ -22,7 +26,7 @@ Operating a disconnect to create the safe condition, or to return equipment to s
 
 ## Process order {#loto}
 
-*Levels: II, III, IV*
+*Level: II*
 
 120.6 lists the process in order, if feasible:
 
@@ -37,17 +41,13 @@ Operating a disconnect to create the safe condition, or to return equipment to s
 
 120.5 is the lockout/tagout procedure itself (planning, who is exposed, simple versus complex, stored energy, verification that controls cannot restart, grounding needs, shift change). A lock holds the isolating device so it takes force to defeat. A tag is a warning in the same spot and, by itself, is weaker. OSHA 3120 makes that distinction in plain language; the electrical order you memorize is 120.6.
 
-Simple and complex lockout are two forms of the same hazardous-energy control (120.3(H) and 120.5). On a simple lockout the qualified person is in charge. On a complex lockout — more than one source, more than one crew, or a job that spans a shift — the person in charge has overall responsibility, and the procedure requires a written plan of execution that names that person.
-
 Locks and tags go on the circuit disconnecting means, not on control devices such as pushbuttons or selector switches (120.3(A) and 120.3(E)). A stop button with a tag, leaving the disconnect shut, is not a lockout. Every person who could be exposed, directly or indirectly, is involved in the procedure.
 
-The lockout/tagout program and the procedures in 120.2 through 120.6 are audited by a qualified person at intervals not exceeding one year (110.3(L)(3) and 120.2(B)). The audit has to cover at least one lockout in progress, and it is meant to catch problems in the program, the training, and how workers actually carry out the procedure. The employer is responsible for those audits.
-
-When a testing company comes onto a plant as a contractor, the host and the contract employer share information (110.5). The host tells the contractor about known hazards related to the work that the contractor might not recognize, and about information the contractor needs for its assessments. The contractor briefs its people on those hazards and on the host's safety-related work rules, and tells the host about unique hazards the contractor's work creates. Where the host knows of hazards related to the contractor's work, the meeting is documented.
+Complex lockout, annual audits, and host-and-contractor briefing are in [complex lockout and job planning](#/study/safety.md/loto-complex).
 
 ## Test instruments {#instruments}
 
-*Levels: II, III*
+*Level: II*
 
 110.6(A): only a qualified person tests, troubleshoots, or measures voltage where a hazard exists. 110.6(B): the instrument and its leads are rated for the circuit, approved for the purpose, and used as the manufacturer says. 110.6(D): look at the instrument and the leads before each use. If anything is damaged, it comes out of service until someone qualified repairs it. 110.6(E): on a circuit at 50 volts or more, prove the instrument on a known source before the absence-of-voltage test and again after it. For 70E-2027 changes to testing, see [test before touch](#/study/life-safety.md/test-before-touch-2027).
 
@@ -55,7 +55,7 @@ Capacitors are called out in 120.5(B)(2): discharge them, and short and ground h
 
 ## Shock boundaries {#boundaries}
 
-*Levels: II*
+*Level: II*
 
 130.4 is the shock risk assessment. Table 130.4(E)(a) is the AC approach-boundary table. Distances are from the exposed energized part to the person. The restricted-approach column assumes elevation not over 3000 ft.
 
@@ -76,7 +76,7 @@ Shock boundaries and the arc-flash boundary are independent. The arc-flash bound
 
 ## Arc flash {#arc-flash}
 
-*Levels: II, III, IV*
+*Level: II*
 
 Article 100 defines the arc-flash boundary as the distance at which the incident energy equals 1.2 cal/cm² (5 J/cm²). 130.5(E)(1) repeats that. 130.5(E)(2) allows the boundary from Table 130.7(C)(15)(a) or (b) when those tables’ conditions are met.
 
@@ -92,7 +92,7 @@ If incident energy is calculated rather than taken from a PPE-category table, 13
 
 ## Gloves {#gloves}
 
-*Levels: II, IV*
+*Level: II*
 
 Table 130.7(C)(7)(a), maximum use voltage (AC rms): class 00 is 500 V, class 0 is 1000 V, class 1 is 7500 V, class 2 is 17000 V, class 3 is 26500 V, class 4 is 36000 V. DC limits are higher and are in the same table. The protector cuff sits shorter than the rolled rubber cuff by the distance in that table.
 
@@ -100,7 +100,7 @@ Table 130.7(C)(7)(a), maximum use voltage (AC rms): class 00 is 500 V, class 0 i
 
 ## Energized work permit {#permit}
 
-*Levels: II, III, IV*
+*Level: II*
 
 130.2(A): when work is done under 110.2(B), a documented energized electrical work permit is required if the work is inside the restricted approach boundary, or if the employee interacts with equipment whose parts are not exposed but an arc-flash injury is more likely.
 
@@ -110,7 +110,7 @@ A permit’s contents are listed in 130.2(B), including shock boundaries from Ta
 
 ## Maintenance program {#nfpa70b}
 
-*Levels: II*
+*Level: II*
 
 NFPA 70B-2026 chapters 7 through 9 are the maintenance rules behind an electrical maintenance program. Fundamental tests apply wherever another section calls for them.
 
@@ -124,13 +124,13 @@ The equipment chapters say which tests to run. They do not print numeric pass li
 
 ## Confined spaces {#confined}
 
-*Levels: II, III*
+*Level: II*
 
 29 CFR 1910.146 is the permit-required confined space rule. A confined space is large enough to enter and work in, has limited entry or exit, and is not designed for continuous occupancy. It becomes permit-required if it has any one of these: a hazardous atmosphere or the potential for one, a material that could engulf a person, a shape that could trap or asphyxiate someone, or any other recognized serious safety or health hazard. Entry starts as soon as any part of the body breaks the plane of the opening.
 
 ## OSHA work practices {#osha}
 
-*Levels: II, III*
+*Level: II*
 
 29 CFR 1910.147 is the general lockout/tagout rule. An energy-isolating device is a mechanical device that physically stops energy: a breaker, a disconnect, a valve. Push buttons, selector switches, and other control devices are not isolating devices. A lock holds the isolator. A tag is a warning and does not give the physical restraint of a lock. Locks and tags identify the person who put them on, and they are not used for other jobs.
 
@@ -140,7 +140,7 @@ The equipment chapters say which tests to run. They do not print numeric pass li
 
 ## Common mistakes
 
-*Levels: II, III, IV*
+*Level: II*
 
 - Testing “dead” with a meter you did not prove before and after.
 - Calling an open door and a buzzing breaker “normal operation.”
@@ -151,19 +151,19 @@ The equipment chapters say which tests to run. They do not print numeric pass li
 
 ## Temporary protective grounds {#grounds}
 
-*Levels: II, III*
+*Level: II*
 
 Under 29 CFR 1926.962, a line is worked de-energized without grounds only if it is de-energized, can't contact another source, and has no induced-voltage hazard. Grounds form an equipotential zone, are at least No. 2 AWG copper, carry the available fault current for the clearing time, and are installed ground end first with a live-line tool on the line end. Removal is the reverse. Test for absence of nominal voltage first unless a ground is already installed. Grounds may come off for a test only with insulating equipment and isolation. ASTM F855 grades assemblies. A withstand rating can be reused, and an ultimate rating can't. Table 1 covers low X/R, and Table 2 (H grades) covers high X/R. An assembly takes the grade of its weakest component.
 
 ## Field guide: confined space entry {#confined-entry}
 
-*Levels: II, III*
+*Level: II*
 
 Vaults, manholes, and transformer pits are part of the job. This guide adds the entry procedure to the definitions in [Confined spaces](#/study/safety.md/confined). Sources: 29 CFR 1910.146, read on eCFR because the held OSHA set lacks it; 29 CFR 1910.269(e) and (t) for utility enclosed spaces.
 
 ### Before entry
 
-*Levels: II, III*
+*Level: II*
 
 - **Evaluate the space.** Is it permit-required? Are there atmospheric, engulfment, or entrapment hazards? Are there electrical hazards? Lock out what feeds the space.
 - **Permit.** The entry supervisor signs it. It lists the space, purpose, date and duration, entrants, attendant, hazards, controls, test results, rescue arrangements, and communications. It lasts no longer than the task. The supervisor cancels it at the end, and canceled permits are kept at least a year for the annual review (1910.146(e) and (d)(14)).
@@ -171,7 +171,7 @@ Vaults, manholes, and transformer pits are part of the job. This guide adds the 
 
 ### Testing the atmosphere
 
-*Levels: II, III*
+*Level: II*
 
 1. Use a calibrated, bump-tested meter. 1910.269(e) wants instruments accurate to ±10%.
 2. Test before entry, in order: oxygen, then flammables, then toxics (1910.146(d)(5)(iii)). Test at different levels, because gases stratify.
@@ -180,7 +180,7 @@ Vaults, manholes, and transformer pits are part of the job. This guide adds the 
 
 ### Roles
 
-*Levels: II, III*
+*Level: II*
 
 - **Entrant.** Knows the hazards and stays in contact. Leaves when told, when they notice symptoms, when a prohibited condition shows up, or when an alarm sounds (1910.146(h)(5)).
 - **Attendant.** Stays outside the whole time, keeps an accurate count, orders evacuation, calls rescue, and warns off unauthorized people. Takes on no duty that gets in the way of monitoring (1910.146(i)).
@@ -188,7 +188,7 @@ Vaults, manholes, and transformer pits are part of the job. This guide adds the 
 
 ### Rescue
 
-*Levels: II, III*
+*Level: II*
 
 - Retrieval systems are the default for non-entry rescue. Vertical spaces deeper than 5 ft need a mechanical retrieval device (1910.146(k)(3)).
 - Rescue teams practice at least every 12 months on representative spaces (1910.146(k)(2)(iv)).
@@ -196,20 +196,20 @@ Vaults, manholes, and transformer pits are part of the job. This guide adds the 
 
 ### Alternate procedures and reclassification
 
-*Levels: II, III*
+*Level: II*
 
 - When the atmosphere is the only hazard and continuous forced air alone keeps it safe, 1910.146(c)(5) allows simpler entry. You still test first (oxygen, flammables, toxics), keep the air running from a clean source, retest periodically, and get out if the meter alarms.
 - Ventilation controls a hazard but doesn't eliminate it, so it is not grounds for calling a space non-permit (1910.146(c)(7) note).
 
 ### Utility vaults (1910.269)
 
-*Levels: II, III*
+*Level: II*
 
 Check for pressure and temperature hazards before removing a cover, and guard the opening. An attendant trained in first aid stays nearby. Test oxygen before entry unless continuous forced air is running, then test flammables (1910.269(e)).
 
 ### Common mistakes
 
-*Levels: II, III*
+*Level: II*
 
 - Testing only at the top of a manhole.
 - Turning off the blower once people are in.
@@ -217,13 +217,13 @@ Check for pressure and temperature hazards before removing a cover, and guard th
 
 ## NEC working space (110.26) {#working-space}
 
-*Levels: II, III*
+*Level: II*
 
 Working space keeps you from being pinned between live parts and a wall, and keeps a way out. These numbers come from NFPA 70-2023 110.26, which applies to equipment likely to be examined, adjusted, serviced, or maintained while energized. The AHJ and the edition adopted locally govern a real installation.
 
 ### Depth, Table 110.26(A)(1)
 
-*Levels: II, III*
+*Level: II*
 
 Pick the row by nominal voltage to ground and the column by what faces the live parts. Measure from the live parts themselves, or from the enclosure or opening when they're enclosed.
 
@@ -238,7 +238,7 @@ Worked: 480Y/277 V gear facing a block wall is 277 V to ground, Condition 2, so 
 
 ### Width, height, and the rest
 
-*Levels: II, III*
+*Level: II*
 
 - Width is the equipment width or 30 in., whichever is greater, and always enough for a 90° door opening.
 - Height is 6½ ft or the equipment height, whichever is greater.
@@ -251,6 +251,20 @@ Worked: 480Y/277 V gear facing a block wall is 277 V to ground, Condition 2, so 
 
 ### In the field
 
-*Levels: II, III*
+*Level: II*
 
 Check the space before you open a door. A cart, a ladder, or a stack of reels in front of the gear is a working-space violation and a tripping hazard on the way out.
+
+## Level III {#safety-level-iii}
+
+*Level: III*
+
+## Complex lockout and job planning {#loto-complex}
+
+*Level: III*
+
+Simple and complex lockout are two forms of the same hazardous-energy control (120.3(H) and 120.5). On a simple lockout the qualified person is in charge. On a complex lockout — more than one source, more than one crew, or a job that spans a shift — the person in charge has overall responsibility, and the procedure requires a written plan of execution that names that person.
+
+The lockout/tagout program and the procedures in 120.2 through 120.6 are audited by a qualified person at intervals not exceeding one year (110.3(L)(3) and 120.2(B)). The audit has to cover at least one lockout in progress, and it is meant to catch problems in the program, the training, and how workers actually carry out the procedure. The employer is responsible for those audits.
+
+When a testing company comes onto a plant as a contractor, the host and the contract employer share information (110.5). The host tells the contractor about known hazards related to the work that the contractor might not recognize, and about information the contractor needs for its assessments. The contractor briefs its people on those hazards and on the host's safety-related work rules, and tells the host about unique hazards the contractor's work creates. Where the host knows of hazards related to the contractor's work, the meeting is documented.

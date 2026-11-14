@@ -609,7 +609,7 @@
     "explanation": "The relay class applies to the full winding unless otherwise specified. On a C-class CT, tapped sections must be arranged so the ratio can be calculated. So don't assume C400 at a tap; check the manufacturer's tap data or the excitation curve for that tap. Source: IEEE C57.13-2016, 6.4.2.",
     "reference": "IEEE C57.13-2016, 6.4.2",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-035",
@@ -627,7 +627,7 @@
     "explanation": "For secondaries other than 5 A, the equivalent burden is the terminal voltage \u00f7 (IS \u00d7 20). 100 V \u00f7 (1 A \u00d7 20) = 5 \u03a9. Source: IEEE C57.13-2016, Table 13 note a.",
     "reference": "IEEE C57.13-2016, Table 13 note a",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-036",
@@ -807,7 +807,7 @@
     "explanation": "V = I \u00d7 Z = 100 A \u00d7 1.5 \u03a9 = 150 V. A C100 rating means the CT delivers 100 V to a standard burden at 20 times rated current within the 10% error limit. Asking for 150 V pushes it past the knee. Source: IEEE C57.13-2016, 6.4.1.3 and Table 13.",
     "reference": "IEEE C57.13-2016, 6.4.1.3 and Table 13",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-046",
@@ -825,7 +825,7 @@
     "explanation": "The guide defines both quantities and warns that they are not the same. Saturation voltage is the symmetrical secondary voltage at which peak induction just exceeds saturation flux density, found graphically at the intersection of the straight portions of the log-log excitation curve. The knee-point used throughout the guide, unless noted otherwise, is definition (A): the 45-degree tangent on a square-decade plot. Source: IEEE C37.110-2023, Clause 3 (knee-point voltage and saturation voltage) and 4.3.",
     "reference": "IEEE C37.110-2023, Clause 3 (knee-point voltage and saturation voltage) and 4.3",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-047",
@@ -843,7 +843,7 @@
     "explanation": "Clause 3 lists both knee-point definitions and states they do not give the same value. On a square log-log plot, definition B corresponds to a tangent of about 13 degrees, and the voltage there is about 20% to 25% higher than definition A. The guide uses definition A unless otherwise specified, and it warns the reader to confirm which definition a manufacturer is using. Source: IEEE C37.110-2023, 4.3.2 and Clause 3.",
     "reference": "IEEE C37.110-2023, 4.3.2 and Clause 3",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-048",
@@ -861,7 +861,7 @@
     "explanation": "C-class performance can be calculated from the excitation characteristic because leakage flux is negligible. T-class CTs have appreciable core leakage, so IEEE C57.13 requires overcurrent ratio curves, and the ratio error must be determined by test rather than from the excitation curve alone. Source: IEEE C37.110-2023, 4.4.",
     "reference": "IEEE C37.110-2023, 4.4",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-049",
@@ -879,7 +879,7 @@
     "explanation": "An asymmetrical current's dc offset greatly increases CT flux. At maximum offset, flux can rise to as much as 1 + X/R times the steady ac flux, using the primary-system reactance and resistance seen by the CT. That is why a CT that is adequate for symmetrical current can still saturate on an offset fault. Source: IEEE C37.110-2023, 4.5.1.",
     "reference": "IEEE C37.110-2023, 4.5.1",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-050",
@@ -897,7 +897,7 @@
     "explanation": "Avoiding ac saturation requires Vx greater than Is times Zs. Avoiding saturation with a fully offset dc component is harder: Vx must also exceed Is times Zs times (1 + X/R). The second inequality is the more severe of the two whenever X/R is significant, and it often implies an impractically large CT, so the protection plan may have to compensate. Source: IEEE C37.110-2023, 4.5.2.3.",
     "reference": "IEEE C37.110-2023, 4.5.2.3",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-051",
@@ -915,7 +915,7 @@
     "explanation": "A larger total secondary burden, at unchanged power factor, shortens time-to-saturation. For two impedances of equal magnitude, the more inductive one (lower power factor) lengthens time-to-saturation because the inductance is a low impedance to the dc offset, which reduces the burden voltage drop and the associated flux. Source: IEEE C37.110-2023, 4.5.3.",
     "reference": "IEEE C37.110-2023, 4.5.3",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-052",
@@ -933,7 +933,7 @@
     "explanation": "Maximum remanence occurs when primary current is interrupted while the CT is saturated, and testing that forces direct current through the winding will also cause remanence. Once it is established, remanence dissipates very little under service conditions. A voltage of about 60% of the knee-point voltage must be applied to reduce remanence to less than 10% of saturation flux density. The guide points to IEEE C57.13.1 for demagnetizing practice. Source: IEEE C37.110-2023, 4.6.",
     "reference": "IEEE C37.110-2023, 4.6",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-053",
@@ -951,7 +951,7 @@
     "explanation": "When remanence has the same polarity as the transient-fault flux, the secondary waveform distorts sooner. The worked traces show time-to-saturation falling from 25 ms to 8.3 ms to 5 ms as remanence goes from 0% to 50% to 75%. Remanence as high as 80% of saturation flux has been measured (Annex C). Opposite-polarity remanence can actually help keep the secondary undistorted. Source: IEEE C37.110-2023, 4.6.1 and Annex C.",
     "reference": "IEEE C37.110-2023, 4.6.1 and Annex C",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-054",
@@ -969,7 +969,7 @@
     "explanation": "A gapped core increases magnetizing current and reduces the chance of remanence. The guide states that the increase in magnetizing current from a small gap will not affect the relaying accuracy rating, while remanence falls to almost nothing. Cores with large gaps, sometimes called linearized cores, have little or no remanence. Cold-rolled grain-oriented silicon steel, by contrast, can retain remanence as high as 80% of saturation flux density. Source: IEEE C37.110-2023, 4.6.2.",
     "reference": "IEEE C37.110-2023, 4.6.2",
     "verified": true,
-    "kb": "instrument-transformers.md#excitation"
+    "kb": "instrument-transformers.md#excitation-analysis"
   },
   {
     "id": "ct-055",
@@ -987,7 +987,7 @@
     "explanation": "Under ideal conditions the secondary would copy the primary, but burden, current, asymmetry, and remanence can distort the waveform. The accuracy rating used to classify CTs is not a recommended operating point; it is only a handy way to state the steady-state voltage the CT must produce. The guide sends the reader to 4.5.2 for methods of assessing performance under those real conditions. Source: IEEE C37.110-2023, Clause 5 introduction and 4.5.2.",
     "reference": "IEEE C37.110-2023, Clause 5 introduction and 4.5.2",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-056",
@@ -1005,7 +1005,7 @@
     "explanation": "Impedance on the secondary of an auxiliary CT is reflected to the main CT multiplied by the square of the auxiliary ratio. The guide's example is exact: 1.0 ohm looks like 0.25 ohm through a 2:1 step-down and like 4.0 ohms through a 1:2 step-up. For that reason, stepping current up through an auxiliary CT is generally poor practice when it can be avoided. The auxiliary CT also has to be checked for its own knee-point against its own connected burden. Source: IEEE C37.110-2023, 5.1 and 5.7.",
     "reference": "IEEE C37.110-2023, 5.1 and 5.7",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-057",
@@ -1023,7 +1023,7 @@
     "explanation": "The series connection is not ideal for new work; one adequately rated CT, or a lower burden, is preferred. If two CTs are placed in series they must be identical and should sit side by side, for example both on the same bushing, so a fault cannot occur between them. A fault between the two CTs drives their secondary currents in opposite directions and can produce excessive overvoltage, so secondary overvoltage protection may be required. When the two CTs are similar, each sees half the external burden impedance and the pair's burden-voltage capability is doubled. Source: IEEE C37.110-2023, 5.5.",
     "reference": "IEEE C37.110-2023, 5.5",
     "verified": true,
-    "kb": "instrument-transformers.md#ct-field"
+    "kb": "instrument-transformers.md#ct-application"
   },
   {
     "id": "ct-058",

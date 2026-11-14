@@ -1,12 +1,10 @@
 # Sources {#sources}
 
-*Levels: II, III, IV*
 
 Question writers: use this list, then read the standard. Do not paste a forum memory into the bank and call it an exam item. Do not commit PDFs, the NFPA 70E text, or copied tables into this public repository.
 
 ## Standards checked for this bank
 
-*Levels: II, III, IV*
 
 Private copies used for lookup only. They are not in git.
 
@@ -20,7 +18,6 @@ IEEE, NEC, and ASTM are cited generally unless the number also appears inside AT
 
 ## TestGuy study guide and threads
 
-*Levels: II, III, IV*
 
 Exam format (closed book, about 100 questions, 2 hours, formula sheet, TI-30XS) and the domain percentages are taken from the TestGuy study guide, which cites the NETA December 2022 detailed content outline. Forum posts are anecdotal and vary by exam version.
 
@@ -61,7 +58,6 @@ Articles used as optional “Learn more” links, not as copied text:
 
 ## Also useful, not copied
 
-*Levels: II, III, IV*
 
 - https://www.netaworld.org
 - Exam format (100 questions / 2 hours for Levels II and III, 65 / 2 hours for Level IV, Pearson VUE, scaled 410): https://www.netaworld.org/certification-exam/technician-certification671 and https://www.netaworld.org/certification-exam/exam-preparation686 — InterNational Electrical Testing Association
@@ -83,7 +79,6 @@ Lookups used for later questions, cited by title only. The files themselves are 
 
 ## Adding a source later
 
-*Levels: II, III, IV*
 
 Append a link and one sentence on what it is allowed to support. If you use it for a number, either verify that number in ATS, MTS, or 70E and set `verified` true with the clause, or leave `verified` false and say “verify in ATS” in the reference when you are not sure.
 
