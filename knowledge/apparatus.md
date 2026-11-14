@@ -200,7 +200,7 @@ ATS-2025 7.6.3, in a workable order:
 
 *Level: II*
 
-A transfer switch test proves two things: the switch itself is sound, and the whole emergency sequence works the way the design says. Sources: ATS-2025 7.22.3, NFPA 70-2023 Articles 700 and 701, and NFPA 110-2025 Chapters 4, 6, 7 and 8. NFPA 110 sets the classification, the minimum delay settings, and the test program. The actual settings come from the manufacturer and the design, within those limits (ATS 7.22.3.D.8).
+A transfer switch test proves two things: the switch itself is sound, and the whole emergency sequence works the way the design says. Sources: ATS-2025 7.22.3, NFPA 70-2023 Articles 700 and 701, and NFPA 110-2025 Chapters 4, 6, 7 and 8. NFPA 110 is not on the ETT-2026 reference list, so treat those points as background. NFPA 110 sets the classification, the minimum delay settings, and the test program. The actual settings come from the manufacturer and the design, within those limits (ATS 7.22.3.D.8).
 
 ### Setup
 
@@ -245,6 +245,8 @@ Record each setting and each measured time. Compare them with the manufacturer's
 ### NFPA 110 points to know
 
 *Level: II*
+
+Background: NFPA 110 is not on the ETT-2026 reference list.
 
 NFPA 110-2025 covers the whole emergency power supply system (EPSS): the generator, its fuel and the transfer switches. Local adoption and the AHJ decide whether it applies to a given site.
 

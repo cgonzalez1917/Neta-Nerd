@@ -2590,7 +2590,7 @@
     ],
     "answer": 1,
     "explanation": "The enclosure stays at least 25 Pa, about a tenth of an inch of water column, above ambient while protected equipment is energized. Supplies serving other than Type X need an alarm when that pressure can't be kept. Source: NFPA 496-2027, 4.4.1 to 4.4.5.",
-    "reference": "NFPA 496-2027, 4.4.1 to 4.4.5",
+    "reference": "NFPA 496-2027, 4.4.1 to 4.4.5 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#purged-enclosures"
   },
@@ -2608,7 +2608,7 @@
     ],
     "answer": 1,
     "explanation": "Before energizing, at least 4 times the enclosure volume in protective gas flows through, or ten for rotating machines, while keeping 25 Pa. 4 \u00d7 20 = 80 ft\u00b3 and 10 \u00d7 20 = 200 ft\u00b3. Source: NFPA 496-2027, 5.4.1 to 5.4.2 and 5.5.1 to 5.5.1.1.",
-    "reference": "NFPA 496-2027, 5.4.1 to 5.4.2 and 5.5.1 to 5.5.1.1",
+    "reference": "NFPA 496-2027, 5.4.1 to 5.4.2 and 5.5.1 to 5.5.1.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#purged-enclosures"
   },
@@ -2626,7 +2626,7 @@
     ],
     "answer": 3,
     "explanation": "Type X protects equipment not suitable for Division 1 or Zone 1, so pressure failure cuts power through a sensor on the enclosure. A short delay is allowed if a sudden shutdown is more dangerous, with alarms at an attended spot. Type Z only has to detect and annunciate. Source: NFPA 496-2027, 4.9.1 to 4.9.1.2 and 4.11.1 to 4.11.1.1.",
-    "reference": "NFPA 496-2027, 4.9.1 to 4.9.1.2 and 4.11.1 to 4.11.1.1",
+    "reference": "NFPA 496-2027, 4.9.1 to 4.9.1.2 and 4.11.1 to 4.11.1.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#purged-enclosures"
   },
@@ -2644,7 +2644,7 @@
     ],
     "answer": 0,
     "explanation": "If someone can open it by hand, opening it has to kill the circuits not approved for the location right away. Source: NFPA 496-2027, 5.5.2.",
-    "reference": "NFPA 496-2027, 5.5.2",
+    "reference": "NFPA 496-2027, 5.5.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#purged-enclosures"
   },
@@ -2662,7 +2662,7 @@
     ],
     "answer": 2,
     "explanation": "The immediate-energization allowance is written for Type Y and Type Z. It does not extend to Type X, which always purges first. Source: NFPA 496-2027, 5.4.2.",
-    "reference": "NFPA 496-2027, 5.4.2",
+    "reference": "NFPA 496-2027, 5.4.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#purged-enclosures"
   },
@@ -2734,7 +2734,7 @@
     ],
     "answer": 1,
     "explanation": "Dust clouds in normal operation or frequent maintenance point to Class II, Division 1 in the Division system, or Zone 20 or 21. Rare releases of some dust groups may fall to Division 2 or Zone 22. Source: NFPA 499-2027, 6.2.3.2 to 6.2.3.5.",
-    "reference": "NFPA 499-2027, 6.2.3.2 to 6.2.3.5",
+    "reference": "NFPA 499-2027, 6.2.3.2 to 6.2.3.5 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hazloc"
   },
@@ -2752,7 +2752,7 @@
     ],
     "answer": 1,
     "explanation": "NFPA 499 has the team ask how thick layers get and how fast dust builds up, as part of classifying the area. Housekeeping and tight equipment help limit the classified area. It is not a pass/fail number for the equipment. Source: NFPA 499-2027, 6.6.2.2 and 6.8.6.",
-    "reference": "NFPA 499-2027, 6.6.2.2 and 6.8.6",
+    "reference": "NFPA 499-2027, 6.6.2.2 and 6.8.6 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hazloc"
   },
@@ -2769,8 +2769,8 @@
       "At every work location, check every phase and circuit part line to line and line to ground, proving the tester on a live source before and after"
     ],
     "answer": 3,
-    "explanation": "The tester has to be rated for the job. Prove it on a live source you trust, test every phase at every work point both line to line and line to ground, then prove the tester again. Source: NFPA 70E-2027, 120.6(7).",
-    "reference": "NFPA 70E-2027, 120.6(7)",
+    "explanation": "The tester has to be rated for the job. Prove it on a live source you trust, test every phase at every work point both line to line and line to ground, then prove the tester again. The same sequence is in NFPA 70E-2024, 120.6(7). Source: NFPA 70E-2027, 120.6(7); also NFPA 70E-2024, 120.6(7).",
+    "reference": "NFPA 70E-2027, 120.6(7); also NFPA 70E-2024, 120.6(7)",
     "verified": true,
     "kb": "life-safety.md#test-before-touch-2027"
   },
@@ -2787,8 +2787,8 @@
       "Only if it is used at the remote end"
     ],
     "answer": 0,
-    "explanation": "Exception 2 allows noncontact capacitive instruments above 1000 V. The note explains that these devices have a minimum operating voltage, so they show no detectable voltage, not zero voltage. Source: NFPA 70E-2027, 120.6(7) Exception 2.",
-    "reference": "NFPA 70E-2027, 120.6(7) Exception 2",
+    "explanation": "Exception 2 allows noncontact capacitive instruments above 1000 V. The 2027 note explains that these devices have a minimum operating voltage, so they show no detectable voltage, not zero voltage. Exception 2 itself is also in NFPA 70E-2024, 120.6(7). Source: NFPA 70E-2027, 120.6(7) Exception 2; also NFPA 70E-2024, 120.6(7) Exception 2.",
+    "reference": "NFPA 70E-2027, 120.6(7) Exception 2; also NFPA 70E-2024, 120.6(7) Exception 2",
     "verified": true,
     "kb": "life-safety.md#test-before-touch-2027"
   },
@@ -2805,10 +2805,10 @@
       "Repeat the voltage test three times"
     ],
     "answer": 2,
-    "explanation": "Exception 3 says when a voltage test can't settle the question, use more methods. The informational example is checking for absence of current on circuits driven by a current source. Source: NFPA 70E-2027, 120.6(7) Exception 3.",
-    "reference": "NFPA 70E-2027, 120.6(7) Exception 3",
+    "explanation": "Exception 3 says when a voltage test can't settle the question, use more methods. The informational example is checking for absence of current on circuits driven by a current source. This exception is new in the 2027 edition; it is not in 70E-2024. Source: NFPA 70E-2027, 120.6(7) Exception 3.",
+    "reference": "NFPA 70E-2027, 120.6(7) Exception 3 (new in the 2027 edition)",
     "verified": true,
-    "kb": "life-safety.md#test-before-touch-2027"
+    "kb": "life-safety.md#current-driven-2027"
   },
   {
     "id": "safety-159",
@@ -2823,8 +2823,8 @@
       "The AHJ"
     ],
     "answer": 2,
-    "explanation": "The 2027 edition requires at least one extra person with the emergency response training of 110.4(C)(1). That person stays beyond the bigger of the two boundaries, limited approach or arc flash. Source: NFPA 70E-2027, 130.2(A)(2).",
-    "reference": "NFPA 70E-2027, 130.2(A)(2)",
+    "explanation": "The 2027 edition requires at least one extra person with the emergency response training of 110.4(C)(1). That person stays beyond the bigger of the two boundaries, limited approach or arc flash. This requirement is new in the 2027 edition. Source: NFPA 70E-2027, 130.2(A)(2).",
+    "reference": "NFPA 70E-2027, 130.2(A)(2) (new in the 2027 edition)",
     "verified": true,
     "kb": "life-safety.md#test-before-touch-2027"
   },

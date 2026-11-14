@@ -229,7 +229,7 @@
     ],
     "answer": 2,
     "explanation": "A lightning-protected structure needs an SPD at every power service, built into or right next to the service equipment. Size it for a nominal discharge current of 20 kA or more on each phase, using the 8/20 \u00b5s wave. Source: NFPA 780-2026, 4.19.2.1 and 4.19.2.5 to 4.19.2.7.",
-    "reference": "NFPA 780-2026, 4.19.2.1 and 4.19.2.5 to 4.19.2.7",
+    "reference": "NFPA 780-2026, 4.19.2.1 and 4.19.2.5 to 4.19.2.7 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#lightning"
   },
@@ -247,7 +247,7 @@
     ],
     "answer": 2,
     "explanation": "Long runs between buildings pick up surge energy, so SPDs go where those circuits enter or leave when the run is over 100 ft. There is an exception, under engineering supervision, when the threat is negligible or equal protection exists. Source: NFPA 780-2026, 4.19.2.2 and 4.19.2.4.",
-    "reference": "NFPA 780-2026, 4.19.2.2 and 4.19.2.4",
+    "reference": "NFPA 780-2026, 4.19.2.2 and 4.19.2.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#lightning"
   }

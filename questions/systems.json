@@ -469,7 +469,7 @@
   },
   {
     "id": "sys-027",
-    "level": "II",
+    "level": "IV",
     "topic": "systems",
     "domain": "component",
     "question": "On industrial machinery, the protective bonding circuit is checked with an impedance instrument. What is the NFPA 79 maximum?",
@@ -487,7 +487,7 @@
   },
   {
     "id": "sys-028",
-    "level": "II",
+    "level": "IV",
     "topic": "systems",
     "domain": "component",
     "question": "Using the NFPA 79 10 A method on a 14 AWG protective conductor, what is the largest voltage drop allowed?",
@@ -505,7 +505,7 @@
   },
   {
     "id": "sys-029",
-    "level": "II",
+    "level": "IV",
     "topic": "systems",
     "domain": "component",
     "question": "When NFPA 79 insulation resistance testing applies, what test voltage and minimum value are used?",
@@ -523,7 +523,7 @@
   },
   {
     "id": "sys-030",
-    "level": "III",
+    "level": "IV",
     "topic": "systems",
     "domain": "component",
     "question": "An NFPA 79 voltage test is applied to a machine's primary circuits. Which setup matches the standard?",
@@ -541,7 +541,7 @@
   },
   {
     "id": "sys-031",
-    "level": "III",
+    "level": "IV",
     "topic": "systems",
     "domain": "safety",
     "question": "A machine's wiring was modified in the field. Which NFPA 79 verification is always required, and what about the rest?",
