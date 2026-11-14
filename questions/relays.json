@@ -2232,7 +2232,7 @@
     "explanation": "ATS requires a check of the internal scheme logic against the owner's narrative or logic diagram, and it requires the settings and the logic to match the latest engineered files. Proving an element in isolation is not the same as proving the scheme. Source: ANSI/NETA ATS-2025, 7.9.2.B.3 and 7.9.2.C.3.",
     "reference": "ANSI/NETA ATS-2025, 7.9.2.B.3 and 7.9.2.C.3",
     "verified": true,
-    "kb": "relays.md#logic"
+    "kb": "relays.md#testing-logic"
   },
   {
     "id": "relay-125",
@@ -2286,7 +2286,7 @@
     "explanation": "Level IV theory includes Boolean logic in protection and control. An AND condition requires every input to be true. A series 86 contact is another required true condition in the trip path. Proving the elements in isolation is not the same as proving the scheme. Verify internal logic and the trip path together before you accept the installation. Source: IEEE C37.2-2022, Clause 3 and device 86; ANSI/NETA ATS-2025, 7.9.2; ANSI/NETA ETT-2026, 8.4.2.B.2.",
     "reference": "IEEE C37.2-2022, Clause 3 and device 86; ANSI/NETA ATS-2025, 7.9.2; ANSI/NETA ETT-2026, 8.4.2.B.2",
     "verified": true,
-    "kb": "relays.md#logic"
+    "kb": "relays.md#testing-logic"
   },
   {
     "id": "relay-128",
@@ -2412,7 +2412,7 @@
     "explanation": "Review the entire protection package to see whether it can still operate while the unit is being brought up to rated speed and voltage. For some machines, such as steam turbines, that process can last several hours at reduced frequency. Protection needs to remain in service once frequency reaches about one-quarter to one-half of rated, and above. When a relay or instrument transformer cannot perform at those low frequencies, add temporary supplemental protection. Source: Blackburn and Domin, Protective Relaying, 4th ed., 8.10.",
     "reference": "Blackburn and Domin, Protective Relaying, 4th ed., 8.10",
     "verified": true,
-    "kb": "relays.md#testing"
+    "kb": "relays.md#testing-reduced-frequency"
   },
   {
     "id": "relay-135",

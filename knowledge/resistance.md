@@ -1,6 +1,6 @@
 # Low-resistance ohms {#dlro}
 
-*Levels: II*
+*Level: II*
 
 A DLRO (digital low-resistance ohmmeter) measures milliohms and microhms. Four terminals — Kelvin — split the job: one pair drives current, the other pair reads voltage inside the current leads, so lead resistance and most of the clip contact drop out of the answer. Two-wire ohms on a breaker pole is a measurement of the leads.
 
@@ -8,7 +8,7 @@ Use a stable current, write the current down, and do not unclip an inductive win
 
 ## The 50 percent rule {#fifty-percent}
 
-*Levels: II, IV*
+*Level: II*
 
 ATS repeats this for bolted connections and for many breaker poles. Wording from 7.4.D.1, and the same idea at 7.6.1.2.D.2 and 7.2.2.D.1:
 
@@ -24,7 +24,7 @@ Millivolt drop is the same fact at a known current. `V = IR`. 200 A through 150 
 
 ## Winding resistance {#winding}
 
-*Levels: II, III*
+*Level: II*
 
 Liquid-filled transformers, ATS 7.2.2.D.8: temperature-corrected winding resistance shall compare within two percent of a previous test or of the adjacent phases.
 
@@ -36,7 +36,7 @@ A single shorted turn may barely move DC resistance and still shout on excitatio
 
 ## Busway insulation, because it is a resistance minimum {#busway}
 
-*Levels: II*
+*Level: II*
 
 ATS 7.4.D.2.a, low-voltage metal-enclosed busway, no manufacturer data: correct the reading to a nominal 100-foot run.
 

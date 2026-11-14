@@ -2898,7 +2898,7 @@
     "explanation": "NFPA 70E treats simple and complex lockout as two forms of hazardous-energy control. On a simple lockout the qualified person is in charge. On a complex lockout the person in charge has overall responsibility, and the procedure requires a written plan of execution that identifies that person. Multiple sources, more than one crew, or a job that spans a shift are the usual reasons a lockout is treated as complex. Source: NFPA 70E-2024, 120.3(H) and 120.5.",
     "reference": "NFPA 70E-2024, 120.3(H) and 120.5",
     "verified": true,
-    "kb": "safety.md#loto"
+    "kb": "safety.md#loto-complex"
   },
   {
     "id": "safety-164",
@@ -2934,7 +2934,7 @@
     "explanation": "The lockout/tagout program and the procedures in 120.2 through 120.6 are audited by a qualified person at intervals not to exceed one year. The audit has to cover at least one lockout in progress and is meant to catch problems in the program, the training, and how workers actually carry out the procedure. The employer is responsible for those audits. Source: NFPA 70E-2024, 110.3(L)(3) and 120.2(B).",
     "reference": "NFPA 70E-2024, 110.3(L)(3) and 120.2(B)",
     "verified": true,
-    "kb": "safety.md#loto"
+    "kb": "safety.md#loto-complex"
   },
   {
     "id": "safety-166",
@@ -2952,7 +2952,7 @@
     "explanation": "The host employer informs contract employers of known hazards related to the contractor's work that the contractor might not recognize, and of information the contractor needs for its assessments. The contract employer makes sure its people are informed of those hazards and follow the host's safety-related work rules, and advises the host of unique hazards the contractor's work creates. Where the host knows of hazards related to the contractor's work, the meeting is documented. Source: NFPA 70E-2024, 110.5.",
     "reference": "NFPA 70E-2024, 110.5",
     "verified": true,
-    "kb": "safety.md#loto"
+    "kb": "safety.md#loto-complex"
   },
   {
     "id": "safety-167",

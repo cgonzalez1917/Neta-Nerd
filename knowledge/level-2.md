@@ -1,6 +1,6 @@
 # Level II expectations {#expectations}
 
-*Levels: II*
+*Level: II*
 
 Level II here means the NETA Assistant Electrical Testing Technician: routine tests with supervision still available, enough judgment to keep yourself safe, and enough procedure memory to set up a test and compare it with a table. The bank is weighted to this level.
 
@@ -15,7 +15,7 @@ People who already test gear often still miss Safety and Theory. Component famil
 
 ## What Level II should be able to do
 
-*Levels: II*
+*Level: II*
 
 - Put a circuit in an electrically safe work condition, or say clearly why the task is still energized work.
 - Pick a megohmmeter voltage, a DLRO, or a primary-injection set without guessing from the frame size alone.
@@ -28,7 +28,7 @@ Level III adds interpretation, per-unit fault current, print logic, and the plac
 
 ## Exam format {#exam-format}
 
-*Levels: II*
+*Level: II*
 
 NETA’s technician-certification pages describe the administered exams as closed-book and proctored at Pearson VUE. A formula sheet and an on-screen calculator are provided. You do not bring your own. The published pass mark is a scaled 410 or higher on a 200 to 500 scale.
 
@@ -44,6 +44,6 @@ Do not treat forum posts that recall specific items as the exam. This bank write
 
 ## Who leads the crew {#crew-leader}
 
-*Levels: II*
+*Level: II*
 
 On ATS and MTS jobs, each on-site crew leader must hold a current Level 3 or higher certification (ATS-2025 and MTS-2023, 3.2 item 2). As a Level II technician, you work on a crew led by a Level III or IV. See the [Level III page](#/study/level-3.md/crew-leader) for how ECS differs.

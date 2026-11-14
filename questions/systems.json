@@ -357,7 +357,7 @@
     "explanation": "IEEE 399 explains that the first-cycle network gives the momentary (close-and-latch) duty for MV and HV gear, while for LV gear that same result is the duty the device must interrupt. The interrupting-network results are used for MV and HV breakers. Source: IEEE 399-1997, 7.4.1 and Table 7-2 notes.",
     "reference": "IEEE 399-1997, 7.4.1 and Table 7-2 notes",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-021",
@@ -375,7 +375,7 @@
     "explanation": "By then motor contributions have decayed, so they are left out, and generators use transient or higher reactance. These currents also carry no dc offset. Source: IEEE 399-1997, 7.4.1.",
     "reference": "IEEE 399-1997, 7.4.1",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-022",
@@ -429,7 +429,7 @@
     "explanation": "The Appendix B matrix factor for high reliability and poor condition is 0.25. 24 x 0.25 = 6 months. Source: ANSI/NETA MTS-2023 Appendix B.",
     "reference": "ANSI/NETA MTS-2023 Appendix B",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-025",
@@ -447,7 +447,7 @@
     "explanation": "Low reliability with good condition has a factor of 2.5. 36 x 2.5 = 90 months. Source: ANSI/NETA MTS-2023 Appendix B.",
     "reference": "ANSI/NETA MTS-2023 Appendix B",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-026",
@@ -465,7 +465,7 @@
     "explanation": "High reliability with average condition has a factor of 0.50. 36 x 0.5 = 18 months. Source: ANSI/NETA MTS-2023 Appendix B.",
     "reference": "ANSI/NETA MTS-2023 Appendix B",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-027",
@@ -627,7 +627,7 @@
     "explanation": "ECS requires parties involved in executing the commissioning plan to work from the most up-to-date version. A stale draft can omit later tests, sequence changes, or owner revisions. Resolve the version issue before the tests proceed. Source: ANSI/NETA ECS-2024, 6.4.",
     "reference": "ANSI/NETA ECS-2024, 6.4",
     "verified": true,
-    "kb": "apparatus.md#commissioning"
+    "kb": "apparatus.md#commissioning-plan"
   },
   {
     "id": "sys-036",
@@ -645,7 +645,7 @@
     "explanation": "ECS lists the contents of the commissioning plan, including a general description of the work before, during, and after energization. A plan that skips those activities is incomplete for a senior technician who has to develop or review it. Source: ANSI/NETA ECS-2024, 6.4.",
     "reference": "ANSI/NETA ECS-2024, 6.4",
     "verified": true,
-    "kb": "apparatus.md#commissioning"
+    "kb": "apparatus.md#commissioning-plan"
   },
   {
     "id": "sys-037",
@@ -699,7 +699,7 @@
     "explanation": "ECS includes a review of factory and field acceptance records, including open deficiencies, so you can confirm the equipment is in acceptable condition and is ready for first energization and for final acceptance. Open deficiencies that affect suitability are not a paperwork exercise to be finished after the equipment is already live. Source: ANSI/NETA ECS-2024, Section 6.",
     "reference": "ANSI/NETA ECS-2024, Section 6",
     "verified": true,
-    "kb": "apparatus.md#commissioning"
+    "kb": "apparatus.md#commissioning-plan"
   },
   {
     "id": "sys-040",
@@ -717,7 +717,7 @@
     "explanation": "IEEE C57.12.00 limits the defined short-circuit duration for Category II, III, and IV units to two seconds unless the user specifies otherwise, and it requires transformers on reclosing circuits to ride through repeated faults so long as the total time stays within that single-event maximum. Applying a study on a reclosing feeder means checking that accumulated duty, not only the first shot. Source: IEEE C57.12.00-2021, 7.1.3.1.",
     "reference": "IEEE C57.12.00-2021, 7.1.3.1",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "transformers.md#through-fault"
   },
   {
     "id": "sys-041",
@@ -735,7 +735,7 @@
     "explanation": "Senior-level troubleshooting starts with documentation and event information, then a cause, then a recommended correction. Changing a setting or swapping a device before the study and the as-left settings are compared to the event can make coordination worse. ECS and the Level IV systems outline both expect that review-and-recommend sequence. Source: ANSI/NETA ECS-2024, Section 6; IEEE 242-2001, Chapter 15.",
     "reference": "ANSI/NETA ECS-2024, Section 6; IEEE 242-2001, Chapter 15",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-events"
   },
   {
     "id": "sys-042",
@@ -771,7 +771,7 @@
     "explanation": "Level IV theory includes reading coordination curves and applying data from short-circuit and coordination studies. If the field setting does not match the study, the coordination you think you have is not the coordination that will be in service. Resolve the mismatch with the engineer or the study author before the equipment goes on the line. Source: IEEE 242-2001, Chapter 15; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6.",
     "reference": "IEEE 242-2001, Chapter 15; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-044",
@@ -789,7 +789,7 @@
     "explanation": "MTS Appendix C lists the conditions that call for updating power-system studies, including a change in impedance, configuration, or loading. Added transformers and motors change available fault current and motor contribution. Interrupting ratings taken from a study that no longer represents the system are not a basis for acceptance. Source: ANSI/NETA MTS-2023, Appendix C; IEEE 242-2001, Chapter 2; ANSI/NETA ETT-2026, 8.4.2.H.6 and 8.4.2.H.9.",
     "reference": "ANSI/NETA MTS-2023, Appendix C; IEEE 242-2001, Chapter 2; ANSI/NETA ETT-2026, 8.4.2.H.6 and 8.4.2.H.9",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-045",
@@ -807,7 +807,7 @@
     "explanation": "Short-circuit studies produce different current values for different purposes. Interrupting duty for low-voltage breakers and fuses is checked with the appropriate first-cycle or interrupting current from the study, including motor contribution where the study applies it. Time-delayed currents are used for other checks, such as overcurrent-relay sensitivity, not as a substitute for interrupting duty. Source: IEEE 242-2001, Chapter 2; IEEE 399-1997, Chapter 6; ANSI/NETA ETT-2026, 8.4.2.H.5 and 8.4.2.H.6.",
     "reference": "IEEE 242-2001, Chapter 2; IEEE 399-1997, Chapter 6; ANSI/NETA ETT-2026, 8.4.2.H.5 and 8.4.2.H.6",
     "verified": true,
-    "kb": "apparatus.md#studies"
+    "kb": "apparatus.md#studies-apply"
   },
   {
     "id": "sys-046",

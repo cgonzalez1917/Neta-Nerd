@@ -27,21 +27,18 @@
     {
       "file": "test-day.md",
       "title": "Test day, Pearson, and the TI-30XS",
-      "level": "II, III, IV",
+      "level": "II",
       "levels": [
-        "II",
-        "III",
-        "IV"
+        "II"
       ]
     },
     {
       "file": "safety.md",
       "title": "Safety, LOTO, and NFPA 70E-2024",
-      "level": "II, III, IV",
+      "level": "II, III",
       "levels": [
         "II",
-        "III",
-        "IV"
+        "III"
       ]
     },
     {
@@ -57,40 +54,34 @@
     {
       "file": "insulation.md",
       "title": "Insulation resistance, PI, and DAR",
-      "level": "II, III",
+      "level": "II",
       "levels": [
-        "II",
-        "III"
+        "II"
       ]
     },
     {
       "file": "resistance.md",
       "title": "DLRO, bolted connections, winding resistance",
-      "level": "II, III, IV",
+      "level": "II",
       "levels": [
-        "II",
-        "III",
-        "IV"
+        "II"
       ]
     },
     {
       "file": "transformers.md",
       "title": "Transformers: TTR, excitation, PF, oil",
-      "level": "II, III, IV",
+      "level": "II, IV",
       "levels": [
         "II",
-        "III",
         "IV"
       ]
     },
     {
       "file": "breakers.md",
       "title": "Low-voltage breakers and trip units",
-      "level": "II, III, IV",
+      "level": "II",
       "levels": [
-        "II",
-        "III",
-        "IV"
+        "II"
       ]
     },
     {
@@ -106,46 +97,15 @@
     {
       "file": "instrument-transformers.md",
       "title": "CTs and VTs",
-      "level": "II, III, IV",
+      "level": "II, IV",
       "levels": [
         "II",
-        "III",
         "IV"
       ]
     },
     {
       "file": "cables.md",
       "title": "Cables, VLF, and tan delta",
-      "level": "II, III, IV",
-      "levels": [
-        "II",
-        "III",
-        "IV"
-      ]
-    },
-    {
-      "file": "grounding.md",
-      "title": "Grounding and ground-fault protection",
-      "level": "II, III, IV",
-      "levels": [
-        "II",
-        "III",
-        "IV"
-      ]
-    },
-    {
-      "file": "batteries.md",
-      "title": "Station batteries",
-      "level": "II, III, IV",
-      "levels": [
-        "II",
-        "III",
-        "IV"
-      ]
-    },
-    {
-      "file": "thermography.md",
-      "title": "Infrared thermography",
       "level": "II, III",
       "levels": [
         "II",
@@ -153,13 +113,36 @@
       ]
     },
     {
+      "file": "grounding.md",
+      "title": "Grounding and ground-fault protection",
+      "level": "II",
+      "levels": [
+        "II"
+      ]
+    },
+    {
+      "file": "batteries.md",
+      "title": "Station batteries",
+      "level": "II",
+      "levels": [
+        "II"
+      ]
+    },
+    {
+      "file": "thermography.md",
+      "title": "Infrared thermography",
+      "level": "II",
+      "levels": [
+        "II"
+      ]
+    },
+    {
       "file": "field-methods.md",
       "title": "Field methods: injection, CTs, PF, motors",
-      "level": "II, III, IV",
+      "level": "II, III",
       "levels": [
         "II",
-        "III",
-        "IV"
+        "III"
       ]
     },
     {
@@ -175,21 +158,16 @@
     {
       "file": "life-safety.md",
       "title": "Life-safety power and other NFPA tests",
-      "level": "II, III",
+      "level": "II",
       "levels": [
-        "II",
-        "III"
+        "II"
       ]
     },
     {
       "file": "sources.md",
       "title": "Sources and what not to copy",
       "level": "",
-      "levels": [
-        "II",
-        "III",
-        "IV"
-      ]
+      "levels": []
     }
   ]
 }

@@ -1,12 +1,12 @@
 # Test day and the TI-30XS {#test-day}
 
-*Levels: II, III, IV*
+*Level: II*
 
 What actually happens on exam day, and how to keep the on-screen calculator from costing you points. Format facts come from NETA's technician-certification, exam-reminders, and exam-preparation pages and from Pearson VUE's NETA page, checked November 2026. Pearson interface details are the platform's usual behavior, not a NETA-written spec, so confirm them in the Pearson demo before you go.
 
 ## Format at a glance {#format}
 
-*Levels: II, III, IV*
+*Level: II*
 
 - Computer-based, multiple choice, closed book, taken onsite at a Pearson VUE test center. No hands-on or practical section at any level.
 - Level II: 100 questions in 2 hours. Level III: 100 questions in 2 hours. Level IV: 65 questions in 2 hours.
@@ -17,7 +17,7 @@ What actually happens on exam day, and how to keep the on-screen calculator from
 
 ## Check-in {#check-in}
 
-*Levels: II, III, IV*
+*Level: II*
 
 - Plan to arrive about 30 minutes early. Pearson's NETA page warns that arriving more than 15 minutes late can cost you the appointment.
 - Bring the ID the confirmation asks for. Expect a photo, a palm-vein scan, and a signature.
@@ -26,7 +26,7 @@ What actually happens on exam day, and how to keep the on-screen calculator from
 
 ## On the screen {#screen}
 
-*Levels: II, III, IV*
+*Level: II*
 
 - A timer and an item counter sit at the top. Next and previous move between items.
 - Flag for review marks an item to come back to. Use it on long math so one problem doesn't eat ten minutes.
@@ -38,7 +38,7 @@ What actually happens on exam day, and how to keep the on-screen calculator from
 
 ## The TI-30XS {#calculator}
 
-*Levels: II, III, IV*
+*Level: II*
 
 NETA's exam-preparation page shows the on-screen calculator as a TI-30XS MultiView and tells you to use the `mode` key and arrows. The setting marked there is **CLASSIC**, not MathPrint.
 
@@ -51,7 +51,7 @@ NETA's exam-preparation page shows the on-screen calculator as a TI-30XS MultiVi
 
 ## Sanity checks before you click {#sanity}
 
-*Levels: II, III, IV*
+*Level: II*
 
 Most wrong answers on the math items fail a quick reasonableness test. Run these before you move on:
 
@@ -66,13 +66,13 @@ Most wrong answers on the math items fail a quick reasonableness test. Run these
 
 ## Time {#time}
 
-*Levels: II, III, IV*
+*Level: II*
 
 Two hours for 100 items is about 72 seconds each. Level IV gives about 110 seconds each for 65 items. Make a first pass, answer what you know, and flag the long calculations. Before you end the exam, use the review screen to make sure nothing is left blank, since a blank can't earn credit.
 
 ## How to use the official exam outline {#outline}
 
-*Levels: II, III, IV*
+*Level: II*
 
 NETA's detailed content outline (the DCO, updated December 2022) is the closest thing to a syllabus. It sits in ANSI/NETA ETT Section 8, and NETA posts it on the exam-preparation page with the June 2026 roadmaps and the October 2023 reference list.
 

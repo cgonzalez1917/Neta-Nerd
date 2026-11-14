@@ -1,6 +1,6 @@
 # Math you do not get for free {#not-on-sheet}
 
-*Levels: II, III*
+*Level: II*
 
 The certification exam shows a one-page formula sheet on screen. This bank follows the official NETA Electrical Formulae Sheet, updated June 29, 2017. It is linked from NETA’s exam-preparation page: https://www.netaworld.org/certification-exam/exam-preparation686
 
@@ -43,9 +43,13 @@ Not on the sheet, so memorize them. Each of these was checked against the June 2
 
 Insulation-resistance temperature multipliers are a table, not a line on the sheet. The on-screen calculator is a TI-30XS. If it is in radians, `cos(60)` is not one half. Switch to degrees before an angle problem.
 
+## Level II {#math-level-ii}
+
+*Level: II*
+
 ## Power {#power}
 
-*Levels: II, III, IV*
+*Level: II*
 
 The sheet prints single-phase `P = VI cos θ`, power factor as `kW/kVA`, three-phase `VA = √3 × V × I`, and `kW = kVA × PF`.
 
@@ -65,7 +69,7 @@ Worked: 480 V, 100 A, unity PF. `P = 1.732 × 480 × 100 = 83.1 kW`. Drop the �
 
 ## Also on the official sheet {#official-rest}
 
-*Levels: II, III, IV*
+*Level: II*
 
 Balanced delta: line current is 1.732 times phase current, and line voltage equals phase voltage. A delta phase current of 10 A is a line current of 17.32 A. The voltage you read line to line is the phase voltage.
 
@@ -89,7 +93,7 @@ Watthour meters are a note, not one algebra line. Kh is the watthours one revolu
 
 ## Reactance {#xl}
 
-*Levels: II, III*
+*Level: II*
 
 `XL = 2πfL` is on the sheet. Henries are not millihenries. 10 mH is 0.010 H.
 
@@ -103,7 +107,7 @@ Net reactance on the sheet is `XL − XC`, not the sum. `R = 3 Ω`, `XL = 10 Ω`
 
 ## Circuit laws the sheet assumes {#kvl}
 
-*Levels: II*
+*Level: II*
 
 Series resistances add. Two equal resistors in parallel are half of one: 12 Ω || 12 Ω = 6 Ω. `Rparallel = (R1 × R2) / (R1 + R2)`.
 
@@ -113,7 +117,7 @@ Inductors combine like resistors. 20 mH in series with 20 mH is 40 mH. The same 
 
 ## CT ratio {#ct-ratio}
 
-*Levels: II*
+*Level: II*
 
 Secondary amperes = primary amperes × (secondary rating / primary rating).
 
@@ -123,7 +127,7 @@ Polarity in the field: current into H1 leaves X1. One ground on the secondary ci
 
 ## Turns-ratio percent {#ttr-pct}
 
-*Levels: II*
+*Level: II*
 
 Percent accuracy on the official sheet is `(actual − specified) / specified × 100`. For a turns-ratio check, the calculated ratio is the specified value and the measured ratio is the actual value:
 
@@ -135,7 +139,7 @@ Nameplate 13800 / 480 = 28.75. Measured 28.95.
 
 ## Copper temperature correction {#copper}
 
-*Levels: II*
+*Level: II*
 
 Not on the official sheet. For copper windings:
 
@@ -153,7 +157,7 @@ Insulation resistance moves the other way: hotter insulation reads lower megohms
 
 ## Per-unit fault current {#per-unit}
 
-*Levels: II, III*
+*Level: II*
 
 Percent impedance on a transformer nameplate is the percent of rated voltage that, applied to one winding with the other shorted, circulates rated current.
 
@@ -167,9 +171,128 @@ At 5.75% Z, `Zpu = 0.0575`, `Isc ≈ 1804 / 0.0575 ≈ 31.4 kA`.
 
 Multiplying by 5.75 instead of dividing by 0.0575 is the usual miss (you land near 10 kA).
 
+## A temperature rise is not a temperature {#delta-t}
+
+*Level: II*
+
+Table 100.18 talks about a difference, ΔT. A difference in Celsius converts by 1.8, with no +32. A 10 °C rise is an 18 °F rise. Adding 32 turns a rise into a fake temperature (50 °F) and will make a mild connection look like a fire.
+
+## Unit prefixes {#prefixes}
+
+*Level: II*
+
+Not on the sheet. Every step is a factor of 1000.
+
+- tera (T) = 10¹²
+- giga (G) = 10⁹
+- mega (M) = 10⁶
+- kilo (k) = 10³
+- milli (m) = 10⁻³
+- micro (µ, sometimes typed u) = 10⁻⁶
+- nano (n) = 10⁻⁹
+- pico (p) = 10⁻¹²
+
+Capital M is mega and lowercase m is milli. That one letter is the difference between a megohm and a milliohm. Worked: 2,500 MΩ = 2.5 GΩ. 0.047 µF = 47 nF. 1,500 µΩ = 1.5 mΩ.
+
+## Single-loop RLC, start to finish {#rlc}
+
+*Level: II*
+
+The sheet gives every piece: `XL = 2πfL`, `XC = 1/(2πfC)`, `Z = √(R² + (XL − XC)²)`, `V = IZ`, and `cos θ = R/Z`. The work is doing them in order without dropping a prefix.
+
+Worked: 120 V, 60 Hz, R = 30 Ω, L = 0.20 H, C = 50 µF.
+
+1. `XL = 2π × 60 × 0.20 = 75.4 Ω`
+2. `XC = 1 / (2π × 60 × 50×10⁻⁶) = 53.1 Ω`
+3. Net `X = 75.4 − 53.1 = 22.3 Ω`, inductive because XL is larger
+4. `Z = √(30² + 22.3²) = 37.4 Ω`
+5. `I = 120 / 37.4 = 3.21 A`
+6. `PF = 30 / 37.4 = 0.80`, lagging. `θ = cos⁻¹(0.80) = 36.7°` in degree mode
+
+If XC is the larger one, the circuit is capacitive and current leads. ELI the ICE man tells you the direction. The sheet doesn't.
+
+## Combining capacitors and resistors {#cap-combos}
+
+*Level: II*
+
+Not on the sheet.
+
+- Resistors and inductors: series add. Parallel use reciprocals: `1/R = 1/R1 + 1/R2 + …`. The parallel total is always below the smallest branch.
+- Capacitors are backward: parallel add, and series use reciprocals. 10 µF and 15 µF in series is 6 µF. In parallel it's 25 µF.
+
+Three resistors in parallel, 60, 30, and 20 Ω: `1/60 + 1/30 + 1/20 = 6/60`, so the total is 10 Ω. Product over sum works only two at a time.
+
+## 4–20 mA scaling {#loop-scaling}
+
+*Level: II*
+
+Not on the sheet. Analog transducers and transmitters commonly use a 4–20 mA loop (IEEE C37.1 lists it as a standard dc analog signal range). 4 mA is the bottom of the range, not zero current, and the live span is 16 mA.
+
+- Reading from current: `value = (mA − 4) / 16 × full range`
+- Current from reading: `mA = 4 + 16 × (value / full range)`
+
+Worked: 0–150 °C transmitter at 8 mA: `(8 − 4) / 16 × 150 = 37.5 °C`. A 0–2000 A transducer at 1200 A: `4 + 16 × 0.6 = 13.6 mA`. The usual miss is treating the loop as 0–20 mA.
+
+## RMS, peak, and peak-to-peak {#rms-peak}
+
+*Level: II*
+
+The sheet prints `Vpeak = √2 × Vrms`. Peak-to-peak is twice peak, and that step is not printed. Meters and relays usually report rms. Oscilloscopes and some event records show peak or peak-to-peak.
+
+Worked: 480 V rms peaks at 679 V. A scope trace of 340 V peak-to-peak is 170 V peak, which is 120 V rms.
+
+## More drills on the lower block {#sheet-drills}
+
+*Level: II*
+
+- **Delta and wye.** Delta line current 52 A is a phase current of `52 / 1.732 = 30 A`. A 4160 V wye has `4160 / 1.732 = 2402 V` per phase.
+- **Capacitor on another voltage.** 100 kvar at 480 V on a 440 V bus: `100 × (440/480)² = 84 kvar`. The square matters.
+- **kvar from reactance.** `kVAR = kV² × 1000 / XC`. At 0.48 kV and 4.608 Ω: 50 kvar. Enter kilovolts, not volts.
+- **Resonance.** 10 mH and 100 µF: `f = 1 / (2π √(0.010 × 100×10⁻⁶)) = 159 Hz`. At resonance Z = R.
+- **Machine speed.** `ns = 120 × f / P`. Six poles at 60 Hz is 1200 rpm. Four poles at 50 Hz is 1500 rpm.
+- **Watthour meters.** Kh is watthours per disk revolution. `kW = 3.6 × revolutions × Kh / seconds`, where 3.6 is 3600 seconds per hour divided by 1000 W per kW. Primary Kh = Kh × CT ratio × VT ratio.
+- **Torque.** 50 hp at 1750 rpm: `33,000 × 50 / (6.28 × 1750) = 150 lb-ft`.
+- **Motor current.** Build it: hp × 746 = output watts, divide by efficiency for input watts, divide by PF for VA, then `I = VA / (1.732 × V)`.
+- **Percent accuracy.** Divide by the specified value, not the measured one. Keep the sign.
+
+## Resistance and run length {#run-length}
+
+*Level: II*
+
+Conductor resistance is proportional to length. Check the units every time you use the resistance-and-length line: a longer run must read more ohms.
+
+- From a per-1000-ft value to a run: `R_run = R_per_1000ft × (length / 1000)`. 0.20 Ω per 1000 ft over 2,500 ft is 0.50 Ω. This is the arrangement the sheet's line prints.
+- From a measured run to a per-1000-ft value: `R_per_1000ft = R_measured × (1000 / length)`. A 2,000 ft shield that measures 30 Ω is 15 Ω per 1000 ft.
+
+If an answer says a long run reads less than its per-1000-ft value, the fraction is upside down.
+
+## Level III {#math-level-iii}
+
+*Level: III*
+
+## Harmonics at the point of common coupling {#harmonics}
+
+*Level: III*
+
+ATS section 6.6 is the harmonic study. The report compares calculated voltage and current distortion with IEEE 519 and calls out anything over those limits. It also wants the impedance-versus-frequency plot, so resonances are visible, and a check of transformer capability under the nonsinusoidal current using the method in IEEE C57.110.
+
+Field work includes recognizing the effects, not only reading the study (IEEE 519-2022; IEEE 141-1993 Ch. 8). Nonlinear loads, such as a large rectifier, inject harmonic current. Capacitors have falling impedance with frequency, so they can absorb a large share of that current and overheat. Transformers on the same bus see extra heating as well, hotter than the kVA load would suggest, and voltage waveforms can look flat-topped. Temporary monitoring should stay in place long enough to characterize the condition, and a study or mitigation should come before anyone adds more capacitors, which can make a resonance worse.
+
+IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common coupling, not on each drive or each panel. The weekly short-time values use the table; the very-short-time daily values are allowed up to one and a half times those table values. A bus from just over 1 kV through 69 kV is the row whose total voltage distortion limit is 5 percent. Lower voltage buses are allowed more distortion. Higher voltage buses are allowed less. Do not paste the whole table into a report; use the row for the voltage at the point of common coupling.
+
+## Wye capacitors, line to line {#caps}
+
+*Level: III*
+
+Three equal capacitors in wye: a measurement from phase A to phase B sees two units in series. Series capacitance is half of one unit when they match. 100 µF cans read about 50 µF from A to B. Do not call the bank failed because the line-to-line reading is not the nameplate microfarads of one can.
+
+## Level IV {#math-level-iv}
+
+*Level: IV*
+
 ## Base changes and fault math {#fault-math}
 
-*Levels: IV*
+*Level: IV*
 
 Sources: Blackburn and Domin, Protective Relaying, 4th ed., 2.5 through 2.8 and 2.10; IEEE 242-2001, Clause 2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6.
 
@@ -193,7 +316,7 @@ Apply the voltage term only when the two kV values belong to the same voltage le
 
 ## Symmetrical components and asymmetry {#sequence}
 
-*Levels: IV*
+*Level: IV*
 
 Sources: IEEE 242-2001, 2.4 Equation (2-3), 2.7, and 8.3.2; Blackburn and Domin, Protective Relaying, 4th ed., Chapter 4; IEEE C37.230-2020, 6.2; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.G.
 
@@ -207,114 +330,3 @@ Sources: IEEE 242-2001, 2.4 Equation (2-3), 2.7, and 8.3.2; Blackburn and Domin,
 **Single line-to-ground fault.** `IF = 3 x VLN / (Z1 + Z2 + Z0 + 3 x ZG)`. On a 13.8 kV system, `3 x 7967 ≈ 23,900 V`. With Z1 = Z2 = 0.5, Z0 = 0.6, and an 8 ohm ground impedance, the bottom is `0.5 + 0.5 + 0.6 + 24 = 25.6 ohms`, so IF is about 934 A. Forgetting the 3 on ZG overstates the current by more than double.
 
 **Sequence currents in a ground fault.** With one phase faulted to ground, I0 = I1 = I2 = IF / 3. A 600 A fault has 200 A in each sequence, and the residual (3 x I0) a ground relay sees is 600 A.
-
-## A temperature rise is not a temperature {#delta-t}
-
-*Levels: II*
-
-Table 100.18 talks about a difference, ΔT. A difference in Celsius converts by 1.8, with no +32. A 10 °C rise is an 18 °F rise. Adding 32 turns a rise into a fake temperature (50 °F) and will make a mild connection look like a fire.
-
-## Harmonics at the point of common coupling {#harmonics}
-
-*Levels: III, IV*
-
-ATS section 6.6 is the harmonic study. The report compares calculated voltage and current distortion with IEEE 519 and calls out anything over those limits. It also wants the impedance-versus-frequency plot, so resonances are visible, and a check of transformer capability under the nonsinusoidal current using the method in IEEE C57.110.
-
-Level IV field work includes recognizing the effects, not only reading the study (IEEE 519-2022; IEEE 141-1993 Ch. 8). Nonlinear loads, such as a large rectifier, inject harmonic current. Capacitors have falling impedance with frequency, so they can absorb a large share of that current and overheat. Transformers on the same bus see extra heating as well, hotter than the kVA load would suggest, and voltage waveforms can look flat-topped. Temporary monitoring should stay in place long enough to characterize the condition, and a study or mitigation should come before anyone adds more capacitors, which can make a resonance worse.
-
-IEEE 519-2022 clause 5 puts the voltage-distortion limits at the point of common coupling, not on each drive or each panel. The weekly short-time values use the table; the very-short-time daily values are allowed up to one and a half times those table values. A bus from just over 1 kV through 69 kV is the row whose total voltage distortion limit is 5 percent. Lower voltage buses are allowed more distortion. Higher voltage buses are allowed less. Do not paste the whole table into a report; use the row for the voltage at the point of common coupling.
-
-## Wye capacitors, line to line {#caps}
-
-*Levels: III*
-
-Three equal capacitors in wye: a measurement from phase A to phase B sees two units in series. Series capacitance is half of one unit when they match. 100 µF cans read about 50 µF from A to B. Do not call the bank failed because the line-to-line reading is not the nameplate microfarads of one can.
-
-## Unit prefixes {#prefixes}
-
-*Levels: II*
-
-Not on the sheet. Every step is a factor of 1000.
-
-- tera (T) = 10¹²
-- giga (G) = 10⁹
-- mega (M) = 10⁶
-- kilo (k) = 10³
-- milli (m) = 10⁻³
-- micro (µ, sometimes typed u) = 10⁻⁶
-- nano (n) = 10⁻⁹
-- pico (p) = 10⁻¹²
-
-Capital M is mega and lowercase m is milli. That one letter is the difference between a megohm and a milliohm. Worked: 2,500 MΩ = 2.5 GΩ. 0.047 µF = 47 nF. 1,500 µΩ = 1.5 mΩ.
-
-## Single-loop RLC, start to finish {#rlc}
-
-*Levels: II, III*
-
-The sheet gives every piece: `XL = 2πfL`, `XC = 1/(2πfC)`, `Z = √(R² + (XL − XC)²)`, `V = IZ`, and `cos θ = R/Z`. The work is doing them in order without dropping a prefix.
-
-Worked: 120 V, 60 Hz, R = 30 Ω, L = 0.20 H, C = 50 µF.
-
-1. `XL = 2π × 60 × 0.20 = 75.4 Ω`
-2. `XC = 1 / (2π × 60 × 50×10⁻⁶) = 53.1 Ω`
-3. Net `X = 75.4 − 53.1 = 22.3 Ω`, inductive because XL is larger
-4. `Z = √(30² + 22.3²) = 37.4 Ω`
-5. `I = 120 / 37.4 = 3.21 A`
-6. `PF = 30 / 37.4 = 0.80`, lagging. `θ = cos⁻¹(0.80) = 36.7°` in degree mode
-
-If XC is the larger one, the circuit is capacitive and current leads. ELI the ICE man tells you the direction. The sheet doesn't.
-
-## Combining capacitors and resistors {#cap-combos}
-
-*Levels: II*
-
-Not on the sheet.
-
-- Resistors and inductors: series add. Parallel use reciprocals: `1/R = 1/R1 + 1/R2 + …`. The parallel total is always below the smallest branch.
-- Capacitors are backward: parallel add, and series use reciprocals. 10 µF and 15 µF in series is 6 µF. In parallel it's 25 µF.
-
-Three resistors in parallel, 60, 30, and 20 Ω: `1/60 + 1/30 + 1/20 = 6/60`, so the total is 10 Ω. Product over sum works only two at a time.
-
-## 4–20 mA scaling {#loop-scaling}
-
-*Levels: II*
-
-Not on the sheet. Analog transducers and transmitters commonly use a 4–20 mA loop (IEEE C37.1 lists it as a standard dc analog signal range). 4 mA is the bottom of the range, not zero current, and the live span is 16 mA.
-
-- Reading from current: `value = (mA − 4) / 16 × full range`
-- Current from reading: `mA = 4 + 16 × (value / full range)`
-
-Worked: 0–150 °C transmitter at 8 mA: `(8 − 4) / 16 × 150 = 37.5 °C`. A 0–2000 A transducer at 1200 A: `4 + 16 × 0.6 = 13.6 mA`. The usual miss is treating the loop as 0–20 mA.
-
-## RMS, peak, and peak-to-peak {#rms-peak}
-
-*Levels: II, III*
-
-The sheet prints `Vpeak = √2 × Vrms`. Peak-to-peak is twice peak, and that step is not printed. Meters and relays usually report rms. Oscilloscopes and some event records show peak or peak-to-peak.
-
-Worked: 480 V rms peaks at 679 V. A scope trace of 340 V peak-to-peak is 170 V peak, which is 120 V rms.
-
-## More drills on the lower block {#sheet-drills}
-
-*Levels: II, III*
-
-- **Delta and wye.** Delta line current 52 A is a phase current of `52 / 1.732 = 30 A`. A 4160 V wye has `4160 / 1.732 = 2402 V` per phase.
-- **Capacitor on another voltage.** 100 kvar at 480 V on a 440 V bus: `100 × (440/480)² = 84 kvar`. The square matters.
-- **kvar from reactance.** `kVAR = kV² × 1000 / XC`. At 0.48 kV and 4.608 Ω: 50 kvar. Enter kilovolts, not volts.
-- **Resonance.** 10 mH and 100 µF: `f = 1 / (2π √(0.010 × 100×10⁻⁶)) = 159 Hz`. At resonance Z = R.
-- **Machine speed.** `ns = 120 × f / P`. Six poles at 60 Hz is 1200 rpm. Four poles at 50 Hz is 1500 rpm.
-- **Watthour meters.** Kh is watthours per disk revolution. `kW = 3.6 × revolutions × Kh / seconds`, where 3.6 is 3600 seconds per hour divided by 1000 W per kW. Primary Kh = Kh × CT ratio × VT ratio.
-- **Torque.** 50 hp at 1750 rpm: `33,000 × 50 / (6.28 × 1750) = 150 lb-ft`.
-- **Motor current.** Build it: hp × 746 = output watts, divide by efficiency for input watts, divide by PF for VA, then `I = VA / (1.732 × V)`.
-- **Percent accuracy.** Divide by the specified value, not the measured one. Keep the sign.
-
-## Resistance and run length {#run-length}
-
-*Levels: II*
-
-Conductor resistance is proportional to length. Check the units every time you use the resistance-and-length line: a longer run must read more ohms.
-
-- From a per-1000-ft value to a run: `R_run = R_per_1000ft × (length / 1000)`. 0.20 Ω per 1000 ft over 2,500 ft is 0.50 Ω. This is the arrangement the sheet's line prints.
-- From a measured run to a per-1000-ft value: `R_per_1000ft = R_measured × (1000 / length)`. A 2,000 ft shield that measures 30 Ω is 15 Ω per 1000 ft.
-
-If an answer says a long run reads less than its per-1000-ft value, the fraction is upside down.

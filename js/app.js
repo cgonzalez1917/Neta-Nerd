@@ -1313,6 +1313,7 @@
       h("p", { class: "kicker" }, "Knowledge base"),
       h("h1", {}, "Study"),
       h("p", { class: "lede" }, "Written for the people adding questions. Procedures, checked numbers, and worked math. Standards text is not copied here."),
+      h("p", {}, "These notes are split by exam level. The exams build on each other and come back to the same equipment with more depth at the higher levels, so a Level III candidate should also study the Level II sections, and a Level IV candidate should study the Level II and Level III sections as well."),
       h("p", {}, h("a", { href: "#/math" }, "Math Cheat Sheet")),
       h("div", { class: "topics" }, state.docs.map(function (d) {
         return h("a", { class: "topic-card", href: "#/study/" + d.file },
@@ -1325,6 +1326,7 @@
   function renderStudyDoc(file, anchor) {
     var doc = state.docs.find(function (d) { return d.file === file; });
     app.append(h("p", {}, h("a", { href: "#/study" }, "All study pages"), doc ? " · " + doc.title : ""));
+    app.append(h("p", { class: "meta" }, "These notes are split by exam level. The exams build on each other and come back to the same equipment with more depth at the higher levels, so a Level III candidate should also study the Level II sections, and a Level IV candidate should study the Level II and Level III sections as well."));
     fetch("knowledge/" + file).then(function (r) {
       if (!r.ok) throw new Error("missing");
       return r.text();

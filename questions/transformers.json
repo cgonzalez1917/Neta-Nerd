@@ -2053,7 +2053,7 @@
     "explanation": "For Category II, III, and IV transformers, IEEE C57.12.00 limits the duration of the defined short-circuit current to two seconds unless the user specifies otherwise. Category I uses a separate duration equation. If a longer fault time is expected in service, that needs to be specified rather than assumed. Source: IEEE C57.12.00-2021, 7.1.3.1.",
     "reference": "IEEE C57.12.00-2021, 7.1.3.1",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#through-fault"
   },
   {
     "id": "xfmr-115",
@@ -2071,7 +2071,7 @@
     "explanation": "When a transformer is used on a circuit that can reclose, IEEE C57.12.00 requires units in all categories to ride through those repeated faults without first cooling back to normal temperature between events, as long as the total time does not exceed the single-event limit. That single-event limit is the one defined in 7.1.3.1. Source: IEEE C57.12.00-2021, 7.1.3.1.",
     "reference": "IEEE C57.12.00-2021, 7.1.3.1",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#through-fault"
   },
   {
     "id": "xfmr-116",
@@ -2089,7 +2089,7 @@
     "explanation": "Natural esters have significantly higher flash and fire points than conventional mineral oil. ASTM D6871 sets unused natural-ester minima of 275 C flash point and 300 C fire point by D92 for liquid as received, and those same minima appear in Table 2 of the guide. Low values of either point indicate contamination with a lower-flash material such as conventional mineral oil. These D92 results are laboratory response data and are not, by themselves, a complete fire-risk assessment. Source: IEEE C57.147-2018, 4.10 and Table 2.",
     "reference": "IEEE C57.147-2018, 4.10 and Table 2",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-117",
@@ -2107,7 +2107,7 @@
     "explanation": "Dissolved-water limits written for mineral oil do not transfer to natural esters. Dielectric strength versus percent of saturation tracks essentially the same curve for both liquids, so comparing by relative saturation is the fair approach. Natural ester holds far more water in solution at a given temperature, so a mineral-oil ppm cap would be either too loose or too tight if it were applied unchanged. Source: IEEE C57.147-2018, 4.16 and Annex B.",
     "reference": "IEEE C57.147-2018, 4.16 and Annex B",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-118",
@@ -2125,7 +2125,7 @@
     "explanation": "Natural esters oxidize more readily than mineral oil, so the guide does not recommend free-breathing tanks or conservators without a bladder (or an equivalent air-exclusion scheme). Avoid leaving the liquid open to an unlimited air exchange for long periods, especially while it is at operating temperature. Oxidation in natural ester shows up first as a rise in viscosity. Source: IEEE C57.147-2018, 4.15.",
     "reference": "IEEE C57.147-2018, 4.15",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-119",
@@ -2143,7 +2143,7 @@
     "explanation": "Natural esters are typically more viscous than mineral oil. Viscosity governs heat transfer and also how the liquid moves through processing equipment. A continual exchange of air in the headspace over several years can raise viscosity if the free surface of the liquid is left open to that air. That thickening can weaken the insulation system's dielectric strength. Source: IEEE C57.147-2018, 4.9 and 4.15.",
     "reference": "IEEE C57.147-2018, 4.9 and 4.15",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-120",
@@ -2161,7 +2161,7 @@
     "explanation": "Table 3 gives acceptance limits for unused natural ester received in new equipment, or after filling on site, prior to energization. Dissolved water by ASTM D1533 is limited to 300 mg/kg at 69 kV and below, 150 mg/kg above 69 kV and below 230 kV, and 100 mg/kg at 230 kV and above. The fire point minimum remains 300 C in every class. Those after-fill water numbers are tighter than the 200 mg/kg as-received shipment limit in Table 2, which applies before the mandatory processing of bulk liquid. In-service continued-use water limits in Table 4 are higher still (450 / 350 / 200 mg/kg). Source: IEEE C57.147-2018, Table 3 and Clause 7.",
     "reference": "IEEE C57.147-2018, Table 3 and Clause 7",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-121",
@@ -2179,7 +2179,7 @@
     "explanation": "Table 3, for unused liquid in new equipment prior to energization, sets ASTM D1816 1 mm-gap minima of 25 kV, 30 kV, and 35 kV for the three voltage classes, and 2 mm-gap minima of 45 kV, 55 kV, and 60 kV. Those are higher than the as-received shipment minima in Table 2 (20 kV at 1 mm and 35 kV at 2 mm). In-service continued-use minima in Table 4 are lower than the after-fill values (23 / 28 / 30 kV at 1 mm). Source: IEEE C57.147-2018, Table 3.",
     "reference": "IEEE C57.147-2018, Table 3",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-122",
@@ -2197,7 +2197,7 @@
     "explanation": "After a fill, most manufacturers advise a longer wait, once vacuum is broken, before energizing or running a high-voltage test, than the wait used with mineral oil. A cautious alternative is to postpone energizing or testing until the unit has returned to ambient temperature. The guide also gives minimum sit times of 8 h, with 24 h preferred, for distribution units, and at least 24 h for power units, with pumps run for several hours when they are fitted. Source: IEEE C57.147-2018, Clause 7.",
     "reference": "IEEE C57.147-2018, Clause 7",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-123",
@@ -2215,7 +2215,7 @@
     "explanation": "Table 4 lists an optional in-service fire-point minimum of 300 C in every voltage class. After a retrofit fill, residual mineral oil can pull the ester's fire point down. For transformers that must keep a less-flammable rating, or that are otherwise known to require a 300 C fire point, a sample below 300 C is a sign of leftover mineral oil and should be investigated. Dedicated handling equipment, or a flush equal to at least 5% of the ester charge, is the preferred way to avoid that contamination when equipment has also been used on mineral oil. Source: IEEE C57.147-2018, Table 4 note d and 6.5 note 1.",
     "reference": "IEEE C57.147-2018, Table 4 note d and 6.5 note 1",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-124",
@@ -2233,7 +2233,7 @@
     "explanation": "If the liquid must be heated, choose the heater carefully. To avoid scorching, keep surface loading at or below 1.9 W/cm2 (that is 12 W/in2) and keep the heater face at 100 C or less. Overheating can leave a burnt odor and charred residue on the element. Those limits matter because a natural ester's pour point is higher than mineral oil, so heating is sometimes needed for handling. Source: IEEE C57.147-2018, 6.4.1.",
     "reference": "IEEE C57.147-2018, 6.4.1",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-125",
@@ -2251,7 +2251,7 @@
     "explanation": "Insulating liquids, including natural esters, can pick up an electrostatic charge when they pass through filter papers or ungrounded or unbonded hoses, and that charge can transfer to the windings. Under some conditions the voltage may be hazardous. The guide requires that all externally accessible bushing terminals, the tank, and the liquid-filtering equipment, including hoses, be properly grounded during filling. Pumps and lines must also be grounded during transfer. Dedicated handling equipment is preferred when a 300 C fire point must be kept; otherwise flush the equipment with a volume equal to at least 5% of the ester charge. Do not exceed the tank vacuum limit on the nameplate. Source: IEEE C57.147-2018, 6.4.1 warning, 6.5 warning and note 1, and 6.5 caution.",
     "reference": "IEEE C57.147-2018, 6.4.1 warning, 6.5 warning and note 1, and 6.5 caution",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#natural-ester-fluid-ieee-c57-147-2018"
   },
   {
     "id": "xfmr-126",
@@ -2269,7 +2269,7 @@
     "explanation": "When specific gravity is less than 1, water and some other impurities tend to settle at or near the floor, so those liquids are sampled from the bottom unless otherwise specified. The sampling device is designed to draw 3 mm off the floor in drums, cans, and small vessels, and within 13 mm of the floor in large vessels, tank trucks, and tank cars. Liquids with specific gravity greater than 1 are sampled from the surface layer. New liquid in containers should be left undisturbed at least 8 hours before sampling when a referee test is required. Source: ASTM D923-07, 3.1.1.1, 5.4.3, 5.4.4, and 5.4.2.",
     "reference": "ASTM D923-07, 3.1.1.1, 5.4.3, 5.4.4, and 5.4.2",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#sampling-insulating-liquid-astm-d923-07"
   },
   {
     "id": "xfmr-127",
@@ -2287,7 +2287,7 @@
     "explanation": "Mandatory conditions include: the energized apparatus must have positive pressure at the sampling outlet so an air bubble is not introduced; do not sample energized equipment that holds only a small volume of oil, especially if oil must be added to maintain electric strength; maintain the liquid level so the insulation's electric strength is not reduced; do not sample if only a drain plug is provided, because flow is hard to control; and do not draw samples from energized instrument transformers such as CTs and PTs. Source: ASTM D923-07, 5.1.1 through 5.1.5 and 7.2.",
     "reference": "ASTM D923-07, 5.1.1 through 5.1.5 and 7.2",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#sampling-insulating-liquid-astm-d923-07"
   },
   {
     "id": "xfmr-128",
@@ -2305,7 +2305,7 @@
     "explanation": "Syringes, or stainless-steel cylinders, are the preferred devices for dissolved-gas and water samples. If bottles or cans are used, gases can escape or environmental gases can enter and change the results. Soldered seams can leave a residue that contaminates the sample. When the liquid may be colder than the air, as on large outdoor tanks, it is undesirable to collect atmosphere-exposed samples if relative humidity exceeds 50%, or in rain or snow. In general, the liquid should be equal to or warmer than the surrounding air so condensed moisture is not absorbed, especially in a humid atmosphere. Clear bottles help you see impurities; amber bottles, or storage in the dark, protect samples from light when that matters. Source: ASTM D923-07, 5.2.3, 5.4.1, 6.4 notes 1 and 2, 6.5, and 6.6.",
     "reference": "ASTM D923-07, 5.2.3, 5.4.1, 6.4 notes 1 and 2, 6.5, and 6.6",
     "verified": true,
-    "kb": "transformers.md#oil"
+    "kb": "transformers.md#sampling-insulating-liquid-astm-d923-07"
   },
   {
     "id": "xfmr-129",
