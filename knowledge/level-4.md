@@ -39,5 +39,6 @@ These study pages were extended for the material added in later question batches
 - [CT saturation math](#/study/instrument-transformers.md/ct-saturation-math): burden voltage, dc offset, taps, remanence, and the primary time constant. Source: IEEE C37.110-2023.
 - [Base changes and fault math](#/study/math.md/fault-math) and [symmetrical components and asymmetry](#/study/math.md/sequence). Sources: Blackburn and Domin 4th ed., IEEE 242-2001.
 - [Paralleling math](#/study/apparatus.md/paralleling-math): voltage-to-angle readings, the %Z window, and load share. Source: Lautenschlager, NETA World, Fall 2008.
+- [Machine wiring tests](#/study/life-safety.md/machine-wiring) (NFPA 79-2024; the exam list names the 2021 edition).
 
-Life-safety power, hospitals, fire pumps, and the other NFPA field tests from the earlier batch already live on [life-safety power](#/study/life-safety.md/life-safety).
+The other life-safety NFPA field tests (hospitals, fire pumps, emergency lighting, and the rest) live on [life-safety power](#/study/life-safety.md/life-safety). Those documents are not on the ETT-2026 reference list, so treat them as background.

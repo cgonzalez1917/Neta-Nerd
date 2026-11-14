@@ -121,7 +121,7 @@
     ],
     "answer": 0,
     "explanation": "The performance test follows NFPA 110. The insulation-resistance test and the protective-shutdown tests are separate lines in the same section. Do not replace those with the performance run, or the other way around.",
-    "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; NFPA 110-2025",
+    "reference": "ANSI/NETA ATS-2025 7.22.1.B.6; NFPA 110-2025 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#emergency"
   },
@@ -535,7 +535,7 @@
     ],
     "answer": 3,
     "explanation": "ATS 7.22.3.D.8 sends you to the manufacturer and the system design; ATS itself has no table of seconds. NFPA 110 sets floors for operational-test settings: start delay at least 1 s, return to normal at least 5 min, shutdown at least 5 min, and no minimum on transfer to emergency. Record each setting and each measured time so the next test can compare. Source: ANSI/NETA ATS-2025, 7.22.3.D.8; NFPA 110-2025, 8.4.5.",
-    "reference": "ANSI/NETA ATS-2025, 7.22.3.D.8; NFPA 110-2025, 8.4.5",
+    "reference": "ANSI/NETA ATS-2025, 7.22.3.D.8; NFPA 110-2025, 8.4.5 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -571,7 +571,7 @@
     ],
     "answer": 2,
     "explanation": "Type is the longest allowed loss of power at the transfer-switch load terminals: Type 10 means 10 seconds. Class is the minimum time, in hours, the system runs at rated load without refueling or recharging, so Class 2 is 2 hours. Source: NFPA 110-2025, 4.1 to 4.3 and Tables 4.1(a) and 4.1(b).",
-    "reference": "NFPA 110-2025, 4.1 to 4.3 and Tables 4.1(a) and 4.1(b)",
+    "reference": "NFPA 110-2025, 4.1 to 4.3 and Tables 4.1(a) and 4.1(b) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -589,7 +589,7 @@
     ],
     "answer": 0,
     "explanation": "Class is in hours. 0.083 h \u00d7 60 \u2248 5 minutes. Class 0.25 is 15 minutes. Source: NFPA 110-2025, 4.2 and Table 4.1(a).",
-    "reference": "NFPA 110-2025, 4.2 and Table 4.1(a)",
+    "reference": "NFPA 110-2025, 4.2 and Table 4.1(a) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -607,7 +607,7 @@
     ],
     "answer": 3,
     "explanation": "Monthly exercise is at least 30 minutes under load. For a diesel, the load either reaches the manufacturer's minimum exhaust temperature or is at least 30% of the standby kW rating: 0.30 \u00d7 500 = 150 kW. A load bank can make up the difference. Source: NFPA 110-2025, 8.4.2 and 8.4.2.1.1 to 8.4.2.1.2.",
-    "reference": "NFPA 110-2025, 8.4.2 and 8.4.2.1.1 to 8.4.2.1.2",
+    "reference": "NFPA 110-2025, 8.4.2 and 8.4.2.1.1 to 8.4.2.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -625,7 +625,7 @@
     ],
     "answer": 1,
     "explanation": "Each ATS is electrically operated from primary to alternate and back every month. The Type time limit doesn't have to be met on that monthly operation, but there has to be a way to confirm compliance once a year. Source: NFPA 110-2025, 8.4.6 to 8.4.6.2.",
-    "reference": "NFPA 110-2025, 8.4.6 to 8.4.6.2",
+    "reference": "NFPA 110-2025, 8.4.6 to 8.4.6.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -643,7 +643,7 @@
     ],
     "answer": 1,
     "explanation": "NFPA 110 sets floors of 1 s on the start delay (0.5 s for gas turbines), 5 min on restoration to normal, and 5 min on shutdown. Transfer to emergency has no minimum. The 5-minute cooldown is waived for small air-cooled engines, 15 kW and under. Source: NFPA 110-2025, 8.4.5 and 6.2.10 to 6.2.10.2.",
-    "reference": "NFPA 110-2025, 8.4.5 and 6.2.10 to 6.2.10.2",
+    "reference": "NFPA 110-2025, 8.4.5 and 6.2.10 to 6.2.10.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -661,7 +661,7 @@
     ],
     "answer": 3,
     "explanation": "The full-load test runs at 30%, then 50% for 30 minutes each, then full load for 60 minutes, with site derating applied: 0.3 \u00d7 800 = 240 kW, 0.5 \u00d7 800 = 400 kW, then 800 kW. A load bank can supplement building load, and coolant temperature must be stable for at least the last 30 minutes. Source: NFPA 110-2025, 7.13.4.5.1 to 7.13.4.5.4.",
-    "reference": "NFPA 110-2025, 7.13.4.5.1 to 7.13.4.5.4",
+    "reference": "NFPA 110-2025, 7.13.4.5.1 to 7.13.4.5.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -679,7 +679,7 @@
     ],
     "answer": 0,
     "explanation": "A diesel that falls short of the monthly criteria keeps its monthly runs on available load and adds a yearly supplemental test: at least 50% of nameplate kW for 30 minutes, then at least 75% for 60 minutes, without stopping. 0.5 \u00d7 600 = 300 kW and 0.75 \u00d7 600 = 450 kW. Source: NFPA 110-2025, 8.4.2.4.",
-    "reference": "NFPA 110-2025, 8.4.2.4",
+    "reference": "NFPA 110-2025, 8.4.2.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -697,7 +697,7 @@
     ],
     "answer": 2,
     "explanation": "At least every 36 months, a Level 1 EPSS is run continuously for its Class duration. When the Class is longer than 4 hours, the test may stop after 4 continuous hours: min(6, 4) = 4 h. A diesel carries at least 30% of nameplate kW or enough load for the manufacturer's minimum exhaust temperature. Source: NFPA 110-2025, 8.4.9 to 8.4.9.7.",
-    "reference": "NFPA 110-2025, 8.4.9 to 8.4.9.7",
+    "reference": "NFPA 110-2025, 8.4.9 to 8.4.9.7 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -715,7 +715,7 @@
     ],
     "answer": 2,
     "explanation": "Level 1 is for systems whose failure could kill or badly hurt someone, and its equipment is inspected weekly. Level 2 covers less critical loads and gets at least a monthly visual inspection. Both levels are exercised under load at least monthly. Source: NFPA 110-2025, 4.4.1 to 4.4.2 and 8.4.1.1 to 8.4.1.2.",
-    "reference": "NFPA 110-2025, 4.4.1 to 4.4.2 and 8.4.1.1 to 8.4.1.2",
+    "reference": "NFPA 110-2025, 4.4.1 to 4.4.2 and 8.4.1.1 to 8.4.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "apparatus.md#ats-functional"
   },
@@ -733,7 +733,7 @@
     ],
     "answer": 2,
     "explanation": "The short check is at least 30 seconds of operation, done monthly, and the gap between tests must fall between 3 and 5 weeks. The long 1.5-hour run is the annual test for battery units. Keep written records for the AHJ. Source: NFPA 101-2027, 7.9.3.1.1.",
-    "reference": "NFPA 101-2027, 7.9.3.1.1",
+    "reference": "NFPA 101-2027, 7.9.3.1.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -751,7 +751,7 @@
     ],
     "answer": 0,
     "explanation": "Battery emergency lights get a yearly discharge of at least an hour and a half, which matches the required emergency lighting duration. The lights must keep working the whole time. Source: NFPA 101-2027, 7.9.3.1.1.",
-    "reference": "NFPA 101-2027, 7.9.3.1.1",
+    "reference": "NFPA 101-2027, 7.9.3.1.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -769,7 +769,7 @@
     ],
     "answer": 3,
     "explanation": "Emergency illumination is required for at least 90 minutes after normal lighting is lost. That is why the battery test is 90 minutes and why a generator serving these loads needs at least Class 1.5. Source: NFPA 101-2027, 7.9.2.1.",
-    "reference": "NFPA 101-2027, 7.9.2.1",
+    "reference": "NFPA 101-2027, 7.9.2.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -787,7 +787,7 @@
     ],
     "answer": 1,
     "explanation": "At the start, the path needs both an average of at least 1 foot-candle and no point under 0.1 foot-candle. A good average does not cover a dark spot. The lower 0.6 average and 0.06 minimum figures only apply at the end of the 1.5 hours. Source: NFPA 101-2027, 7.9.2.1.1 to 7.9.2.1.2.",
-    "reference": "NFPA 101-2027, 7.9.2.1.1 to 7.9.2.1.2",
+    "reference": "NFPA 101-2027, 7.9.2.1.1 to 7.9.2.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -805,7 +805,7 @@
     ],
     "answer": 1,
     "explanation": "NFPA 101 allows the light to fade during the run. At the end, the floor of the path may be down to an average of 0.6 foot-candle and a lowest point of 0.06. Both readings here sit just above those floors. Source: NFPA 101-2027, 7.9.2.1.2.",
-    "reference": "NFPA 101-2027, 7.9.2.1.2",
+    "reference": "NFPA 101-2027, 7.9.2.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -823,7 +823,7 @@
     ],
     "answer": 3,
     "explanation": "NFPA 101 also limits how uneven the lighting can be. Divide the highest reading by the lowest: 5.0 / 0.1 = 50. That is above the 40 to 1 limit, so the layout or aiming needs work even though the minimum is met. Source: NFPA 101-2027, 7.9.2.1.3.",
-    "reference": "NFPA 101-2027, 7.9.2.1.3",
+    "reference": "NFPA 101-2027, 7.9.2.1.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -841,7 +841,7 @@
     ],
     "answer": 0,
     "explanation": "The units handle their own 30-second check every 30 days and show a failure. People still have to look at them at least every 30 days and run the yearly 90-minute test, and the results get written down. Source: NFPA 101-2027, 7.9.3.1.2.",
-    "reference": "NFPA 101-2027, 7.9.3.1.2",
+    "reference": "NFPA 101-2027, 7.9.3.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -859,7 +859,7 @@
     ],
     "answer": 2,
     "explanation": "New emergency power for egress lighting has to restore power within 10 seconds (Type 10), carry the load for at least 1.5 hours (Class 1.5), and be held to Level 1, the life-safety level. Source: NFPA 101-2027, 7.9.2.2.",
-    "reference": "NFPA 101-2027, 7.9.2.2",
+    "reference": "NFPA 101-2027, 7.9.2.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -877,7 +877,7 @@
     ],
     "answer": 2,
     "explanation": "Externally lit signs must get 5 foot-candles or more on the face and enough contrast, 0.5 or better, to be read. Internally lit signs are a different path: they are listed to UL 924. Source: NFPA 101-2027, 7.10.6.3 and 7.10.7.1.",
-    "reference": "NFPA 101-2027, 7.10.6.3 and 7.10.7.1",
+    "reference": "NFPA 101-2027, 7.10.6.3 and 7.10.7.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#emergency-lighting"
   },
@@ -895,7 +895,7 @@
     ],
     "answer": 0,
     "explanation": "NFPA 111 types are named by the allowed gap. Type O has none, Type A is a quarter cycle, Type B is one cycle, Type 10 is 10 seconds, and Type M is manual with no limit. Source: NFPA 111-2025, 4.2.1 and Table 4.2.2.",
-    "reference": "NFPA 111-2025, 4.2.1 and Table 4.2.2",
+    "reference": "NFPA 111-2025, 4.2.1 and Table 4.2.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -913,7 +913,7 @@
     ],
     "answer": 3,
     "explanation": "Class is in hours: 0.25 h \u00d7 60 = 15 minutes. The other fixed classes: Class 0.033 runs 2 minutes, 0.083 runs 5, and 1.5 runs 90. Class X is a time set by the application. Source: NFPA 111-2025, 4.3 and Table 4.3.",
-    "reference": "NFPA 111-2025, 4.3 and Table 4.3",
+    "reference": "NFPA 111-2025, 4.3 and Table 4.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -931,7 +931,7 @@
     ],
     "answer": 1,
     "explanation": "The test starts with charged batteries and a rated load. Normal power is cut by opening its own disconnects, and every emergency load is on, including ones that are normally dead. Write down how long the system took to pick up the load, plus voltage, current and, where it applies, frequency. Source: NFPA 111-2025, 7.6.2.1.",
-    "reference": "NFPA 111-2025, 7.6.2.1",
+    "reference": "NFPA 111-2025, 7.6.2.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -949,7 +949,7 @@
     ],
     "answer": 1,
     "explanation": "After the first run, the system is reconnected to normal power for a day. Then it is tested at full load for its whole Class time. A load bank equal to the equipment rating may make up any missing site load. Source: NFPA 111-2025, 7.6.2.2 to 7.6.2.3.3.",
-    "reference": "NFPA 111-2025, 7.6.2.2 to 7.6.2.3.3",
+    "reference": "NFPA 111-2025, 7.6.2.2 to 7.6.2.3.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -967,7 +967,7 @@
     ],
     "answer": 3,
     "explanation": "The annual test is one of two options: full load for 60% of the Class time, or 60% load for all of it. Class 1.5 is 90 minutes, so 0.6 \u00d7 90 = 54 minutes at full load, or 90 minutes at 60% load. You pick one, not both. Source: NFPA 111-2025, 8.4.4.",
-    "reference": "NFPA 111-2025, 8.4.4",
+    "reference": "NFPA 111-2025, 8.4.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -985,7 +985,7 @@
     ],
     "answer": 0,
     "explanation": "Battery systems with a matched charger must reach 80% charge in no more than 12 \u00d7 the discharge time: 12 \u00d7 1.5 h = 18 h. Full charge must come back within 48 hours. The 1-hour figure applies to ultracapacitor and flywheel-type systems. Source: NFPA 111-2025, 5.2.8.2.",
-    "reference": "NFPA 111-2025, 5.2.8.2",
+    "reference": "NFPA 111-2025, 5.2.8.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -1003,7 +1003,7 @@
     ],
     "answer": 2,
     "explanation": "The baseline comes after the battery has settled: roughly half a year after the full-load test, or two weeks following the latest discharge. The battery must be fully charged and on float. Later readings are compared with this baseline. Source: NFPA 111-2025, 7.6.5 to 7.6.5.1.2.",
-    "reference": "NFPA 111-2025, 7.6.5 to 7.6.5.1.2",
+    "reference": "NFPA 111-2025, 7.6.5 to 7.6.5.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -1021,7 +1021,7 @@
     ],
     "answer": 2,
     "explanation": "Ohmic readings are a screen. When the deviation from baseline is unacceptable, the next step is a full-Class-duration load test to find out what the battery can really do. A load bank equal to the equipment rating may stand in for the actual load. Source: NFPA 111-2025, 8.4.3.2 to 8.4.3.2.2.",
-    "reference": "NFPA 111-2025, 8.4.3.2 to 8.4.3.2.2",
+    "reference": "NFPA 111-2025, 8.4.3.2 to 8.4.3.2.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#stored-energy"
   },
@@ -1039,7 +1039,7 @@
     ],
     "answer": 0,
     "explanation": "The on-site sources are tested a dozen times a year. No gap between tests may be shorter than 20 days or longer than 40. Generators follow NFPA 110 Chapter 8 for how the test is done. Source: NFPA 99-2027, 6.7.4.1.1.5(A).",
-    "reference": "NFPA 99-2027, 6.7.4.1.1.5(A)",
+    "reference": "NFPA 99-2027, 6.7.4.1.1.5(A) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hospital-ees"
   },
@@ -1057,7 +1057,7 @@
     ],
     "answer": 3,
     "explanation": "Both the life safety and the critical branch must be re-energized automatically in 10 seconds or less. The equipment branch is allowed to follow later, on a delay. Source: NFPA 99-2027, 6.7.5.3.1.",
-    "reference": "NFPA 99-2027, 6.7.5.3.1",
+    "reference": "NFPA 99-2027, 6.7.5.3.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hospital-ees"
   },
@@ -1075,7 +1075,7 @@
     ],
     "answer": 1,
     "explanation": "The 10-second restoration target isn't enforced on the monthly run, since it is a planned test. If it isn't met, the facility needs a set way to show once a year that the system can do it. Source: NFPA 99-2027, 6.7.4.1.1.2(A) to (B).",
-    "reference": "NFPA 99-2027, 6.7.4.1.1.2(A) to (B)",
+    "reference": "NFPA 99-2027, 6.7.4.1.1.2(A) to (B) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hospital-ees"
   },
@@ -1093,7 +1093,7 @@
     ],
     "answer": 1,
     "explanation": "The equipment branch picks up its loads automatically after a delay, or by hand in sequence, so the generator isn't overloaded. The life safety and critical branches are fed first. Source: NFPA 99-2027, 6.7.5.1.4.2(A) and 6.7.3.4.1.",
-    "reference": "NFPA 99-2027, 6.7.5.1.4.2(A) and 6.7.3.4.1",
+    "reference": "NFPA 99-2027, 6.7.5.1.4.2(A) and 6.7.3.4.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hospital-ees"
   },
@@ -1111,7 +1111,7 @@
     ],
     "answer": 3,
     "explanation": "The main feeders get an insulation resistance test before the system is accepted, and again whenever there is reason to think they were damaged. Source: NFPA 99-2027, 6.7.4.1.2.1.",
-    "reference": "NFPA 99-2027, 6.7.4.1.2.1",
+    "reference": "NFPA 99-2027, 6.7.4.1.2.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hospital-ees"
   },
@@ -1129,7 +1129,7 @@
     ],
     "answer": 0,
     "explanation": "The table puts transfer equipment on a monthly inspection with service and testing on a 3-year cycle. For generators, the table defers to NFPA 110 Chapter 8. Check the whole table and its notes for other equipment and allowed changes. Source: NFPA 99-2027, Table 6.9.4.1.",
-    "reference": "NFPA 99-2027, Table 6.9.4.1",
+    "reference": "NFPA 99-2027, Table 6.9.4.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#hospital-ees"
   },
@@ -1147,7 +1147,7 @@
     ],
     "answer": 2,
     "explanation": "The secondary supply has to pick up on its own within 10 seconds, and required signals can't be lost or delayed by more than 10 seconds. The 60-second figure applies to supervising-station facilities. Source: NFPA 72-2025, 10.6.6.1 to 10.6.6.3.",
-    "reference": "NFPA 72-2025, 10.6.6.1 to 10.6.6.3",
+    "reference": "NFPA 72-2025, 10.6.6.1 to 10.6.6.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1165,7 +1165,7 @@
     ],
     "answer": 2,
     "explanation": "The secondary supply carries the system quiet for a full day, then runs the alarm notification for 5 minutes. Count every load that isn't shed automatically on transfer when sizing the battery. Source: NFPA 72-2025, 10.6.7.2.1 to 10.6.7.2.2 and 10.6.7.2.13.",
-    "reference": "NFPA 72-2025, 10.6.7.2.1 to 10.6.7.2.2 and 10.6.7.2.13",
+    "reference": "NFPA 72-2025, 10.6.7.2.1 to 10.6.7.2.2 and 10.6.7.2.13 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1183,7 +1183,7 @@
     ],
     "answer": 0,
     "explanation": "Voice systems keep the same 24-hour quiet period but need 15 minutes of emergency operation afterward, at the full connected load, instead of the 5 minutes used for a plain alarm. Source: NFPA 72-2025, 10.6.7.2.3 to 10.6.7.2.4.",
-    "reference": "NFPA 72-2025, 10.6.7.2.3 to 10.6.7.2.4",
+    "reference": "NFPA 72-2025, 10.6.7.2.3 to 10.6.7.2.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1201,7 +1201,7 @@
     ],
     "answer": 3,
     "explanation": "The generator must restore power in 10 seconds and run 24 hours, at Level 1. An automatic-start generator at a supervising station is held to Type 60, Class 24, Level 2. Source: NFPA 72-2025, 10.6.11.3.1.1 to 10.6.11.3.2.1.",
-    "reference": "NFPA 72-2025, 10.6.11.3.1.1 to 10.6.11.3.2.1",
+    "reference": "NFPA 72-2025, 10.6.11.3.1.1 to 10.6.11.3.2.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1219,7 +1219,7 @@
     ],
     "answer": 1,
     "explanation": "With primary off, the panel should show trouble. Measure or confirm the standby and alarm current against the manufacturer's data and the battery rating, with a safety margin. Run the alarm for at least 5 minutes, or 15 for voice, then restore primary. Source: NFPA 72-2025, Table 14.4.3.2 item 8.",
-    "reference": "NFPA 72-2025, Table 14.4.3.2 item 8",
+    "reference": "NFPA 72-2025, Table 14.4.3.2 item 8 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1237,7 +1237,7 @@
     ],
     "answer": 1,
     "explanation": "During starting, the controller line terminals may sag no more than 15% below the controller's rated voltage: 480 \u00d7 0.85 = 408 V. The tighter 5% limit is at the motor contactor load terminals when running at 115% of full-load current. Source: NFPA 20-2025, 9.4.1 to 9.4.3.",
-    "reference": "NFPA 20-2025, 9.4.1 to 9.4.3",
+    "reference": "NFPA 20-2025, 9.4.1 to 9.4.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1255,7 +1255,7 @@
     ],
     "answer": 3,
     "explanation": "With the motor drawing 115% of full-load amps, the contactor's load-side terminals can sit no more than 5% under the motor's rated voltage: 460 \u00d7 0.95 = 437 V. Source: NFPA 20-2025, 9.4.4.",
-    "reference": "NFPA 20-2025, 9.4.4",
+    "reference": "NFPA 20-2025, 9.4.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1273,7 +1273,7 @@
     ],
     "answer": 0,
     "explanation": "During the field test, the voltage at the contactor output lugs can be as low as 5% under or as high as 10% over the nameplate: 0.95 \u00d7 460 = 437 V and 1.10 \u00d7 460 = 506 V. Each phase current must also stay at or under service-factor amps. Source: NFPA 20-2025, 14.2.6.7.1 to 14.2.6.7.3.",
-    "reference": "NFPA 20-2025, 14.2.6.7.1 to 14.2.6.7.3",
+    "reference": "NFPA 20-2025, 14.2.6.7.1 to 14.2.6.7.3 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1291,7 +1291,7 @@
     ],
     "answer": 2,
     "explanation": "The controller is cycled at least six times automatically and six times by hand, following the manufacturer's procedure. On constant-speed electric pumps, each start is held at full speed for 5 minutes or more. Variable-speed pumps are exempt from the minimum run time. Source: NFPA 20-2025, 14.2.7.1 to 14.2.7.3.1.",
-    "reference": "NFPA 20-2025, 14.2.7.1 to 14.2.7.3.1",
+    "reference": "NFPA 20-2025, 14.2.7.1 to 14.2.7.3.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1309,7 +1309,7 @@
     ],
     "answer": 2,
     "explanation": "NFPA 20 wants the alternate source proved under real starts, so at least half of the operations run on it. Normal power loss is also simulated at peak pump load to start the generator, where there is one, and transfer. Source: NFPA 20-2025, 14.2.8.1 to 14.2.8.4.",
-    "reference": "NFPA 20-2025, 14.2.8.1 to 14.2.8.4",
+    "reference": "NFPA 20-2025, 14.2.8.1 to 14.2.8.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1327,7 +1327,7 @@
     ],
     "answer": 0,
     "explanation": "A transfer under full pump load must not trip the overcurrent protection on the normal or the alternate side. A trip means the protection, the sizing or the transfer timing needs to be fixed before acceptance. Source: NFPA 20-2025, 14.2.8.1 to 14.2.8.4.",
-    "reference": "NFPA 20-2025, 14.2.8.1 to 14.2.8.4",
+    "reference": "NFPA 20-2025, 14.2.8.1 to 14.2.8.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1345,7 +1345,7 @@
     ],
     "answer": 3,
     "explanation": "NFPA 20 bans a manual transfer switch between the two supplies. The required switch is fire-pump listed and fault-current rated, operates electrically and latches mechanically, carries 115% or more of motor full-load amps, and can switch locked-rotor current. A manual operating means is still provided on it. Source: NFPA 20-2025, 10.8.1.2 and 10.8.3.1 to 10.8.3.5.1.",
-    "reference": "NFPA 20-2025, 10.8.1.2 and 10.8.3.1 to 10.8.3.5.1",
+    "reference": "NFPA 20-2025, 10.8.1.2 and 10.8.3.1 to 10.8.3.5.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1363,7 +1363,7 @@
     ],
     "answer": 1,
     "explanation": "When any phase of the normal source drops below 85% of the motor's rated voltage, the transfer switch starts the standby generator, where there is one, and transfers: 460 \u00d7 0.85 = 391 V. Source: NFPA 20-2025, 10.8.3.6.2.",
-    "reference": "NFPA 20-2025, 10.8.3.6.2",
+    "reference": "NFPA 20-2025, 10.8.3.6.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1381,7 +1381,7 @@
     ],
     "answer": 1,
     "explanation": "A fire pump that spins backward moves no water. Phase reversal is tested on each source, normal and alternate, where it is provided. Source: NFPA 20-2025, 14.2.6.12.",
-    "reference": "NFPA 20-2025, 14.2.6.12",
+    "reference": "NFPA 20-2025, 14.2.6.12 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1399,7 +1399,7 @@
     ],
     "answer": 3,
     "explanation": "Add up the run time from every test step, including the alarm and signal checks. The total must be at least an hour. Source: NFPA 20-2025, 14.2.10 to 14.2.11.",
-    "reference": "NFPA 20-2025, 14.2.10 to 14.2.11",
+    "reference": "NFPA 20-2025, 14.2.10 to 14.2.11 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-pump"
   },
@@ -1417,7 +1417,7 @@
     ],
     "answer": 0,
     "explanation": "The room disconnect has to kill power to the electronic equipment, including the UPS output fed from batteries. Opening the input alone leaves the load fed from the battery. Small sources, 750 VA or less, have an exception. Source: NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2.",
-    "reference": "NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2",
+    "reference": "NFPA 75-2024, 11.4.5.1 and 11.5.1 to 11.5.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#other-nfpa"
   },

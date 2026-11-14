@@ -1036,14 +1036,14 @@
     "question": "NFPA 70B-2026 adjusts a maintenance interval by:",
     "choices": [
       "Leaving it fixed no matter what fails",
-      "Letting a failure analysis decide whether a shorter interval is needed, allowing a risk-based change, and documenting a longer interval after more than two problem-free intervals",
+      "Letting the cause of a failure decide whether a shorter interval is needed, allowing a risk-based change, and documenting a longer interval after more than two problem-free intervals",
       "Doubling it after one clean visit",
       "Using the condition-3 column after every pass"
     ],
     "answer": 1,
-    "explanation": "A failure analysis decides whether the interval should be shortened. It does not automatically cut the interval every time a failure is reviewed. A risk-based change is also allowed. A longer interval can follow more than two intervals without problems, and that extension is written into the program. It is not the only way an interval may change. Manufacturer instructions still come first.",
-    "reference": "NFPA 70B-2026, 9.1.2.1.1 through 9.1.2.2 and 9.3.2.2 through 9.3.2.3",
-    "verified": false,
+    "explanation": "The cause of a failure is used to decide whether the interval should be shortened. That look at the cause does not automatically cut the interval. A change is also allowed when a failure would put people or operations at risk. After more than two intervals with no problems found, the interval may be extended, and the extension and its reason must be written into the electrical maintenance program. The original interval may be put back later. Manufacturer instructions still set the scope and the intervals; the 9.3.2 tables apply only when those instructions are not available.",
+    "reference": "NFPA 70B-2026, 9.1.2.1.1, 9.1.2.1.2, 9.1.2.2, 9.3.1, 9.3.2.2 and 9.3.2.3",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1257,9 +1257,9 @@
       "Skip pickup and use only the zero check"
     ],
     "answer": 0,
-    "explanation": "The table names the tests. It does not print a manufacturer tolerance band and it does not give a percent of your own. Where the work depends on the relay, follow the manufacturer's instructions. Pickup, timing points, restraint or directional checks, and the inputs and outputs are tests on that list, not a substitute for those instructions.",
-    "reference": "NFPA 70B-2026, Table 35.3.5 and 4.1.1",
-    "verified": false,
+    "explanation": "The table names the tests: pickup, timing at three points on the curve, restraint or directional and other elements, and relay status and contact input and output checks. It does not print a timing-tolerance percent. Maintain the relay to the manufacturer's instructions and the applicable codes and standards. When those instructions are not available, use this standard and the consensus standards that apply.",
+    "reference": "NFPA 70B-2026, Table 35.3.5, 4.1.1 and 4.1.2",
+    "verified": true,
     "kb": "safety.md#nfpa70b"
   },
   {

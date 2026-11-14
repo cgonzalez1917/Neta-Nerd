@@ -4,7 +4,7 @@ Level II, Level III, and Level IV questions for a human pass. The bank flag `ver
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 462 (Level II 302, Level III 151, Level IV 9).
+Count: 460 (Level II 300, Level III 151, Level IV 9).
 
 A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK.
 
@@ -6172,7 +6172,7 @@ ATS 7.22.1.B.6 calls for the engine-generator performance test to be run:
 - 2. Only if the polarization index fails
 - 3. In place of the protective-shutdown tests
 
-**Citation:** ANSI/NETA ATS-2025 7.22.1.B.6; ref. NFPA 110
+**Citation:** ANSI/NETA ATS-2025 7.22.1.B.6; NFPA 110-2025 (background: not on the ETT reference list)
 
 Reviewer: neta field ref, Nov 12 2026 — VERIFIED
 
@@ -7824,40 +7824,6 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 **Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
 
 Reviewer: VERIFIED or FIX
-
-## relay-058 (II / systems) {#relay-058}
-
-<!-- q:relay-058 -->
-
-**Bank verified flag:** false
-
-NFPA 70B-2026 adjusts a maintenance interval by:
-
-- 0. Leaving it fixed no matter what fails
-- 1. Letting a failure analysis decide whether a shorter interval is needed, allowing a risk-based change, and documenting a longer interval after more than two problem-free intervals **← answer**
-- 2. Doubling it after one clean visit
-- 3. Using the condition-3 column after every pass
-
-**Citation:** NFPA 70B-2026, 9.1.2.1.1 through 9.1.2.2 and 9.3.2.2 through 9.3.2.3
-
-Reviewer: final verification, Nov 13 2026 — NEEDS-SOURCE (the risk-based interval change, 9.1.2.1.1, could not be confirmed in the sources on hand; check NFPA 70B-2026)
-
-## relay-070 (II / component) {#relay-070}
-
-<!-- q:relay-070 -->
-
-**Bank verified flag:** false
-
-NFPA 70B-2026 Table 35.3.5, on protective-relay tests, tells you to:
-
-- 0. Perform the tests the table lists, and follow the manufacturer's instructions for the relay **← answer**
-- 1. Apply a timing-tolerance percent printed in that table
-- 2. Replace the timing points with a restraint check
-- 3. Skip pickup and use only the zero check
-
-**Citation:** NFPA 70B-2026, Table 35.3.5 and 4.1.1
-
-Reviewer: final verification, Nov 13 2026 — NEEDS-SOURCE (NFPA 70B-2026 4.1.1 could not be confirmed in the sources on hand; check it in NFPA LiNK)
 
 ## Study page items still open {#study-page-items}
 

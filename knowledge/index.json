@@ -158,9 +158,11 @@
     {
       "file": "life-safety.md",
       "title": "Life-safety power and other NFPA tests",
-      "level": "II",
+      "level": "II, III, IV",
       "levels": [
-        "II"
+        "II",
+        "III",
+        "IV"
       ]
     },
     {

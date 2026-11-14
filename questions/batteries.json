@@ -1129,7 +1129,7 @@
     ],
     "answer": 0,
     "explanation": "Twice a year, and at acceptance, measure the cabinet ambient on opening and each VRLA unit at its negative terminal. A unit running hotter than ambient by more than 18\u00b0F (10\u00b0C) is replaced. 95 \u2212 75 = 20\u00b0F, so it goes. Source: NFPA 72-2025, Table 14.4.3.2 item 9(1).",
-    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(1)",
+    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(1) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1147,7 +1147,7 @@
     ],
     "answer": 3,
     "explanation": "With no manufacturer value, an adjustable charger is set to 2.265 V per cell, \u00b10.015 V, at 77\u00b0F (25\u00b0C). For six cells: 2.265 \u00d7 6 = 13.59 V. A charger out of range is adjusted or replaced. Source: NFPA 72-2025, Table 14.4.3.2 item 9(2).",
-    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(2)",
+    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(2) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1165,7 +1165,7 @@
     ],
     "answer": 1,
     "explanation": "Resistance or impedance must rise 40% from baseline to require replacement. Conductance uses a 30% drop. 6.5 / 5.0 = 1.30, a 30% rise, so it is still in, though worth trending. Source: NFPA 72-2025, Table 14.4.3.2 item 9(4).",
-    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(4)",
+    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(4) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1183,7 +1183,7 @@
     ],
     "answer": 1,
     "explanation": "The ohmic limits differ by method: conductance at a 30% drop, resistance or impedance at a 40% rise. Readings outside a manufacturer's baseline range also fail. A load test may be used instead of ohmic testing. Source: NFPA 72-2025, Table 14.4.3.2 item 9(4) to 9(5).",
-    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(4) to 9(5)",
+    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(4) to 9(5) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1201,7 +1201,7 @@
     ],
     "answer": 3,
     "explanation": "Every 3 years the battery is either replaced or capacity tested with a discharge rate of 3 hours or longer. At 80% or less it is replaced. Between 80% and 85% it is replaced at the next scheduled test. Source: NFPA 72-2025, Table 14.4.3.2 item 9(5).",
-    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(5)",
+    "reference": "NFPA 72-2025, Table 14.4.3.2 item 9(5) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1219,7 +1219,7 @@
     ],
     "answer": 0,
     "explanation": "VRLA units are checked for leaks, cracks, swelling or distortion, corrosion, loose connections and the date code. A unit with corrosion, distortion or leakage is replaced. Date markings are checked twice a year, and a unit past the manufacturer's replacement date is replaced too. Source: NFPA 72-2025, Table 14.3.1 item 9(1).",
-    "reference": "NFPA 72-2025, Table 14.3.1 item 9(1)",
+    "reference": "NFPA 72-2025, Table 14.3.1 item 9(1) (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#fire-alarm-power"
   },
@@ -1237,7 +1237,7 @@
     ],
     "answer": 2,
     "explanation": "The owner or its agent confirms the system works as intended. That happens when the install is finished, ahead of final inspection and approval. Source: NFPA 855-2026, 6.1.1 to 6.1.2.",
-    "reference": "NFPA 855-2026, 6.1.1 to 6.1.2",
+    "reference": "NFPA 855-2026, 6.1.1 to 6.1.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#bess"
   },
@@ -1255,7 +1255,7 @@
     ],
     "answer": 2,
     "explanation": "The plan is written by the installer or commissioning agent. It lists the activities, roles, schedule and forms, and it covers the safety systems: detection, suppression, thermal management, ventilation, spill control and safety controls. Source: NFPA 855-2026, 6.1.3.1 to 6.1.3.2.",
-    "reference": "NFPA 855-2026, 6.1.3.1 to 6.1.3.2",
+    "reference": "NFPA 855-2026, 6.1.3.1 to 6.1.3.2 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#bess"
   },
@@ -1273,7 +1273,7 @@
     ],
     "answer": 0,
     "explanation": "The report sums up the results, the final plan, as-built documents and the issues and how they were fixed. It goes to the owner and the AHJ before final approval. Any open issue needs a corrective plan the AHJ accepts before the system goes into service. Source: NFPA 855-2026, 6.1.5.1 to 6.1.5.4.",
-    "reference": "NFPA 855-2026, 6.1.5.1 to 6.1.5.4",
+    "reference": "NFPA 855-2026, 6.1.5.1 to 6.1.5.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#bess"
   },
@@ -1291,7 +1291,7 @@
     ],
     "answer": 3,
     "explanation": "Qualifying alterations, additions, relocation or renovation call for recommissioning the whole system, with a new report and updated documents. Swapping in identical parts during a repair doesn't. Source: NFPA 855-2026, 6.4.1 to 6.4.4.",
-    "reference": "NFPA 855-2026, 6.4.1 to 6.4.4",
+    "reference": "NFPA 855-2026, 6.4.1 to 6.4.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#bess"
   },
@@ -1309,7 +1309,7 @@
     ],
     "answer": 1,
     "explanation": "The general provisions tie testing to the operating and maintenance documents and the manufacturer's procedures, and the records are kept. Don't quote a fixed 855 interval that the chapter doesn't give. Source: NFPA 855-2026, 7.3.1 to 7.3.2.1.",
-    "reference": "NFPA 855-2026, 7.3.1 to 7.3.2.1",
+    "reference": "NFPA 855-2026, 7.3.1 to 7.3.2.1 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#bess"
   },
