@@ -141,8 +141,8 @@
       "1%"
     ],
     "answer": 2,
-    "explanation": "More current than about 15% of rated heats the winding during the test, which changes the resistance you are trying to read. The liquid-immersed and dry-type test codes both set this ceiling.",
-    "reference": "ANSI/NETA ATS-2025 7.2.2.B.8; ref. IEEE C57.12.90-2021, 5.3.1 item f); IEEE C57.12.91-2020, 5.2.3",
+    "explanation": "More current than about 15% of rated heats the winding during the test, which changes the resistance you are trying to read. The liquid-immersed and dry-type test codes and the C57.152 field guide all use that ceiling. ATS-2025 7.2.2.B.8 is tighter for acceptance work: it caps the current at 10% and credits C57.152 for the figure, so follow ATS when you are testing to ATS.",
+    "reference": "IEEE C57.12.90-2021, 5.3.1 item f); IEEE C57.12.91-2020, 5.2.3; IEEE C57.152-2025, 7.2.7; see also ANSI/NETA ATS-2025 7.2.2.B.8",
     "verified": true,
     "kb": "resistance.md#winding"
   },

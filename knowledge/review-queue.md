@@ -4,7 +4,7 @@ Level II, Level III, and Level IV questions for a human pass. The bank flag `ver
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 460 (Level II 300, Level III 151, Level IV 9).
+Count: 462 (Level II 302, Level III 151, Level IV 9).
 
 A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK.
 
@@ -1160,9 +1160,9 @@ You are correcting a stator insulation reading for comparison with Table 100.11.
 - 2. No correction; machine readings are temperature-proof
 - 3. The copper 234.5 formula, because it is a winding
 
-**Citation:** ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2
+**Citation:** ANSI/NETA ATS-2025 Table 100.11 and Table 100.14.2; ref. IEEE 43-2013, 6.3
 
-Reviewer: neta field ref, Nov 12 2026 — VERIFIED
+Reviewer: final verification, Nov 13 2026 — FIXED
 
 ## xfmr-006 (III / component) {#xfmr-006}
 
@@ -2520,9 +2520,9 @@ Restoring a relay test switch after injection, the safe order is:
 - 2. Leave the CT shorting blade open as a spare
 - 3. Open the trip poles and go home
 
-**Citation:** ABB FT-1/FT-14 Flexitest product guide 1VAC394641-PG Rev K; engineering fundamentals; ANSI/NETA ATS-2025 7.10.1.A.7
+**Citation:** Werstiuk, The Relay Testing Handbook: Principles and Practice, ch. 18, 1; ANSI/NETA ATS-2025 7.10.1.A.7
 
-Reviewer: neta field ref, Nov 12 2026 — FIX
+Reviewer: final verification, Nov 13 2026 — FIXED
 
 ## brkr-013 (II / systems) {#brkr-013}
 
@@ -3760,9 +3760,9 @@ A relay test set’s current output belongs:
 - 2. Across the breaker primary poles
 - 3. On the station ground only
 
-**Citation:** ANSI/NETA ATS-2025 7.9.2.D.4; ABB FT Flexitest product guide
+**Citation:** ANSI/NETA ATS-2025 7.9.2.D.4; Werstiuk, The Relay Testing Handbook: Principles and Practice, ch. 18
 
-Reviewer: neta field ref, Nov 12 2026 — VERIFIED
+Reviewer: final verification, Nov 13 2026 — FIXED
 
 ## brkr-018 (II / component) {#brkr-018}
 
@@ -3976,13 +3976,13 @@ Reviewer: VERIFIED or FIX
 A rising power factor as test voltage is raised, with capacitance also up, is read in the DELTA4000 method as a hint of:
 
 - 0. A shorted turn only
-- 1. Moisture, until the factory report says otherwise **← answer**
+- 1. Ionization in voids or carbonized insulation **← answer**
 - 2. A perfect dry winding
 - 3. An open core ground
 
-**Citation:** Megger DELTA4000 applications guide, per manufacturer instructions; ANSI/NETA ATS-2025 7.2.2.D.4
+**Citation:** Megger DELTA4000 Reference Manual/Applications Guide ZM-AH02E, tip-up test discussion; ANSI/NETA ATS-2025 7.2.2.D.4
 
-Reviewer: VERIFIED or FIX
+Reviewer: final verification, Nov 13 2026 — FIXED
 
 ## xfmr-022 (III / component) {#xfmr-022}
 
@@ -4014,9 +4014,9 @@ A low-voltage turns-ratio check on a PT proves:
 - 2. The fuse rating
 - 3. Excitation knee at rated voltage
 
-**Citation:** Valence, Potential transformer testing; ANSI/NETA ATS-2025 7.10.2
+**Citation:** ANSI/NETA ATS-2025 7.10.2.B.2 and B.3; ref. IEEE C57.13-2016, 5.1 b)
 
-Reviewer: VERIFIED or FIX
+Reviewer: final verification, Nov 13 2026 — FIXED
 
 ## ct-014 (III / component) {#ct-014}
 
@@ -6301,16 +6301,16 @@ Reviewer: VERIFIED or FIX
 
 **Bank verified flag:** true
 
-IEEE C57.13.1-2017 clause 12.1 says a current transformer must not be left energized above the knee:
+During a CT excitation test you take the voltage above the knee. How long should the CT stay energized up there?
 
 - 0. For the whole lunch break, so the curve can settle
-- 1. Any longer than it takes to record the points **← answer**
+- 1. No longer than it takes to record the points **← answer**
 - 2. Until the primary is reconnected to the bus
 - 3. At rated primary current for 30 minutes
 
 **Citation:** ANSI/NETA ATS-2025 7.10.1.B.4; ref. IEEE C57.13.1-2017, clause 12.1
 
-Reviewer: VERIFIED or FIX
+Reviewer: final verification, Nov 13 2026 — FIXED
 
 ## ir-023 (II / theory) {#ir-023}
 
@@ -7824,3 +7824,42 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 **Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
 
 Reviewer: VERIFIED or FIX
+
+## relay-058 (II / systems) {#relay-058}
+
+<!-- q:relay-058 -->
+
+**Bank verified flag:** false
+
+NFPA 70B-2026 adjusts a maintenance interval by:
+
+- 0. Leaving it fixed no matter what fails
+- 1. Letting a failure analysis decide whether a shorter interval is needed, allowing a risk-based change, and documenting a longer interval after more than two problem-free intervals **← answer**
+- 2. Doubling it after one clean visit
+- 3. Using the condition-3 column after every pass
+
+**Citation:** NFPA 70B-2026, 9.1.2.1.1 through 9.1.2.2 and 9.3.2.2 through 9.3.2.3
+
+Reviewer: final verification, Nov 13 2026 — NEEDS-SOURCE (the risk-based interval change, 9.1.2.1.1, could not be confirmed in the sources on hand; check NFPA 70B-2026)
+
+## relay-070 (II / component) {#relay-070}
+
+<!-- q:relay-070 -->
+
+**Bank verified flag:** false
+
+NFPA 70B-2026 Table 35.3.5, on protective-relay tests, tells you to:
+
+- 0. Perform the tests the table lists, and follow the manufacturer's instructions for the relay **← answer**
+- 1. Apply a timing-tolerance percent printed in that table
+- 2. Replace the timing points with a restraint check
+- 3. Skip pickup and use only the zero check
+
+**Citation:** NFPA 70B-2026, Table 35.3.5 and 4.1.1
+
+Reviewer: final verification, Nov 13 2026 — NEEDS-SOURCE (NFPA 70B-2026 4.1.1 could not be confirmed in the sources on hand; check it in NFPA LiNK)
+
+## Study page items still open {#study-page-items}
+
+- level-3.md and level-4.md, exam format: the Pearson VUE and on-screen calculator details are not in the NETA texts on hand. Confirm against a current NETA candidate handbook.
+- level-4.md, exam format: the course-of-action remark is advice, not a NETA statement. Keep it worded as advice.

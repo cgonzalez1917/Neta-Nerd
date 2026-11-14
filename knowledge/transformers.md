@@ -48,11 +48,11 @@ ATS 7.2.2.D.14 points insulating-liquid results at Table 100.4. Table 100.4.1, n
 
 Dissolved-gas analysis is evaluated with IEEE C57.104 (7.2.2.D.15), not with a single “bad ppm” invented in the field. Acetylene is the gas associated with arcing; hydrogen with partial discharge; carbon oxides with cellulose. Sample into a sealed syringe or bottle so the gases stay in the oil. A longer note on interpreting the gases is in [dissolved gas](#/study/field-methods.md/dga). Through-fault duration on a reclosing feeder is in [through-fault duration](#/study/transformers.md/through-fault).
 
-## Sampling insulating liquid (ASTM D923-07) {#sampling-insulating-liquid-astm-d923-07}
+## Sampling insulating liquid (ASTM D923) {#sampling-insulating-liquid-astm-d923-07}
 
 *Level: II*
 
-ATS 7.2.2.B.15 takes the oil sample by ASTM D923. The copy used for these notes is the 2007 edition. The official exam list names D923-15, so treat 2007-only details as 2007 details until a 2015 copy is checked.
+ATS 7.2.2.B.15 takes the oil sample by ASTM D923. The official exam list names D923-15. These notes were first written from the 2007 edition and have since been checked against D923-15, which agrees on the points and clause numbers below.
 
 - **Where to draw.** For a liquid whose specific gravity is less than 1, such as mineral oil, water and some other impurities settle near the floor, so the sample is taken from the bottom unless a different location is specified (3.1.1.1, 5.4). In drums, cans, and small vessels the device should draw about 3 mm off the floor; in large vessels, tank trucks, and tank cars, within 13 mm of the floor. Liquids with specific gravity greater than 1 are sampled from the surface layer. New liquid in containers should sit undisturbed at least 8 hours before a referee sample is taken.
 - **Energized apparatus (5.1, 7.2).** Do not sample energized instrument transformers such as CTs and PTs, and do not sample any energized apparatus that has only a small volume of oil, especially if oil would have to be added to keep the insulation's electric strength. An energized unit that is sampled must be under positive pressure at the sample valve so air is not drawn in. Do not use a drain plug as the sampling point, because flow is hard to control. Keep the liquid level high enough that the insulation's electric strength is not reduced.

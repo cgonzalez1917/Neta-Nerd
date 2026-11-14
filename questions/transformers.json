@@ -371,13 +371,13 @@
     "question": "A rising power factor as test voltage is raised, with capacitance also up, is read in the DELTA4000 method as a hint of:",
     "choices": [
       "A shorted turn only",
-      "Moisture, until the factory report says otherwise",
+      "Ionization in voids or carbonized insulation",
       "A perfect dry winding",
       "An open core ground"
     ],
     "answer": 1,
-    "explanation": "Loss that climbs with voltage, especially with capacitance climbing too, is the moisture pattern the applications guide tells you to investigate. You still correct to 20 \u00b0C and you still prefer the factory numbers over a rule of thumb.",
-    "reference": "Megger DELTA4000 applications guide, per manufacturer instructions; ANSI/NETA ATS-2025 7.2.2.D.4",
+    "explanation": "In the guide's tip-up check the test voltage is stepped up from about 1 kV. A power factor that stays flat as the voltage climbs points to moisture. One that rises with voltage points to ionization in voids or carbonized insulation, and that is the pattern to chase. You still correct to 20 \u00b0C and you still prefer the factory numbers over a rule of thumb.",
+    "reference": "Megger DELTA4000 Reference Manual/Applications Guide ZM-AH02E, tip-up test discussion; ANSI/NETA ATS-2025 7.2.2.D.4",
     "verified": true,
     "kb": "field-methods.md#pf-method"
   },

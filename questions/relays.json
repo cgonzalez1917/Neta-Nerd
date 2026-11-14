@@ -213,8 +213,8 @@
       "Open the trip poles and go home"
     ],
     "answer": 1,
-    "explanation": "On the way in, open the trip circuit first so a stray assertion does not trip the breaker, and let the CT shorting blade make before the relay current circuit opens. On the way out, restore the current circuits and close the trip poles last. That order is the test-switch maker's practice: the trip poles open first, and the CT short is make-before-break. ATS-2025 7.10.1.A.7 is the check that the grounding and shorting connections actually make contact. Leaving a CT secondary open under load is the hazard.",
-    "reference": "ABB FT-1/FT-14 Flexitest product guide 1VAC394641-PG Rev K; engineering fundamentals; ANSI/NETA ATS-2025 7.10.1.A.7",
+    "explanation": "Going in, take the trip path out of service before you open the current and voltage circuits, so a stray assertion cannot trip the breaker. Coming back, put the ac circuits back first, make sure nothing is calling for a trip, and close the trip and close poles last. Opening a current test switch shorts the CT, so the secondary is never left open; ATS-2025 7.10.1.A.7 is the check that the grounding and shorting connections actually make contact. Leaving a CT secondary open under load is the hazard.",
+    "reference": "Werstiuk, The Relay Testing Handbook: Principles and Practice, ch. 18, 1; ANSI/NETA ATS-2025 7.10.1.A.7",
     "verified": true,
     "kb": "field-methods.md#relay-elements"
   },
@@ -339,8 +339,8 @@
       "On the station ground only"
     ],
     "answer": 1,
-    "explanation": "You inject into the relay, not into a CT that is still connected to a live primary. The test switch shorts the CT before the relay circuit opens. ATS 7.9.2 then judges the element against the manufacturer\u2019s tolerance.",
-    "reference": "ANSI/NETA ATS-2025 7.9.2.D.4; ABB FT Flexitest product guide",
+    "explanation": "You inject into the relay, not into a CT that is still connected to a live primary. Opening the current test switch shorts the CT, and the test set connects on the relay side of the switch. ATS 7.9.2 then judges the element against the manufacturer\u2019s tolerance.",
+    "reference": "ANSI/NETA ATS-2025 7.9.2.D.4; Werstiuk, The Relay Testing Handbook: Principles and Practice, ch. 18",
     "verified": true,
     "kb": "field-methods.md#relay-elements"
   },
@@ -1043,7 +1043,7 @@
     "answer": 1,
     "explanation": "A failure analysis decides whether the interval should be shortened. It does not automatically cut the interval every time a failure is reviewed. A risk-based change is also allowed. A longer interval can follow more than two intervals without problems, and that extension is written into the program. It is not the only way an interval may change. Manufacturer instructions still come first.",
     "reference": "NFPA 70B-2026, 9.1.2.1.1 through 9.1.2.2 and 9.3.2.2 through 9.3.2.3",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -1259,7 +1259,7 @@
     "answer": 0,
     "explanation": "The table names the tests. It does not print a manufacturer tolerance band and it does not give a percent of your own. Where the work depends on the relay, follow the manufacturer's instructions. Pickup, timing points, restraint or directional checks, and the inputs and outputs are tests on that list, not a substitute for those instructions.",
     "reference": "NFPA 70B-2026, Table 35.3.5 and 4.1.1",
-    "verified": true,
+    "verified": false,
     "kb": "safety.md#nfpa70b"
   },
   {
@@ -2229,8 +2229,8 @@
       "Accept the relay now and compare logic to the drawings after energization"
     ],
     "answer": 0,
-    "explanation": "ATS requires a check of the internal scheme logic against the owner's narrative or logic diagram, and it requires the settings and the logic to match the latest engineered files. Proving an element in isolation is not the same as proving the scheme. Source: ANSI/NETA ATS-2025, 7.9.2.B.3 and 7.9.2.C.3.",
-    "reference": "ANSI/NETA ATS-2025, 7.9.2.B.3 and 7.9.2.C.3",
+    "explanation": "ATS requires a check of the internal scheme logic against the owner's narrative or logic diagram, and it requires the settings and the logic to match the latest engineered files. Proving an element in isolation is not the same as proving the scheme. Source: ANSI/NETA ATS-2025, 7.9.2.B.5.3, 7.9.2.A.8 and 7.9.2.C.3.",
+    "reference": "ANSI/NETA ATS-2025, 7.9.2.B.5.3, 7.9.2.A.8 and 7.9.2.C.3",
     "verified": true,
     "kb": "relays.md#testing-logic"
   },

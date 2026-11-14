@@ -16,7 +16,7 @@ On a double-ended or dual-source lineup, ATS 7.1.1.B.13 and D.13 require phasing
 
 Current-circuit injection, 7.1.1.B.10 and D.10, drives at least 1.0 A in the secondary wiring and requires the correct magnitude at each device in that circuit, not only at the first relay. Optional primary injection uses the same 1.0 A secondary criterion. Proving one relay does not prove a tap, a shorted winding, or a swapped lead farther down the run.
 
-Control-power transformer tests and control-transfer-relay function are separate checks (7.1.1.B.7.5 and D.8.5). Secondary voltage can be right while a transfer relay fails to switch sources, leaving a dead control bus on loss of one CPT. Operate the transfer relays and show they perform as designed before you accept the lineup.
+Control-power transformer tests and control-transfer-relay function are separate checks (7.1.1.B.8.5 and D.8.5). Secondary voltage can be right while a transfer relay fails to switch sources, leaving a dead control bus on loss of one CPT. Operate the transfer relays and show they perform as designed before you accept the lineup.
 
 ## Medium-voltage vacuum breakers {#mv-vacuum}
 
@@ -74,7 +74,7 @@ ATS 7.25 treats fiber as an optical test, not a megger test. An optical time-dom
 
 *Level: II*
 
-ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. Capacitance is compared with the manufacturer's published data, and values that differ are investigated (B.3 and D.3). A satisfactory insulation-resistance test does not excuse a capacitance mismatch, which can mean a failed can, an open internal fuse, or a wrong unit. D.4 cites NFPA 70 Article 460: residual voltage must fall to 50 V within 1 minute at 600 V and below, and within 5 minutes above 600 V. Still verify absence of voltage before contact. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
+ATS 7.20.1 measures insulation resistance, the capacitance of every terminal combination, and the resistance of the internal discharge resistors. Capacitance is compared with the manufacturer's published data, and values that differ are investigated (B.3 and D.3). A satisfactory insulation-resistance test does not excuse a capacitance mismatch, which can mean a failed can, an open internal fuse, or a wrong unit. D.4 cites NFPA 70 Article 460: residual voltage must fall to 50 V within 1 minute at 600 V and below, and within 5 minutes above 600 V. NFPA 70-2023 moved that split to 1000 V (460.6(A) for 1000 V and below, 460.28(A) above), so check which edition the job is under. Still verify absence of voltage before contact. Shunt reactors and regulators share the liquid-filled power-factor table with transformers: mineral oil 0.5 percent at 20 °C when the manufacturer is silent.
 
 ## EV charging {#evse}
 
@@ -92,7 +92,7 @@ Low-voltage air switches are ATS 7.5.1.1. The inspection covers blade alignment,
 
 *Level: II*
 
-A current-limiting fuse clears in the first half-cycle, so the fault never reaches its prospective peak. A non-current-limiting fuse can't do that. Class L covers 601-6000 A at 600 V. J, T, RK1, RK5, CC, and G are current-limiting branch fuses up to 600 A or less. Fuses open one phase at a time, so a three-phase fused circuit can single-phase a motor. Fused gear often adds an anti-single-phase trip. Cutouts (ATS 7.5.5) get a check of the latching mechanism along with alignment and penetration. Overload versus short circuit, voltage and interrupting ratings, Class R time delay, and series-specific coordination ratios are in [fuse ratings and let-through](#/study/apparatus.md/fuse-ratings).
+A current-limiting fuse clears in the first half-cycle, so the fault never reaches its prospective peak. A non-current-limiting fuse can't do that. Class L covers 601-6000 A at 600 V. J, T, RK1, and RK5 are current-limiting branch fuses rated up to 600 A; G tops out at 60 A and CC at 30 A (Gill Table 8.1). Fuses open one phase at a time, so a three-phase fused circuit can single-phase a motor. Fused gear often adds an anti-single-phase trip. Cutouts (ATS 7.5.5) get a check of the latching mechanism along with alignment and penetration. Overload versus short circuit, voltage and interrupting ratings, Class R time delay, and series-specific coordination ratios are in [fuse ratings and let-through](#/study/apparatus.md/fuse-ratings).
 
 ## Busways and outdoor bus {#bus}
 
@@ -104,7 +104,7 @@ Metal-enclosed busway is ATS 7.4. Withstand is each phase to ground with the oth
 
 *Level: II*
 
-Step-voltage regulators are ATS 7.12.1.1. Read the impact recorder before unloading. Check the motor, the drive, and the end-of-travel cutoffs, and confirm that the cutoff stops the drive at both ends of raise and lower travel (ATS 7.12.3.A.9 and C.4). An operation-counter increment does not prove the cutoff. The control is checked for bandwidth, time delay, voltage level, and line-drop compensation. Turns ratio is taken at all tap positions. The results should follow a normal pattern from one voltage step to the next, and no position should differ from the calculated ratio by more than one-half percent (B.7 and D.7). Winding resistance is held to 2% of factory or adjacent, and PI to at least 1.0 without factory data. Dry reactors (7.20.3.1) hold winding resistance to 1% of factory, and the field ac withstand is limited to 75% of the factory value. Liquid-filled reactors (7.20.3.2) keep a positive nitrogen blanket that is tested for oxygen.
+Step-voltage regulators are ATS 7.12.1.1. Read the impact recorder before unloading. Check the motor, the drive, and the end-of-travel cutoffs, and confirm that the cutoff stops the drive at both ends of raise and lower travel (ATS 7.12.1.1.A.10 and C.4). An operation-counter increment does not prove the cutoff. The control is checked for bandwidth, time delay, voltage level, and line-drop compensation. Turns ratio is taken at all tap positions. The results should follow a normal pattern from one voltage step to the next, and no position should differ from the calculated ratio by more than one-half percent (B.10 and D.10). Winding resistance is held to 2% of factory or adjacent, and PI to at least 1.0 without factory data. Dry reactors (7.20.3.1) hold winding resistance to 1% of factory, and the field ac withstand is limited to 75% of the factory value. Liquid-filled reactors (7.20.3.2) keep a positive nitrogen blanket that is tested for oxygen.
 
 ## Drives, starters, and MCCs {#drives}
 
@@ -401,7 +401,7 @@ Sources: Gill 2nd ed. 12.6.3.9 and 10.4.4; NEMA MG 1-2016 (Rev 2018) 14.3, from 
 
 *Level: IV*
 
-After a misoperation, review the documentation, the coordination study, and the as-left settings, and analyze the event record, before you recommend a corrective action or change a setting (ECS-2024 Section 6; IEEE 242-2001 Ch. 15). Changing a setting first can make coordination worse.
+After a misoperation, review the documentation, the coordination study, and the as-left settings, and analyze the event record, before you recommend a corrective action or change a setting (ETT-2026 8.4, Section 4.A troubleshooting; IEEE 242-2001 Ch. 15). Changing a setting first can make coordination worse.
 
 A Category IV transformer on a reclosing feeder still has to stay within the two-second single-event through-fault limit of IEEE C57.12.00-2021 7.1.3.1, counting the accumulated time of the repeated faults, not only the first shot. See [through-fault duration](#/study/transformers.md/through-fault).
 

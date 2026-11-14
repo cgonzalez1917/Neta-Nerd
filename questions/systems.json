@@ -732,8 +732,8 @@
       "Ignore the event record; documentation review is only a design-phase task"
     ],
     "answer": 2,
-    "explanation": "Senior-level troubleshooting starts with documentation and event information, then a cause, then a recommended correction. Changing a setting or swapping a device before the study and the as-left settings are compared to the event can make coordination worse. ECS and the Level IV systems outline both expect that review-and-recommend sequence. Source: ANSI/NETA ECS-2024, Section 6; IEEE 242-2001, Chapter 15.",
-    "reference": "ANSI/NETA ECS-2024, Section 6; IEEE 242-2001, Chapter 15",
+    "explanation": "Senior-level troubleshooting starts with documentation and event information, then a cause, then a recommended correction. Changing a setting or swapping a device before the study and the as-left settings are compared to the event can make coordination worse. The Level IV troubleshooting outline lists that review-and-recommend sequence. Source: ANSI/NETA ETT-2026, 8.4 Section 4.A; IEEE 242-2001, Chapter 15.",
+    "reference": "ANSI/NETA ETT-2026, 8.4 Section 4.A; IEEE 242-2001, Chapter 15",
     "verified": true,
     "kb": "apparatus.md#studies-events"
   },
@@ -750,8 +750,8 @@
       "Remove all metering; a single snapshot is enough to close a power-quality complaint"
     ],
     "answer": 2,
-    "explanation": "Level IV systems work includes power-quality monitoring and recognizing anomalies. Nonlinear loads inject harmonic current. Capacitors have falling impedance with frequency and can absorb a large share of that current and overheat, and transformers see extra heating as well. Adding capacitors without characterizing the harmonic environment can make the condition worse. Temporary monitoring should be used to support the recommendation. Source: IEEE 519-2022; IEEE 141-1993, Chapter 8.",
-    "reference": "IEEE 519-2022; IEEE 141-1993, Chapter 8",
+    "explanation": "Level IV systems work includes power-quality monitoring and recognizing anomalies. Nonlinear loads inject harmonic current. Capacitors have falling impedance with frequency and can absorb a large share of that current and overheat, and transformers see extra heating as well. Adding capacitors without characterizing the harmonic environment can make the condition worse. Temporary monitoring should be used to support the recommendation. Source: IEEE 519-2022; IEEE 141-1993, Chapter 9 and 8.14.",
+    "reference": "IEEE 519-2022; IEEE 141-1993, Chapter 9 and 8.14",
     "verified": true,
     "kb": "math.md#harmonics"
   },

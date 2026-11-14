@@ -1,7 +1,7 @@
 [
   {
     "id": "airsw-001",
-    "level": "IV",
+    "level": "III",
     "topic": "air-switches",
     "domain": "component",
     "question": "Acceptance testing an outdoor disconnect with no interrupter attachment, you find the key interlock lets it open while the feeding breaker is still closed. The contractor says that\u2019s fine if the switch is opened briskly. What is your call?",
@@ -19,7 +19,7 @@
   },
   {
     "id": "airsw-002",
-    "level": "IV",
+    "level": "III",
     "topic": "air-switches",
     "domain": "component",
     "question": "On a three-pole gang-operated open air switch, the handle and indicator show closed. Contact resistance across the A and C blades is similar, but B reads more than double the lowest, and there is no manufacturer data. What is the right next step?",
@@ -37,7 +37,7 @@
   },
   {
     "id": "airsw-004",
-    "level": "IV",
+    "level": "III",
     "topic": "air-switches",
     "domain": "component",
     "question": "Maintaining a de-energized, grounded open air switch, you find light pitting on the main contacts, an arcing horn with heavy burn damage, and a blade latch that doesn\u2019t hold firmly. Which plan fits?",
