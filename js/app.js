@@ -644,16 +644,115 @@
     return true;
   }
 
+  /* ?newsimg=a hotlinks the feed or og:image. ?newsimg=b uses original icons.
+     Missing or unknown values use the original icons. */
+  function newsImageMode() {
+    var mode = "b";
+    try {
+      var q = (new URLSearchParams(window.location.search).get("newsimg") || "").toLowerCase();
+      if (q === "a" || q === "b") mode = q;
+    } catch (e) { /* keep original icons */ }
+    return mode;
+  }
+
+  function newsImageUrl(item) {
+    var url = item && item.image;
+    if (typeof url !== "string") return "";
+    if (url.indexOf("https://") !== 0 || /\s/.test(url) || url.length > 2000) return "";
+    return url;
+  }
+
+  function newsTopic(title) {
+    var topics = [
+      { id: "safety", re: /\b(safety|arc[\s-]?flash|injur\w*|osha|helmet|nfpa\s*70e)\b/i },
+      { id: "codes", re: /\b(nec|nfpa|ieee|codes?|standards?|ansi)\b/i },
+      { id: "testing", re: /\b(test\w*|maintenance|commissioning|hipot|vlf|insulation|relay\w*|transformers?|instrument)\b/i },
+      { id: "power", re: /\b(grid|transmission|distribution|utility|substation|feeder|power)\b/i }
+    ];
+    var text = String(title || "");
+    for (var i = 0; i < topics.length; i++) {
+      if (topics[i].re.test(text)) return topics[i].id;
+    }
+    return "wave";
+  }
+
+  function newsIcon(kind) {
+    var cyan = "#00e5ff";
+    var blue = "#1aa8c4";
+    var line = "#2e3740";
+    var body = "";
+    if (kind === "testing") {
+      body = '<rect x="8" y="8" width="48" height="32" fill="none" stroke="' + blue + '" stroke-width="1.4"/>' +
+        '<path d="M8 24 H56" fill="none" stroke="' + line + '" stroke-width="1"/>' +
+        '<path d="M12 30 C17 30 17 14 23 14 S29 34 35 34 41 16 47 16 53 24 56 24" fill="none" stroke="' + cyan + '" stroke-width="1.6"/>';
+    } else if (kind === "power") {
+      body = '<g fill="none" stroke-width="1.5">' +
+          '<line x1="32" y1="26" x2="54" y2="26" stroke="' + cyan + '"/>' +
+          '<line x1="32" y1="26" x2="21" y2="8" stroke="' + blue + '"/>' +
+          '<line x1="32" y1="26" x2="21" y2="44" stroke="' + blue + '"/>' +
+        "</g>" +
+        '<g fill="' + cyan + '">' +
+          '<circle cx="32" cy="26" r="1.8"/>' +
+          '<circle cx="54" cy="26" r="1.5"/>' +
+          '<circle cx="21" cy="8" r="1.5"/>' +
+          '<circle cx="21" cy="44" r="1.5"/>' +
+        "</g>";
+    } else if (kind === "safety") {
+      body = '<path d="M16 32 V20" fill="none" stroke="' + blue + '" stroke-width="1.6"/>' +
+        '<path d="M48 32 V20" fill="none" stroke="' + blue + '" stroke-width="1.6"/>' +
+        '<path d="M16 20 C16 8 48 8 48 20" fill="none" stroke="' + cyan + '" stroke-width="1.6"/>';
+    } else if (kind === "codes") {
+      body = '<path d="M6 32 H16 V14 H28 V32 H40 V14 H52 V32 H58" fill="none" stroke="' + cyan + '" stroke-width="1.6"/>';
+    } else {
+      body = '<path d="M4 26 C12 26 12 12 20 12 S28 40 36 40 44 26 52 26 60 26 60 26" fill="none" stroke="' + cyan + '" stroke-width="1.6"/>';
+    }
+    return '<svg viewBox="0 0 64 48" width="64" height="48" aria-hidden="true">' +
+      '<rect width="64" height="48" fill="#0b0d0f"/>' + body + "</svg>";
+  }
+
+  function newsThumb(item, mode) {
+    var fallback = newsIcon(mode === "a" ? "wave" : newsTopic(item.title));
+    var box = h("span", { class: "news-thumb" });
+    var url = mode === "a" ? newsImageUrl(item) : "";
+    if (!url) {
+      box.innerHTML = fallback;
+      return box;
+    }
+    var img = h("img", {
+      src: url,
+      alt: "",
+      width: "64",
+      height: "48",
+      loading: "lazy",
+      decoding: "async",
+      referrerpolicy: "no-referrer"
+    });
+    img.addEventListener("error", function () {
+      if (img.parentNode) img.parentNode.innerHTML = fallback;
+    });
+    box.append(img);
+    return box;
+  }
+
   function newsList(items) {
+    var mode = newsImageMode();
     return h("ul", { class: "news-list" }, items.map(function (item) {
       var when = formatNewsDate(item.date);
       var meta = item.source;
       if (when) meta = meta + " · " + when;
       return h("li", {},
-        h("p", { class: "news-title" },
-          h("a", { href: item.href, target: "_blank", rel: "noopener noreferrer" }, item.title)
-        ),
-        h("p", { class: "news-src" }, meta)
+        h("a", {
+          class: "news-hit",
+          href: item.href,
+          target: "_blank",
+          rel: "noopener noreferrer"
+        },
+          newsThumb(item, mode),
+          h("span", { class: "news-copy" },
+            h("span", { class: "news-title" }, item.title),
+            h("span", { class: "news-src" }, meta)
+          )
+        )
       );
     }));
   }

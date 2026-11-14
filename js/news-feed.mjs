@@ -1,6 +1,8 @@
 /* Headline list for the home page.
-   Keeps title, source name, date, and link. Does not keep article text.
-   The feeds are public RSS. No API key and no secret. */
+   Keeps title, source name, date, link, and an image URL when one is public.
+   Does not keep article text. The feeds are public RSS. No API key and no secret.
+   Image URL order: media:content, media:thumbnail, enclosure, then og:image.
+   Imgix hosts are asked for a 128×96 crop so Home does not pull the full file. */
 
 const UA = "NetaNerdNews/1.0 (+https://neta-nerd.pages.dev)";
 const MAX_ITEMS = 6;
@@ -78,6 +80,119 @@ function cleanHref(raw) {
   return href;
 }
 
+function attr(tag, name) {
+  const re = new RegExp("\\b" + name + "\\s*=\\s*([\"'])([\\s\\S]*?)\\1", "i");
+  const match = tag.match(re);
+  return match ? decode(match[2]) : "";
+}
+
+function imageUrl(raw, base) {
+  if (!raw || /\s/.test(String(raw))) return "";
+  let url;
+  try { url = new URL(String(raw).trim(), base || undefined); }
+  catch (e) { return ""; }
+  if (url.protocol !== "https:") return "";
+  const drop = [];
+  url.searchParams.forEach(function (_value, key) {
+    if (key.toLowerCase().indexOf("utm_") === 0) drop.push(key);
+  });
+  drop.forEach(function (key) { url.searchParams.delete(key); });
+  if (url.hostname === "img.ecmweb.com" || url.hostname === "img.tdworld.com") {
+    url.searchParams.set("auto", "format,compress");
+    url.searchParams.set("fit", "crop");
+    url.searchParams.set("w", "128");
+    url.searchParams.set("h", "96");
+  }
+  const href = url.toString();
+  if (href.length > 2000 || /\s/.test(href)) return "";
+  return href;
+}
+
+function imageLike(tag) {
+  const medium = attr(tag, "medium").toLowerCase();
+  const type = attr(tag, "type").toLowerCase();
+  if (!medium && !type) return true;
+  if (medium === "image") return true;
+  return type.indexOf("image/") === 0;
+}
+
+function imageFromBlock(block) {
+  const tags = block.match(/<media:(?:content|thumbnail)\b[^>]*>/gi) || [];
+  let content = "";
+  let thumb = "";
+  for (let i = 0; i < tags.length; i++) {
+    const tag = tags[i];
+    const url = attr(tag, "url");
+    if (!url || !imageLike(tag)) continue;
+    if (/media:thumbnail/i.test(tag)) {
+      if (!thumb) thumb = url;
+    } else if (!content) content = url;
+  }
+  if (content) return content;
+  if (thumb) return thumb;
+  const enc = block.match(/<enclosure\b[^>]*>/gi) || [];
+  for (let i = 0; i < enc.length; i++) {
+    const type = attr(enc[i], "type").toLowerCase();
+    const url = attr(enc[i], "url");
+    if (url && type.indexOf("image/") === 0) return url;
+  }
+  return "";
+}
+
+function ogImageFromHtml(html, pageUrl) {
+  const metas = html.match(/<meta\b[^>]*>/gi) || [];
+  let secure = "";
+  for (let i = 0; i < metas.length; i++) {
+    const prop = (attr(metas[i], "property") || attr(metas[i], "name") || "").toLowerCase();
+    if (prop !== "og:image" && prop !== "og:image:url" && prop !== "og:image:secure_url") continue;
+    const href = imageUrl(attr(metas[i], "content"), pageUrl);
+    if (!href) continue;
+    if (prop === "og:image" || prop === "og:image:url") return href;
+    if (!secure) secure = href;
+  }
+  return secure;
+}
+
+async function readHead(res) {
+  if (!res.body || typeof res.body.getReader !== "function") {
+    const text = await res.text();
+    return text.slice(0, 150000);
+  }
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let html = "";
+  try {
+    while (html.length < 150000) {
+      const step = await reader.read();
+      if (step.done) break;
+      html += decoder.decode(step.value, { stream: true });
+      if (/<\/head>/i.test(html)) break;
+    }
+  } finally {
+    try { await reader.cancel(); }
+    catch (e) { /* body already closed */ }
+  }
+  return html;
+}
+
+async function pageImage(href) {
+  const timer = withTimeout(FEED_TIMEOUT_MS);
+  try {
+    const res = await fetch(href, {
+      headers: { "user-agent": UA, accept: "text/html" },
+      redirect: "follow",
+      signal: timer.signal
+    });
+    if (!res.ok) return "";
+    const html = await readHead(res);
+    return ogImageFromHtml(html, res.url || href);
+  } catch (e) {
+    return "";
+  } finally {
+    timer.done();
+  }
+}
+
 function normTitle(title) {
   return title.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
 }
@@ -132,7 +247,8 @@ function parseFeed(xml, feed) {
       title: title,
       source: feed.source,
       time: time,
-      href: href
+      href: href,
+      image: imageUrl(imageFromBlock(block))
     });
   }
   return items;
@@ -216,12 +332,14 @@ function pick(items, now) {
 }
 
 function publicItem(item) {
-  return {
+  const out = {
     title: item.title,
     source: item.source,
     date: new Date(item.time).toISOString(),
     href: item.href
   };
+  if (item.image) out.image = item.image;
+  return out;
 }
 
 export async function collectNews(now) {
@@ -230,6 +348,10 @@ export async function collectNews(now) {
     return loadFeed(feed);
   }));
   const items = pick([].concat.apply([], lists), clock);
+  await Promise.all(items.map(function (item) {
+    if (item.image) return null;
+    return pageImage(item.href).then(function (image) { item.image = image; });
+  }));
   return {
     updated: new Date(clock).toISOString(),
     items: items.map(publicItem)
