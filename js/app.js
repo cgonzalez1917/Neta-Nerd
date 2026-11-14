@@ -626,17 +626,11 @@
     return typeof svg === "string" && svg.indexOf("<svg") === 0 ? svg : "";
   }
 
-  function sparkLine(points) {
-    if (!points || !/^[\d\s.,-]+$/.test(points)) return "";
-    return '<svg class="spark" viewBox="0 0 84 22" aria-hidden="true"><polyline points="' +
-      points + '" fill="none" stroke="#00e5ff" stroke-width="1.2"/></svg>';
-  }
-
   function renderFieldDesk() {
     document.title = "Home · Neta Nerd";
     appendResumeBanners(["timed", "mock", "practice", "missed"]);
     var data = placeholderData();
-    if (!data || !data.news || !data.deck || !data.ticker) {
+    if (!data || !data.news || !data.deck) {
       app.append(h("h1", {}, "Field desk"), h("p", {}, "The placeholder file did not load."));
       return;
     }
@@ -677,7 +671,6 @@
     dots.forEach(function (dot, idx) {
       dot.addEventListener("click", function () { show(idx); });
     });
-    var ticker = data.ticker;
     var deck = h("section", { class: "panel deck", "aria-labelledby": "deck-h" },
       h("header", { class: "panel-h" },
         h("h2", { id: "deck-h" }, data.deck.heading || "Electrical construction"),
@@ -707,14 +700,7 @@
     app.append(
       h("p", { class: "kicker" }, "Home"),
       h("div", { class: "title-row" },
-        h("h1", {}, "Field desk"),
-        h("aside", { class: "ticker", "aria-label": "Example stock ticker. Not a live price." },
-          h("span", { class: "ticker-lab" }, ticker.name || ""),
-          h("span", { class: "ticker-line" },
-            h("span", { class: "ticker-px" }, ticker.price || ""),
-            h("span", { class: "spark-slot", html: sparkLine(ticker.spark) })
-          )
-        )
+        h("h1", {}, "Field desk")
       ),
       h("a", { class: "study-entry panel", href: "#/study" },
         h("span", { class: "study-copy" },

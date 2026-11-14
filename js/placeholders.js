@@ -12,12 +12,6 @@
   }
 
   window.NETA_PLACEHOLDERS = {
-    ticker: {
-      example: true,
-      name: "VERTIV",
-      price: "VRT $000.00 (example)",
-      spark: "1,16 10,14 18,15 26,11 34,13 42,8 50,10 58,7 66,9 74,5 83,8"
-    },
     news: {
       example: true,
       heading: "NETA News",
