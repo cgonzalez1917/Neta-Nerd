@@ -627,6 +627,9 @@
   }
 
   var newsToken = 0;
+  /* Publisher photos on the home news list. Set false to show the blue
+     wave on every headline instead. One switch, in this file. */
+  var NEWS_THUMBS = true;
   var NEWS_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   function formatNewsDate(iso) {
@@ -644,16 +647,63 @@
     return true;
   }
 
+  function newsImageUrl(item) {
+    if (!NEWS_THUMBS) return "";
+    var url = item && item.image;
+    if (typeof url !== "string") return "";
+    if (url.indexOf("https://") !== 0 || /\s/.test(url) || url.length > 2000) return "";
+    return url;
+  }
+
+  function newsWave() {
+    return '<svg viewBox="0 0 64 48" width="64" height="48" aria-hidden="true">' +
+      '<rect width="64" height="48" fill="#0b0d0f"/>' +
+      '<path d="M4 26 C12 26 12 12 20 12 S28 40 36 40 44 26 52 26 60 26 60 26" fill="none" stroke="#00e5ff" stroke-width="1.6"/>' +
+      "</svg>";
+  }
+
+  function newsThumb(item) {
+    var wave = newsWave();
+    var box = h("span", { class: "news-thumb" });
+    var url = newsImageUrl(item);
+    if (!url) {
+      box.innerHTML = wave;
+      return box;
+    }
+    var img = h("img", {
+      src: url,
+      alt: "",
+      width: "64",
+      height: "48",
+      loading: "lazy",
+      decoding: "async",
+      referrerpolicy: "no-referrer"
+    });
+    img.addEventListener("error", function () {
+      if (img.parentNode) img.parentNode.innerHTML = wave;
+    });
+    box.append(img);
+    return box;
+  }
+
   function newsList(items) {
     return h("ul", { class: "news-list" }, items.map(function (item) {
       var when = formatNewsDate(item.date);
       var meta = item.source;
       if (when) meta = meta + " · " + when;
       return h("li", {},
-        h("p", { class: "news-title" },
-          h("a", { href: item.href, target: "_blank", rel: "noopener noreferrer" }, item.title)
-        ),
-        h("p", { class: "news-src" }, meta)
+        h("a", {
+          class: "news-hit",
+          href: item.href,
+          target: "_blank",
+          rel: "noopener noreferrer"
+        },
+          newsThumb(item),
+          h("span", { class: "news-copy" },
+            h("span", { class: "news-title" }, item.title),
+            h("span", { class: "news-src" }, meta)
+          )
+        )
       );
     }));
   }

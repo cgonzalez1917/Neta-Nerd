@@ -15,12 +15,16 @@ if (!items.length) {
   process.exit(1);
 }
 
-const allowed = ["title", "source", "date", "href"];
+const required = ["title", "source", "date", "href"];
 let previous = Infinity;
 for (const item of items) {
   const keys = Object.keys(item);
-  if (keys.length !== allowed.length || allowed.some((key) => keys.indexOf(key) === -1)) {
+  if (required.some((key) => keys.indexOf(key) === -1) || keys.some((key) => required.indexOf(key) === -1 && key !== "image")) {
     console.error("Headline has unexpected fields.");
+    process.exit(1);
+  }
+  if (item.image != null && (typeof item.image !== "string" || !item.image.startsWith("https://") || /\s/.test(item.image) || item.image.length > 2000)) {
+    console.error("Bad image.");
     process.exit(1);
   }
   if (typeof item.title !== "string" || item.title.length < 12) {

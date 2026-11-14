@@ -1,41 +1,47 @@
 {
-  "updated": "2026-11-14T17:03:41.771Z",
+  "updated": "2026-11-14T18:58:33.227Z",
   "items": [
     {
       "title": "Introduction to Low-Power Instrument Transformers Used on Relaying (Part 1)",
       "source": "NETA World Journal",
       "date": "2026-11-14T05:46:47.000Z",
-      "href": "https://netaworldjournal.org/2026/11/gonzalezloydmani/industry-topics/introduction-to-low-power-instrument-transformers-used-on-relaying-part-1/"
+      "href": "https://netaworldjournal.org/2026/11/gonzalezloydmani/industry-topics/introduction-to-low-power-instrument-transformers-used-on-relaying-part-1/",
+      "image": "https://netaworldjournal.org/wp-content/uploads/2026/11/17_Feature-Image_IT_Lower-Power-Ins-Transformers.jpg"
     },
     {
       "title": "Artificial Intelligence in Practice: Lessons and Applications for NETA Accredited Companies (Part 2)",
       "source": "NETA World Journal",
       "date": "2026-11-14T05:30:22.000Z",
-      "href": "https://netaworldjournal.org/2026/11/nenopasicinc/industry-topics/artificial-intelligence-in-practice-lessons-and-applications-for-neta-accredited-companies-part-2/"
+      "href": "https://netaworldjournal.org/2026/11/nenopasicinc/industry-topics/artificial-intelligence-in-practice-lessons-and-applications-for-neta-accredited-companies-part-2/",
+      "image": "https://netaworldjournal.org/wp-content/uploads/2026/11/16_Feature-Image_IT_AI-in-Practice.jpg"
     },
     {
       "title": "NETA Safety Committee: Putting Safety into Practice",
       "source": "NETA World Journal",
       "date": "2026-11-14T05:19:39.000Z",
-      "href": "https://netaworldjournal.org/2026/11/blizardhookchamberlainbaberbalitski/volunteer-spotlight-2/neta-safety-committee-putting-safety-into-practice/"
+      "href": "https://netaworldjournal.org/2026/11/blizardhookchamberlainbaberbalitski/volunteer-spotlight-2/neta-safety-committee-putting-safety-into-practice/",
+      "image": "https://netaworldjournal.org/wp-content/uploads/2026/11/11_Feature-Image_Volunteer-Spotlight.jpg"
     },
     {
       "title": "The Cost of a Poor Connection: Lessons from a VLF Testing Failure",
       "source": "NETA World Journal",
       "date": "2026-11-14T05:13:33.000Z",
-      "href": "https://netaworldjournal.org/2026/11/brandonsedgwick/columns/the-cost-of-a-poor-connection-lessons-from-a-vlf-testing-failure/"
+      "href": "https://netaworldjournal.org/2026/11/brandonsedgwick/columns/the-cost-of-a-poor-connection-lessons-from-a-vlf-testing-failure/",
+      "image": "https://netaworldjournal.org/wp-content/uploads/2026/11/10_Feature-Image_Tech-Tips.jpg"
     },
     {
       "title": "Curbing on-the-job electrical injuries requires better training, researchers say",
       "source": "Safety+Health",
       "date": "2026-11-12T19:19:03.000Z",
-      "href": "https://www.safetyandhealthmagazine.com/curbing-on-the-job-electrical-injuries-requires-better-training-researchers-say/"
+      "href": "https://www.safetyandhealthmagazine.com/curbing-on-the-job-electrical-injuries-requires-better-training-researchers-say/",
+      "image": "https://www.safetyandhealthmagazine.com/wp-content/uploads/2026/11/high-voltage-sign.jpg"
     },
     {
       "title": "Testing Ground Level Distribution Systems",
       "source": "T&D World",
       "date": "2026-11-06T19:32:27.000Z",
-      "href": "https://www.tdworld.com/intelligent-undergrounding/article/55409067/testing-ground-level-distribution-systems"
+      "href": "https://www.tdworld.com/intelligent-undergrounding/article/55409067/testing-ground-level-distribution-systems",
+      "image": "https://img.tdworld.com/files/base/ebm/tdworld/image/2026/10/6abe8791b04a99772d6d731a-figure_2.png?auto=format%2Ccompress&fit=crop&w=128&h=96"
     }
   ]
 }
