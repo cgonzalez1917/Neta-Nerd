@@ -358,10 +358,69 @@
     { id: "full", label: "Full", count: 100, minutes: 120 },
     { id: "half", label: "Half", count: 50, minutes: 60 }
   ];
-  var MOCK_PASS = 0.7;
   var MOCK_KEY = "netanerd-mock-v1";
   var MOCK_SESSION = "netanerd-mock-session-v1";
   var MOCK_RESULT = "netanerd-mock-result-v1";
+  var LEVEL2_SCORE_NOTE = "The real NETA Level 2 exam requires a scaled score of 410 (200–500 scale). NETA does not publish how raw scores convert, so this practice score is not a scaled score or a pass/fail result.";
+  var CERT_URL = "https://www.netaworld.org/technician-certification";
+  var SCORE_FAQ_URL = "https://www.netaworld.org/accreditation/exam-score-faqs";
+
+  function examDomainName(id) {
+    if (id === "component") return "Component Testing";
+    if (id === "systems") return "Systems and Commissioning";
+    return domainLabel(id);
+  }
+  function officialWeightText(level) {
+    var w = DCO[level] || DCO.II;
+    return DOMAINS.map(function (d) { return examDomainName(d.id) + " " + w[d.id]; }).join(", ") + ".";
+  }
+  function practiceScoreNote(level) {
+    if (level === "III") {
+      return "The real NETA Level 3 exam requires a scaled score of 410 (200–500 scale). NETA does not publish how raw scores convert, so this practice score is not a scaled score or a pass/fail result.";
+    }
+    return LEVEL2_SCORE_NOTE;
+  }
+  function scoreSourceLine() {
+    return h("p", { class: "meta" },
+      "Sources: ",
+      h("a", { href: CERT_URL, target: "_blank", rel: "noopener noreferrer" }, "NETA technician certification"),
+      " (item count, time, scaled 410 on a 200–500 scale, and domain weights). ",
+      h("a", { href: SCORE_FAQ_URL, target: "_blank", rel: "noopener noreferrer" }, "NETA exam score FAQs"),
+      " (no published conversion from a raw score to the scaled score)."
+    );
+  }
+  function practiceExamTitle(level) {
+    if (level === "III") return "Level 3 Practice Exam";
+    return "Level 2 Practice Exam";
+  }
+  /* Test hook only. Set window.__netaMockDevSeconds to a positive number
+     before Next on Welcome to shorten that attempt. Not a user setting. */
+  function mockAllottedMs(minutes) {
+    var dev = window.__netaMockDevSeconds;
+    if (typeof dev === "number" && isFinite(dev) && dev > 0 && dev <= 7200) return Math.round(dev * 1000);
+    return minutes * 60 * 1000;
+  }
+  function examClock(ms) {
+    var s = Math.ceil(Math.max(0, ms) / 1000);
+    var m = Math.floor(s / 60);
+    return m + ":" + String(s % 60).padStart(2, "0");
+  }
+  function mockScreen(session) {
+    if (session.screen === "welcome" || session.screen === "item" || session.screen === "review") return session.screen;
+    return session.endsAt ? "item" : "welcome";
+  }
+  function usedText(seconds) {
+    var s = Math.max(0, seconds | 0);
+    return Math.floor(s / 60) + " min " + (s % 60) + " sec";
+  }
+  function clockSvg() {
+    return '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+  }
+  function flagSvg(filled) {
+    var fill = filled ? "#FFE14A" : "none";
+    var stroke = filled ? "#8A6500" : "currentColor";
+    return '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 3v18" fill="none" stroke="' + stroke + '" stroke-width="2"/><path d="M6 4h11l-2.2 4 2.2 4H6z" fill="' + fill + '" stroke="' + stroke + '" stroke-width="1.8"/></svg>';
+  }
 
   function mockQuotas(level, total) {
     var weights = MOCK_FRACTIONS[level];
@@ -423,6 +482,8 @@
   function saveMockHistory(list) { storageSet(MOCK_KEY, list); }
 
   function startMock(level, formatId) {
+    var existing = loadMockSession();
+    if (existing && !window.confirm("A practice exam is already in progress on this device. Start a new one and discard it?")) return;
     var format = MOCK_FORMATS.filter(function (f) { return f.id === formatId; })[0];
     if (!format || !canFillMock(level, format.count)) return;
     var list = drawMock(level, format.count);
@@ -445,11 +506,35 @@
         return item;
       }),
       index: 0,
-      startedAt: Date.now(),
-      endsAt: Date.now() + format.minutes * 60 * 1000
+      startedAt: null,
+      endsAt: null,
+      screen: "welcome",
+      fromReview: false,
+      reviewFilter: "all",
+      sectionOpen: true,
+      hideClock: false,
+      hideCount: false
     };
+    state.examDialog = null;
     saveMockSession(session);
     location.hash = "#/mock/run";
+  }
+
+  function beginMockExam(session) {
+    session.screen = "item";
+    session.index = 0;
+    session.fromReview = false;
+    session.startedAt = Date.now();
+    session.endsAt = session.startedAt + mockAllottedMs(session.minutes);
+    state.examDialog = null;
+    saveMockSession(session);
+    render();
+  }
+
+  function discardMockAttempt() {
+    state.examDialog = null;
+    clearMockSession();
+    location.hash = "#/mock";
   }
 
   function domainTallies(rows) {
@@ -481,8 +566,9 @@
       return { id: q.id, choice: choice, correct: !!ok && choice != null };
     });
     var correct = rows.filter(function (r) { return r.correct; }).length;
+    rows.forEach(function (row) { recordAnswer(row.id, row.correct, row.choice); });
     var allotted = session.minutes * 60;
-    var elapsed = Math.max(0, Math.round((Date.now() - session.startedAt) / 1000));
+    var elapsed = session.startedAt ? Math.max(0, Math.round((Date.now() - session.startedAt) / 1000)) : 0;
     var result = {
       mode: "mock",
       reason: reason || "submitted",
@@ -497,10 +583,10 @@
       domains: domainTallies(rows),
       at: Date.now()
     };
-    result.passed = result.pct >= MOCK_PASS * 100;
     var history = [result].concat(mockHistory()).slice(0, 8);
     saveMockHistory(history);
     try { sessionStorage.setItem(MOCK_RESULT, JSON.stringify(result)); } catch (e) {}
+    state.examDialog = null;
     clearMockSession();
     location.hash = "#/mock/results";
     state._finishing = false;
@@ -967,6 +1053,7 @@
   }
 
   function renderMockSetup() {
+    document.title = "Mock exam · Neta Nerd";
     var levels = ["II", "III"].map(function (level) {
       return {
         id: level,
@@ -984,11 +1071,12 @@
     if (current && state.mockFormat === "half" && !current.half) state.mockFormat = "full";
     var history = mockHistory();
     var quotas = current ? mockQuotas(current.id, state.mockFormat === "half" ? 50 : 100) : null;
+    var weightName = current && current.id === "III" ? "Level III" : "Level II";
     appendResumeBanners(["mock"]);
     app.append(
-      h("p", { class: "kicker" }, "Separate from practice"),
+      h("p", { class: "kicker" }, "Practice simulation"),
       h("h1", {}, "Mock exam"),
-      h("p", { class: "lede" }, "A closed-book sitting for Level II or Level III. Questions are drawn to the domain weights for that level. Answers and explanations stay hidden until you submit or the clock hits 0:00."),
+      h("p", { class: "lede" }, "A closed-book practice exam. A full exam is 100 questions and 2 hours. A half exam is 50 questions and 60 minutes. You can change answers until you end the exam. Calculator, formulae sheet, and scratch pad are not in this build. This is not an official NETA exam."),
       h("div", { class: "panel stack" },
         levels.length ? null : h("p", {}, "Neither Level II nor Level III has enough questions for a mock exam yet."),
         h("div", { class: "filter-label" }, "Level"),
@@ -1011,14 +1099,22 @@
             onclick: function () { if (!ok) return; state.mockFormat = format.id; render(); }
           }, format.label + " · " + format.count + " questions · " + format.minutes + " min");
         })),
-        quotas ? h("p", { class: "meta" }, "Draw for this sitting: Safety " + quotas.safety + ", Theory " + quotas.theory + ", Component " + quotas.component + ", Systems " + quotas.systems + ". Verified questions are used first.") : null,
-        h("p", {}, "The score at the end is a practice estimate. NETA scales exams to 410 on a 200–500 scale and has not published a raw percent cutoff. This drill uses 70% as the practice target."),
+        quotas ? h("h2", {}, "This practice draw") : null,
+        quotas ? h("p", {}, "Questions asked this sitting: " + DOMAINS.map(function (d) {
+          return examDomainName(d.id) + " " + quotas[d.id];
+        }).join(", ") + ". Verified questions are used first.") : null,
+        current ? h("h2", {}, "Official " + weightName + " exam domain weights") : null,
+        current ? h("p", {}, "These percentages are the official exam's mix of questions. They are not your percent correct on this practice exam.") : null,
+        current ? h("p", { class: "meta" }, officialWeightText(current.id)) : null,
+        h("h2", {}, "Scoring"),
+        h("p", {}, practiceScoreNote(current ? current.id : "II")),
+        scoreSourceLine(),
         h("div", { class: "actions" },
           h("button", {
             class: "btn primary",
             disabled: current ? null : true,
             onclick: function () { startMock(state.mockLevel, state.mockFormat); }
-          }, "Start mock exam"),
+          }, "Start practice exam"),
           h("a", { class: "btn", href: "#/drills" }, "Back to practice")
         )
       )
@@ -1027,6 +1123,8 @@
       h("div", { class: "panel", style: "margin-top:14px" },
         h("h2", {}, "Saved on this device"),
         h("ul", { class: "miss-list" }, history.map(function (item) {
+          var score = item.pct + "%";
+          if (item.correct != null && item.total != null) score = item.correct + "/" + item.total + " · " + score;
           return h("li", {},
             h("button", { class: "btn small", onclick: function () {
               try { sessionStorage.setItem(MOCK_RESULT, JSON.stringify(item)); } catch (e) {}
@@ -1035,7 +1133,7 @@
             " ",
             h("span", { class: "tag level" }, levelLabel(item.level)),
             h("span", { class: "tag" }, item.format === "half" ? "Half" : "Full"),
-            h("span", { class: "tag " + (item.passed ? "ok" : "bad") }, item.pct + "%"),
+            h("span", { class: "tag" }, score),
             h("span", { class: "meta" }, new Date(item.at).toLocaleString())
           );
         }))
@@ -1043,115 +1141,380 @@
     );
   }
 
-  function renderMockRun() {
-    var session = loadMockSession();
-    if (!session || session.mode !== "mock") { location.hash = "#/mock"; return; }
-    if (session.endsAt <= Date.now()) { finishMock(session, "time"); return; }
+  function closeExamDialog() {
+    state.examDialog = null;
+    render();
+  }
+
+  function examOverlay(dialog) {
+    return h("div", {
+      class: "td-overlay",
+      onclick: function (ev) { if (ev.target === ev.currentTarget) closeExamDialog(); }
+    }, dialog);
+  }
+
+  function renderMockDialog(session) {
+    var kind = state.examDialog;
+    if (kind === "help" || kind === "instructions") {
+      var help = kind === "help";
+      var body = help ? [
+        h("p", {}, "Select one answer with the mouse, or press the letter key for that choice. You can change the answer until you end the practice exam."),
+        h("p", {}, "Mark for Review flags the question so you can find it later. It does not score or submit the question."),
+        h("p", {}, "Navigator opens the item review list. On the last question, Next opens that list too."),
+        h("p", {}, "Highlight, Strikethrough, Calculator, and Scratch Pad are not available in this practice build.")
+      ] : [
+        h("p", {}, "This practice list helps you find questions. It does not show a score."),
+        h("ol", {},
+          h("li", {}, "Review All lists every question."),
+          h("li", {}, "Review Incomplete lists questions with no answer."),
+          h("li", {}, "Review Flagged lists questions you marked for review.")
+        ),
+        h("p", {}, "Select a row to open that question. End Exam is at the bottom left.")
+      ];
+      return examOverlay(h("div", {
+        class: "td-dialog",
+        role: "dialog",
+        "aria-modal": "true",
+        "aria-label": help ? "Help" : "Instructions"
+      },
+        h("h2", {}, help ? "Help" : "Instructions"),
+        body,
+        h("div", { class: "td-dialog-actions" },
+          h("button", { type: "button", class: "td-btn td-close", "data-dialog-focus": "true", onclick: closeExamDialog }, "Close")
+        )
+      ));
+    }
+    var leaving = kind === "leave" || !session.endsAt;
+    var title = leaving ? "Leave practice exam" : "End practice exam";
+    var text = leaving
+      ? "The timed section has not started. Leave and discard this attempt? Nothing will be scored."
+      : "End this practice exam and score it here? You will not be able to change your answers after this. This is a Neta Nerd practice screen, not an official exam.";
+    return examOverlay(h("div", {
+      class: "td-dialog is-end",
+      role: "dialog",
+      "aria-modal": "true",
+      "aria-label": title
+    },
+      h("h2", {}, title),
+      h("p", {}, text),
+      h("div", { class: "td-dialog-actions" },
+        h("button", {
+          type: "button",
+          class: "td-btn",
+          onclick: function () {
+            if (leaving) discardMockAttempt();
+            else finishMock(loadMockSession() || session, "submitted");
+          }
+        }, "Yes"),
+        h("button", { type: "button", class: "td-btn", "data-dialog-focus": "true", onclick: closeExamDialog }, "No")
+      )
+    ));
+  }
+
+  function mockStatus(session, showCount) {
+    var clockBtn = h("button", {
+      type: "button",
+      class: "td-clock",
+      onclick: function () {
+        session.hideClock = !session.hideClock;
+        saveMockSession(session);
+        render();
+      }
+    },
+      h("span", { class: "td-ico", html: clockSvg() }),
+      session.hideClock
+        ? "Show time"
+        : h("span", {}, "Time Remaining ", h("span", { id: "td-clock-value" }, examClock(session.endsAt - Date.now())))
+    );
+    var countBtn = null;
+    if (showCount) {
+      countBtn = h("button", {
+        type: "button",
+        class: "td-count",
+        onclick: function () {
+          session.hideCount = !session.hideCount;
+          saveMockSession(session);
+          render();
+        }
+      }, session.hideCount ? "Show count" : ((session.index + 1) + " of " + session.items.length));
+    }
+    return h("div", { class: "td-status" }, clockBtn, countBtn);
+  }
+
+  function deadTool(label, swatch) {
+    return h("button", {
+      type: "button",
+      class: "td-tool",
+      disabled: true,
+      title: "Not available in this practice build",
+      "aria-disabled": "true"
+    }, swatch ? h("span", { class: "td-swatch", "aria-hidden": "true" }) : null, label);
+  }
+
+  function openMockEnd(session) {
+    state.examDialog = session.endsAt ? "end" : "leave";
+    render();
+  }
+
+  function goMockReview(session) {
+    session.screen = "review";
+    session.fromReview = false;
+    state.examDialog = null;
+    saveMockSession(session);
+    render();
+  }
+
+  function examNext(session) {
+    state.examDialog = null;
+    if (session.index >= session.items.length - 1) {
+      goMockReview(session);
+      return;
+    }
+    session.index += 1;
+    saveMockSession(session);
+    render();
+  }
+
+  function examPrev(session) {
+    if (session.index <= 0) return;
+    state.examDialog = null;
+    session.index -= 1;
+    saveMockSession(session);
+    render();
+  }
+
+  function renderMockWelcome(session) {
+    app.append(h("div", { class: "td" },
+      h("header", { class: "td-title" }, h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam")),
+      h("div", { class: "td-main" },
+        h("div", { class: "td-welcome" },
+          h("div", { class: "td-wordmark" }, "Practice Exam"),
+          h("h1", {}, "Welcome!"),
+          h("p", {}, "This is a practice exam in a Pearson-style test driver. It is not the official NETA exam."),
+          h("p", {}, "Test Title: " + practiceExamTitle(session.level)),
+          h("p", {}, "Exam Time: " + session.minutes + " minutes"),
+          h("p", {}, "Questions: " + session.items.length),
+          h("p", {}, "Press ", h("span", { class: "td-ulink" }, "Next"), " to continue.")
+        )
+      ),
+      h("footer", { class: "td-nav" },
+        h("button", { type: "button", class: "td-btn", onclick: function () { openMockEnd(session); } }, "End Exam"),
+        h("button", { type: "button", class: "td-btn", onclick: function () { beginMockExam(session); } }, "Next →")
+      )
+    ));
+  }
+
+  function renderMockItem(session) {
     var item = session.items[session.index];
     var q = sourceQuestion(item);
-    if (!q) { clearMockSession(); location.hash = "#/mock"; return; }
+    if (!q) { clearMockSession(); location.hash = "#/mock"; return false; }
     var choices = shownChoices(item);
-    var total = session.items.length;
-    var unanswered = session.items.filter(function (entry) { return entry.picked == null; }).length;
-
-    function persist() { saveMockSession(session); render(); }
-    function pick(i) {
-      item.picked = i;
-      persist();
+    var left = session.fromReview
+      ? h("button", { type: "button", class: "td-btn", onclick: function () { goMockReview(session); } }, "Review Screen")
+      : h("button", {
+        type: "button",
+        class: "td-btn",
+        onclick: function () { state.examDialog = "help"; render(); }
+      }, "Help");
+    var right = [];
+    if (session.index > 0) {
+      right.push(h("button", { type: "button", class: "td-btn", onclick: function () { examPrev(session); } }, "← Previous"));
     }
-    function go(delta) {
-      var next = session.index + delta;
-      if (next < 0 || next >= total) return;
-      session.index = next;
-      persist();
+    if (!session.fromReview) {
+      right.push(h("button", { type: "button", class: "td-btn", onclick: function () { goMockReview(session); } }, "Navigator"));
     }
-    function jumpUnanswered() {
-      for (var n = 1; n <= total; n++) {
-        var idx = (session.index + n) % total;
-        if (session.items[idx].picked == null) {
-          session.index = idx;
-          persist();
-          return;
-        }
-      }
-    }
-    function submit() {
-      if (unanswered && !window.confirm("Submit with " + unanswered + " unanswered? Unanswered questions are marked wrong.")) return;
-      finishMock(session, "submitted");
-    }
-
-    var head = h("div", { class: "q-top" },
-      h("div", { class: "row", style: "justify-content:space-between" },
-        h("span", { class: "meta" }, "Mock · " + levelLabel(session.level) + " · " + (session.format === "half" ? "Half" : "Full") + " · " + (session.index + 1) + " / " + total),
-        h("span", { class: "timer mock", id: "timer" }, "—")
+    right.push(h("button", { type: "button", class: "td-btn", onclick: function () { examNext(session); } }, "Next →"));
+    app.append(h("div", { class: "td" },
+      h("header", { class: "td-title" },
+        h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam"),
+        mockStatus(session, true)
       ),
-      h("div", { class: "progress" }, h("i", { style: "width:" + Math.round(100 * (total - unanswered) / total) + "%" })),
-      h("div", { class: "dots", "aria-label": "Question navigation" }, session.items.map(function (entry, idx) {
-        var cls = "dot";
-        if (entry.picked != null) cls += " on";
-        if (entry.flagged) cls += " flag";
-        if (idx === session.index) cls += " here";
-        return h("button", {
-          type: "button",
-          class: cls,
-          "aria-label": "Question " + (idx + 1) + (entry.picked == null ? ", unanswered" : ", answered") + (entry.flagged ? ", flagged" : ""),
-          onclick: function () { session.index = idx; persist(); }
-        }, String(idx + 1));
-      })),
-      h("div", { class: "actions mock-nav" },
-        h("button", { class: "btn small", onclick: jumpUnanswered }, "Next unanswered (" + unanswered + ")"),
+      h("div", { class: "td-tools" },
+        deadTool("Highlight (J)", true),
+        deadTool("Strikethrough (W)", false),
+        deadTool("Calculator", false),
+        deadTool("Scratch Pad", false),
         h("button", {
-          class: "btn small" + (item.flagged ? " ghost" : ""),
+          type: "button",
+          class: "td-tool td-mark" + (item.flagged ? " is-marked" : ""),
           "aria-pressed": item.flagged ? "true" : "false",
-          onclick: function () { item.flagged = !item.flagged; persist(); }
-        }, item.flagged ? "Flagged for review" : "Flag for review")
-      )
-    );
+          onclick: function () {
+            item.flagged = !item.flagged;
+            saveMockSession(session);
+            render();
+          }
+        }, h("span", { class: "td-flag", html: flagSvg(!!item.flagged) }), "Mark for Review")
+      ),
+      h("div", { class: "td-strip" }, "Multiple Choice Item - Single Select"),
+      h("div", { class: "td-main" },
+        h("div", { class: "td-item" },
+          h("p", { class: "td-stem" }, q.question),
+          h("div", { class: "td-choices", role: "radiogroup", "aria-label": "Answer choices" }, choices.map(function (text, i) {
+            var on = item.picked === i;
+            return h("button", {
+              type: "button",
+              class: "td-choice",
+              role: "radio",
+              "aria-checked": on ? "true" : "false",
+              onclick: function () {
+                item.picked = i;
+                saveMockSession(session);
+                render();
+              }
+            },
+              h("span", { class: "td-radio", "aria-hidden": "true" }),
+              h("span", { class: "td-letter" }, String.fromCharCode(65 + i) + "."),
+              h("span", { class: "td-choice-text" }, text)
+            );
+          }))
+        )
+      ),
+      h("footer", { class: "td-nav" }, left, h("div", { class: "td-nav-right" }, right))
+    ));
+    state._key = function (ev) {
+      if (state.examDialog) {
+        if (ev.key === "Escape") closeExamDialog();
+        return;
+      }
+      if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+      var idx = ev.key.toUpperCase().charCodeAt(0) - 65;
+      if (idx < 0 || idx >= choices.length) return;
+      item.picked = idx;
+      saveMockSession(session);
+      render();
+    };
+    document.addEventListener("keydown", state._key);
+    return true;
+  }
 
-    app.append(
-      head,
-      h("div", { class: "panel" },
-        questionTags(q),
-        h("h2", { class: "stem" }, q.question),
-        h("div", { role: "radiogroup", "aria-label": "Answer choices" }, choices.map(function (text, i) {
-          var checked = item.picked === i;
-          return h("button", {
+  function renderMockReview(session) {
+    var filter = session.reviewFilter || "all";
+    var open = session.sectionOpen !== false;
+    var incomplete = session.items.filter(function (item) { return item.picked == null; }).length;
+    var rows = session.items.map(function (item, idx) {
+      return { item: item, idx: idx };
+    }).filter(function (row) {
+      if (filter === "incomplete") return row.item.picked == null;
+      if (filter === "flagged") return !!row.item.flagged;
+      return true;
+    });
+    function filterBtn(id, label) {
+      var on = filter === id;
+      return h("button", {
+        type: "button",
+        class: "td-btn",
+        "aria-pressed": on ? "true" : "false",
+        onclick: function () {
+          session.reviewFilter = id;
+          saveMockSession(session);
+          render();
+        }
+      }, label);
+    }
+    app.append(h("div", { class: "td" },
+      h("header", { class: "td-title" },
+        h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam"),
+        mockStatus(session, false)
+      ),
+      h("div", { class: "td-tools" },
+        h("button", {
+          type: "button",
+          class: "td-tool",
+          onclick: function () { state.examDialog = "instructions"; render(); }
+        }, "Instructions")
+      ),
+      h("div", { class: "td-main" },
+        h("div", { class: "td-review" },
+          h("h1", {}, "Item Review Screen"),
+          h("button", {
             type: "button",
-            class: "choice",
-            role: "radio",
-            "aria-checked": checked ? "true" : "false",
-            onclick: function () { pick(i); }
-          }, h("span", { class: "key" }, String.fromCharCode(65 + i)), h("span", {}, text));
-        })),
-        h("div", { class: "actions" },
-          h("button", { class: "btn", onclick: function () { go(-1); } }, "Back"),
-          h("button", { class: "btn", onclick: function () { go(1); } }, "Next"),
-          h("button", { class: "btn primary", onclick: submit }, "Submit exam")
+            class: "td-section",
+            "aria-expanded": open ? "true" : "false",
+            onclick: function () {
+              session.sectionOpen = !open;
+              saveMockSession(session);
+              render();
+            }
+          },
+            h("span", {}, (open ? "▾ " : "▸ ") + practiceExamTitle(session.level)),
+            h("span", { class: "td-section-count" }, "( " + incomplete + " Unseen/Incomplete )")
+          ),
+          open ? h("div", { class: "td-rows" },
+            rows.length ? rows.map(function (row) {
+              return h("button", {
+                type: "button",
+                class: "td-row" + (row.item.flagged ? " is-flagged" : ""),
+                "aria-label": "Question " + (row.idx + 1) + (row.item.picked == null ? ", incomplete" : "") + (row.item.flagged ? ", flagged" : ""),
+                onclick: function () {
+                  session.index = row.idx;
+                  session.screen = "item";
+                  session.fromReview = true;
+                  state.examDialog = null;
+                  saveMockSession(session);
+                  render();
+                }
+              },
+                h("span", { class: "td-flag", html: flagSvg(!!row.item.flagged) }),
+                h("span", { class: "td-q" }, "Question " + (row.idx + 1)),
+                row.item.picked == null ? h("span", { class: "td-incomplete" }, "Incomplete") : null
+              );
+            }) : h("p", { class: "td-empty" }, "No questions in this list.")
+          ) : null
+        )
+      ),
+      h("footer", { class: "td-nav" },
+        h("button", { type: "button", class: "td-btn", onclick: function () { openMockEnd(session); } }, "End Exam"),
+        h("div", { class: "td-nav-right" },
+          filterBtn("all", "Review All"),
+          filterBtn("incomplete", "Review Incomplete"),
+          filterBtn("flagged", "Review Flagged")
         )
       )
-    );
+    ));
+  }
 
-    var timerEl = document.getElementById("timer");
+  function armMockClock(session) {
+    if (!session.endsAt || mockScreen(session) === "welcome") return;
     var tick = function () {
-      var left = Math.max(0, session.endsAt - Date.now());
-      var s = Math.ceil(left / 1000);
-      var hh = Math.floor(s / 3600);
-      var mm = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
-      var ss = String(s % 60).padStart(2, "0");
-      if (timerEl) {
-        timerEl.textContent = (hh ? hh + ":" : "") + mm + ":" + ss;
-        timerEl.className = "timer mock" + (s < 300 ? " low" : "");
-      }
+      var live = loadMockSession();
+      if (!live || !live.endsAt) return;
+      var left = live.endsAt - Date.now();
+      var el = document.getElementById("td-clock-value");
+      if (el) el.textContent = examClock(left);
       if (left <= 0) {
         if (state._timer) { clearInterval(state._timer); state._timer = null; }
-        finishMock(loadMockSession() || session, "time");
+        finishMock(live, "time");
       }
     };
     tick();
     state._timer = setInterval(tick, 250);
   }
 
+  function renderMockRun() {
+    var session = loadMockSession();
+    if (!session || session.mode !== "mock") { location.hash = "#/mock"; return; }
+    if (session.endsAt && session.endsAt <= Date.now()) { finishMock(session, "time"); return; }
+    document.title = "NETA Nerd Practice Exam";
+    var screen = mockScreen(session);
+    var ok = true;
+    if (screen === "welcome") renderMockWelcome(session);
+    else if (screen === "review") renderMockReview(session);
+    else ok = renderMockItem(session);
+    if (ok === false) return;
+    if (state.examDialog) app.append(renderMockDialog(session));
+    if (!state._key) {
+      state._key = function (ev) {
+        if (state.examDialog && ev.key === "Escape") closeExamDialog();
+      };
+      document.addEventListener("keydown", state._key);
+    }
+    var focus = app.querySelector("[data-dialog-focus]");
+    if (focus) focus.focus();
+    armMockClock(session);
+  }
+
   function renderMockResults() {
+    document.title = "Practice results · Neta Nerd";
     var result = null;
     try { result = JSON.parse(sessionStorage.getItem(MOCK_RESULT) || "null"); }
     catch (e) {}
@@ -1159,47 +1522,77 @@
       app.append(h("h1", {}, "No mock result"), h("p", {}, "Finish a mock exam to see the review."), h("a", { class: "btn primary", href: "#/mock" }, "Mock exam"));
       return;
     }
-    var mm = Math.floor(result.seconds / 60);
-    var ss = String(result.seconds % 60).padStart(2, "0");
+    var ranOut = result.reason === "time";
+    var weightName = result.level === "III" ? "Level III" : "Level II";
+    var missed = (result.rows || []).map(function (row, idx) {
+      return { row: row, n: idx + 1 };
+    }).filter(function (entry) { return !entry.row.correct; });
     app.append(
-      h("p", { class: "kicker" }, "Mock exam · " + levelLabel(result.level) + " · " + (result.format === "half" ? "Half" : "Full")),
-      h("h1", {}, result.passed ? "Practice target met" : "Under the practice target"),
-      h("p", { class: "score-num" }, result.pct + "%"),
-      h("p", {}, result.correct + " / " + result.total + " · " + mm + "m " + ss + "s" + (result.reason === "time" ? " · time expired" : "")),
-      h("div", { class: "panel estimate" + (result.passed ? " pass" : " fail") },
-        h("h2", {}, "Estimate only"),
-        h("p", {}, (result.passed ? "At or above" : "Below") + " the 70% practice target."),
-        h("p", {}, "This is not a NETA score. NETA scales exams to 410 on a 200–500 scale and has not published a raw percent cutoff. This drill uses 70% only as a practice target.")
-      ),
-      h("div", { class: "stats", style: "margin-top:14px" }, DOMAINS.map(function (d) {
-        var cell = (result.domains && result.domains[d.id]) || { correct: 0, total: 0 };
-        var pct = cell.total ? Math.round(100 * cell.correct / cell.total) : 0;
-        return h("div", { class: "stat" },
-          h("b", {}, cell.total ? pct + "%" : "—"),
-          h("span", {}, d.label + " · " + cell.correct + "/" + cell.total)
-        );
-      })),
+      h("p", { class: "kicker" }, "Mock exam · " + levelLabel(result.level) + " · " + (result.format === "half" ? "Half" : "Full") + " · Standard"),
+      h("h1", {}, "Practice results"),
+      h("p", { class: "score-num" }, result.correct + " / " + result.total),
+      h("p", {}, "Raw percent: " + result.pct + "%"),
+      h("p", {}, "Time used: " + usedText(result.seconds) + "."),
+      h("p", {}, ranOut ? "Time ran out. Unanswered questions were scored as not correct." : "Time did not run out."),
       h("div", { class: "actions" },
         h("a", { class: "btn primary", href: "#/mock" }, "New mock exam"),
-        h("a", { class: "btn", href: "#/drills" }, "Practice")
+        h("a", { class: "btn", href: "#/" }, "Home"),
+        h("a", { class: "btn", href: "#/drills" }, "Drills")
       ),
       h("div", { class: "panel", style: "margin-top:14px" },
-        h("h2", {}, "Review"),
-        h("ul", { class: "miss-list" }, result.rows.map(function (row, idx) {
+        h("h2", {}, "Your percent correct by domain"),
+        h("p", { class: "meta" }, "Correct answers divided by the questions this practice exam asked. This is not the official domain weight."),
+        h("ul", { class: "miss-list" }, DOMAINS.map(function (d) {
+          var cell = (result.domains && result.domains[d.id]) || { correct: 0, total: 0 };
+          var pct = cell.total ? Math.round(100 * cell.correct / cell.total) : 0;
+          return h("li", {},
+            h("b", {}, examDomainName(d.id)),
+            " — " + cell.correct + " / " + cell.total + " correct — " + (cell.total ? pct + "%" : "—")
+          );
+        }))
+      ),
+      h("div", { class: "panel", style: "margin-top:14px" },
+        h("h2", {}, "Official " + weightName + " exam domain weights"),
+        h("p", {}, "These percentages are the official exam's mix of questions. They are not your percent correct."),
+        h("p", { class: "meta" }, officialWeightText(result.level))
+      ),
+      h("div", { class: "panel estimate", style: "margin-top:14px" },
+        h("p", {}, practiceScoreNote(result.level)),
+        scoreSourceLine()
+      ),
+      h("div", { class: "panel", style: "margin-top:14px" },
+        h("h2", {}, "Review the questions you missed"),
+        h("p", {}, missed.length
+          ? "These are the questions you missed on this practice exam."
+          : "You answered every question correctly."),
+        missed.length ? h("div", { class: "actions" },
+          h("button", {
+            class: "btn ghost",
+            onclick: function () {
+              var qs = missed.map(function (entry) { return state.bank.byId[entry.row.id]; }).filter(Boolean);
+              if (qs.length) startDrill("missed", qs);
+            }
+          }, "Drill these in practice")
+        ) : null,
+        missed.length ? h("ul", { class: "miss-list" }, missed.map(function (entry) {
+          var row = entry.row;
           var q = state.bank.byId[row.id];
           if (!q) return null;
           var yours = row.choice == null ? "No answer" : q.choices[row.choice];
+          var link = safeHttps(q.link || "");
           return h("li", {},
-            h("p", { class: "meta" }, "Question " + (idx + 1)),
-            h("span", { class: "tag " + (row.correct ? "ok" : "bad") }, row.correct ? "Correct" : "Missed"),
+            h("p", { class: "meta" }, "Question " + entry.n),
+            h("span", { class: "tag bad" }, "Missed"),
             questionTags(q),
             h("p", {}, q.question),
             h("p", {}, "Your answer: " + yours),
             h("p", {}, "Correct answer: " + q.choices[q.answer]),
             h("p", {}, q.explanation),
-            h("p", { class: "ref" }, q.reference)
+            h("p", { class: "ref" }, q.reference),
+            q.kb ? h("p", {}, h("a", { href: studyHref(q.kb) }, "Study this section")) : null,
+            link ? h("p", {}, h("a", { href: link, target: "_blank", rel: "noopener noreferrer" }, "Learn more")) : null
           );
-        }))
+        })) : null
       )
     );
   }
@@ -1489,6 +1882,8 @@
     if (state._timer) { clearInterval(state._timer); state._timer = null; }
     if (state._key) { document.removeEventListener("keydown", state._key); state._key = null; }
     var path = parseHash();
+    document.body.classList.toggle("exam-driver", path === "/mock/run" && !state.error);
+    if (path !== "/mock/run") state.examDialog = null;
     markNav(path);
     app.innerHTML = "";
     if (state.error) {
@@ -1528,6 +1923,7 @@
 
   window.addEventListener("hashchange", render);
   window.addEventListener("resize", function () { markNav(parseHash()); });
+  document.body.classList.toggle("exam-driver", parseHash() === "/mock/run");
   markNav(parseHash());
 
   Promise.all([
