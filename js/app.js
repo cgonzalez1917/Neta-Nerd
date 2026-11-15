@@ -406,7 +406,7 @@
     return m + ":" + String(s % 60).padStart(2, "0");
   }
   function mockScreen(session) {
-    if (session.screen === "welcome" || session.screen === "item" || session.screen === "review") return session.screen;
+    if (session.screen === "welcome" || session.screen === "item" || session.screen === "review" || session.screen === "thanks") return session.screen;
     return session.endsAt ? "item" : "welcome";
   }
   function usedText(seconds) {
@@ -1141,6 +1141,30 @@
     );
   }
 
+  function ico(name) {
+    var paths = {
+      clock: '<circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.2V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+      list: '<path d="M8 7h12M8 12h12M8 17h12" stroke="currentColor" stroke-width="1.6"/><circle cx="4.2" cy="7" r="1.15" fill="currentColor"/><circle cx="4.2" cy="12" r="1.15" fill="currentColor"/><circle cx="4.2" cy="17" r="1.15" fill="currentColor"/>',
+      help: '<circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.4 9.6a2.6 2.6 0 1 1 3.3 2.5c-.8.4-1.2.9-1.2 1.7V15" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="17.2" r="0.9" fill="currentColor"/>',
+      gear: '<circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.2v2.3M12 18.5v2.3M3.2 12h2.3M18.5 12h2.3M5.8 5.8l1.6 1.6M16.6 16.6l1.6 1.6M18.2 5.8l-1.6 1.6M7.4 16.6 5.8 18.2" stroke="currentColor" stroke-width="1.5"/>',
+      next: '<path d="M5 12h12M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+      prev: '<path d="M19 12H7M11 6.5 5.5 12 11 17.5" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+      pencil: '<path d="M14 4l4 4-9 9H5v-4z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 5.5l4 4" stroke="currentColor" stroke-width="1.4"/>',
+      calc: '<rect x="5" y="3" width="14" height="18" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2M8 18h2" stroke="currentColor" stroke-width="1.4"/>',
+      pad: '<path d="M7 3h8l3 3v15H7z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 10h6M10 13h6M10 16h4" stroke="currentColor" stroke-width="1.3"/>',
+      flag: '<path d="M7 3v18" stroke="currentColor" stroke-width="1.7"/><path d="M7 4.2h10l-2.2 3.4L17 11H7z" fill="currentColor" stroke="currentColor" stroke-width="1"/>',
+      flagblue: '<path d="M7 3v18" stroke="#2b6d8c" stroke-width="1.7"/><path d="M7 4.2h10l-2.2 3.4L17 11H7z" fill="#5aa4c4" stroke="#2b6d8c" stroke-width="1"/>',
+      exit: '<path d="M10 4H5v16h5M10 12h9M15.5 8 20 12l-4.5 4" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+      info: '<circle cx="12" cy="12" r="9" fill="#2f7de1"/><path d="M12 10.2V17" stroke="#fff" stroke-width="2"/><circle cx="12" cy="7.4" r="1.15" fill="#fff"/>',
+      warn: '<path d="M12 3.2 21.5 20H2.5z" fill="#f5c400" stroke="#222" stroke-width="1"/><path d="M12 9v5.2" stroke="#222" stroke-width="1.8"/><circle cx="12" cy="16.8" r="1" fill="#222"/>',
+      caret: '<path d="M3 6.5 8 12 3 17.5" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+      book: '<path d="M4 5h7a3 3 0 0 1 3 3v12H7a3 3 0 0 0-3 3V5zm16 0h-7a3 3 0 0 0-3 3v12h7a3 3 0 0 1 3 3V5z" fill="none" stroke="currentColor" stroke-width="1.3"/>',
+      x: '<path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.7"/>',
+      into: '<path d="M5 7h8v10H5M13 12h6M16 9l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6"/>'
+    };
+    return h("span", { class: "td-ico", html: '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">' + (paths[name] || "") + "</svg>" });
+  }
+
   function closeExamDialog() {
     state.examDialog = null;
     render();
@@ -1153,60 +1177,122 @@
     }, dialog);
   }
 
+  function footBtn(label, icon, onclick, split) {
+    return h("button", {
+      type: "button",
+      class: "td-foot" + (split ? " td-split" : ""),
+      onclick: onclick
+    }, icon ? ico(icon) : null, label);
+  }
+
+  function soonTool(label, iconName, swatch) {
+    return h("button", {
+      type: "button",
+      class: "td-tool",
+      onclick: function () { state.soonTool = label; state.examDialog = "soon"; render(); }
+    }, swatch ? h("span", { class: "td-swatch", "aria-hidden": "true" }) : null, iconName ? ico(iconName) : null, label, swatch ? h("span", { class: "td-caret", "aria-hidden": "true" }) : null);
+  }
+
   function renderMockDialog(session) {
     var kind = state.examDialog;
-    if (kind === "help" || kind === "instructions") {
-      var help = kind === "help";
-      var body = help ? [
-        h("p", {}, "Select one answer with the mouse, or press the letter key for that choice. You can change the answer until you end the practice exam."),
-        h("p", {}, "Mark for Review flags the question so you can find it later. It does not score or submit the question."),
-        h("p", {}, "Navigator opens the item review list. On the last question, Next opens that list too."),
-        h("p", {}, "Highlight, Strikethrough, Calculator, and Scratch Pad are not available in this practice build.")
-      ] : [
-        h("p", {}, "This practice list helps you find questions. It does not show a score."),
-        h("ol", {},
-          h("li", {}, "Review All lists every question."),
-          h("li", {}, "Review Incomplete lists questions with no answer."),
-          h("li", {}, "Review Flagged lists questions you marked for review.")
-        ),
-        h("p", {}, "Select a row to open that question. End Exam is at the bottom left.")
-      ];
-      return examOverlay(h("div", {
-        class: "td-dialog",
-        role: "dialog",
-        "aria-modal": "true",
-        "aria-label": help ? "Help" : "Instructions"
-      },
-        h("h2", {}, help ? "Help" : "Instructions"),
-        body,
-        h("div", { class: "td-dialog-actions" },
-          h("button", { type: "button", class: "td-btn td-close", "data-dialog-focus": "true", onclick: closeExamDialog }, "Close")
+    if (kind === "soon") {
+      return examOverlay(h("div", { class: "td-note", role: "dialog", "aria-modal": "true", "aria-label": "Coming soon" },
+        h("h2", {}, "Coming soon"),
+        h("p", {}, (state.soonTool || "This tool") + " is not in this practice build yet."),
+        h("div", { class: "td-note-actions" },
+          h("button", { type: "button", class: "td-teal", "data-dialog-focus": "true", onclick: closeExamDialog }, "Close")
         )
       ));
     }
-    var leaving = kind === "leave" || !session.endsAt;
-    var title = leaving ? "Leave practice exam" : "End practice exam";
-    var text = leaving
-      ? "The timed section has not started. Leave and discard this attempt? Nothing will be scored."
-      : "End this practice exam and score it here? You will not be able to change your answers after this. This is a Neta Nerd practice screen, not an official exam.";
+    if (kind === "help") {
+      return examOverlay(h("div", { class: "td-help", role: "dialog", "aria-modal": "true", "aria-label": "Help" },
+        h("div", { class: "td-help-bar" },
+          h("span", {}, ico("help"), " Help"),
+          h("button", { type: "button", "aria-label": "Close", onclick: closeExamDialog }, ico("x"))
+        ),
+        h("div", { class: "td-help-body" },
+          h("h3", {}, "Introduction"),
+          h("p", {}, "This practice item is one multiple-choice question. Select one answer."),
+          h("p", {}, "The question and the answers are text."),
+          h("h3", {}, "Answering the Item"),
+          h("p", {}, "Select one answer by doing one of the following:"),
+          h("ul", {},
+            h("li", {}, "Selecting the choice with the mouse."),
+            h("li", {}, "Pressing A, B, C, or D on the keyboard.")
+          ),
+          h("p", {}, "You can change the answer until you end the practice exam."),
+          h("p", {}, "Highlight, Strikethrough, Calculator, and Scratch Pad are not in this practice build yet.")
+        )
+      ));
+    }
+    if (kind === "instructions") {
+      return examOverlay(h("div", { class: "td-note", role: "dialog", "aria-modal": "true", "aria-label": "Instructions" },
+        h("h2", {}, "Instructions"),
+        h("p", {}, "This practice review is a summary of your answers. You can review your questions using the tabs."),
+        h("ol", {},
+          h("li", {}, "Review all your questions."),
+          h("li", {}, "Review questions that are incomplete."),
+          h("li", {}, "Review questions that are flagged for review.")
+        ),
+        h("p", {}, "Select a row’s Review link to open that question."),
+        h("p", {}, "This is a Neta Nerd practice screen, not an official exam."),
+        h("div", { class: "td-note-actions" },
+          h("button", { type: "button", class: "td-teal", "data-dialog-focus": "true", onclick: closeExamDialog }, "Close")
+        )
+      ));
+    }
+    var title = "End practice exam";
+    var body = [];
+    var yes = closeExamDialog;
+    if (kind === "leave") {
+      body = [h("p", {}, "The timed section has not started. Leave and discard this attempt? Nothing will be scored.")];
+      yes = function () { discardMockAttempt(); };
+    } else if (kind === "end1") {
+      body = [
+        h("p", {}, "You have chosen to end this practice exam. If you continue, you will not be able to change your answers."),
+        h("p", {}, "Are you sure you want to end this practice exam?")
+      ];
+      yes = function () { state.examDialog = "end2"; render(); };
+    } else if (kind === "end2") {
+      title = "Confirm end";
+      body = [
+        h("div", { class: "td-end-row" },
+          ico("warn"),
+          h("p", {}, "Please confirm that you want to end this practice exam. If you continue, your answers will be scored on Neta Nerd. This is not an official exam.")
+        ),
+        h("p", {}, "Are you sure you want to end this practice exam?")
+      ];
+      yes = function () {
+        session.screen = "thanks";
+        state.examDialog = null;
+        saveMockSession(session);
+        render();
+      };
+    } else if (kind === "endfinal") {
+      title = "End Exam";
+      body = [
+        h("div", { class: "td-end-row" },
+          ico("info"),
+          h("p", {}, "You have chosen to end this practice exam.")
+        ),
+        h("p", {}, "Are you sure you want to end this practice exam?")
+      ];
+      yes = function () { finishMock(loadMockSession() || session, "submitted"); };
+    } else {
+      body = [h("p", {}, "End this practice exam?")];
+      yes = function () { finishMock(loadMockSession() || session, "submitted"); };
+    }
     return examOverlay(h("div", {
-      class: "td-dialog is-end",
+      class: "td-endbox",
       role: "dialog",
       "aria-modal": "true",
       "aria-label": title
     },
       h("h2", {}, title),
-      h("p", {}, text),
-      h("div", { class: "td-dialog-actions" },
-        h("button", {
-          type: "button",
-          class: "td-btn",
-          onclick: function () {
-            if (leaving) discardMockAttempt();
-            else finishMock(loadMockSession() || session, "submitted");
-          }
-        }, "Yes"),
-        h("button", { type: "button", class: "td-btn", "data-dialog-focus": "true", onclick: closeExamDialog }, "No")
+      body,
+      h("div", { class: "td-yesno" },
+        h("button", { type: "button", onclick: yes }, "Yes"),
+        h("button", { type: "button", "data-dialog-focus": "true", onclick: closeExamDialog }, "No")
       )
     ));
   }
@@ -1221,7 +1307,7 @@
         render();
       }
     },
-      h("span", { class: "td-ico", html: clockSvg() }),
+      ico("clock"),
       session.hideClock
         ? "Show time"
         : h("span", {}, "Time Remaining ", h("span", { id: "td-clock-value" }, examClock(session.endsAt - Date.now())))
@@ -1236,23 +1322,15 @@
           saveMockSession(session);
           render();
         }
-      }, session.hideCount ? "Show count" : ((session.index + 1) + " of " + session.items.length));
+      }, ico("list"), session.hideCount ? "Show count" : ((session.index + 1) + " of " + session.items.length));
     }
     return h("div", { class: "td-status" }, clockBtn, countBtn);
   }
 
-  function deadTool(label, swatch) {
-    return h("button", {
-      type: "button",
-      class: "td-tool",
-      disabled: true,
-      title: "Not available in this practice build",
-      "aria-disabled": "true"
-    }, swatch ? h("span", { class: "td-swatch", "aria-hidden": "true" }) : null, label);
-  }
-
   function openMockEnd(session) {
-    state.examDialog = session.endsAt ? "end" : "leave";
+    if (!session.endsAt) state.examDialog = "leave";
+    else if (mockScreen(session) === "thanks") state.examDialog = "endfinal";
+    else state.examDialog = "end1";
     render();
   }
 
@@ -1286,22 +1364,62 @@
   function renderMockWelcome(session) {
     app.append(h("div", { class: "td" },
       h("header", { class: "td-title" }, h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam")),
+      h("div", { class: "td-tools" }),
       h("div", { class: "td-main" },
         h("div", { class: "td-welcome" },
           h("div", { class: "td-wordmark" }, "Practice Exam"),
           h("h1", {}, "Welcome!"),
-          h("p", {}, "This is a practice exam in a Pearson-style test driver. It is not the official NETA exam."),
-          h("p", {}, "Test Title: " + practiceExamTitle(session.level)),
-          h("p", {}, "Exam Time: " + session.minutes + " minutes"),
-          h("p", {}, "Questions: " + session.items.length),
+          h("p", {}, "This is a practice exam in a test-driver layout. It is not an official NETA exam."),
           h("p", {}, "Press ", h("span", { class: "td-ulink" }, "Next"), " to continue.")
         )
       ),
       h("footer", { class: "td-nav" },
-        h("button", { type: "button", class: "td-btn", onclick: function () { openMockEnd(session); } }, "End Exam"),
-        h("button", { type: "button", class: "td-btn", onclick: function () { beginMockExam(session); } }, "Next →")
+        h("div", { class: "td-nav-left" },
+          footBtn("End Exam", "exit", function () { openMockEnd(session); }, false)
+        ),
+        h("div", { class: "td-nav-right" },
+          footBtn("Next", "next", function () { beginMockExam(session); }, true)
+        )
       )
     ));
+  }
+
+  function renderMockThanks(session) {
+    app.append(h("div", { class: "td" },
+      h("header", { class: "td-title" }, h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam")),
+      h("div", { class: "td-tools" }),
+      h("div", { class: "td-main" },
+        h("div", { class: "td-thanks" },
+          h("div", { class: "td-logo-bar" }, "Practice Exam"),
+          h("h1", {}, "Thank you!")
+        )
+      ),
+      h("footer", { class: "td-nav" },
+        h("div", { class: "td-nav-left" },
+          footBtn("End Exam", "exit", function () { openMockEnd(session); }, false)
+        ),
+        h("div", { class: "td-nav-right" })
+      )
+    ));
+  }
+
+  function itemTools(session, item) {
+    return h("div", { class: "td-tools" },
+      soonTool("Highlight (J)", null, true),
+      soonTool("Strikethrough (W)", "pencil", false),
+      soonTool("Calculator", "calc", false),
+      soonTool("Scratch Pad", "pad", false),
+      h("button", {
+        type: "button",
+        class: "td-tool td-mark" + (item.flagged ? " is-marked" : ""),
+        "aria-pressed": item.flagged ? "true" : "false",
+        onclick: function () {
+          item.flagged = !item.flagged;
+          saveMockSession(session);
+          render();
+        }
+      }, ico("flag"), "Mark for Review")
+    );
   }
 
   function renderMockItem(session) {
@@ -1309,42 +1427,22 @@
     var q = sourceQuestion(item);
     if (!q) { clearMockSession(); location.hash = "#/mock"; return false; }
     var choices = shownChoices(item);
-    var left = session.fromReview
-      ? h("button", { type: "button", class: "td-btn", onclick: function () { goMockReview(session); } }, "Review Screen")
-      : h("button", {
-        type: "button",
-        class: "td-btn",
-        onclick: function () { state.examDialog = "help"; render(); }
-      }, "Help");
+    var left = [
+      footBtn("Help", "help", function () { state.examDialog = "help"; render(); }, false)
+    ];
+    if (session.fromReview) {
+      left.push(footBtn("Review Screen", "into", function () { goMockReview(session); }, true));
+    }
     var right = [];
-    if (session.index > 0) {
-      right.push(h("button", { type: "button", class: "td-btn", onclick: function () { examPrev(session); } }, "← Previous"));
-    }
-    if (!session.fromReview) {
-      right.push(h("button", { type: "button", class: "td-btn", onclick: function () { goMockReview(session); } }, "Navigator"));
-    }
-    right.push(h("button", { type: "button", class: "td-btn", onclick: function () { examNext(session); } }, "Next →"));
+    if (session.index > 0) right.push(footBtn("Previous", "prev", function () { examPrev(session); }, true));
+    if (!session.fromReview) right.push(footBtn("Navigator", "gear", function () { goMockReview(session); }, true));
+    right.push(footBtn("Next", "next", function () { examNext(session); }, true));
     app.append(h("div", { class: "td" },
       h("header", { class: "td-title" },
         h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam"),
         mockStatus(session, true)
       ),
-      h("div", { class: "td-tools" },
-        deadTool("Highlight (J)", true),
-        deadTool("Strikethrough (W)", false),
-        deadTool("Calculator", false),
-        deadTool("Scratch Pad", false),
-        h("button", {
-          type: "button",
-          class: "td-tool td-mark" + (item.flagged ? " is-marked" : ""),
-          "aria-pressed": item.flagged ? "true" : "false",
-          onclick: function () {
-            item.flagged = !item.flagged;
-            saveMockSession(session);
-            render();
-          }
-        }, h("span", { class: "td-flag", html: flagSvg(!!item.flagged) }), "Mark for Review")
-      ),
+      itemTools(session, item),
       h("div", { class: "td-strip" }, "Multiple Choice Item - Single Select"),
       h("div", { class: "td-main" },
         h("div", { class: "td-item" },
@@ -1369,7 +1467,10 @@
           }))
         )
       ),
-      h("footer", { class: "td-nav" }, left, h("div", { class: "td-nav-right" }, right))
+      h("footer", { class: "td-nav" },
+        h("div", { class: "td-nav-left" }, left),
+        h("div", { class: "td-nav-right" }, right)
+      )
     ));
     state._key = function (ev) {
       if (state.examDialog) {
@@ -1389,8 +1490,9 @@
 
   function renderMockReview(session) {
     var filter = session.reviewFilter || "all";
-    var open = session.sectionOpen !== false;
-    var incomplete = session.items.filter(function (item) { return item.picked == null; }).length;
+    var incompleteN = session.items.filter(function (item) { return item.picked == null; }).length;
+    var flaggedN = session.items.filter(function (item) { return !!item.flagged; }).length;
+    var total = session.items.length;
     var rows = session.items.map(function (item, idx) {
       return { item: item, idx: idx };
     }).filter(function (row) {
@@ -1398,20 +1500,20 @@
       if (filter === "flagged") return !!row.item.flagged;
       return true;
     });
-    function filterBtn(id, label) {
-      var on = filter === id;
+    var action = filter === "incomplete" ? "Review Incomplete" : filter === "flagged" ? "Review Marked" : "Review All";
+    function tab(id, label, tip) {
       return h("button", {
         type: "button",
-        class: "td-btn",
-        "aria-pressed": on ? "true" : "false",
+        class: "td-tab" + (filter === id ? " is-on" : ""),
+        "aria-pressed": filter === id ? "true" : "false",
         onclick: function () {
           session.reviewFilter = id;
           saveMockSession(session);
           render();
         }
-      }, label);
+      }, label, tip ? h("i", { class: "td-info", title: tip }, "i") : null);
     }
-    app.append(h("div", { class: "td" },
+    app.append(h("div", { class: "td is-review" },
       h("header", { class: "td-title" },
         h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam"),
         mockStatus(session, false)
@@ -1421,54 +1523,65 @@
           type: "button",
           class: "td-tool",
           onclick: function () { state.examDialog = "instructions"; render(); }
-        }, "Instructions")
+        }, ico("book"), "Instructions")
       ),
       h("div", { class: "td-main" },
         h("div", { class: "td-review" },
-          h("h1", {}, "Item Review Screen"),
-          h("button", {
-            type: "button",
-            class: "td-section",
-            "aria-expanded": open ? "true" : "false",
-            onclick: function () {
-              session.sectionOpen = !open;
-              saveMockSession(session);
-              render();
-            }
-          },
-            h("span", {}, (open ? "▾ " : "▸ ") + practiceExamTitle(session.level)),
-            h("span", { class: "td-section-count" }, "( " + incomplete + " Unseen/Incomplete )")
+          h("div", { class: "td-rev-head" },
+            h("h1", {}, "Item Review Screen"),
+            h("button", { type: "button", class: "td-teal", onclick: function () { session.reviewFilter = filter; saveMockSession(session); render(); } }, action)
           ),
-          open ? h("div", { class: "td-rows" },
-            rows.length ? rows.map(function (row) {
-              return h("button", {
-                type: "button",
-                class: "td-row" + (row.item.flagged ? " is-flagged" : ""),
-                "aria-label": "Question " + (row.idx + 1) + (row.item.picked == null ? ", incomplete" : "") + (row.item.flagged ? ", flagged" : ""),
-                onclick: function () {
-                  session.index = row.idx;
-                  session.screen = "item";
-                  session.fromReview = true;
-                  state.examDialog = null;
-                  saveMockSession(session);
-                  render();
-                }
-              },
-                h("span", { class: "td-flag", html: flagSvg(!!row.item.flagged) }),
-                h("span", { class: "td-q" }, "Question " + (row.idx + 1)),
-                row.item.picked == null ? h("span", { class: "td-incomplete" }, "Incomplete") : null
-              );
-            }) : h("p", { class: "td-empty" }, "No questions in this list.")
-          ) : null
+          h("div", { class: "td-tabs" },
+            tab("all", "All (" + total + ")", ""),
+            tab("incomplete", "Incomplete (" + incompleteN + ")", "Review questions that are incomplete"),
+            tab("flagged", "Flagged (" + flaggedN + ")", "Review questions that are flagged for review")
+          ),
+          h("div", { class: "td-table-wrap" },
+            h("table", { class: "td-table" },
+              h("thead", {},
+                h("tr", {},
+                  h("th", {}, "QUESTION"),
+                  h("th", {}, "TITLE"),
+                  h("th", {}, "STATUS"),
+                  h("th", {}, "FLAGGED"),
+                  h("th", {})
+                )
+              ),
+              h("tbody", {},
+                rows.length ? rows.map(function (row) {
+                  var done = row.item.picked != null;
+                  return h("tr", {},
+                    h("td", {}, String(row.idx + 1)),
+                    h("td", {}, "Multiple Choice"),
+                    h("td", {}, h("span", { class: "td-pill " + (done ? "ok" : "no") }, done ? "Complete" : "Incomplete")),
+                    h("td", {}, h("span", { class: "td-flagcell" },
+                      row.item.flagged ? "Yes" : "No",
+                      row.item.flagged ? ico("flagblue") : null
+                    )),
+                    h("td", {}, h("button", {
+                      type: "button",
+                      class: "td-review-link",
+                      onclick: function () {
+                        session.index = row.idx;
+                        session.screen = "item";
+                        session.fromReview = true;
+                        state.examDialog = null;
+                        saveMockSession(session);
+                        render();
+                      }
+                    }, "Review"))
+                  );
+                }) : h("tr", {}, h("td", { colspan: "5" }, "No questions in this list."))
+              )
+            )
+          )
         )
       ),
       h("footer", { class: "td-nav" },
-        h("button", { type: "button", class: "td-btn", onclick: function () { openMockEnd(session); } }, "End Exam"),
-        h("div", { class: "td-nav-right" },
-          filterBtn("all", "Review All"),
-          filterBtn("incomplete", "Review Incomplete"),
-          filterBtn("flagged", "Review Flagged")
-        )
+        h("div", { class: "td-nav-left" },
+          footBtn("End Exam", "exit", function () { openMockEnd(session); }, false)
+        ),
+        h("div", { class: "td-nav-right" })
       )
     ));
   }
@@ -1499,6 +1612,7 @@
     var ok = true;
     if (screen === "welcome") renderMockWelcome(session);
     else if (screen === "review") renderMockReview(session);
+    else if (screen === "thanks") renderMockThanks(session);
     else ok = renderMockItem(session);
     if (ok === false) return;
     if (state.examDialog) app.append(renderMockDialog(session));
