@@ -1235,7 +1235,7 @@
           h("li", {}, "Review questions that are flagged for review.")
         ),
         h("p", {}, "Select a row’s Review link to open that question."),
-        h("p", {}, "This is a Neta Nerd practice screen, not an official exam."),
+        h("p", {}, "This is a NETA Nerd practice screen, not an official exam."),
         h("div", { class: "td-note-actions" },
           h("button", { type: "button", class: "td-teal", "data-dialog-focus": "true", onclick: closeExamDialog }, "Close")
         )
@@ -1258,7 +1258,7 @@
       body = [
         h("div", { class: "td-end-row" },
           ico("warn"),
-          h("p", {}, "Please confirm that you want to end this practice exam. If you continue, your answers will be scored on Neta Nerd. This is not an official exam.")
+          h("p", {}, "Please confirm that you want to end this practice exam. If you continue, your answers will be scored on NETA Nerd. This is not an official exam.")
         ),
         h("p", {}, "Are you sure you want to end this practice exam?")
       ];
@@ -1500,7 +1500,7 @@
       if (filter === "flagged") return !!row.item.flagged;
       return true;
     });
-    var action = filter === "incomplete" ? "Review Incomplete" : filter === "flagged" ? "Review Marked" : "Review All";
+    var action = filter === "incomplete" ? "Review Incomplete" : filter === "flagged" ? "Review Flagged" : "Review All";
     function tab(id, label, tip) {
       return h("button", {
         type: "button",
