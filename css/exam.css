@@ -94,8 +94,11 @@ body.exam-driver .wrap {
   white-space: nowrap;
 }
 .td-tool:hover { background: rgba(255, 255, 255, 0.12); }
-.td-mark { margin-left: auto; }
+.td-mark { margin-left: auto; background: transparent; }
+.td-mark:hover { background: transparent; }
 .td-mark.is-marked { color: #FFFF00; }
+.td-marker svg { width: 38px; height: 20px; max-width: none; background: none; display: block; }
+.td-label { display: inline; }
 .td-key { text-decoration: underline; text-underline-offset: 2px; }
 .td-swatch {
   width: 14px;
@@ -237,7 +240,7 @@ body.exam-driver .wrap {
 .td.is-review { background: #F2F3F5; }
 .td.is-review .td-main { background: #F2F3F5; }
 .td-review {
-  padding: 18px 28px 24px;
+  padding: 36px 32px 28px;
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
 }
@@ -249,7 +252,7 @@ body.exam-driver .wrap {
   margin: 6px 4px 8px;
 }
 .td-review h1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   margin: 0;
   color: #1a1a1a;
@@ -261,8 +264,8 @@ body.exam-driver .wrap {
   border: 0;
   border-radius: 4px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  padding: 8px 16px;
+  font-size: 16px;
+  padding: 10px 18px;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -280,7 +283,7 @@ body.exam-driver .wrap {
   margin-bottom: -2px;
   padding: 10px 8px 8px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   color: #333;
   cursor: pointer;
 }
@@ -302,23 +305,23 @@ body.exam-driver .wrap {
 .td-table-wrap {
   background: #fff;
   border: 1px solid #d8dbe0;
-  margin-top: 12px;
+  margin-top: 18px;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
   max-height: calc(100vh - 250px);
   overflow: auto;
 }
-.td-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.td-table { width: 100%; border-collapse: collapse; font-size: 17px; }
 .td-table th {
   text-align: left;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.04em;
   color: #6b7280;
   padding: 12px 16px 8px;
   border-bottom: 1px solid #eceff2;
 }
 .td-table td {
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-top: 1px solid #eceff2;
   vertical-align: middle;
 }
@@ -326,7 +329,7 @@ body.exam-driver .wrap {
   display: inline-block;
   border-radius: 12px;
   padding: 2px 10px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 .td-pill.ok { background: #E5F2D4; color: #4E7A32; }
@@ -337,7 +340,7 @@ body.exam-driver .wrap {
   border: 0;
   color: #007394;
   font: inherit;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   padding: 0;
 }
@@ -371,7 +374,7 @@ body.exam-driver .wrap {
   color: #fff;
   padding: 0 8px 0 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 .td-help-bar button {
   background: transparent;
@@ -383,10 +386,10 @@ body.exam-driver .wrap {
   align-items: center;
   gap: 6px;
 }
-.td-help-body { padding: 14px 18px 22px; font-size: 15px; line-height: 1.4; }
+.td-help-body { padding: 18px 22px 26px; font-size: 18px; line-height: 1.4; }
 .td-help-body h3 {
-  margin: 12px 0 4px;
-  font-size: 16px;
+  margin: 14px 0 6px;
+  font-size: 18px;
   text-decoration: underline;
 }
 .td-help-body p { margin: 0 0 10px; }

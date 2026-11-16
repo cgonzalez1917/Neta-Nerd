@@ -1171,6 +1171,11 @@
     return h("span", { class: "td-key" }, ch);
   }
 
+  function markerIcon(on) {
+    var fill = on ? "currentColor" : "none";
+    return h("span", { class: "td-ico td-marker", html: '<svg viewBox="0 0 25 20" width="38" height="20" aria-hidden="true"><path d="M1.6 13.2 11.2 3.6l5.2 5.2L6.8 18.4H1.6v-5.2z" fill="' + fill + '" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/><path d="M11.2 3.6 14.2 1.4 21.6 8.6 18.2 11.2" fill="' + fill + '" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/></svg>' });
+  }
+
   function closeExamDialog() {
     state.examDialog = null;
     render();
@@ -1385,7 +1390,7 @@
           footBtn("End Exam", "exit", function () { openMockEnd(session); }, false)
         ),
         h("div", { class: "td-nav-right" },
-          footBtn([k("N"), "ext"], "next", function () { beginMockExam(session); }, true)
+          footBtn(h("span", { class: "td-label" }, k("N"), "ext"), "next", function () { beginMockExam(session); }, true)
         )
       )
     ));
@@ -1412,10 +1417,10 @@
 
   function itemTools(session, item) {
     return h("div", { class: "td-tools" },
-      soonTool("Highlight (J)", null, true, ["Highlight (", k("J"), ")"]),
-      soonTool("Strikethrough (W)", "pencil", false, ["Strikethrough (", k("W"), ")"]),
-      soonTool("Calculator", "calc", false, [k("C"), "alculator"]),
-      soonTool("Scratch Pad", "pad", false, "Scratch Pad"),
+      soonTool("Highlight (J)", null, true, h("span", { class: "td-label" }, "Highlight (", k("J"), ")")),
+      soonTool("Strikethrough (W)", "pencil", false, h("span", { class: "td-label" }, "Strikethrough (", k("W"), ")")),
+      soonTool("Calculator", "calc", false, h("span", { class: "td-label" }, k("C"), "alculator")),
+      soonTool("Scratch Pad", "pad", false, h("span", { class: "td-label" }, "Scratch Pa", k("d"))),
       h("button", {
         type: "button",
         class: "td-tool td-mark" + (item.flagged ? " is-marked" : ""),
@@ -1425,7 +1430,7 @@
           saveMockSession(session);
           render();
         }
-      }, ico(item.flagged ? "markerOn" : "marker"), k("M"), "ark for Review")
+      }, markerIcon(item.flagged), h("span", { class: "td-label" }, k("M"), "ark for Review"))
     );
   }
 
@@ -1442,8 +1447,8 @@
     }
     var right = [];
     if (session.index > 0) right.push(footBtn("Previous", "prev", function () { examPrev(session); }, true));
-    if (!session.fromReview) right.push(footBtn([k("N"), "avigator"], "gear", function () { goMockReview(session); }, true));
-    right.push(footBtn([k("N"), "ext"], "next", function () { examNext(session); }, true));
+    if (!session.fromReview) right.push(footBtn(h("span", { class: "td-label" }, "Na", k("v"), "igator"), "gear", function () { goMockReview(session); }, true));
+    right.push(footBtn(h("span", { class: "td-label" }, k("N"), "ext"), "next", function () { examNext(session); }, true));
     app.append(h("div", { class: "td" },
       h("header", { class: "td-title" },
         h("span", { class: "td-title-text" }, "NETA Nerd Practice Exam"),
@@ -1530,7 +1535,7 @@
           type: "button",
           class: "td-tool",
           onclick: function () { state.examDialog = "instructions"; render(); }
-        }, ico("book"), k("I"), "nstructions")
+        }, ico("book"), h("span", { class: "td-label" }, k("I"), "nstructions"))
       ),
       h("div", { class: "td-main" },
         h("div", { class: "td-review" },
