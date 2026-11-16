@@ -424,6 +424,7 @@ body.exam-driver .wrap {
   font-family: Arial, Helvetica, sans-serif;
   padding: 8px 14px 14px;
 }
+.td-endbox.is-ready { width: min(654px, 100%); }
 .td-endbox h2 {
   margin: 0 0 8px;
   font-size: 16px;
