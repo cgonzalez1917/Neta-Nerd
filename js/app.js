@@ -1210,16 +1210,6 @@
         )
       ));
     }
-    if (kind === "ready") {
-      return examOverlay(h("div", { class: "td-endbox is-ready", role: "dialog", "aria-modal": "true", "aria-label": "Ready to Begin Exam" },
-        h("h2", {}, "Ready to Begin Exam"),
-        h("p", {}, "If you are ready to begin this practice exam, select Yes. The timer starts when you select Yes. Select No to return to the welcome screen."),
-        h("div", { class: "td-yesno" },
-          h("button", { type: "button", onclick: function () { beginMockExam(session); } }, "Yes"),
-          h("button", { type: "button", "data-dialog-focus": "true", onclick: closeExamDialog }, "No")
-        )
-      ));
-    }
     if (kind === "help") {
       return examOverlay(h("div", { class: "td-help", role: "dialog", "aria-modal": "true", "aria-label": "Help" },
         h("div", { class: "td-help-bar" },
@@ -1395,7 +1385,7 @@
           footBtn("End Exam", "exit", function () { openMockEnd(session); }, false)
         ),
         h("div", { class: "td-nav-right" },
-          footBtn([k("N"), "ext"], "next", function () { state.examDialog = "ready"; render(); }, true)
+          footBtn([k("N"), "ext"], "next", function () { beginMockExam(session); }, true)
         )
       )
     ));
