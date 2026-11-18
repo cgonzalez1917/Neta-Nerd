@@ -8,23 +8,29 @@
     "Transformer testing",
     "Grounding",
     "Test leads & connectors",
+    "Lockout & isolation",
+    "Organization & carry",
     "PPE & safety",
     "General tools"
   ],
   "items": [
     {
       "id": "6733-0",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 39.99,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "6733-0",
       "name": "Silicone test lead wire, 18 AWG, 50 ft, black",
       "category": "Test leads & connectors",
       "subcategory": "Lead wire",
       "use": "Unterminated 50 ft reel of 18 AWG silicone lead wire for building custom-length test leads or jumpers. CAT III applies only if every part of the finished lead (plugs, clips) is also CAT III-rated; the MDP and 1825 plugs in this list are not.",
-      "qty": 1,
       "unit": "EA",
-      "unit_price_paid": 39.99,
       "currency": "USD",
       "rating": "10,000 VDC / 20 A, hands-free testing in a controlled voltage environment only. Not for handheld use above 30 Vrms / 42.2 Vpk / 60 Vdc or above 8 A. Datasheet says the wire will comply with CAT III, IEC 61010-031 when correctly terminated with other CAT III-rated parts. The wire alone is not a CAT-rated test lead, and no CAT voltage is stated.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/wire/silicone-insulated-test-lead-wire",
@@ -42,17 +48,21 @@
     },
     {
       "id": "6733-2",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 39.99,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "6733-2",
       "name": "Silicone test lead wire, 18 AWG, 50 ft, red",
       "category": "Test leads & connectors",
       "subcategory": "Lead wire",
       "use": "Same 18 AWG silicone lead wire as 6733-0, in red, for building custom-length leads that pair with the black reel. Not a CAT-rated lead unless every termination is CAT III-rated.",
-      "qty": 1,
       "unit": "EA",
-      "unit_price_paid": 39.99,
       "currency": "USD",
       "rating": "10,000 VDC / 20 A, hands-free testing in a controlled voltage environment only. Not for handheld use above 30 Vrms / 42.2 Vpk / 60 Vdc or above 8 A. Datasheet says the wire will comply with CAT III, IEC 61010-031 when correctly terminated with other CAT III-rated parts. The wire alone is not a CAT-rated test lead, and no CAT voltage is stated.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/wire/silicone-insulated-test-lead-wire",
@@ -68,17 +78,21 @@
     },
     {
       "id": "mdp-0",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 2,
+          "unit_price_paid": 5.69,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "MDP-0",
       "name": "Stackable double banana plug with cable guide, black",
       "category": "Test leads & connectors",
       "subcategory": "Banana plugs",
       "use": "Solderless set-screw double banana plug for building 0.75 in-spaced leads or stacking connections on banana-jack instruments and fixtures. Not CAT-rated; not for handheld use above 33 Vrms / 70 Vdc.",
-      "qty": 2,
       "unit": "EA",
-      "unit_price_paid": 5.69,
       "currency": "USD",
       "rating": "15 A; 5000 Vrms max hands-free in a controlled environment; +50 °C max. Not for handheld use above 33 Vrms / 70 Vdc. No IEC CAT rating on the official datasheet.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/banana-plugs-and-jacks/double-banana-plug-solderless-model-mdp",
@@ -95,17 +109,21 @@
     },
     {
       "id": "1825-0",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 30.99,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "1825-0",
       "name": "Solderless stackable banana plug with safety collar, black, 10-pack",
       "category": "Test leads & connectors",
       "subcategory": "Banana plugs",
       "use": "Do-it-yourself 4 mm banana plug that clamps onto 18–22 AWG lead wire with a set screw, used to make or repair custom test leads. Not CAT-rated, so not a CAT III lead on its own.",
-      "qty": 1,
       "unit": "PK",
-      "unit_price_paid": 30.99,
       "currency": "USD",
       "rating": "15 A; 5000 Vrms max hands-free in a controlled environment; +50 °C max. Do not hold in hand above 30 Vrms / 60 Vdc. No IEC CAT rating on the official datasheet.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/banana-plugs-and-jacks/banana-plug-with-safety-collar-solderless",
@@ -121,17 +139,21 @@
     },
     {
       "id": "1825-2",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 28.99,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "1825-2",
       "name": "Solderless stackable banana plug with safety collar, red, 10-pack",
       "category": "Test leads & connectors",
       "subcategory": "Banana plugs",
       "use": "Same do-it-yourself 4 mm banana plug as 1825-0, in red, for terminating the red lead wire on custom test leads. Not CAT-rated, so not a CAT III lead on its own.",
-      "qty": 1,
       "unit": "PK",
-      "unit_price_paid": 28.99,
       "currency": "USD",
       "rating": "15 A; 5000 Vrms max hands-free in a controlled environment; +50 °C max. Do not hold in hand above 30 Vrms / 60 Vdc. No IEC CAT rating on the official datasheet.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/banana-plugs-and-jacks/banana-plug-with-safety-collar-solderless",
@@ -148,17 +170,21 @@
     },
     {
       "id": "5916b",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 26.99,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "5916B",
       "name": "Medium alligator clip set for 4 mm sheathed banana plugs, red/black pair",
       "category": "Test leads & connectors",
       "subcategory": "Alligator clips",
       "use": "Snaps onto 4 mm sheathed DMM test leads so a tech can clip onto terminals and hardware up to 0.3 in (7.6 mm). CAT rating covers the clip only; leads, plugs and meter must also be rated for the circuit.",
-      "qty": 1,
       "unit": "PK",
-      "unit_price_paid": 26.99,
       "currency": "USD",
       "rating": "IEC 61010-031, 1000 V CAT II / 600 V CAT III, 10 A; −20 to 55 °C; pollution degree 2, 2000 m.",
       "official_url": "https://www.pomonaelectronics.com/products/dmm-test-leads-and-probes/test-leads-and-probes/medium-alligator-clip-set-dmm-test-leads",
@@ -174,17 +200,21 @@
     },
     {
       "id": "2240-0",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 17.09,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "2240-0",
       "name": "Alligator clip with banana jack and flex boot, black, 10-pack",
       "category": "Test leads & connectors",
       "subcategory": "Alligator clips",
       "use": "Takes a banana-plug patch cord in the jack so the clip can grab terminals and hardware up to 0.300 in (7.62 mm). Not CAT-rated and limited to 150 Vrms; not for energized power circuits. Use 5916B for CAT-rated work.",
-      "qty": 1,
       "unit": "PK",
-      "unit_price_paid": 17.09,
       "currency": "USD",
       "rating": "150 Vrms, 5 A max, +50 °C max. No IEC CAT rating on the official datasheet.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/alligator-test-clips/alligator-clip-with-banana-jack",
@@ -201,17 +231,21 @@
     },
     {
       "id": "3777a-02",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 2,
+          "unit_price_paid": 9.69,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "3777A-02",
       "name": "Banana jack to #8–#10 spade lug adapter, red/black set",
       "category": "Test leads & connectors",
       "subcategory": "Adapters",
       "use": "Converts a banana-plug lead to a bare-metal spade lug for #8 or #10 screw terminals and binding posts. No handheld, AC or CAT rating, so use only on de-energized or low-voltage test setups.",
-      "qty": 2,
       "unit": "EA",
-      "unit_price_paid": 9.69,
       "currency": "USD",
       "rating": "5000 VDC, 15 A, +50 °C max. No handheld limit, AC rating or CAT rating stated on the official datasheet.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/hardware-adapters/banana-jack-10-spade-lug",
@@ -227,17 +261,21 @@
     },
     {
       "id": "3563-0",
-      "added_by": "Angelo",
-      "date": "2026-09-11",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 4,
+          "unit_price_paid": 7.59,
+          "date": "2026-09-11"
+        }
+      ],
       "maker": "Pomona Electronics",
       "model": "3563-0",
       "name": "Banana jack to 1.6 mm (.063 in) pin-tip adapter, black",
       "category": "Test leads & connectors",
       "subcategory": "Adapters",
       "use": "Banana jack on one end accepts a standard banana plug; the other end is a 0.063 in (1.60 mm) male pin that plugs into a matching 16-size socket contact on a multi-pin connector. Low-voltage connector testing only; not for energized power circuits.",
-      "qty": 4,
       "unit": "EA",
-      "unit_price_paid": 7.59,
       "currency": "USD",
       "rating": "3 A. Do not hold in hand above 33 Vrms / 70 Vdc; 2500 Vrms max hands-free; +55 °C max. No IEC CAT rating on the official datasheet.",
       "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/hardware-adapters/banana-plug-test-adapter-with-063-pin",
@@ -249,6 +287,125 @@
       "field_notes": [
         "Only 3 A. Don't hold it on live parts above 33 Vrms / 70 Vdc.",
         "Low-voltage connector testing only, not for energized power circuits."
+      ]
+    },
+    {
+      "id": "ll26005",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 2,
+          "unit_price_paid": 6.0
+        }
+      ],
+      "maker": "Lockout Labs",
+      "model": "LL26005",
+      "name": "Magnetic Cable Organizer/ Document Holder",
+      "category": "Organization & carry",
+      "subcategory": "Cable & document holders",
+      "use": "A magnetic holder that sticks to a metal panel or cabinet so a tech can park test leads and comms cables, or clip up a drawing, while working.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Project 96",
+      "shop_url": "https://www.project96workwear.com/products/magnetic-cable-organizer-document-holder",
+      "shop_home_url": "https://www.project96workwear.com/",
+      "notes": "Brand on the shop page is Lockout Labs (SKU LL26005); there's no separate maker product page. Shown white in the shop photos. Listed out of stock when checked.",
+      "material": "ABS plastic with embedded magnets (stated on the shop page).",
+      "image": "img/tools/ll26005.webp",
+      "image_credit": "Photo: Project 96 Workwear",
+      "field_notes": [
+        "The shop page says it is for organizing test leads, communication cables, and other small items, or for displaying drawings and documents, and that it holds on metal surfaces.",
+        "No electrical or CAT rating is stated. This is an organizer, not a protective barrier."
+      ]
+    },
+    {
+      "id": "pns26010",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 2,
+          "unit_price_paid": 10.0
+        }
+      ],
+      "maker": "Project 96",
+      "model": "PNS26010",
+      "name": "CT Test Stud Holder (CT Test Studs Sold Seperately)",
+      "category": "CT testing",
+      "subcategory": "CT test studs & holders",
+      "use": "A five-position carry holder for CT test studs, so a tech can keep the studs together, see that all five are present, and clip the holder to a bag or belt loop before leaving the job.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Project 96",
+      "shop_url": "https://www.project96workwear.com/products/ct-test-stud-holder-ct-test-studs-sold-seperately",
+      "shop_home_url": "https://www.project96workwear.com/",
+      "notes": "Holder only; CT test studs are sold separately. The shop also sells a holder with a 5-pack of studs, and a red 5-pack of studs on their own. Includes an attachment ring and carabiner. Shown green in the shop photo.",
+      "image": "img/tools/pns26010.webp",
+      "image_credit": "Photo: Project 96 Workwear",
+      "field_notes": [
+        "This listing is the holder only. CT test studs are sold separately; the shop also sells a holder that comes with a 5-pack of studs, and a red 5-pack of studs on their own.",
+        "The shop page says it holds up to five studs, gives a quick visual check that all five are accounted for, and includes an attachment ring and carabiner. No material or electrical rating is stated."
+      ]
+    },
+    {
+      "id": "pns23002",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 29.0
+        }
+      ],
+      "maker": "Project 96",
+      "model": "PNS23002",
+      "name": "Terminal Blocker Single (Pack Of 10)",
+      "category": "Lockout & isolation",
+      "subcategory": "Terminal & wiring aids",
+      "use": "Marks conductors to be removed from a terminal block and adds a non-conductive spacer while lifted conductors are moved or removed. Unrated aid; not a substitute for de-energizing and verifying absence of voltage.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Project 96",
+      "shop_url": "https://www.project96workwear.com/products/terminal-blocker-single-ten-pack",
+      "shop_home_url": "https://www.project96workwear.com/",
+      "notes": "Single-blocker 10-pack. Double ($36.00) and triple ($45.50) 10-packs are separate listings. Shown red in the shop photos.",
+      "image": "img/tools/pns23002.webp",
+      "image_credit": "Photo: Project 96 Workwear",
+      "field_notes": [
+        "The shop page says these can identify conductors that need to be removed from a terminal block, and can provide non-conductive isolation when moving or removing conductors so they do not short between terminals.",
+        "No material, voltage, or CAT rating is stated. This is the single-blocker 10-pack, not the double ($36.00) or triple ($45.50) packs, which are separate listings.",
+        "Unrated. Treat lifted conductors as live until LOTO and absence of voltage are verified."
+      ]
+    },
+    {
+      "id": "pns24006",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 10.0
+        }
+      ],
+      "maker": "Project 96",
+      "model": "PNS24006",
+      "name": "Wire Caps 16/14 AWG (Pack Of 50)",
+      "category": "Lockout & isolation",
+      "subcategory": "Terminal & wiring aids",
+      "use": "Caps that slip over the ends of 16 or 14 AWG conductors during install or removal so they're easy to identify and less likely to touch other conductive parts. No voltage rating; not rated insulation or a permanent termination.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Project 96",
+      "shop_url": "https://www.project96workwear.com/products/wire-caps-1614-awg-pack-of-50",
+      "shop_home_url": "https://www.project96workwear.com/",
+      "notes": "Pack of 50, sized for 16/14 AWG. A 12/10 AWG 50-pack is a separate listing. Shown red in the shop photos.",
+      "image": "img/tools/pns24006.webp",
+      "image_credit": "Photo: Project 96 Workwear",
+      "field_notes": [
+        "Sized for 16/14 AWG. The shop page says they keep conductors isolated and identifiable during removal or installation, and help prevent accidental contact with other conductive components.",
+        "No material, voltage, or CAT rating is stated. This is a pack of 50. The shop also sells a 12/10 AWG 50-pack, which is a different listing.",
+        "Unrated. Treat capped conductors as live until LOTO and absence of voltage are verified."
       ]
     }
   ]

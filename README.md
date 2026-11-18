@@ -52,17 +52,17 @@ Pages serves the function from the `functions` directory with the existing empty
 | Field | Rule |
 | --- | --- |
 | `id` | Short unique id, used in the image file name. |
-| `added_by` | `Angelo` or `Cristian`. The page filters on this. |
-| `date` | `YYYY-MM-DD`. |
+| `buyers` | Who bought it. Each entry is `name` (`Angelo` or `Cristian`), `qty`, `unit_price_paid`, and optional `date` (`YYYY-MM-DD`). One product is one item. When another order comes in for something already listed, add a buyer entry. Do not add a second card. |
 | `maker`, `model`, `name` | What the card shows. |
 | `category`, `subcategory` | Work category, then the group inside it. |
 | `use` | One short paragraph. The page shows it in full. |
 | `qty`, `unit` | Count and unit. `EA` is priced “each”. `PK` is priced “per pack”. |
-| `unit_price_paid`, `currency` | The price paid. A number, in `currency`. |
+| `currency` | Currency of `unit_price_paid` on each buyer. |
 | `rating` | The maker's rating text, shown in full, unchanged. |
-| `official_url` | `https` maker page. When this is set, the card shows Official page and the distributor button. |
-| `distributor_name`, `distributor_url` | The second button when `official_url` is set. Newark is the default: `distributor_name` is `Newark` and `distributor_url` is that item's Newark product page. `https`, no tracking parameters. Omit both when the item has no maker page. |
-| `shop_name`, `shop_url` | Optional. For off-brand or small-shop gear with no maker page. When `official_url` is omitted, both are required, and the card shows one link: `shop_name` to `shop_url`. `shop_url` is `https`. |
+| `material` | Optional. Shown as a small line only when set. |
+| `official_url` | `https` maker page. With this set, the card shows Official page and the distributor button. |
+| `distributor_name`, `distributor_url` | Required with `official_url`. Newark is the default: `distributor_name` is `Newark` and `distributor_url` is that item's Newark product page. `https`, no tracking parameters. |
+| `shop_name`, `shop_url`, `shop_home_url` | For gear with no maker page and no Newark link. Omit `official_url` and the distributor fields. The card shows two links: `{shop_name} page` (`shop_url`) and `{shop_name} shop` (`shop_home_url`). Both URLs are `https`. |
 | `notes` | A short muted line on the card. |
 | `image` | Repo path such as `img/tools/<id>.svg`. |
 | `image_credit` | `Photo: Pomona Electronics` for a maker photo, or `Render, not a photo` for a drawing. The card shows this line. Pomona's terms do not allow copying their product pictures into this repo, so a drawing uses the second credit. |

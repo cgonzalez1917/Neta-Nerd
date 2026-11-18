@@ -975,11 +975,15 @@
     return "$" + Number(n).toFixed(2);
   }
 
-  function toolPriceLine(item) {
-    var qty = "Qty " + item.qty + (item.unit ? " " + item.unit : "");
-    if (item.unit_price_paid == null || item.unit_price_paid === "") return qty;
-    var per = String(item.unit || "").toUpperCase() === "PK" ? "per pack" : "each";
-    return toolMoney(item.unit_price_paid) + " " + per + " · " + qty;
+  function toolBuyerLine(item, buyer) {
+    var unit = item.unit ? " " + item.unit : "";
+    return buyer.name + " · Qty " + buyer.qty + unit + " · " + toolMoney(buyer.unit_price_paid) + " each";
+  }
+
+  function toolPersonClass(name) {
+    if (name === "Angelo") return " person-angelo";
+    if (name === "Cristian") return " person-cristian";
+    return "";
   }
 
   function toolPersonRow() {
@@ -994,7 +998,7 @@
         var on = toolsState.person === choice.id;
         return h("button", {
           type: "button",
-          class: "chip",
+          class: "chip" + toolPersonClass(choice.id),
           "aria-pressed": on ? "true" : "false",
           onclick: function () {
             toolsState.person = choice.id;
@@ -1065,6 +1069,8 @@
     var official = httpsUrl(item.official_url);
     var distributor = httpsUrl(item.distributor_url);
     var shop = httpsUrl(item.shop_url);
+    var shopHome = httpsUrl(item.shop_home_url);
+    var buyers = Array.isArray(item.buyers) ? item.buyers : [];
     var notes = Array.isArray(item.field_notes) ? item.field_notes.filter(function (note) {
       return typeof note === "string" && note.trim();
     }) : [];
@@ -1085,8 +1091,13 @@
       ) : null,
       h("h3", {}, item.name || ""),
       h("p", { class: "tool-maker" }, [item.maker, item.model].filter(Boolean).join(" ")),
-      h("p", { class: "tool-added" }, "Added by " + (item.added_by || "")),
-      h("p", { class: "tool-price" }, toolPriceLine(item)),
+      buyers.map(function (buyer) {
+        return h("p", { class: "tool-buyer" + toolPersonClass(buyer.name) }, toolBuyerLine(item, buyer));
+      }),
+      item.material ? [
+        h("p", { class: "tool-k" }, "Material"),
+        h("p", { class: "tool-material" }, item.material)
+      ] : null,
       h("p", { class: "tool-k" }, "Use"),
       h("p", { class: "tool-use" }, item.use || ""),
       h("p", { class: "tool-k" }, "Rating"),
@@ -1105,12 +1116,20 @@
             target: "_blank",
             rel: "noopener"
           }, item.distributor_name || "Distributor") : null
-        ] : (shop ? h("a", {
-          class: "btn ghost small",
-          href: shop,
-          target: "_blank",
-          rel: "noopener"
-        }, item.shop_name || "Shop") : null)
+        ] : (shop && shopHome ? [
+          h("a", {
+            class: "btn ghost small",
+            href: shop,
+            target: "_blank",
+            rel: "noopener"
+          }, (item.shop_name || "Shop") + " page"),
+          h("a", {
+            class: "btn ghost small",
+            href: shopHome,
+            target: "_blank",
+            rel: "noopener"
+          }, (item.shop_name || "Shop") + " shop")
+        ] : null)
       ),
       item.notes ? h("p", { class: "tool-note" }, item.notes) : null,
       notes.length ? h("details", { class: "tool-field" },
@@ -1123,7 +1142,9 @@
   function paintTools(data) {
     var items = ((data && data.items) || []).filter(function (item) {
       if (toolsState.person === "all") return true;
-      return item && item.added_by === toolsState.person;
+      return item && (item.buyers || []).some(function (buyer) {
+        return buyer && buyer.name === toolsState.person;
+      });
     });
     var groups = toolGroups(data, items);
     var jumps = toolJump(groups);

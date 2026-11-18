@@ -128,26 +128,47 @@ if (toolsDoc) {
       else if (seenTool.has(item.id)) fail(`${where} duplicate id`);
       else seenTool.add(item.id);
       if ("status" in item) fail(`${where} status was removed`);
-      if (!people.has(item.added_by)) fail(`${where} added_by must be Angelo or Cristian`);
-      if (typeof item.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(item.date)) fail(`${where} date must be YYYY-MM-DD`);
+      for (const key of ["added_by", "qty", "unit_price_paid", "date"]) {
+        if (key in item) fail(`${where} ${key} belongs on a buyer, not the item`);
+      }
       for (const key of ["maker", "model", "name", "subcategory", "use", "unit", "currency", "rating", "notes", "image_credit"]) {
         if (typeof item[key] !== "string" || !item[key].trim()) fail(`${where} missing ${key}`);
       }
+      if (item.material != null && (typeof item.material !== "string" || !item.material.trim())) fail(`${where} material must be a non-empty string`);
       if (!catSet.has(item.category)) fail(`${where} category is not in categories`);
-      if (typeof item.qty !== "number" || !(item.qty > 0)) fail(`${where} qty must be a positive number`);
-      if (typeof item.unit_price_paid !== "number") fail(`${where} unit_price_paid must be a number`);
+      if (!Array.isArray(item.buyers) || !item.buyers.length) fail(`${where} buyers must be a non-empty array`);
+      else {
+        const seenBuyer = new Set();
+        for (const buyer of item.buyers) {
+          const who = `${where} buyer`;
+          if (!buyer || typeof buyer !== "object") { fail(`${who} must be an object`); continue; }
+          if (!people.has(buyer.name)) fail(`${who} name must be Angelo or Cristian`);
+          else if (seenBuyer.has(buyer.name)) fail(`${where} duplicate buyer ${buyer.name}`);
+          else seenBuyer.add(buyer.name);
+          if (typeof buyer.qty !== "number" || !(buyer.qty > 0)) fail(`${who} qty must be a positive number`);
+          if (typeof buyer.unit_price_paid !== "number") fail(`${who} unit_price_paid must be a number`);
+          if (buyer.date != null && (typeof buyer.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(buyer.date))) fail(`${who} date must be YYYY-MM-DD`);
+        }
+      }
       const official = typeof item.official_url === "string" && item.official_url.trim();
       const shopName = typeof item.shop_name === "string" && item.shop_name.trim();
       const shopUrl = typeof item.shop_url === "string" && item.shop_url.trim();
+      const shopHome = typeof item.shop_home_url === "string" && item.shop_home_url.trim();
       if (official) {
         if (!https.test(item.official_url)) fail(`${where} official_url must be https`);
         if (typeof item.distributor_name !== "string" || !item.distributor_name.trim()) fail(`${where} missing distributor_name`);
         if (typeof item.distributor_url !== "string" || !https.test(item.distributor_url)) fail(`${where} distributor_url must be https`);
-      } else if (shopName && shopUrl) {
+      } else if (shopName && shopUrl && shopHome) {
         if (!https.test(item.shop_url)) fail(`${where} shop_url must be https`);
+        if (!https.test(item.shop_home_url)) fail(`${where} shop_home_url must be https`);
       } else {
-        fail(`${where} needs official_url, or shop_name and shop_url`);
+        fail(`${where} needs official_url plus distributor_name/url, or shop_name, shop_url and shop_home_url`);
       }
+      const key = official
+        ? `brand\0${item.maker}\0${item.model}`
+        : `shop\0${item.shop_name}\0${item.shop_url}`;
+      if (seenTool.has(key)) fail(`${where} duplicate product ${official ? item.maker + " " + item.model : item.shop_name}`);
+      else seenTool.add(key);
       if (typeof item.image !== "string" || !item.image || item.image.includes("..") || item.image.startsWith("/") || item.image.includes("\\")) {
         fail(`${where} image path is not a repo-relative file`);
       } else {

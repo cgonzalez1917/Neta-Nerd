@@ -134,7 +134,9 @@ The command must print `OK` and exit 0. A pull request that fails this check is 
 
 The tools page reads `data/tools.json`. The field list, including `field_notes`, is in the Tools gear list section of `README.md`. Add items there by hand. Do not put personal data in that file. Run `node scripts/validate.mjs` after you edit it.
 
-Each item needs either `official_url` (the maker page, shown with the distributor button) or both `shop_name` and `shop_url` (one shop link, for gear with no maker page). There is no `status` field.
+Each item needs either `official_url` plus `distributor_name` and `distributor_url`, or `shop_name`, `shop_url`, and `shop_home_url`. A shop card shows `{shop_name} page` and `{shop_name} shop`. There is no `status` field.
+
+One product is one card. Brand items are keyed by maker and model. Shop items are keyed by shop name and product URL. When a new order comes in for an item that is already listed, add a buyer entry (`name`, `qty`, `unit_price_paid`, optional `date`) to that item. Do not add a second card. A person appears at most once in `buyers`.
 
 ## 7. What not to change
 
