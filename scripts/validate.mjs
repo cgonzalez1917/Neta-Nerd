@@ -174,6 +174,8 @@ if (toolsDoc) {
       } else {
         try { await readFile(join(root, item.image)); }
         catch { fail(`${where} image missing ${item.image}`); }
+        if (!Number.isInteger(item.image_width) || item.image_width <= 0) fail(`${where} image_width must be a positive integer`);
+        if (!Number.isInteger(item.image_height) || item.image_height <= 0) fail(`${where} image_height must be a positive integer`);
       }
       if (!Array.isArray(item.field_notes) || item.field_notes.length < 1 || item.field_notes.length > 3 || item.field_notes.some((n) => typeof n !== "string" || !n.trim())) {
         fail(`${where} field_notes must be 1 to 3 strings`);
