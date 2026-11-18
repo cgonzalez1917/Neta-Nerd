@@ -1109,7 +1109,7 @@
             href: official,
             target: "_blank",
             rel: "noopener"
-          }, "Official page"),
+          }, item.link_label || "Official page"),
           distributor ? h("a", {
             class: "btn ghost small",
             href: distributor,
