@@ -65,7 +65,7 @@ Pages serves the function from the `functions` directory with the existing empty
 | `distributor_name`, `distributor_url` | Required with `official_url`. Newark is the default: `distributor_name` is `Newark` and `distributor_url` is that item's Newark product page. `https`, no tracking parameters. |
 | `shop_name`, `shop_url`, `shop_home_url` | For gear with no maker page and no Newark link. Omit `official_url` and the distributor fields. The card shows two links: `{shop_name} page` (`shop_url`) and `{shop_name} shop` (`shop_home_url`). Both URLs are `https`. |
 | `notes` | A short muted line on the card. |
-| `image` | Repo path such as `img/tools/<id>.svg`. |
+| `image` | Repo path such as `img/tools/<id>.webp`. New photos need their real pixel size in `image_width` and `image_height`. |
 | `image_credit` | `Photo: Pomona Electronics` for a maker photo, or `Render, not a photo` for a drawing. The card shows this line. Pomona's terms do not allow copying their product pictures into this repo, so a drawing uses the second credit. |
 | `field_notes` | 1 to 3 strings. The card puts them in a collapsed Field notes list. |
 

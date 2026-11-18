@@ -132,7 +132,7 @@ The command must print `OK` and exit 0. A pull request that fails this check is 
 
 ## 6. Tools gear list
 
-The tools page reads `data/tools.json`. The field list, including `field_notes`, is in the Tools gear list section of `README.md`. Add items there by hand. Do not put personal data in that file. Run `node scripts/validate.mjs` after you edit it.
+The tools page reads `data/tools.json`. The field list, including `field_notes`, is in the Tools gear list section of `README.md`. Add items there by hand. Do not put personal data in that file. New photos need their real pixel size in `image_width` and `image_height`. Run `node scripts/validate.mjs` after you edit it.
 
 Each item needs either `official_url` plus `distributor_name` and `distributor_url`, or `shop_name`, `shop_url`, and `shop_home_url`. A shop card shows `{shop_name} page` and `{shop_name} shop`. There is no `status` field.
 

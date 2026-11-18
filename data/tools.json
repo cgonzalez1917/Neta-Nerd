@@ -38,6 +38,8 @@
       "distributor_url": "https://www.newark.com/pomona/6733-0/test-lead-wire-silicone-18-awg/dp/63H2513",
       "notes": "Official page covers both 6733-0 (black) and 6733-2 (red). 192×41 bare copper, dual-extruded silicone with white wear indicator, OD 0.144 in (3.60 mm), −50 to +150 °C.",
       "image": "img/tools/6733-0.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "image_note": "Official photo shows another color.",
       "field_notes": [
@@ -70,6 +72,8 @@
       "distributor_url": "https://www.newark.com/pomona/6733-2/test-lead-wire-50ft-18awg-copper/dp/63H2515",
       "notes": "Same official product page as 6733-0.",
       "image": "img/tools/6733-2.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "field_notes": [
         "Same as the black reel: not a CAT-rated lead until every termination is CAT III-rated.",
@@ -100,6 +104,8 @@
       "distributor_url": "https://www.newark.com/pomona/mdp-0/adaptor-2x-4mm-with-cable-guide/dp/34F857",
       "notes": "Official name is a stackable double banana plug with cable guide; Newark's listing called it an adaptor. Do not confuse with MDP-0# bulk packaging.",
       "image": "img/tools/mdp-0.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "image_note": "Official photo shows another color.",
       "field_notes": [
@@ -131,6 +137,8 @@
       "distributor_url": "https://www.newark.com/pomona/1825-0-10pk/banana-plug-with-safety-collar/dp/73C4851",
       "notes": "Newark manufacturer part is listed as 1825-0 10PK; pack of 10. Official Pomona page lists 10 per package. Digi-Key also carries 1825-0 but sells it as individual plugs (https://www.digikey.com/en/products/detail/pomona-electronics/1825-0/603383), Mouser carries the 10-pack.",
       "image": "img/tools/1825-0.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "field_notes": [
         "Not CAT-rated, so a lead built with it is not a CAT III lead.",
@@ -161,6 +169,8 @@
       "distributor_url": "https://www.newark.com/pomona/1825-2-10pk/banana-plug-with-safety-collar/dp/73C7348",
       "notes": "Newark manufacturer part is listed as 1825-2 10PK; pack of 10. Same official page as 1825-0. Digi-Key also carries 1825-2 as individual plugs (https://www.digikey.com/en/products/detail/pomona-electronics/1825-2/603384).",
       "image": "img/tools/1825-2.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "image_note": "Official photo shows another color.",
       "field_notes": [
@@ -192,6 +202,8 @@
       "distributor_url": "https://www.newark.com/pomona/5916b-pom/alligator-clip-banana-jack/dp/36X2034",
       "notes": "Official model is 5916B; Newark lists 5916B/POM. Pack is one black and one red clip (pack of 2), not a 10-pack. Accepts 4 mm sheathed safety banana plugs (Pomona cites 5907A/5908A/5909A).",
       "image": "img/tools/5916b.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "field_notes": [
         "The only CAT-rated clip in this list: 1000 V CAT II / 600 V CAT III, 10 A.",
@@ -222,6 +234,8 @@
       "distributor_url": "https://www.newark.com/pomona/2240-0/adapter-alligator-clip-banana-jack/dp/30F1421",
       "notes": "Official datasheet: sold in packages of 10 per color. These are not CAT-rated, unlike 5916B. Newark's page labels this '72924 Series,' which does not appear on the official Pomona datasheet or product page (model is 2240).",
       "image": "img/tools/2240-0.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "image_note": "Official photo shows another color.",
       "field_notes": [
@@ -253,6 +267,8 @@
       "distributor_url": "https://www.newark.com/pomona/3777a-02/spade-lug-to-banana-jack-15a/dp/22C8108",
       "notes": "Official product page lists 3777A-02 as a set of one black and one red ('Banana Jack/Spade Lug 8-10'). The official datasheet's ordering table is an image ('see table above'); color and #8–#10 size are taken from that official product-page model list.",
       "image": "img/tools/3777a-02.webp",
+      "image_width": 600,
+      "image_height": 499,
       "image_credit": "Photo: Pomona Electronics",
       "field_notes": [
         "No handheld, AC or CAT rating. Bare-metal spade lug.",
@@ -283,6 +299,8 @@
       "distributor_url": "https://www.newark.com/pomona/3563-0/banana-jack-to-16awg-pin/dp/81F4646",
       "notes": "Official datasheet groups models 3561/3563/3565/4691; 3563 is the 16 AWG / 0.063 in (1.60 mm) pin. Official product-page title says 'Banana Plug Test Adapter,' but the banana end is a jack that accepts a banana plug. Newark lists 13 A / 2.5 kV, which conflicts with the official 3 A / 2500 Vrms hands-free figures; official datasheet used here.",
       "image": "img/tools/3563-0.webp",
+      "image_width": 600,
+      "image_height": 400,
       "image_credit": "Photo: Pomona Electronics",
       "field_notes": [
         "Only 3 A. Don't hold it on live parts above 33 Vrms / 70 Vdc.",
@@ -313,6 +331,8 @@
       "notes": "Brand on the shop page is Lockout Labs (SKU LL26005); there's no separate maker product page. Shown white in the shop photos. Listed out of stock when checked.",
       "material": "ABS plastic with embedded magnets (stated on the shop page).",
       "image": "img/tools/ll26005.webp",
+      "image_width": 600,
+      "image_height": 600,
       "image_credit": "Photo: Project 96 Workwear",
       "field_notes": [
         "The shop page says it is for organizing test leads, communication cables, and other small items, or for displaying drawings and documents, and that it holds on metal surfaces.",
@@ -342,6 +362,8 @@
       "shop_home_url": "https://www.project96workwear.com/",
       "notes": "Holder only; CT test studs are sold separately. The shop also sells a holder with a 5-pack of studs, and a red 5-pack of studs on their own. Includes an attachment ring and carabiner. Shown green in the shop photo.",
       "image": "img/tools/pns26010.webp",
+      "image_width": 600,
+      "image_height": 600,
       "image_credit": "Photo: Project 96 Workwear",
       "field_notes": [
         "This listing is the holder only. CT test studs are sold separately; the shop also sells a holder that comes with a 5-pack of studs, and a red 5-pack of studs on their own.",
@@ -371,6 +393,8 @@
       "shop_home_url": "https://www.project96workwear.com/",
       "notes": "Single-blocker 10-pack. Double ($36.00) and triple ($45.50) 10-packs are separate listings. Shown red in the shop photos.",
       "image": "img/tools/pns23002.webp",
+      "image_width": 600,
+      "image_height": 600,
       "image_credit": "Photo: Project 96 Workwear",
       "field_notes": [
         "The shop page says these can identify conductors that need to be removed from a terminal block, and can provide non-conductive isolation when moving or removing conductors so they do not short between terminals.",
@@ -401,6 +425,8 @@
       "shop_home_url": "https://www.project96workwear.com/",
       "notes": "Pack of 50, sized for 16/14 AWG. A 12/10 AWG 50-pack is a separate listing. Shown red in the shop photos.",
       "image": "img/tools/pns24006.webp",
+      "image_width": 600,
+      "image_height": 600,
       "image_credit": "Photo: Project 96 Workwear",
       "field_notes": [
         "Sized for 16/14 AWG. The shop page says they keep conductors isolated and identifiable during removal or installation, and help prevent accidental contact with other conductive components.",
