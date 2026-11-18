@@ -283,14 +283,11 @@ a.jump:hover { border-color: var(--cyan); color: var(--cyan); }
   align-items: center;
   margin: 0 0 8px;
 }
-.tag.bought {
-  color: var(--amber-ink);
-  background: var(--amber);
-  border-color: var(--amber);
-  font-weight: 700;
+.tool-added {
+  margin: 0 0 8px;
+  color: var(--text-faint);
+  font-size: 0.82rem;
 }
-.tag.looking { color: var(--cyan); border-color: var(--cyan); }
-.tool-added { color: var(--text-faint); font-size: 0.82rem; }
 .tool-price {
   margin: 0 0 10px;
   color: var(--amber-2);

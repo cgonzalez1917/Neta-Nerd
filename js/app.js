@@ -713,7 +713,7 @@
   }
 
   var newsToken = 0;
-  var toolsState = { status: "all", data: null, error: "", token: 0 };
+  var toolsState = { person: "all", data: null, error: "", token: 0 };
   var TOOL_DISTRIBUTORS = [
     { name: "Newark", href: "https://www.newark.com/" },
     { name: "Digi-Key", href: "https://www.digikey.com/" },
@@ -721,7 +721,8 @@
     { name: "Allied Electronics", href: "https://us.rs-online.com/" },
     { name: "Grainger", href: "https://www.grainger.com/" },
     { name: "Pomona (where to buy)", href: "https://www.pomonaelectronics.com/where-to-buy/distributors" },
-    { name: "Fluke", href: "https://www.fluke.com/" }
+    { name: "Fluke", href: "https://www.fluke.com/" },
+    { name: "Project 96 Workwear", href: "https://www.project96workwear.com/" }
   ];
   /* Publisher photos on the home news list. Set false to show the blue
      wave on every headline instead. One switch, in this file. */
@@ -976,27 +977,27 @@
 
   function toolPriceLine(item) {
     var qty = "Qty " + item.qty + (item.unit ? " " + item.unit : "");
-    if (item.status !== "bought" || item.unit_price_paid == null || item.unit_price_paid === "") return qty;
+    if (item.unit_price_paid == null || item.unit_price_paid === "") return qty;
     var per = String(item.unit || "").toUpperCase() === "PK" ? "per pack" : "each";
     return toolMoney(item.unit_price_paid) + " " + per + " · " + qty;
   }
 
-  function toolStatusRow() {
+  function toolPersonRow() {
     var choices = [
       { id: "all", label: "All" },
-      { id: "bought", label: "Bought" },
-      { id: "looking", label: "Looking at" }
+      { id: "Angelo", label: "Angelo" },
+      { id: "Cristian", label: "Cristian" }
     ];
-    return h("div", { class: "row gear-filters", role: "group", "aria-label": "Status" },
-      h("div", { class: "filter-label" }, "Status"),
+    return h("div", { class: "row gear-filters", role: "group", "aria-label": "Added by" },
+      h("div", { class: "filter-label" }, "Added by"),
       choices.map(function (choice) {
-        var on = toolsState.status === choice.id;
+        var on = toolsState.person === choice.id;
         return h("button", {
           type: "button",
           class: "chip",
           "aria-pressed": on ? "true" : "false",
           onclick: function () {
-            toolsState.status = choice.id;
+            toolsState.person = choice.id;
             render();
           }
         }, choice.label);
@@ -1063,6 +1064,7 @@
   function toolCard(item) {
     var official = httpsUrl(item.official_url);
     var distributor = httpsUrl(item.distributor_url);
+    var shop = httpsUrl(item.shop_url);
     var notes = Array.isArray(item.field_notes) ? item.field_notes.filter(function (note) {
       return typeof note === "string" && note.trim();
     }) : [];
@@ -1083,30 +1085,32 @@
       ) : null,
       h("h3", {}, item.name || ""),
       h("p", { class: "tool-maker" }, [item.maker, item.model].filter(Boolean).join(" ")),
-      h("div", { class: "tool-meta" },
-        h("span", {
-          class: "tag " + (item.status === "looking" ? "looking" : "bought")
-        }, item.status === "looking" ? "Looking" : "Bought"),
-        h("span", { class: "tool-added" }, "Added by " + (item.added_by || ""))
-      ),
+      h("p", { class: "tool-added" }, "Added by " + (item.added_by || "")),
       h("p", { class: "tool-price" }, toolPriceLine(item)),
       h("p", { class: "tool-k" }, "Use"),
       h("p", { class: "tool-use" }, item.use || ""),
       h("p", { class: "tool-k" }, "Rating"),
       h("p", { class: "tool-rating" }, item.rating || ""),
       h("div", { class: "tool-links" },
-        official ? h("a", {
+        official ? [
+          h("a", {
+            class: "btn ghost small",
+            href: official,
+            target: "_blank",
+            rel: "noopener"
+          }, "Official page"),
+          distributor ? h("a", {
+            class: "btn ghost small",
+            href: distributor,
+            target: "_blank",
+            rel: "noopener"
+          }, item.distributor_name || "Distributor") : null
+        ] : (shop ? h("a", {
           class: "btn ghost small",
-          href: official,
+          href: shop,
           target: "_blank",
           rel: "noopener"
-        }, "Official page") : null,
-        distributor ? h("a", {
-          class: "btn ghost small",
-          href: distributor,
-          target: "_blank",
-          rel: "noopener"
-        }, item.distributor_name || "Distributor") : null
+        }, item.shop_name || "Shop") : null)
       ),
       item.notes ? h("p", { class: "tool-note" }, item.notes) : null,
       notes.length ? h("details", { class: "tool-field" },
@@ -1118,8 +1122,8 @@
 
   function paintTools(data) {
     var items = ((data && data.items) || []).filter(function (item) {
-      if (toolsState.status === "all") return true;
-      return item && item.status === toolsState.status;
+      if (toolsState.person === "all") return true;
+      return item && item.added_by === toolsState.person;
     });
     var groups = toolGroups(data, items);
     var jumps = toolJump(groups);
@@ -1127,7 +1131,10 @@
     var subJumps = toolSubJump(groups);
     if (subJumps) app.append(subJumps);
     if (!items.length) {
-      app.append(h("p", { class: "gear-empty" }, "No items match this filter."));
+      var empty = toolsState.person === "all"
+        ? "No items yet."
+        : "No items from " + toolsState.person + " yet.";
+      app.append(h("p", { class: "gear-empty" }, empty));
       return;
     }
     groups.forEach(function (group) {
@@ -1150,14 +1157,14 @@
     app.append(
       h("p", { class: "kicker" }, "Tools"),
       h("h1", {}, "Field tools"),
-      h("p", { class: "lede" }, "Gear Angelo and Cristian bought or are looking at."),
+      h("p", { class: "lede" }, "Tools and materials Angelo and Cristian have bought, in one place. Tap a category to jump to it."),
       h("nav", { class: "dist-strip", "aria-label": "Distributors" },
         h("div", { class: "filter-label" }, "Distributors"),
         TOOL_DISTRIBUTORS.map(function (link) {
           return h("a", { href: link.href, target: "_blank", rel: "noopener" }, link.name);
         })
       ),
-      toolStatusRow()
+      toolPersonRow()
     );
     if (toolsState.error) {
       app.append(h("p", { class: "gear-empty" }, toolsState.error));

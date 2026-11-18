@@ -127,19 +127,26 @@ if (toolsDoc) {
       if (typeof item.id !== "string" || !item.id.trim()) fail(`${where} missing id`);
       else if (seenTool.has(item.id)) fail(`${where} duplicate id`);
       else seenTool.add(item.id);
-      if (item.status !== "bought" && item.status !== "looking") fail(`${where} status must be bought or looking`);
+      if ("status" in item) fail(`${where} status was removed`);
       if (!people.has(item.added_by)) fail(`${where} added_by must be Angelo or Cristian`);
       if (typeof item.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(item.date)) fail(`${where} date must be YYYY-MM-DD`);
-      for (const key of ["maker", "model", "name", "subcategory", "use", "unit", "currency", "rating", "notes", "distributor_name", "image_credit"]) {
+      for (const key of ["maker", "model", "name", "subcategory", "use", "unit", "currency", "rating", "notes", "image_credit"]) {
         if (typeof item[key] !== "string" || !item[key].trim()) fail(`${where} missing ${key}`);
       }
       if (!catSet.has(item.category)) fail(`${where} category is not in categories`);
       if (typeof item.qty !== "number" || !(item.qty > 0)) fail(`${where} qty must be a positive number`);
-      if (item.status === "bought") {
-        if (typeof item.unit_price_paid !== "number") fail(`${where} bought items need unit_price_paid`);
-      } else if ("unit_price_paid" in item) fail(`${where} looking items omit unit_price_paid`);
-      for (const key of ["official_url", "distributor_url"]) {
-        if (typeof item[key] !== "string" || !https.test(item[key])) fail(`${where} ${key} must be https`);
+      if (typeof item.unit_price_paid !== "number") fail(`${where} unit_price_paid must be a number`);
+      const official = typeof item.official_url === "string" && item.official_url.trim();
+      const shopName = typeof item.shop_name === "string" && item.shop_name.trim();
+      const shopUrl = typeof item.shop_url === "string" && item.shop_url.trim();
+      if (official) {
+        if (!https.test(item.official_url)) fail(`${where} official_url must be https`);
+        if (typeof item.distributor_name !== "string" || !item.distributor_name.trim()) fail(`${where} missing distributor_name`);
+        if (typeof item.distributor_url !== "string" || !https.test(item.distributor_url)) fail(`${where} distributor_url must be https`);
+      } else if (shopName && shopUrl) {
+        if (!https.test(item.shop_url)) fail(`${where} shop_url must be https`);
+      } else {
+        fail(`${where} needs official_url, or shop_name and shop_url`);
       }
       if (typeof item.image !== "string" || !item.image || item.image.includes("..") || item.image.startsWith("/") || item.image.includes("\\")) {
         fail(`${where} image path is not a repo-relative file`);

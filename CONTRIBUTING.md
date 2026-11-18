@@ -134,6 +134,8 @@ The command must print `OK` and exit 0. A pull request that fails this check is 
 
 The tools page reads `data/tools.json`. The field list, including `field_notes`, is in the Tools gear list section of `README.md`. Add items there by hand. Do not put personal data in that file. Run `node scripts/validate.mjs` after you edit it.
 
+Each item needs either `official_url` (the maker page, shown with the distributor button) or both `shop_name` and `shop_url` (one shop link, for gear with no maker page). There is no `status` field.
+
 ## 7. What not to change
 
 Leave the theme and the three-phase background alone unless Cristian asks. That means `css/styles.css` and `js/bg.js`. Do not recolor the amber (`#ffb000`) and cyan (`#00e5ff`) accents, and do not restyle or remove the background canvas.
