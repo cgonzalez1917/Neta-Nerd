@@ -782,6 +782,149 @@
         "Cristian's variant is orange studs (PNS26010-O). The shop photo shows the green holder with orange studs. The same listing also sells red and true yellow stud colors.",
         "The shop page says the holder has five positions, a visual check that all five studs are present, and an attachment ring and carabiner. No electrical rating is stated."
       ]
+    },
+    {
+      "id": "tuofeng-14awg-66ft",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 25.99,
+          "date": "2026-09-11"
+        }
+      ],
+      "maker": "TUOFENG",
+      "model": "14 AWG red/black 66 ft (2 x 33 ft)",
+      "name": "14 AWG Silicone Wire, Red/Black 66 ft, Tinned Copper Stranded",
+      "category": "Test leads & connectors",
+      "subcategory": "Lead wire",
+      "use": "Two separate spools of flexible 14 AWG silicone hookup wire, one red and one black, 33 ft each. It is bare wire for building custom-length test leads, jumpers and bench power runs once you add your own plugs, clips or lugs.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "600 V / 20 A (stated in the Product information table of the Amazon listing; the listing description adds a -60 to +200 °C temperature range). No CAT rating published.",
+      "material": "Tinned copper conductor, 400 strands, silicone insulation (stated on the Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B07FMTXNYR",
+      "link_label": "Amazon",
+      "distributor_name": "TUOFENG store",
+      "distributor_url": "https://www.amazon.com/stores/BuyNow/page/05DB74DD-28E5-48B9-BCFE-B0A8A463C507",
+      "notes": "Two separate single-conductor spools (33 ft red, 33 ft black), not a bonded 2-core cable. Sold on Amazon by Battery monopoly; brand is TUOFENG. The listing is a multi-size page, so the size selector must be on 66 ft. The brand's store page is titled \"Buy Now\" on Amazon.",
+      "image": "img/tools/tuofeng-14awg-66ft.webp",
+      "image_width": 600,
+      "image_height": 600,
+      "image_source_url": "https://m.media-amazon.com/images/I/617su3uaV4L._SL1500_.jpg",
+      "image_credit": "Photo: TUOFENG",
+      "field_notes": [
+        "Bare wire, not a test lead. The listing gives no CAT rating, so a lead built from it is not CAT-rated, whatever plugs and clips you put on it.",
+        "600 V / 20 A is the listing's wire rating, not a test-lead CAT rating. Keep it to low-voltage jumpers and bench setups; not for panelboards or 120 V control circuits.",
+        "Fine 400-strand wire: use ferrules or terminals rated for fine-strand wire, and don't tin the ends before clamping them under a screw."
+      ]
+    },
+    {
+      "id": "ks-3-5-thr",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 12.99,
+          "date": "2026-09-11"
+        }
+      ],
+      "maker": "Keszoox",
+      "model": "KS-3.5-THR",
+      "name": "Phoenix Connector Terminal Block PCB Connector Assortment Kit, 3.5 mm pitch, through-hole headers (2P 3P 4P 5P 6P)",
+      "category": "Test leads & connectors",
+      "subcategory": "Terminal blocks",
+      "use": "Assortment box of green 3.5 mm pitch pluggable screw terminal blocks with matching through-hole PCB headers in 2 to 6 positions. Handy for wiring up breakout boards, bench jigs and small test fixtures without soldering the wires.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "notes": "Plastic storage box with 8 compartments: 2P, 3P and 4P through-hole headers, 6P header-and-connector set, and plug connectors in 2P, 3P, 4P and 5P (per the box label in the listing photo). Sold on Amazon by Keszoox; brand is Keszoox. The Amazon listing has the same kit in 3.81 mm and 5.08 mm pitch and with right-angle headers, so check the pitch label.",
+      "image": "img/tools/ks-3-5-thr.webp",
+      "image_width": 600,
+      "image_height": 600,
+      "image_source_url": "https://m.media-amazon.com/images/I/71iyJTmwKwL._SL1500_.jpg",
+      "image_credit": "Photo: Keszoox",
+      "official_url": "https://www.amazon.com/dp/B0GC71G6Q1",
+      "link_label": "Amazon",
+      "distributor_name": "Keszoox store",
+      "distributor_url": "https://www.amazon.com/stores/Keszoox/page/B68C74A6-622A-4480-9503-35A8F7EDC5D1",
+      "field_notes": [
+        "No voltage, current or wire-size rating is published for this kit. Use it for low-voltage bench and fixture wiring only, not for power or control circuits.",
+        "3.5 mm pitch is small and won't mate with the 3.81 mm or 5.08 mm blocks. Keep the plugs and headers of one pitch together.",
+        "Match the screw terminal to your wire size and snug the screws without over-torquing. Fine wire is best with ferrules."
+      ]
+    },
+    {
+      "id": "duscoke-dsc-125",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 6.89,
+          "date": "2026-09-15"
+        }
+      ],
+      "maker": "DUSCOKE",
+      "model": "DUSCOKE-DSC-125",
+      "name": "2PCS 14 AWG Double-Ended Alligator Clip Test Leads, 3.3 ft / 1 m, red and black",
+      "category": "Test leads & connectors",
+      "subcategory": "Alligator clips",
+      "use": "Two 3.3 ft jumper leads, one red and one black, each with an insulated alligator clip on both ends and 14 AWG flexible wire. For temporarily clipping a meter, source or jumper onto terminals and lugs on the bench or in the field at low voltage.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "1000 V AC / 15 A (stated in the Amazon listing bullets and its Features & Specs table). No CAT rating published.",
+      "material": "Nickel-plated copper clips, 14 AWG copper conductor with PVC insulation (stated on the Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B0F294WLYK",
+      "link_label": "Amazon",
+      "distributor_name": "DUSCOKE on Amazon",
+      "distributor_url": "https://www.amazon.com/s?k=DUSCOKE",
+      "notes": "Pack of 2 leads, 3.3 ft each, clips about 2.2 in long. Sold on Amazon by DUSCOKE; brand is DUSCOKE. The listing also has other sellers. Amazon shows no DUSCOKE brand store, so the second link is Amazon's brand search.",
+      "image": "img/tools/duscoke-dsc-125.webp",
+      "image_width": 600,
+      "image_height": 595,
+      "image_source_url": "https://m.media-amazon.com/images/I/61Wg7bnK6ZL._AC_SL1200_.jpg",
+      "image_credit": "Photo: DUSCOKE",
+      "field_notes": [
+        "The 1000 V figure has no CAT rating behind it, so treat these as low-voltage jumpers. Don't use them on panelboards, 120 V control circuits or anything you can't see is de-energized.",
+        "The jaw tips are exposed metal even with the insulated covers. Clip onto terminals one at a time, and keep the free clip from touching anything before you energize.",
+        "Max 15 A on the listing. Use heavier leads for CT or primary-injection current."
+      ]
+    },
+    {
+      "id": "beiqian-1000v-32a-10pc",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 19.99,
+          "date": "2026-09-15"
+        }
+      ],
+      "maker": "Bei Qian",
+      "model": "10Pcs 1000V 32A",
+      "name": "10Pcs 1000V 32A Heavy Duty Full Insulated Alligator Clips with 4 mm Banana Jack Socket (5 red, 5 black)",
+      "category": "Test leads & connectors",
+      "subcategory": "Alligator clips",
+      "use": "Fully insulated alligator clips with a 4 mm banana jack in the back, so they plug onto the end of a standard banana test lead or plug-in wire. Gives a quick clip-on connection for terminals and lugs. The jaws open up to 27 mm.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "CAT III 1000 Vac / 32 A max, working temperature -20 to +80 °C (stated in the Amazon listing bullets).",
+      "material": "PA nylon body with nickel-plated brass (stated on the Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B07CP1VRHB",
+      "link_label": "Amazon",
+      "distributor_name": "Bei Qian on Amazon",
+      "distributor_url": "https://www.amazon.com/Bei-Qian/b?node=121154685011",
+      "notes": "10-piece pack: 5 red and 5 black. 83.5 mm long, 27 mm max jaw opening, 14.5 g each, fits 4 mm male banana plugs. Sold on Amazon by Bei Qian; brand is Bei Qian. Amazon shows no Bei Qian brand store, so the second link is Amazon's brand page.",
+      "image": "img/tools/beiqian-1000v-32a-10pc.webp",
+      "image_width": 600,
+      "image_height": 532,
+      "image_source_url": "https://m.media-amazon.com/images/I/71NJQjsjRVL._AC_SL1500_.jpg",
+      "image_credit": "Photo: Bei Qian",
+      "field_notes": [
+        "The CAT III 1000 V / 32 A figure is only the clip's. A test setup is only as rated as its lowest part, so the plug and lead you attach must carry the same rating.",
+        "Seller-stated rating only. There is no listed third-party certification, so don't rely on it for CAT III work at the panel.",
+        "Jaws open to 27 mm. Where you can, clip on with the circuit de-energized, then energize; never leave clips unattended on live parts."
+      ]
     }
   ]
 }
