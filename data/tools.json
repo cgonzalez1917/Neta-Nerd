@@ -569,9 +569,9 @@
       "image_source_url": "https://m.media-amazon.com/images/I/617su3uaV4L._SL1500_.jpg",
       "image_credit": "Photo: TUOFENG",
       "field_notes": [
-        "Bare wire, not a test lead. It is only CAT-rated if you terminate it with CAT-rated plugs and clips, and the listing publishes no CAT rating for the wire.",
-        "Rated 600 V / 20 A on the listing. Keep it to low-voltage jumpers and bench setups, and never use it on panelboards or 120 V control circuits.",
-        "Fine 400-strand wire: use ferrules or solder-and-crimp rated for fine strands so a loose strand can't bridge to a neighbor."
+        "Bare wire, not a test lead. The listing gives no CAT rating, so a lead built from it is not CAT-rated, whatever plugs and clips you put on it.",
+        "600 V / 20 A is the listing's wire rating, not a test-lead CAT rating. Keep it to low-voltage jumpers and bench setups; not for panelboards or 120 V control circuits.",
+        "Fine 400-strand wire: use ferrules or terminals rated for fine-strand wire, and don't tin the ends before clamping them under a screw."
       ]
     },
     {
@@ -641,7 +641,7 @@
       "image_credit": "Photo: DUSCOKE",
       "field_notes": [
         "The 1000 V figure has no CAT rating behind it, so treat these as low-voltage jumpers. Don't use them on panelboards, 120 V control circuits or anything you can't see is de-energized.",
-        "Bare alligator clips can touch each other. Clip onto terminals one at a time, and tuck the free clip away before you energize.",
+        "The jaw tips are exposed metal even with the insulated covers. Clip onto terminals one at a time, and keep the free clip from touching anything before you energize.",
         "Max 15 A on the listing. Use heavier leads for CT or primary-injection current."
       ]
     },
@@ -678,7 +678,7 @@
       "field_notes": [
         "The CAT III 1000 V / 32 A figure is only the clip's. A test setup is only as rated as its lowest part, so the plug and lead you attach must carry the same rating.",
         "Seller-stated rating only. There is no listed third-party certification, so don't rely on it for CAT III work at the panel.",
-        "Use the 27 mm max jaw on terminals and lugs. Don't clip onto energized parts, and don't leave them clipped on while you walk away."
+        "Jaws open to 27 mm. Where you can, clip on with the circuit de-energized, then energize; never leave clips unattended on live parts."
       ]
     }
   ]
