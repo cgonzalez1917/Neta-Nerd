@@ -953,6 +953,23 @@
     return "tools-" + String(name || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
 
+  function toolSubId(name) {
+    return toolAnchor("sub-" + name);
+  }
+
+  function toolScrollTo(id) {
+    var node = document.getElementById(id);
+    if (node) node.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function toolTopButton() {
+    return h("button", {
+      type: "button",
+      class: "btn ghost back-top",
+      onclick: function () { window.scrollTo({ top: 0, behavior: "smooth" }); }
+    }, "Back to top");
+  }
+
   function toolMoney(n) {
     return "$" + Number(n).toFixed(2);
   }
@@ -987,22 +1004,38 @@
     );
   }
 
+  function toolJumpLink(id, label) {
+    return h("a", {
+      class: "jump",
+      href: "#/tools",
+      onclick: function (ev) {
+        ev.preventDefault();
+        toolScrollTo(id);
+      }
+    }, label);
+  }
+
   function toolJump(groups) {
     if (!groups.length) return null;
     return h("nav", { class: "jump-row", "aria-label": "Gear categories" },
       h("div", { class: "filter-label" }, "Jump to"),
       groups.map(function (group) {
-        var id = toolAnchor(group.category);
-        return h("a", {
-          class: "jump",
-          href: "#/tools",
-          onclick: function (ev) {
-            ev.preventDefault();
-            var node = document.getElementById(id);
-            if (node) node.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }, group.category);
+        return toolJumpLink(toolAnchor(group.category), group.category);
       })
+    );
+  }
+
+  function toolSubJump(groups) {
+    var names = [];
+    groups.forEach(function (group) {
+      group.groups.forEach(function (sub) {
+        if (names.indexOf(sub.name) < 0) names.push(sub.name);
+      });
+    });
+    if (!names.length) return null;
+    return h("nav", { class: "jump-row", "aria-label": "Gear subcategories" },
+      h("div", { class: "filter-label" }, "Subcategory"),
+      names.map(function (name) { return toolJumpLink(toolSubId(name), name); })
     );
   }
 
@@ -1091,6 +1124,8 @@
     var groups = toolGroups(data, items);
     var jumps = toolJump(groups);
     if (jumps) app.append(jumps);
+    var subJumps = toolSubJump(groups);
+    if (subJumps) app.append(subJumps);
     if (!items.length) {
       app.append(h("p", { class: "gear-empty" }, "No items match this filter."));
       return;
@@ -1099,11 +1134,13 @@
       app.append(h("section", { class: "gear-section", id: toolAnchor(group.category) },
         h("h2", { class: "gear-cat" }, group.category),
         group.groups.map(function (sub) {
-          return h("div", { class: "gear-sub" },
+          return h("div", { class: "gear-sub", id: toolSubId(sub.name) },
             h("h3", {}, sub.name),
-            h("div", { class: "tool-grid" }, sub.items.map(toolCard))
+            h("div", { class: "tool-grid" }, sub.items.map(toolCard)),
+            toolTopButton()
           );
-        })
+        }),
+        toolTopButton()
       ));
     });
   }

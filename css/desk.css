@@ -218,7 +218,13 @@ a.jump {
 }
 a.jump:hover { border-color: var(--cyan); color: var(--cyan); }
 
-.gear-section { scroll-margin-top: 124px; }
+.gear-section,
+.gear-sub { scroll-margin-top: 124px; }
+.back-top {
+  min-height: 44px;
+  width: 100%;
+  margin-top: 12px;
+}
 .gear-cat {
   margin: 18px 0 8px;
   font-family: var(--mono);

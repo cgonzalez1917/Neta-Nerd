@@ -141,9 +141,6 @@ if (toolsDoc) {
       for (const key of ["official_url", "distributor_url"]) {
         if (typeof item[key] !== "string" || !https.test(item[key])) fail(`${where} ${key} must be https`);
       }
-      if (item.seller_url != null && (typeof item.seller_url !== "string" || !https.test(item.seller_url))) {
-        fail(`${where} seller_url must be https`);
-      }
       if (typeof item.image !== "string" || !item.image || item.image.includes("..") || item.image.startsWith("/") || item.image.includes("\\")) {
         fail(`${where} image path is not a repo-relative file`);
       } else {

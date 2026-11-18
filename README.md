@@ -62,8 +62,7 @@ Pages serves the function from the `functions` directory with the existing empty
 | `unit_price_paid`, `currency` | On bought items only. Looking-at items omit `unit_price_paid`. |
 | `rating` | The maker's rating text, shown in full, unchanged. |
 | `official_url` | `https` link for the Official page button. |
-| `distributor_name`, `distributor_url` | The one distributor button. `https` link, no tracking parameters. |
-| `seller_name`, `seller_url` | Optional purchase record. The page does not show them. |
+| `distributor_name`, `distributor_url` | The second card button. Newark is the default: `distributor_name` is `Newark` and `distributor_url` is that item's Newark product page. `https`, no tracking parameters. |
 | `notes` | A short muted line on the card. |
 | `image` | Repo path such as `img/tools/<id>.svg`. |
 | `image_credit` | `Photo: Pomona Electronics` for a maker photo, or `Render, not a photo` for a drawing. The card shows this line. Pomona's terms do not allow copying their product pictures into this repo, so a drawing uses the second credit. |
