@@ -992,8 +992,8 @@
       { id: "Angelo", label: "Angelo" },
       { id: "Cristian", label: "Cristian" }
     ];
-    return h("div", { class: "row gear-filters", role: "group", "aria-label": "Added by" },
-      h("div", { class: "filter-label" }, "Added by"),
+    return h("div", { class: "row gear-filters", role: "group", "aria-label": "Bought by" },
+      h("div", { class: "filter-label" }, "Bought by"),
       choices.map(function (choice) {
         var on = toolsState.person === choice.id;
         return h("button", {
@@ -1161,11 +1161,12 @@
     groups.forEach(function (group) {
       app.append(h("section", { class: "gear-section", id: toolAnchor(group.category) },
         h("h2", { class: "gear-cat" }, group.category),
-        group.groups.map(function (sub) {
+        group.groups.map(function (sub, index) {
+          var last = index === group.groups.length - 1;
           return h("div", { class: "gear-sub", id: toolSubId(sub.name) },
             h("h3", {}, sub.name),
             h("div", { class: "tool-grid" }, sub.items.map(toolCard)),
-            toolTopButton()
+            last ? null : toolTopButton()
           );
         }),
         toolTopButton()
