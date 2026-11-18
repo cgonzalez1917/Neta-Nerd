@@ -1,3 +1,11 @@
+/* Person colors sampled from the rendered phase canvas.
+   Angelo is the coral stroke's brightest pixel. Cristian is the cyan stroke's.
+   Both clear WCAG AA on the dark card, so the text uses the sampled color. */
+:root {
+  --person-angelo: #fe5936;
+  --person-cristian: #00e4fe;
+}
+
 /* Field desk, tools, and manuals.
    Built on the palette, panels, and buttons in styles.css.
    Amber and cyan stay as they are. The phase background is untouched.
@@ -283,14 +291,32 @@ a.jump:hover { border-color: var(--cyan); color: var(--cyan); }
   align-items: center;
   margin: 0 0 8px;
 }
-.tag.bought {
-  color: var(--amber-ink);
-  background: var(--amber);
-  border-color: var(--amber);
-  font-weight: 700;
+.tool-buyer {
+  margin: 0 0 4px;
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  overflow-wrap: anywhere;
 }
-.tag.looking { color: var(--cyan); border-color: var(--cyan); }
-.tool-added { color: var(--text-faint); font-size: 0.82rem; }
+.tool-buyer.person-angelo { color: var(--person-angelo); }
+.tool-buyer.person-cristian { color: var(--person-cristian); }
+.chip.person-angelo {
+  color: var(--person-angelo);
+  border-color: var(--person-angelo);
+}
+.chip.person-cristian {
+  color: var(--person-cristian);
+  border-color: var(--person-cristian);
+}
+.chip.person-angelo[aria-pressed="true"] {
+  background: var(--person-angelo);
+  color: var(--bg);
+  border-color: var(--person-angelo);
+}
+.chip.person-cristian[aria-pressed="true"] {
+  background: var(--person-cristian);
+  color: var(--bg);
+  border-color: var(--person-cristian);
+}
 .tool-price {
   margin: 0 0 10px;
   color: var(--amber-2);
@@ -305,14 +331,17 @@ a.jump:hover { border-color: var(--cyan); color: var(--cyan); }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.tool-material,
 .tool-use,
 .tool-rating,
 .tool-note {
   margin: 0 0 10px;
   overflow-wrap: break-word;
 }
+.tool-material,
 .tool-use,
 .tool-note { color: var(--text-dim); font-size: 0.92rem; }
+.tool-material { font-size: 0.86rem; }
 .tool-rating { color: var(--text); font-size: 0.9rem; }
 .tool-note { color: var(--text-faint); font-size: 0.82rem; }
 .tool-links { display: flex; flex-wrap: wrap; gap: 8px; }
