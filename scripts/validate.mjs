@@ -106,6 +106,57 @@ for (const q of questions) {
 }
 const verified = questions.filter((q) => q.verified).length;
 
+const toolsPath = join(root, "data/tools.json");
+let toolsDoc;
+try { toolsDoc = JSON.parse(await readFile(toolsPath, "utf8")); }
+catch (e) { fail(`data/tools.json: ${e.message}`); }
+if (toolsDoc) {
+  const cats = toolsDoc.categories;
+  if (!Array.isArray(cats) || !cats.length || cats.some((c) => typeof c !== "string" || !c.trim())) {
+    fail("data/tools.json categories must be non-empty strings");
+  }
+  const catSet = new Set(Array.isArray(cats) ? cats : []);
+  if (!Array.isArray(toolsDoc.items)) fail("data/tools.json items must be an array");
+  else {
+    const seenTool = new Set();
+    const https = /^https:\/\/\S+$/;
+    const people = new Set(["Angelo", "Cristian"]);
+    for (const item of toolsDoc.items) {
+      const where = `data/tools.json:${item && item.id ? item.id : "?"}`;
+      if (!item || typeof item !== "object") { fail(`${where} not an object`); continue; }
+      if (typeof item.id !== "string" || !item.id.trim()) fail(`${where} missing id`);
+      else if (seenTool.has(item.id)) fail(`${where} duplicate id`);
+      else seenTool.add(item.id);
+      if (item.status !== "bought" && item.status !== "looking") fail(`${where} status must be bought or looking`);
+      if (!people.has(item.added_by)) fail(`${where} added_by must be Angelo or Cristian`);
+      if (typeof item.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(item.date)) fail(`${where} date must be YYYY-MM-DD`);
+      for (const key of ["maker", "model", "name", "subcategory", "use", "unit", "currency", "rating", "notes", "distributor_name", "image_credit"]) {
+        if (typeof item[key] !== "string" || !item[key].trim()) fail(`${where} missing ${key}`);
+      }
+      if (!catSet.has(item.category)) fail(`${where} category is not in categories`);
+      if (typeof item.qty !== "number" || !(item.qty > 0)) fail(`${where} qty must be a positive number`);
+      if (item.status === "bought") {
+        if (typeof item.unit_price_paid !== "number") fail(`${where} bought items need unit_price_paid`);
+      } else if ("unit_price_paid" in item) fail(`${where} looking items omit unit_price_paid`);
+      for (const key of ["official_url", "distributor_url"]) {
+        if (typeof item[key] !== "string" || !https.test(item[key])) fail(`${where} ${key} must be https`);
+      }
+      if (item.seller_url != null && (typeof item.seller_url !== "string" || !https.test(item.seller_url))) {
+        fail(`${where} seller_url must be https`);
+      }
+      if (typeof item.image !== "string" || !item.image || item.image.includes("..") || item.image.startsWith("/") || item.image.includes("\\")) {
+        fail(`${where} image path is not a repo-relative file`);
+      } else {
+        try { await readFile(join(root, item.image)); }
+        catch { fail(`${where} image missing ${item.image}`); }
+      }
+      if (!Array.isArray(item.field_notes) || item.field_notes.length < 1 || item.field_notes.length > 3 || item.field_notes.some((n) => typeof n !== "string" || !n.trim())) {
+        fail(`${where} field_notes must be 1 to 3 strings`);
+      }
+    }
+  }
+}
+
 if (errors.length) {
   console.error(`FAILED ${errors.length} problem(s):`);
   for (const e of errors) console.error(" - " + e);
