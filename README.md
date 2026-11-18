@@ -66,7 +66,8 @@ Pages serves the function from the `functions` directory with the existing empty
 | `shop_name`, `shop_url`, `shop_home_url` | For gear with no maker page and no Newark link. Omit `official_url` and the distributor fields. The card shows two links: `{shop_name} page` (`shop_url`) and `{shop_name} shop` (`shop_home_url`). Both URLs are `https`. |
 | `notes` | A short muted line on the card. |
 | `image` | Repo path such as `img/tools/<id>.webp`. New photos need their real pixel size in `image_width` and `image_height`. |
-| `image_credit` | `Photo: Pomona Electronics` for a maker photo, or `Render, not a photo` for a drawing. The card shows this line. Pomona's terms do not allow copying their product pictures into this repo, so a drawing uses the second credit. |
+| `image_credit` | `Photo: <maker or shop>` when the card uses the maker's or shop's own product photo (for example `Photo: Pomona Electronics` or `Photo: Project 96 Workwear`). Copied product photos are fine on this page. Use `Render, not a photo` only when no photo exists. The card shows this line. |
+| `image_note` | Optional. Use `Official photo shows another color.` when the maker's photo is a different color from the one bought. |
 | `field_notes` | 1 to 3 strings. The card puts them in a collapsed Field notes list. |
 
 ## How a drill works
