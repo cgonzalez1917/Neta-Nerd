@@ -248,11 +248,20 @@ a.jump:hover { border-color: var(--cyan); color: var(--cyan); }
   height: auto;
 }
 .tool-credit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  align-items: baseline;
   margin: 0 0 8px;
   color: var(--text-faint);
   font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
+}
+.tool-image-note {
+  min-width: 0;
+  max-width: 100%;
+  color: var(--text-faint);
 }
 .tool-card h3 { margin: 0 0 4px; font-size: 1.05rem; }
 .tool-maker {

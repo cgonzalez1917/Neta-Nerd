@@ -36,6 +36,7 @@
       "notes": "Official page covers both 6733-0 (black) and 6733-2 (red). 192×41 bare copper, dual-extruded silicone with white wear indicator, OD 0.144 in (3.60 mm), −50 to +150 °C.",
       "image": "img/tools/6733-0.webp",
       "image_credit": "Photo: Pomona Electronics",
+      "image_note": "Official photo shows another color.",
       "field_notes": [
         "Bare wire only. It is not a CAT-rated lead until every plug and clip on it is CAT III-rated too.",
         "Don't hold a lead made from it on live parts above 30 Vrms / 42.2 Vpk / 60 Vdc or 8 A.",
@@ -95,6 +96,7 @@
       "notes": "Official name is a stackable double banana plug with cable guide; Newark's listing called it an adaptor. Do not confuse with MDP-0# bulk packaging.",
       "image": "img/tools/mdp-0.webp",
       "image_credit": "Photo: Pomona Electronics",
+      "image_note": "Official photo shows another color.",
       "field_notes": [
         "Not CAT-rated. Don't hold it on live parts above 33 Vrms / 70 Vdc.",
         "Good for bench and fixture hookups, not for probing energized gear by hand."
@@ -153,6 +155,7 @@
       "notes": "Newark manufacturer part is listed as 1825-2 10PK; pack of 10. Same official page as 1825-0. Digi-Key also carries 1825-2 as individual plugs (https://www.digikey.com/en/products/detail/pomona-electronics/1825-2/603384).",
       "image": "img/tools/1825-2.webp",
       "image_credit": "Photo: Pomona Electronics",
+      "image_note": "Official photo shows another color.",
       "field_notes": [
         "Not CAT-rated, so a lead built with it is not a CAT III lead.",
         "Don't hold it on live parts above 30 Vrms / 60 Vdc. Not for circuits where transients can exceed its rating."
@@ -211,6 +214,7 @@
       "notes": "Official datasheet: sold in packages of 10 per color. These are not CAT-rated, unlike 5916B. Newark's page labels this '72924 Series,' which does not appear on the official Pomona datasheet or product page (model is 2240).",
       "image": "img/tools/2240-0.webp",
       "image_credit": "Photo: Pomona Electronics",
+      "image_note": "Official photo shows another color.",
       "field_notes": [
         "Only 150 Vrms / 5 A and not CAT-rated. Not for 208/480 V or any energized power circuit.",
         "Use 5916B when you need a CAT-rated clip."

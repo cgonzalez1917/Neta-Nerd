@@ -1040,12 +1040,14 @@
           src: src,
           alt: item.name || "",
           width: "600",
-          height: "400",
           loading: "lazy",
           decoding: "async"
         })
       ) : null,
-      item.image_credit ? h("p", { class: "tool-credit" }, item.image_credit) : null,
+      (item.image_credit || item.image_note) ? h("p", { class: "tool-credit" },
+        item.image_credit || null,
+        item.image_note ? h("span", { class: "tool-image-note" }, item.image_note) : null
+      ) : null,
       h("h3", {}, item.name || ""),
       h("p", { class: "tool-maker" }, [item.maker, item.model].filter(Boolean).join(" ")),
       h("div", { class: "tool-meta" },
