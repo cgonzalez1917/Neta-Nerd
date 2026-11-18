@@ -505,6 +505,40 @@
       ]
     },
     {
+      "id": "ampteks-pi-tulips-7",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 513.0,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Ampteks",
+      "model": "7-Piece Electrode Set",
+      "name": "Primary Injection Testing Tulips, 7-piece electrode set (base + 6 electrodes)",
+      "category": "Breaker testing",
+      "subcategory": "Primary injection electrodes",
+      "use": "A tulip electrode set for primary-injection testing of molded-case circuit breakers: one electrode base plus six electrodes in imperial sizes (3/16, 7/32, 1/4, 5/16, 3/8 and 1/2 in) that fit most common MCCB terminals, with the size engraved on each. The shop lists it for 100 A through 1200 A breakers in maintenance and commissioning testing. Output cables from the test set are sold separately.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Ampteks",
+      "shop_url": "https://www.ampteks.com/product/primary-injection-testing-tulips/",
+      "shop_home_url": "https://www.ampteks.com/",
+      "notes": "Seven-piece set: one electrode base and six electrodes. Listed at $513.00 on 2026-11-18. A different listing from the 6-piece traditional set. Output cables are sold separately.",
+      "image": "img/tools/ampteks-pi-tulips-7.webp",
+      "image_width": 600,
+      "image_height": 450,
+      "image_source_url": "https://www.ampteks.com/wp-content/uploads/2024/07/IMG_7350_1024x1024.webp",
+      "image_credit": "Photo: Ampteks",
+      "field_notes": [
+        "This is the 7-piece set with an electrode base, not the 6-piece traditional set (Cristian's card). Pick the electrode that matches the breaker's terminal size before you hook up the test set.",
+        "Output cables from the primary-injection test set to the tulips are sold separately; the shop says its 6 ft singles are the most popular choice.",
+        "No voltage, current, or CAT rating is published for the electrodes. The 100 A to 1200 A range is the breaker sizes the shop says they fit, not a rating for the tulips."
+      ]
+    },
+    {
       "id": "rt-4mm-fork",
       "buyers": [
         {
@@ -539,37 +573,214 @@
       ]
     },
     {
-      "id": "ampteks-pi-tulips-7",
+      "id": "ct2248-0",
       "buyers": [
         {
-          "name": "Angelo",
+          "name": "Cristian",
           "qty": 1,
-          "unit_price_paid": 513.0,
+          "unit_price_paid": 4.85,
           "date": "2026-11-18"
         }
       ],
-      "maker": "Ampteks",
-      "model": "7-Piece Electrode Set",
-      "name": "Primary Injection Testing Tulips, 7-piece electrode set (base + 6 electrodes)",
-      "category": "Breaker testing",
-      "subcategory": "Primary injection electrodes",
-      "use": "A tulip electrode set for primary-injection testing of molded-case circuit breakers: one electrode base plus six electrodes in imperial sizes (3/16, 7/32, 1/4, 5/16, 3/8 and 1/2 in) that fit most common MCCB terminals, with the size engraved on each. The shop lists it for 100 A through 1200 A breakers in maintenance and commissioning testing. Output cables from the test set are sold separately.",
+      "maker": "Cal Test Electronics",
+      "model": "CT2248-0",
+      "name": "Insulated splice, 4 mm banana jack, black",
+      "category": "Test leads & connectors",
+      "subcategory": "Splices",
+      "use": "An insulated 4 mm banana-jack splice that joins two sheathed banana plugs, so a DMM probe or test lead can be extended or coupled in line.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "1,000 V CAT III, 36 A (IEC Rating and Current Max on the Cal Test CT2248 datasheet). The product page states 1000 V CAT III and 36 A.",
+      "material": "Polyamide (nylon) body with nickel-plated brass contacts (datasheet and product page).",
+      "official_url": "https://www.caltestelectronics.com/product/CT2248-0",
+      "distributor_name": "TestEquity",
+      "distributor_url": "https://www.testequity.com/product/40149-1-CT2248-0",
+      "notes": "Black color of the CT2248 series. The red CT2248-2 is a separate card. Cal Test also sells a black/red pair as kit CT2663. Official product image is a render. Newark does not list this part; Digi-Key and Mouser also carry it.",
+      "image": "img/tools/ct2248-0.webp",
+      "image_width": 600,
+      "image_height": 600,
+      "image_source_url": "https://as.caltestelectronics.com/public/product/284/1/ct2248-0-1-621fa054fb1e0ba0cf0ee0100f8cf1c6-lg.jpg",
+      "image_credit": "Render, not a photo",
+      "field_notes": [
+        "Rated 1,000 V CAT III / 36 A on the Cal Test datasheet, for connecting two sheathed banana plugs.",
+        "This is the black part (CT2248-0). The red CT2248-2 is a separate listing, and Cal Test also sells the pair as kit CT2663.",
+        "A splice is only as safe as the leads you join with it. Don't use unsheathed banana plugs in a CAT-rated setup."
+      ]
+    },
+    {
+      "id": "ct2248-2",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 4.85,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Cal Test Electronics",
+      "model": "CT2248-2",
+      "name": "Insulated splice, 4 mm banana jack, red",
+      "category": "Test leads & connectors",
+      "subcategory": "Splices",
+      "use": "The red color of the CT2248 insulated 4 mm banana-jack splice, for joining two sheathed banana plugs so a DMM probe or test lead can be extended or coupled in line.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "1,000 V CAT III, 36 A (IEC Rating and Current Max on the Cal Test CT2248 datasheet). The product page states 1000 V CAT III and 36 A.",
+      "material": "Polyamide (nylon) body with nickel-plated brass contacts (datasheet and product page).",
+      "official_url": "https://www.caltestelectronics.com/product/CT2248-2",
+      "distributor_name": "TestEquity",
+      "distributor_url": "https://www.testequity.com/product/40150-1-CT2248-2",
+      "notes": "Red color of the CT2248 series. The black CT2248-0 is a separate card. Cal Test also sells a black/red pair as kit CT2663. Official product image is a render. Newark does not list this part; Digi-Key and Mouser also carry it.",
+      "image": "img/tools/ct2248-2.webp",
+      "image_width": 600,
+      "image_height": 600,
+      "image_source_url": "https://as.caltestelectronics.com/public/product/285/1/ct2248-2-1-637f0f4347d81d0370befa02ade0aa47-lg.jpg",
+      "image_credit": "Render, not a photo",
+      "field_notes": [
+        "Rated 1,000 V CAT III / 36 A on the Cal Test datasheet, for connecting two sheathed banana plugs.",
+        "This is the red part (CT2248-2). The black CT2248-0 is a separate listing, and Cal Test also sells the pair as kit CT2663.",
+        "A splice is only as safe as the leads you join with it. Don't use unsheathed banana plugs in a CAT-rated setup."
+      ]
+    },
+    {
+      "id": "zigpeo-14awg-40",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 29.98,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "ZIGPEO",
+      "model": "14 AWG 40 ft red/black",
+      "name": "14 AWG silicone wire, 40 ft red and 40 ft black spools",
+      "category": "Test leads & connectors",
+      "subcategory": "Lead wire",
+      "use": "A pair of 14 AWG flexible silicone-insulated wire spools, 40 ft red and 40 ft black, for building custom leads, jumpers, or battery and hookup wiring. The listing does not give a CAT rating, so this is not a finished test lead.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "600 V (stated as Voltage Rating: 600V on the Amazon listing and on the spool labels in the product photo). Temperature range -60 °C to 200 °C (listing). No current or CAT rating published.",
+      "material": "Tinned copper conductor with silicone rubber insulation (stated on the Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B09VC6WZC8",
+      "link_label": "Amazon",
+      "distributor_name": "ZIGPEO store",
+      "distributor_url": "https://www.amazon.com/stores/ZIGPEOSiliconeWire-ExtraFlexible/page/0165071B-B8CB-4BA6-A6B4-0A267FD84FC9",
+      "notes": "Sold as a 40 ft red plus 40 ft black pair, ASIN B09VC6WZC8. Listing also states 400-strand 0.08 mm tinned copper (2.01 mm²) and OD 3.5 mm ± 0.1 mm. No manufacturer part number is published. Marketed for RC, automotive, battery, and general hookup use.",
+      "image": "img/tools/zigpeo-14awg-40.webp",
+      "image_width": 600,
+      "image_height": 470,
+      "image_source_url": "https://m.media-amazon.com/images/I/71zrKiAlVeL._SL1500_.jpg",
+      "image_credit": "Photo: ZIGPEO",
+      "field_notes": [
+        "The listing and spool labels state a 600 V rating and a -60 °C to 200 °C temperature range. No current or CAT rating is published.",
+        "This is unterminated hookup and battery wire, not a CAT-rated test lead. Don't use it as a handheld lead on energized power gear.",
+        "The pack is two 40 ft spools, one red and one black, 14 AWG."
+      ]
+    },
+    {
+      "id": "phmagloop",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 15.95,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Pig Hog",
+      "model": "PHMAGLOOP",
+      "name": "Magnetic Cable Organizer, 2-pack",
+      "category": "Organization & carry",
+      "subcategory": "Cable & document holders",
+      "use": "A 2-pack of magnetic leather loops for bundling cables or hanging them from a metal surface such as a cart, stand, or cabinet, so leads stay together and off the floor.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "material": "Polyurethane leather with dual 20 mm magnets (stated on the Pig Hog product page and the Amazon listing).",
+      "official_url": "https://pighogcables.com/products/pig-hog-magnetic-cable-organizer-2-pack",
+      "distributor_name": "Amazon",
+      "distributor_url": "https://www.amazon.com/dp/B0D7RL4BQ2",
+      "notes": "Sold as a pack of two. The official page says each loop is 7.8 in × 1.3 in (200 mm × 34 mm) and carries a 1-year warranty. Newark does not list this part. The official site listed $14.95; the Amazon listing Cristian sent is $15.95.",
+      "image": "img/tools/phmagloop.webp",
+      "image_width": 600,
+      "image_height": 286,
+      "image_source_url": "https://m.media-amazon.com/images/I/61wA2qrh0oL._AC_SL1500_.jpg",
+      "image_credit": "Photo: Pig Hog",
+      "field_notes": [
+        "This is a cable organizer, not a protective barrier. No electrical or CAT rating is published.",
+        "The official page warns not to place it close to credit cards or other things that can be demagnetized.",
+        "Sold as a 2-pack. Loops can be stacked together or stuck to most metal surfaces."
+      ]
+    },
+    {
+      "id": "wmycongcong-22clip",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 4.99,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "WMYCONGCONG",
+      "model": "22-piece alligator clip kit",
+      "name": "Alligator clips with insulated boots, 22-piece red/black kit",
+      "category": "Test leads & connectors",
+      "subcategory": "Alligator clips",
+      "use": "A 22-piece kit of small metal alligator clips with red and black insulating boots, for temporary low-energy hookups, bench work, or DIY testing. These are not CAT-rated test clips.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "Current: below 5A (stated on the Amazon listing). No voltage or CAT rating published.",
+      "material": "Metal clips with plastic insulating sleeves; listing says nickel-plated (Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B07KZWB333",
+      "link_label": "Amazon",
+      "distributor_name": "WMYCONGCONG store",
+      "distributor_url": "https://www.amazon.com/stores/WMYCONGCONG/page/F569BAB0-9C4B-4D31-99C1-8993859DFCA4",
+      "notes": "22-piece kit, ASIN B07KZWB333. Listing size is 52×10 mm. Shown packed in a plastic case in the product photos. No manufacturer part number is published. The Amazon brand store title appears as WMY CONGCONG.",
+      "image": "img/tools/wmycongcong-22clip.webp",
+      "image_width": 600,
+      "image_height": 594,
+      "image_source_url": "https://m.media-amazon.com/images/I/71m1m1CfK1L._AC_SL1500_.jpg",
+      "image_credit": "Photo: WMYCONGCONG",
+      "field_notes": [
+        "The listing only states current below 5 A. No voltage or CAT rating is published.",
+        "These are small unrated clips for low-energy bench and DIY work. Not a substitute for CAT-rated test clips, and not for energized panelboards or power circuits.",
+        "22 pieces, red and black boots, about 52 mm long per the listing."
+      ]
+    },
+    {
+      "id": "pns26010-o",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 60.00,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Project 96",
+      "model": "PNS26010-O",
+      "name": "CT Test Stud Holder with 5-pack of test studs (orange studs)",
+      "category": "CT testing",
+      "subcategory": "CT test studs & holders",
+      "use": "A five-position holder that comes with a 5-pack of CT test studs, so a tech can keep the studs together, see that all five are present, and clip the holder to a bag or belt loop before leaving the job.",
       "unit": "EA",
       "currency": "USD",
       "rating": "No electrical rating published.",
-      "shop_name": "Ampteks",
-      "shop_url": "https://www.ampteks.com/product/primary-injection-testing-tulips/",
-      "shop_home_url": "https://www.ampteks.com/",
-      "notes": "Seven-piece set: one electrode base and six electrodes. Listed at $513.00 on 2026-11-18. A different listing from the 6-piece traditional set. Output cables are sold separately.",
-      "image": "img/tools/ampteks-pi-tulips-7.webp",
+      "shop_name": "Project 96",
+      "shop_url": "https://www.project96workwear.com/products/ct-test-stud-holder-comes-with-5-pack-of-test-studs",
+      "shop_home_url": "https://www.project96workwear.com/",
+      "notes": "Orange-stud variant (SKU PNS26010-O) of the holder-plus-studs listing, $60.00. The shop photo shows a green holder with five orange studs, an attachment ring, and a carabiner. The same listing also offers red (PNS26010-R) and true yellow (PNS26010-Y) at the same price. This is a different product from the holder-only card (PNS26010), which does not include studs.",
+      "image": "img/tools/pns26010-o.webp",
       "image_width": 600,
-      "image_height": 450,
-      "image_source_url": "https://www.ampteks.com/wp-content/uploads/2024/07/IMG_7350_1024x1024.webp",
-      "image_credit": "Photo: Ampteks",
+      "image_height": 600,
+      "image_source_url": "https://www.project96workwear.com/api/product-images/file/IMG_1118.jpg",
+      "image_credit": "Photo: Project 96 Workwear",
       "field_notes": [
-        "This is the 7-piece set with an electrode base, not the 6-piece traditional set (Cristian's card). Pick the electrode that matches the breaker's terminal size before you hook up the test set.",
-        "Output cables from the primary-injection test set to the tulips are sold separately; the shop says its 6 ft singles are the most popular choice.",
-        "No voltage, current, or CAT rating is published for the electrodes. The 100 A to 1200 A range is the breaker sizes the shop says they fit, not a rating for the tulips."
+        "This listing includes the holder and a 5-pack of test studs. It is not the holder-only listing (PNS26010), which is a separate card.",
+        "Cristian's variant is orange studs (PNS26010-O). The shop photo shows the green holder with orange studs. The same listing also sells red and true yellow stud colors.",
+        "The shop page says the holder has five positions, a visual check that all five studs are present, and an attachment ring and carabiner. No electrical rating is stated."
       ]
     }
   ]
