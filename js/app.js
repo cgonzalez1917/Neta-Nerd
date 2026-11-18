@@ -1039,8 +1039,8 @@
         h("img", {
           src: src,
           alt: item.name || "",
-          width: "320",
-          height: "200",
+          width: "600",
+          height: "400",
           loading: "lazy",
           decoding: "async"
         })
