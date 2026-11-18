@@ -130,7 +130,11 @@ node scripts/validate.mjs
 
 The command must print `OK` and exit 0. A pull request that fails this check is not ready. GitHub runs the same command on every pull request.
 
-## 6. What not to change
+## 6. Tools gear list
+
+The tools page reads `data/tools.json`. The field list, including `field_notes`, is in the Tools gear list section of `README.md`. Add items there by hand. Do not put personal data in that file. Run `node scripts/validate.mjs` after you edit it.
+
+## 7. What not to change
 
 Leave the theme and the three-phase background alone unless Cristian asks. That means `css/styles.css` and `js/bg.js`. Do not recolor the amber (`#ffb000`) and cyan (`#00e5ff`) accents, and do not restyle or remove the background canvas.
 

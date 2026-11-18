@@ -713,6 +713,16 @@
   }
 
   var newsToken = 0;
+  var toolsState = { status: "all", data: null, error: "", token: 0 };
+  var TOOL_DISTRIBUTORS = [
+    { name: "Newark", href: "https://www.newark.com/" },
+    { name: "Digi-Key", href: "https://www.digikey.com/" },
+    { name: "Mouser", href: "https://www.mouser.com/" },
+    { name: "Allied Electronics", href: "https://us.rs-online.com/" },
+    { name: "Grainger", href: "https://www.grainger.com/" },
+    { name: "Pomona (where to buy)", href: "https://www.pomonaelectronics.com/where-to-buy/distributors" },
+    { name: "Fluke", href: "https://www.fluke.com/" }
+  ];
   /* Publisher photos on the home news list. Set false to show the blue
      wave on every headline instead. One switch, in this file. */
   var NEWS_THUMBS = true;
@@ -935,31 +945,202 @@
     );
   }
 
-  function renderTools() {
-    document.title = "Tools · Neta Nerd";
-    var tools = placeholderData() && placeholderData().tools;
-    if (!tools) {
-      app.append(h("h1", {}, "Field tools"), h("p", {}, "The placeholder file did not load."));
+  function httpsUrl(url) {
+    return typeof url === "string" && url.indexOf("https://") === 0 && !/\s/.test(url) ? url : "";
+  }
+
+  function toolAnchor(name) {
+    return "tools-" + String(name || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function toolMoney(n) {
+    return "$" + Number(n).toFixed(2);
+  }
+
+  function toolPriceLine(item) {
+    var qty = "Qty " + item.qty + (item.unit ? " " + item.unit : "");
+    if (item.status !== "bought" || item.unit_price_paid == null || item.unit_price_paid === "") return qty;
+    var per = String(item.unit || "").toUpperCase() === "PK" ? "per pack" : "each";
+    return toolMoney(item.unit_price_paid) + " " + per + " · " + qty;
+  }
+
+  function toolStatusRow() {
+    var choices = [
+      { id: "all", label: "All" },
+      { id: "bought", label: "Bought" },
+      { id: "looking", label: "Looking at" }
+    ];
+    return h("div", { class: "row gear-filters", role: "group", "aria-label": "Status" },
+      h("div", { class: "filter-label" }, "Status"),
+      choices.map(function (choice) {
+        var on = toolsState.status === choice.id;
+        return h("button", {
+          type: "button",
+          class: "chip",
+          "aria-pressed": on ? "true" : "false",
+          onclick: function () {
+            toolsState.status = choice.id;
+            render();
+          }
+        }, choice.label);
+      })
+    );
+  }
+
+  function toolJump(groups) {
+    if (!groups.length) return null;
+    return h("nav", { class: "jump-row", "aria-label": "Gear categories" },
+      h("div", { class: "filter-label" }, "Jump to"),
+      groups.map(function (group) {
+        var id = toolAnchor(group.category);
+        return h("a", {
+          class: "jump",
+          href: "#/tools",
+          onclick: function (ev) {
+            ev.preventDefault();
+            var node = document.getElementById(id);
+            if (node) node.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, group.category);
+      })
+    );
+  }
+
+  function toolGroups(data, items) {
+    var cats = ((data && data.categories) || []).slice();
+    items.forEach(function (item) {
+      if (item.category && cats.indexOf(item.category) < 0) cats.push(item.category);
+    });
+    return cats.map(function (cat) {
+      var inCat = items.filter(function (item) { return item.category === cat; });
+      var order = [];
+      var map = {};
+      inCat.forEach(function (item) {
+        var sub = item.subcategory || "Other";
+        if (!map[sub]) { map[sub] = []; order.push(sub); }
+        map[sub].push(item);
+      });
+      return {
+        category: cat,
+        groups: order.map(function (sub) { return { name: sub, items: map[sub] }; })
+      };
+    }).filter(function (group) { return group.groups.length; });
+  }
+
+  function toolCard(item) {
+    var official = httpsUrl(item.official_url);
+    var distributor = httpsUrl(item.distributor_url);
+    var notes = Array.isArray(item.field_notes) ? item.field_notes.filter(function (note) {
+      return typeof note === "string" && note.trim();
+    }) : [];
+    var src = typeof item.image === "string" && item.image.indexOf("..") < 0 && item.image.indexOf("://") < 0 ? item.image : "";
+    return h("article", { class: "panel tool-card" },
+      src ? h("div", { class: "tool-photo" },
+        h("img", {
+          src: src,
+          alt: item.name || "",
+          width: "600",
+          loading: "lazy",
+          decoding: "async"
+        })
+      ) : null,
+      (item.image_credit || item.image_note) ? h("p", { class: "tool-credit" },
+        item.image_credit || null,
+        item.image_note ? h("span", { class: "tool-image-note" }, item.image_note) : null
+      ) : null,
+      h("h3", {}, item.name || ""),
+      h("p", { class: "tool-maker" }, [item.maker, item.model].filter(Boolean).join(" ")),
+      h("div", { class: "tool-meta" },
+        h("span", {
+          class: "tag " + (item.status === "looking" ? "looking" : "bought")
+        }, item.status === "looking" ? "Looking" : "Bought"),
+        h("span", { class: "tool-added" }, "Added by " + (item.added_by || ""))
+      ),
+      h("p", { class: "tool-price" }, toolPriceLine(item)),
+      h("p", { class: "tool-k" }, "Use"),
+      h("p", { class: "tool-use" }, item.use || ""),
+      h("p", { class: "tool-k" }, "Rating"),
+      h("p", { class: "tool-rating" }, item.rating || ""),
+      h("div", { class: "tool-links" },
+        official ? h("a", {
+          class: "btn ghost small",
+          href: official,
+          target: "_blank",
+          rel: "noopener"
+        }, "Official page") : null,
+        distributor ? h("a", {
+          class: "btn ghost small",
+          href: distributor,
+          target: "_blank",
+          rel: "noopener"
+        }, item.distributor_name || "Distributor") : null
+      ),
+      item.notes ? h("p", { class: "tool-note" }, item.notes) : null,
+      notes.length ? h("details", { class: "tool-field" },
+        h("summary", {}, "Field notes"),
+        h("ul", {}, notes.map(function (note) { return h("li", {}, note); }))
+      ) : null
+    );
+  }
+
+  function paintTools(data) {
+    var items = ((data && data.items) || []).filter(function (item) {
+      if (toolsState.status === "all") return true;
+      return item && item.status === toolsState.status;
+    });
+    var groups = toolGroups(data, items);
+    var jumps = toolJump(groups);
+    if (jumps) app.append(jumps);
+    if (!items.length) {
+      app.append(h("p", { class: "gear-empty" }, "No items match this filter."));
       return;
     }
+    groups.forEach(function (group) {
+      app.append(h("section", { class: "gear-section", id: toolAnchor(group.category) },
+        h("h2", { class: "gear-cat" }, group.category),
+        group.groups.map(function (sub) {
+          return h("div", { class: "gear-sub" },
+            h("h3", {}, sub.name),
+            h("div", { class: "tool-grid" }, sub.items.map(toolCard))
+          );
+        })
+      ));
+    });
+  }
+
+  function renderTools() {
+    document.title = "Tools · Neta Nerd";
     app.append(
       h("p", { class: "kicker" }, "Tools"),
       h("h1", {}, "Field tools"),
-      h("p", { class: "lede accent" }, tools.intro || ""),
-      h("div", { class: "tool-grid" }, (tools.items || []).map(function (tool) {
-        return h("article", { class: "panel tool-card" },
-          h("div", { class: "tool-art", html: safeArt(tool.svg) }),
-          h("div", { class: "tool-body" },
-            h("header", { class: "panel-h" },
-              h("h2", {}, tool.title || ""),
-              exampleTag(tools.example)
-            ),
-            h("p", {}, tool.text || ""),
-            h("p", { class: "status" }, "Status: " + (tool.status || "Concept"))
-          )
-        );
-      }))
+      h("p", { class: "lede" }, "Gear Angelo and Cristian bought or are looking at."),
+      h("nav", { class: "dist-strip", "aria-label": "Distributors" },
+        h("div", { class: "filter-label" }, "Distributors"),
+        TOOL_DISTRIBUTORS.map(function (link) {
+          return h("a", { href: link.href, target: "_blank", rel: "noopener" }, link.name);
+        })
+      ),
+      toolStatusRow()
     );
+    if (toolsState.error) {
+      app.append(h("p", { class: "gear-empty" }, toolsState.error));
+      return;
+    }
+    if (!toolsState.data) {
+      var token = ++toolsState.token;
+      app.append(h("p", { class: "gear-empty" }, "Loading the gear list…"));
+      loadJSON("data/tools.json").then(function (data) {
+        if (token !== toolsState.token) return;
+        toolsState.data = data;
+        if (parseHash() === "/tools") render();
+      }).catch(function () {
+        if (token !== toolsState.token) return;
+        toolsState.error = "The gear list did not load.";
+        if (parseHash() === "/tools") render();
+      });
+      return;
+    }
+    paintTools(toolsState.data);
   }
 
   function renderManuals() {

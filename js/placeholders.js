@@ -1,6 +1,7 @@
-/* Placeholder copy for the field desk carousel and the tools page.
+/* Placeholder copy for the field desk carousel.
    News headlines are not stored here. The home page loads them from
    api/news, then from data/news.json if that request fails.
+   The tools page loads data/tools.json.
    The manuals page is not in this file. It is a coming-soon notice. */
 (function () {
   "use strict";
@@ -114,111 +115,6 @@
               '<line x1="184" y1="176" x2="268" y2="176"/>' +
             "</g>" +
             '<text x="52" y="36" fill="#8e99a3" font-family="ui-monospace,monospace" font-size="8" letter-spacing="0.08em">TEST SET  (EXAMPLE)</text>')
-        }
-      ]
-    },
-    tools: {
-      example: true,
-      intro: "Example concepts for new field tools and 3D-printed shop aids. Nothing here is a real product listing.",
-      items: [
-        {
-          title: "CT testing tool",
-          text: "A portable fixture for field current-transformer checks. Placeholder concept only.",
-          status: "Concept",
-          svg: art("Example image: CT testing tool",
-            '<g fill="none" stroke="#c5cdd3" stroke-width="1.2">' +
-              '<rect x="28" y="50" width="150" height="110"/>' +
-              '<rect x="40" y="64" width="90" height="54"/>' +
-              '<circle cx="200" cy="110" r="48"/>' +
-              '<circle cx="200" cy="110" r="28"/>' +
-              '<rect x="188" y="58" width="24" height="16"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#8e99a3" stroke-width="0.9">' +
-              '<polyline points="50,94 62,86 78,100 94,78 112,90"/>' +
-              '<rect x="44" y="128" width="28" height="18"/>' +
-              '<rect x="80" y="128" width="28" height="18"/>' +
-              '<line x1="178" y1="110" x2="148" y2="110"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#00e5ff" stroke-width="1.2">' +
-              '<line x1="200" y1="62" x2="200" y2="82"/>' +
-              '<line x1="200" y1="138" x2="200" y2="158"/>' +
-            "</g>" +
-            '<text x="32" y="40" fill="#8e99a3" font-family="ui-monospace,monospace" font-size="8" letter-spacing="0.08em">CT TEST SET  (EXAMPLE)</text>')
-        },
-        {
-          title: "3D-printed CT polarity fixture",
-          text: "Printed block with window and marked H1 / X1 faces. Placeholder concept only.",
-          status: "Concept",
-          svg: art("Example image: 3D-printed CT polarity fixture",
-            '<g fill="none" stroke="#c5cdd3" stroke-width="1.2">' +
-              '<rect x="70" y="40" width="180" height="130"/>' +
-              '<circle cx="160" cy="108" r="44"/>' +
-              '<circle cx="160" cy="108" r="26"/>' +
-              '<rect x="70" y="40" width="44" height="24"/>' +
-              '<rect x="206" y="40" width="44" height="24"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#8e99a3" stroke-width="0.9">' +
-              '<line x1="92" y1="52" x2="92" y2="20"/>' +
-              '<line x1="228" y1="52" x2="228" y2="20"/>' +
-              '<line x1="80" y1="20" x2="104" y2="20"/>' +
-              '<line x1="216" y1="20" x2="240" y2="20"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#00e5ff" stroke-width="1.2">' +
-              '<text x="80" y="56" fill="#00e5ff" stroke="none" font-family="ui-monospace,monospace" font-size="9">H1</text>' +
-              '<text x="216" y="56" fill="#00e5ff" stroke="none" font-family="ui-monospace,monospace" font-size="9">X1</text>' +
-            "</g>" +
-            '<text x="74" y="186" fill="#8e99a3" font-family="ui-monospace,monospace" font-size="8" letter-spacing="0.08em">CT POLARITY FIXTURE  (EXAMPLE)</text>')
-        },
-        {
-          title: "3D-printed test-lead holder",
-          text: "Rack for lead sets on a bench or cart. Placeholder concept only.",
-          status: "Concept",
-          svg: art("Example image: 3D-printed test-lead holder",
-            '<g fill="none" stroke="#c5cdd3" stroke-width="1.2">' +
-              '<rect x="50" y="70" width="220" height="70"/>' +
-              '<rect x="50" y="70" width="220" height="14"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#8e99a3" stroke-width="0.9">' +
-              '<circle cx="86" cy="118" r="10"/><circle cx="128" cy="118" r="10"/>' +
-              '<circle cx="170" cy="118" r="10"/><circle cx="212" cy="118" r="10"/>' +
-              '<circle cx="254" cy="118" r="10"/>' +
-              '<line x1="86" y1="108" x2="86" y2="48"/>' +
-              '<line x1="128" y1="108" x2="128" y2="40"/>' +
-              '<line x1="170" y1="108" x2="170" y2="52"/>' +
-              '<line x1="212" y1="108" x2="212" y2="36"/>' +
-              '<line x1="254" y1="108" x2="254" y2="46"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#00e5ff" stroke-width="1.2">' +
-              '<rect x="70" y="152" width="40" height="10"/>' +
-              '<rect x="120" y="152" width="40" height="10"/>' +
-            "</g>" +
-            '<text x="50" y="32" fill="#8e99a3" font-family="ui-monospace,monospace" font-size="8" letter-spacing="0.08em">TEST-LEAD HOLDER  (EXAMPLE)</text>')
-        },
-        {
-          title: "Meter mount",
-          text: "Bracket for a handheld meter at a test point. Placeholder concept only.",
-          status: "Concept",
-          svg: art("Example image: meter mount",
-            '<g fill="none" stroke="#c5cdd3" stroke-width="1.2">' +
-              '<rect x="110" y="36" width="100" height="140"/>' +
-              '<rect x="122" y="50" width="76" height="52"/>' +
-              '<rect x="90" y="36" width="20" height="140"/>' +
-              '<rect x="210" y="36" width="20" height="140"/>' +
-              '<line x1="90" y1="176" x2="50" y2="196"/>' +
-              '<line x1="230" y1="176" x2="270" y2="196"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#8e99a3" stroke-width="0.9">' +
-              '<line x1="130" y1="66" x2="190" y2="66"/>' +
-              '<line x1="130" y1="78" x2="176" y2="78"/>' +
-              '<line x1="130" y1="90" x2="168" y2="90"/>' +
-              '<circle cx="148" cy="128" r="10"/>' +
-              '<circle cx="172" cy="128" r="10"/>' +
-              '<rect x="138" y="148" width="44" height="16"/>' +
-            "</g>" +
-            '<g fill="none" stroke="#00e5ff" stroke-width="1.2">' +
-              '<line x1="100" y1="28" x2="220" y2="28"/>' +
-            "</g>" +
-            '<text x="90" y="22" fill="#8e99a3" font-family="ui-monospace,monospace" font-size="8" letter-spacing="0.08em">METER MOUNT  (EXAMPLE)</text>')
         }
       ]
     }

@@ -43,6 +43,32 @@ The Home page list is headlines only: title, source name, date, and a link. Arti
 
 Pages serves the function from the `functions` directory with the existing empty build command and output directory `/`. If a preview returns 404 for `/api/news`, Cloudflare’s static-site note is to set the build command to `exit 0` and leave the output directory as `/`. That is not a dependency and not a secret. Until then, the saved file still fills the panel.
 
+## Tools gear list
+
+`data/tools.json` is the shared list of gear Angelo and Cristian bought or are looking at. Add an object to `items` by hand. Do not put an address, account number, invoice, order number, or card number in this file. A price paid is fine.
+
+`categories` is the work-category list, in the order the page uses. An item's `category` must be one of those names. `subcategory` is the heading inside that category. The page shows a category only when it has items, and groups cards under the subcategory.
+
+| Field | Rule |
+| --- | --- |
+| `id` | Short unique id, used in the image file name. |
+| `status` | `bought` or `looking`. |
+| `added_by` | `Angelo` or `Cristian`. |
+| `date` | `YYYY-MM-DD`. |
+| `maker`, `model`, `name` | What the card shows. |
+| `category`, `subcategory` | Work category, then the group inside it. |
+| `use` | One short paragraph. The page shows it in full. |
+| `qty`, `unit` | Count and unit. `EA` is priced “each”. `PK` is priced “per pack”. |
+| `unit_price_paid`, `currency` | On bought items only. Looking-at items omit `unit_price_paid`. |
+| `rating` | The maker's rating text, shown in full, unchanged. |
+| `official_url` | `https` link for the Official page button. |
+| `distributor_name`, `distributor_url` | The one distributor button. `https` link, no tracking parameters. |
+| `seller_name`, `seller_url` | Optional purchase record. The page does not show them. |
+| `notes` | A short muted line on the card. |
+| `image` | Repo path such as `img/tools/<id>.svg`. |
+| `image_credit` | `Photo: Pomona Electronics` for a maker photo, or `Render, not a photo` for a drawing. The card shows this line. Pomona's terms do not allow copying their product pictures into this repo, so a drawing uses the second credit. |
+| `field_notes` | 1 to 3 strings. The card puts them in a collapsed Field notes list. |
+
 ## How a drill works
 
 - **Practice** filters by level, domain (safety, theory, component, systems), and topic. Level II starts selected. Feedback, the reference, and a study link show as soon as you check an answer.
