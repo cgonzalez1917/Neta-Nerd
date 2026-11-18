@@ -505,6 +505,40 @@
       ]
     },
     {
+      "id": "ampteks-pi-tulips-7",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 513.0,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Ampteks",
+      "model": "7-Piece Electrode Set",
+      "name": "Primary Injection Testing Tulips, 7-piece electrode set (base + 6 electrodes)",
+      "category": "Breaker testing",
+      "subcategory": "Primary injection electrodes",
+      "use": "A tulip electrode set for primary-injection testing of molded-case circuit breakers: one electrode base plus six electrodes in imperial sizes (3/16, 7/32, 1/4, 5/16, 3/8 and 1/2 in) that fit most common MCCB terminals, with the size engraved on each. The shop lists it for 100 A through 1200 A breakers in maintenance and commissioning testing. Output cables from the test set are sold separately.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Ampteks",
+      "shop_url": "https://www.ampteks.com/product/primary-injection-testing-tulips/",
+      "shop_home_url": "https://www.ampteks.com/",
+      "notes": "Seven-piece set: one electrode base and six electrodes. Listed at $513.00 on 2026-11-18. A different listing from the 6-piece traditional set. Output cables are sold separately.",
+      "image": "img/tools/ampteks-pi-tulips-7.webp",
+      "image_width": 600,
+      "image_height": 450,
+      "image_source_url": "https://www.ampteks.com/wp-content/uploads/2024/07/IMG_7350_1024x1024.webp",
+      "image_credit": "Photo: Ampteks",
+      "field_notes": [
+        "This is the 7-piece set with an electrode base, not the 6-piece traditional set (Cristian's card). Pick the electrode that matches the breaker's terminal size before you hook up the test set.",
+        "Output cables from the primary-injection test set to the tulips are sold separately; the shop says its 6 ft singles are the most popular choice.",
+        "No voltage, current, or CAT rating is published for the electrodes. The 100 A to 1200 A range is the breaker sizes the shop says they fit, not a rating for the tulips."
+      ]
+    },
+    {
       "id": "rt-4mm-fork",
       "buyers": [
         {
