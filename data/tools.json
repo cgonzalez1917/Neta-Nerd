@@ -469,6 +469,74 @@
         "Meant for probing connectors from the rear with a meter lead. The listing also markets them for piercing insulation; that's not the use here, since it can damage the wire or its seal.",
         "The listing mentions plastic pin covers, but they aren't shown in the product photos, so they aren't confirmed as included."
       ]
+    },
+    {
+      "id": "ampteks-tulips-6",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 465.0,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Ampteks",
+      "model": "6-Piece Traditional Electrode",
+      "name": "Circuit Breaker Testing Tulips, 6-piece traditional electrode",
+      "category": "Breaker testing",
+      "subcategory": "Primary injection electrodes",
+      "use": "A six-piece set of traditional tulip electrodes for primary-injection testing of molded-case circuit breakers. Imperial sizes that fit most common MCCB types, with the size engraved on each electrode. Output cables from the test set to the tulips are sold separately.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Ampteks",
+      "shop_url": "https://www.ampteks.com/product/circuit-breaker-testing-tulips/",
+      "shop_home_url": "https://www.ampteks.com/",
+      "notes": "Six-piece traditional set. Imperial sizes 3/16, 7/32, 1/4, 5/16, 3/8, and 1/2 in, engraved on each electrode. Ampteks also sells a 7-piece set and a 13-piece set as separate listings. Output cables are sold separately. No manufacturer part number is published on the product page.",
+      "image": "img/tools/ampteks-tulips-6.webp",
+      "image_width": 600,
+      "image_height": 450,
+      "image_source_url": "https://www.ampteks.com/wp-content/uploads/2024/07/IMG_7356_1024x1024.webp",
+      "image_credit": "Photo: Ampteks",
+      "field_notes": [
+        "This listing is the 6-piece traditional set. Ampteks also sells a 7-piece set and a 13-piece set, which are separate listings.",
+        "Output cables to connect a primary-injection test set to the tulips are sold separately; the shop points to its 6 ft singles as the usual choice.",
+        "No voltage, current, or CAT rating is published for the electrodes. Don't assume a rating from the breaker sizes they are meant to fit."
+      ]
+    },
+    {
+      "id": "rt-4mm-fork",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 10.0,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Relay Techs",
+      "model": "3-4mm-banana-to-fork",
+      "name": "5-inch 4 mm female to fork adapter leads (pair)",
+      "category": "Test leads & connectors",
+      "subcategory": "Adapters",
+      "use": "A pair of short adapter leads with a 4 mm female banana socket on one end and a fork terminal on the other, for landing a banana test lead on a screw terminal. The listing says the fork fits a #12 screw and works well with SEL relay screw terminals, for relay testing, temporary hookups, and bench or field use.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "No electrical rating published.",
+      "shop_name": "Relay Techs",
+      "shop_url": "https://relaytechs.com/products/3-4mm-banana-to-fork",
+      "shop_home_url": "https://relaytechs.com/",
+      "notes": "Sold as a pair. The shop handle is 3-4mm-banana-to-fork; no manufacturer part number or SKU is published. The shop photo shows 18 AWG 200°C printed on the black lead jacket. That is not a voltage, current, or CAT rating.",
+      "image": "img/tools/rt-4mm-fork.webp",
+      "image_width": 600,
+      "image_height": 400,
+      "image_source_url": "https://relaytechs.com/cdn/shop/files/IMG-1090.png?v=1774026401",
+      "image_credit": "Photo: Relay Techs",
+      "field_notes": [
+        "Sold as a pair. The listing says the fork easily fits a #12 screw and also works well with SEL relay screw terminals.",
+        "These are 5-inch leads, not a rigid banana-to-fork adapter. The shop lists them for relay testing, temporary hookups, and bench or field use.",
+        "No voltage, current, or CAT rating is published. Don't assume a rating from other 4 mm banana-to-fork adapters."
+      ]
     }
   ]
 }
