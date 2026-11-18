@@ -433,6 +433,42 @@
         "No material, voltage, or CAT rating is stated. This is a pack of 50. The shop also sells a 12/10 AWG 50-pack, which is a different listing.",
         "Unrated. Treat capped conductors as live until LOTO and absence of voltage are verified."
       ]
+    },
+    {
+      "id": "cptz-001",
+      "buyers": [
+        {
+          "name": "Angelo",
+          "qty": 1,
+          "unit_price_paid": 8.99,
+          "date": "2026-10-24"
+        }
+      ],
+      "maker": "CNHIDEE",
+      "model": "CPTZ-001",
+      "name": "Back Probe Kit for Multimeter Test Leads, 10-piece (0.7 mm needle)",
+      "category": "Test leads & connectors",
+      "subcategory": "Probes & back probes",
+      "use": "Thin 0.7 mm back-probe pins that plug onto standard 4 mm banana test leads, so you can slip into the back of a connector or terminal and take a low-voltage reading without piercing the insulation. Low-voltage and automotive circuits only.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "30 V / 1 A max (stated on the Amazon listing and molded on the handles). No CAT rating.",
+      "material": "Stainless steel pins with a PA insulation shell (stated on the Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B0DS12Q9QC",
+      "link_label": "Amazon",
+      "distributor_name": "CNHIDEE store",
+      "distributor_url": "https://www.amazon.com/stores/CNHIDEE/page/AA5D5D92-A774-4754-BBD1-F6EC971187AC",
+      "notes": "10-piece kit: 5 red and 5 black pins. 84 mm overall, 20 mm needle, 0.7 mm pin, 4 mm banana socket. Sold on Amazon by DeeCam; brand is CNHIDEE.",
+      "image": "img/tools/cptz-001.webp",
+      "image_width": 600,
+      "image_height": 600,
+      "image_source_url": "https://m.media-amazon.com/images/I/61NWikjmDdL._SL1500_.jpg",
+      "image_credit": "Photo: CNHIDEE",
+      "field_notes": [
+        "Rated 30 V / 1 A max with no CAT rating. For low-voltage and automotive back-probing only. Not for 120 V control circuits, panelboards, or anything above 30 V, and don't run more than 1 A through them on the amps jack.",
+        "Meant for probing connectors from the rear with a meter lead. The listing also markets them for piercing insulation; that's not the use here, since it can damage the wire or its seal.",
+        "The listing mentions plastic pin covers, but they aren't shown in the product photos, so they aren't confirmed as included."
+      ]
     }
   ]
 }

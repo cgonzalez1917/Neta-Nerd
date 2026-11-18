@@ -135,6 +135,7 @@ if (toolsDoc) {
         if (typeof item[key] !== "string" || !item[key].trim()) fail(`${where} missing ${key}`);
       }
       if (item.material != null && (typeof item.material !== "string" || !item.material.trim())) fail(`${where} material must be a non-empty string`);
+      if (item.link_label != null && (typeof item.link_label !== "string" || !item.link_label.trim())) fail(`${where} link_label must be a non-empty string`);
       if (!catSet.has(item.category)) fail(`${where} category is not in categories`);
       if (!Array.isArray(item.buyers) || !item.buyers.length) fail(`${where} buyers must be a non-empty array`);
       else {

@@ -60,7 +60,8 @@ Pages serves the function from the `functions` directory with the existing empty
 | `currency` | Currency of `unit_price_paid` on each buyer. |
 | `rating` | The maker's rating text, shown in full, unchanged. |
 | `material` | Optional. Shown as a small line only when set. |
-| `official_url` | `https` maker page. With this set, the card shows Official page and the distributor button. |
+| `official_url` | `https` maker page, or another listing when there is no maker page. With this set, the card shows that link and the distributor button. |
+| `link_label` | Optional. Replaces the "Official page" button text. |
 | `distributor_name`, `distributor_url` | Required with `official_url`. Newark is the default: `distributor_name` is `Newark` and `distributor_url` is that item's Newark product page. `https`, no tracking parameters. |
 | `shop_name`, `shop_url`, `shop_home_url` | For gear with no maker page and no Newark link. Omit `official_url` and the distributor fields. The card shows two links: `{shop_name} page` (`shop_url`) and `{shop_name} shop` (`shop_home_url`). Both URLs are `https`. |
 | `notes` | A short muted line on the card. |
