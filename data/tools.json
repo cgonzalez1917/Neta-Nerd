@@ -925,6 +925,111 @@
         "Seller-stated rating only. There is no listed third-party certification, so don't rely on it for CAT III work at the panel.",
         "Jaws open to 27 mm. Where you can, clip on with the circuit de-energized, then energize; never leave clips unattended on live parts."
       ]
+    },
+    {
+      "id": "mdp-02",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 11.11,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Pomona Electronics",
+      "model": "MDP-02",
+      "name": "Stackable double banana plugs with cable guide, black and red set",
+      "category": "Test leads & connectors",
+      "subcategory": "Banana plugs",
+      "use": "A solderless set-screw double banana plug pair, one black and one red, for building 0.75 in-spaced leads or stacking connections on banana-jack instruments and fixtures. Not CAT-rated; not for handheld use above 33 Vrms / 70 Vdc.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "15 A; 5000 Vrms max hands-free in a controlled environment; +50 °C max. Not for handheld use above 33 Vrms / 70 Vdc. No IEC CAT rating on the official datasheet.",
+      "material": "Nickel-plated brass body, nickel-plated beryllium copper spring, polypropylene insulation, zinc-plated 8-32 set screws (Pomona MDP / 4892 / 4898 datasheet).",
+      "official_url": "https://www.pomonaelectronics.com/products/banana-plugs-jacks-and-hardware/banana-plugs-and-jacks/double-banana-plug-solderless-model-mdp",
+      "distributor_name": "Newark",
+      "distributor_url": "https://www.newark.com/pomona/mdp-02/double-banana-plug-solderless/dp/22C8006",
+      "notes": "MDP-02 is the two-piece black and red set of the same MDP plug. Angelo's black-only MDP-0 is a separate card. Do not confuse with MDP-2, which is the single red plug. Official Pomona family photo is a yellow plug; the card uses Newark's black/red set photo.",
+      "image": "img/tools/mdp-02.webp",
+      "image_width": 600,
+      "image_height": 961,
+      "image_source_url": "https://www.newark.com/productimages/large/en_US/22C8006-40.jpg",
+      "image_credit": "Photo: Newark",
+      "field_notes": [
+        "Not CAT-rated. Don't hold it on live parts above 33 Vrms / 70 Vdc.",
+        "Good for bench and fixture hookups, not for probing energized gear by hand.",
+        "This is the black and red pair (MDP-02). The black-only MDP-0 is a separate card."
+      ]
+    },
+    {
+      "id": "goupchn-p1036-s8c",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 26.99,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Goupchn",
+      "model": "P1036-S8C",
+      "name": "4 mm stackable banana-plug silicone test leads, 8-piece 3.3 ft / 1 m, eight colors",
+      "category": "Test leads & connectors",
+      "subcategory": "Test leads",
+      "use": "Eight 3.3 ft silicone leads with 4 mm stackable banana plugs on both ends, in eight colors, for hooking a meter, supply, or accessory to banana jacks and for stacking more than one lead on the same jack.",
+      "unit": "PK",
+      "currency": "USD",
+      "rating": "1000 V / 15 A (stated in the Amazon listing bullets and product description). No CAT rating published.",
+      "material": "Copper conductor with silicone insulation (stated on the Amazon listing).",
+      "official_url": "https://www.amazon.com/dp/B0D126RG23",
+      "link_label": "Amazon",
+      "distributor_name": "Goupchn store",
+      "distributor_url": "https://www.amazon.com/stores/Goupchn/page/1BF51776-BCBF-46D9-92E1-23A916E455D4",
+      "notes": "8-piece pack, ASIN B0D126RG23, manufacturer part P1036-S8C. Colors listed as red, black, yellow, green, blue, purple, brown, and yellow-green. Sold on Amazon by Goupchn Direct; brand is Goupchn. The listing also has other lengths and color counts; this card is the 8-color 3.3 ft set. The second link is the Visit the Goupchn Store byline on the product page.",
+      "image": "img/tools/goupchn-p1036-s8c.webp",
+      "image_width": 600,
+      "image_height": 534,
+      "image_source_url": "https://m.media-amazon.com/images/I/812a525JtAL._AC_SL1500_.jpg",
+      "image_credit": "Photo: Goupchn",
+      "field_notes": [
+        "The 1000 V / 15 A figure is only from the Amazon listing. No CAT rating is published, so don't treat these as CAT-rated meter leads on panelboards or 120 V control circuits.",
+        "The stacking jack on each plug leaves metal exposed. Don't leave a live stack open where it can short.",
+        "Eight 3.3 ft leads, 4 mm stackable banana plugs on both ends."
+      ]
+    },
+    {
+      "id": "fluke-tl71",
+      "buyers": [
+        {
+          "name": "Cristian",
+          "qty": 1,
+          "unit_price_paid": 55.19,
+          "date": "2026-11-18"
+        }
+      ],
+      "maker": "Fluke",
+      "model": "TL71",
+      "name": "Premium test lead set, comfort-grip probes with 4 ft right-angle silicone leads, red/black pair",
+      "category": "Test leads & connectors",
+      "subcategory": "Test leads",
+      "use": "A pair of 4 ft (1.2 m) silicone-insulated DMM test leads with comfort-grip probes and right-angle shrouded 4 mm banana plugs, plus protective caps. For everyday meter work on instruments that take standard 4 mm shrouded banana connectors.",
+      "unit": "EA",
+      "currency": "USD",
+      "rating": "CAT II 1000 V, 10 A. CAT III 1000 V / CAT IV 600 V only with the protective caps on. Operating temperature −20 °C to 55 °C, 90% RH, altitude 2000 m (Fluke product page specifications).",
+      "official_url": "https://www.fluke.com/en-us/product/accessories/test-leads/fluke-tl71",
+      "distributor_name": "Newark",
+      "distributor_url": "https://www.newark.com/fluke/tl71/test-lead-set-black-red-1kv-10a/dp/94B7832",
+      "notes": "Grainger item 4XL47. Grainger web price $55.19. Fluke part 1274382. The set is one red and one black lead plus a pair of protective caps. Probe tip diameter is 2 mm. Fluke also recommends these for µV measurements and notes the WearGuard insulation-wear indicator.",
+      "image": "img/tools/fluke-tl71.webp",
+      "image_width": 600,
+      "image_height": 400,
+      "image_source_url": "https://media.fluke.com/41cf05fe-3a89-4a1b-8210-b108002f5107_original__size.jpg",
+      "image_credit": "Photo: Fluke",
+      "field_notes": [
+        "CAT III 1000 V and CAT IV 600 V apply only with the protective caps on. Without the caps, the official rating is CAT II 1000 V, 10 A.",
+        "Watch the WearGuard contrast color in the lead insulation; replace the lead if that color shows.",
+        "10 A max. The probe tips are 2 mm. Compatible with meters that take standard 4 mm shrouded banana plugs."
+      ]
     }
   ]
 }
