@@ -1003,7 +1003,7 @@
         {
           "name": "Cristian",
           "qty": 1,
-          "unit_price_paid": 47.99,
+          "unit_price_paid": 55.19,
           "date": "2026-11-18"
         }
       ],
@@ -1019,7 +1019,7 @@
       "official_url": "https://www.fluke.com/en-us/product/accessories/test-leads/fluke-tl71",
       "distributor_name": "Newark",
       "distributor_url": "https://www.newark.com/fluke/tl71/test-lead-set-black-red-1kv-10a/dp/94B7832",
-      "notes": "Grainger item 4XL47; Fluke part 1274382. The set is one red and one black lead plus a pair of protective caps. Probe tip diameter is 2 mm. Fluke also recommends these for µV measurements and notes the WearGuard insulation-wear indicator.",
+      "notes": "Grainger item 4XL47. Grainger web price $55.19. Fluke part 1274382. The set is one red and one black lead plus a pair of protective caps. Probe tip diameter is 2 mm. Fluke also recommends these for µV measurements and notes the WearGuard insulation-wear indicator.",
       "image": "img/tools/fluke-tl71.webp",
       "image_width": 600,
       "image_height": 400,
