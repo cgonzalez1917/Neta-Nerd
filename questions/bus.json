@@ -160,5 +160,29 @@
     "reference": "ANSI/NETA ATS-2025 7.4.B.3 and Table 100.17 note 2",
     "verified": true,
     "kb": "apparatus.md#bus"
+  },
+  {
+    "id": "bus-010",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "Identify the device in the photo. It hooks onto a run of overhead busway at an opening in the bus housing and has its own ON/OFF handle.",
+    "choices": [
+      "Busway plug-in unit (bus plug)",
+      "Busway expansion fitting",
+      "Feeder busway end closure",
+      "Cable tap box with no disconnect"
+    ],
+    "answer": 0,
+    "explanation": "A plug-in unit, often called a bus plug, stabs onto the busway bars at a plug-in opening and feeds a branch circuit through its own fused switch or breaker, so it has an operating handle. An expansion fitting or end closure is part of the bus run itself and has no handle. Square D lists the PQ3606G as a fusible plug-in unit for I-Line busway, with a mounting hook that lines up with the opening. Feeder busway has no plug-in openings, so bus plugs only go on plug-in style runs.",
+    "reference": "Manufacturer product page: Schneider Electric (Square D) PQ3606G and I-Line busway range page, se.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.se.com/us/en/product/PQ3606G/plugin-unit-iline-busway-fusible-60a-600vac-3-pole-3-fuse-+-g-plug-in-connection/",
+    "image": "img/questions/sqd-pq3606g-busway-plug-in.webp",
+    "image_alt": "Gray steel box with a large ON/OFF label, warning labels and an operating handle on the right side.",
+    "image_credit": "Photo: Schneider Electric",
+    "image_width": 461,
+    "image_height": 600
   }
 ]

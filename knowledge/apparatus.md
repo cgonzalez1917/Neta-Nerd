@@ -310,6 +310,25 @@ NFPA 110-2025 covers the whole emergency power supply system (EPSS): the generat
 
 The load side stays live through the whole test. Keep the switch doors closed during the functional sequence and wear the PPE the arc-flash label calls for when you operate the source breakers.
 
+## Equipment identification from product photos {#equipment-id}
+
+*Level: II*
+
+Use the shape, enclosure and terminals to recognize a broad equipment family. A product photo is not proof of a rating, interrupting duty, safe working condition, or whether equipment is isolated. Similar-looking products can have different internals. Read the nameplate, drawings and the manufacturer's instructions before work. Never open energized equipment just to identify it.
+
+- **Enclosed safety switch:** a hinged metal box with an external operating handle. A closed door does not tell you whether fuses are fitted; confirm the model or nameplate.
+- **Busway plug-in unit (bus plug):** a branch takeoff that mounts at a plug-in opening on a compatible busway. A handle operates its switch or breaker. A closed cabinet alone is not enough to distinguish it from a disconnect: check the mounting connection and equipment records.
+- **Molded-case breaker:** a compact molded body with a front operating handle and line/load terminals. **Low-voltage power breaker:** a larger breaker with a stored-energy mechanism, open/close controls and a trip unit; fixed and drawout versions exist. Do not infer drawout construction from the front alone.
+- **Medium-voltage vacuum breaker:** an operating mechanism and insulated pole units on a removable element. Primary disconnect arms and a wheeled frame are useful clues in the illustrated VCP-W design. The catalog confirms the interrupting medium; a picture alone cannot prove what is inside a pole.
+- **Pad-mounted transformer:** a compartmental enclosure with separate primary and secondary connection areas. **Ventilated dry-type transformer:** a ventilated enclosure rather than a liquid-filled tank. A closed cabinet alone does not prove its contents.
+- **Window current transformer:** a cable or busbar passes through the window. **Voltage transformer:** a wound instrument transformer connected to the system voltage. The illustrated ABB VIZ has a cast body with primary connections rather than a through-window.
+- **Distribution surge arrester:** a shed-covered two-terminal device identified by its model and line-to-ground application. Sheds alone do not distinguish it from an insulator or bushing.
+- **Three-phase recloser:** the illustrated NOVA has three encapsulated poles on a common mechanism housing and uses a separate electronic control. Reclosers and sectionalizers can look similar; use the model and documentation, not appearance alone, to confirm operating duty.
+- **Variable frequency drive:** an electronic motor controller with a display/keypad and cooling provisions. A soft starter can look similar: confirm the model and function.
+- **Automatic transfer switch:** a transfer mechanism, source/load connections and controller in an enclosure. Confirm the source arrangement from the drawings; an open cabinet does not prove a safe condition.
+
+The photo questions cite the maker product page each photo came from, and `img/questions/SOURCES.md` lists every photo with its page and credit. These are identification examples, not manufacturer endorsements or substitutes for operating instructions.
+
 ## Level III {#apparatus-level-iii}
 
 *Level: III*

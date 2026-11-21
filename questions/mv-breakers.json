@@ -790,5 +790,29 @@
     "reference": "IEEE C37.09-2018, 5.14",
     "verified": true,
     "kb": "field-methods.md#microohm"
+  },
+  {
+    "id": "mvbr-045",
+    "level": "II",
+    "topic": "mv-breakers",
+    "domain": "component",
+    "question": "Identify the device in the photo.",
+    "choices": [
+      "Medium-voltage drawout vacuum circuit breaker",
+      "Low-voltage power circuit breaker",
+      "Medium-voltage voltage transformer drawer",
+      "Pad-mounted load-break switch"
+    ],
+    "answer": 0,
+    "explanation": "This is a medium-voltage drawout vacuum circuit breaker. The tall insulated arms on the back are the primary disconnects that engage the cell studs, the pole units hold the vacuum interrupters, and the wheels let it rack in and out of a metal-clad cell. Eaton describes the VCP-W as a medium-voltage vacuum breaker with vacuum interrupters, automatic primary and secondary disconnects, and trip-free interlocks that stop a closed breaker from being moved into or out of the connect position.",
+    "reference": "Manufacturer product page: Eaton VCP-W medium-voltage vacuum circuit breakers, eaton.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.eaton.com/us/en-us/catalog/electrical-circuit-protection/mv-vcp-w-vacuum-circuit-breakers.html",
+    "image": "img/questions/eaton-vcp-w-vacuum-breaker.webp",
+    "image_alt": "Gray breaker element on wheels with tall red and white insulated arms on its left side.",
+    "image_credit": "Photo: Eaton",
+    "image_width": 600,
+    "image_height": 536
   }
 ]

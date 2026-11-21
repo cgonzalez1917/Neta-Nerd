@@ -12,7 +12,47 @@ const LEVELS = new Set(["II", "III", "IV"]);
 const REMOVED_LEVELS = new Set(["ETT", "I"]);
 const DOMAINS = new Set(["safety", "theory", "component", "systems"]);
 const REQUIRED = ["id", "level", "topic", "domain", "question", "choices", "answer", "explanation", "reference", "verified", "kb"];
-const OPTIONAL = new Set(["link"]);
+const IMAGE_FIELDS = ["image", "image_width", "image_height", "image_alt", "image_credit"];
+const OPTIONAL = new Set(["link", ...IMAGE_FIELDS]);
+
+// WebP stores its canvas size in VP8, VP8L or VP8X. No image-library dependency.
+function webpSize(data) {
+  if (data.length < 20 || data.toString("ascii", 0, 4) !== "RIFF" || data.toString("ascii", 8, 12) !== "WEBP" || data.readUInt32LE(4) + 8 !== data.length) throw new Error("invalid WebP container");
+  for (let pos = 12; pos + 8 <= data.length;) {
+    const type = data.toString("ascii", pos, pos + 4);
+    const size = data.readUInt32LE(pos + 4);
+    const start = pos + 8;
+    if (start + size > data.length) throw new Error("truncated WebP chunk");
+    if (type === "VP8X" && size >= 10) return [1 + data.readUIntLE(start + 4, 3), 1 + data.readUIntLE(start + 7, 3)];
+    if (type === "VP8 " && size >= 10 && data.toString("hex", start + 3, start + 6) === "9d012a") return [data.readUInt16LE(start + 6) & 0x3fff, data.readUInt16LE(start + 8) & 0x3fff];
+    if (type === "VP8L" && size >= 5 && data[start] === 0x2f) {
+      const bits = data.readUInt32LE(start + 1);
+      return [(bits & 0x3fff) + 1, ((bits >>> 14) & 0x3fff) + 1];
+    }
+    pos = start + size + (size % 2);
+  }
+  throw new Error("WebP size not found");
+}
+
+async function validateQuestionImage(q, where) {
+  if (!IMAGE_FIELDS.some((key) => key in q)) return;
+  for (const key of IMAGE_FIELDS) if (!(key in q)) fail(`${where} image requires ${key}`);
+  for (const key of ["image_alt", "image_credit"]) {
+    if (typeof q[key] !== "string" || !q[key].trim()) fail(`${where} ${key} must be non-empty text`);
+  }
+  if (typeof q.image_credit === "string" && !/^Photo: \S/.test(q.image_credit)) fail(`${where} image_credit must be Photo: <maker or distributor>`);
+  for (const key of ["image_width", "image_height"]) {
+    if (!Number.isInteger(q[key]) || q[key] <= 0) fail(`${where} ${key} must be a positive integer`);
+  }
+  if (typeof q.image !== "string" || !/^img\/questions\/[a-z0-9-]+\.webp$/.test(q.image)) {
+    fail(`${where} image must be img/questions/<lowercase-name>.webp`);
+    return;
+  }
+  try {
+    const size = webpSize(await readFile(join(root, q.image)));
+    if (size[0] !== q.image_width || size[1] !== q.image_height) fail(`${where} image dimensions ${q.image_width}x${q.image_height} != file ${size[0]}x${size[1]}`);
+  } catch (e) { fail(`${where} image ${q.image}: ${e.message}`); }
+}
 
 const errors = [];
 function fail(msg) { errors.push(msg); }
@@ -70,6 +110,7 @@ for (const topic of index.topics) {
     if (q.link != null) {
       if (typeof q.link !== "string" || !q.link.startsWith("https://") || /\s/.test(q.link)) fail(`${where} link must be https`);
     }
+    await validateQuestionImage(q, where);
     questions.push(q);
   }
 }

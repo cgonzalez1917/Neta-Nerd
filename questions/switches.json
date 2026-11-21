@@ -484,5 +484,29 @@
     "reference": "Littelfuse, Fuse Fundamentals, 2025, Fuse Selectivity and Table 2",
     "verified": true,
     "kb": "apparatus.md#fuse-ratings"
+  },
+  {
+    "id": "sw-028",
+    "level": "II",
+    "topic": "switches-fuses",
+    "domain": "component",
+    "question": "Identify the equipment in the photo. It is a closed steel enclosure with a hinged door and an operating handle on the right side.",
+    "choices": [
+      "Heavy-duty safety switch (enclosed disconnect switch)",
+      "Lighting and appliance panelboard",
+      "Automatic transfer switch",
+      "Ventilated dry-type transformer"
+    ],
+    "answer": 0,
+    "explanation": "This is a safety switch: a single enclosed disconnect worked by an external side handle, with no breaker rows inside like a panelboard and no transfer controller. Square D lists the H365NR as a heavy-duty fusible safety switch with a quick-make, quick-break mechanism in a Type 3R rainproof enclosure. From the outside a fusible and a non-fusible safety switch can look the same, so read the nameplate or catalog number to tell which one you have before you plan the tests.",
+    "reference": "Manufacturer product page: Schneider Electric (Square D) H365NR, se.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.se.com/us/en/product/H365NR/safety-switch-heavy-duty-fusible-400a-4-wire-3-pole-1-neutral-250hp-600vac-dc-nema-3r/",
+    "image": "img/questions/sqd-h365nr-safety-switch.webp",
+    "image_alt": "Tall gray steel enclosure with a hinged front door and an operating handle on the right side.",
+    "image_credit": "Photo: Schneider Electric",
+    "image_width": 366,
+    "image_height": 600
   }
 ]

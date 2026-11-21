@@ -63,7 +63,7 @@ Do not add a build step, a framework, or a dependency. The site is static files.
 
 ## 3. Question schema
 
-Each topic file is a JSON array. One object is one question. Fields the validator does not list are rejected. `link` is the only optional field.
+Each topic file is a JSON array. One object is one question. Fields the validator does not list are rejected. `link` and the five photo fields (`image`, `image_width`, `image_height`, `image_alt`, `image_credit`) are the only optional fields.
 
 ```json
 {
@@ -95,6 +95,21 @@ Each topic file is a JSON array. One object is one question. Fields the validato
 | `verified` | yes | Boolean. `true` only after you checked the deciding fact in a source you were allowed to read. Otherwise `false`. |
 | `kb` | yes | `file.md#anchor`. The file is under `knowledge/`, and that file contains `{#anchor}`. |
 | `link` | no | Optional `https` URL with no spaces, usually a public article. Omit the field. Do not set it to `""`. Shown as “Learn more”. |
+| `image` | no | Photo shown above the stem in practice, timed quiz, mock exam, and the review lists. Repo path `img/questions/<lowercase-name>.webp`. Set all five photo fields or none. |
+| `image_width`, `image_height` | with `image` | The file's real pixel size. The validator reads the WebP and fails on a mismatch. The page uses them to reserve space. |
+| `image_alt` | with `image` | Describe what is visible (shape, color, doors, terminals) without naming the answer. |
+| `image_credit` | with `image` | `Photo: <maker or distributor>`, for example `Photo: Eaton`. Shown under the photo. |
+
+### Photo questions
+
+Equipment-identification questions show a product photo and ask what the equipment is. Cristian approved maker and distributor product photos (Schneider Electric / Square D, Eaton, ABB, Siemens, GE, S&C, Platt, Graybar and similar) for this on 21 Nov 2026, with the credit line on each one. Your own job photos are better when you have them; crop out customer names, labels, and anything that identifies a site.
+
+1. Download a clear, generic product shot from the product page. No customer equipment, no site photos from other people.
+2. Trim the white border, resize to about 600 px on the long side (do not upscale), and save as WebP under `img/questions/`.
+3. Put the real width and height in the question, add `image_alt` and `image_credit`, and set `link` to the product page you took the photo from.
+4. Add a row to `img/questions/SOURCES.md` with the file, question id, size, credit, and source page.
+5. Cite the product page in `reference` (`Manufacturer product page: Eaton NOVA three-phase recloser, eaton.com; per manufacturer data`). `verified: true` is fine when that page names what the equipment is. Do not read a rating off a photo.
+6. Anchor `kb` to a study section of the same level. `apparatus.md#equipment-id` is the Level II section for photo questions.
 
 ### Citation format
 

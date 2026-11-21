@@ -145,6 +145,26 @@
     return "#/study/" + parts[0] + (parts[1] ? "/" + parts[1] : "");
   }
 
+  function questionImageSrc(q) {
+    var src = q && q.image;
+    if (typeof src !== "string" || !src || src.indexOf("..") >= 0 || src.indexOf("://") >= 0 || src.charAt(0) === "/") return "";
+    return src;
+  }
+  function questionFigure(q, cls) {
+    var src = questionImageSrc(q);
+    if (!src) return null;
+    return h("figure", { class: cls },
+      h("img", {
+        src: src,
+        alt: q.image_alt || "",
+        width: q.image_width,
+        height: q.image_height,
+        decoding: "async"
+      }),
+      q.image_credit ? h("figcaption", {}, q.image_credit) : null
+    );
+  }
+
   function present(q) {
     var order = shuffle(q.choices.map(function (_, i) { return i; }));
     return { id: q.id, order: order, picked: null, revealed: false, recorded: false };
@@ -1716,6 +1736,7 @@
       h("div", { class: "td-strip" }, "Multiple Choice Item - Single Select"),
       h("div", { class: "td-main" },
         h("div", { class: "td-item" },
+          questionFigure(q, "td-figure"),
           h("p", { class: "td-stem" }, q.question),
           h("div", { class: "td-choices", role: "radiogroup", "aria-label": "Answer choices" }, choices.map(function (text, i) {
             var on = item.picked === i;
@@ -1968,6 +1989,7 @@
             h("p", { class: "meta" }, "Question " + entry.n),
             h("span", { class: "tag bad" }, "Missed"),
             questionTags(q),
+            questionFigure(q, "q-figure q-figure-sm"),
             h("p", {}, q.question),
             h("p", {}, "Your answer: " + yours),
             h("p", {}, "Correct answer: " + q.choices[q.answer]),
@@ -2069,6 +2091,7 @@
       head,
       h("div", { class: "panel" },
         questionTags(q),
+        questionFigure(q, "q-figure"),
         h("h2", { class: "stem" }, q.question),
         h("div", { role: "radiogroup", "aria-label": "Answer choices" }, choiceEls),
         feedback,
@@ -2156,6 +2179,7 @@
             h("span", { class: "tag domain" }, domainLabel(q.domain)),
             h("span", { class: "tag topic" }, topicTitle(q.topic)),
             h("span", { class: "meta" }, q.id),
+            questionFigure(q, "q-figure q-figure-sm"),
             h("p", {}, q.question),
             h("p", {}, "Your answer: " + yours),
             h("p", {}, "Answer: " + q.choices[q.answer]),

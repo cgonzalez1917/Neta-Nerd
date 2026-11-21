@@ -372,3 +372,30 @@ a.jump:hover { border-color: var(--cyan); color: var(--cyan); }
   .tool-grid { grid-template-columns: 1fr; }
   .title-row { align-items: flex-start; }
 }
+
+/* Photo questions (equipment identification). Image above the stem; credit under it. */
+.q-figure {
+  margin: 4px 0 12px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--amber);
+  background: var(--bg-deep);
+  width: fit-content;
+  max-width: 100%;
+}
+.q-figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 300px;
+  margin: 0 auto;
+}
+.q-figure figcaption {
+  padding: 4px 8px;
+  border-top: 1px solid var(--line);
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+.q-figure-sm img { max-height: 180px; }

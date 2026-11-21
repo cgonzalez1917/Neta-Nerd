@@ -76,6 +76,7 @@ Pages serves the function from the `functions` directory with the existing empty
 - **Timed quiz** draws up to 25 questions from the same filters and allows 72 seconds each (30:00 when all 25 are used). Answers can be changed until you submit or the clock hits zero.
 - **Missed questions** stay in this browser’s `localStorage` until you answer them correctly.
 - **An in-progress drill** is saved on this device, one session at a time for practice, the timed quiz, missed review, and the mock exam. Leave or refresh and the home page offers Resume or Discard. Timed and mock clocks store the original end time, so a refresh keeps the remaining time and an exam that ran out while you were away is submitted on its own.
+- **Photo questions** show a product photo above the stem, with a small credit line under it, in every drill mode. The fields and photo rules are in `CONTRIBUTING.md`, and `img/questions/SOURCES.md` lists where each photo came from.
 
 Each question has a **Report a problem** link that opens a GitHub issue on this repo with the id and the stem filled in.
 

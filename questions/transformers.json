@@ -2360,5 +2360,53 @@
     "reference": "Locarno, Tully, and Wilson, The Detection of Mechanical Damage in Power Transformers Using the Sweep Frequency Response Analysis Method, in NETA Transformer Handbook, Vol. 1",
     "verified": true,
     "kb": "transformers.md#ttr"
+  },
+  {
+    "id": "xfmr-132",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Identify the equipment in the photo. Both doors are open.",
+    "choices": [
+      "Three-phase pad-mounted (compartmental) transformer",
+      "Ventilated dry-type transformer",
+      "Network protector",
+      "Low-voltage switchboard"
+    ],
+    "answer": 0,
+    "explanation": "This is a pad-mounted compartmental transformer. A green steel cabinet sits on a pad, with the transformer tank behind it and the cabinet split into a primary compartment and a secondary compartment, each behind its own locking door. Eaton describes its three-phase pad-mounted transformers as fluid-filled compartmental units, available live-front or dead-front, for indoor or outdoor sites. A dry-type transformer is a ventilated enclosure with no tank, liquid, or bushing compartments.",
+    "reference": "Manufacturer product page: Eaton three-phase pad-mounted transformer, eaton.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.eaton.com/us/en-us/catalog/medium-voltage-power-distribution-control-systems/three-phase-pad-mounted-transformer.html",
+    "image": "img/questions/eaton-pad-mounted-transformer.webp",
+    "image_alt": "Green outdoor cabinet with two doors open, showing two compartments with cable bushings and terminals.",
+    "image_credit": "Photo: Eaton",
+    "image_width": 508,
+    "image_height": 370
+  },
+  {
+    "id": "xfmr-133",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "component",
+    "question": "Identify the equipment in the photo.",
+    "choices": [
+      "Ventilated dry-type transformer",
+      "Liquid-filled pad-mounted transformer",
+      "Variable frequency drive",
+      "Automatic transfer switch"
+    ],
+    "answer": 0,
+    "explanation": "This is a ventilated dry-type transformer. It is a floor-standing steel enclosure with louvers so that air can cool the windings, and it has no tank, radiators, liquid level gauge, or pressure relief device. Square D identifies the EE75T3H as a three-phase dry-type transformer. Use the catalog or nameplate to confirm the type; do not assume that every plain metal enclosure contains a dry-type transformer.",
+    "reference": "Manufacturer product page: Schneider Electric (Square D) EE75T3H, se.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.se.com/us/en/product/EE75T3H/transformer-dry-type-75kva-3-phase-480v-delta-primary-208y-120v-secondary-20d-150c-rise/",
+    "image": "img/questions/sqd-ee75t3h-dry-type-transformer.webp",
+    "image_alt": "Floor-standing gray-brown steel enclosure with a louvered top cover and nameplate labels on the front.",
+    "image_credit": "Photo: Schneider Electric",
+    "image_width": 469,
+    "image_height": 600
   }
 ]
