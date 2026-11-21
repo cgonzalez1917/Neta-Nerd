@@ -1438,5 +1438,29 @@
     "reference": "ANSI/NETA ATS-2025, 7.22.2.B.2 and 7.22.2.D.2",
     "verified": true,
     "kb": "apparatus.md#emergency"
+  },
+  {
+    "id": "emg-081",
+    "level": "II",
+    "topic": "emergency-systems",
+    "domain": "component",
+    "question": "Identify the equipment in the photo. The door is open.",
+    "choices": [
+      "Automatic transfer switch",
+      "Heavy-duty safety switch",
+      "Lighting and appliance panelboard",
+      "Motor control center section"
+    ],
+    "answer": 0,
+    "explanation": "This is an automatic transfer switch. Inside is a double-throw power switch with source and load cable terminations, and the controller is mounted on the door. It moves the load between a normal source and an alternate or generator source. Eaton describes its contactor-type ATS as an interlocked, double-throw power switch driven by a solenoid mechanism, used to transfer critical loads between a preferred source and an alternate or generator source.",
+    "reference": "Manufacturer product page: Eaton contactor-type automatic transfer switches, eaton.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.eaton.com/us/en-us/catalog/low-voltage-power-distribution-controls-systems/contactor-type-automatic-transfer-switch.html",
+    "image": "img/questions/eaton-contactor-ats.webp",
+    "image_alt": "Gray floor enclosure with the door open, showing a switch assembly with cables at the bottom and a controller on the door.",
+    "image_credit": "Photo: Eaton",
+    "image_width": 339,
+    "image_height": 500
   }
 ]

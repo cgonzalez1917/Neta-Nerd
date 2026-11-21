@@ -214,5 +214,29 @@
     "reference": "ANSI/NETA ATS-2025, 7.16.2.1",
     "verified": true,
     "kb": "apparatus.md#drives"
+  },
+  {
+    "id": "asd-013",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Identify the device in the photo.",
+    "choices": [
+      "Variable frequency drive",
+      "Motor control center bucket",
+      "Molded-case circuit breaker",
+      "Protective relay"
+    ],
+    "answer": 0,
+    "explanation": "This is a variable frequency drive. It is a tall wall-mounted electronic unit with a keypad display and a cooled heat sink, and it feeds a three-phase motor at variable speed. Schneider Electric lists the ATV630 as a wall-mounted Altivar Process variable speed drive for three-phase motors, with forced-convection cooling. Soft starters can look similar, so confirm with the nameplate before you plan tests.",
+    "reference": "Manufacturer product page: Schneider Electric ATV630D30N4, se.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.se.com/us/en/product/ATV630D30N4/variable-speed-drive-altivar-process-atv600-atv630-30kw-40hp-380-to-480v-ip21-ul-type-1/",
+    "image": "img/questions/se-atv630-vfd.webp",
+    "image_alt": "Tall narrow black unit with a small display and keypad near the top behind a green trim.",
+    "image_credit": "Photo: Schneider Electric",
+    "image_width": 256,
+    "image_height": 600
   }
 ]

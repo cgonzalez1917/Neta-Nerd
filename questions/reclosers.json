@@ -196,5 +196,29 @@
     "reference": "IEEE C37.230-2020, 5.2.1 and 5.2.2; ANSI/NETA ETT-2026, 8.4.2.H.4 and 8.4.2.H.6",
     "verified": true,
     "kb": "relays.md#coordination"
+  },
+  {
+    "id": "recl-012",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Identify the device in the photo. It mounts on a pole or in a substation and is wired to a separate electronic control cabinet.",
+    "choices": [
+      "Three-phase automatic circuit recloser",
+      "Gang-operated air-break switch",
+      "Pole-mounted step-voltage regulator",
+      "Fixed capacitor bank"
+    ],
+    "answer": 0,
+    "explanation": "This is a three-phase recloser: three encapsulated poles on a common mechanism housing, run by an electronic control that trips it on a fault and recloses it. Eaton describes the NOVA as a three-phase, vacuum-interrupting recloser with solid epoxy-encapsulated interrupters, installed on poles or in substations. A sectionalizer can look similar, so use the model documentation rather than the number of poles alone to identify the device.",
+    "reference": "Manufacturer product page: Eaton NOVA three-phase recloser, eaton.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.eaton.com/us/en-us/catalog/medium-voltage-power-distribution-control-systems/nova-three-phase-recloser.html",
+    "image": "img/questions/eaton-nova-recloser.webp",
+    "image_alt": "Three gray insulated poles with sheds standing on a long gray mechanism housing.",
+    "image_credit": "Photo: Eaton",
+    "image_width": 600,
+    "image_height": 578
   }
 ]

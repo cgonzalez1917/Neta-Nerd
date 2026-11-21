@@ -250,5 +250,29 @@
     "reference": "NFPA 780-2026, 4.19.2.2 and 4.19.2.4 (background: not on the ETT reference list)",
     "verified": true,
     "kb": "life-safety.md#lightning"
+  },
+  {
+    "id": "arr-015",
+    "level": "II",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Identify the device in the photo.",
+    "choices": [
+      "Distribution-class surge arrester",
+      "Post insulator",
+      "Cable termination stress cone",
+      "Bushing current transformer"
+    ],
+    "answer": 0,
+    "explanation": "This is a distribution-class surge arrester. It is a two-terminal device in a silicone housing with sheds, with a line terminal on the top and a ground terminal on the bottom, connected from line to ground. Eaton describes these as polymeric distribution-class arresters for overvoltage protection, built to IEEE C62.11. A post insulator also has sheds but only holds a conductor up; it has no ground terminal and does not conduct surge current to ground.",
+    "reference": "Manufacturer product page: Eaton distribution arresters, eaton.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.eaton.com/us/en-us/catalog/medium-voltage-power-distribution-control-systems/distribution-arresters.html",
+    "image": "img/questions/eaton-ultrasil-arrester.webp",
+    "image_alt": "Gray polymer housing with stacked sheds, a cap on top and a metal stud at the bottom.",
+    "image_credit": "Photo: Eaton",
+    "image_width": 267,
+    "image_height": 600
   }
 ]

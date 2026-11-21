@@ -1062,5 +1062,53 @@
     "reference": "NFPA 70E-2024, 130.5(G)",
     "verified": true,
     "kb": "breakers.md#maintenance-mode"
+  },
+  {
+    "id": "brkr-060",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Identify the device in the photo.",
+    "choices": [
+      "Molded-case circuit breaker",
+      "Low-voltage power circuit breaker",
+      "Motor starter contactor",
+      "Busway plug-in unit"
+    ],
+    "answer": 0,
+    "explanation": "This is a molded-case circuit breaker: the mechanism and trip unit sit in one sealed molded housing, with lug terminals on the line and load ends and a toggle handle on the face. Square D lists the JGL36250 as a PowerPacT J-frame thermal-magnetic molded-case breaker with lugs on both ends and a push-to-trip button in the cover. A low-voltage power circuit breaker is a larger, open-frame device with a stored-energy closing mechanism and push buttons to open and close it, and it is often drawout.",
+    "reference": "Manufacturer product page: Schneider Electric (Square D) JGL36250, se.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.se.com/us/en/product/JGL36250/circuit-breaker-powerpact-j-250a-3-pole-600vac-18ka-lugs-thermal-magnetic-80/",
+    "image": "img/questions/sqd-jgl36250-mccb.webp",
+    "image_alt": "Black three-pole breaker body with lug openings at the top and bottom and a toggle handle in the middle.",
+    "image_credit": "Photo: Schneider Electric",
+    "image_width": 373,
+    "image_height": 600
+  },
+  {
+    "id": "brkr-061",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "Identify the device in the photo. It is installed in low-voltage switchgear or a switchboard.",
+    "choices": [
+      "Low-voltage power circuit breaker",
+      "Molded-case circuit breaker",
+      "Medium-voltage vacuum circuit breaker",
+      "Network protector"
+    ],
+    "answer": 0,
+    "explanation": "This is a low-voltage power circuit breaker, sometimes called an air circuit breaker. The front shows a trip unit and separate push buttons to close and open a spring-charged mechanism, which a toggle-handle molded-case breaker does not have. Eaton describes its Magnum DS line as ANSI low-voltage power circuit breakers for switchgear and switchboards, built in fixed and drawout versions. Do not infer a fixed or drawout mounting from the front view alone; confirm the construction and type from the model documentation.",
+    "reference": "Manufacturer product page: Eaton Magnum low-voltage power circuit breakers, eaton.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.eaton.com/us/en-us/catalog/electrical-circuit-protection/magnum-circuit-breakers.html",
+    "image": "img/questions/eaton-magnum-ds-power-breaker.webp",
+    "image_alt": "Gray breaker front panel with a trip unit on the left and green and red push buttons on the right.",
+    "image_credit": "Photo: Eaton",
+    "image_width": 562,
+    "image_height": 600
   }
 ]

@@ -507,3 +507,26 @@ body.exam-driver .td-count:focus-visible {
   .td-help-body { overflow: auto; }
   .td-help-bar button { min-width: 36px; min-height: 32px; justify-content: center; }
 }
+
+/* Photo questions in the practice test driver. */
+.td-figure {
+  margin: 0 0 14px;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid #c9c6dc;
+  background: #fff;
+}
+.td-figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 280px;
+  margin: 0 auto;
+}
+.td-figure figcaption {
+  padding: 3px 8px;
+  border-top: 1px solid #c9c6dc;
+  color: #555;
+  font-size: 12px;
+}

@@ -1222,5 +1222,53 @@
     "reference": "IEEE C37.110-2023, 5.2; ANSI/NETA ETT-2026, 8.4.3.F and 8.4.2.G",
     "verified": true,
     "kb": "instrument-transformers.md#ct-saturation-math"
+  },
+  {
+    "id": "ct-069",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Identify the device in the photo.",
+    "choices": [
+      "Window-type current transformer",
+      "Voltage transformer",
+      "Control power transformer",
+      "Surge arrester"
+    ],
+    "answer": 0,
+    "explanation": "This is a window-type current transformer. The primary is the cable or bar that passes through the open window, and the secondary leads land on the small marked terminals on the body. A voltage transformer has primary terminals instead of a window. Schneider Electric lists this part as a solid-core current transformer for cables or bars.",
+    "reference": "Manufacturer product page: Schneider Electric METSECT5MA030, se.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://www.se.com/uk/en/product/METSECT5MA030/current-transformer-tropicalised-din-mount-300-5-cables-d-27-bars-10x32-15x25/",
+    "image": "img/questions/se-metsect5-current-transformer.webp",
+    "image_alt": "Black rectangular block with a large oval opening through the middle and small screw terminals on top.",
+    "image_credit": "Photo: Schneider Electric",
+    "image_width": 432,
+    "image_height": 600
+  },
+  {
+    "id": "ct-070",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "component",
+    "question": "Identify the device in the photo. It is mounted inside medium-voltage metal-clad switchgear.",
+    "choices": [
+      "Voltage (potential) transformer",
+      "Window-type current transformer",
+      "Surge arrester",
+      "Vacuum interrupter"
+    ],
+    "answer": 0,
+    "explanation": "This is a voltage, or potential, transformer. It has a cast body with primary terminals connected to the bus, not a window for a conductor to pass through, and it steps the system voltage down for meters, relays, or control power. ABB describes the VIZ as an indoor voltage transformer for metal-clad switchgear, used for metering, relaying, or control power. A window-type current transformer instead has an opening for the primary cable or busbar.",
+    "reference": "Manufacturer product page: ABB VIZ voltage transformer, electrification.us.abb.com; per manufacturer data",
+    "verified": true,
+    "kb": "apparatus.md#equipment-id",
+    "link": "https://electrification.us.abb.com/products/instrument-transformers-sensors/viz-voltage-transformer-meteringprotection",
+    "image": "img/questions/abb-viz-voltage-transformer.webp",
+    "image_alt": "Black cast-resin block on a metal base, with a red-and-white cylinder mounted across the top.",
+    "image_credit": "Photo: ABB",
+    "image_width": 438,
+    "image_height": 399
   }
 ]
