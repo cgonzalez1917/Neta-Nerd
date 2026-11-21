@@ -288,9 +288,9 @@
       "To reverse the motor"
     ],
     "answer": 0,
-    "explanation": "Pressing START energizes the coil, which closes the starter's auxiliary holding contact. That contact is in parallel with START, so the coil stays in after the button springs back. STOP and the overload relay's normally closed contact are in series with the coil, so either one drops it out, and the starter won't pull back in by itself when power returns. The deciding fact was not in a source checked for this batch. It's standard control practice and needs a reviewer to confirm a citation.",
-    "reference": "Engineering fundamentals (three-wire start/stop control); not checked against a held source",
-    "verified": false,
+    "explanation": "Pressing START energizes the coil, which closes the starter's auxiliary holding contact. That contact is in parallel with START, so the coil stays in after the button springs back. STOP and the overload relay's normally closed contact are in series with the coil, so either one drops it out, and the starter won't pull back in by itself when power returns.",
+    "reference": "Field review: Cristian Gonzalez, NETA tester / electrician (Nov 21, 2026). Standard three-wire start/stop seal-in control practice.",
+    "verified": true,
     "kb": "apparatus.md#drive-basics"
   },
   {
