@@ -1270,5 +1270,149 @@
     "image_credit": "Photo: ABB",
     "image_width": 438,
     "image_height": 399
+  },
+  {
+    "id": "ct-071",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A relaying CT's nameplate shows C400. What does the 400 tell you?",
+    "choices": [
+      "The primary current rating is 400 A",
+      "The secondary terminal voltage it can deliver to a standard burden at 20 times rated current (100 A) while holding ratio error to 10%",
+      "Its maximum burden in volt-amperes",
+      "The knee-point voltage it must reach on an excitation test"
+    ],
+    "answer": 1,
+    "explanation": "For C and T classes, the number is the secondary terminal voltage the CT can drive into a standard relaying burden at 20 × rated secondary current (100 A on a 5 A CT) without the ratio error going past 10%. C400 pairs with standard burden B-4.0: 4 Ω × 100 A = 400 V. It isn't the primary rating, and it isn't the knee point. Source: IEEE C57.13-2016, 6.4.1.3 and Tables 12 and 13.",
+    "reference": "IEEE C57.13-2016, 6.4.1.3, Table 12 and Table 13",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-ratings"
+  },
+  {
+    "id": "ct-072",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "What separates a C-class relaying CT from a T-class relaying CT?",
+    "choices": [
+      "C is a metering class and T is a relaying class",
+      "In a C-class CT, core leakage flux has little effect, so the ratio can be calculated; in a T-class CT it does matter, so performance is found by test",
+      "T-class CTs are always more accurate than C-class",
+      "C-class CTs are made only with 1 A secondaries"
+    ],
+    "answer": 1,
+    "explanation": "Both are relaying classes, rated by the same secondary-terminal-voltage idea. In a C-class CT the leakage flux in the core doesn't appreciably affect the ratio within the class limits, so the ratio can be calculated. In a T-class CT the leakage flux does have an appreciable effect, so calculating isn't practical and the rating comes from test. Source: IEEE C57.13-2016, 6.4.1.1 and 6.4.1.2.",
+    "reference": "IEEE C57.13-2016, 6.4.1.1 and 6.4.1.2",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-ratings"
+  },
+  {
+    "id": "ct-073",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A 400:5 CT has a continuous thermal current rating factor (RF) of 2.0 at 30 °C ambient. In 30 °C air, it can carry continuously up to about:",
+    "choices": [
+      "400 A",
+      "600 A",
+      "800 A",
+      "8,000 A"
+    ],
+    "answer": 2,
+    "explanation": "RF multiplies the rated primary current for continuous duty without exceeding the CT's temperature limits at a 30 °C average ambient: 2.0 × 400 = 800 A. Hotter air derates it. The standard's own example puts an RF 2.0 CT at roughly 150% of rating in 55 °C ambient. RF is a continuous thermal rating, not a short-time or fault rating. Source: IEEE C57.13-2016, 4.4.2 and 6.5.",
+    "reference": "IEEE C57.13-2016, 4.4.2 and 6.5",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-ratings"
+  },
+  {
+    "id": "ct-074",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "A metering CT is rated 0.3 B-1.8, stated at the maximum burden it's rated for. What does that imply at B-0.5?",
+    "choices": [
+      "Nothing; every burden has to be stated separately",
+      "It's also accuracy class 0.3 at B-0.5 and the other lower standard burdens",
+      "It drops to class 0.6 at B-0.5",
+      "B-0.5 is above its rating"
+    ],
+    "answer": 1,
+    "explanation": "When the class is stated for the maximum burden, it carries down to the lower standard burdens: 0.3 B-1.8 implies 0.3 at B-0.1, B-0.2, B-0.5, and B-0.9. A rating written for one burden only (such as 0.3 at B-0.5) or for a range doesn't guarantee other burdens. Very low electronic-meter burdens near unity power factor are a separate caution. Source: IEEE C57.13-2016, 6.3 and Table 10.",
+    "reference": "IEEE C57.13-2016, 6.3 and Table 10",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-ratings"
+  },
+  {
+    "id": "ct-075",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "Standard metering burden B-0.5 on a 5 A CT secondary represents about how many volt-amperes at rated current?",
+    "choices": [
+      "2.5 VA",
+      "5.0 VA",
+      "12.5 VA",
+      "25 VA"
+    ],
+    "answer": 2,
+    "explanation": "The number after B is the burden's total impedance in ohms, here 0.5 Ω at 0.9 power factor. VA = I² × Z = 5² × 0.5 = 12.5 VA. B-0.1 works out to 2.5 VA, and the relaying burden B-1.0 to 25 VA. Source: IEEE C57.13-2016, Table 10; arithmetic.",
+    "reference": "IEEE C57.13-2016, Table 10; arithmetic",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-ratings"
+  },
+  {
+    "id": "ct-076",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "Over what conditions does a voltage transformer hold its metering accuracy class?",
+    "choices": [
+      "Any burden from zero up to its specified standard burden, at that burden's power factor, and from 90% to 110% of rated voltage",
+      "Only at exactly rated voltage and exactly rated burden",
+      "Any burden at all, from 50% to 150% of rated voltage",
+      "Only at 10% and 100% of rated current"
+    ],
+    "answer": 0,
+    "explanation": "For a VT the class applies across the whole span from no burden up to the specified standard burden, at that standard burden's power factor, and anywhere from 90% to 110% of rated voltage. The 10% (or 5%) and 100% current points are how CT classes are defined. A lower burden at a different power factor isn't automatically in the same class. Source: IEEE C57.13-2016, 5.1 b).",
+    "reference": "IEEE C57.13-2016, 5.1 b)",
+    "verified": true,
+    "kb": "instrument-transformers.md#vt-basics"
+  },
+  {
+    "id": "ct-077",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "Why must a voltage transformer secondary never be shorted, and why is it fused?",
+    "choices": [
+      "A shorted VT secondary is harmless, because the VT's impedance holds current to rated",
+      "With full voltage on the primary, a secondary short drives very high current, and the VT is only required to survive it for 1 second",
+      "Shorting the secondary is how a VT is demagnetized",
+      "A VT secondary behaves like a current source, the same as a CT"
+    ],
+    "answer": 1,
+    "explanation": "A VT acts like a voltage source. Short the secondary with the primary energized and only the VT's small internal impedance limits the current. The standard requires a VT to withstand a secondary short with full primary voltage for 1 second, not indefinitely, so fusing has to clear it. A CT is the reverse case: never open its secondary while primary current can flow. Source: IEEE C57.13-2016, 7.7.",
+    "reference": "IEEE C57.13-2016, 7.7",
+    "verified": true,
+    "kb": "instrument-transformers.md#vt-basics"
+  },
+  {
+    "id": "ct-078",
+    "level": "II",
+    "topic": "instrument-transformers",
+    "domain": "theory",
+    "question": "On an instrument transformer with correct polarity, primary current is entering H1 at some instant. At that same instant, secondary current is:",
+    "choices": [
+      "Entering X1",
+      "Leaving X1, as if the circuit simply continued from H1 out through X1",
+      "Changing direction every quarter cycle relative to H1",
+      "Zero"
+    ],
+    "answer": 1,
+    "explanation": "Same polarity describes the relative instantaneous current directions: current going into the primary polarity lead comes out of the secondary polarity lead, as though the path ran straight through. That's why the polarity marks sit on the same side on drawings. Reverse a CT and its secondary current shifts 180°, which wrecks differential, directional, and metering circuits. Source: IEEE C57.13-2016, 4.9.1 and 8.3.",
+    "reference": "IEEE C57.13-2016, 4.9.1 and 8.3",
+    "verified": true,
+    "kb": "instrument-transformers.md#ct-ratings"
   }
 ]

@@ -220,5 +220,77 @@
     "image_credit": "Photo: Eaton",
     "image_width": 600,
     "image_height": 578
+  },
+  {
+    "id": "recl-013",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "ATS 7.24.1's visual and mechanical inspection of an oil or vacuum recloser includes mechanical operation and contact alignment tests. What are they done on, and what are they judged against?",
+    "choices": [
+      "The recloser and its operating mechanism, against the manufacturer's published data",
+      "The control cabinet only, against Table 100.1",
+      "The bushings only, against Table 100.19",
+      "The recloser only, against the 50 percent rule"
+    ],
+    "answer": 0,
+    "explanation": "Both the recloser and its operating mechanism get mechanical operation and contact alignment checks, and the results are held to the manufacturer's data. Exercise the mechanism before you trust the electronic control. The 50 percent rule is for bolted connections and contact resistance, Table 100.1 is insulation resistance, and Table 100.19 is the withstand table. Source: ANSI/NETA ATS-2025 7.24.1.A.5 and C.1.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.A.5 and C.1",
+    "verified": true,
+    "kb": "apparatus.md#recloser-inspection"
+  },
+  {
+    "id": "recl-014",
+    "level": "II",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Which of these is on the ATS 7.24.1 visual and mechanical list for an oil recloser?",
+    "choices": [
+      "Verify the insulating liquid level, held to the manufacturer's tolerances",
+      "Verify racking mechanism operation",
+      "Verify blade penetration and travel stops",
+      "Record the as-found and as-left operation counter readings"
+    ],
+    "answer": 0,
+    "explanation": "Liquid level is a recloser inspection item, judged against the manufacturer's recommended tolerances. Racking belongs to drawout breakers, blade penetration and travel stops to open air switches, and the counter readings show up on the vacuum breaker and air switch lists, not the 7.24.1 inspection list. Source: ANSI/NETA ATS-2025 7.24.1.A.7 and C.3; 7.6.3.A.10 and A.15; 7.5.1.3.A.7 and A.14.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.A.7 and C.3; 7.6.3.A.10 and A.15; 7.5.1.3.A.7 and A.14",
+    "verified": true,
+    "kb": "apparatus.md#recloser-inspection"
+  },
+  {
+    "id": "recl-015",
+    "level": "III",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "A recloser tripped four times on a permanent fault and has stopped reclosing. What state is it in, and how does it get back to its normal sequence?",
+    "choices": [
+      "Lockout; it needs a local or supervisory close, and then a reset interval before the full sequence is available again",
+      "Hold-closed; it will reclose by itself after 5 minutes",
+      "Failed; the vacuum bottles must be replaced",
+      "Lockout; it will reclose automatically once the fault clears"
+    ],
+    "answer": 0,
+    "explanation": "After running through all its programmed operations without restoring the circuit, a recloser goes to lockout, which blocks any more reclosing. Lockout can also be set locally or over SCADA. Leaving lockout takes a local or supervisory close command, and then the resetting interval has to run before the count is back to the full number of operations. Three reclose intervals (four trips) is the usual industry sequence. Source: IEEE C37.60-2018, Annex F, F.4 b) through d).",
+    "reference": "IEEE C37.60-2018, Annex F, F.4 b) through d)",
+    "verified": true,
+    "kb": "apparatus.md#reclosers-l3"
+  },
+  {
+    "id": "recl-016",
+    "level": "III",
+    "topic": "reclosers",
+    "domain": "component",
+    "question": "Why would a utility use a three-phase recloser rather than three single-phase reclosers on a feeder serving large three-phase motors?",
+    "choices": [
+      "A three-phase recloser locks out all three phases on a permanent fault, so the motors aren't left single-phasing",
+      "Single-phase reclosers can't interrupt fault current",
+      "Three-phase reclosers don't need a control",
+      "Single-phase reclosers aren't made above 15 kV"
+    ],
+    "answer": 0,
+    "explanation": "Single-phase reclosers can lock out only the faulted phase and keep the other two phases in service, which suits mostly single-phase load. Three-phase motors would then run single-phased. A three-phase recloser locks out all three phases for a permanent fault. Source: IEEE C37.60-2018, Annex F, F.3.",
+    "reference": "IEEE C37.60-2018, Annex F, F.3",
+    "verified": true,
+    "kb": "apparatus.md#reclosers-l3"
   }
 ]

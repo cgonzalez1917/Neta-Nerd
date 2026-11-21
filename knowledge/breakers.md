@@ -109,3 +109,13 @@ Product example, Eaton PXR 20/25 (manual MN013003EN, 3.5 and 4.6):
 Testing: relay-based arc-energy reduction schemes are checked under ATS-2025 7.9.2.B.6: element pickup and timing, zone interlocking, normal versus maintenance mode logic, communication-failure alarms, and light-sensor pickup against ambient. ATS-2025 7.27 is reserved, so there is no separate section yet. For trip units, prove the mode per the manufacturer.
 
 Labels: NFPA 70E-2024 130.5(G) requires the incident energy analysis to account for the device's clearing time, including its condition of maintenance. A breaker that hasn't been exercised and trips slowly can make the label understate the hazard.
+
+## Charging motors {#charging-motor}
+
+*Level: II*
+
+Sources: NEMA AB 4-2017, 8.6.2; ANSI/NETA ATS-2025 7.6.1.2.B.9 and D.10, 7.8.B.7 to B.9.
+
+- On an insulated-case breaker with a spring-charging motor, AB 4 has you confirm the motor works and that charging doesn't take too long. Judge the time against the manufacturer's data. A slow charge can point to low control voltage or a dragging mechanism.
+- ATS judges a power breaker's charging mechanism against the manufacturer's data.
+- On a 600 V network protector, ATS checks that the motor can charge the closing mechanism at the manufacturer's minimum control voltage, along with minimum pickup of the motor control relay and the trip actuator.

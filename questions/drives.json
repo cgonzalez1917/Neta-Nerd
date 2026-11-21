@@ -238,5 +238,95 @@
     "image_credit": "Photo: Schneider Electric",
     "image_width": 256,
     "image_height": 600
+  },
+  {
+    "id": "asd-014",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "A typical PWM drive takes in fixed 60 Hz ac and puts out variable-frequency ac. In what order does power pass through its main sections?",
+    "choices": [
+      "Inverter, then dc bus, then rectifier",
+      "Rectifier (ac to dc), then the dc bus (link), then the inverter (dc to variable-frequency ac)",
+      "Transformer, then rectifier, then straight to the motor",
+      "Rectifier straight to the motor, with the dc bus used only for braking"
+    ],
+    "answer": 1,
+    "explanation": "The rectifier turns incoming ac into dc. The dc link holds that voltage, using capacitors and in some designs a choke. The voltage-source inverter switches the dc bus to build variable-frequency ac for the motor. Knowing the sections helps you read a drive schematic and find where energy is stored. Source: NEMA ICS 7.2-2021, Section 3 (rectifier; voltage source inverter) and 5.2.7 (dc link capacitors).",
+    "reference": "NEMA ICS 7.2-2021, Section 3 (rectifier; voltage source inverter) and 5.2.7",
+    "verified": true,
+    "kb": "apparatus.md#drive-basics"
+  },
+  {
+    "id": "asd-015",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "Compared with starting a motor across the line, what's one advantage of starting it with a drive?",
+    "choices": [
+      "The motor doesn't see across-the-line inrush, because the drive and motor start together and the drive brings frequency and voltage up",
+      "The motor starts above nameplate speed",
+      "Drive starting removes the need for motor overload protection",
+      "Drive starting raises the available fault current"
+    ],
+    "answer": 0,
+    "explanation": "When a drive and its motor start together, the motor isn't hit with the inrush of an across-the-line start. The exception: if a drive is already running other motors and you switch one more onto it, the drive has to supply that motor's inrush and may need to be oversized. Overload protection is still required, and ATS 7.17 checks it. Source: NEMA ICS 7.2-2021, 5.2.12.1; ANSI/NETA ATS-2025 7.17.A.7.",
+    "reference": "NEMA ICS 7.2-2021, 5.2.12.1; ANSI/NETA ATS-2025 7.17.A.7",
+    "verified": true,
+    "kb": "apparatus.md#drive-basics"
+  },
+  {
+    "id": "asd-016",
+    "level": "II",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "In a standard three-wire start/stop circuit for a motor starter, why is a normally open auxiliary contact of the starter wired in parallel with the START pushbutton?",
+    "choices": [
+      "To seal in (hold) the coil after START is released, so the motor runs until STOP or the overload contact opens the circuit",
+      "To bypass the overload relay contact while starting",
+      "To delay tripping on undervoltage",
+      "To reverse the motor"
+    ],
+    "answer": 0,
+    "explanation": "Pressing START energizes the coil, which closes the starter's auxiliary holding contact. That contact is in parallel with START, so the coil stays in after the button springs back. STOP and the overload relay's normally closed contact are in series with the coil, so either one drops it out, and the starter won't pull back in by itself when power returns. The deciding fact was not in a source checked for this batch. It's standard control practice and needs a reviewer to confirm a citation.",
+    "reference": "Engineering fundamentals (three-wire start/stop control); not checked against a held source",
+    "verified": false,
+    "kb": "apparatus.md#drive-basics"
+  },
+  {
+    "id": "asd-017",
+    "level": "III",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "A drive feeds its motor through a long cable. What does NEMA ICS 7.2 say about cable length and peak voltage at the motor terminals?",
+    "choices": [
+      "A longer cable lowers the peak, because of cable resistance",
+      "Peak voltage at the motor rises with cable length; with IGBT drives it can reach about twice the dc bus voltage in under 50 ft, and very long runs can ring higher",
+      "Cable length matters only beyond 1,000 ft",
+      "Peak voltage depends only on motor horsepower"
+    ],
+    "answer": 1,
+    "explanation": "Fast drive pulses reflect at the motor end of the cable. With modern IGBT drives the overshoot starts with only a few feet of cable and can reach about two times the dc bus voltage at less than 50 ft. On very long runs (the guide uses more than 400 ft as an example) the peak may not die out between pulses and can ring well past twice the bus voltage. Shorter pulse rise times make the peak higher. Source: NEMA ICS 7.2-2021, 5.2.9.2.1 and 5.2.9.2.2.",
+    "reference": "NEMA ICS 7.2-2021, 5.2.9.2.1 and 5.2.9.2.2",
+    "verified": true,
+    "kb": "apparatus.md#drives-l3"
+  },
+  {
+    "id": "asd-018",
+    "level": "III",
+    "topic": "drives-mcc",
+    "domain": "component",
+    "question": "A drive running in constant volts-per-hertz mode adds 'voltage boost' at low speed. What is the boost making up for?",
+    "choices": [
+      "The voltage drop in the stator winding, which is a bigger share of the small applied voltage at low frequency",
+      "Excess motor current at full speed",
+      "Line-side harmonics",
+      "dc bus overvoltage during braking"
+    ],
+    "answer": 0,
+    "explanation": "Volts per hertz is the ratio of fundamental output voltage to frequency. At low frequency the applied voltage is small, and the stator winding's voltage drop takes a bigger share of it, so flux and torque sag. Boost adds voltage above the straight V/Hz line, mostly at low frequencies, to cover that drop. Source: NEMA ICS 7.2-2021, Section 3 (voltage boost; volts/Hz ratio).",
+    "reference": "NEMA ICS 7.2-2021, Section 3 (voltage boost; volts/Hz ratio)",
+    "verified": true,
+    "kb": "apparatus.md#drives-l3"
   }
 ]

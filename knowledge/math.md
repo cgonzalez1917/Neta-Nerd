@@ -115,6 +115,10 @@ A divider: 480 V across 30 Ω in series with 10 Ω. Current is `480 / 40 = 12 A`
 
 Inductors combine like resistors. 20 mH in series with 20 mH is 40 mH. The same two in parallel are 10 mH.
 
+Kirchhoff's current law is the other half: current into a junction equals current out. 100 A in, with branches of 35 A and 40 A at the same power factor, leaves 25 A for the third branch. With different phase angles, add the currents as phasors.
+
+An open element in a series loop reads the whole source voltage, because no current flows and nothing else drops any voltage. Across an open switch in a 120 V lamp circuit you read 120 V, and across the lamp about 0 V. The same reading finds an open fuse.
+
 ## CT ratio {#ct-ratio}
 
 *Level: II*
@@ -265,6 +269,30 @@ Conductor resistance is proportional to length. Check the units every time you u
 - From a measured run to a per-1000-ft value: `R_per_1000ft = R_measured × (1000 / length)`. A 2,000 ft shield that measures 30 Ω is 15 Ω per 1000 ft.
 
 If an answer says a long run reads less than its per-1000-ft value, the fraction is upside down.
+
+## AC circuit behavior {#ac-behavior}
+
+*Level: II*
+
+Sources: EEI Handbook for Electricity Metering, 11th ed., ch. 4; the NETA formula sheet.
+
+- **Which way the current swings.** In a series circuit, net reactance is XL − XC. If XL is larger, the circuit is inductive and current lags voltage (lagging power factor). If XC is larger, current leads. If they're equal, the circuit is at series resonance: the reactances cancel, only R limits current, and the power factor is 1. Worked: R = 8 Ω, XL = XC = 15 Ω on 120 V gives Z = 8 Ω and 15 A.
+- **Pure reactance uses no real power.** In an ideal inductor or capacitor, the current is 90° from the voltage, so P = VI cos 90° = 0. The volt-amperes are all reactive. 120 V × 5 A into an ideal inductor is 600 var and 0 W. That current still heats the wiring.
+- **Inductors absorb vars, capacitors supply them.** Motors and transformer magnetizing current absorb reactive power. A shunt capacitor bank produces it. Add capacitors to a lagging load and the source delivers less kvar, kVA falls, line current falls, and kW stays about where the work puts it.
+- **DC steady state.** At f = 0, XL = 0 and XC is effectively infinite. After the transient dies out, an ideal inductor looks like a wire and a charged capacitor looks like an open. That's why winding-resistance readings take time to settle and a cable on an insulation tester charges before it reads leakage.
+- **Heat goes with current squared.** P = I²R. 1.5 times the current through the same joint is 2.25 times the heat. Two times the current is four times the heat.
+
+## Three-phase and three-wire relationships {#three-phase}
+
+*Level: II*
+
+Sources: EEI Handbook for Electricity Metering, 11th ed., ch. 4; the NETA formula sheet.
+
+- **Wye voltages.** V(L-L) = √3 × V(L-N). With ABC (positive) sequence, V_AB leads V_AN by 30°. With ACB it lags by 30°.
+- **Same answer two ways.** A balanced wye load at 277 V, 50 A, and 0.90 PF per phase is 3 × 277 × 50 × 0.90 ≈ 37.4 kW. √3 × 480 × 50 × 0.90 gives the same 37.4 kW. Leaving out the power factor gives kVA (41.6 kVA), not kW.
+- **Wye versus delta on the same supply.** Three 10 Ω resistors in wye on 480 V each see 277 V: about 23 kW total. In delta each sees 480 V: about 69 kW. Voltage per element rises by √3, power by 3.
+- **Three-wire (120/240 V) neutral.** With balanced legs the neutral carries nothing. With resistive loads it carries the difference: 40 A and 25 A legs leave 15 A on the neutral.
+- **Open neutral.** The two loads end up in series across 240 V. 6 Ω and 18 Ω in series is 24 Ω, so 10 A flows. The 18 Ω load gets 180 V and the 6 Ω load gets 60 V. The lightly loaded side gets the overvoltage.
 
 ## Level III {#math-level-iii}
 

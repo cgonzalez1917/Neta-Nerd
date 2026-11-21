@@ -274,5 +274,41 @@
     "image_credit": "Photo: Eaton",
     "image_width": 267,
     "image_height": 600
+  },
+  {
+    "id": "arr-016",
+    "level": "III",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "On a distribution arrester, you find the ground lead hanging free where the disconnector has separated. What does that mean?",
+    "choices": [
+      "The arrester carried power-frequency fault current at end of life; the disconnector isolated it so service could be restored, and the arrester must be replaced",
+      "A normal lightning discharge; reconnect the lead",
+      "The arrester's MCOV is set too high",
+      "The disconnector tested itself; no action needed"
+    ],
+    "answer": 0,
+    "explanation": "Disconnectors are designed to ride through surges without operating and to separate only when power-frequency current flows through an overloaded, failed arrester. Separation flags the arrester as failed and takes it out of the circuit so the line can be restored. Replace the arrester. Reconnecting the lead puts a shorted arrester back on the line. Source: IEEE C62.11-2020, Annex D, D.8.18.",
+    "reference": "IEEE C62.11-2020, Annex D, D.8.18",
+    "verified": true,
+    "kb": "apparatus.md#arresters-l3"
+  },
+  {
+    "id": "arr-017",
+    "level": "III",
+    "topic": "surge-arresters",
+    "domain": "component",
+    "question": "Why do arrester lead length and the distance from the arrester to the transformer matter?",
+    "choices": [
+      "The voltage at the protected insulation is usually higher than at the arrester terminals, because surges oscillate on the connecting leads; the rise grows with steeper surges and longer distances",
+      "Longer leads lower the arrester's discharge voltage",
+      "They matter only for switching surges",
+      "They don't; only MCOV matters"
+    ],
+    "answer": 0,
+    "explanation": "C62.22 calls this rise a separation effect. A lightning surge oscillates on the leads and conductor between the arrester and the equipment, so the insulation sees more than the arrester's discharge voltage. The effect grows with faster-rising surges and greater separation, and it can be ignored for slow switching surges. When the protective margin comes up short, one listed fix is to move the arrester closer to the transformer. Source: IEEE C62.22-2009, 4.5 and 5.2.6.",
+    "reference": "IEEE C62.22-2009, 4.5 and 5.2.6",
+    "verified": true,
+    "kb": "apparatus.md#arresters-l3"
   }
 ]

@@ -2754,5 +2754,257 @@
     "reference": "IEEE 242-2001, 2.7 Equations (2-4) and (2-5); Blackburn and Domin, Protective Relaying, 4th ed., Ch. 4; ANSI/NETA ETT-2026, 8.4.2.B and 8.4.2.H.6",
     "verified": true,
     "kb": "math.md#sequence"
+  },
+  {
+    "id": "math-176",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "In a series circuit, the inductive reactance is larger than the capacitive reactance. How does the current relate to the applied voltage?",
+    "choices": [
+      "Current is in phase with the voltage",
+      "Current lags the voltage, so the power factor is lagging",
+      "Current leads the voltage, so the power factor is leading",
+      "No current flows, because the reactances cancel"
+    ],
+    "answer": 1,
+    "explanation": "Net reactance (XL − XC) is positive, so the circuit behaves inductively: current lags voltage and the displacement power factor is lagging. If XC were the larger one, current would lead. Only when XL equals XC (series resonance) is the current in phase, and then only R limits it. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Impedance).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Impedance); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Z = √(R² + (XL − XC)²))",
+    "verified": true,
+    "kb": "math.md#ac-behavior"
+  },
+  {
+    "id": "math-177",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A series circuit on 120 V has R = 8 Ω, XL = 15 Ω, and XC = 15 Ω. What are the current and the power factor?",
+    "choices": [
+      "15 A at unity power factor",
+      "8 A at 0.47 lagging",
+      "4 A at unity power factor",
+      "0 A, because the reactances cancel"
+    ],
+    "answer": 0,
+    "explanation": "XL and XC are equal, so they cancel (series resonance). Z = √(8² + (15 − 15)²) = 8 Ω, I = 120 / 8 = 15 A, and PF = R / Z = 8 / 8 = 1.0. Resonance doesn't mean zero current. It means only the resistance is left to limit it. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Impedance); NETA Official Electrical Formulae Sheet (updated June 29, 2017).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Impedance); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (Z, cos Θ = R/Z)",
+    "verified": true,
+    "kb": "math.md#ac-behavior"
+  },
+  {
+    "id": "math-178",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "An ideal inductor on 120 V, 60 Hz draws 5 A. How much real power does it consume?",
+    "choices": [
+      "600 W",
+      "0 W; the 600 VA is all reactive",
+      "300 W",
+      "1,039 W"
+    ],
+    "answer": 1,
+    "explanation": "In a pure inductance the current lags the voltage by 90°, so P = VI cos 90° = 0. The 120 × 5 = 600 VA is reactive power (600 var) that swaps between the source and the magnetic field every quarter cycle. It still loads the wiring and causes I²R loss there, but the inductor itself uses no average power. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Power and energy in single-phase AC circuits); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (P = VI cos Θ).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Power and energy in single-phase AC circuits); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (P = VI cos Θ)",
+    "verified": true,
+    "kb": "math.md#ac-behavior"
+  },
+  {
+    "id": "math-179",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 120/240 V three-wire service feeds a 6 Ω resistive load on one leg and an 18 Ω resistive load on the other. The neutral opens. About what voltage now appears across the 18 Ω load?",
+    "choices": [
+      "120 V",
+      "60 V",
+      "180 V",
+      "240 V"
+    ],
+    "answer": 2,
+    "explanation": "With the neutral open, the two loads end up in series across 240 V: 6 + 18 = 24 Ω, so I = 240 / 24 = 10 A. The 18 Ω load drops 10 × 18 = 180 V and the 6 Ω load drops 60 V. The lighter load (higher resistance) gets overvoltage and the heavier load is starved, which is how an open neutral burns out small equipment. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Three-wire Edison distribution system); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (V = IR).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Three-wire Edison distribution system); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (V = IR)",
+    "verified": true,
+    "kb": "math.md#three-phase"
+  },
+  {
+    "id": "math-180",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "On a 120/240 V three-wire feeder with resistive loads, one leg carries 40 A to neutral and the other carries 25 A to neutral. The neutral carries about:",
+    "choices": [
+      "65 A",
+      "15 A",
+      "32.5 A",
+      "0 A"
+    ],
+    "answer": 1,
+    "explanation": "The two halves of a three-wire system are in series opposition through the neutral, so the neutral carries only the difference: 40 − 25 = 15 A. Balanced legs give zero neutral current. EEI shows this on the three-wire Edison system; with resistive loads a 120/240 V single-phase service behaves the same way. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Three-wire Edison distribution system).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Three-wire Edison distribution system)",
+    "verified": true,
+    "kb": "math.md#three-phase"
+  },
+  {
+    "id": "math-181",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 100 A feeder enters a junction and leaves on three branches, all at the same power factor. Two branches read 35 A and 40 A. The third branch carries:",
+    "choices": [
+      "25 A",
+      "75 A",
+      "100 A",
+      "175 A"
+    ],
+    "answer": 0,
+    "explanation": "Kirchhoff's current law: current into a junction equals current out. 100 − 35 − 40 = 25 A. The same-power-factor condition is why plain subtraction works. With different phase angles you'd have to add the branch currents as phasors. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Kirchhoff's current law).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Kirchhoff's current law)",
+    "verified": true,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-182",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "In a balanced wye system with ABC (positive) phase sequence, how does the line-to-line voltage V_AB compare with the line-to-neutral voltage V_AN?",
+    "choices": [
+      "Same magnitude, in phase with V_AN",
+      "√3 times larger, leading V_AN by 30°",
+      "√3 times larger, lagging V_AN by 30°",
+      "Twice as large, 120° from V_AN"
+    ],
+    "answer": 1,
+    "explanation": "V_AB = V_AN − V_BN. For a balanced ABC set that difference is √3 times V_AN and sits 30° ahead of it. With ACB (negative) sequence it lags by 30° instead. That √3 is why 480 V line to line is 277 V line to neutral. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Balanced three-phase loads); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (V L-L = √3 × V L-N).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Balanced three-phase loads); NETA Official Electrical Formulae Sheet (updated June 29, 2017) (V L-L = √3 × V L-N)",
+    "verified": true,
+    "kb": "math.md#three-phase"
+  },
+  {
+    "id": "math-183",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Three 10 Ω resistors draw about 23 kW when wye-connected to a 480 V three-phase supply. Reconnected in delta on the same supply, they draw about:",
+    "choices": [
+      "7.7 kW",
+      "23 kW (no change)",
+      "40 kW",
+      "69 kW"
+    ],
+    "answer": 3,
+    "explanation": "In wye each resistor sees 480 / 1.732 ≈ 277 V: 3 × 277² / 10 ≈ 23.0 kW. In delta each resistor sees the full 480 V: 3 × 480² / 10 ≈ 69.1 kW. Voltage per element goes up by √3, so power goes up by 3. 40 kW is the mistake of scaling by √3 instead of 3. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (balanced wye and delta; V = IR, P = IV).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (balanced wye and delta; V = IR, P = IV)",
+    "verified": true,
+    "kb": "math.md#three-phase"
+  },
+  {
+    "id": "math-184",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A bolted joint's resistance stays the same while its current rises from 200 A to 300 A. The I²R heat produced at the joint rises by a factor of about:",
+    "choices": [
+      "1.5",
+      "2.25",
+      "3.0",
+      "4.5"
+    ],
+    "answer": 1,
+    "explanation": "P = I²R, so heat scales with the square of the current ratio: (300 / 200)² = 1.5² = 2.25. That square is why the load at the time of an infrared scan matters as much as the reading. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (P = I²R).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (P = I²R)",
+    "verified": true,
+    "kb": "math.md#ac-behavior"
+  },
+  {
+    "id": "math-185",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "Shunt capacitors are added at an MCC that feeds lagging induction-motor load. The motors keep doing the same work. What changes on the supply side?",
+    "choices": [
+      "kW drops and kvar stays the same",
+      "kvar and line current drop, and kW stays about the same",
+      "kW and line current both rise",
+      "The power factor becomes more lagging"
+    ],
+    "answer": 1,
+    "explanation": "Inductive load absorbs reactive power and capacitors produce it, so the capacitors supply part of the motors' kvar locally. The source delivers less kvar. kW is set by the mechanical work, so it barely moves. With less kvar, kVA falls, the power factor moves toward 1, and line current drops for the same kW. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Power triangle; Balanced three-phase loads).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Power triangle; Balanced three-phase loads)",
+    "verified": true,
+    "kb": "math.md#ac-behavior"
+  },
+  {
+    "id": "math-186",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A dc source has been connected for a long time. How do an ideal inductor and an ideal capacitor in the circuit behave?",
+    "choices": [
+      "The inductor acts like an open circuit and the capacitor like a short",
+      "The inductor acts like a short circuit and the capacitor like an open",
+      "Both act like short circuits",
+      "Both act like open circuits"
+    ],
+    "answer": 1,
+    "explanation": "At dc, f = 0. XL = 2πfL = 0, so an ideal inductor passes steady current like a wire. XC = 1/(2πfC) grows without limit, so a charged capacitor blocks steady current. That's why winding-resistance readings take time to settle, and why a cable on an insulation tester charges first and then draws only leakage. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL = 2πfL, XC = 1/2πfC).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (XL = 2πfL, XC = 1/2πfC)",
+    "verified": true,
+    "kb": "math.md#ac-behavior"
+  },
+  {
+    "id": "math-187",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A 120 V circuit has a switch in series with a lamp. With the switch open, what does a voltmeter read across the switch, and across the lamp?",
+    "choices": [
+      "0 V across the switch, 120 V across the lamp",
+      "120 V across the switch, about 0 V across the lamp",
+      "60 V across each",
+      "120 V across both"
+    ],
+    "answer": 1,
+    "explanation": "No current flows, so there's no IR drop across the lamp (about 0 V). Kirchhoff's voltage law still says the drops around the loop add up to the source, so the whole 120 V shows up across the open contact. The same idea finds an open fuse in a series string: the open element reads the source voltage. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Kirchhoff's voltage law).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Kirchhoff's voltage law)",
+    "verified": true,
+    "kb": "math.md#kvl"
+  },
+  {
+    "id": "math-188",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "A balanced wye load draws 50 A per phase at 277 V line to neutral and 0.90 power factor. Total three-phase real power is about:",
+    "choices": [
+      "12.5 kW",
+      "21.6 kW",
+      "37.4 kW",
+      "41.6 kW"
+    ],
+    "answer": 2,
+    "explanation": "Per phase: 277 × 50 × 0.90 ≈ 12.5 kW. Three phases: ≈ 37.4 kW. √3 × 480 × 50 × 0.90 gives the same 37.4 kW, because 480 = √3 × 277. 41.6 kW leaves out the power factor (it's the kVA), and 12.5 kW is one phase. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (P = VI cos Θ; three-phase VA = √3VI; balanced wye).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (P = VI cos Θ; three-phase VA = √3VI; balanced wye)",
+    "verified": true,
+    "kb": "math.md#three-phase"
+  },
+  {
+    "id": "math-189",
+    "level": "II",
+    "topic": "meters-math",
+    "domain": "theory",
+    "question": "On a three-phase system, which of these produces (supplies) reactive power rather than absorbing it?",
+    "choices": [
+      "An induction motor",
+      "A shunt capacitor bank",
+      "A resistance heater",
+      "A transformer's magnetizing current"
+    ],
+    "answer": 1,
+    "explanation": "Inductive reactance absorbs reactive power: motors and transformer magnetizing current. Capacitive reactance produces it. A resistor takes only real power. That sign difference is why a capacitor bank can offset motor kvar. Source: EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Balanced three-phase loads).",
+    "reference": "EEI Handbook for Electricity Metering, 11th ed., ch. 4 (Balanced three-phase loads)",
+    "verified": true,
+    "kb": "math.md#three-phase"
   }
 ]

@@ -2408,5 +2408,131 @@
     "image_credit": "Photo: Schneider Electric",
     "image_width": 469,
     "image_height": 600
+  },
+  {
+    "id": "xfmr-134",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A three-phase 750 kVA transformer is rated 12,470 V delta to 480Y/277 V. Full-load line currents are about:",
+    "choices": [
+      "34.7 A primary and 902 A secondary",
+      "60.1 A primary and 1,563 A secondary",
+      "20.0 A primary and 521 A secondary",
+      "34.7 A primary and 2,708 A secondary"
+    ],
+    "answer": 0,
+    "explanation": "I = VA / (√3 × V line-to-line). Primary: 750,000 / (1.732 × 12,470) ≈ 34.7 A. Secondary: 750,000 / (1.732 × 480) ≈ 902 A. Current goes up by the same 26:1 ratio that the voltage goes down. Leaving out √3 gives 60.1 A and 1,563 A, and using 277 V gives 2,708 A. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (three-phase VA = √3VI).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (three-phase VA = √3VI)",
+    "verified": true,
+    "kb": "transformers.md#xfmr-theory"
+  },
+  {
+    "id": "xfmr-135",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A single-phase 2400/240 V transformer has H1 jumpered to the adjacent low-voltage lead for an ac polarity check. You apply 240 V across the high-voltage winding and read 216 V across the other high-to-low pair. The polarity is:",
+    "choices": [
+      "Additive",
+      "Subtractive",
+      "Undetermined; the low side is shorted",
+      "Undetermined; the reading should equal 240 V"
+    ],
+    "answer": 1,
+    "explanation": "The ratio is 10:1, so 240 V on the high side puts 24 V on the low side. With one adjacent pair tied together, the other pair reads the difference (240 − 24 = 216 V) for subtractive polarity, or the sum (264 V) for additive. A reading below the applied voltage means subtractive. Source: IEEE C57.12.90-2021, 6.2.3.",
+    "reference": "IEEE C57.12.90-2021, 6.2.3 (polarity by alternating-voltage test)",
+    "verified": true,
+    "kb": "transformers.md#xfmr-theory"
+  },
+  {
+    "id": "xfmr-136",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "At rated load a transformer has 1.2 kW of no-load loss and 6.0 kW of load loss. At 50% load, total loss is about:",
+    "choices": [
+      "3.6 kW",
+      "2.7 kW",
+      "1.8 kW",
+      "7.2 kW"
+    ],
+    "answer": 1,
+    "explanation": "No-load loss comes from exciting the core, so it follows applied voltage, frequency, and waveform, not load. It stays about 1.2 kW. Load loss is mainly I²R plus stray loss driven by load current, so it goes roughly with current squared: 6.0 × 0.5² = 1.5 kW. Total ≈ 2.7 kW. Halving everything (3.6 kW) treats load loss as linear and core loss as load-dependent. Source: IEEE C57.12.90-2021, 8.1 and 9.1.",
+    "reference": "IEEE C57.12.90-2021, 8.1 and 9.1",
+    "verified": true,
+    "kb": "transformers.md#xfmr-theory"
+  },
+  {
+    "id": "xfmr-137",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "Impedance voltage is measured with one winding shorted and rated current circulating. It has a resistive part and a reactive part. The reactive part comes from:",
+    "choices": [
+      "Core loss",
+      "Leakage flux linking the windings",
+      "Dielectric loss in the oil",
+      "Excitation current"
+    ],
+    "answer": 1,
+    "explanation": "The resistive part is in step with the current and accounts for the load losses. The reactive part is 90° from the current and comes from leakage flux, the flux that links one winding without linking the other. Their phasor sum is the impedance voltage, stated in percent of the rated voltage of the winding it's applied to. Core loss and excitation current belong to the open-circuit (no-load) test. Source: IEEE C57.12.90-2021, 9.1.",
+    "reference": "IEEE C57.12.90-2021, 9.1",
+    "verified": true,
+    "kb": "transformers.md#xfmr-theory"
+  },
+  {
+    "id": "xfmr-138",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A transformer differential relay must not trip when the transformer is energized. Which feature of magnetizing inrush current do many relays use to recognize it?",
+    "choices": [
+      "It's a clean 60 Hz sine wave",
+      "It carries a large second-harmonic component",
+      "It contains only odd harmonics",
+      "It flows equally in both windings"
+    ],
+    "answer": 1,
+    "explanation": "Inrush flows only in the winding being energized, so the differential relay sees it as operating current. It is rich in harmonics, especially the second, and it has a near-zero stretch in each cycle. Harmonic restraint uses the second harmonic to block a trip. A current with odd harmonics only (third and fifth) points to overexcitation instead. Source: IEEE C37.91-2021, 6.5.3.",
+    "reference": "IEEE C37.91-2021, 6.5.3",
+    "verified": true,
+    "kb": "transformers.md#inrush"
+  },
+  {
+    "id": "xfmr-139",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "Why do transformer differential relays use the fifth harmonic, not the second, to recognize overexcitation?",
+    "choices": [
+      "Overexcitation saturates both half-cycles alike, so the exciting current has odd harmonics but almost no even ones",
+      "Overexcitation produces mostly second harmonic",
+      "The fifth harmonic only appears during internal faults",
+      "The CTs filter out the second harmonic during overexcitation"
+    ],
+    "answer": 0,
+    "explanation": "Too many volts per hertz saturates the core equally on the positive and negative half-cycles, so the exciting current has odd harmonics (third and fifth) and no meaningful even harmonics. The third can be canceled by delta windings or delta-connected CTs, which leaves the fifth as the dependable signature. Inrush is lopsided and shows the second harmonic. Source: IEEE C37.91-2021, 6.5.4.",
+    "reference": "IEEE C37.91-2021, 6.5.4",
+    "verified": true,
+    "kb": "transformers.md#inrush"
+  },
+  {
+    "id": "xfmr-140",
+    "level": "II",
+    "topic": "transformers",
+    "domain": "theory",
+    "question": "A 60 Hz transformer is run at its rated voltage on a 50 Hz system. Its volts per hertz, compared with rated, is about:",
+    "choices": [
+      "83%",
+      "100%",
+      "120%",
+      "144%"
+    ],
+    "answer": 2,
+    "explanation": "Volts per hertz is V ÷ f. Same voltage at 50 Hz instead of 60 Hz gives (V/50) ÷ (V/60) = 60/50 = 1.20, or 120%. Too many volts per hertz overexcites the core, which raises exciting current and heats the core and structure. The same condition shows up when a generator's voltage is brought up before it reaches speed. 83% is the ratio flipped. Source: IEEE C37.91-2021, 6.5.4; arithmetic.",
+    "reference": "IEEE C37.91-2021, 6.5.4 (overexcitation, V/Hz); arithmetic",
+    "verified": true,
+    "kb": "transformers.md#inrush"
   }
 ]

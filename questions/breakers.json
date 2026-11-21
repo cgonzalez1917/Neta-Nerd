@@ -1110,5 +1110,41 @@
     "image_credit": "Photo: Eaton",
     "image_width": 562,
     "image_height": 600
+  },
+  {
+    "id": "brkr-062",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "During maintenance of an insulated-case breaker with a spring-charging motor, NEMA AB 4 has you confirm the motor works. What else does it say to check?",
+    "choices": [
+      "That the charging time isn't too long",
+      "That the motor draws exactly nameplate current at 150% voltage",
+      "That the motor can be removed without tools",
+      "That the motor's insulation resistance is above 1,000 MΩ"
+    ],
+    "answer": 0,
+    "explanation": "In the mechanism check, AB 4 says to verify that the spring-charging motor operates satisfactorily and that charging doesn't take too long. A slow charge can point to low control voltage, a dragging mechanism, or a worn motor, and it delays the next close. AB 4 gives no universal time, so compare with the manufacturer's data, the same basis ATS uses for the charging mechanism on a power breaker. Source: NEMA AB 4-2017, 8.6.2; ANSI/NETA ATS-2025 7.6.1.2.B.9 and D.10.",
+    "reference": "NEMA AB 4-2017, 8.6.2; ANSI/NETA ATS-2025 7.6.1.2.B.9 and D.10",
+    "verified": true,
+    "kb": "breakers.md#charging-motor"
+  },
+  {
+    "id": "brkr-063",
+    "level": "II",
+    "topic": "lv-breakers",
+    "domain": "component",
+    "question": "ATS 7.8 has you verify that a 600 V network protector's motor can charge the closing mechanism under what condition?",
+    "choices": [
+      "At the minimum control voltage the manufacturer specifies",
+      "At 150% of rated control voltage",
+      "At rated voltage only",
+      "Only with the protector on a bench, at any voltage"
+    ],
+    "answer": 0,
+    "explanation": "Charging at nominal voltage proves little. The check is made at the low end of the manufacturer's control-voltage range, because a sagging supply is what the motor may see in service. ATS 7.8 pairs it with minimum-pickup checks on the motor control relay and the trip actuator. Source: ANSI/NETA ATS-2025 7.8.B.7 through B.9.",
+    "reference": "ANSI/NETA ATS-2025 7.8.B.7 through B.9",
+    "verified": true,
+    "kb": "breakers.md#charging-motor"
   }
 ]

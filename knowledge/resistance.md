@@ -45,3 +45,18 @@ ATS 7.4.D.2.a, low-voltage metal-enclosed busway, no manufacturer data: correct 
 A 200-foot run is 0.5 MΩ. A 50-foot run is 2 MΩ. Shorter bus should read higher. Do not apply the withstand until the insulation is above that floor (same paragraph).
 
 Medium-voltage busway falls back to Table 100.1 when the manufacturer is silent (7.4.D.2.b). Connection resistance on the bus still uses the 50 percent screen (7.4.D.4) if there is no manufacturer band.
+
+## Level III {#resistance-level-iii}
+
+*Level: III*
+
+## Millivolt drop and which limit wins {#mv-drop-l3}
+
+*Level: III*
+
+Sources: ANSI/NETA ATS-2025 7.6.1.2.D.2 and 7.24.1.D.3.
+
+- **Convert first.** R = V ÷ I. At 100 A, 6.0 mV is 60 µΩ and 9.3 mV is 93 µΩ.
+- **Manufacturer range first.** When the manufacturer publishes a normal range, values up to its top are acceptable, even if one pole is more than 50% above another. Note the spread and trend it.
+- **50% screen only as the fallback.** With no published data, investigate any pole more than 50% above the lowest of adjacent poles or similar units. 60 µΩ × 1.5 = 90 µΩ, so 93 µΩ is flagged.
+- There's no universal pass line such as 100 µΩ.

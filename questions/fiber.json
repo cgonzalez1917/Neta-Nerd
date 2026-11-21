@@ -142,5 +142,77 @@
     "reference": "ANSI/NETA ATS-2025 7.25.B.3 and D.3",
     "verified": true,
     "kb": "apparatus.md#fiber"
+  },
+  {
+    "id": "fbr-009",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "Which of these is NOT an advantage of fiber over copper for a relay communications link?",
+    "choices": [
+      "It isn't affected by electromagnetic interference",
+      "It doesn't carry ground-loop currents between locations",
+      "It carries more information over longer distances",
+      "It tolerates tighter bends and rougher handling than copper"
+    ],
+    "answer": 3,
+    "explanation": "Glass carries light, not current, so it ignores electrical noise and breaks ground loops between buildings, and it moves more information farther than copper. Toughness isn't one of its advantages: every fiber has a manufacturer minimum bend radius, and a tight bend adds loss even when some light still gets through. Source: FOA Reference Guide to Premises Cabling (J. Hayes), ch. 1 and ch. 5; ANSI/NETA ATS-2025 7.25.A.4.",
+    "reference": "FOA Reference Guide to Premises Cabling (J. Hayes), ch. 1 and ch. 5; ANSI/NETA ATS-2025 7.25.A.4",
+    "verified": true,
+    "kb": "apparatus.md#fiber-why"
+  },
+  {
+    "id": "fbr-010",
+    "level": "II",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "A relay in the switchyard talks to a relay in the control house over fiber instead of copper. The main electrical reason is:",
+    "choices": [
+      "Fiber always costs less per foot than copper",
+      "Fiber gives electrical isolation and immunity to electrical noise, so ground loops and induced noise don't reach the relay",
+      "Fiber needs no connectors or splices",
+      "Fiber carries the remote relay's control power"
+    ],
+    "answer": 1,
+    "explanation": "Fiber is a dielectric. It makes no metallic path between the yard and the house, so it isolates the two ends from ground loops, and electromagnetic interference doesn't affect it. Noise immunity is often the main reason industrial and utility sites choose it. Cost depends on the job, fiber still needs connectors or splices, and it carries no useful power. Source: FOA Reference Guide to Premises Cabling (J. Hayes), ch. 1 and ch. 5.",
+    "reference": "FOA Reference Guide to Premises Cabling (J. Hayes), ch. 1 and ch. 5",
+    "verified": true,
+    "kb": "apparatus.md#fiber-why"
+  },
+  {
+    "id": "fbr-011",
+    "level": "III",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "A fiber patch cord has a yellow jacket and is printed 9/125. What kind of fiber is it?",
+    "choices": [
+      "Multimode with a 62.5 µm core",
+      "Singlemode, with a core of about 9 µm in 125 µm cladding",
+      "Laser-optimized multimode (OM3)",
+      "Plastic optical fiber"
+    ],
+    "answer": 1,
+    "explanation": "Under the TIA-598 color code, multimode jackets are traditionally orange (OM3 is aqua) and singlemode jackets are yellow. Singlemode cores are about 8 to 10 µm, small enough that light travels in a single path, which gives the longest reach and highest bandwidth. Multimode cores are 50 or 62.5 µm. Both use 125 µm cladding. Source: FOA Reference Guide to Premises Cabling (J. Hayes), ch. 5 (fiber primer; color codes).",
+    "reference": "FOA Reference Guide to Premises Cabling (J. Hayes), ch. 5 (fiber primer; color codes)",
+    "verified": true,
+    "kb": "apparatus.md#fiber-l3"
+  },
+  {
+    "id": "fbr-012",
+    "level": "III",
+    "topic": "fiber-optic",
+    "domain": "component",
+    "question": "Graded-index multimode fiber was developed to fix what limitation of step-index multimode fiber?",
+    "choices": [
+      "Dispersion from light taking different path lengths through the core, which limits bandwidth",
+      "Too little attenuation",
+      "Brittle plastic cores",
+      "The need for a laser source"
+    ],
+    "answer": 0,
+    "explanation": "A step-index core is one uniform material, so light on longer zigzag paths arrives later than light on short paths, pulses smear, and bandwidth stays low. Graded-index cores vary the glass composition so the longer paths are compensated, giving hundreds of times more bandwidth. Singlemode goes further by allowing only one path. Source: FOA Reference Guide to Premises Cabling (J. Hayes), ch. 5 (fiber primer).",
+    "reference": "FOA Reference Guide to Premises Cabling (J. Hayes), ch. 5 (fiber primer)",
+    "verified": true,
+    "kb": "apparatus.md#fiber-l3"
   }
 ]

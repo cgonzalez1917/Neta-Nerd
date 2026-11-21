@@ -184,5 +184,95 @@
     "image_credit": "Photo: Schneider Electric",
     "image_width": 461,
     "image_height": 600
+  },
+  {
+    "id": "bus-011",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "You take an access cover off a medium-voltage bus run. All three phase bars share one housing, with grounded metal barriers between them. This is:",
+    "choices": [
+      "Nonsegregated-phase bus",
+      "Segregated-phase bus",
+      "Isolated-phase bus",
+      "Cable bus"
+    ],
+    "answer": 1,
+    "explanation": "Segregated-phase bus has all phases in a common metal enclosure with metal barriers between phases. Nonsegregated-phase bus is the same common enclosure with no barriers. Isolated-phase bus gives each phase its own metal housing with an air space to the next. Cable bus uses insulated cables as the phase conductors. These are separate rows when you look up withstand values, so identify the type before you pick a number. Source: IEEE C37.23-2015, clause 3 (types of metal-enclosed bus assemblies).",
+    "reference": "IEEE C37.23-2015, clause 3 (types of metal-enclosed bus assemblies)",
+    "verified": true,
+    "kb": "apparatus.md#bus-types"
+  },
+  {
+    "id": "bus-012",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "Which description fits isolated-phase bus?",
+    "choices": [
+      "All three phases in one enclosure with no barriers",
+      "All three phases in one enclosure with metal barriers between them",
+      "Each phase conductor in its own metal housing, separated from the next housing by air",
+      "Insulated cables in a common enclosure with no barriers"
+    ],
+    "answer": 2,
+    "explanation": "Isolated-phase bus encloses each phase conductor in its own metal housing, with an air gap between housings. It can be self-cooled or force-cooled with circulating gas or liquid. One common enclosure without barriers is nonsegregated; with metal barriers it's segregated; insulated cables in a common enclosure is cable bus. Source: IEEE C37.23-2015, clause 3 (types of metal-enclosed bus assemblies).",
+    "reference": "IEEE C37.23-2015, clause 3 (types of metal-enclosed bus assemblies)",
+    "verified": true,
+    "kb": "apparatus.md#bus-types"
+  },
+  {
+    "id": "bus-013",
+    "level": "II",
+    "topic": "bus",
+    "domain": "component",
+    "question": "A bus run's phase conductors turn out to be insulated cables laid in a common metal enclosure with no barriers between phases. IEEE C37.23 calls this:",
+    "choices": [
+      "Isolated-phase bus",
+      "Segregated-phase bus",
+      "Cable bus, which is built much like nonsegregated-phase bus",
+      "Not metal-enclosed bus at all"
+    ],
+    "answer": 2,
+    "explanation": "Cable bus is one of the four metal-enclosed bus types. It uses insulated cables as the main phase conductors, usually all in one enclosure without metal barriers, so in layout it resembles nonsegregated-phase bus. It can have one or several cables per phase depending on the current. Source: IEEE C37.23-2015, clause 3 (types of metal-enclosed bus assemblies).",
+    "reference": "IEEE C37.23-2015, clause 3 (types of metal-enclosed bus assemblies)",
+    "verified": true,
+    "kb": "apparatus.md#bus-types"
+  },
+  {
+    "id": "bus-014",
+    "level": "III",
+    "topic": "bus",
+    "domain": "component",
+    "question": "Some metal-enclosed bus runs use transposition, where the three phase conductors swap positions along the length. What is it for?",
+    "choices": [
+      "To give each phase the same inductive (proximity) effect from the other two",
+      "To make phasing tests unnecessary",
+      "To shorten the run",
+      "To let one phase be tested while the others stay energized"
+    ],
+    "answer": 0,
+    "explanation": "In a flat arrangement the middle conductor sits in a different magnetic environment from the outer ones. Swapping positions evenly along the run evens out the proximity effect each phase sees from the other two, which balances the phase impedances. You still phase-test tie sections from their permanent sources. Source: IEEE C37.23-2015, clause 3 (transposition); ANSI/NETA ATS-2025 7.4.B.5.",
+    "reference": "IEEE C37.23-2015, clause 3 (transposition); ANSI/NETA ATS-2025 7.4.B.5",
+    "verified": true,
+    "kb": "apparatus.md#bus-l3"
+  },
+  {
+    "id": "bus-015",
+    "level": "III",
+    "topic": "bus",
+    "domain": "component",
+    "question": "Inspecting segregated-phase bus, you compare the metal between phases with the covers. Per IEEE C37.23 construction rules:",
+    "choices": [
+      "Phase barriers are heavier gauge (not less than MSG No. 11, about 3 mm) than covers and panels (not less than MSG No. 14, about 1.9 mm)",
+      "Phase barriers may be any insulating board",
+      "Barriers and covers are the same gauge",
+      "Covers are heavier than barriers because they face the room"
+    ],
+    "answer": 0,
+    "explanation": "C37.23 sets a minimum of MSG No. 14 (nominal 1.9 mm) for covers, barriers, and panels in general, and a heavier MSG No. 11 (nominal 3 mm) for the metal barriers between phases of segregated-phase bus. A thin or missing phase barrier on segregated bus is a construction finding, not a cosmetic one. Source: IEEE C37.23-2015, 7.1.1.",
+    "reference": "IEEE C37.23-2015, 7.1.1",
+    "verified": true,
+    "kb": "apparatus.md#bus-l3"
   }
 ]

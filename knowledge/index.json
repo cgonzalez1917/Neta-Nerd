@@ -62,9 +62,10 @@
     {
       "file": "resistance.md",
       "title": "DLRO, bolted connections, winding resistance",
-      "level": "II",
+      "level": "II, III",
       "levels": [
-        "II"
+        "II",
+        "III"
       ]
     },
     {
@@ -131,9 +132,10 @@
     {
       "file": "thermography.md",
       "title": "Infrared thermography",
-      "level": "II",
+      "level": "II, III",
       "levels": [
-        "II"
+        "II",
+        "III"
       ]
     },
     {

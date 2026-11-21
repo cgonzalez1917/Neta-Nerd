@@ -268,3 +268,28 @@ Simple and complex lockout are two forms of the same hazardous-energy control (1
 The lockout/tagout program and the procedures in 120.2 through 120.6 are audited by a qualified person at intervals not exceeding one year (110.3(L)(3) and 120.2(B)). The audit has to cover at least one lockout in progress, and it is meant to catch problems in the program, the training, and how workers actually carry out the procedure. The employer is responsible for those audits.
 
 When a testing company comes onto a plant as a contractor, the host and the contract employer share information (110.5). The host tells the contractor about known hazards related to the work that the contractor might not recognize, and about information the contractor needs for its assessments. The contractor briefs its people on those hazards and on the host's safety-related work rules, and tells the host about unique hazards the contractor's work creates. Where the host knows of hazards related to the contractor's work, the meeting is documented.
+
+Planning starts with finding every source (120.5(A)(1)). Up-to-date single-line drawings are the primary reference. If they aren't available, the employer has to use an equally effective way to locate every source, including easy misses like a neutral that keeps carrying current after the phases are opened.
+
+A disconnect that can't take a lock can't be the only means of reaching an electrically safe work condition (120.5(B)(11)). Tagout without a lock is allowed only when the design prevents a lock, and then at least one more safety measure is needed, such as pulling fuses, blocking the controlling switch, or opening another disconnect.
+
+## Group lockout and shift change {#group-loto}
+
+*Level: III*
+
+Sources: NFPA 70E-2024 120.5(A)(5) and 120.5(B)(8); 29 CFR 1910.147(f)(3) and (f)(4); OSHA 3120.
+
+- **Personal control.** Under a group device (operations lock or lockbox), each authorized worker adds a personal lock or tag when starting and removes it when done. A supervisor's single lock doesn't give each person equal protection.
+- **Who's responsible.** The complex procedure puts primary responsibility for the group on a designated authorized employee, and the person in charge is accountable for the whole lockout. The plan says how every exposed person is accounted for.
+- **Shift change.** The procedure sets how lockout responsibility passes to another person or to the person in charge. The handoff is orderly so protection never lapses, and the oncoming workers confirm the isolation for themselves.
+
+## Removing locks and returning to service {#loto-release}
+
+*Level: III*
+
+Source: NFPA 70E-2024 120.5(B)(6) and 120.5(B)(12) to (14).
+
+- **Someone else's lock.** The procedure covers removal when the installer is unavailable. The employer tries to locate that person first, and the person is told before returning to work.
+- **Retest.** Test for absence of voltage again whenever circuit conditions change or the work location has been left unattended, with the tester checked on a known source before and after.
+- **Return to service.** Before re-energizing, confirm by test and inspection that tools, restraints, jumpers, shorts, and temporary grounds are gone, the area is clear of nonessential items, everyone is clear, and operators are notified where applicable.
+- **Temporary release for testing.** Bumping a motor mid-job follows the same steps as return to service. Then re-establish the lockout and retest before work resumes.
