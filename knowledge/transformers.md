@@ -177,6 +177,27 @@ Gauges are cheap early warning. Acceptance and maintenance both test the alarm a
 
 A sealed tank can be under pressure or vacuum. Follow the manufacturer before opening any fill plug or valve, and never open one on an energized unit just for a level check.
 
+## Transformer theory drills {#xfmr-theory}
+
+*Level: II*
+
+Sources: IEEE C57.12.90-2021 6.2.3, 8.1 and 9.1; the NETA formula sheet.
+
+- **Rated current.** I = VA ÷ (√3 × V line to line). A 750 kVA, 12,470 V to 480 V unit carries about 34.7 A on the primary and 902 A on the secondary. Current steps up by the same ratio the voltage steps down.
+- **AC polarity check.** Tie H1 to the adjacent low-voltage lead, apply a convenient voltage to the whole high-voltage winding, and read across the other high-to-low pair. Less than the applied voltage (it reads the difference) is subtractive. More than the applied voltage (it reads the sum) is additive. Worked: a 10:1 unit with 240 V applied reads 216 V if subtractive, 264 V if additive.
+- **Two kinds of loss.** No-load loss comes from exciting the core. It follows voltage, frequency, and waveform, not load. Load loss is I²R in the windings plus stray loss from leakage flux, and it goes roughly with current squared. At half load, load loss is about a quarter of its full-load value while core loss stays put.
+- **Impedance voltage.** It's the voltage that drives rated current through one winding with the other shorted, stated as a percent of that winding's rated voltage. Its resistive part is in phase with the current and goes with load loss. Its reactive part is 90° from the current and comes from leakage flux.
+
+## Inrush and overexcitation {#inrush}
+
+*Level: II*
+
+Source: IEEE C37.91-2021, 6.5.3 and 6.5.4.
+
+- **Inrush.** Energizing a transformer can draw a large magnetizing current in the energized winding only. A differential relay sees it as operating current. Inrush is rich in harmonics, especially the second, and has a near-zero stretch every cycle. Second-harmonic restraint uses that to block a trip. Energizing a unit next to one that's already energized can produce a long inrush with little second harmonic, which is why each parallel transformer gets its own differential relay.
+- **Overexcitation.** Too many volts per hertz saturates the core equally on both half-cycles, so the exciting current shows odd harmonics (third and fifth) and almost no even ones. Delta windings and delta CTs can cancel the third, so relays use the fifth. Overexcitation heats the core and structure. Protection is a V/Hz function set from the manufacturer's limits.
+- **Worked V/Hz.** A 60 Hz transformer at rated voltage on 50 Hz runs at 60/50 = 120% V/Hz.
+
 ## Level IV {#transformers-level-iv}
 
 *Level: IV*

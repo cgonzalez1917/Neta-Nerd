@@ -88,5 +88,77 @@
     "reference": "ANSI/NETA ATS-2025 7.5.1.3.A.6",
     "verified": true,
     "kb": "apparatus.md#switches"
+  },
+  {
+    "id": "airsw-008",
+    "level": "II",
+    "topic": "air-switches",
+    "domain": "component",
+    "question": "Before opening an outdoor disconnecting switch that has no interrupter, what should the operator confirm?",
+    "choices": [
+      "That the switch isn't carrying load, and that a flashover won't reach the operator",
+      "Only that the motor operator has control power",
+      "That the grounding switch is closed",
+      "Nothing; disconnects are rated to interrupt full load"
+    ],
+    "answer": 0,
+    "explanation": "A plain disconnect isn't a load-break device. Check that no load is flowing through it, and that if it flashes over, the arc won't reach the operator's position. Closing a grounding switch first would put a ground on a live circuit. Source: IEEE C37.30.1-2022, Annex D, D.3.2.2 a).",
+    "reference": "IEEE C37.30.1-2022, Annex D, D.3.2.2 a)",
+    "verified": true,
+    "kb": "apparatus.md#air-switch-operation"
+  },
+  {
+    "id": "airsw-009",
+    "level": "II",
+    "topic": "air-switches",
+    "domain": "component",
+    "question": "What does IEEE C37.30.1 say to check before opening a grounding switch, and before closing one?",
+    "choices": [
+      "Before opening, that it won't remove safety grounds people still need; before closing, that the circuit isn't energized",
+      "Before opening, that the main blades are closed; before closing, nothing",
+      "Before opening, the operation counter; before closing, the lubrication",
+      "Nothing, because grounding switches are interlocked"
+    ],
+    "answer": 0,
+    "explanation": "Opening a grounding switch can take away protection a crew is relying on, so confirm those grounds aren't still needed. Closing one onto a live circuit is a fault, so confirm the circuit is de-energized first. Interlocks help, but they don't replace the check. Source: IEEE C37.30.1-2022, Annex D, D.3.2.2 b).",
+    "reference": "IEEE C37.30.1-2022, Annex D, D.3.2.2 b)",
+    "verified": true,
+    "kb": "apparatus.md#air-switch-operation"
+  },
+  {
+    "id": "airsw-010",
+    "level": "III",
+    "topic": "air-switches",
+    "domain": "component",
+    "question": "How does IEEE C37.30.1 advise operating a disconnecting switch, and why?",
+    "choices": [
+      "Rapidly, to shorten arcing time and limit contact burning",
+      "Slowly, so the operator can watch for an arc and stop",
+      "In steps, pausing at mid-travel",
+      "Only from a remote motor operator"
+    ],
+    "answer": 0,
+    "explanation": "A disconnect can arc even in normal switching, and the operator should know that. Moving it quickly through its travel keeps the arc short and limits burning of the contacts. Stopping partway parks an arc at the contacts. Source: IEEE C37.30.1-2022, Annex D, D.3.2.2 c).",
+    "reference": "IEEE C37.30.1-2022, Annex D, D.3.2.2 c)",
+    "verified": true,
+    "kb": "apparatus.md#air-switches-l3"
+  },
+  {
+    "id": "airsw-011",
+    "level": "III",
+    "topic": "air-switches",
+    "domain": "component",
+    "question": "A disconnect fitted with quick-break arcing horns will be used to drop transformer magnetizing current. Which statement is right?",
+    "choices": [
+      "Horns extend a disconnect's ability to interrupt small currents, but the arc is unconfined; check the circuit conditions with the manufacturer, and some duties need an interrupter switch",
+      "Horns turn the disconnect into a load-break switch for any current",
+      "Horns are only there for breaking ice",
+      "Magnetizing current can't draw an arc, so the horns do nothing"
+    ],
+    "answer": 0,
+    "explanation": "Disconnects are commonly used to drop small currents: short-line charging current, transformer magnetizing current, loop current, and light load. Those make unconfined arcs, which can turn into a fault under bad weather or circuit conditions. Arcing horns, quick-break horns, and blast attachments extend the interrupting ability, but current magnitude and recovery voltage decide success, so ask the manufacturer. Some duties call for an interrupter switch. Source: IEEE C37.30.1-2022, Annex D, D.3.2.2.",
+    "reference": "IEEE C37.30.1-2022, Annex D, D.3.2.2",
+    "verified": true,
+    "kb": "apparatus.md#air-switches-l3"
   }
 ]

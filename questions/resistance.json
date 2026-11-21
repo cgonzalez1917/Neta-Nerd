@@ -199,5 +199,41 @@
     "reference": "IEEE C57.152-2025, 7.2.7.4",
     "verified": true,
     "kb": "resistance.md#winding"
+  },
+  {
+    "id": "dlro-013",
+    "level": "III",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "A low-voltage power breaker has no published contact-resistance range. At 100 A dc you read pole millivolt drops of 6.0, 6.4, and 9.3 mV. Under ATS 7.6.1.2:",
+    "choices": [
+      "All pass, because they're under 100 µΩ",
+      "Investigate the 93 µΩ pole; it's more than 50% above the lowest pole (60 µΩ × 1.5 = 90 µΩ)",
+      "Investigate the 64 µΩ pole",
+      "Retest at 10 A before judging"
+    ],
+    "answer": 1,
+    "explanation": "R = V / I: 6.0 mV ÷ 100 A = 60 µΩ, 6.4 mV gives 64 µΩ, and 9.3 mV gives 93 µΩ. With no manufacturer range, ATS has you investigate values that deviate from adjacent poles or similar breakers by more than 50% of the lowest value. 60 × 1.5 = 90 µΩ, so the 93 µΩ pole is flagged. There's no universal 100 µΩ pass line. Source: ANSI/NETA ATS-2025 7.6.1.2.D.2; arithmetic.",
+    "reference": "ANSI/NETA ATS-2025 7.6.1.2.D.2; arithmetic",
+    "verified": true,
+    "kb": "resistance.md#mv-drop-l3"
+  },
+  {
+    "id": "dlro-014",
+    "level": "III",
+    "topic": "contact-resistance",
+    "domain": "component",
+    "question": "A vacuum recloser's manufacturer publishes a normal contact-resistance range that tops out at 150 µΩ. The poles read 90, 95, and 140 µΩ. Under ATS 7.24.1:",
+    "choices": [
+      "Investigate the 140 µΩ pole, because it's more than 50% above 90 µΩ",
+      "All three are acceptable; the manufacturer's range governs when it exists",
+      "Reject all three",
+      "Average them and compare with 100 µΩ"
+    ],
+    "answer": 1,
+    "explanation": "ATS judges recloser microhm or millivolt-drop values against the top of the manufacturer's normal range first. The 50% comparison (here 90 × 1.5 = 135 µΩ) is only the fallback when there's no published data. All three are under 150 µΩ, so they pass. Note the spread and trend it next time. Source: ANSI/NETA ATS-2025 7.24.1.D.3.",
+    "reference": "ANSI/NETA ATS-2025 7.24.1.D.3",
+    "verified": true,
+    "kb": "resistance.md#mv-drop-l3"
   }
 ]

@@ -610,5 +610,41 @@
     "reference": "ANSI/NETA ATS-2025, 7.15.1.A.10, 7.15.1.B.11, and 7.15.1.D.11",
     "verified": true,
     "kb": "apparatus.md#motors"
+  },
+  {
+    "id": "mot-035",
+    "level": "II",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "A 4-pole induction motor on 60 Hz has a nameplate full-load speed of 1,750 rpm. Its full-load slip is about:",
+    "choices": [
+      "1.4%",
+      "2.8%",
+      "5.0%",
+      "50%"
+    ],
+    "answer": 1,
+    "explanation": "Synchronous speed = 120 × f ÷ poles = 120 × 60 ÷ 4 = 1,800 rpm. Slip = (1,800 − 1,750) ÷ 1,800 × 100 ≈ 2.8%. The rotor has to turn slower than the rotating field, or no current is induced in it and it makes no torque. 50 is the rpm difference, not a percentage. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (f = P × ns / 120); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., ch. 10 (horsepower, torque, and speed).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (f = P × ns / 120); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., ch. 10 (horsepower, torque, and speed)",
+    "verified": true,
+    "kb": "apparatus.md#motor-speed"
+  },
+  {
+    "id": "mot-036",
+    "level": "II",
+    "topic": "motors",
+    "domain": "theory",
+    "question": "A 10 hp motor delivers rated output at 1,750 rpm. Its full-load torque is about:",
+    "choices": [
+      "3.3 lb-ft",
+      "30 lb-ft",
+      "52.5 lb-ft",
+      "175 lb-ft"
+    ],
+    "answer": 1,
+    "explanation": "Torque (lb-ft) = 5,252 × hp ÷ rpm = 5,252 × 10 ÷ 1,750 ≈ 30 lb-ft. The formula sheet writes the same thing as 33,000 × hp ÷ (6.28 × rpm), which also gives about 30 lb-ft. Source: NETA Official Electrical Formulae Sheet (updated June 29, 2017) (torque); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., ch. 10 (horsepower, torque, and speed).",
+    "reference": "NETA Official Electrical Formulae Sheet (updated June 29, 2017) (torque = 33,000 × hp / (6.28 × rpm)); Gill, Electrical Power Equipment Maintenance and Testing, 2nd ed., ch. 10 (horsepower, torque, and speed)",
+    "verified": true,
+    "kb": "apparatus.md#motor-speed"
   }
 ]

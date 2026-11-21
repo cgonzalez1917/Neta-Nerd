@@ -3061,5 +3061,185 @@
     "reference": "NFPA 70E-2024, 130.5(G)",
     "verified": true,
     "kb": "safety.md#arc-flash"
+  },
+  {
+    "id": "safety-173",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A job will isolate a substation transformer fed from two sources, with an electrical crew and a mechanical crew from two different employers. Under NFPA 70E, which form of lockout applies, and what document does it need?",
+    "choices": [
+      "Simple lockout; no written procedure is needed",
+      "Complex lockout, with a written plan of execution that names the person in charge",
+      "Simple lockout, as long as every worker hangs a personal lock",
+      "Complex lockout, with a verbal briefing in place of a written plan"
+    ],
+    "answer": 1,
+    "explanation": "Multiple energy sources, crews, crafts, employers, locations, or disconnects, a required switching sequence, or a job that runs past one work period all qualify for complex lockout/tagout. Every complex procedure needs a written plan of execution that identifies the person in charge, who has overall responsibility. A simple lockout, where a qualified person isolates one set of conductors, doesn't need a written procedure for each use. Source: NFPA 70E-2024 120.3(H), 120.5(A)(4) and 120.5(A)(5).",
+    "reference": "NFPA 70E-2024 120.3(H), 120.5(A)(4) and 120.5(A)(5)(a) and (b)",
+    "verified": true,
+    "kb": "safety.md#loto-complex"
+  },
+  {
+    "id": "safety-174",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Under a group lockout that uses a lockbox, how does each worker keep personal control of the hazardous energy?",
+    "choices": [
+      "The supervisor's lock on the lockbox covers everyone",
+      "Each authorized worker puts a personal lock or tag on the lockbox when starting work and takes it off when done",
+      "Each worker signs a log, and personal locks are optional",
+      "Only the person who opened the disconnect needs a lock"
+    ],
+    "answer": 1,
+    "explanation": "Every authorized employee working under the group device attaches a personal lockout or tagout device to the group lockbox (or similar mechanism) when beginning work and removes it when he or she stops working on that equipment. Leaning on a supervisor's lock doesn't give each person protection equal to a personal lock, which is the point of the OSHA group rule. Source: NFPA 70E-2024 120.5(A)(5)(d); OSHA 3120 (group lockout); 29 CFR 1910.147(f)(3).",
+    "reference": "NFPA 70E-2024 120.5(A)(5)(d); OSHA 3120 (group lockout); 29 CFR 1910.147(f)(3)",
+    "verified": true,
+    "kb": "safety.md#group-loto"
+  },
+  {
+    "id": "safety-175",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "In a complex lockout under an operations lock or lockbox, who carries primary responsibility for the workers protected by the group device?",
+    "choices": [
+      "No one; each worker is on his or her own",
+      "An authorized employee designated by the procedure, with the person in charge accountable for safe execution of the whole lockout",
+      "The utility that owns the source",
+      "Whoever arrives on site last"
+    ],
+    "answer": 1,
+    "explanation": "The complex procedure vests primary responsibility in an authorized employee for the people working under the group lockout or tagout device, and holds the person in charge accountable for carrying out the complex lockout safely. The plan must also say how everyone who could be exposed is accounted for. Source: NFPA 70E-2024 120.5(A)(5)(c) and (e); 29 CFR 1910.147(f)(3).",
+    "reference": "NFPA 70E-2024 120.5(A)(5)(c) and (e); 29 CFR 1910.147(f)(3)",
+    "verified": true,
+    "kb": "safety.md#group-loto"
+  },
+  {
+    "id": "safety-176",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A complex lockout will run past the end of the day shift. What has to happen at shift change?",
+    "choices": [
+      "The day crew pulls its locks, and the night crew hangs new ones when it gets to the job",
+      "Responsibility passes to another person or the person in charge by the method in the procedure, with no gap in protection, and the oncoming workers confirm the isolation for themselves",
+      "Nothing; the locks stay on, and nobody needs to check anything",
+      "The equipment is re-energized and locked out again from scratch"
+    ],
+    "answer": 1,
+    "explanation": "70E requires the procedure to set a method for transferring lockout responsibility to another person or to the person in charge when the job runs beyond one shift. OSHA calls for an orderly transfer between off-going and oncoming workers so protection is continuous, and OSHA 3120 adds that the incoming shift verifies for itself that the equipment is isolated and de-energized. Source: NFPA 70E-2024 120.5(B)(8); 29 CFR 1910.147(f)(4); OSHA 3120 (shift change).",
+    "reference": "NFPA 70E-2024 120.5(B)(8); 29 CFR 1910.147(f)(4); OSHA 3120 (shift change)",
+    "verified": true,
+    "kb": "safety.md#group-loto"
+  },
+  {
+    "id": "safety-177",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A worker went home sick with a personal lock still on a disconnect, and the equipment is needed. Under NFPA 70E, what has to happen before someone else removes that lock?",
+    "choices": [
+      "Cut it off on the supervisor's say-so",
+      "Follow the procedure's removal steps: the employer tries to locate the worker who installed it, and that worker is told before returning to work",
+      "Leave it until the worker's next shift, whatever the cost",
+      "Any qualified person may remove it after testing for absence of voltage"
+    ],
+    "answer": 1,
+    "explanation": "The lockout procedure has to spell out how locks or tags are removed when the person who installed them isn't available. The employer has to try to find that person first, and if the lock comes off in his or her absence, the person must be told before going back to work. Testing for voltage doesn't replace those steps. Source: NFPA 70E-2024 120.5(B)(12).",
+    "reference": "NFPA 70E-2024 120.5(B)(12)",
+    "verified": true,
+    "kb": "safety.md#loto-release"
+  },
+  {
+    "id": "safety-178",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Work under a lockout is finished. Before the circuit is re-energized, what does the 70E procedure require?",
+    "choices": [
+      "Remove the locks, then look around",
+      "Tests and visual checks that tools, mechanical restraints, jumpers, shorts, and temporary protective grounds are gone; nonessential items cleared; everyone clear; and operators notified where applicable",
+      "Only remove the temporary grounds",
+      "Energize briefly to see whether it trips"
+    ],
+    "answer": 1,
+    "explanation": "Release for return to service starts with tests and visual inspections confirming that tools, restraints, jumpers, shorts, and temporary grounds have been removed, so the equipment can be energized safely. The area is checked for nonessential items, everyone is confirmed clear, blocked or grounded equipment is prepared, and the people who run the process are told and help as needed. Source: NFPA 70E-2024 120.5(B)(13).",
+    "reference": "NFPA 70E-2024 120.5(B)(13)",
+    "verified": true,
+    "kb": "safety.md#loto-release"
+  },
+  {
+    "id": "safety-179",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "Partway through a lockout, the crew needs to run a motor briefly to check rotation. How does NFPA 70E handle that?",
+    "choices": [
+      "Pull one lock, bump the motor, and put the lock back",
+      "As a temporary release for testing: follow the same steps as return to service, then re-establish the lockout and retest for absence of voltage before work resumes",
+      "It's never allowed during a lockout",
+      "It's allowed only for motors under 50 hp"
+    ],
+    "answer": 1,
+    "explanation": "The procedure has to identify the steps and the qualified persons' responsibilities when a lockout is interrupted for testing or positioning, and those steps are the same as for return to service. Afterward, the lockout is put back, and because circuit conditions changed, absence of voltage is retested before anyone touches conductors. Source: NFPA 70E-2024 120.5(B)(14) and 120.5(B)(6).",
+    "reference": "NFPA 70E-2024 120.5(B)(14) and 120.5(B)(6)",
+    "verified": true,
+    "kb": "safety.md#loto-release"
+  },
+  {
+    "id": "safety-180",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "An old disconnect can't accept a lock. Under NFPA 70E, how may tagout be used on it?",
+    "choices": [
+      "A tag alone is equivalent to a lock",
+      "Tagout without a lock is allowed only when the design prevents a lock; then at least one additional safety measure is required, and that disconnect can't be the only means of creating the electrically safe work condition",
+      "Tagout is never allowed",
+      "A tag is enough if the job is under one hour"
+    ],
+    "answer": 1,
+    "explanation": "Where a lock can't be attached, that disconnect may not be the only means of putting the circuit in an electrically safe work condition. Tagout without a lock is permitted only when the design prevents a lock, and then at least one more safety measure is required, with clear responsibility for everyone exposed. Examples include pulling fuses, blocking the controlling switch, or opening a second disconnect. Source: NFPA 70E-2024 120.5(B)(11).",
+    "reference": "NFPA 70E-2024 120.5(B)(11)",
+    "verified": true,
+    "kb": "safety.md#loto-complex"
+  },
+  {
+    "id": "safety-181",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "A crew working under lockout leaves the job unattended over lunch. When they return, what do the 70E testing requirements call for before touching conductors?",
+    "choices": [
+      "Nothing; the locks are still on",
+      "Retesting for absence of voltage, because the job location was left unattended",
+      "Only confirming the locks are still in place",
+      "A new energized work permit"
+    ],
+    "answer": 1,
+    "explanation": "The lockout procedure must require a retest for absence of voltage whenever circuit conditions change or the work location has been left unattended. The tester is checked on a known source before and after. Locks still being in place doesn't prove nothing changed while the crew was away. Source: NFPA 70E-2024 120.5(B)(6).",
+    "reference": "NFPA 70E-2024 120.5(B)(6)",
+    "verified": true,
+    "kb": "safety.md#loto-release"
+  },
+  {
+    "id": "safety-182",
+    "level": "III",
+    "topic": "electrical-safety",
+    "domain": "safety",
+    "question": "While planning a lockout, you find the site's single-line drawings are out of date. Under NFPA 70E, what must the employer do?",
+    "choices": [
+      "Go ahead with the old drawings",
+      "Use an equally effective means of locating every source, and the plan should consider cases like a neutral that keeps carrying current after the phase conductors are opened",
+      "Skip source identification and rely on the absence-of-voltage test",
+      "Lock out the main breaker only"
+    ],
+    "answer": 1,
+    "explanation": "Up-to-date single-line drawings are the primary reference for finding sources. When they aren't available, the employer is responsible for an equally effective way to find all sources of energy. The informational note points out sources that are easy to miss, such as a shared neutral still carrying current after the phases are de-energized. Absence-of-voltage testing confirms isolation; it doesn't replace finding the sources. Source: NFPA 70E-2024 120.5(A)(1).",
+    "reference": "NFPA 70E-2024 120.5(A)(1)",
+    "verified": true,
+    "kb": "safety.md#loto-complex"
   }
 ]

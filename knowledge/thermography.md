@@ -32,3 +32,24 @@ Section 9 is referenced from equipment chapters (“perform thermographic survey
 *Level: II*
 
 The imager can't separate emitted from reflected energy. Shiny metal emits poorly and mirrors its surroundings. Painted, dirty, or oxidized surfaces are usually around 0.7 to 0.9. Visible color doesn't set emissivity. To check for a reflection, change your viewing angle: a reflection moves and real heat stays put. Sun on a surface can be a reflection or real solar heating, and those are different problems. Scan under as much load as you can, and record it, because heating goes roughly with current squared.
+
+## Phase loading and imbalance {#phase-loading}
+
+*Level: II*
+
+Source: Fluke, Introduction to Thermography Principles, ch. 6 and ch. 7.
+
+An infrared survey under load is the practical way to spot one phase carrying more than the others, because current imbalance shows up as uneven heating while the gear stays in service. Heat goes with I²R, so twice the current is four times the heat. Before calling a warm phase a bad connection, take clamp-on readings. If one phase carries much more current (say 190 A against 120 A and 115 A), the whole phase runs warm and the cause is load. Comparative work only means something when every variable but one is the same.
+
+## Level III {#thermography-level-iii}
+
+*Level: III*
+
+## Reading a hot phase {#hot-phase-l3}
+
+*Level: III*
+
+Sources: Fluke, Introduction to Thermography Principles, ch. 6 and ch. 7; ANSI/NETA ATS-2025 Section 9 and Table 100.18 notes.
+
+- **Balanced current, one hot joint:** suspect resistance. Plan the outage, inspect, check torque, and measure the connection with a low-resistance ohmmeter against similar connections (for busway, the 50% screen in ATS 7.4.D.1).
+- **Light load:** the heat from a bad joint is predictable from I²R, but the temperature it reaches isn't. A small rise at light load can become a large one when load grows. Some practices call for at least 40% load or the highest normal load, and the ATS table notes say load current has a major effect on ΔT. Write the load down with the image.

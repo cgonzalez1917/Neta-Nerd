@@ -74,6 +74,27 @@ Burden versus the C-class rating, and whether a given loop will saturate on a fa
 
 Relaying application, offset faults, auxiliary CTs, and series CTs are in [relaying CT application](#/study/instrument-transformers.md/ct-application).
 
+## CT ratings on the nameplate {#ct-ratings}
+
+*Level: II*
+
+Source: IEEE C57.13-2016, 4.4.2, 4.9.1, 6.3 to 6.5, 8.3, and Tables 10, 12 and 13.
+
+- **Relaying class (C400, T200).** The number is the secondary terminal voltage the CT can deliver into a standard relaying burden at 20 times rated secondary current (100 A on a 5 A CT) with ratio error held to 10%. C400 matches burden B-4.0: 4 Ω × 100 A = 400 V.
+- **C versus T.** C class: core leakage flux has little effect, so the ratio can be calculated. T class: leakage flux matters, so the rating comes from test.
+- **Metering class and burden (0.3 B-1.8).** The burden number is ohms at 0.9 power factor. B-0.5 is 0.5 Ω, which is 5² × 0.5 = 12.5 VA at 5 A. A class stated at the maximum rated burden also holds at the lower standard burdens. A class written for one burden only doesn't carry over to others.
+- **Rating factor (RF).** RF times rated primary current is what the CT carries continuously at 30 °C average ambient without overheating. A 400:5 CT with RF 2.0 carries 800 A. Hotter air derates it; the standard's example puts RF 2.0 at roughly 150% of rating at 55 °C.
+- **Polarity.** At an instant when primary current enters H1, secondary current leaves X1, as if the conductor ran straight through. Reverse the CT and the secondary current turns 180°.
+
+## VT basics {#vt-basics}
+
+*Level: II*
+
+Source: IEEE C57.13-2016, 5.1 and 7.7.
+
+- **Accuracy range.** A VT holds its metering class at any burden from zero up to the specified standard burden (at that burden's power factor) and from 90% to 110% of rated voltage.
+- **Never short the secondary.** A VT behaves like a voltage source, so a secondary short draws very high current. The standard only requires the VT to survive a secondary short with full primary voltage for 1 second. Fuses have to clear it. A CT is the opposite case: never open its secondary under load.
+
 ## Level IV {#instrument-transformers-level-iv}
 
 *Level: IV*

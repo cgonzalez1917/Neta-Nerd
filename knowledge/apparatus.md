@@ -329,6 +329,74 @@ Use the shape, enclosure and terminals to recognize a broad equipment family. A 
 
 The photo questions cite the maker product page each photo came from, and `img/questions/SOURCES.md` lists every photo with its page and credit. These are identification examples, not manufacturer endorsements or substitutes for operating instructions.
 
+## Motor speed, slip, and torque {#motor-speed}
+
+*Level: II*
+
+Sources: the NETA formula sheet; Gill, 2nd ed., ch. 10.
+
+- Synchronous speed = 120 × f ÷ poles. A 4-pole motor on 60 Hz: 1,800 rpm. On 50 Hz: 1,500 rpm.
+- Slip (%) = (synchronous rpm − actual rpm) ÷ synchronous rpm × 100. 1,750 rpm on a 1,800 rpm field is about 2.8%. An induction rotor has to slip to have current induced in it.
+- Torque (lb-ft) = 5,252 × hp ÷ rpm, which the formula sheet writes as 33,000 × hp ÷ (6.28 × rpm). 10 hp at 1,750 rpm is about 30 lb-ft.
+
+## Bus construction types {#bus-types}
+
+*Level: II*
+
+Source: IEEE C37.23-2015, clause 3. Know the type before you look up a withstand value, because the tables list them separately.
+
+- **Nonsegregated-phase bus:** all phases in one metal enclosure, no barriers between phases.
+- **Segregated-phase bus:** all phases in one metal enclosure, with metal barriers between phases.
+- **Isolated-phase bus:** each phase in its own metal housing, with an air space to the next housing. It can be self-cooled or force-cooled.
+- **Cable bus:** insulated cables as the phase conductors, usually in one enclosure without barriers, so it's laid out much like nonsegregated bus.
+
+## Drive basics {#drive-basics}
+
+*Level: II*
+
+Sources: NEMA ICS 7.2-2021, Section 3, 5.2.7 and 5.2.12.1.
+
+- **Power path.** Rectifier (ac to dc), then the dc link with its capacitors (and sometimes a choke), then the voltage-source inverter that builds variable-frequency ac for the motor.
+- **Starting.** A motor started together with its drive doesn't see across-the-line inrush. A drive that's already running other motors has to supply the inrush of any motor switched onto it, so it may need to be oversized. Overloads are still required and are checked under ATS 7.17.
+- **Three-wire control (reviewer check pending).** In a start/stop starter circuit, a normally open auxiliary contact of the starter sits in parallel with START to hold the coil in after the button is released. STOP and the overload relay's normally closed contact are in series with the coil, so either drops it out, and the starter won't restart on its own after a power loss. This item is in the review queue until a citation is checked.
+
+## Why fiber {#fiber-why}
+
+*Level: II*
+
+Source: FOA Reference Guide to Premises Cabling (Hayes), ch. 1 and ch. 5.
+
+Fiber carries light through glass, so there's no metallic path between the two ends. That gives isolation from ground loops and immunity to electromagnetic interference, which is often why plants and substations choose it. It also carries more information over longer distances than copper. It isn't tougher than copper: every fiber has a minimum bend radius, and a tight bend adds loss (ATS 7.25 holds bends to the manufacturer's minimum).
+
+## EV charger supply basics {#evse-supply}
+
+*Level: II*
+
+Source: NFPA 70-2023 Article 625.
+
+- **Portable (cord-and-plug) chargers, 625.44(A).** Allowed receptacles include a nonlocking, grounding-type 125 V single-phase 15 A or 20 A receptacle, and listed 250 V receptacles in the sizes the code gives. Chargers sold as 'Level 1' plug into the 125 V type. 'Level 1' and 'Level 2' are vehicle-industry names, not NEC terms.
+- **GFCI, 625.54.** Every receptacle installed for EV charging gets GFCI protection for personnel, at any voltage.
+- **Personnel protection, 625.22.** The charger itself needs a listed personnel protection system, except below 60 V dc.
+- **Continuous load, 625.41 and 625.42.** EV charging counts as continuous, so overcurrent protection is at least 125% of the maximum load.
+
+## Recloser inspection {#recloser-inspection}
+
+*Level: II*
+
+Source: ANSI/NETA ATS-2025 7.24.1.A and C.
+
+The recloser visual and mechanical list adds two things to the usual nameplate, anchorage, cleanliness, and bolt-torque items: mechanical operation and contact alignment tests on both the recloser and its operating mechanism, judged against the manufacturer's data, and an insulating-liquid level check against the manufacturer's tolerances. Racking checks (drawout breakers), blade penetration (air switches), and operation counter readings (vacuum breakers and open air switches) come from other sections.
+
+## Operating open air switches {#air-switch-operation}
+
+*Level: II*
+
+Source: IEEE C37.30.1-2022, Annex D, D.3.2.2.
+
+- Before opening a disconnecting or horn-gap switch, confirm it isn't carrying load and that a flashover won't reach the operator.
+- Before opening a grounding switch, confirm you aren't removing grounds someone still needs. Before closing one, confirm the circuit is de-energized.
+- ATS 7.5.1.3 covers the acceptance tests for these switches (see the switches section above).
+
 ## Level III {#apparatus-level-iii}
 
 *Level: III*
@@ -413,6 +481,70 @@ Sources: Gill 2nd ed. 12.6.3.9 and 10.4.4; NEMA MG 1-2016 (Rev 2018) 14.3, from 
 - **Guidance:** Gill keeps voltage unbalance within 1–2%. The current effect is roughly 8 times larger. About 3% raises winding temperature by about 25%, 2–3% heats like a 10% overload, and a motor is derated at 4%. MG 1 treats more than 1% supply unbalance as an unusual service condition.
 - **Current unbalance** generally stays under 10%. It can be tolerated if the highest leg is within FLA × service factor. When voltage unbalance and distortion are fine but current unbalance is high, suspect the motor: winding damage or an uneven air gap.
 - **Causes on the supply side:** loose connections and worn contacts as often as uneven single-phase loading. A blown fuse can leave a motor single-phasing.
+
+## Arresters in service {#arresters-l3}
+
+*Level: III*
+
+Sources: IEEE C62.11-2020, Annex D, D.8.18; IEEE C62.22-2009, 4.5 and 5.2.6.
+
+- **Disconnector separated.** A distribution arrester's disconnector rides through surges and separates only when power-frequency current flows through a failed arrester. A ground lead hanging free means the arrester failed. Replace it; don't reconnect the lead.
+- **Separation effect.** The insulation being protected usually sees more voltage than the arrester terminals, because a lightning surge oscillates on the leads and conductor between them. The effect grows with steeper surges and longer distance. Short leads and an arrester close to the transformer keep the protective margin. Slow switching surges don't show it.
+
+## EV charger disconnects and adjustable ratings {#evse-l3}
+
+*Level: III*
+
+Source: NFPA 70-2023 625.41, 625.42(B) and 625.43.
+
+- **625.43.** Chargers rated over 60 A or over 150 V to ground need a readily accessible disconnect that's lockable open per 110.25. If it's remote, a plaque on the charger says where it is. That's your lockout point before ATS 7.26 testing.
+- **625.42(B).** A charger with restricted-access current adjustment may be turned down per the manufacturer, with the new rating on its label. Size the overcurrent device at 125% of the adjusted rating: 32 A needs at least 40 A.
+
+## Fiber types {#fiber-l3}
+
+*Level: III*
+
+Source: FOA Reference Guide to Premises Cabling (Hayes), ch. 5.
+
+- **Step-index multimode:** one core material; longer light paths arrive late, so bandwidth is low.
+- **Graded-index multimode:** the core composition varies to compensate for path length. 50/125 and 62.5/125 (core/cladding in µm) are the common sizes.
+- **Singlemode:** about an 8 to 10 µm core, one light path, longest reach.
+- **Jacket colors (TIA-598):** multimode traditionally orange, OM3 aqua, singlemode yellow.
+
+## Air switch operation, Level III {#air-switches-l3}
+
+*Level: III*
+
+Source: IEEE C37.30.1-2022, Annex D, D.3.2.2.
+
+Operate a disconnect quickly. It can arc even in normal switching, and a fast stroke keeps the arc short and limits contact burning. Disconnects are often used to drop small currents (short-line charging, transformer magnetizing, loop, light load), but those arcs are unconfined and can become faults in bad weather or circuit conditions. Arcing horns, quick-break horns, and blast attachments extend that ability. Check the current and recovery voltage with the manufacturer. Some duties need an interrupter switch.
+
+## Bus construction, Level III {#bus-l3}
+
+*Level: III*
+
+Source: IEEE C37.23-2015, clause 3 and 7.1.1.
+
+- **Transposition** swaps phase positions evenly along a run so each phase sees the same proximity effect from the other two.
+- **Gauge.** Covers, barriers, and panels are at least MSG No. 14 (about 1.9 mm). Phase barriers in segregated-phase bus are at least MSG No. 11 (about 3 mm).
+
+## Recloser sequences {#reclosers-l3}
+
+*Level: III*
+
+Source: IEEE C37.60-2018, Annex F, F.3 and F.4.
+
+- **Lockout** ends further reclosing after the programmed operations fail to restore the circuit. It can also be set locally or by SCADA. Leaving it takes a local or supervisory close, then the resetting interval before the full count is back. Three recloses (four trips) is the usual sequence.
+- **Single-phase or three-phase.** Single-phase reclosers can lock out one phase and keep the rest in service, which suits mostly single-phase load. Three-phase reclosers lock out all three so three-phase motors don't run single-phased.
+
+## Drive output and low-speed voltage {#drives-l3}
+
+*Level: III*
+
+Source: NEMA ICS 7.2-2021, Section 3, 5.2.9.2.1 and 5.2.9.2.2.
+
+- **Cable length.** Drive pulses reflect at the motor. With IGBT drives the peak at the motor terminals can approach twice the dc bus voltage in under 50 ft of cable, and very long runs can ring higher. Faster rise times raise the peak.
+- **Voltage boost.** In V/Hz control, boost adds voltage above the V/Hz line at low frequency to make up for the stator winding's voltage drop.
 
 ## Level IV {#apparatus-level-iv}
 

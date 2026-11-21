@@ -160,5 +160,77 @@
     "reference": "NFPA 70-2023 625.42(A) and 625.41",
     "verified": true,
     "kb": "apparatus.md#evse"
+  },
+  {
+    "id": "evse-010",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "A portable EV charging cord set, often sold as 'Level 1', plugs into an ordinary 120 V receptacle. Which receptacle does NEC 625.44(A) allow for portable EV equipment at that voltage?",
+    "choices": [
+      "A nonlocking, 2-pole, 3-wire grounding-type receptacle rated 125 V, single-phase, 15 A or 20 A",
+      "Any 2-wire 125 V receptacle",
+      "Only a 250 V, 50 A receptacle",
+      "Only a locking receptacle"
+    ],
+    "answer": 0,
+    "explanation": "Portable EVSE may connect through a nonlocking, grounding-type 125 V single-phase 15 A or 20 A receptacle. 625.44(A) also lists certain 250 V receptacles (15 or 20 A, or 30 or 50 A, plus 125/250 V at 30, 50, or 60 A) and a low-voltage dc receptacle. An ungrounded 2-wire receptacle isn't on the list. 'Level 1' is a vehicle-industry name, not NEC wording, so read the code language when a question uses it. Source: NFPA 70-2023 (NEC) 625.44(A).",
+    "reference": "NFPA 70-2023 (NEC) 625.44(A)",
+    "verified": true,
+    "kb": "apparatus.md#evse-supply"
+  },
+  {
+    "id": "evse-011",
+    "level": "II",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "A new 240 V receptacle is installed in a garage specifically for plugging in an EV charger. What does NEC 625.54 require for it?",
+    "choices": [
+      "GFCI protection for personnel",
+      "AFCI protection only",
+      "Nothing extra, because the charger has its own protection",
+      "GFCI protection only if the receptacle is 120 V"
+    ],
+    "answer": 0,
+    "explanation": "Every receptacle installed for connecting EV charging needs GFCI protection for personnel, whatever its voltage. On top of that, 625.22 requires the EVSE itself to have a listed personnel protection system, except equipment supplying less than 60 V dc. Source: NFPA 70-2023 (NEC) 625.54 and 625.22.",
+    "reference": "NFPA 70-2023 (NEC) 625.54 and 625.22",
+    "verified": true,
+    "kb": "apparatus.md#evse-supply"
+  },
+  {
+    "id": "evse-012",
+    "level": "III",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "A fastened-in-place EV charger is rated 80 A at 240 V. What does NEC 625.43 require for its disconnecting means?",
+    "choices": [
+      "Nothing, because it's on an individual branch circuit",
+      "A readily accessible disconnect that's lockable open per 110.25, with a plaque on the charger giving its location if it's mounted remotely",
+      "A disconnect within 6 ft of the vehicle connector, nothing more",
+      "A disconnect only for three-phase chargers"
+    ],
+    "answer": 1,
+    "explanation": "625.43 applies to EVSE rated more than 60 A or more than 150 V to ground, and 80 A meets the first condition. The disconnect has to be readily accessible and lockable open per 110.25, and if it's remote from the equipment, a plaque on the charger must say where it is. That lockable disconnect is also how you put the charger in an electrically safe work condition before ATS 7.26 testing. Source: NFPA 70-2023 (NEC) 625.43.",
+    "reference": "NFPA 70-2023 (NEC) 625.43",
+    "verified": true,
+    "kb": "apparatus.md#evse-l3"
+  },
+  {
+    "id": "evse-013",
+    "level": "III",
+    "topic": "ev-charging",
+    "domain": "component",
+    "question": "A 48 A EV charger has a restricted-access current setting, and it's turned down to 32 A per the manufacturer's instructions so it can use an existing circuit. Under NEC 625.42(B) and 625.41, what's required?",
+    "choices": [
+      "It isn't allowed; the circuit must be sized for 48 A",
+      "It's allowed; the adjusted rating goes on the rating label, and the branch overcurrent device must be at least 40 A (125% of 32 A)",
+      "It's allowed with a 32 A breaker",
+      "It's allowed only with a 60 A breaker"
+    ],
+    "answer": 1,
+    "explanation": "625.42(B) permits EVSE with restricted access to an ampere adjustment that complies with 750.30(C). The change follows the manufacturer's instructions, and the adjusted rating has to appear durably on the rating label. EV charging is a continuous load, so 625.41 sizes overcurrent protection at no less than 125% of the maximum load: 1.25 × 32 A = 40 A. A 32 A breaker skips the 125%, and 60 A sizes for the unadjusted 48 A. Source: NFPA 70-2023 (NEC) 625.41 and 625.42(B).",
+    "reference": "NFPA 70-2023 (NEC) 625.41 and 625.42(B)",
+    "verified": true,
+    "kb": "apparatus.md#evse-l3"
   }
 ]

@@ -4,7 +4,7 @@ Level II, Level III, and Level IV questions for a human pass. The bank flag `ver
 
 Mark each item **VERIFIED** or **FIX** at the end of its block. Do not treat any item as a recalled exam question.
 
-Count: 460 (Level II 300, Level III 151, Level IV 9).
+Count: 461 (Level II 301, Level III 151, Level IV 9).
 
 A pass on 12 Nov 2026 by neta field ref marked the reviewer line on each touched item VERIFIED, FIX, or NEEDS-SOURCE. The NFPA 70B-2026 items left this queue after that book was checked in NFPA LiNK.
 
@@ -7822,6 +7822,23 @@ With no manufacturer voltage, insulation resistance of a medium-voltage starter 
 - 3. Optional, because the MAC test replaces it
 
 **Citation:** ANSI/NETA ATS-2025 7.16.1.2.B.1
+
+Reviewer: VERIFIED or FIX
+
+## asd-016 (II / component) {#asd-016}
+
+<!-- q:asd-016 -->
+
+**Bank verified flag:** false
+
+In a standard three-wire start/stop circuit for a motor starter, why is a normally open auxiliary contact of the starter wired in parallel with the START pushbutton?
+
+- 0. To seal in (hold) the coil after START is released, so the motor runs until STOP or the overload contact opens the circuit **← answer**
+- 1. To bypass the overload relay contact while starting
+- 2. To delay tripping on undervoltage
+- 3. To reverse the motor
+
+**Citation:** Engineering fundamentals (three-wire start/stop control); not checked against a held source. Needs a citation (for example, a motor-control text or a NEMA ICS document) before it's marked verified.
 
 Reviewer: VERIFIED or FIX
 

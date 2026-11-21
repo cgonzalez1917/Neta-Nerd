@@ -268,5 +268,95 @@
     "reference": "ANSI/NETA ATS-2025 Section 9; ANSI/NETA ECS-2024 9.1.2",
     "verified": true,
     "kb": "thermography.md#delta-t"
+  },
+  {
+    "id": "thermo-016",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "theory",
+    "question": "A feeder joint was scanned at 40% load. The plant now runs that feeder at 80% load. If the joint's resistance hasn't changed, the heat generated at the joint is about:",
+    "choices": [
+      "The same",
+      "Twice as much",
+      "Four times as much",
+      "Eight times as much"
+    ],
+    "answer": 2,
+    "explanation": "Heat at a resistive connection goes with I²R. Twice the current gives 2² = 4 times the heat. The temperature the joint reaches is harder to predict than the heat, because cooling and surroundings vary. That's why surveys are run at as high a normal load as you can get. Source: Fluke, Introduction to Thermography Principles, ch. 6 (electrical applications).",
+    "reference": "Fluke, Introduction to Thermography Principles, ch. 6 (electrical applications)",
+    "verified": true,
+    "kb": "thermography.md#phase-loading"
+  },
+  {
+    "id": "thermo-017",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "What's the most practical way to check a running switchboard for one phase carrying much more load than the others, without taking anything out of service?",
+    "choices": [
+      "An infrared survey under load, confirmed with clamp-on current readings",
+      "A low-resistance ohmmeter test on each phase",
+      "An insulation-resistance test phase to phase",
+      "A turns-ratio test on the service transformer"
+    ],
+    "answer": 0,
+    "explanation": "Current imbalance between phases shows up as uneven heating that an imager can see with the gear in service. A clamp-on reading then tells you whether it's load (one phase really carries more current) or a bad connection. The ohmmeter, insulation, and ratio tests all need the equipment de-energized, and none of them shows load. Source: Fluke, Introduction to Thermography Principles, ch. 6 and ch. 7.",
+    "reference": "Fluke, Introduction to Thermography Principles, ch. 6 (electrical applications) and ch. 7 (comparative thermography)",
+    "verified": true,
+    "kb": "thermography.md#phase-loading"
+  },
+  {
+    "id": "thermo-018",
+    "level": "II",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "An infrared image of a three-pole breaker shows the B phase warmer along its whole length. Clamp-on readings are A 120 A, B 190 A, and C 115 A. What's the most likely explanation?",
+    "choices": [
+      "A high-resistance connection on B phase",
+      "Load imbalance: B phase simply carries more current",
+      "An emissivity error on B phase",
+      "An open CT on B phase"
+    ],
+    "answer": 1,
+    "explanation": "Comparative thermography only works when every variable but one is taken away. Here B carries about 60% more current than A or C, so it should run warmer along its whole path. If the currents were balanced and one phase still ran hot, especially at one joint, a high-resistance connection would be the suspect. Source: Fluke, Introduction to Thermography Principles, ch. 7 (comparative thermography).",
+    "reference": "Fluke, Introduction to Thermography Principles, ch. 7 (comparative thermography)",
+    "verified": true,
+    "kb": "thermography.md#phase-loading"
+  },
+  {
+    "id": "thermo-019",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "During a survey, a lightly loaded feeder shows a small temperature rise at one lug compared with the matching lugs. Why does it deserve more attention than the size of the rise suggests?",
+    "choices": [
+      "Lightly loaded circuits can't overheat, so the reading has to be an instrument error",
+      "The heat follows I²R, so if the load grows the same resistance runs much hotter, and the temperature it will reach is hard to predict",
+      "ATS Table 100.18 doubles any ΔT measured below 50% load",
+      "Light load raises the surface emissivity"
+    ],
+    "answer": 1,
+    "explanation": "The heat a high-resistance connection makes is predictable from I²R. The temperature it ends up at isn't. A small rise at light load can become a large one when the circuit picks up load, so findings on lightly loaded gear get special attention. Some practices call for at least 40% load, or the highest normal load, during the survey, and the ATS table notes say load current has a major effect on ΔT. Record the load with the image. Source: Fluke, Introduction to Thermography Principles, ch. 6; ANSI/NETA ATS-2025 Table 100.18 notes.",
+    "reference": "Fluke, Introduction to Thermography Principles, ch. 6 (electrical applications); ANSI/NETA ATS-2025 Table 100.18 notes",
+    "verified": true,
+    "kb": "thermography.md#hot-phase-l3"
+  },
+  {
+    "id": "thermo-020",
+    "level": "III",
+    "topic": "thermography",
+    "domain": "component",
+    "question": "One phase of a breaker shows a hot spot at its line-side terminal. Clamp-on readings show the three phases are balanced. What's the likely cause, and the right follow-up?",
+    "choices": [
+      "Load imbalance; rebalance the panel",
+      "A high-resistance connection; plan an outage to inspect it, check torque, and measure it with a low-resistance ohmmeter against similar connections",
+      "Normal; line-side terminals always run hotter than load-side terminals",
+      "Harmonics; add a filter"
+    ],
+    "answer": 1,
+    "explanation": "With balanced current, uneven heating on one phase points to resistance: a loose, dirty, or damaged connection. Infrared finds the joint but doesn't measure it. De-energize, inspect, verify bolt torque, and measure resistance across the connection, comparing it with similar connections. ATS treats the thermographic survey as a screen that points you to where to measure. Source: Fluke, Introduction to Thermography Principles, ch. 7; ANSI/NETA ATS-2025 Section 9 and 7.4.B.1 and D.1 (bolted connection resistance).",
+    "reference": "Fluke, Introduction to Thermography Principles, ch. 7 (comparative thermography); ANSI/NETA ATS-2025 Section 9; 7.4.B.1 and D.1",
+    "verified": true,
+    "kb": "thermography.md#hot-phase-l3"
   }
 ]
